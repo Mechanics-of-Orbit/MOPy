@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalculationOfCOEandAOE</class>
+ <widget class="QMainWindow" name="CalculationOfCOEandAOE">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>803</width>
+    <height>983</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculation Of Orbital Elements</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../Design/MOPy Logo v1.0.png</normaloff>../../../Design/MOPy Logo v1.0.png</iconset>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="CoOEHead">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>471</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Georgia</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Calculation of Orbital Elements</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="inputs">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>771</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QComboBox" name="vel_vec_unit">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>80</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Km/s</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Miles/s</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>AU/s</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DU/TU</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QDoubleSpinBox" name="pos_vec_i">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>30</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>8250.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="vel_vec_k">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>80</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>-0.600000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="vel_vec_j_lab">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>80</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>16</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>j + </string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pos_vec_lab">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="toolTipDuration">
+      <number>-1</number>
+     </property>
+     <property name="text">
+      <string>Position Vector =</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="pos_vec_unit">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>31</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Km</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Miles</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>AU</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DU</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QDoubleSpinBox" name="pos_vec_k">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>30</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>6900.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="vel_vec_k_lab">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>80</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>16</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>k</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pos_vec_i_lab">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>16</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>i + </string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="vel_vec_j">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>80</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>6.600000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pos_vec_k_lab">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>16</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>k</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pos_vec_j_lab">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>16</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>j + </string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="vel_vec_i">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>80</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>-0.700000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="vel_vec_lab">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Velocity Vector =</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="pos_vec_j">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>30</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>390.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="vel_vec_i_lab">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>80</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>16</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>i + </string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="calculate_button">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>300</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Calculate</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="input_label">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>340</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Input</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="major_body_lab">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>130</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Major Body</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="major_body">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>130</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Earth</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sun</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mercury</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Venus</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mars</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Jupiter</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Saturn</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Uranus</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Neptune</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Other</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="if_other_major_body_lab">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>180</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>If Other,</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="other_major_body_mass">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>210</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="decimals">
+      <number>9</number>
+     </property>
+     <property name="minimum">
+      <double>-100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10000.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="plot_button">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>300</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Plot</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mass_of_the_other_major_body_lab">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>210</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mass Of The Major Body   = </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="other_major_body_radius">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>250</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="decimals">
+      <number>9</number>
+     </property>
+     <property name="minimum">
+      <double>-100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100000000000000001463069523067487303097004298786465505927861078716979636425114821591040.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10000.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="other_major_body_radius_unit">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>250</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>km</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="radius_of_the_other_major_body_lab">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>250</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Radius of The Major Body = </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="other_major_body_mass_unit">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>210</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>kg</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="outputs">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>470</y>
+      <width>771</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QLabel" name="output_label">
+     <property name="geometry">
+      <rect>
+       <x>700</x>
+       <y>440</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Output</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="orbital_elements_output_title">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;An Orbit has 6 orbital elements as they have 6 degrees of freedom. Using these a complete orbit can be defined.&lt;/p&gt;&lt;p&gt;There are two types of Orbital Elements:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Classical Orbital Elements.&lt;/li&gt;&lt;li&gt;Alternate Orbital Elements.&lt;/li&gt;&lt;/ol&gt; &lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Orbital Elements</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="output_unit">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>50</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gadugi</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Units</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ecc_unit">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>90</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>NA</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="Line" name="ebs_h">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>120</y>
+       <width>631</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>180</y>
+       <width>631</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>240</y>
+       <width>631</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>300</y>
+       <width>631</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_5">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>360</y>
+       <width>631</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_6">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>80</y>
+       <width>21</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="omega_l_o">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>330</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gadugi</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nu_u_lab">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>390</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;True anomaly, v, is the angle along the orbital path from perigee to the spacecraft’s position vector. Similar to the argument of perigee, we measure true anomaly also in the direction of the spacecraft’s motion. &lt;/p&gt;&lt;p&gt;It’s value range between 0&lt;span style=&quot; vertical-align:super;&quot;&gt;o&lt;/span&gt; to 360&lt;span style=&quot; vertical-align:super;&quot;&gt;o&lt;/span&gt;. It's not defined when eccentricity is 0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>True Anomaly</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="omega_l_lab">
+     <property name="geometry">
+      <rect>
+       <x>135</x>
+       <y>330</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;It is the measure of the angle along the orbital path between the ascending node and perigee, termed as argument of perigee, ω. &lt;/p&gt;&lt;p&gt;The angle is alwas measured in the direction of the spacecraft movement. It gives the orientation of the orbit within the orbital plane.&lt;/p&gt;&lt;p&gt;It’s value range between 0&lt;span style=&quot; vertical-align:super;&quot;&gt;o&lt;/span&gt; to 360&lt;span style=&quot; vertical-align:super;&quot;&gt;o&lt;/span&gt;. It's not defined when inclination is either 0&lt;span style=&quot; vertical-align:super;&quot;&gt;o&lt;/span&gt; or 180&lt;span style=&quot; vertical-align:super;&quot;&gt;o&lt;/span&gt; and eccentricity is 0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Argument of Perigee</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="inc_o">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>210</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gadugi</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ohm_o">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>270</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gadugi</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ohm_lab">
+     <property name="geometry">
+      <rect>
+       <x>135</x>
+       <y>270</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;Right ascension of the ascending node (Ω) is a classical Orbital Element, used to describe orbital orientation with respect to the principal direction (I&lt;/span&gt;&lt;a name=&quot;_x0000_i1025&quot;/&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;)&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt; or Vernal Equinox to the line of nodes Vector (n). &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;It’s measured in Equatorial plane and it ranges between &lt;/span&gt;&lt;a name=&quot;_x0000_i1025&quot;/&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;0&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif'; vertical-align:super;&quot;&gt;o&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt; to &lt;/span&gt;&lt;a name=&quot;_x0000_i1025&quot;/&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;60&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif'; vertical-align:super;&quot;&gt;o&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt; and It is not defined when inclination is 0&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif'; vertical-align:super;&quot;&gt;o&lt;/span&gt;&lt;a name=&quot;_x0000_i1025&quot;/&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;o&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;r 180&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif'; vertical-align:super;&quot;&gt;o&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;When it is not defined Longitude of Perigee is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>RAAN</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sma_lab">
+     <property name="geometry">
+      <rect>
+       <x>135</x>
+       <y>150</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is a constant that defines the &lt;span style=&quot; font-weight:600;&quot;&gt;size&lt;/span&gt; of the orbit. It is the half length of the axis passing through the two foci from Apoapsis to Periapsis. It's units are: &lt;/p&gt;&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;km&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;miles&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Astronomical Units etc.,&lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Semi-Major Axis</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ecc_lab">
+     <property name="geometry">
+      <rect>
+       <x>135</x>
+       <y>90</y>
+       <width>191</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is a constant that defines the shape of the orbit. It is the ratio of foci and semi major axis. It is a unitless quantity. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Eccentricity</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="inc_lab">
+     <property name="geometry">
+      <rect>
+       <x>135</x>
+       <y>210</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Georgia</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;Vertical tilt of the Orbit around the Line of Nodes Axis with respect to the Equatorial plane is inclination , it describes the orientation of an orbit with respect to our coordinate system . &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;Tilt angle is measured between perpendicular Vector of the orbital plane (h&lt;/span&gt;&lt;a name=&quot;_x0000_i1025&quot;/&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;)&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt; and reference plane (k). &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;Any three points on an ellipse will define the ellipse orbital plane. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Calibri','sans-serif';&quot;&gt;The Reference plane and the Elliptical plane are both two-dimensional objects defined in three-dimensional space.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Inclination</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ecc_o">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>88</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gadugi</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sma_o">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>150</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gadugi</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="sma_unit">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>150</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>km</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>miles</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>AU</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Light Years</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="inc_unit">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>210</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Degrees</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Radians</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="ohm_unit">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>270</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Degrees</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Radians</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="omega_l_unit">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>330</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Degrees</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Radians</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="nu_u_unit">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>390</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Degrees</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Radians</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="nu_u_o">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>390</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gadugi</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="error_status">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>436</y>
+      <width>691</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Fixedsys</family>
+      <pointsize>9</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
