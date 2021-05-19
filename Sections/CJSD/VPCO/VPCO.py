@@ -24,7 +24,7 @@ class CalculateValues:
     
     @classmethod
     def orb_const(cls, r_per, sma, mag_e, major_body):
-        major_body_mass = 1
+        major_body_mass = major_body * 1
         mu = cls.G * major_body_mass
         slr = sma*(1-mag_e**2)
         mag_h = (r_per*(1+e)*mu)**0.5
