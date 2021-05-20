@@ -134,7 +134,7 @@ class Calculate:
         
 #main
 app = QtWidgets.QApplication([])
-call = uic.loadUi("GUI\CoOE\CoOE.ui")
+call = uic.loadUi("Sections\CoOE\CoOE.ui")
 call.calculate_button.clicked.connect(MainWindow.Calculate_function)
 call.show()
 app.exec_()

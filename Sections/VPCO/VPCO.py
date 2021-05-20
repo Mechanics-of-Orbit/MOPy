@@ -54,6 +54,9 @@ class CalculateCircEllip:
     @classmethod
     def theta_since_time(cls, mag_e, theta, T_period, t_since_perigee):
         M_anomly = 2 * pi * t_since_perigee/T_period
+        return None
+    
+
         
 
     
