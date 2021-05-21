@@ -56,7 +56,9 @@ class CalculateCircEllip:
         M_anomly = 2 * pi * t_since_perigee/T_period
         return None
     
-
+    @classmethod
+    def velocity_at_any_point(cls, mag_e, theta, mag_h, major_body):
+        pass
         
 
     
