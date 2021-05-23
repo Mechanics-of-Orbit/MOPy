@@ -1,7 +1,12 @@
 import sys
 from math import *
 from numpy import *
-from VPCO import *
+sys.path.append('/Sections/VPCO')
+from Sections.VPCO.VPCO import CalculateCircularElliptical
+# from Sections.VPCO.VPCO import *
+
+a = CalculateCircularElliptical.velocity_at_any_point(48000, 30000, 'Earth')
+print(a)
 
 class Hohmann():
     I = [1, 0, 0]
@@ -42,6 +47,7 @@ class Hohmann():
     def bi_elliptical_hohmann_transfer(cls, major_body, r_apo_1, r_per_1, r_per_2, r_apo_2):
         pass
     
+
 
 
 

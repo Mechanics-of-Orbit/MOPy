@@ -1,12 +1,13 @@
-import math as m
-import numpy as np
-import sympy as sp
+#import math as m
+#import numpy as np
+from sympy import *
 
-x = sp.Symbol('x')
-print(sp.diff(x**5))
+x = Symbol('x')
+print(diff(x**5 + sin(x)*cos(x)-tan(x)))
 
 class Integrations():
 
     @classmethod
-    def NewtonRhapson(cls, f_x, ):
+    def NewtonRhapson(cls, f_x):
+        
         pass
