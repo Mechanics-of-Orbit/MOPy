@@ -1,7 +1,12 @@
-from math import *
-from numpy import *
-from sympy import *
+import math as m
+import numpy as np
+import sympy as sp
 
-x = sympy.Symbol('x')
-print(sympy.diff(x**5))
+x = sp.Symbol('x')
+print(sp.diff(x**5))
 
+class Integrations():
+
+    @classmethod
+    def NewtonRhapson(cls, f_x, ):
+        pass
