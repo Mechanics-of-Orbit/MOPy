@@ -3,8 +3,8 @@ from math import *
 from numpy import *
 # sys.path.append('/Sections/VPCO')
 # from .Sections.VPCO.VPCO import CalculateCircularElliptical
-from . .Sections.VPCO import VPCO
-
+#from . .Sections.VPCO import VPCO
+import VPCO
 
 major_body = 2
 
