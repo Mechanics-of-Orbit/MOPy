@@ -56,7 +56,7 @@ if __name__ == '__main__':
     r0 = [r_mag,0,0]
     v0 = [0,v_mag,0]
 
-    tspan = 100*60.0
+    tspan = 1000*60.0
 
     dt = 100
 

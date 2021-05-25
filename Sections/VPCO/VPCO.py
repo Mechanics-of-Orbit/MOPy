@@ -12,12 +12,17 @@ class GlobalCalculation():
         F_r = cls.G * major_body_mass * minor_body_mass / r ** 2
         return F_r
 
+
 # all the units should be km
 class CalculateCircularElliptical:
     I = [1, 0, 0]
     J = [0, 1, 0]
     K = [0, 0, 1]
     G = 6.67e-20 #units are in km3 kg-1 s-2
+    def __init__(self, major_body):
+    
+        self.major_body = major_body
+        return
 
     @classmethod
     def semiecc(cls, sma, mag_e, major_body):
@@ -34,8 +39,8 @@ class CalculateCircularElliptical:
         return [mag_e, sma, mean_motion, T_period, mag_h, sme, slr]
     
     @classmethod
-    def orb_const(cls, r_per, sma, mag_e, major_body):
-        major_body_mass = major_body * 1
+    def orb_const(self, cls, r_per, sma, mag_e):
+        major_body_mass = self.major_body * 1
         mu = cls.G * major_body_mass
         slr = sma*(1-mag_e**2)
         mag_h = (r_per*(1+e)*mu)**0.5
@@ -45,7 +50,7 @@ class CalculateCircularElliptical:
         return [mean_motion, T_period, mag_h, sme, slr]
     
     @classmethod
-    def time_since_perigee(cls, mag_e, theta, T_period):
+    def time_since_periapsis(cls, mag_e, theta, T_period):
         E_anomly = 2 * atan((sqrt((1 - mag_e)/(1 + mag_e)) * tan(theta/2)))
         M_anomly = E_anomly - mag_e * sin(E_anomly)
         t_since_perigee = T_period * M_anomly/(2*pi)
@@ -64,10 +69,12 @@ class CalculateCircularElliptical:
         return v_point
 
 class CalculateParabola():
-    I = [1, 0, 0]
-    J = [0, 1, 0]
-    K = [0, 0, 1]
-    G = 6.67e-20 #units are in km3 kg-1 s-2
+
+    def __init__(self):
+        I = [1, 0, 0]
+        J = [0, 1, 0]
+        K = [0, 0, 1]
+        G = 6.67e-20 #units are in km3 kg-1 s-2
 
     @classmethod
     def parabolicvalues(cls, r_per, major_body):
@@ -79,9 +86,9 @@ class CalculateParabola():
         return [slr, v_per, mag_h]
 
     @classmethod
-    def vel_parabolic(cls, r, major_body):
+    def vel_parabolic(self, cls, r, major_body):
         major_body_mass = major_body * 1
-        mu = major_body_mass * cls.G
+        mu = major_body_mass * self.G
         v = sqrt((2*mu)/r)
         return v
     
@@ -96,6 +103,8 @@ class CalculateHyperBola():
         pass
 
 
+# major_body = 2
 
+# x_obj = CalculateCircularElliptical(major_body)
 
-    
+# x_obj.orb_const()
