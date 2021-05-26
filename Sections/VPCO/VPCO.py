@@ -93,13 +93,15 @@ class CalculateParabola():
         return v
     
 class CalculateHyperBola():
-    I = [1, 0, 0]
-    J = [0, 1, 0]
-    K = [0, 0, 1]
-    G = 6.67e-20 #units are in km3 kg-1 s-2
+    def __init__(self):
+        I = [1, 0, 0]
+        J = [0, 1, 0]
+        K = [0, 0, 1]
+        G = 6.67e-20 #units are in km3 kg-1 s-2
 
     @classmethod
     def hyperbolic_values():
+
         pass
 
 
