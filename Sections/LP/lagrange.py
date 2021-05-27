@@ -4,7 +4,7 @@ from numpy import arange
 from scipy.optimize import root_scalar
 
 major_body = 'Earth'
-minor_body = 'Moon'
+minor_body = 'Moon' #comment
 
 class LagPoints():
     G = 6.67408e-11 # m^3 / (kg * s^2)
