@@ -69,15 +69,13 @@ class CalculateCircularElliptical:
         return v_point
 
 class CalculateParabola():
-
-    def __init__(self):
-        I = [1, 0, 0]
-        J = [0, 1, 0]
-        K = [0, 0, 1]
-        G = 6.67e-20 #units are in km3 kg-1 s-2
+    I = [1, 0, 0]
+    J = [0, 1, 0]
+    K = [0, 0, 1]
+    G = 6.67e-20 #units are in km3 kg-1 s-2
 
     @classmethod
-    def parabolicvalues(cls, r_per, major_body):
+    def const_values(cls, r_per, major_body):
         major_body_mass = major_body * 1
         mu = major_body_mass * cls.G
         slr = 2 * r_per
@@ -86,23 +84,45 @@ class CalculateParabola():
         return [slr, v_per, mag_h]
 
     @classmethod
-    def vel_parabolic(self, cls, r, major_body):
+    def velocity_at_any_point(cls, r, major_body):
         major_body_mass = major_body * 1
-        mu = major_body_mass * self.G
+        mu = major_body_mass * cls.G
         v = sqrt((2*mu)/r)
         return v
     
 class CalculateHyperBola():
-    def __init__(self):
-        I = [1, 0, 0]
-        J = [0, 1, 0]
-        K = [0, 0, 1]
-        G = 6.67e-20 #units are in km3 kg-1 s-2
+    I = [1, 0, 0]
+    J = [0, 1, 0]
+    K = [0, 0, 1]
+    G = 6.67e-20 #units are in km3 kg-1 s-2
 
     @classmethod
-    def hyperbolic_values():
+    def const_values(cls,major_body,mag_e, sma):
+        mu = cls.G * major_body
+        theta_inf = acos(1/mag_e) #angle between asympotes
+        beta = theta_inf 
+        delta = 2 * sin(1/mag_e) #turn angle
+        mag_h = sqrt(sma * mu * (mag_e**2-1)) #specific angular momentum
+        b = sma * mag_e * sin(theta_inf) #semi minor axis
+        Delta = b #aiming radius
+        v_inf = mu * mag_e*sin(theta_inf)/mag_h #velocity at r = infinity
+        sme = mu/(2 * sma) #specific mechanical energy
+        slr = -b**2/sma #semi latus rectum
+        return [theta_inf, beta, delta, mag_h, b, Delta, v_inf, sme, slr]
 
+    @classmethod
+    def semiecc(cls,major_body,sma,mag_e):
+        mu = cls.G * major_body
+        [theta_inf, beta, delta, mag_h, b, Delta, v_inf, sme, slr] = CalculateHyperBola.const_values(major_body, sma, mag_e)
+        r_apo = (mag_h**2/mu)/(1 - mag_e)
+        r_per = (mag_h**2/mu)/(1 + mag_e)
+        return [theta_inf, beta, delta, mag_h, b, Delta, v_inf, sme, slr, r_apo, r_per]
+    
+    @classmethod
+    def time_since_periapsis():
         pass
+
+
 
 
 # major_body = 2

@@ -4,15 +4,15 @@ from numpy import *
 # sys.path.append('/Sections/VPCO')
 # from .Sections.VPCO.VPCO import CalculateCircularElliptical
 #from . .Sections.VPCO import VPCO
-import VPCO
+# import VPCO
 
-major_body = 2
+# major_body = 2
 
-x_obj = VPCO.CalculateCircularElliptical(major_body)
+# x_obj = VPCO.CalculateCircularElliptical(major_body)
 
-x_obj.orb_const()
-a = vp.CalculateCircularElliptical.velocity_at_any_point(48000, 30000, 'Earth')
-print(a)
+# x_obj.orb_const()
+# a = vp.CalculateCircularElliptical.velocity_at_any_point(48000, 30000, 'Earth')
+# print(a)
 
 class Hohmann():
     I = [1, 0, 0]
