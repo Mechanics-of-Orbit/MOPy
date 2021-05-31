@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{etoolbox}
+
+\makeatletter
+%\patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\patchcmd{\@makechapterhead}{\huge}{\large}{}{}% for \chapter
+\patchcmd{\@makechapterhead}{\Huge}{\large}{}{}% for \chapter
+\patchcmd{\@makeschapterhead}{\Huge}{\large}{}{}% for \chapter*
+\patchcmd{\@makeschapterhead}{\HUGE}{\large}{}{}
+\makeatother
+
+\usepackage[top=1in, bottom=1in, left= 1in, right=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage[autostyle]{csquotes}
+\usepackage{graphicx}
+\usepackage[stable]{footmisc}
+\usepackage{subfig}
+\usepackage{listings}
+\usepackage{floatrow}
+\usepackage{textcomp}
+\usepackage{tabulary}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+\setcounter{tocdepth}{3} % Show sections
+
+%\title{}
+%\author{ }
+%\date{ }
+\begin{document}
+\begin{center}
+\normalsize{A dissertation report on} \\ 
+\vspace*{1em}
+\Large{\textbf{\enquote{Mechanics of Orbit Using Python(MOPy)}}}\\ \vspace{0.5em}
+\normalsize{Submitted to}\\ \vspace{1em}
+\includegraphics[scale=0.7]{AU.png}\\ \vspace{1em}
+\normalsize{In partial fulfilment of the requirements for the award of degree} \\
+\Large{\textbf{Bachelor of Technology}}\\
+\Large{\textbf{In}}\\
+\Large{\textbf{Aerospace Engineering}}\\ \vspace*{1em}
+\normalsize Submitted by: \vspace*{1em} \\
+\normalsize
+\begin{tabular}{cc}
+Ramkiran L. & Manjunath \\ 
+17030141AE007 & 17030141AE009 \\ 
+\href{mailto:lramkiranBTECH17@ced.alliance.edu.in}{{\color{blue}{\fontfamily{ptm}\selectfont
+lramkiranBTECH17@ced.alliance.edu.in}}} & \href{mailto:manjunathBTECH17@ced.alliance.edu.in}{{\color{blue}{\fontfamily{ptm}\selectfont
+manjunathBTECH17@ced.alliance.edu.in}}} \vspace*{1em} \\ 
+Monisha Patel A. & Thoshitha R. Kumar \\ 
+17030141AE013 & 17030141AE027 \\ 
+\href{mailto:pamonishaBTECH17@ced.alliance.edu.in}{{\color{blue}{\fontfamily{ptm}\selectfont
+pamonishaBTECH17@ced.alliance.edu.in}}} & \href{mailto:kuthoshithaBTECH17@ced.alliance.edu.in}{{\color{blue}{\fontfamily{ptm}\selectfont
+kuthoshithaBTECH17@ced.alliance.edu.in}}} \vspace*{1em} \\ 
+\end{tabular} 
+\normalsize
+Under the guidance of\\
+\textbf{Dr. Gisa G.S.} \\
+Assistant Professor\\
+Department of Aerospace Engineering,\\
+Alliance College of Engineering and Design,\\
+Alliance University\\
+Bengaluru. \vspace*{1em} \\
+
+\textbf{Department of Aerospace Engineering}\\
+\textbf{Alliance College of Engineering and Design}\\
+\textbf{Alliance University, Bengaluru - 562106} \\
+\textbf{Batch - 2017-21}\\
+\textbf{Year - 2021}
+\end{center}
+\thispagestyle{empty}
+\newpage
+\begin{center}
+\includegraphics[scale=0.65]{AUText.png} \vspace*{1em}\\
+\textbf{CERTIFICATE}
+\end{center}
+This is to certify that \textbf{Mr. Ramkiran L. (17030141AE007), Mr. Manjunath (17030141AE009), Ms. Monisha Patel A. (17030141AE012)} and \textbf{Ms. Thoshitha R. Kumar (17030141AE027)} students of \textbf{Aerospace Engineering, Bachelor of Technology 2017-21} batch at \textbf{Alliance College of Engineering and Design (ACED), Alliance University, Bengaluru} has completed the project report titled \textit{\textbf{\enquote{Mechanics of Orbit using Python}}} under my guidance in partial fulfillment for the award of Bachelor of Technology degree in Aerospace Engineering, Alliance University, Bangalore during the year 2020-2021. \vspace{1em}\\
+\begin{center}
+\begin{tabular}{K{7cm} K{0.5cm} K{7cm}}
+\underline{\hspace{2.5cm}} & & \underline{\hspace{4cm}} \\ 
+\textbf{Dr. Gisa G.S} & & \textbf{Dr. Velmurugarajan K.} \vspace{1em}\\ 
+Internal Guide & & Head of the Department \\ 
+Department of Aerospace Engineering & & Department of Aerospace Engineering \\
+ACED, Alliance University & & ACED, Alliance University \\ 
+Bengaluru & & Bengaluru \vspace{2em}\\ 
+\underline{\hspace{3cm}} & &  \\ 
+\textbf{Dr. Reeba Korah} & &  \\ \vspace{0.5em}
+Intrim Dean & &  \\ 
+Department of Aerospace Engineering & & \\
+ACED, Alliance University & &  \\ 
+Bengaluru & &  \vspace{2em}\\ 
+\end{tabular} 
+\end{center}
+\textbf{External Viva}
+\begin{center}
+\begin{tabular}{c K{7cm} K{7cm}}
+ & \textbf{Name of Examiners} & \textbf{Signature with date} \\
+\textbf{1.} & & \\
+\textbf{2.} & & \\
+\end{tabular}
+\end{center}
+\thispagestyle{empty}
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{thebibliography}{99}
+%	\bibitem{TB-1}{Bate, Roger R., Donald D. Muller and Jerry E. White},{ \textit{\enquote{Fundamentals Of Astrodynamics}}},{New York, NY},{ Dover Publications},{1971}.
+%	
+%
+%\end{thebibliography}
+\end{document}
