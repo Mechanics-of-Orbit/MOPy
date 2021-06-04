@@ -39,8 +39,8 @@ class CalculateCircularElliptical:
         return [mag_e, sma, mean_motion, T_period, mag_h, sme, slr]
     
     @classmethod
-    def orb_const(cls, r_per, sma, mag_e, major_body):
-        major_body_mass = 5.972e24 #self.major_body * 1
+    def orb_const(self, cls, r_per, sma, mag_e):
+        major_body_mass = self.major_body * 1
         mu = cls.G * major_body_mass
         slr = sma*(1-mag_e**2)
         mag_h = (r_per*(1+e)*mu)**0.5
