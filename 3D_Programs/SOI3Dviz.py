@@ -13,10 +13,10 @@ class SOI(ShowBase):
     def __init__(self, planet):
         super().__init__()
 
-        self.camera.setPos(0,-500,0)
+        self.camera.setPos(0,-700,0)
         
         self.stars = self.loader.loadModel("Assets/solar_sky_sphere")
-        self.stars.setScale(40)
+        self.stars.setScale(500)
         self.stars.reparentTo(render)
         self.stars_tex = loader.loadTexture("Assets/hi_res_tex/a_stars.jpg")
         self.stars.setTexture(self.stars_tex,1)
@@ -25,10 +25,18 @@ class SOI(ShowBase):
         self.dire = "Assets\hi_res_tex" + r'\a_'
         self.ComDir = self.dire + self.planet_name + ".jpg"
         self.MinorBody = self.loader.loadModel("Assets/planet_sphere")
-        self.MinorBody.setScale(4)
+        self.MinorBody.setScale(2)
         self.MinorBody_tex = loader.loadTexture(self.ComDir)
         self.MinorBody.setTexture(self.MinorBody_tex, 1)
         self.MinorBody.reparentTo(render)
+
+        self.soi_m = self.loader.loadModel("Assets/planet_sphere")
+        self.soi_m.setScale(2*rSOIMiB)
+        self.soi_m.setTransparency(1)
+        self.soi_m.setColor(1,1,1,.25)
+        self.soi_m.reparentTo(self.MinorBody)
+
+
 
 
 
