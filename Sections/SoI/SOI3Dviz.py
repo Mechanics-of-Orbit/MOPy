@@ -1,0 +1,24 @@
+from panda3d.core import loadPrcFile
+loadPrcFile("Sections/SoI/config.prc")
+from soi import *
+
+from direct.showbase.ShowBase import ShowBase
+# from panda3d.core import NodePath
+from direct.actor.Actor import Actor
+
+
+[rSOI, rSOIMiB] = SoI("Sun", "Earth")
+
+class SOI(ShowBase):
+    def __init__(self):
+        super().__init__()
+
+        self.camera.setPos(0,-1000,0)
+        
+        self.stars = self.loader.loadModel("Assets/solar_sky_sphere")
+        self.stars.setScale(40)
+        self.stars.reparentTo(render)
+
+
+soi = SOI()
+soi.run()
