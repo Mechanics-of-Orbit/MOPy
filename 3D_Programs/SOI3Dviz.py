@@ -14,7 +14,6 @@ class SOI(ShowBase):
         super().__init__()
 
         
-        
         self.stars = self.loader.loadModel("Assets/solar_sky_sphere")
         self.stars.setScale(10000)
         self.stars.reparentTo(render)
