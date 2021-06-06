@@ -1,0 +1,3 @@
+class Common():
+
+    game = None
