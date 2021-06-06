@@ -1,6 +1,6 @@
 from panda3d.core import loadPrcFile
 loadPrcFile("Sections/SoI/config.prc")
-from soi import *
+from Sections.soi import SoI
 
 from direct.showbase.ShowBase import ShowBase
 # from panda3d.core import NodePath

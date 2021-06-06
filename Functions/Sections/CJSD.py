@@ -23,9 +23,11 @@ class JulianDay():
         #JDN to JD
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
         return [JDN, round(JD, accuracy)]
-        
-a = JulianDay.tb_method(2004,5,12,14,45,30,3)
-print(a)
+
+
+if __name__ == '__main__':        
+    a = JulianDay.tb_method(2004,5,12,14,45,30,3)
+    print(a)
     
 
 
