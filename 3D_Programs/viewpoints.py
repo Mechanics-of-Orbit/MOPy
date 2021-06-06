@@ -5,7 +5,6 @@ from direct.showbase.ShowBase import ShowBase
 from direct.actor.Actor import Actor
 from panda3d.core import Camera
 
-
 class MyGame(ShowBase):
     def __init__(self):
         super().__init__()
@@ -14,7 +13,7 @@ class MyGame(ShowBase):
         self.land.reparentTo(render)
         self.land.setPos(0,0,0)
 
-        self.model1 = Actor("models/panda_chan/act_p3d_chan")
+        self.model1 = Actor("Assests/Models/planet_sphere")
         self.model1.reparentTo(render)
         self.model1.setScale(2)
         self.model1.setPos(10, 12, 0)
