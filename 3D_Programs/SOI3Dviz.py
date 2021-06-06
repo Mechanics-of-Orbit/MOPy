@@ -46,3 +46,4 @@ class SOI(ShowBase):
 
 soi = SOI("earth_daymap")
 soi.run()
+ 
