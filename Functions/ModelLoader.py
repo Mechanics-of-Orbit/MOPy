@@ -1,18 +1,20 @@
-from direct.showbase.ShowBase import ShowBase
-from direct.actor.Actor import Actor
-from common import Common
-# from panda3d.core import Loader, NodePath
-
 class loadMyModel():
     def __init__(self):
-        self.dire = r'Assets\Models\hi_res_tex\a_'
-        self.ComDir = self.dire + "earth_daymap" + ".jpg"
+        pass
 
-        self.modelObject = Common.game.loader.loadModel("Assets/Models/planet_sphere")
-        self.modelObject_tex = Common.game.loader.loadTexture(self.ComDir)
-        self.modelObject.setTexture(self.modelObject_tex,1)
+    def body(self, base, model):
+        ob = base.loader.loadModel("Assets\Models\planet_sphere")
+        ComDir = r'Assets\Models\hi_res_tex\a_' + model + ".jpg"
+        ob_tex = base.loader.loadTexture(ComDir)
+        ob.setTexture(ob_tex)
+        return ob
+    
+    def astronaut(self, base, model):
+        ob = base.Actor(model)
+    
+    def solar_sky(self, base, scale):
+        sol_sky = base.loader.loadModel("Assests\Models\solar_sky_sphere")
+        sol_sky = base.loader.loadTexture("Assests\Models\hi_res_tex\stars.jpg")
+        sol_sky.setScale(scale)
 
 
-if __name__ == '__main__':
-    abc = loadMyModel("earth_daymap")
-    abc.run()
