@@ -14,8 +14,8 @@ class MyApp(ShowBase):
         self.main_model = load_my_model.body(base, model)
         self.main_model.reparentTo(render)
 
-        self.solar_sky = load_my_model.solar_sky(base,2000)
-        self.solar_sky.reparentTo(render)
+        # self.sol_sky = load_my_model.solar_sky(base)
+        # self.sol_sky.reparentTo(render)
 
 
 app = MyApp()

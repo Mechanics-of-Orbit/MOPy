@@ -13,7 +13,7 @@ class MyGame(ShowBase):
         self.land.reparentTo(render)
         self.land.setPos(0,0,0)
 
-        self.model1 = Actor("Assests/Models/planet_sphere")
+        self.model1 = Actor("Assets/Models/planet_sphere")
         self.model1.reparentTo(render)
         self.model1.setScale(2)
         self.model1.setPos(10, 12, 0)

@@ -17,7 +17,7 @@ class SOI(ShowBase):
         self.stars = self.loader.loadModel("Assets/Models/solar_sky_sphere")
         self.stars.setScale(10000)
         self.stars.reparentTo(render)
-        self.stars_tex = loader.loadTexture("Assets/Models/hi_res_tex/a_stars.jpg")
+        self.stars_tex = loader.loadTexture("Assets/Models/hi_res_tex/stars.jpg")
         self.stars.setTexture(self.stars_tex,1)
 
         self.planet_name = planet
