@@ -7,10 +7,10 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFo
 from PySide2.QtWidgets import *
 
 # GUI FILE
-from Home_Page import Ui_MainWindow
+from UI_Functions.Home_Page import Ui_MainWindow
 
 # IMPORT FUNCTIONS
-from Home_Page_functions import *
+from UI_Functions.Home_Page_functions import *
 
 
 
@@ -86,6 +86,7 @@ class MainWindow(QMainWindow):
             JDN = 367 * year - int((7 * (year + 5001 + (month - 9)/7))/4) + int((275 * month)/9) + day + 1729777
         elif calendar == "  Select the Type Of Calendar":
             self.ui.Error_state.setText("Please select the type of calendar")
+                
         #JDN to JD
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))

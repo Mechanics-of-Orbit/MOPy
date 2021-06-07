@@ -1,24 +1,21 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagerqYbPS.ui'
+## Form generated from reading UI file 'Home_PageTiLHqh.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if MainWindow.objectName():
+        if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1108, 663)
         MainWindow.setMinimumSize(QSize(750, 0))
@@ -88,7 +85,7 @@ class Ui_MainWindow(object):
 "	background-color:transparent;\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px;\n"
-"	image:url(GUI-test/Resources/Home_btn.png);\n"
+"	image:url(UI_Functions/Resources/Home_btn.png);\n"
 "	\n"
 "}\n"
 "\n"
@@ -139,7 +136,7 @@ class Ui_MainWindow(object):
         self.btn_minimize.setStyleSheet(u"QPushButton{\n"
 "	border: none;\n"
 "	border-radius:8px;\n"
-"	image:url(GUI-test/Resources/minimize.svg);\n"
+"	image:url(UI_Functions/Resources/minimize.svg);\n"
 "	padding: 0.2em 0.2em 0.2em 0.2em;\n"
 "}\n"
 "\n"
@@ -156,14 +153,15 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "	\n"
 "	border-radius:8px;\n"
-"	image:url(GUI-test/Resources/close.svg);\n"
+"	image:url(UI_Functions/Resources/close.svg);\n"
 "	padding: 0.1em 0.1em 0.2em 0.1em;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	border: 1px solid transparent;\n"
 "\n"
-"}")
+"}\n"
+"")
 
         self.horizontalLayout.addWidget(self.frame_btns)
 
@@ -227,7 +225,7 @@ class Ui_MainWindow(object):
         self.Search_logo.setMinimumSize(QSize(350, 250))
         self.Search_logo.setMaximumSize(QSize(390, 300))
         self.Search_logo.setStyleSheet(u"")
-        self.Search_logo.setPixmap(QPixmap(u"GUI-test/Resources/MOPy Cover_transparent.png"))
+        self.Search_logo.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
         self.Search_logo.setScaledContents(True)
         self.Search_logo.setAlignment(Qt.AlignCenter)
 
@@ -496,7 +494,7 @@ class Ui_MainWindow(object):
         font5 = QFont()
         font5.setPointSize(10)
         self.Error_state.setFont(font5)
-        self.Error_state.setStyleSheet(u"color:white;")
+        self.Error_state.setStyleSheet(u"color:rgb(255, 0, 0);")
 
         self.verticalLayout_17.addWidget(self.Error_state)
 
@@ -1367,8 +1365,7 @@ class Ui_MainWindow(object):
         font10.setItalic(False)
         font10.setWeight(50)
         self.label_credits.setFont(font10)
-        self.label_credits.setStyleSheet(u"color: rgb(128, 102, 168);\n"
-"font: 6pt \"Arial\";")
+        self.label_credits.setStyleSheet(u"image:url(UI_Functions/Resources/MOPy Cover_transparent.png);")
         self.label_credits.setPixmap(QPixmap(u"GUI-test/Resources/MOPy Cover_transparent.png"))
         self.label_credits.setScaledContents(True)
 
