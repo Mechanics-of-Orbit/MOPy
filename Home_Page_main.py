@@ -5,6 +5,7 @@ from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
+import sqlite3
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -58,6 +59,32 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentIndex(1)
         elif index == 3:
             self.ui.stackedWidget.setCurrentIndex(2)
+    
+    # SOI
+    def SEARCH(self):
+        db = sqlite3.connect("planetary_data_test/MajorBody_data.db")
+        cursor = db.cursor()
+
+        planet_name_soi = self.ui.SOI_planet_name.currentText()
+        if planet_name_soi == "  Earth":
+            planet_name = "Earth"
+        planet_name_affect = self.ui.affect_planet_name.currentText()
+ 
+        #command = ''' SELECT * from Parts_Table '''
+
+        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[planet_name])
+        
+
+        #self.table.setRowCount(0) #Here table is the name we have to the first table containing 9 columns
+       
+        for row_number, row_data in enumerate(result):
+            self.ui.soi_mass.setText(str(row_data[1]))
+            print(row_data[1])
+            #print(row_data[1])
+            #self.table.insertRow(row_number)
+            #for column_number, data in enumerate(row_data):
+                #self.table.setItem(row_number, column_number,QTableWidgetItem(str(data)))
+
     
     # Home_btn
     def meth_Home_btn(self):
