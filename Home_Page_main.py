@@ -65,25 +65,34 @@ class MainWindow(QMainWindow):
         db = sqlite3.connect("planetary_data_test/MajorBody_data.db")
         cursor = db.cursor()
 
-        planet_name_soi = self.ui.SOI_planet_name.currentText()
-        if planet_name_soi == "  Earth":
-            planet_name = "Earth"
-        planet_name_affect = self.ui.affect_planet_name.currentText()
- 
-        #command = ''' SELECT * from Parts_Table '''
+        planet_name = self.ui.SOI_planet_name.currentText()
+        
+        self.ui.lbl_mass.setText("Mass of" + str(planet_name)+":")
+       
 
         result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[planet_name])
-        
 
-        #self.table.setRowCount(0) #Here table is the name we have to the first table containing 9 columns
        
         for row_number, row_data in enumerate(result):
             self.ui.soi_mass.setText(str(row_data[1]))
-            print(row_data[1])
-            #print(row_data[1])
-            #self.table.insertRow(row_number)
-            #for column_number, data in enumerate(row_data):
-                #self.table.setItem(row_number, column_number,QTableWidgetItem(str(data)))
+            self.ui.dist_frm_sun.setText(str(row_data[8]))
+            
+    def SOI(self):
+       
+        Mass_of_Sun = 1.989e30
+        Minor_body_mass = self.ui.soi_mass.text() 
+        distance_bt_sun_plnt = self.ui.soi_mass.text()
+        #MiB_mass = 5.962e24
+        #MiB_radius = 6378
+        #r_maj_to_min = 149.6e6
+
+        rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
+        self.ui.soi_rad.setText(str(rSOI))
+
+        #return [rSOI, rSOI/MiB_radius]
+
+        
+           
 
     
     # Home_btn

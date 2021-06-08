@@ -78,7 +78,9 @@ class UIFunctions(MainWindow):
         # When Home_btn is clicked
         self.ui.Home_btn.clicked.connect(lambda: Home_Page_main.MainWindow.meth_Home_btn(self))
 
-        self.ui.soi_cal.clicked.connect(lambda:Home_Page_main.MainWindow.SEARCH(self))
+        self.ui.get_mass.clicked.connect(lambda:Home_Page_main.MainWindow.SEARCH(self))
+
+        self.ui.soi_cal.clicked.connect(lambda:Home_Page_main.MainWindow.SOI(self))
 
     ## RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTAURED
     def returnStatus():
