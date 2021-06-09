@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageTiLHqh.ui'
+## Form generated from reading UI file 'Home_PageuWorET.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -615,22 +615,19 @@ class Ui_MainWindow(object):
         self.digits_accuracy.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
-"        image: url(GUI-test/Resources/right_arrow.svg);\n"
+"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
 "        width: 12px;\n"
-"        height: 20px;  \n"
-"		\n"
-"		\n"
-"	 \n"
-"		\n"
+"        height: 20px;  	\n"
 "    }\n"
 "\n"
 " \n"
 "    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
 "        subcontrol-position:left;\n"
-"        image: url(GUI-test/Resources/left_arrow.svg);\n"
+"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
 "        width: 12px;\n"
 "        height: 20px;\n"
 "    }\n"
+"\n"
 "     /*Button press style*/\n"
 "    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -639,8 +636,8 @@ class Ui_MainWindow(object):
 "        height: 20px;       \n"
 "    }\n"
 "      \n"
-"QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpin"
-                        "Box::down-button:pressed{\n"
+"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
+                        "ton:pressed{\n"
 "        subcontrol-position:left;\n"
 "        image: url(:/ico/pushed_left.png);\n"
 "        width: 12px;\n"
@@ -661,19 +658,15 @@ class Ui_MainWindow(object):
         self.timeEdit.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
-"        image: url(GUI-test/Resources/right_arrow.svg);\n"
+"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
 "        width: 12px;\n"
-"        height: 20px;  \n"
-"		\n"
-"		\n"
-"	 \n"
-"		\n"
+"        height: 20px;  		\n"
 "    }\n"
 "\n"
 " \n"
 "    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
 "        subcontrol-position:left;\n"
-"        image: url(GUI-test/Resources/left_arrow.svg);\n"
+"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
 "        width: 12px;\n"
 "        height: 20px;\n"
 "    }\n"
@@ -685,8 +678,8 @@ class Ui_MainWindow(object):
 "        height: 20px;       \n"
 "    }\n"
 "      \n"
-"QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpin"
-                        "Box::down-button:pressed{\n"
+"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:"
+                        "pressed{\n"
 "        subcontrol-position:left;\n"
 "        image: url(:/ico/pushed_left.png);\n"
 "        width: 12px;\n"
@@ -880,30 +873,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_16.addWidget(self.frame_37)
 
-        self.frame_29 = QFrame(self.SOI_frame_content)
-        self.frame_29.setObjectName(u"frame_29")
-        self.frame_29.setMinimumSize(QSize(0, 50))
-        self.frame_29.setMaximumSize(QSize(16777215, 50))
-        self.frame_29.setFrameShape(QFrame.StyledPanel)
-        self.frame_29.setFrameShadow(QFrame.Raised)
-        self.comboBox = QComboBox(self.frame_29)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setGeometry(QRect(410, 10, 251, 41))
-        self.comboBox.setStyleSheet(u"QComboBox{\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;}\n"
-"\n"
-"\n"
-"QComboBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-
-        self.verticalLayout_16.addWidget(self.frame_29)
-
         self.frame_33 = QFrame(self.SOI_frame_content)
         self.frame_33.setObjectName(u"frame_33")
         self.frame_33.setMinimumSize(QSize(0, 30))
@@ -929,7 +898,7 @@ class Ui_MainWindow(object):
         self.frame_32.setFrameShadow(QFrame.Raised)
         self.verticalLayout_18 = QVBoxLayout(self.frame_32)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
-        self.verticalLayout_18.setContentsMargins(40, -1, 40, -1)
+        self.verticalLayout_18.setContentsMargins(130, -1, 130, -1)
         self.frame_35 = QFrame(self.frame_32)
         self.frame_35.setObjectName(u"frame_35")
         self.frame_35.setStyleSheet(u"QFrame{\n"
@@ -945,32 +914,32 @@ class Ui_MainWindow(object):
         self.frame_35.setFrameShadow(QFrame.Raised)
         self.label_8 = QLabel(self.frame_35)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(60, 20, 101, 21))
+        self.label_8.setGeometry(QRect(190, 30, 171, 21))
         self.label_8.setFont(font8)
         self.label_8.setStyleSheet(u"color: white;\n"
 "border:none;")
-        self.label_10 = QLabel(self.frame_35)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(60, 90, 141, 21))
-        self.label_10.setFont(font8)
-        self.label_10.setStyleSheet(u"color: white;\n"
+        self.lbl_mass = QLabel(self.frame_35)
+        self.lbl_mass.setObjectName(u"lbl_mass")
+        self.lbl_mass.setGeometry(QRect(20, 130, 141, 21))
+        self.lbl_mass.setFont(font8)
+        self.lbl_mass.setLayoutDirection(Qt.LeftToRight)
+        self.lbl_mass.setStyleSheet(u"color: white;\n"
 "border:none;")
-        self.comboBox_2 = QComboBox(self.frame_35)
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.setObjectName(u"comboBox_2")
-        self.comboBox_2.setGeometry(QRect(220, 10, 211, 41))
-        self.comboBox_2.setStyleSheet(u"QComboBox{\n"
+        self.SOI_planet_name = QComboBox(self.frame_35)
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.addItem("")
+        self.SOI_planet_name.setObjectName(u"SOI_planet_name")
+        self.SOI_planet_name.setGeometry(QRect(410, 20, 211, 41))
+        self.SOI_planet_name.setStyleSheet(u"QComboBox{\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
 "	font: 12pt \"Arial\";\n"
 "	border-radius: 20px;}\n"
@@ -979,217 +948,92 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.doubleSpinBox = QDoubleSpinBox(self.frame_35)
-        self.doubleSpinBox.setObjectName(u"doubleSpinBox")
-        self.doubleSpinBox.setGeometry(QRect(220, 80, 211, 41))
-        self.doubleSpinBox.setStyleSheet(u"    /*spinbox lift style*/\n"
-"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(GUI-test/Resources/right_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;  \n"
-"		\n"
-"		\n"
-"	 \n"
-"		\n"
-"    }\n"
-"\n"
-" \n"
-"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
-"        subcontrol-position:left;\n"
-"        image: url(GUI-test/Resources/left_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"     /*Button press style*/\n"
-"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(:/ico/pushed_right.png);\n"
-"        width: 12px;\n"
-"        height: 20px;       \n"
-"    }\n"
-"      \n"
-"QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpin"
-                        "Box::down-button:pressed{\n"
-"        subcontrol-position:left;\n"
-"        image: url(:/ico/pushed_left.png);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"QDoubleSpinBox{\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;}\n"
-"\n"
-"\n"
-"QDoubleSpinBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"\n"
-"\n"
-"}")
-        self.label_14 = QLabel(self.frame_35)
-        self.label_14.setObjectName(u"label_14")
-        self.label_14.setGeometry(QRect(290, 160, 221, 21))
-        self.label_14.setFont(font8)
-        self.label_14.setStyleSheet(u"color: white;\n"
+        self.lbl_dist_frm_sun = QLabel(self.frame_35)
+        self.lbl_dist_frm_sun.setObjectName(u"lbl_dist_frm_sun")
+        self.lbl_dist_frm_sun.setGeometry(QRect(420, 130, 221, 21))
+        self.lbl_dist_frm_sun.setFont(font8)
+        self.lbl_dist_frm_sun.setStyleSheet(u"color: white;\n"
 "border:none;")
-        self.doubleSpinBox_3 = QDoubleSpinBox(self.frame_35)
-        self.doubleSpinBox_3.setObjectName(u"doubleSpinBox_3")
-        self.doubleSpinBox_3.setGeometry(QRect(710, 80, 201, 41))
-        self.doubleSpinBox_3.setStyleSheet(u"    /*spinbox lift style*/\n"
-"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(GUI-test/Resources/right_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;  \n"
-"		\n"
-"		\n"
-"	 \n"
-"		\n"
-"    }\n"
-"\n"
-" \n"
-"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
-"        subcontrol-position:left;\n"
-"        image: url(GUI-test/Resources/left_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"     /*Button press style*/\n"
-"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(:/ico/pushed_right.png);\n"
-"        width: 12px;\n"
-"        height: 20px;       \n"
-"    }\n"
-"      \n"
-"QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpin"
-                        "Box::down-button:pressed{\n"
-"        subcontrol-position:left;\n"
-"        image: url(:/ico/pushed_left.png);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"QDoubleSpinBox{\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;}\n"
-"\n"
-"\n"
-"QDoubleSpinBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"\n"
-"\n"
-"}")
         self.label_11 = QLabel(self.frame_35)
         self.label_11.setObjectName(u"label_11")
-        self.label_11.setGeometry(QRect(440, 90, 141, 21))
+        self.label_11.setGeometry(QRect(340, 130, 141, 21))
         self.label_11.setFont(font8)
         self.label_11.setStyleSheet(u"color: white;\n"
 "border:none;")
-        self.label_9 = QLabel(self.frame_35)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(560, 20, 131, 21))
-        self.label_9.setFont(font8)
-        self.label_9.setStyleSheet(u"border:none;\n"
-"color: white;")
-        self.label_12 = QLabel(self.frame_35)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setGeometry(QRect(560, 90, 141, 21))
-        self.label_12.setFont(font8)
-        self.label_12.setStyleSheet(u"color: white;\n"
-"border:none;")
-        self.doubleSpinBox_2 = QDoubleSpinBox(self.frame_35)
-        self.doubleSpinBox_2.setObjectName(u"doubleSpinBox_2")
-        self.doubleSpinBox_2.setGeometry(QRect(500, 150, 251, 41))
-        self.doubleSpinBox_2.setStyleSheet(u"    /*spinbox lift style*/\n"
-"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(GUI-test/Resources/right_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;  \n"
-"		\n"
-"		\n"
-"	 \n"
-"		\n"
-"    }\n"
-"\n"
-" \n"
-"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
-"        subcontrol-position:left;\n"
-"        image: url(GUI-test/Resources/left_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"     /*Button press style*/\n"
-"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(:/ico/pushed_right.png);\n"
-"        width: 12px;\n"
-"        height: 20px;       \n"
-"    }\n"
-"      \n"
-"QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpin"
-                        "Box::down-button:pressed{\n"
-"        subcontrol-position:left;\n"
-"        image: url(:/ico/pushed_left.png);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"QDoubleSpinBox{\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;}\n"
-"\n"
-"\n"
-"QDoubleSpinBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"\n"
-"\n"
-"}")
-        self.comboBox_3 = QComboBox(self.frame_35)
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.setObjectName(u"comboBox_3")
-        self.comboBox_3.setGeometry(QRect(710, 10, 201, 41))
-        self.comboBox_3.setStyleSheet(u"QComboBox{\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;}\n"
-"\n"
-"\n"
-"QComboBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.label_13 = QLabel(self.frame_35)
-        self.label_13.setObjectName(u"label_13")
-        self.label_13.setGeometry(QRect(920, 90, 141, 21))
-        self.label_13.setFont(font8)
-        self.label_13.setStyleSheet(u"color:white;\n"
-"border:none;")
         self.label_16 = QLabel(self.frame_35)
         self.label_16.setObjectName(u"label_16")
-        self.label_16.setGeometry(QRect(760, 160, 141, 21))
+        self.label_16.setGeometry(QRect(740, 130, 141, 21))
         self.label_16.setFont(font8)
         self.label_16.setStyleSheet(u"color: white;\n"
 "border:none;")
+        self.get_mass = QPushButton(self.frame_35)
+        self.get_mass.setObjectName(u"get_mass")
+        self.get_mass.setGeometry(QRect(350, 70, 101, 41))
+        font9 = QFont()
+        font9.setPointSize(12)
+        self.get_mass.setFont(font9)
+        self.get_mass.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgb(2, 119, 189);\n"
+"	color:rgb(245, 255, 179);\n"
+"	border-radius: 20px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	\n"
+"	background-color: rgb(255, 170, 0);\n"
+"}")
+        self.soi_mass = QLabel(self.frame_35)
+        self.soi_mass.setObjectName(u"soi_mass")
+        self.soi_mass.setGeometry(QRect(170, 120, 161, 41))
+        self.soi_mass.setStyleSheet(u"\n"
+"\n"
+"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.dist_frm_sun = QLabel(self.frame_35)
+        self.dist_frm_sun.setObjectName(u"dist_frm_sun")
+        self.dist_frm_sun.setGeometry(QRect(570, 120, 161, 41))
+        self.dist_frm_sun.setStyleSheet(u"\n"
+"\n"
+"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.soi_cal = QPushButton(self.frame_35)
+        self.soi_cal.setObjectName(u"soi_cal")
+        self.soi_cal.setGeometry(QRect(350, 170, 101, 41))
+        self.soi_cal.setFont(font9)
+        self.soi_cal.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgb(2, 119, 189);\n"
+"	color:rgb(245, 255, 179);\n"
+"	border-radius: 20px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	\n"
+"	background-color: rgb(255, 170, 0);\n"
+"}")
 
         self.verticalLayout_18.addWidget(self.frame_35)
 
@@ -1217,7 +1061,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15 = QHBoxLayout(self.frame_28)
         self.horizontalLayout_15.setSpacing(0)
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.horizontalLayout_15.setContentsMargins(250, 0, 250, 0)
+        self.horizontalLayout_15.setContentsMargins(280, 0, 280, 0)
         self.frame_36 = QFrame(self.frame_28)
         self.frame_36.setObjectName(u"frame_36")
         self.frame_36.setStyleSheet(u"QFrame{\n"
@@ -1233,9 +1077,7 @@ class Ui_MainWindow(object):
         self.frame_36.setFrameShadow(QFrame.Raised)
         self.pushButton = QPushButton(self.frame_36)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(150, 80, 254, 41))
-        font9 = QFont()
-        font9.setPointSize(12)
+        self.pushButton.setGeometry(QRect(130, 100, 254, 41))
         self.pushButton.setFont(font9)
         self.pushButton.setStyleSheet(u"QPushButton{\n"
 "	background-color:rgb(2, 119, 189);\n"
@@ -1247,68 +1089,37 @@ class Ui_MainWindow(object):
 "	\n"
 "	background-color: rgb(255, 170, 0);\n"
 "}")
-        self.doubleSpinBox_4 = QDoubleSpinBox(self.frame_36)
-        self.doubleSpinBox_4.setObjectName(u"doubleSpinBox_4")
-        self.doubleSpinBox_4.setGeometry(QRect(220, 20, 261, 41))
-        self.doubleSpinBox_4.setStyleSheet(u"    /*spinbox lift style*/\n"
-"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(GUI-test/Resources/right_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;  \n"
-"		\n"
-"		\n"
-"	 \n"
-"		\n"
-"    }\n"
-"\n"
-" \n"
-"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
-"        subcontrol-position:left;\n"
-"        image: url(GUI-test/Resources/left_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"     /*Button press style*/\n"
-"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(:/ico/pushed_right.png);\n"
-"        width: 12px;\n"
-"        height: 20px;       \n"
-"    }\n"
-"      \n"
-"QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpin"
-                        "Box::down-button:pressed{\n"
-"        subcontrol-position:left;\n"
-"        image: url(:/ico/pushed_left.png);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"QDoubleSpinBox{\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;}\n"
-"\n"
-"\n"
-"QDoubleSpinBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"\n"
-"\n"
-"}")
         self.label_17 = QLabel(self.frame_36)
         self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(500, 20, 111, 41))
+        self.label_17.setGeometry(QRect(470, 20, 111, 41))
         self.label_17.setFont(font8)
         self.label_17.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.label_18 = QLabel(self.frame_36)
         self.label_18.setObjectName(u"label_18")
-        self.label_18.setGeometry(QRect(70, 30, 131, 21))
+        self.label_18.setGeometry(QRect(30, 30, 181, 21))
         self.label_18.setFont(font8)
         self.label_18.setStyleSheet(u"color: white;\n"
 "border:none;")
+        self.soi_rad = QLabel(self.frame_36)
+        self.soi_rad.setObjectName(u"soi_rad")
+        self.soi_rad.setGeometry(QRect(220, 20, 241, 41))
+        self.soi_rad.setStyleSheet(u"\n"
+"\n"
+"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
 
         self.horizontalLayout_15.addWidget(self.frame_36)
 
@@ -1466,50 +1277,33 @@ class Ui_MainWindow(object):
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"       Output:", None))
         self.JulianDay_Result.setText("")
         self.label_title_3.setText(QCoreApplication.translate("MainWindow", u"    SOI of Planet", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select Number of Bodies", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"  2- Body Problem", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"  3- Body Problem", None))
-
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Inputs:", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Minor Body: ", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Minor Body Mass:", None))
-        self.comboBox_2.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Planet", None))
-        self.comboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
-        self.comboBox_2.setItemText(2, QCoreApplication.translate("MainWindow", u"  Earth", None))
-        self.comboBox_2.setItemText(3, QCoreApplication.translate("MainWindow", u"  Jupiter", None))
-        self.comboBox_2.setItemText(4, QCoreApplication.translate("MainWindow", u"  Mercuiry", None))
-        self.comboBox_2.setItemText(5, QCoreApplication.translate("MainWindow", u"  Venus", None))
-        self.comboBox_2.setItemText(6, QCoreApplication.translate("MainWindow", u"  Mars", None))
-        self.comboBox_2.setItemText(7, QCoreApplication.translate("MainWindow", u"  Satrurn", None))
-        self.comboBox_2.setItemText(8, QCoreApplication.translate("MainWindow", u"  Uranus", None))
-        self.comboBox_2.setItemText(9, QCoreApplication.translate("MainWindow", u"  Neptune", None))
-        self.comboBox_2.setItemText(10, QCoreApplication.translate("MainWindow", u"  Pluto", None))
-        self.comboBox_2.setItemText(11, QCoreApplication.translate("MainWindow", u"  Other", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Sphere of Influence of:", None))
+        self.lbl_mass.setText(QCoreApplication.translate("MainWindow", u"Mass of ", None))
+        self.SOI_planet_name.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Body", None))
+        self.SOI_planet_name.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
+        self.SOI_planet_name.setItemText(2, QCoreApplication.translate("MainWindow", u"  Earth", None))
+        self.SOI_planet_name.setItemText(3, QCoreApplication.translate("MainWindow", u"  Jupiter", None))
+        self.SOI_planet_name.setItemText(4, QCoreApplication.translate("MainWindow", u"  Mercury", None))
+        self.SOI_planet_name.setItemText(5, QCoreApplication.translate("MainWindow", u"  Venus", None))
+        self.SOI_planet_name.setItemText(6, QCoreApplication.translate("MainWindow", u"  Mars", None))
+        self.SOI_planet_name.setItemText(7, QCoreApplication.translate("MainWindow", u"  Saturn", None))
+        self.SOI_planet_name.setItemText(8, QCoreApplication.translate("MainWindow", u"  Uranus", None))
+        self.SOI_planet_name.setItemText(9, QCoreApplication.translate("MainWindow", u"  Neptune", None))
+        self.SOI_planet_name.setItemText(10, QCoreApplication.translate("MainWindow", u"  Pluto", None))
 
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Distance Between them:", None))
+        self.lbl_dist_frm_sun.setText(QCoreApplication.translate("MainWindow", u"Distance From Sun:", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Kg", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Major Body:", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Major Body Mass:", None))
-        self.comboBox_3.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Planet", None))
-        self.comboBox_3.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
-        self.comboBox_3.setItemText(2, QCoreApplication.translate("MainWindow", u"  Sun", None))
-        self.comboBox_3.setItemText(3, QCoreApplication.translate("MainWindow", u"  Earth", None))
-        self.comboBox_3.setItemText(4, QCoreApplication.translate("MainWindow", u"  Jupiter", None))
-        self.comboBox_3.setItemText(5, QCoreApplication.translate("MainWindow", u"  Mercuiry", None))
-        self.comboBox_3.setItemText(6, QCoreApplication.translate("MainWindow", u"  Venus", None))
-        self.comboBox_3.setItemText(7, QCoreApplication.translate("MainWindow", u"  Mars", None))
-        self.comboBox_3.setItemText(8, QCoreApplication.translate("MainWindow", u"  Satrurn", None))
-        self.comboBox_3.setItemText(9, QCoreApplication.translate("MainWindow", u"  Uranus", None))
-        self.comboBox_3.setItemText(10, QCoreApplication.translate("MainWindow", u"  Neptune", None))
-        self.comboBox_3.setItemText(11, QCoreApplication.translate("MainWindow", u"  Pluto", None))
-        self.comboBox_3.setItemText(12, QCoreApplication.translate("MainWindow", u"  Other", None))
-
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Kg", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Km", None))
+        self.get_mass.setText(QCoreApplication.translate("MainWindow", u"Get Data", None))
+        self.soi_mass.setText("")
+        self.dist_frm_sun.setText("")
+        self.soi_cal.setText(QCoreApplication.translate("MainWindow", u"Calculate", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Outputs:", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Get 3D Visualization", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Km", None))
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"SOI Radius of", None))
+        self.label_18.setText("")
+        self.soi_rad.setText("")
         self.label_credits.setText("")
     # retranslateUi
 

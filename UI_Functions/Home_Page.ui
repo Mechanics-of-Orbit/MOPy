@@ -1456,22 +1456,19 @@ QFrame:hover{
                            <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
-        image: url(GUI-test/Resources/right_arrow.svg);
+        image: url(UI_Functions/Resources/right_arrow.svg);
         width: 12px;
-        height: 20px;  
-		
-		
-	 
-		
+        height: 20px;  	
     }
 
  
     QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
         subcontrol-position:left;
-        image: url(GUI-test/Resources/left_arrow.svg);
+        image: url(UI_Functions/Resources/left_arrow.svg);
         width: 12px;
         height: 20px;
     }
+
      /*Button press style*/
     QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
         subcontrol-position:right;
@@ -1480,7 +1477,7 @@ QFrame:hover{
         height: 20px;       
     }
       
-QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
+	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
         subcontrol-position:left;
         image: url(:/ico/pushed_left.png);
         width: 12px;
@@ -1535,19 +1532,15 @@ color: white;</string>
                            <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
-        image: url(GUI-test/Resources/right_arrow.svg);
+        image: url(UI_Functions/Resources/right_arrow.svg);
         width: 12px;
-        height: 20px;  
-		
-		
-	 
-		
+        height: 20px;  		
     }
 
  
     QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
         subcontrol-position:left;
-        image: url(GUI-test/Resources/left_arrow.svg);
+        image: url(UI_Functions/Resources/left_arrow.svg);
         width: 12px;
         height: 20px;
     }
@@ -1559,7 +1552,7 @@ color: white;</string>
         height: 20px;       
     }
       
-QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
+	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
         subcontrol-position:left;
         image: url(:/ico/pushed_left.png);
         width: 12px;
@@ -2010,64 +2003,6 @@ QLabel:hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="frame_29">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <widget class="QComboBox" name="comboBox">
-                    <property name="geometry">
-                     <rect>
-                      <x>410</x>
-                      <y>10</y>
-                      <width>251</width>
-                      <height>41</height>
-                     </rect>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QComboBox{
-	border: 5px solid rgb(84, 84, 197);
-	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;}
-
-
-QComboBox:hover{
-	border: 4px solid rgb(2, 119, 189);
-}</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>  Select Number of Bodies</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>  2- Body Problem</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>  3- Body Problem</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="QFrame" name="frame_33">
                    <property name="minimumSize">
                     <size>
@@ -2135,10 +2070,10 @@ QComboBox:hover{
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_18">
                     <property name="leftMargin">
-                     <number>40</number>
+                     <number>130</number>
                     </property>
                     <property name="rightMargin">
-                     <number>40</number>
+                     <number>130</number>
                     </property>
                     <item>
                      <widget class="QFrame" name="frame_35">
@@ -2162,9 +2097,9 @@ QFrame:hover{
                       <widget class="QLabel" name="label_8">
                        <property name="geometry">
                         <rect>
-                         <x>60</x>
-                         <y>20</y>
-                         <width>101</width>
+                         <x>190</x>
+                         <y>30</y>
+                         <width>171</width>
                          <height>21</height>
                         </rect>
                        </property>
@@ -2178,14 +2113,14 @@ QFrame:hover{
 border:none;</string>
                        </property>
                        <property name="text">
-                        <string>Minor Body: </string>
+                        <string>Sphere of Influence of:</string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="label_10">
+                      <widget class="QLabel" name="lbl_mass">
                        <property name="geometry">
                         <rect>
-                         <x>60</x>
-                         <y>90</y>
+                         <x>20</x>
+                         <y>130</y>
                          <width>141</width>
                          <height>21</height>
                         </rect>
@@ -2195,19 +2130,22 @@ border:none;</string>
                          <pointsize>11</pointsize>
                         </font>
                        </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
                        <property name="styleSheet">
                         <string notr="true">color: white;
 border:none;</string>
                        </property>
                        <property name="text">
-                        <string>Minor Body Mass:</string>
+                        <string>Mass of </string>
                        </property>
                       </widget>
-                      <widget class="QComboBox" name="comboBox_2">
+                      <widget class="QComboBox" name="SOI_planet_name">
                        <property name="geometry">
                         <rect>
-                         <x>220</x>
-                         <y>10</y>
+                         <x>410</x>
+                         <y>20</y>
                          <width>211</width>
                          <height>41</height>
                         </rect>
@@ -2225,7 +2163,7 @@ QComboBox:hover{
                        </property>
                        <item>
                         <property name="text">
-                         <string>  Select the Planet</string>
+                         <string>  Select the Body</string>
                         </property>
                        </item>
                        <item>
@@ -2245,7 +2183,7 @@ QComboBox:hover{
                        </item>
                        <item>
                         <property name="text">
-                         <string>  Mercuiry</string>
+                         <string>  Mercury</string>
                         </property>
                        </item>
                        <item>
@@ -2260,7 +2198,7 @@ QComboBox:hover{
                        </item>
                        <item>
                         <property name="text">
-                         <string>  Satrurn</string>
+                         <string>  Saturn</string>
                         </property>
                        </item>
                        <item>
@@ -2278,75 +2216,12 @@ QComboBox:hover{
                          <string>  Pluto</string>
                         </property>
                        </item>
-                       <item>
-                        <property name="text">
-                         <string>  Other</string>
-                        </property>
-                       </item>
                       </widget>
-                      <widget class="QDoubleSpinBox" name="doubleSpinBox">
+                      <widget class="QLabel" name="lbl_dist_frm_sun">
                        <property name="geometry">
                         <rect>
-                         <x>220</x>
-                         <y>80</y>
-                         <width>211</width>
-                         <height>41</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">    /*spinbox lift style*/
-    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
-        subcontrol-position:right;
-        image: url(GUI-test/Resources/right_arrow.svg);
-        width: 12px;
-        height: 20px;  
-		
-		
-	 
-		
-    }
-
- 
-    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
-        subcontrol-position:left;
-        image: url(GUI-test/Resources/left_arrow.svg);
-        width: 12px;
-        height: 20px;
-    }
-     /*Button press style*/
-    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
-        subcontrol-position:right;
-        image: url(:/ico/pushed_right.png);
-        width: 12px;
-        height: 20px;       
-    }
-      
-QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
-        subcontrol-position:left;
-        image: url(:/ico/pushed_left.png);
-        width: 12px;
-        height: 20px;
-    }
-
-QDoubleSpinBox{
-	
-	border: 5px solid rgb(84, 84, 197);
-	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;}
-
-
-QDoubleSpinBox:hover{
-	border: 4px solid rgb(2, 119, 189);
-
-
-}</string>
-                       </property>
-                      </widget>
-                      <widget class="QLabel" name="label_14">
-                       <property name="geometry">
-                        <rect>
-                         <x>290</x>
-                         <y>160</y>
+                         <x>420</x>
+                         <y>130</y>
                          <width>221</width>
                          <height>21</height>
                         </rect>
@@ -2361,72 +2236,14 @@ QDoubleSpinBox:hover{
 border:none;</string>
                        </property>
                        <property name="text">
-                        <string>Distance Between them:</string>
-                       </property>
-                      </widget>
-                      <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
-                       <property name="geometry">
-                        <rect>
-                         <x>710</x>
-                         <y>80</y>
-                         <width>201</width>
-                         <height>41</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">    /*spinbox lift style*/
-    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
-        subcontrol-position:right;
-        image: url(GUI-test/Resources/right_arrow.svg);
-        width: 12px;
-        height: 20px;  
-		
-		
-	 
-		
-    }
-
- 
-    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
-        subcontrol-position:left;
-        image: url(GUI-test/Resources/left_arrow.svg);
-        width: 12px;
-        height: 20px;
-    }
-     /*Button press style*/
-    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
-        subcontrol-position:right;
-        image: url(:/ico/pushed_right.png);
-        width: 12px;
-        height: 20px;       
-    }
-      
-QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
-        subcontrol-position:left;
-        image: url(:/ico/pushed_left.png);
-        width: 12px;
-        height: 20px;
-    }
-
-QDoubleSpinBox{
-	
-	border: 5px solid rgb(84, 84, 197);
-	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;}
-
-
-QDoubleSpinBox:hover{
-	border: 4px solid rgb(2, 119, 189);
-
-
-}</string>
+                        <string>Distance From Sun:</string>
                        </property>
                       </widget>
                       <widget class="QLabel" name="label_11">
                        <property name="geometry">
                         <rect>
-                         <x>440</x>
-                         <y>90</y>
+                         <x>340</x>
+                         <y>130</y>
                          <width>141</width>
                          <height>21</height>
                         </rect>
@@ -2438,216 +2255,6 @@ QDoubleSpinBox:hover{
                        </property>
                        <property name="styleSheet">
                         <string notr="true">color: white;
-border:none;</string>
-                       </property>
-                       <property name="text">
-                        <string>Kg</string>
-                       </property>
-                      </widget>
-                      <widget class="QLabel" name="label_9">
-                       <property name="geometry">
-                        <rect>
-                         <x>560</x>
-                         <y>20</y>
-                         <width>131</width>
-                         <height>21</height>
-                        </rect>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>11</pointsize>
-                        </font>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border:none;
-color: white;</string>
-                       </property>
-                       <property name="text">
-                        <string>Major Body:</string>
-                       </property>
-                      </widget>
-                      <widget class="QLabel" name="label_12">
-                       <property name="geometry">
-                        <rect>
-                         <x>560</x>
-                         <y>90</y>
-                         <width>141</width>
-                         <height>21</height>
-                        </rect>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>11</pointsize>
-                        </font>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color: white;
-border:none;</string>
-                       </property>
-                       <property name="text">
-                        <string>Major Body Mass:</string>
-                       </property>
-                      </widget>
-                      <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
-                       <property name="geometry">
-                        <rect>
-                         <x>500</x>
-                         <y>150</y>
-                         <width>251</width>
-                         <height>41</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">    /*spinbox lift style*/
-    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
-        subcontrol-position:right;
-        image: url(GUI-test/Resources/right_arrow.svg);
-        width: 12px;
-        height: 20px;  
-		
-		
-	 
-		
-    }
-
- 
-    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
-        subcontrol-position:left;
-        image: url(GUI-test/Resources/left_arrow.svg);
-        width: 12px;
-        height: 20px;
-    }
-     /*Button press style*/
-    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
-        subcontrol-position:right;
-        image: url(:/ico/pushed_right.png);
-        width: 12px;
-        height: 20px;       
-    }
-      
-QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
-        subcontrol-position:left;
-        image: url(:/ico/pushed_left.png);
-        width: 12px;
-        height: 20px;
-    }
-
-QDoubleSpinBox{
-	
-	border: 5px solid rgb(84, 84, 197);
-	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;}
-
-
-QDoubleSpinBox:hover{
-	border: 4px solid rgb(2, 119, 189);
-
-
-}</string>
-                       </property>
-                      </widget>
-                      <widget class="QComboBox" name="comboBox_3">
-                       <property name="geometry">
-                        <rect>
-                         <x>710</x>
-                         <y>10</y>
-                         <width>201</width>
-                         <height>41</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QComboBox{
-	border: 5px solid rgb(84, 84, 197);
-	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;}
-
-
-QComboBox:hover{
-	border: 4px solid rgb(2, 119, 189);
-}</string>
-                       </property>
-                       <item>
-                        <property name="text">
-                         <string>  Select the Planet</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Moon</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Sun</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Earth</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Jupiter</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Mercuiry</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Venus</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Mars</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Satrurn</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Uranus</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Neptune</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Pluto</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>  Other</string>
-                        </property>
-                       </item>
-                      </widget>
-                      <widget class="QLabel" name="label_13">
-                       <property name="geometry">
-                        <rect>
-                         <x>920</x>
-                         <y>90</y>
-                         <width>141</width>
-                         <height>21</height>
-                        </rect>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>11</pointsize>
-                        </font>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
 border:none;</string>
                        </property>
                        <property name="text">
@@ -2657,8 +2264,8 @@ border:none;</string>
                       <widget class="QLabel" name="label_16">
                        <property name="geometry">
                         <rect>
-                         <x>760</x>
-                         <y>160</y>
+                         <x>740</x>
+                         <y>130</y>
                          <width>141</width>
                          <height>21</height>
                         </rect>
@@ -2674,6 +2281,128 @@ border:none;</string>
                        </property>
                        <property name="text">
                         <string>Km</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="get_mass">
+                       <property name="geometry">
+                        <rect>
+                         <x>350</x>
+                         <y>70</y>
+                         <width>101</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton{
+	background-color:rgb(2, 119, 189);
+	color:rgb(245, 255, 179);
+	border-radius: 20px
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(255, 170, 0);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Get Data</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="soi_mass">
+                       <property name="geometry">
+                        <rect>
+                         <x>170</x>
+                         <y>120</y>
+                         <width>161</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">
+
+QLabel{
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:white;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+
+
+}</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="dist_frm_sun">
+                       <property name="geometry">
+                        <rect>
+                         <x>570</x>
+                         <y>120</y>
+                         <width>161</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">
+
+QLabel{
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:white;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+
+
+}</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="soi_cal">
+                       <property name="geometry">
+                        <rect>
+                         <x>350</x>
+                         <y>170</y>
+                         <width>101</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton{
+	background-color:rgb(2, 119, 189);
+	color:rgb(245, 255, 179);
+	border-radius: 20px
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(255, 170, 0);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Calculate</string>
                        </property>
                       </widget>
                      </widget>
@@ -2737,13 +2466,13 @@ border:none;</string>
                      <number>0</number>
                     </property>
                     <property name="leftMargin">
-                     <number>250</number>
+                     <number>280</number>
                     </property>
                     <property name="topMargin">
                      <number>0</number>
                     </property>
                     <property name="rightMargin">
-                     <number>250</number>
+                     <number>280</number>
                     </property>
                     <property name="bottomMargin">
                      <number>0</number>
@@ -2770,8 +2499,8 @@ QFrame:hover{
                       <widget class="QPushButton" name="pushButton">
                        <property name="geometry">
                         <rect>
-                         <x>150</x>
-                         <y>80</y>
+                         <x>130</x>
+                         <y>100</y>
                          <width>254</width>
                          <height>41</height>
                         </rect>
@@ -2797,68 +2526,10 @@ QPushButton:hover{
                         <string>Get 3D Visualization</string>
                        </property>
                       </widget>
-                      <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
-                       <property name="geometry">
-                        <rect>
-                         <x>220</x>
-                         <y>20</y>
-                         <width>261</width>
-                         <height>41</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">    /*spinbox lift style*/
-    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
-        subcontrol-position:right;
-        image: url(GUI-test/Resources/right_arrow.svg);
-        width: 12px;
-        height: 20px;  
-		
-		
-	 
-		
-    }
-
- 
-    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
-        subcontrol-position:left;
-        image: url(GUI-test/Resources/left_arrow.svg);
-        width: 12px;
-        height: 20px;
-    }
-     /*Button press style*/
-    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
-        subcontrol-position:right;
-        image: url(:/ico/pushed_right.png);
-        width: 12px;
-        height: 20px;       
-    }
-      
-QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
-        subcontrol-position:left;
-        image: url(:/ico/pushed_left.png);
-        width: 12px;
-        height: 20px;
-    }
-
-QDoubleSpinBox{
-	
-	border: 5px solid rgb(84, 84, 197);
-	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;}
-
-
-QDoubleSpinBox:hover{
-	border: 4px solid rgb(2, 119, 189);
-
-
-}</string>
-                       </property>
-                      </widget>
                       <widget class="QLabel" name="label_17">
                        <property name="geometry">
                         <rect>
-                         <x>500</x>
+                         <x>470</x>
                          <y>20</y>
                          <width>111</width>
                          <height>41</height>
@@ -2880,9 +2551,9 @@ border:none;</string>
                       <widget class="QLabel" name="label_18">
                        <property name="geometry">
                         <rect>
-                         <x>70</x>
+                         <x>30</x>
                          <y>30</y>
-                         <width>131</width>
+                         <width>181</width>
                          <height>21</height>
                         </rect>
                        </property>
@@ -2896,7 +2567,38 @@ border:none;</string>
 border:none;</string>
                        </property>
                        <property name="text">
-                        <string>SOI Radius of</string>
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="soi_rad">
+                       <property name="geometry">
+                        <rect>
+                         <x>220</x>
+                         <y>20</y>
+                         <width>241</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">
+
+QLabel{
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:white;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+
+
+}</string>
+                       </property>
+                       <property name="text">
+                        <string/>
                        </property>
                       </widget>
                      </widget>

@@ -5,6 +5,7 @@ from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
+import sqlite3
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -58,6 +59,39 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentIndex(1)
         elif index == 3:
             self.ui.stackedWidget.setCurrentIndex(2)
+    
+    # SOI
+    def SEARCH(self):
+        db = sqlite3.connect("planetary_data_test/MajorBody_data.db")
+        cursor = db.cursor()
+
+        planet_name = self.ui.SOI_planet_name.currentText()
+        
+        self.ui.lbl_mass.setText("Mass of" + str(planet_name)+":")
+       
+
+        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[planet_name])
+
+       
+        for row_number, row_data in enumerate(result):
+            self.ui.soi_mass.setText(str(row_data[1]))
+            self.ui.dist_frm_sun.setText(str(row_data[8]))
+            
+    def SOI(self):
+        planet_name = self.ui.SOI_planet_name.currentText()
+        self.ui.label_18.setText("Radius of SOI of" + str(planet_name) + ":")
+        Mass_of_Sun = 1.989e30
+        Minor_body_mass = self.ui.soi_mass.text() 
+        distance_bt_sun_plnt = self.ui.soi_mass.text()
+        rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
+        self.ui.soi_rad.setText(str(rSOI))
+
+
+        #return [rSOI, rSOI/MiB_radius]
+
+        
+           
+
     
     # Home_btn
     def meth_Home_btn(self):
