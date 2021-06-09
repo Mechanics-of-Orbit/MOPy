@@ -14,10 +14,9 @@
 \usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage[english]{babel}
-\usepackage{blindtext}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
-\usepackage{xcolor}
+% \usepackage{xcolor}
 \usepackage[autostyle]{csquotes}
 \usepackage{graphicx}
 \usepackage[stable]{footmisc}
@@ -27,7 +26,7 @@
 \usepackage{textcomp}
 \usepackage{tabulary}
 \newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
-
+\usepackage[table]{xcolor}
 \newfloatcommand{capbtabbox}{table}[][\FBwidth]
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -57,6 +56,9 @@
 \setlength{\parindent}{4em}
 \setlength{\parskip}{1em}
 \setcounter{tocdepth}{3} % Show sections
+
+
+
 
 %\title{}
 %\author{ }
@@ -190,7 +192,52 @@ Mechanics of Orbit using Python(MOPy) is learning tool designed and developed wi
 \section{Introduction}
 \subsection{About Software}
 \subsection{List of Features}
+\begin{center}
+\begin{table}[H]
+{\rowcolors{2}{white}{gray!50}
+\begin{tabular}{K{7.5cm} K{3cm} K{3cm}}
+\hline 
+\textbf{Section} & \textbf{Back-End Implementation} & \textbf{Front-End Implementation} \\ 
+\hline 
+Calculation of Orbital Elements & Yes & Yes \\ 
+\hline 
+2D and 3D orbit & Yes & No \\ 
+\hline 
+Various Parameters at any given point & Yes & Yes \\ 
+\hline 
+2D and 3D Orbits & Partially & Yes \\ 
+\hline 
+Calculation of Julian Day & Yes & Yes \\ 
+\hline 
+Euler Angles & Partially & No \\ 
+\hline 
+Sphere Of Influence & Yes & Yes \\ 
+\hline 
+Sensitivity Analysis & Yes & No \\ 
+\hline 
+Position of one Spacecraft w.r.t Another & Yes & No \\ 
+\hline 
+Calculation of State and Velocity Vector & Yes & No \\ 
+\hline
+Orbital Transfer & Partially & No \\ 
+\hline
+\end{tabular}}
+\caption{\label{tab: features}List of Features present in MOPy}
+\end{table}
+\end{center}
 \subsection{Python Libraries Used}
+\begin{enumerate}
+\item \textbf{NumPy}:  This brings MATLAB like functionality of using Matrices and their operations to python. This enables us to do a lot of stuff without much hassle.
+\item \textbf{SciPy} - This enables us to add many features involving more complex computing scenarios as it has features for scientific and technical computing. For example, it has different kinds of solvers for integration which we can use for solving acceleration vector equation to obtain the position vector for an orbit.
+\item \textbf{Matplotlib} - This is a plotting tool that is a extension on NumPy that gives the functionality of plotting many different kinds of graph. This library is somewhat similar to the plotting feature of MATLAB.
+\item Panda3D - This is a Game Engine based on C++ that takes in syntax from both C++ and Python. This provides real-time 3D visualizations and simulations based on the code.
+\item \textbf{SQLite3} - The entire details of the planetary bodies like the orbital elements, planetary ephemeris and others are stored in a local database. SQLite is used as it enables the offline functionality.
+\item \textbf{Qt Deisgner} - This enables MATLAB's App Designer like feature of dragging and dropping the UI elements and creating the GUI. This is based on Qt, a cross platform GUI toolkit developed by the Qt Company
+\item \textbf{PyQt5 $\&$ PySide2} - These both are the python binding libraries of Qt.
+\item \textbf{PyInstaller} - This library lets us convert our python code(.py) into executable file(.exe)
+
+
+\end{enumerate}
 \subsection{Market Research}
 \subsection{Objective}
 \section{Detailed Explanation of Each Feature}
