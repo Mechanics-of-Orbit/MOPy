@@ -17,7 +17,7 @@ class EA():
                         [ 0, 0, 1]])
         return [Rx, Ry, Rz]
 
-    def DCMtoEA(DCM,order):
+    def DCMtoEA(DCM, order):
         if order=='321':
             theta=-asin(DCM[0][2])
             phi=atan(DCM[1][2]/DCM[2][2])
