@@ -94,7 +94,13 @@ class MainWindow(QMainWindow):
         #return [rSOI, rSOI/MiB_radius]
 
         
-           
+    # SOI Graph
+    def soi_graph(self):
+        planet_name = self.ui.SOI_planet_name.currentText()
+        planet_name1 = planet_name.split()
+        print(planet_name1, type(planet_name1))
+        #planet_name2 = planet_name1.lower()
+        #soi_g = SOI(planet_name)
 
     
     # Home_btn
