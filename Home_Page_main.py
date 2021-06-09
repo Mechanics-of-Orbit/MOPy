@@ -78,16 +78,14 @@ class MainWindow(QMainWindow):
             self.ui.dist_frm_sun.setText(str(row_data[8]))
             
     def SOI(self):
-       
+        planet_name = self.ui.SOI_planet_name.currentText()
+        self.ui.label_18.setText("Radius of SOI of" + str(planet_name) + ":")
         Mass_of_Sun = 1.989e30
         Minor_body_mass = self.ui.soi_mass.text() 
         distance_bt_sun_plnt = self.ui.soi_mass.text()
-        #MiB_mass = 5.962e24
-        #MiB_radius = 6378
-        #r_maj_to_min = 149.6e6
-
         rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
         self.ui.soi_rad.setText(str(rSOI))
+
 
         #return [rSOI, rSOI/MiB_radius]
 

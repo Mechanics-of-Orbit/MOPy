@@ -401,7 +401,7 @@ QPushButton:hover{
              <string notr="true">background-color:none</string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2097,7 +2097,7 @@ QFrame:hover{
                       <widget class="QLabel" name="label_8">
                        <property name="geometry">
                         <rect>
-                         <x>200</x>
+                         <x>190</x>
                          <y>30</y>
                          <width>171</width>
                          <height>21</height>
@@ -2119,7 +2119,7 @@ border:none;</string>
                       <widget class="QLabel" name="lbl_mass">
                        <property name="geometry">
                         <rect>
-                         <x>50</x>
+                         <x>20</x>
                          <y>130</y>
                          <width>141</width>
                          <height>21</height>
@@ -2129,6 +2129,9 @@ border:none;</string>
                         <font>
                          <pointsize>11</pointsize>
                         </font>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
                        </property>
                        <property name="styleSheet">
                         <string notr="true">color: white;
@@ -2526,7 +2529,7 @@ QPushButton:hover{
                       <widget class="QLabel" name="label_17">
                        <property name="geometry">
                         <rect>
-                         <x>460</x>
+                         <x>470</x>
                          <y>20</y>
                          <width>111</width>
                          <height>41</height>
@@ -2548,9 +2551,9 @@ border:none;</string>
                       <widget class="QLabel" name="label_18">
                        <property name="geometry">
                         <rect>
-                         <x>60</x>
+                         <x>30</x>
                          <y>30</y>
-                         <width>131</width>
+                         <width>181</width>
                          <height>21</height>
                         </rect>
                        </property>
@@ -2564,13 +2567,13 @@ border:none;</string>
 border:none;</string>
                        </property>
                        <property name="text">
-                        <string>SOI Radius of</string>
+                        <string/>
                        </property>
                       </widget>
                       <widget class="QLabel" name="soi_rad">
                        <property name="geometry">
                         <rect>
-                         <x>210</x>
+                         <x>220</x>
                          <y>20</y>
                          <width>241</width>
                          <height>41</height>

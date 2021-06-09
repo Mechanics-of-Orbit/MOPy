@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageBFqCNl.ui'
+## Form generated from reading UI file 'Home_PageuWorET.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -914,14 +914,15 @@ class Ui_MainWindow(object):
         self.frame_35.setFrameShadow(QFrame.Raised)
         self.label_8 = QLabel(self.frame_35)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(200, 30, 171, 21))
+        self.label_8.setGeometry(QRect(190, 30, 171, 21))
         self.label_8.setFont(font8)
         self.label_8.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.lbl_mass = QLabel(self.frame_35)
         self.lbl_mass.setObjectName(u"lbl_mass")
-        self.lbl_mass.setGeometry(QRect(50, 130, 141, 21))
+        self.lbl_mass.setGeometry(QRect(20, 130, 141, 21))
         self.lbl_mass.setFont(font8)
+        self.lbl_mass.setLayoutDirection(Qt.LeftToRight)
         self.lbl_mass.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.SOI_planet_name = QComboBox(self.frame_35)
@@ -1090,19 +1091,19 @@ class Ui_MainWindow(object):
 "}")
         self.label_17 = QLabel(self.frame_36)
         self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(460, 20, 111, 41))
+        self.label_17.setGeometry(QRect(470, 20, 111, 41))
         self.label_17.setFont(font8)
         self.label_17.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.label_18 = QLabel(self.frame_36)
         self.label_18.setObjectName(u"label_18")
-        self.label_18.setGeometry(QRect(60, 30, 131, 21))
+        self.label_18.setGeometry(QRect(30, 30, 181, 21))
         self.label_18.setFont(font8)
         self.label_18.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.soi_rad = QLabel(self.frame_36)
         self.soi_rad.setObjectName(u"soi_rad")
-        self.soi_rad.setGeometry(QRect(210, 20, 241, 41))
+        self.soi_rad.setGeometry(QRect(220, 20, 241, 41))
         self.soi_rad.setStyleSheet(u"\n"
 "\n"
 "QLabel{\n"
@@ -1301,7 +1302,7 @@ class Ui_MainWindow(object):
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Outputs:", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Get 3D Visualization", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Km", None))
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"SOI Radius of", None))
+        self.label_18.setText("")
         self.soi_rad.setText("")
         self.label_credits.setText("")
     # retranslateUi
