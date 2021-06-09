@@ -8,7 +8,7 @@ from PySide2.QtWidgets import *
 import sqlite3
 from math import *
 
-from Functions.SOI3Dviz import SOI
+#from Functions.SOI3Dviz import SOI
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow

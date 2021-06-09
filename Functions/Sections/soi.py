@@ -27,7 +27,11 @@ def plot(r):
     plt.show()
 
 
-def SoI(MiB_mass, MaB_mass, r_maj_to_min, MiB_radius):
+def SoI(MiB, MaB):
+    MiB_mass = 1
+    MaB_mass = 1
+    r_maj_to_min = 1
+    MiB_radius = 1
     rSOI = (r_maj_to_min*(MiB_mass/MaB_mass)**(2/5))
     return [rSOI, rSOI/MiB_radius]
 
