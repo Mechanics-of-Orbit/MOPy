@@ -8,6 +8,8 @@ from PySide2.QtWidgets import *
 import sqlite3
 from math import *
 
+from Functions.SOI3Dviz import SOI
+
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
 
@@ -63,7 +65,7 @@ class MainWindow(QMainWindow):
     
     # SOI
     def SEARCH(self):
-        db = sqlite3.connect("planetary_data_test/MajorBody_data.db")
+        db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
         cursor = db.cursor()
 
         planet_name = self.ui.SOI_planet_name.currentText()

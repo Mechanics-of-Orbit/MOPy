@@ -8,6 +8,8 @@ from direct.actor.Actor import Actor
 
 
 
+
+
 class SOI(ShowBase):
     def __init__(self, Minor_Body, rSOI, rSOIMiB):
         super().__init__()
