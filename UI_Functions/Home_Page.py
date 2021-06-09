@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageJPBHhp.ui'
+## Form generated from reading UI file 'Home_PagewodAqO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -914,7 +914,7 @@ class Ui_MainWindow(object):
         self.frame_35.setFrameShadow(QFrame.Raised)
         self.label_8 = QLabel(self.frame_35)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(190, 30, 171, 21))
+        self.label_8.setGeometry(QRect(160, 30, 171, 21))
         self.label_8.setFont(font8)
         self.label_8.setStyleSheet(u"color: white;\n"
 "border:none;")
@@ -1061,7 +1061,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15 = QHBoxLayout(self.frame_28)
         self.horizontalLayout_15.setSpacing(0)
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.horizontalLayout_15.setContentsMargins(280, 0, 280, 0)
+        self.horizontalLayout_15.setContentsMargins(270, 0, 270, 0)
         self.frame_36 = QFrame(self.frame_28)
         self.frame_36.setObjectName(u"frame_36")
         self.frame_36.setStyleSheet(u"QFrame{\n"

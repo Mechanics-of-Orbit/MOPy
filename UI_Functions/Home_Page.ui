@@ -2097,7 +2097,7 @@ QFrame:hover{
                       <widget class="QLabel" name="label_8">
                        <property name="geometry">
                         <rect>
-                         <x>190</x>
+                         <x>160</x>
                          <y>30</y>
                          <width>171</width>
                          <height>21</height>
@@ -2466,13 +2466,13 @@ QPushButton:hover{
                      <number>0</number>
                     </property>
                     <property name="leftMargin">
-                     <number>280</number>
+                     <number>270</number>
                     </property>
                     <property name="topMargin">
                      <number>0</number>
                     </property>
                     <property name="rightMargin">
-                     <number>280</number>
+                     <number>270</number>
                     </property>
                     <property name="bottomMargin">
                      <number>0</number>
