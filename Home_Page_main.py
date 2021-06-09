@@ -6,6 +6,7 @@ from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTi
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
 import sqlite3
+from math import *
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -84,8 +85,9 @@ class MainWindow(QMainWindow):
         Minor_body_mass = self.ui.soi_mass.text() 
         distance_bt_sun_plnt = self.ui.soi_mass.text()
         rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
-        self.ui.soi_rad.setText(str(rSOI))
-
+        #accuracy = accuracy = self.ui.soi_rad.value()
+        self.ui.soi_rad.setText(str(rSOI ))
+        return(type(rSOI))
 
         #return [rSOI, rSOI/MiB_radius]
 

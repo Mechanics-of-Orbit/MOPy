@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagewodAqO.ui'
+## Form generated from reading UI file 'Home_PagesytwRc.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -879,13 +879,19 @@ class Ui_MainWindow(object):
         self.frame_33.setMaximumSize(QSize(16777215, 30))
         self.frame_33.setFrameShape(QFrame.StyledPanel)
         self.frame_33.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_16 = QHBoxLayout(self.frame_33)
+        self.horizontalLayout_16.setSpacing(0)
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
+        self.horizontalLayout_16.setContentsMargins(0, 0, 0, 0)
         self.label_7 = QLabel(self.frame_33)
         self.label_7.setObjectName(u"label_7")
-        self.label_7.setGeometry(QRect(60, 10, 61, 16))
         font8 = QFont()
         font8.setPointSize(11)
         self.label_7.setFont(font8)
         self.label_7.setStyleSheet(u"color: white;")
+
+        self.horizontalLayout_16.addWidget(self.label_7)
+
 
         self.verticalLayout_16.addWidget(self.frame_33)
 
@@ -914,7 +920,7 @@ class Ui_MainWindow(object):
         self.frame_35.setFrameShadow(QFrame.Raised)
         self.label_8 = QLabel(self.frame_35)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(160, 30, 171, 21))
+        self.label_8.setGeometry(QRect(120, 30, 171, 21))
         self.label_8.setFont(font8)
         self.label_8.setStyleSheet(u"color: white;\n"
 "border:none;")
@@ -1046,11 +1052,17 @@ class Ui_MainWindow(object):
         self.frame_26.setMaximumSize(QSize(16777215, 30))
         self.frame_26.setFrameShape(QFrame.StyledPanel)
         self.frame_26.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_19 = QHBoxLayout(self.frame_26)
+        self.horizontalLayout_19.setSpacing(0)
+        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
+        self.horizontalLayout_19.setContentsMargins(0, 0, 0, 0)
         self.label_15 = QLabel(self.frame_26)
         self.label_15.setObjectName(u"label_15")
-        self.label_15.setGeometry(QRect(60, 10, 61, 16))
         self.label_15.setFont(font8)
         self.label_15.setStyleSheet(u"color: white;")
+
+        self.horizontalLayout_19.addWidget(self.label_15)
+
 
         self.verticalLayout_16.addWidget(self.frame_26)
 
@@ -1277,7 +1289,7 @@ class Ui_MainWindow(object):
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"       Output:", None))
         self.JulianDay_Result.setText("")
         self.label_title_3.setText(QCoreApplication.translate("MainWindow", u"    SOI of Planet", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Inputs:", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"                      Inputs:", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Sphere of Influence of:", None))
         self.lbl_mass.setText(QCoreApplication.translate("MainWindow", u"Mass of ", None))
         self.SOI_planet_name.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Body", None))
@@ -1299,7 +1311,7 @@ class Ui_MainWindow(object):
         self.soi_mass.setText("")
         self.dist_frm_sun.setText("")
         self.soi_cal.setText(QCoreApplication.translate("MainWindow", u"Calculate", None))
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Outputs:", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"                      Outputs:", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Get 3D Visualization", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Km", None))
         self.label_18.setText("")
