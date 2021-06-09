@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageQvqXis.ui'
+## Form generated from reading UI file 'Home_PageJPBHhp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -950,7 +950,7 @@ class Ui_MainWindow(object):
 "}")
         self.lbl_dist_frm_sun = QLabel(self.frame_35)
         self.lbl_dist_frm_sun.setObjectName(u"lbl_dist_frm_sun")
-        self.lbl_dist_frm_sun.setGeometry(QRect(420, 130, 221, 21))
+        self.lbl_dist_frm_sun.setGeometry(QRect(410, 130, 221, 21))
         self.lbl_dist_frm_sun.setFont(font8)
         self.lbl_dist_frm_sun.setStyleSheet(u"color: white;\n"
 "border:none;")
@@ -1097,7 +1097,7 @@ class Ui_MainWindow(object):
 "border:none;")
         self.label_18 = QLabel(self.frame_36)
         self.label_18.setObjectName(u"label_18")
-        self.label_18.setGeometry(QRect(10, 30, 191, 21))
+        self.label_18.setGeometry(QRect(10, 30, 211, 21))
         self.label_18.setFont(font8)
         self.label_18.setStyleSheet(u"color: white;\n"
 "border:none;")

@@ -2220,7 +2220,7 @@ QComboBox:hover{
                       <widget class="QLabel" name="lbl_dist_frm_sun">
                        <property name="geometry">
                         <rect>
-                         <x>420</x>
+                         <x>410</x>
                          <y>130</y>
                          <width>221</width>
                          <height>21</height>
@@ -2553,7 +2553,7 @@ border:none;</string>
                         <rect>
                          <x>10</x>
                          <y>30</y>
-                         <width>191</width>
+                         <width>211</width>
                          <height>21</height>
                         </rect>
                        </property>
