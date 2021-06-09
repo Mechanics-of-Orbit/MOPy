@@ -26,10 +26,15 @@ def plot(r):
     
     plt.show()
 
-def SoI(major_body, minor_body):
+
+def SoI(MiB_mass, MaB_mass, r_maj_to_min, MiB_radius):
+    rSOI = (r_maj_to_min*(MiB_mass/MaB_mass)**(2/5))
+    return [rSOI, rSOI/MiB_radius]
+
+if __name__ == '__main__':
     MaB_mass = 1.989e30
     MiB_mass = 5.962e24
     MiB_radius = 6378
     r_maj_to_min = 149.6e6
-    rSOI = (r_maj_to_min*(MiB_mass/MaB_mass)**(2/5))
-    return [rSOI, rSOI/MiB_radius]
+    [rSOI, rSOIMiB] = SoI(MaB_mass,MiB_mass,r_maj_to_min, MiB_radius)
+    print([rSOI, rSOIMiB])

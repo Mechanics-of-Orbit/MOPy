@@ -7,10 +7,9 @@ from direct.showbase.ShowBase import ShowBase
 from direct.actor.Actor import Actor
 
 
-[rSOI, rSOIMiB] = SoI("Sun", "Earth")
 
 class SOI(ShowBase):
-    def __init__(self, planet):
+    def __init__(self, Minor_Body, rSOI, rSOIMiB):
         super().__init__()
 
         
@@ -20,9 +19,9 @@ class SOI(ShowBase):
         self.stars_tex = loader.loadTexture("Assets/Models/hi_res_tex/stars.jpg")
         self.stars.setTexture(self.stars_tex,1)
 
-        self.planet_name = planet
+        self.Minor_Body_name = Minor_Body
         self.dire = "Assets\Models\hi_res_tex" + r'\a_'
-        self.ComDir = self.dire + self.planet_name + ".jpg"
+        self.ComDir = self.dire + self.Minor_Body_name + ".jpg"
         self.MinorBody = self.loader.loadModel("Assets/Models/planet_sphere")
         self.MinorBody.setScale(2)
         self.MinorBody_tex = loader.loadTexture(self.ComDir)
@@ -39,7 +38,8 @@ class SOI(ShowBase):
 
         self.cam.setPos(0,-5000,0)
 
-
-soi = SOI("earth_daymap")
-soi.run()
+if __name__ == '__main__':
+    [rSOI, rSOIMiB] = SoI("Sun", "Earth")
+    soi = SOI("earth_daymap", rSOI, rSOIMiB)
+    soi.run()
  
