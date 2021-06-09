@@ -2131,7 +2131,7 @@ border:none;</string>
                         </font>
                        </property>
                        <property name="layoutDirection">
-                        <enum>Qt::LeftToRight</enum>
+                        <enum>Qt::RightToLeft</enum>
                        </property>
                        <property name="styleSheet">
                         <string notr="true">color: white;
@@ -2529,7 +2529,7 @@ QPushButton:hover{
                       <widget class="QLabel" name="label_17">
                        <property name="geometry">
                         <rect>
-                         <x>470</x>
+                         <x>480</x>
                          <y>20</y>
                          <width>111</width>
                          <height>41</height>
@@ -2551,9 +2551,9 @@ border:none;</string>
                       <widget class="QLabel" name="label_18">
                        <property name="geometry">
                         <rect>
-                         <x>30</x>
+                         <x>10</x>
                          <y>30</y>
-                         <width>181</width>
+                         <width>191</width>
                          <height>21</height>
                         </rect>
                        </property>
@@ -2573,7 +2573,7 @@ border:none;</string>
                       <widget class="QLabel" name="soi_rad">
                        <property name="geometry">
                         <rect>
-                         <x>220</x>
+                         <x>230</x>
                          <y>20</y>
                          <width>241</width>
                          <height>41</height>

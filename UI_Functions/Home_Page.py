@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageuWorET.ui'
+## Form generated from reading UI file 'Home_PageQvqXis.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -922,7 +922,7 @@ class Ui_MainWindow(object):
         self.lbl_mass.setObjectName(u"lbl_mass")
         self.lbl_mass.setGeometry(QRect(20, 130, 141, 21))
         self.lbl_mass.setFont(font8)
-        self.lbl_mass.setLayoutDirection(Qt.LeftToRight)
+        self.lbl_mass.setLayoutDirection(Qt.RightToLeft)
         self.lbl_mass.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.SOI_planet_name = QComboBox(self.frame_35)
@@ -1091,19 +1091,19 @@ class Ui_MainWindow(object):
 "}")
         self.label_17 = QLabel(self.frame_36)
         self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(470, 20, 111, 41))
+        self.label_17.setGeometry(QRect(480, 20, 111, 41))
         self.label_17.setFont(font8)
         self.label_17.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.label_18 = QLabel(self.frame_36)
         self.label_18.setObjectName(u"label_18")
-        self.label_18.setGeometry(QRect(30, 30, 181, 21))
+        self.label_18.setGeometry(QRect(10, 30, 191, 21))
         self.label_18.setFont(font8)
         self.label_18.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.soi_rad = QLabel(self.frame_36)
         self.soi_rad.setObjectName(u"soi_rad")
-        self.soi_rad.setGeometry(QRect(220, 20, 241, 41))
+        self.soi_rad.setGeometry(QRect(230, 20, 241, 41))
         self.soi_rad.setStyleSheet(u"\n"
 "\n"
 "QLabel{\n"
