@@ -9,11 +9,12 @@
 \contentsline {subsubsection}{\numberline {1.5.2}Home Page}{6}{subsubsection.1.5.2}% 
 \contentsline {section}{\numberline {2}Detailed Explanation of Each Feature}{7}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Calculation of Orbital Elements}{7}{subsection.2.1}% 
-\contentsline {subsubsection}{\numberline {2.1.1}Theory}{7}{subsubsection.2.1.1}% 
-\contentsline {subsubsection}{\numberline {2.1.2}Algorithm}{7}{subsubsection.2.1.2}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Algorithm}{7}{subsubsection.2.1.1}% 
 \contentsline {subsection}{\numberline {2.2}2D and 3D Orbits}{8}{subsection.2.2}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Theory}{8}{subsubsection.2.2.1}% 
 \contentsline {subsection}{\numberline {2.3}Euler Angle}{8}{subsection.2.3}% 
-\contentsline {subsubsection}{\numberline {2.3.1}Concept}{8}{subsubsection.2.3.1}% 
-\contentsline {section}{\numberline {3}Conclusion}{8}{section.3}% 
-\contentsline {section}{\numberline {4}Future Scope}{8}{section.4}% 
+\contentsline {subsection}{\numberline {2.4}Sphere of Influence}{8}{subsection.2.4}% 
+\contentsline {subsection}{\numberline {2.5}Orbital Transfer}{9}{subsection.2.5}% 
+\contentsline {subsection}{\numberline {2.6}Calculation of Julian Day}{9}{subsection.2.6}% 
+\contentsline {subsection}{\numberline {2.7}Calculation of Parameters of the Orbit}{9}{subsection.2.7}% 
+\contentsline {section}{\numberline {3}Conclusion}{10}{section.3}% 
+\contentsline {section}{\numberline {4}Future Scope}{10}{section.4}% 

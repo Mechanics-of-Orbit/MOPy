@@ -318,7 +318,6 @@ When the application opens the Home Page will load. In it, there is a Dropdown b
 \end{figure}
 \section{Detailed Explanation of Each Feature}
 \subsection{Calculation of Orbital Elements}
-\subsubsection{Theory}
 This can convert state velocity vector into orbital elements and vice versa. The inputs are as follows
 \begin{table}[H]
 \centering
@@ -365,7 +364,7 @@ Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
 \end{lstlisting}
 
 \subsection{2D and 3D Orbits}
-\subsubsection{Theory}
+
 Based on the inputs given the application can plot either 2D or 3D or both. If the inputs are just Semi major axis and eccentricity or Radius of perigee and apogee or, $r_1,\;v_1,\;\gamma_1$ then the resultant plot will be in the perifocal frame. If the inputs are state and velocity vector or orbital elements then the resultant will be a 3D orbit. 
 \begin{table}[H]
 \centering
@@ -381,20 +380,79 @@ Based on the inputs given the application can plot either 2D or 3D or both. If t
 \end{table}
 \subsection{Euler Angle}
 
+The inputs for this are as in table(\ref{eadcm}). This code can be fed the model in 3D environment and the orientation of the model can be manipulated with this.
 \begin{table}[H]
-\begin{tabular}{|r|l|}
-\hline
-ID                                                     & EA                                       \\ \hline
-\multicolumn{1}{|c|}{\multirow{2}{*}{Inputs Required}} & DCMtoEA: DCM, Order                      \\ \cline{2-2} 
-\multicolumn{1}{|c|}{}                                 & EAtoDCM: Theta, Si, Phi, Order           \\ \hline
-\multirow{2}{*}{Order Of Inputs}                       & DCMtoEA: (DCM, order(string))            \\ \cline{2-2} 
-                                                       & EAtoDCM: (theta, si, phi, order(string)) \\ \hline
-\multirow{2}{*}{Outputs}                               & DCMtoEA: (theta, si, phi)                \\ \cline{2-2} 
-                                                       & EAtoDCM: (DCM)                           \\ \hline
+\centering
+\begin{tabular}{@{}cl@{}}
+\toprule
+\multirow{2}{*}{Inputs}                      & Directional Cosine Matrix \\ \cmidrule(l){2-2} 
+                                             & Euler Angles              \\ \midrule
+\multicolumn{1}{r}{\multirow{2}{*}{Outputs}} & Euler Angles              \\ \cmidrule(l){2-2} 
+\multicolumn{1}{r}{}                         & Directional Cosine Matrix \\ \bottomrule
 \end{tabular}
-\caption{I/O for 2D and 3D Orbits}
+\caption{I/O for conversion between Euler angle and DCM}
+\label{eadcm}
 \end{table}
-\subsubsection{Concept}
+\subsection{Sphere of Influence}
+In this section, the user can either input the values or interact with the model in the 3D environment to see the corresponding output.
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}rl@{}}
+\toprule
+\multicolumn{1}{c}{Inputs} & Minor Body                     \\ \midrule
+\multirow{2}{*}{Outputs}   & Radius of SOI in desired units \\ \cmidrule(l){2-2} 
+                           & 3D visualization of sphere of influence in virtual environment                         \\ \bottomrule
+\end{tabular}
+\caption{I/O for Sphere of Influence}
+\label{soi}
+\end{table}
+\subsection{Orbital Transfer}
+This feature simulates the orbital transfer using various numerical methods. For now, this can perform Hohmann Transfer. The Inputs and outputs are as in table(\ref{tab:ot})
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}rl@{}}
+\toprule
+\multicolumn{1}{c}{Inputs} & Minor Body, Major Body, Orbital parameters of both initial and final orbit.                     \\ \midrule
+\multirow{2}{*}{Outputs}   & Values such as Radius of apogee, Radius of perigee, DeltaV, Time-period of the orbit etc \\ \cmidrule(l){2-2} 
+                           & 3D visualization of desired orbital transfer \\ \bottomrule
+\end{tabular}
+\caption{I/O for Orbital transfer}
+\label{tab:ot}
+\end{table}
+\subsection{Calculation of Julian Day}
+In this section the user can choose between Gregorian calendar and Julian calendar and with the other inputs they can obtain the Julian day of the corresponding date. 
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Inputs  & YYYY-MM-DD , hh:mm:ss, Type of calender \\ \midrule
+Outputs & Julian-day  \\ \bottomrule                                              
+\end{tabular}
+\caption{I/O for Julian-day}
+\label{tab:jd}
+\end{table}
+\subsection{Calculation of Parameters of the Orbit}
+The user can obtain various parameters by giving the details that they know of. If necessary they can plot the orbit too.
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}rl@{}}
+\toprule
+\multicolumn{1}{c}{Inputs} & $a,e/r_a, r_p/r_1,\;v_1,\;\gamma_1$/ Orbital Elements/State and velocity vectors \\ \midrule
+\multirow{2}{*}{Outputs}   & $\mu,\;,h\;,\epsilon$, Forces and Velocity at significant position               \\ \cmidrule(l){2-2} 
+                           & Mean Motion, Time Period                                                         \\ \bottomrule
+\end{tabular}
+\caption{I/O for Various Parameters of the Orbit}
+\label{vpco}
+\end{table}
+
+
+
+
+
+
+
+
+
 \section{Conclusion}
 \section{Future Scope}
 

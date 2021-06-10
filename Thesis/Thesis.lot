@@ -2,4 +2,8 @@
 \contentsline {table}{\numberline {1}{\ignorespaces List of Features present in MOPy\relax }}{3}{table.caption.5}% 
 \contentsline {table}{\numberline {2}{\ignorespaces Inputs and outputs for Calculation of Orbital Elements\relax }}{7}{table.caption.9}% 
 \contentsline {table}{\numberline {3}{\ignorespaces I/O for 2D and 3D orbits\relax }}{8}{table.caption.11}% 
-\contentsline {table}{\numberline {4}{\ignorespaces I/O for 2D and 3D Orbits\relax }}{8}{table.caption.12}% 
+\contentsline {table}{\numberline {4}{\ignorespaces I/O for conversion between Euler angle and DCM\relax }}{8}{table.caption.12}% 
+\contentsline {table}{\numberline {5}{\ignorespaces I/O for Sphere of Influence\relax }}{8}{table.caption.13}% 
+\contentsline {table}{\numberline {6}{\ignorespaces I/O for Orbital transfer\relax }}{9}{table.caption.14}% 
+\contentsline {table}{\numberline {7}{\ignorespaces I/O for Julian-day\relax }}{9}{table.caption.15}% 
+\contentsline {table}{\numberline {8}{\ignorespaces I/O for Various Parameters of the Orbit\relax }}{9}{table.caption.16}% 
