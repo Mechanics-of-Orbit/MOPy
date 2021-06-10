@@ -97,7 +97,7 @@
 \begin{center}
 \normalsize{A dissertation report on} \\ 
 \vspace*{1em}
-\Large{\textbf{\enquote{Mechanics of Orbit Using Python(MOPy)}}}\\ \vspace{0.5em}
+\Large{\textbf{\enquote{Interactive Learning Platform for Orbital Mechanics Using Python}}}\\ \vspace{0.5em}
 \normalsize{Submitted to}\\ \vspace{1em}
 \includegraphics[scale=0.7]{AU.png}\\ \vspace{1em}
 \normalsize{In partial fulfilment of the requirements for the award of degree} \\
@@ -125,8 +125,7 @@ Under the guidance of\\
 Assistant Professor & Assistant Professor \\
 Department of Aerospace Engineering,& Department of Aerospace Engineering,\\
 Alliance College of Engineering and Design, & Alliance College of Engineering and Design,\\
-Alliance University & Alliance University\\
-Bengaluru. & Bengaluru. \vspace*{1em} \\
+Alliance University, Bengaluru. & Alliance University, Bengaluru. \vspace*{1em}\\
 \end{tabular}
 \textbf{Department of Aerospace Engineering}\\
 \textbf{Alliance College of Engineering and Design}\\
@@ -140,7 +139,7 @@ Bengaluru. & Bengaluru. \vspace*{1em} \\
 \includegraphics[scale=0.7]{AUText.png} \vspace*{2em}\\
 \textbf{CERTIFICATE}
 \end{center}
-This is to certify that \textbf{Mr. Ramkiran L. (17030141AE007), Mr. Manjunath (17030141AE009), Ms. Monisha Patel A. (17030141AE012)} and \textbf{Ms. Thoshitha R. Kumar (17030141AE027)} students of \textbf{Aerospace Engineering, Bachelor of Technology 2017-21} batch at \textbf{Alliance College of Engineering and Design (ACED), Alliance University, Bengaluru} has completed the project report titled \textit{\textbf{\enquote{Mechanics of Orbit using Python}}} under my guidance in partial fulfillment for the award of Bachelor of Technology degree in Aerospace Engineering, Alliance University, Bangalore during the year 2020-2021. \vspace{1em}\\
+This is to certify that \textbf{Mr. Ramkiran L. (17030141AE007), Mr. Manjunath (17030141AE009), Ms. Monisha Patel A. (17030141AE012)} and \textbf{Ms. Thoshitha R. Kumar (17030141AE027)} students of \textbf{Aerospace Engineering, Bachelor of Technology 2017-21} batch at \textbf{Alliance College of Engineering and Design (ACED), Alliance University, Bengaluru} has completed the project report titled \textit{\textbf{\enquote{Interactive Learning Platform for Orbital Mechanics Using Python}}} under our guidance in partial fulfillment for the award of Bachelor of Technology degree in Aerospace Engineering, Alliance University, Bangalore during the year 2020-2021. \vspace{1em}\\
 \begin{center}
 \begin{tabular}{K{7cm} K{0.5cm} K{7cm}}
 \underline{\hspace{2.9cm}} & & \underline{\hspace{4.3cm}} \\ 
@@ -172,7 +171,7 @@ Bengaluru&&Bengaluru\vspace{2em}\\
 \Large \textbf{DECLARATION}
 \end{center}
 \normalsize
-\hspace{4em}We, Ramkiran L, Manjunath, Monisha Patel A, Thoshitha R. Kumar students of 8\textsuperscript{th} Semester Bachelor of Technology in Aerospace Engineering, Alliance College of Engineering and Design (ACED), Alliance University, Bengaluru, hereby declare that the entire project work entitled \enquote{\textbf{Mechanics of Orbit using Python}} is an authentic record of the work that has been carried out independently by us during final year of our B.Tech at ACED, under the esteemed guidance \textbf{Dr. Gisa G.S}, Assistant Professor, Department of Aerospace Engineering, Alliance college of Engineering and Design, Alliance University. \par
+\hspace{4em}We, Ramkiran L, Manjunath, Monisha Patel A, Thoshitha R. Kumar students of 8\textsuperscript{th} Semester Bachelor of Technology in Aerospace Engineering, Alliance College of Engineering and Design (ACED), Alliance University, Bengaluru, hereby declare that the entire project work entitled \enquote{\textbf{Interactive Learning Platform for Orbital Mechanics Using Python}} is an authentic record of the work that has been carried out independently by us during final year of our B.Tech at ACED, under the esteemed guidance of \textbf{Prof. Gisa G.S} and \textbf{Prof. Yadu Krishnan S.}, Assistant Professors, Department of Aerospace Engineering, Alliance college of Engineering and Design, Alliance University. \par
 
 This project report is submitted in partial fulfillment of requirements for the award of the degree of Bachelor of Technology in Aerospace Engineering. The results embodied in this dissertation are original and it has not been submitted in part or full for any degree in any University. \vspace{4em}\\
 \textbf{Place:} Bengaluru\\
@@ -200,7 +199,7 @@ We take this opportunity to thank our beloved Interim Dean \textbf{Dr. Reeba Kor
 
 We would like to convey our sincere gratitude to \textbf{Prof. K. Velmurugarajan}, Head of Department of Aerospace Engineering, ACED, Alliance University, Bangalore. \par
 
-We would like to thank our internal guide \textbf{Prof. Gisa G.S}, Assistant Professor, Department of Aerospace Engineering, ACED, Alliance University, Bangalore for her support and encouragement given to carry out the project. \par
+We would like to thank our internal guide \textbf{Prof. Gisa G.S} and \textbf{Prof. Yadu Krishnan S.}, Assistant Professors, Department of Aerospace Engineering, ACED, Alliance University, Bangalore for her support and encouragement given to carry out the project. \par
 
 We would also like to thank our college staff members and well-wishers who directly or indirectly helped, motivated to complete this project successfully. \par
 
@@ -219,14 +218,14 @@ Mechanics of Orbit using Python(MOPy) is learning tool designed and developed wi
 
 \thispagestyle{empty}
 \newpage
+\thispagestyle{empty}
 \tableofcontents
 \listoffigures
+\thispagestyle{empty}
 \listoftables
 \thispagestyle{empty}
 \newpage
 \setcounter{page}{1}
-
-
 \section{Introduction}
 \hspace{4em}MOPy, a learning tool designed to learn and practice various orbital mechanics concepts. It is designed in a way such that it can be a user-friendly tool that can be operated with ease even by the user who has very limited knowledge about the concepts of orbital mechanics. It provides users to learn about a particular concept with a brief explanation so the user can gain the theoretical knowledge required through visualizations. The sophisticated 3D environment benefits the user to visualize the fundamental concepts easily. It assists the user to verify manually calculated data. It serves as advanced virtual calculator. MOPy is an open source software with GNU-GPL v3 license\cite{lic} which anyone can use or work with. It runs on windows platforms at present.
 \begin{figure}[H]
@@ -292,13 +291,13 @@ The Sandbox based programs are the stuff that are run by the physics engine that
 In the analysis done by Morgan Stanley named \enquote{Investing in Space Exploration}, it is stated as - The revenue generated by the global space industry may increase to more than $\$$1 trillion by 2040. \cite{morgan}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.28]{morganstanley.png}
+\includegraphics[scale=0.25]{morganstanley.png}
 \caption{Global Market Trend according to Morgan Stanley.} \label{morgangraph}
 \end{figure}
 A report by Antrix and PwC, it is stated that the indian space sector can become a $\$$50 Billion industry, or about one per cent of India's projected $\$5$ Trillion economy, by 2024 from the current $\$7$ billion, according to a report by the Antrix and PwC.\cite{indiaspace}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1.2]{pwc.png}
+\includegraphics[scale=1]{pwc.png}
 \caption{Indian Space Budget over the years.} \label{pwc}
 \end{figure}
 \subsection{Objective}
@@ -317,7 +316,7 @@ Front-end development deals with the Graphical User-Interface aspect of the soft
 When the application opens the Home Page will load. In it, there is a Dropdown box containing all the features available, from which the user can choose which feature they want to use. When the user selects any of the features from the drop-down and clicks on the go button at the bottom, they are navigated to that screen where they can use the feature they selected. And then if they want to navigate back to the Home-Page they can click on the Home button provided at the top left corner of the screen. All the features are listed in the upper-mentioned table.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.7]{homepage.png}
+\includegraphics[scale=0.6]{homepage.png}
 \caption{Home Page of MOPy} \label{home}
 \end{figure}
 \section{Detailed Explanation of Each Feature}
@@ -456,7 +455,7 @@ User has to select the type of calendar and the in the input section they have t
 \toprule
 \textbf{Input}  & State Vector, Velocity Vector and two delta-v with slight difference                                                                      \\ \midrule
 \textbf{Output} & \begin{tabular}[c]{@{}l@{}}Percentage difference caused to the final orbit parameters due to slight \\ difference in delta-v\end{tabular} \\ \bottomrule
-\end{tabular}
+\end{tabular}\caption{I/O for Sensitivity Analysis}
 \end{table}
 
 \subsection{Position of One Spacecraft Relative To Another}
@@ -466,7 +465,7 @@ Based on the inputs of the user the relative velocity and orbit can be visualize
 \toprule
 \textbf{Input}  & Major Body, State Vector and Velocity Vector of Minor Body    \\ \midrule
 \textbf{Output} & Graph Showing the Minor bodies in the orbit around Major Body \\ \bottomrule
-\end{tabular}
+\end{tabular}\caption{I/O for Position of One Spacecraft Relative To Another}
 \end{table}
 \subsection{Lagrangian Points}
 The Lagrangian points are points near two large orbiting bodies, the two objects exert an unbalanced gravitational force at a point, altering the orbit of whatever is at that point. At the Lagrange points, the gravitational forces of the two large bodies and the centrifugal force balance each other, The inputs and outputs are as follows.
@@ -475,7 +474,7 @@ The Lagrangian points are points near two large orbiting bodies, the two objects
 \toprule
 \textbf{Input}  & Major Body, Minor Body and Distance Between them           \\ \midrule
 \textbf{Output} & Lagrangian points polar coordinates and Graph showing them \\ \bottomrule
-\end{tabular}
+\end{tabular}\caption{I/O for Lagrangian Points}
 \end{table}
 
 \section{Database Management System}
