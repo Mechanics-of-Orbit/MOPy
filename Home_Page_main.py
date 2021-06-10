@@ -7,6 +7,7 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFo
 from PySide2.QtWidgets import *
 import sqlite3
 from math import *
+from Functions.Sections.soi import SoI
 
 #from Functions.SOI3Dviz import SOI
 
@@ -80,24 +81,30 @@ class MainWindow(QMainWindow):
             self.ui.soi_mass.setText(str(row_data[1]))
             self.ui.dist_frm_sun.setText(str(row_data[8]))
             
+    # def SOI(self):
+    #     planet_name = self.ui.SOI_planet_name.currentText()
+    #     self.ui.label_18.setText("Radius of SOI of" + str(planet_name) + ":")
+    #     Mass_of_Sun = 1.989e30
+    #     Minor_body_mass = self.ui.soi_mass.text() 
+    #     distance_bt_sun_plnt = self.ui.soi_mass.text()
+    #     rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
+    #     #accuracy = accuracy = self.ui.soi_rad.value()
+    #     self.ui.soi_rad.setText(str(rSOI ))
+    #     return(type(rSOI))
+
+    #     #return [rSOI, rSOI/MiB_radius]
     def SOI(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        self.ui.label_18.setText("Radius of SOI of" + str(planet_name) + ":")
-        Mass_of_Sun = 1.989e30
-        Minor_body_mass = self.ui.soi_mass.text() 
-        distance_bt_sun_plnt = self.ui.soi_mass.text()
-        rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
-        #accuracy = accuracy = self.ui.soi_rad.value()
-        self.ui.soi_rad.setText(str(rSOI ))
-        return(type(rSOI))
+        Minor_Body = planet_name.strip()
+        Minor_Body = Minor_Body.lower()
+        [rSOI, rSOIMiB] = SoI(Minor_Body, "sun")
 
-        #return [rSOI, rSOI/MiB_radius]
 
         
     # SOI Graph
     def soi_graph(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        planet_name1 = planet_name.split()
+        planet_name1 = planet_name.strip()
         print(planet_name1, type(planet_name1))
         #planet_name2 = planet_name1.lower()
         #soi_g = SOI(planet_name)
