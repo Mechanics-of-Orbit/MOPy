@@ -2,8 +2,13 @@ from math import *
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import sqlite3
+import sys
 
 def plot(r):
+    db = sqlite3.connect("DB/MajorBody_data.db")
+    cursor = db.cursor()
+
     #plotting 3-D
     fig = plt.figure(figsize = (10,10))
     ax = fig.add_subplot(111, projection = '3d')
