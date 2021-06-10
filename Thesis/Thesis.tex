@@ -370,9 +370,9 @@ Based on the inputs given the application can plot either 2D or 3D or both. If t
 \centering
 \begin{tabular}{@{}cl@{}}
 \toprule
-\multirow{2}{*}{Inputs}                      & For 2D - $a,e/r_a,r_p/ r_1, v_1, \gamma_1$ \\ \cmidrule(l){2-2} 
+\multirow{2}{*}{\textbf{Inputs}}                      & For 2D - $a,e/r_a,r_p/ r_1, v_1, \gamma_1$ \\ \cmidrule(l){2-2} 
                                              & For 3D - Orbital Elements, State Vectors   \\ \midrule
-\multicolumn{1}{r}{\multirow{2}{*}{Outputs}} & Orbit in the Perifocal Frame               \\ \cmidrule(l){2-2} 
+\multicolumn{1}{r}{\multirow{2}{*}{\textbf{Outputs}}} & Orbit in the Perifocal Frame               \\ \cmidrule(l){2-2} 
 \multicolumn{1}{r}{}                         & Orbit in a virtual 3D Environment          \\ \bottomrule
 \end{tabular}
 \caption{I/O for 2D and 3D orbits}
@@ -385,9 +385,9 @@ The inputs for this are as in table(\ref{eadcm}). This code can be fed the model
 \centering
 \begin{tabular}{@{}cl@{}}
 \toprule
-\multirow{2}{*}{Inputs}                      & Directional Cosine Matrix \\ \cmidrule(l){2-2} 
+\multirow{2}{*}{\textbf{Inputs}}                      & Directional Cosine Matrix \\ \cmidrule(l){2-2} 
                                              & Euler Angles              \\ \midrule
-\multicolumn{1}{r}{\multirow{2}{*}{Outputs}} & Euler Angles              \\ \cmidrule(l){2-2} 
+\multicolumn{1}{r}{\multirow{2}{*}{\textbf{Outputs}}} & Euler Angles              \\ \cmidrule(l){2-2} 
 \multicolumn{1}{r}{}                         & Directional Cosine Matrix \\ \bottomrule
 \end{tabular}
 \caption{I/O for conversion between Euler angle and DCM}
@@ -399,8 +399,8 @@ In this section, the user can either input the values or interact with the model
 \centering
 \begin{tabular}{@{}rl@{}}
 \toprule
-\multicolumn{1}{c}{Inputs} & Minor Body                     \\ \midrule
-\multirow{2}{*}{Outputs}   & Radius of SOI in desired units \\ \cmidrule(l){2-2} 
+\multicolumn{1}{c}{\textbf{Inputs}} & Minor Body                     \\ \midrule
+\multirow{2}{*}{\textbf{Outputs}}   & Radius of SOI in desired units \\ \cmidrule(l){2-2} 
                            & 3D visualization of sphere of influence in virtual environment                         \\ \bottomrule
 \end{tabular}
 \caption{I/O for Sphere of Influence}
@@ -410,10 +410,10 @@ In this section, the user can either input the values or interact with the model
 This feature simulates the orbital transfer using various numerical methods. For now, this can perform Hohmann Transfer. The Inputs and outputs are as in table(\ref{tab:ot})
 \begin{table}[H]
 \centering
-\begin{tabular}{@{}rl@{}}
+\begin{tabular}{@{}cl@{}}
 \toprule
-\multicolumn{1}{c}{Inputs} & Minor Body, Major Body, Orbital parameters of both initial and final orbit.                     \\ \midrule
-\multirow{2}{*}{Outputs}   & Values such as Radius of apogee, Radius of perigee, DeltaV, Time-period of the orbit etc \\ \cmidrule(l){2-2} 
+\multicolumn{1}{c}{\textbf{Inputs}} & Minor Body, Major Body, Orbital parameters of both initial and final orbit.                     \\ \midrule
+\multirow{2}{*}{\textbf{Outputs}}   & Values such as Radius of apogee, Radius of perigee, DeltaV, Time-period of the orbit etc \\ \cmidrule(l){2-2} 
                            & 3D visualization of desired orbital transfer \\ \bottomrule
 \end{tabular}
 \caption{I/O for Orbital transfer}
@@ -423,10 +423,10 @@ This feature simulates the orbital transfer using various numerical methods. For
 In this section the user can choose between Gregorian calendar and Julian calendar and with the other inputs they can obtain the Julian day of the corresponding date. 
 \begin{table}[H]
 \centering
-\begin{tabular}{@{}ll@{}}
+\begin{tabular}{@{}cl@{}}
 \toprule
-Inputs  & YYYY-MM-DD , hh:mm:ss, Type of calender \\ \midrule
-Outputs & Julian-day  \\ \bottomrule                                              
+\textbf{Inputs}  & YYYY-MM-DD , hh:mm:ss, Type of calender \\ \midrule
+\textbf{Outputs} & Julian-day  \\ \bottomrule                                              
 \end{tabular}
 \caption{I/O for Julian-day}
 \label{tab:jd}
@@ -437,32 +437,111 @@ The user can obtain various parameters by giving the details that they know of. 
 \centering
 \begin{tabular}{@{}rl@{}}
 \toprule
-\multicolumn{1}{c}{Inputs} & $a,e/r_a, r_p/r_1,\;v_1,\;\gamma_1$/ Orbital Elements/State and velocity vectors \\ \midrule
-\multirow{2}{*}{Outputs}   & $\mu,\;,h\;,\epsilon$, Forces and Velocity at significant position               \\ \cmidrule(l){2-2} 
+\multicolumn{1}{c}{\textbf{Inputs}} & $a,e/r_a, r_p/r_1,\;v_1,\;\gamma_1$/ Orbital Elements/State and velocity vectors \\ \midrule
+\multirow{2}{*}{\textbf{Outputs}}   & $\mu,\;,h\;,\epsilon$, Forces and Velocity at significant position               \\ \cmidrule(l){2-2} 
                            & Mean Motion, Time Period                                                         \\ \bottomrule
 \end{tabular}
 \caption{I/O for Various Parameters of the Orbit}
 \label{vpco}
 \end{table}
+\subsection{Sensitivity Analysis}
+User has to select the type of calendar and the in the input section they have to select date and time and accuracy of digits and then by clicking on calculate button we will get Julian days in the output section. This takes in the required values an outputs how much of an error will that small change in the velocity or radius in the 3D environment.
 
+\begin{table}[H]
+\begin{tabular}{@{}cl@{}}
+\toprule
+\textbf{Input}  & State Vector, Velocity Vector and two delta-v with slight difference                                                                      \\ \midrule
+\textbf{Output} & \begin{tabular}[c]{@{}l@{}}Percentage difference caused to the final orbit parameters due to slight \\ difference in delta-v\end{tabular} \\ \bottomrule
+\end{tabular}
+\end{table}
 
+\subsection{Position of One Spacecraft Relative To Another}
+Based on the inputs of the user the relative velocity and orbit can be visualized in this section.
+\begin{table}[H]
+\begin{tabular}{@{}cl@{}}
+\toprule
+\textbf{Input}  & Major Body, State Vector and Velocity Vector of Minor Body    \\ \midrule
+\textbf{Output} & Graph Showing the Minor bodies in the orbit around Major Body \\ \bottomrule
+\end{tabular}
+\end{table}
+\subsection{Lagrangian Points}
+The Lagrangian points are points near two large orbiting bodies, the two objects exert an unbalanced gravitational force at a point, altering the orbit of whatever is at that point. At the Lagrange points, the gravitational forces of the two large bodies and the centrifugal force balance each other, The inputs and outputs are as follows.
+\begin{table}[H]
+\begin{tabular}{@{}cc@{}}
+\toprule
+\textbf{Input}  & Major Body, Minor Body and Distance Between them           \\ \midrule
+\textbf{Output} & Lagrangian points polar coordinates and Graph showing them \\ \bottomrule
+\end{tabular}
+\end{table}
 
+\section{Database Management System}
+\subsection{Introduction}
+Database is a collection of set of related data or information of any particular concept, generally stored using any electronic gadget . Database Management system is a system which uses integrated software to connect frontend user to connect to the database to access , modify and manage the data stored in it.  
+There are two types of Databases:
+\begin{enumerate}
+\item Relational Database - Organizes data into one or more table. each table comprising of number of rows and columns  with each row identifiable with unique key.
+\item Non - Relational database - Organizes data in any form other than table. Such as graphs, flexible tables, documents etc.
+\end{enumerate}
+In this project we have used Relational database management system with structured Query Language (SQL) to interact with the RDBMS. SQLite is the database engine used to run SQL query to perform CRUD ( Create , Retrieve, Update or Delete) operation in the database.
 
+\subsection{Scripts for performing CRUD Operation}
+\begin{lstlisting}[language=python, caption=Script file for performing CRUD Operation]
+# import sqlite in ide 
+import sqlite3
 
+# Create a database or connect to one 
+conn= sqlite3.connect('appdatabase.db')
 
+# Create a Cursor
+c= conn.cursor()
 
+# Creat a table
+c.execute(""" CREATE TABLE table_name( 
+        column_name datatype,
+        column_name datatype
+     )""")
 
+# Insert data into table
+x = [('column 1', 'column 2')
+     ('column 1', 'column 2')
+    ]
+c.executemany( "INSERT INTO table_name VALUES(?,?)",x)
 
+#Retrieve or read data 
+c.execute("SELECT * FROM table_name")
+print(c.fetchall())
+
+# commit data to the database
+conn.commit()
+\end{lstlisting}
+This database contains the data of planetary bodies such as Mass, radius, density, gravity, temperature, orbital parameters, number of moons etc., of all planets of our solar system.
 \section{Conclusion}
+The outcome of the project is the lessons we learnt during the project. Communication is the key for collaborative work. This is one of the main aspect that we learned during this project. The other aspects that we were able to learn are:
+\begin{enumerate}
+\item Project Management
+\item Time Management
+\item Prioritize the list that is at hand based on various parameters
+\end{enumerate}
 \section{Future Scope}
+\hspace{4em}MOPy is a open source application with GNU - GPL v3 License, with this anyone who is interested in using this application can freely download and use it, and even modify the contents to their requirements. If they wish to contribute to this application they can fork the repository on GitHub[3] and add their contribution by sending a pull request. The reason GNU-GPL v3 license is used is that we aim to keep a quality control to the features that gets added to the application. We are always open to contributors.
 
+There is a list of features with corresponding priorities that are planned to be added down the line. This will be constantly updated indefinitely. And if the user is not able to add a feature then they can request a feature that would be added to the list with a appropriate priority. There is discord server in which anyone can join and hold discussions with other participants. Contributors can hold discussions about the feature they are planning to add, others can discuss about the concepts and request features to be added. 
+
+As of now this runs on Windows only. This could be made to run on other platforms and even as a web application which would negate the need of a moderately powerful hardware. The database could be expanded with much more data than present.
+
+This entire code can be converted into a library that anyone can download from PyPI. This would enable the user to utilize the features directly from the command line or their python projects. This would simplify their projects.
 \begin{thebibliography}{99}
 	\bibitem{TB-1}{Bate, Roger R., Donald D. Muller and Jerry E. White},{ \textit{\enquote{Fundamentals Of Astrodynamics}}},{New York, NY},{ Dover Publications},{1971}.
 	\bibitem{morgan}{\textit{\enquote{Space: Investing in the Final Frontier}}},{Jul, 24$^{th}$, 2020}, { Retrieved on 25$^{th}$ May 2021 from Morgan Stanley},{\href{https://www.morganstanley.com/ideas/investing-in-space}{ MorganStanley.com}}
 	\bibitem{indiaspace}{\textit{\enquote{Preparing to Scale New Heights: Privatisation of India's commercial Space Sector}}},{ Retrieved on 25$^{th}$ May 2021 from Morgan Stanley},{\href{https://www.pwc.in/research-insights/2020/preparing-to-scale-new-heights.html}{ pwc.in}}
 	\bibitem{lic}{GNU General Public License version-3},{ Open Source Initiative},{\href{https://opensource.org/licenses/gpl-3.0.html}{ OpenSourceInitiative.org}}
-	\bibitem{code}{\textit{\enquote{Mechanics of Orbit Using Python(MOPy)}}}, {}
-	
-
+	\bibitem{code}{\textit{\enquote{Mechanics of Orbit Using Python(MOPy)}}}, {\href{https://github.com/iamlrk/MOPy}{GitHub Repository}}.
+		\bibitem{py}{Python Documentation},{\href{https://docs.python.org}{ python.org}}
+	\bibitem{pyqt}{PyQt5 Documentation},{\href{https://www.riverbankcomputing.com/static/Docs/PyQt5/}{ riverbankcomputing.com}}
+	\bibitem{pyside}{PySide2 Documentation},{\href{https://srinikom.github.io/pyside-docs/pysideapi2.html}{ srinikom.github.io}}
+	\bibitem{qtd}{Qt Designer Documentation},{\href{https://doc.qt.io/qt-5/qtdesigner-manual.html}{ doc.qt.io}}	
+	\bibitem{numpy}{NumPy Documentation}, {\href{https://numpy.org/doc}{ NumPy.org}}
+	\bibitem{scipy}{SciPy Documentation}, {\href{https://scipy.org/doc}{ SciPy.org}}
+	\bibitem{sqlite}{NumPy Documentation}, {\href{https://numpy.org/doc}{ NumPy.org}}
 \end{thebibliography}
 \end{document}
