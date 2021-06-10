@@ -11,6 +11,10 @@
 \contentsline {section}{\numberline {3}Detailed Explanation of Each Feature}{7}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}Calculation of Orbital Elements}{7}{subsection.3.1}% 
 \contentsline {subsubsection}{\numberline {3.1.1}Theory}{7}{subsubsection.3.1.1}% 
-\contentsline {subsubsection}{\numberline {3.1.2}Algorithm}{8}{subsubsection.3.1.2}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Algorithm}{7}{subsubsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.2}2D and 3D Orbits}{8}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Theory}{8}{subsubsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.3}Euler Angle}{8}{subsection.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Concept}{8}{subsubsection.3.3.1}% 
 \contentsline {section}{\numberline {4}Conclusion}{8}{section.4}% 
 \contentsline {section}{\numberline {5}Future Scope}{8}{section.5}% 

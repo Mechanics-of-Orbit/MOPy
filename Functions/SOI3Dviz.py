@@ -42,6 +42,6 @@ class SOI(ShowBase):
 
 if __name__ == '__main__':
     [rSOI, rSOIMiB] = SoI("Sun", "Earth")
-    soi = SOI("earth_daymap", rSOI, rSOIMiB)
+    soi = SOI("earth", rSOI, rSOIMiB)
     soi.run()
  

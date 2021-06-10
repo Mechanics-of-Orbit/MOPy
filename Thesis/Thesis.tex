@@ -2,6 +2,7 @@
 \usepackage{newtxtext}
 \usepackage[T1]{fontenc}
 \usepackage{etoolbox}
+\usepackage{booktabs}
 
 
 
@@ -27,6 +28,7 @@
 \usepackage{listings}
 \usepackage{floatrow}
 \usepackage{textcomp}
+\usepackage{multirow}
 \usepackage{tabulary}
 \newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage[table]{xcolor}
@@ -316,50 +318,90 @@ When the application opens the Home Page will load. In it, there is a Dropdown b
 \section{Detailed Explanation of Each Feature}
 \subsection{Calculation of Orbital Elements}
 \subsubsection{Theory}
+This can convert state velocity vector into orbital elements and vice versa. The inputs are as follows
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}cl@{}}
+\toprule
+\multirow{2}{*}{Inputs} & State and Velocity Vectors            \\ \cmidrule(l){2-2} 
+                                 & \multicolumn{1}{l}{Orbital Elements} \\ \midrule
+\multicolumn{1}{r}{\multirow{2}{*}{Outputs}} & \multicolumn{1}{l}{Orbital Elements} \\ \cmidrule(l){2-2} 
+\multicolumn{1}{r}{}           & State and Velocity Vectors            \\ \bottomrule
+\end{tabular}\caption{Inputs and outputs for Calculation of Orbital Elements}
+\end{table}
 \begin{figure}[H]
 \begin{floatrow}
 \ffigbox{%
-  \includegraphics[scale=0.5]{COE.png}
+  \includegraphics[scale=0.3]{COE.png}
 }{
   \caption{Classical Orbital Elements} \label{COE}
 }
 \ffigbox{%
-  \includegraphics[scale=0.7]{AOE.png}
+  \includegraphics[scale=0.5]{AOE.png}
 }{
   \caption{Alternate Orbital Elements} \label{AOE}
 }
 \end{floatrow}
 \end{figure}
-\large 
-Classical Orbital Elements
-\normalsize
-\begin{enumerate}
-\item \textbf{Semi-major Axis($a$):} This is a constant that defines the size of the orbit. In Circular it is the radius of the circle. It is the longest diameter of an ellipse.
-\item \textbf{Eccentricity($e$):} This the parameter of the conic section which determines its shape. It is defined as the ratio of distance b/w two foci to the Major-axis.
-\item \textbf{Inclination($e$)}: It is the tilt of the orbit w.r.t the equatorial plane, measured at ascending node. It can also be defined as the angle from $\hat{K}$ unit vector to the specific angular momentum vector $\vec{h}$.
-\item \textbf{Right Ascension of Ascending Node($\Omega$):} RAAN horizontally orients the ascending node of the orbit w.r.t the Equatorial plane’s vernal equinox, measured in an equatorial plane This is not defined when the inclination is 0 or 180 degree. It lies between 0 to 360 degrees.
-\item \textbf{Argument of Perigee($\omega$):} Argument of Perigee defines the orientation of the ellipse in the orbital plane, as an angle measured from the ascending node to the periapsis measure in the direction of the spacecraft’s motion. This is not defined when inclination is 0 or 180 degree or eccentricity is 0. It lies between 0 to 360 degree.
-\item \textbf{True Anomaly($\nu$):} True Anomaly defines the position of the spacecraft w.r.t perigee. It’s the angle between the spacecraft and the perigee of the orbit. It lies between 0 to 360 degree. 
-\end{enumerate}
-\large Alternate Orbital Elements
-\normalsize
-\begin{enumerate}
-\item \textbf{Longitude of Perigee($Pi$)} is the angle from the principle direction to perigee. This is used whenever inclination is either 0$^o$ or 180$^o$ as there is no ascending node. It's lies between $0^0$ to $360^0$. In the figure(\ref{AOE}) Longitude of perigee is represented as \enquote{$\Pi$}.
-\item \textbf{True Longitude} is the angle from the principle direction to the spacecraft's position. This is used whenever there is no perigee and the the inclination is either $0^0$ or $180^0$. It's lies between $0^0$ to $360^0$. It lies between 0 to 360 degree. In the figure(\ref{AOE})True Longitude is represented as \enquote{$l$}
-In the figure(\ref{AOE})True Longitude is represented as \enquote{$l$}
-In the figure(\ref{AOE}) Longitude of perigee is represented as \enquote{$\Pi$}.
-\end{enumerate}
+
 
 \subsubsection{Algorithm}
+\begin{lstlisting}[language=python, caption=Calculation of Orbital Elements]
+# Orbital Constants
+h_vec = cross(pos_vec, vel_vec)
+n_vec = cross(cls.K,h_vec)
+# Classical Orbital Elements
+sma = 1/((2/norm(pos_vec))-((norm(vel_vec)*norm(vel_vec))/mu))
+e_vec = (multi((norm(vel_vec)*norm(vel_vec)-(mu/norm(pos_vec))),pos_vec)- multi(dot(pos_vec,vel_vec),vel_vec))/(mu)
+inc = (acos((dot(h_vec, cls.K))/norm(h_vec))) * 180/pi
+ohm = (acos((dot(cls.I,n_vec))/norm(n_vec)))
+nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
+omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
+# Alternate Orbital Elements
+Long_of_peri_pi = acos(dot(cls.I,e_vec)/(norm(cls.I)*norm(e_vec)))
+Tr_long_l = acos(dot(cls.I,pos_vec)/(norm(pos_vec)*norm(cls.I)))
+Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
+\end{lstlisting}
 
+\subsection{2D and 3D Orbits}
+\subsubsection{Theory}
+Based on the inputs given the application can plot either 2D or 3D or both. If the inputs are just Semi major axis and eccentricity or Radius of perigee and apogee or, $r_1,\;v_1,\;\gamma_1$ then the resultant plot will be in the perifocal frame. If the inputs are state and velocity vector or orbital elements then the resultant will be a 3D orbit. 
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}cl@{}}
+\toprule
+\multirow{2}{*}{Inputs}                      & For 2D - $a,e/r_a,r_p/ r_1, v_1, \gamma_1$ \\ \cmidrule(l){2-2} 
+                                             & For 3D - Orbital Elements, State Vectors   \\ \midrule
+\multicolumn{1}{r}{\multirow{2}{*}{Outputs}} & Orbit in the Perifocal Frame               \\ \cmidrule(l){2-2} 
+\multicolumn{1}{r}{}                         & Orbit in a virtual 3D Environment          \\ \bottomrule
+\end{tabular}
+\caption{I/O for 2D and 3D orbits}
+\label{o23}
+\end{table}
+\subsection{Euler Angle}
+\begin{table}[H]
+\begin{tabular}{|r|l|}
+\hline
+ID                                                     & EA                                       \\ \hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{Inputs Required}} & DCMtoEA: DCM, Order                      \\ \cline{2-2} 
+\multicolumn{1}{|c|}{}                                 & EAtoDCM: Theta, Si, Phi, Order           \\ \hline
+\multirow{2}{*}{Order Of Inputs}                       & DCMtoEA: (DCM, order(string))            \\ \cline{2-2} 
+                                                       & EAtoDCM: (theta, si, phi, order(string)) \\ \hline
+\multirow{2}{*}{Outputs}                               & DCMtoEA: (theta, si, phi)                \\ \cline{2-2} 
+                                                       & EAtoDCM: (DCM)                           \\ \hline
+\end{tabular}
+\caption{I/O for 2D and 3D Orbits}
+\end{table}
+\subsubsection{Concept}
 \section{Conclusion}
 \section{Future Scope}
 
 \begin{thebibliography}{99}
 	\bibitem{TB-1}{Bate, Roger R., Donald D. Muller and Jerry E. White},{ \textit{\enquote{Fundamentals Of Astrodynamics}}},{New York, NY},{ Dover Publications},{1971}.
 	\bibitem{morgan}{\textit{\enquote{Space: Investing in the Final Frontier}}},{Jul, 24$^{th}$, 2020}, { Retrieved on 25$^{th}$ May 2021 from Morgan Stanley},{\href{https://www.morganstanley.com/ideas/investing-in-space}{ MorganStanley.com}}
-	\bibitem{indiaspace}{\textit{\enquote{Preparing to Scale New Heights: Privatisation of India's commercial Space Sector}}},{\href{https://www.pwc.in/research-insights/2020/preparing-to-scale-new-heights.html}{ pwc.in}}
+	\bibitem{indiaspace}{\textit{\enquote{Preparing to Scale New Heights: Privatisation of India's commercial Space Sector}}},{ Retrieved on 25$^{th}$ May 2021 from Morgan Stanley},{\href{https://www.pwc.in/research-insights/2020/preparing-to-scale-new-heights.html}{ pwc.in}}
 	\bibitem{lic}{GNU General Public License version-3},{ Open Source Initiative},{\href{https://opensource.org/licenses/gpl-3.0.html}{ OpenSourceInitiative.org}}
+	\bibitem{code}{\textit{\enquote{Mechanics of Orbit Using Python(MOPy)}}}, {}
 	
 
 \end{thebibliography}

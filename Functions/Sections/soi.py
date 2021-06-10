@@ -33,12 +33,12 @@ def plot(r):
 
 
 def SoI(MiB, MaB):
-    db = sqlite3.connect("DB/MAjorBody_data.db")
-    cursor = db.cursor()
-    MiB_mass = 
-    MaB_mass = MaB.
-    r_maj_to_min = 1
-    MiB_radius = 1
+    #db = sqlite3.connect("DB/MAjorBody_data.db")
+    # cursor = db.cursor()
+    MiB_mass = 5.972e24
+    MaB_mass = 1.989e30
+    r_maj_to_min = 149597870
+    MiB_radius = 6378
     rSOI = (r_maj_to_min*(MiB_mass/MaB_mass)**(2/5))
     return [rSOI, rSOI/MiB_radius]
 
