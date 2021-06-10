@@ -1,6 +1,9 @@
 \documentclass[12pt]{article}
-\usepackage{times}
+\usepackage{newtxtext}
+\usepackage[T1]{fontenc}
 \usepackage{etoolbox}
+
+
 
 \makeatletter
 %\patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
@@ -58,13 +61,37 @@
 \setlength{\parskip}{1em}
 \setcounter{tocdepth}{3} % Show sections
 
+\usepackage{pgf}
+\usepackage{pgfpages}
 
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{2pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
 
 
 %\title{}
 %\author{ }
 %\date{ }
 \begin{document}
+
+
 \begin{center}
 \normalsize{A dissertation report on} \\ 
 \vspace*{1em}
@@ -78,26 +105,27 @@
 \normalsize Submitted by: \vspace*{1em} \\
 \normalsize
 \begin{tabular}{cc}
-Ramkiran L. & Manjunath \\ 
+\textbf{Ramkiran L.} & \textbf{Manjunath} \\ 
 17030141AE007 & 17030141AE009 \\ 
-\href{mailto:lramkiranBTECH17@ced.alliance.edu.in}{{\color{blue}{\fontfamily{ptm}\selectfont
-lramkiranBTECH17@ced.alliance.edu.in}}} & \href{mailto:manjunathBTECH17@ced.alliance.edu.in}{{\color{blue}{\fontfamily{ptm}\selectfont
+{{{\fontfamily{ptm}\selectfont
+lramkiranBTECH17@ced.alliance.edu.in}}} & {{{\fontfamily{ptm}\selectfont
 manjunathBTECH17@ced.alliance.edu.in}}} \vspace*{1em} \\ 
-Monisha Patel A. & Thoshitha R. Kumar \\ 
+\textbf{Monisha Patel A.} & \textbf{Thoshitha R. Kumar} \\ 
 17030141AE013 & 17030141AE027 \\ 
-\href{mailto:pamonishaBTECH17@ced.alliance.edu.in}{{\color{blue}{\fontfamily{ptm}\selectfont
-pamonishaBTECH17@ced.alliance.edu.in}}} & \href{mailto:kuthoshithaBTECH17@ced.alliance.edu.in}{{\color{blue}{\fontfamily{ptm}\selectfont
+{{{\fontfamily{ptm}\selectfont
+pamonishaBTECH17@ced.alliance.edu.in}}} & {{{\fontfamily{ptm}\selectfont
 kuthoshithaBTECH17@ced.alliance.edu.in}}} \vspace*{1em} \\ 
 \end{tabular} 
 \normalsize
 Under the guidance of\\
-\textbf{Dr. Gisa G.S.} \\
-Assistant Professor\\
-Department of Aerospace Engineering,\\
-Alliance College of Engineering and Design,\\
-Alliance University\\
-Bengaluru. \vspace*{1em} \\
-
+\begin{tabular}{cc}
+\textbf{Prof. Gisa G.S.} & \textbf{Prof. Yadu Krishnan} \\
+Assistant Professor & Assistant Professor \\
+Department of Aerospace Engineering,& Department of Aerospace Engineering,\\
+Alliance College of Engineering and Design, & Alliance College of Engineering and Design,\\
+Alliance University & Alliance University\\
+Bengaluru. & Bengaluru. \vspace*{1em} \\
+\end{tabular}
 \textbf{Department of Aerospace Engineering}\\
 \textbf{Alliance College of Engineering and Design}\\
 \textbf{Alliance University, Bengaluru - 562106} \\
@@ -113,18 +141,18 @@ Bengaluru. \vspace*{1em} \\
 This is to certify that \textbf{Mr. Ramkiran L. (17030141AE007), Mr. Manjunath (17030141AE009), Ms. Monisha Patel A. (17030141AE012)} and \textbf{Ms. Thoshitha R. Kumar (17030141AE027)} students of \textbf{Aerospace Engineering, Bachelor of Technology 2017-21} batch at \textbf{Alliance College of Engineering and Design (ACED), Alliance University, Bengaluru} has completed the project report titled \textit{\textbf{\enquote{Mechanics of Orbit using Python}}} under my guidance in partial fulfillment for the award of Bachelor of Technology degree in Aerospace Engineering, Alliance University, Bangalore during the year 2020-2021. \vspace{1em}\\
 \begin{center}
 \begin{tabular}{K{7cm} K{0.5cm} K{7cm}}
-\underline{\hspace{2.5cm}} & & \underline{\hspace{4cm}} \\ 
-\textbf{Prof. Gisa G.S} & & \textbf{Prof. Velmurugarajan K.} \vspace{1em}\\ 
-Internal Guide & & Head of the Department \\ 
+\underline{\hspace{2.9cm}} & & \underline{\hspace{4.3cm}} \\ 
+\textbf{Prof. Gisa G.S} & & \textbf{Prof. Yadu Krishnan} \vspace{1em}\\ 
+Internal Guide & &  Internal Guide\\ 
 Department of Aerospace Engineering & & Department of Aerospace Engineering \\
 ACED, Alliance University & & ACED, Alliance University \\ 
 Bengaluru & & Bengaluru \vspace{3em}\\ 
-\multicolumn{3}{c}{\underline{\hspace{3cm}}}\\ 
-\multicolumn{3}{c}{\textbf{Dr. Reeba Korah}}\vspace{1em} \\ 
-\multicolumn{3}{c}{Interim Dean} \\ 
-\multicolumn{3}{c}{Department of Aerospace Engineering}\\
-\multicolumn{3}{c}{ACED, Alliance University}\\ 
-\multicolumn{3}{c}{Bengaluru}\vspace{2em}\\ 
+\underline{\hspace{5cm}}&&\underline{\hspace{3.5cm}}\\ 
+\textbf{Prof. Velmurugarajan K.}&&\textbf{Dr. Reeba Korah}\vspace{1em} \\ 
+Head of the Department&&Interim Dean \\ 
+Department of Aerospace Engineering&&Department of Aerospace Engineering\\
+ACED, Alliance University&&ACED, Alliance University\\ 
+Bengaluru&&Bengaluru\vspace{2em}\\ 
 \end{tabular} 
 \end{center}
 \textbf{External Viva}
@@ -177,21 +205,24 @@ We would also like to thank our college staff members and well-wishers who direc
 Lastly, we thank God almighty, our family, professors and friends for their constant encouragement without which this project would not have been possible.\\
 \thispagestyle{empty}
 \newpage
-
-\begin{abstract}
-Orbital mechanics is the study of the motions of artificial satellites and space vehicles moving under the influence of forces. It plays a vital role in planning space missions in various aspects such as designing orbital trajectory for various missions, calculating lagrangian points etc., and can find many engineering applications  including ascent trajectories, reentry and landing, rendezvous computations, lunar and interplanetary trajectories. 
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\section{Abstract}
+\hspace{4em}Orbital mechanics is the study of the motions of artificial satellites and space vehicles moving under the influence of forces. It plays a vital role in planning space missions in various aspects such as designing orbital trajectory for various missions, calculating lagrangian points etc., and can find many engineering applications  including ascent trajectories, reentry and landing, rendezvous computations, lunar and interplanetary trajectories. 
 
 In recent years, as there is a lot of progress unfolding in space industry, many aspiring students are keen on gaining knowledge and pursue careers in space industry. As such, strong foundations of the fundamentals are required for the students for them to get ahead in the field. There are lots of tools like STK, FreeFlyer etc., for learning but these don't start from the bare minimum of the concepts. This led to the idea of developing of MOPy.
 
 Mechanics of Orbit using Python(MOPy) is learning tool designed and developed with the purpose of introducing the core concepts of Orbital Mechanics. MOPy uses a interactive UI with tool tips and a 3D Environment with an interactive virtual universe. The 3D Environment helps the learner to visualize the concepts in a much accessible and easier way.
-\end{abstract}
 
-\thispagestyle{empty}
-\newpage
-\clearpage
-\setcounter{page}{1}
 \section{Introduction}
-\subsection{About Software}
+\hspace{4em}MOPy, a learning tool designed to learn and practice various orbital mechanics concepts. It is designed in a way such that it can be a user-friendly tool that can be operated with ease even by the user who has very limited knowledge about the concepts of orbital mechanics. It provides users to learn about a particular concept with a brief explanation so the user can gain the theoretical knowledge required through visualizations. The sophisticated 3D environment benefits the user to visualize the fundamental concepts easily. It assists the user to verify manually calculated data. It serves as advanced virtual calculator. MOPy is an open source software with GNU-GPL v3 license\cite{lic} which anyone can use or work with. It runs on windows platforms at present.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.18]{mopy.png}
+\caption{MOPy} \label{mopy}
+\end{figure}
 \subsection{List of Features}
 \begin{center}
 \begin{table}[H]
@@ -324,6 +355,7 @@ In the figure(\ref{AOE}) Longitude of perigee is represented as \enquote{$\Pi$}.
 	\bibitem{TB-1}{Bate, Roger R., Donald D. Muller and Jerry E. White},{ \textit{\enquote{Fundamentals Of Astrodynamics}}},{New York, NY},{ Dover Publications},{1971}.
 	\bibitem{morgan}{\textit{\enquote{Space: Investing in the Final Frontier}}},{Jul, 24$^{th}$, 2020}, { Retrieved on 25$^{th}$ May 2021 from Morgan Stanley},{\href{https://www.morganstanley.com/ideas/investing-in-space}{MorganStanley.com}}
 	\bibitem{indiaspace}{\textit{\enquote{Preparing to Scale New Heights: Privatisation of India's Space Sector}}}
+	\bibitem{lic}{GNU General Public License version-3},{ Open Source Initiative},{\href{https://opensource.org/licenses/gpl-3.0.html}{ Open Source Initiative.org}}
 	
 
 \end{thebibliography}
