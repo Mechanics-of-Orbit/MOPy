@@ -97,8 +97,9 @@ class MainWindow(QMainWindow):
         planet_name = self.ui.SOI_planet_name.currentText()
         Minor_Body = planet_name.strip()
         Minor_Body = Minor_Body.lower()
-        [rSOI, rSOIMiB] = SoI(Minor_Body, "sun")
 
+        SoI(Minor_Body, "sun")
+        
 
         
     # SOI Graph

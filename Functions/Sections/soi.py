@@ -3,12 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import sqlite3
-import sys
+
 
 def plot(r):
-    db = sqlite3.connect("DB/MajorBody_data.db")
-    cursor = db.cursor()
-
+  
     #plotting 3-D
     fig = plt.figure(figsize = (10,10))
     ax = fig.add_subplot(111, projection = '3d')
@@ -33,17 +31,27 @@ def plot(r):
 
 
 def SoI(MiB, MaB):
-    #db = sqlite3.connect("DB/MAjorBody_data.db")
-    # cursor = db.cursor()
-    MiB_mass = 5.972e24
+    d = sqlite3.connect(r"DB/MajorBody_data.db")
+    cursor = d.cursor()
+    r = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[MiB])
+    for row_num, row_dat in enumerate(r):
+        MiB_mass = row_dat[1]
+        MiB_radius = row_dat[2] / 2
+        r_maj_to_min = row_dat[8]
+    
+    #r1 = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[MaB])
+    #for row_num2, row_dat2 in enumerate(r1):
+        #MaB_mass = row_dat2[1]
+        
+    #MiB_mass = 5.972e24
     MaB_mass = 1.989e30
-    r_maj_to_min = 149597870
-    MiB_radius = 6378
+    #r_maj_to_min = 149597870
+    #MiB_radius = 6378
     rSOI = (r_maj_to_min*(MiB_mass/MaB_mass)**(2/5))
     return [rSOI, rSOI/MiB_radius]
 
-if __name__ == '__main__':
-    MaB1 = "Sun"
-    MiB1 = "Earth"    
-    [rSOI, rSOIMiB] = SoI(MiB1,MaB1)
-    print([rSOI, rSOIMiB])
+#if __name__ == '__main__':
+    #MaB1 = "Sun"
+    #MiB1 = "Earth"    
+    #[rSOI, rSOIMiB] = SoI(MiB1,MaB1)
+    #print([rSOI, rSOIMiB])
