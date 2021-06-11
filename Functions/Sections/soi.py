@@ -50,8 +50,8 @@ def SoI(MiB, MaB):
     rSOI = (r_maj_to_min*(MiB_mass/MaB_mass)**(2/5))
     return [rSOI, rSOI/MiB_radius]
 
-#if __name__ == '__main__':
-    #MaB1 = "Sun"
-    #MiB1 = "Earth"    
-    #[rSOI, rSOIMiB] = SoI(MiB1,MaB1)
-    #print([rSOI, rSOIMiB])
+if __name__ == '__main__':
+    MaB1 = "Sun"
+    MiB1 = "Earth"    
+    [rSOI, rSOIMiB] = SoI(MiB1,MaB1)
+    print([rSOI, rSOIMiB])

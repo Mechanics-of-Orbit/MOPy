@@ -1,0 +1,30 @@
+\subsection{CRUD File Operations}
+\begin{lstlisting}[language=python, caption=db.py]
+# import sqlite in ide 
+import sqlite3
+
+# Create a database or connect to one 
+conn= sqlite3.connect('appdatabase.db')
+
+# Create a Cursor
+c= conn.cursor()
+
+# Creat a table
+c.execute(""" CREATE TABLE table_name( 
+        column_name datatype,
+        column_name datatype
+     )""")
+
+# Insert data into table
+x = [('column 1', 'column 2')
+     ('column 1', 'column 2')
+    ]
+c.executemany( "INSERT INTO table_name VALUES(?,?)",x)
+
+#Retrieve or read data 
+c.execute("SELECT * FROM table_name")
+print(c.fetchall())
+
+# commit data to the database
+conn.commit()
+\end{lstlisting}

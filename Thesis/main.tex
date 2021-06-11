@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{newtxtext}
+\usepackage[T1]{fontenc}
+\usepackage{etoolbox}
+\usepackage{booktabs}
+
+
+\makeatletter
+%\patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\patchcmd{\@makechapterhead}{\huge}{\large}{}{}% for \chapter
+\patchcmd{\@makechapterhead}{\Huge}{\large}{}{}% for \chapter
+\patchcmd{\@makeschapterhead}{\Huge}{\large}{}{}% for \chapter*
+\patchcmd{\@makeschapterhead}{\HUGE}{\large}{}{}
+\makeatother
+
+\usepackage[top=0.75in, bottom=0.75in, left= 0.75in, right=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+% \usepackage{xcolor}
+\usepackage[autostyle]{csquotes}
+\usepackage{graphicx}
+\usepackage[stable]{footmisc}
+\usepackage{subfig}
+\usepackage{listings}
+\usepackage{floatrow}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{tabulary}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage[table]{xcolor}
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+\usepackage{framed}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+\setcounter{tocdepth}{3} % Show sections
+
+\usepackage[nottoc]{tocbibind}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+
+\usepackage[style=authoryear,sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{2pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+
+\begin{document}
+%Hello
+\input{preamble/titlepage}
+\input{preamble/certificate}
+\input{preamble/declaration}
+\newpage
+\input{preamble/acknowledgement}
+\newpage
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+\section{Introduction}
+\input{Sections/introduction}
+
+\section{Details of the Features}
+\input{Sections/details}
+
+\section{Database Management System}
+\input{Sections/dbms}
+
+\section{Conclusion}
+\input{Sections/conclusion}
+
+\section{Future Scope}
+\input{Sections/future_scope}
+
+\appendix
+\section{Code for the Features}
+\input{codes/CoOE}
+
+\input{codes/EA}
+
+\input{codes/SoI}
+
+\input{codes/CJSD}
+
+\input{codes/VPCO}
+
+\input{codes/SA}
+
+\input{codes/LP}
+
+\input{codes/dbms}
+
+\nocite{*}
+\bibstyle{numeric}
+\printbibliography
+
+\end{document}

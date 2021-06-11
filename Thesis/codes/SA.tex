@@ -1,12 +1,5 @@
-R1 = 149.6e6
-R2 = 227.9e6
-Vdv = 32.7279
-Major_Body = 'Sun'
-R1_bod = 'Earth'
-
-Vi = 2.94346
-Rp = 6678
-
+\subsection{Sensitivity Analysis}
+\begin{lstlisting}[language=python, caption=SA.py]
 class SA(Major_Body,R1_bod):
     def __init__(self):
         G = 6.67e-20
@@ -19,9 +12,4 @@ class SA(Major_Body,R1_bod):
         coeff_del_Vp_Vp = a * ((Vi+(2*self.mu_R1/(Rp*Vi)))/Vdv)
         del_R2_R2 = coeff_del_Rp_Rp*(del_Rp_Rp) + coeff_del_Vp_Vp * (del_Vp_Vp)
         return [del_R2_R2]
-
-
-
-
-del_Rp_Rp = 0#0.01
-del_Vp_Vp = 1
+\end{lstlisting}
