@@ -82,6 +82,7 @@ class UIFunctions(MainWindow):
 
         self.ui.soi_cal.clicked.connect(lambda:Home_Page_main.MainWindow.SOI(self))
 
+        self.ui.get_3D_soi.clicked.connect(lambda:Home_Page_main.MainWindow.soi_graph(self))
     ## RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTAURED
     def returnStatus():
         return GLOBAL_STATE

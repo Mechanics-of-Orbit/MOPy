@@ -401,7 +401,7 @@ QPushButton:hover{
              <string notr="true">background-color:none</string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2518,7 +2518,7 @@ QFrame:hover{
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QPushButton" name="pushButton">
+                      <widget class="QPushButton" name="get_3D_soi">
                        <property name="geometry">
                         <rect>
                          <x>130</x>
@@ -2633,6 +2633,7 @@ QLabel:hover{
               </item>
              </layout>
             </widget>
+            <widget class="QWidget" name="page"/>
            </widget>
           </item>
          </layout>

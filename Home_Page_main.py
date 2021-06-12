@@ -1,4 +1,5 @@
 
+from sys import path
 import sys
 import platform
 from PySide2 import QtCore, QtGui, QtWidgets
@@ -9,7 +10,7 @@ import sqlite3
 from math import *
 from Functions.Sections.soi import SoI
 
-#from Functions.SOI3Dviz import SOI
+from Functions.SOI3Dviz import SOI
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -17,7 +18,7 @@ from UI_Functions.Home_Page import Ui_MainWindow
 # IMPORT FUNCTIONS
 from UI_Functions.Home_Page_functions import *
 
-
+path.append('..\Functions\Sections')
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -81,35 +82,33 @@ class MainWindow(QMainWindow):
             self.ui.soi_mass.setText(str(row_data[1]))
             self.ui.dist_frm_sun.setText(str(row_data[8]))
             
-    # def SOI(self):
-    #     planet_name = self.ui.SOI_planet_name.currentText()
-    #     self.ui.label_18.setText("Radius of SOI of" + str(planet_name) + ":")
-    #     Mass_of_Sun = 1.989e30
-    #     Minor_body_mass = self.ui.soi_mass.text() 
-    #     distance_bt_sun_plnt = self.ui.soi_mass.text()
-    #     rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
-    #     #accuracy = accuracy = self.ui.soi_rad.value()
-    #     self.ui.soi_rad.setText(str(rSOI ))
-    #     return(type(rSOI))
-
-    #     #return [rSOI, rSOI/MiB_radius]
     def SOI(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        Minor_Body = planet_name.strip()
-        Minor_Body = Minor_Body.lower()
-
-        SoI(Minor_Body, "sun")
+        self.ui.label_18.setText("Radius of SOI of" + str(planet_name) + ":")
+        Mass_of_Sun = 1.989e30
+        Minor_body_mass = self.ui.soi_mass.text() 
+        distance_bt_sun_plnt = self.ui.soi_mass.text()
+        rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
+        #accuracy = accuracy = self.ui.soi_rad.value()
+        self.ui.soi_rad.setText(str(rSOI ))
         
 
-        
+    #     #return [rSOI, rSOI/MiB_radius]
+       
     # SOI Graph
     def soi_graph(self):
-        planet_name = self.ui.SOI_planet_name.currentText()
-        planet_name1 = planet_name.strip()
-        print(planet_name1, type(planet_name1))
-        #planet_name2 = planet_name1.lower()
-        #soi_g = SOI(planet_name)
+        planet_name1 = self.ui.SOI_planet_name.currentText()
+        planet_name = planet_name1.strip()
+        planet_name = planet_name.lower()
+        rSOI = self.ui.soi_rad.text()
+        db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
+        cursor = db.cursor()
+        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[planet_name1])
 
+        for row_number, row_data in enumerate(result):
+            planet_radius = (row_data[2]/2)
+        rSOIMiB = float(rSOI)/float(planet_radius)
+        soi_3D_graph = SOI(planet_name, rSOI, rSOIMiB)
     
     # Home_btn
     def meth_Home_btn(self):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagesytwRc.ui'
+## Form generated from reading UI file 'Home_PageKZjOsr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1087,11 +1087,11 @@ class Ui_MainWindow(object):
 "}")
         self.frame_36.setFrameShape(QFrame.StyledPanel)
         self.frame_36.setFrameShadow(QFrame.Raised)
-        self.pushButton = QPushButton(self.frame_36)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(130, 100, 254, 41))
-        self.pushButton.setFont(font9)
-        self.pushButton.setStyleSheet(u"QPushButton{\n"
+        self.get_3D_soi = QPushButton(self.frame_36)
+        self.get_3D_soi.setObjectName(u"get_3D_soi")
+        self.get_3D_soi.setGeometry(QRect(130, 100, 254, 41))
+        self.get_3D_soi.setFont(font9)
+        self.get_3D_soi.setStyleSheet(u"QPushButton{\n"
 "	background-color:rgb(2, 119, 189);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
@@ -1312,7 +1312,7 @@ class Ui_MainWindow(object):
         self.dist_frm_sun.setText("")
         self.soi_cal.setText(QCoreApplication.translate("MainWindow", u"Calculate", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"                      Outputs:", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Get 3D Visualization", None))
+        self.get_3D_soi.setText(QCoreApplication.translate("MainWindow", u"Get 3D Visualization", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Km", None))
         self.label_18.setText("")
         self.soi_rad.setText("")
