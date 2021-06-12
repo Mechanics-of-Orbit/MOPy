@@ -7,7 +7,7 @@ class LoadingScreen(QWidget):
     def __init__(self):
         super().__init__()
         self.setFixedSize(400, 400)
-        self.setWindowFlags(Qt.WindowStayOnTopHint | Qt.customizeWindowHint)
+        
 
         self.label_animation = QLabel(self)
         self.movie = QMovie('C:/Users/manjunath neelmath/Desktop/test/Rotating_earth_(large).gif')
