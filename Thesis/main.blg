@@ -1,5 +1,8 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-I found no \citation commands---while reading file main.aux
-I found no \bibdata command---while reading file main.aux
-I found no \bibstyle command---while reading file main.aux
-(There were 3 error messages)
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'main.blg'
+[25] biber-MSWIN64:315> INFO - === 
+[44] Biber.pm:371> INFO - Reading 'main.bcf'
+[136] Utils.pm:209> ERROR - Error: Found biblatex control file version 3.7, expected version 3.5.
+This means that your biber (2.12) and biblatex (3.16) versions are incompatible.
+See compat matrix in biblatex or biber PDF documentation.
+[136] Biber.pm:114> INFO - ERRORS: 1
