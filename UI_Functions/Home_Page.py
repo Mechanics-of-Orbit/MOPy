@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageKZjOsr.ui'
+## Form generated from reading UI file 'Home_PagezGJvsH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1108, 663)
         MainWindow.setMinimumSize(QSize(750, 0))
-        MainWindow.setMaximumSize(QSize(1108, 16777215))
+        MainWindow.setMaximumSize(QSize(1198, 16777215))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.drop_shadow_layout = QVBoxLayout(self.centralwidget)
@@ -453,21 +453,16 @@ class Ui_MainWindow(object):
         self.frame_18.setMaximumSize(QSize(16777215, 20))
         self.frame_18.setFrameShape(QFrame.StyledPanel)
         self.frame_18.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_7 = QHBoxLayout(self.frame_18)
-        self.horizontalLayout_7.setSpacing(0)
-        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.frame_24 = QFrame(self.frame_18)
         self.frame_24.setObjectName(u"frame_24")
+        self.frame_24.setGeometry(QRect(0, 0, 16, 20))
         self.frame_24.setFrameShape(QFrame.StyledPanel)
         self.frame_24.setFrameShadow(QFrame.Raised)
-
-        self.horizontalLayout_7.addWidget(self.frame_24)
-
         self.label_5 = QLabel(self.frame_18)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setMinimumSize(QSize(1050, 0))
-        self.label_5.setMaximumSize(QSize(1050, 16777215))
+        self.label_5.setGeometry(QRect(60, 0, 500, 20))
+        self.label_5.setMinimumSize(QSize(500, 0))
+        self.label_5.setMaximumSize(QSize(500, 16777215))
         font4 = QFont()
         font4.setFamily(u"Arial")
         font4.setPointSize(11)
@@ -476,11 +471,9 @@ class Ui_MainWindow(object):
         self.label_5.setFont(font4)
         self.label_5.setStyleSheet(u"border: none;\n"
 "color: white;")
-
-        self.horizontalLayout_7.addWidget(self.label_5)
-
         self.frame_34 = QFrame(self.frame_18)
         self.frame_34.setObjectName(u"frame_34")
+        self.frame_34.setGeometry(QRect(670, 0, 400, 16))
         self.frame_34.setMinimumSize(QSize(400, 0))
         self.frame_34.setMaximumSize(QSize(400, 16777215))
         self.frame_34.setFrameShape(QFrame.StyledPanel)
@@ -497,9 +490,6 @@ class Ui_MainWindow(object):
         self.Error_state.setStyleSheet(u"color:rgb(255, 0, 0);")
 
         self.verticalLayout_17.addWidget(self.Error_state)
-
-
-        self.horizontalLayout_7.addWidget(self.frame_34)
 
 
         self.verticalLayout_8.addWidget(self.frame_18)
@@ -644,6 +634,7 @@ class Ui_MainWindow(object):
 "        height: 20px;\n"
 "    }\n"
 "")
+        self.digits_accuracy.setAlignment(Qt.AlignCenter)
         self.digits_accuracy.setMaximum(8)
         self.label = QLabel(self.Date_time_frame)
         self.label.setObjectName(u"label")
@@ -685,6 +676,8 @@ class Ui_MainWindow(object):
 "        width: 12px;\n"
 "        height: 20px;\n"
 "    }")
+        self.timeEdit.setAlignment(Qt.AlignCenter)
+        self.timeEdit.setButtonSymbols(QAbstractSpinBox.UpDownArrows)
         self.timeEdit.setCurrentSection(QDateTimeEdit.HourSection)
         self.label_2 = QLabel(self.Date_time_frame)
         self.label_2.setObjectName(u"label_2")
@@ -753,27 +746,21 @@ class Ui_MainWindow(object):
         self.frame_20.setMaximumSize(QSize(16777215, 20))
         self.frame_20.setFrameShape(QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_10 = QHBoxLayout(self.frame_20)
-        self.horizontalLayout_10.setSpacing(0)
-        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.frame_25 = QFrame(self.frame_20)
         self.frame_25.setObjectName(u"frame_25")
+        self.frame_25.setGeometry(QRect(0, 0, 10, 20))
+        self.frame_25.setMinimumSize(QSize(10, 0))
+        self.frame_25.setMaximumSize(QSize(10, 16777215))
         self.frame_25.setFrameShape(QFrame.StyledPanel)
         self.frame_25.setFrameShadow(QFrame.Raised)
-
-        self.horizontalLayout_10.addWidget(self.frame_25)
-
         self.label_6 = QLabel(self.frame_20)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setMinimumSize(QSize(1060, 0))
-        self.label_6.setMaximumSize(QSize(700, 16777215))
+        self.label_6.setGeometry(QRect(60, 0, 500, 20))
+        self.label_6.setMinimumSize(QSize(500, 0))
+        self.label_6.setMaximumSize(QSize(500, 16777215))
         self.label_6.setFont(font4)
         self.label_6.setStyleSheet(u"border: none;\n"
 "color: white;")
-
-        self.horizontalLayout_10.addWidget(self.label_6)
-
 
         self.verticalLayout_15.addWidget(self.frame_20)
 
@@ -1007,6 +994,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.soi_mass.setAlignment(Qt.AlignCenter)
         self.dist_frm_sun = QLabel(self.frame_35)
         self.dist_frm_sun.setObjectName(u"dist_frm_sun")
         self.dist_frm_sun.setGeometry(QRect(570, 120, 161, 41))
@@ -1026,6 +1014,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.dist_frm_sun.setAlignment(Qt.AlignCenter)
         self.soi_cal = QPushButton(self.frame_35)
         self.soi_cal.setObjectName(u"soi_cal")
         self.soi_cal.setGeometry(QRect(350, 170, 101, 41))
@@ -1132,6 +1121,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.soi_rad.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_15.addWidget(self.frame_36)
 
@@ -1142,6 +1132,310 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17.addWidget(self.SOI_frame_content)
 
         self.stackedWidget.addWidget(self.SOI_Screen)
+        self.VPCO = QWidget()
+        self.VPCO.setObjectName(u"VPCO")
+        self.verticalLayout_20 = QVBoxLayout(self.VPCO)
+        self.verticalLayout_20.setSpacing(0)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
+        self.VPCO_screen = QFrame(self.VPCO)
+        self.VPCO_screen.setObjectName(u"VPCO_screen")
+        self.VPCO_screen.setFrameShape(QFrame.StyledPanel)
+        self.VPCO_screen.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_21 = QVBoxLayout(self.VPCO_screen)
+        self.verticalLayout_21.setSpacing(0)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
+        self.frame_29 = QFrame(self.VPCO_screen)
+        self.frame_29.setObjectName(u"frame_29")
+        self.frame_29.setMinimumSize(QSize(0, 30))
+        self.frame_29.setMaximumSize(QSize(16777215, 30))
+        self.frame_29.setFrameShape(QFrame.StyledPanel)
+        self.frame_29.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_10 = QHBoxLayout(self.frame_29)
+        self.horizontalLayout_10.setSpacing(0)
+        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.label_title_4 = QLabel(self.frame_29)
+        self.label_title_4.setObjectName(u"label_title_4")
+        self.label_title_4.setMinimumSize(QSize(400, 0))
+        self.label_title_4.setFont(font1)
+        self.label_title_4.setStyleSheet(u"color:rgb(60, 235, 250);\n"
+"")
+
+        self.horizontalLayout_10.addWidget(self.label_title_4)
+
+
+        self.verticalLayout_21.addWidget(self.frame_29)
+
+        self.type_of_orbit_frame = QFrame(self.VPCO_screen)
+        self.type_of_orbit_frame.setObjectName(u"type_of_orbit_frame")
+        self.type_of_orbit_frame.setMinimumSize(QSize(1050, 200))
+        self.type_of_orbit_frame.setMaximumSize(QSize(1070, 200))
+        self.type_of_orbit_frame.setStyleSheet(u"")
+        self.type_of_orbit_frame.setFrameShape(QFrame.NoFrame)
+        self.type_of_orbit_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_7 = QHBoxLayout(self.type_of_orbit_frame)
+        self.horizontalLayout_7.setSpacing(0)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_22 = QVBoxLayout()
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.Orbit_type_stack = QStackedWidget(self.type_of_orbit_frame)
+        self.Orbit_type_stack.setObjectName(u"Orbit_type_stack")
+        self.Orbit_type_stack.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QFrame{\n"
+"\n"
+"border: 5px solid rgb(34, 14, 36);\n"
+"border-radius: 15px;\n"
+"}\n"
+"\n"
+"QFrame:hover{\n"
+"	border: 5px solid white;\n"
+"}\n"
+"\n"
+"")
+        self.type_como_search_layout = QWidget()
+        self.type_como_search_layout.setObjectName(u"type_como_search_layout")
+        self.type_combo_search = QComboBox(self.type_como_search_layout)
+        self.type_combo_search.addItem("")
+        self.type_combo_search.addItem("")
+        self.type_combo_search.addItem("")
+        self.type_combo_search.addItem("")
+        self.type_combo_search.addItem("")
+        self.type_combo_search.addItem("")
+        self.type_combo_search.setObjectName(u"type_combo_search")
+        self.type_combo_search.setGeometry(QRect(340, 80, 391, 41))
+        self.type_combo_search.setStyleSheet(u"QComboBox{\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 17px;}\n"
+"\n"
+"\n"
+"QComboBox:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"}")
+        self.label_9 = QLabel(self.type_como_search_layout)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setGeometry(QRect(290, 20, 671, 41))
+        font10 = QFont()
+        font10.setFamily(u"Arial")
+        font10.setPointSize(12)
+        font10.setBold(False)
+        font10.setItalic(False)
+        font10.setWeight(50)
+        self.label_9.setFont(font10)
+        self.label_9.setStyleSheet(u"color: white;\n"
+"border:none;")
+        self.Orbit_type_stack.addWidget(self.type_como_search_layout)
+        self.a_e_screen = QWidget()
+        self.a_e_screen.setObjectName(u"a_e_screen")
+        self.semimajor_axis = QLabel(self.a_e_screen)
+        self.semimajor_axis.setObjectName(u"semimajor_axis")
+        self.semimajor_axis.setGeometry(QRect(300, 30, 161, 41))
+        self.semimajor_axis.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.eccentricity = QLabel(self.a_e_screen)
+        self.eccentricity.setObjectName(u"eccentricity")
+        self.eccentricity.setGeometry(QRect(780, 30, 161, 41))
+        self.eccentricity.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.label_13 = QLabel(self.a_e_screen)
+        self.label_13.setObjectName(u"label_13")
+        self.label_13.setGeometry(QRect(120, 40, 151, 21))
+        self.label_13.setStyleSheet(u"border:none")
+        self.label_14 = QLabel(self.a_e_screen)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setGeometry(QRect(610, 40, 151, 21))
+        self.label_14.setStyleSheet(u"border:none")
+        self.label_19 = QLabel(self.a_e_screen)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setGeometry(QRect(470, 40, 71, 21))
+        self.label_19.setStyleSheet(u"border:none")
+        self.typeoforbit_a_e = QLabel(self.a_e_screen)
+        self.typeoforbit_a_e.setObjectName(u"typeoforbit_a_e")
+        self.typeoforbit_a_e.setGeometry(QRect(420, 120, 261, 41))
+        self.typeoforbit_a_e.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.Orbit_type_stack.addWidget(self.a_e_screen)
+        self.ra_rp_screen = QWidget()
+        self.ra_rp_screen.setObjectName(u"ra_rp_screen")
+        self.ra = QLabel(self.ra_rp_screen)
+        self.ra.setObjectName(u"ra")
+        self.ra.setGeometry(QRect(290, 30, 161, 41))
+        self.ra.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.label_12 = QLabel(self.ra_rp_screen)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setGeometry(QRect(70, 30, 181, 41))
+        self.label_12.setStyleSheet(u"border:none;\n"
+"color:white;")
+        self.label_32 = QLabel(self.ra_rp_screen)
+        self.label_32.setObjectName(u"label_32")
+        self.label_32.setGeometry(QRect(580, 30, 201, 41))
+        self.label_32.setStyleSheet(u"border:none;\n"
+"color:white;")
+        self.rp = QLabel(self.ra_rp_screen)
+        self.rp.setObjectName(u"rp")
+        self.rp.setGeometry(QRect(790, 30, 161, 41))
+        self.rp.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.label_34 = QLabel(self.ra_rp_screen)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setGeometry(QRect(460, 30, 51, 41))
+        self.label_34.setStyleSheet(u"border:none;\n"
+"color:white;")
+        self.label_35 = QLabel(self.ra_rp_screen)
+        self.label_35.setObjectName(u"label_35")
+        self.label_35.setGeometry(QRect(960, 30, 51, 41))
+        self.label_35.setStyleSheet(u"border:none;\n"
+"color:white;")
+        self.typeoforbit_ra_rp = QLabel(self.ra_rp_screen)
+        self.typeoforbit_ra_rp.setObjectName(u"typeoforbit_ra_rp")
+        self.typeoforbit_ra_rp.setGeometry(QRect(400, 110, 241, 41))
+        self.typeoforbit_ra_rp.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.typeoforbit_ra_rp.setAlignment(Qt.AlignCenter)
+        self.Orbit_type_stack.addWidget(self.ra_rp_screen)
+        self.r1_v1_gamma1_screen = QWidget()
+        self.r1_v1_gamma1_screen.setObjectName(u"r1_v1_gamma1_screen")
+        self.label_10 = QLabel(self.r1_v1_gamma1_screen)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(140, 40, 201, 41))
+        self.label_10.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:white;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.Orbit_type_stack.addWidget(self.r1_v1_gamma1_screen)
+        self.orbital_elements_screen = QWidget()
+        self.orbital_elements_screen.setObjectName(u"orbital_elements_screen")
+        self.Orbit_type_stack.addWidget(self.orbital_elements_screen)
+        self.stateNvelocityVectors_screen = QWidget()
+        self.stateNvelocityVectors_screen.setObjectName(u"stateNvelocityVectors_screen")
+        self.Orbit_type_stack.addWidget(self.stateNvelocityVectors_screen)
+
+        self.verticalLayout_22.addWidget(self.Orbit_type_stack)
+
+
+        self.horizontalLayout_7.addLayout(self.verticalLayout_22)
+
+
+        self.verticalLayout_21.addWidget(self.type_of_orbit_frame)
+
+        self.frame_39 = QFrame(self.VPCO_screen)
+        self.frame_39.setObjectName(u"frame_39")
+        self.frame_39.setFrameShape(QFrame.StyledPanel)
+        self.frame_39.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_21.addWidget(self.frame_39)
+
+        self.frame_40 = QFrame(self.VPCO_screen)
+        self.frame_40.setObjectName(u"frame_40")
+        self.frame_40.setFrameShape(QFrame.StyledPanel)
+        self.frame_40.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_21.addWidget(self.frame_40)
+
+
+        self.verticalLayout_20.addWidget(self.VPCO_screen)
+
+        self.stackedWidget.addWidget(self.VPCO)
 
         self.horizontalLayout_3.addWidget(self.stackedWidget)
 
@@ -1181,13 +1475,13 @@ class Ui_MainWindow(object):
         self.label_credits.setObjectName(u"label_credits")
         self.label_credits.setMinimumSize(QSize(50, 0))
         self.label_credits.setMaximumSize(QSize(50, 16777215))
-        font10 = QFont()
-        font10.setFamily(u"Arial")
-        font10.setPointSize(6)
-        font10.setBold(False)
-        font10.setItalic(False)
-        font10.setWeight(50)
-        self.label_credits.setFont(font10)
+        font11 = QFont()
+        font11.setFamily(u"Arial")
+        font11.setPointSize(6)
+        font11.setBold(False)
+        font11.setItalic(False)
+        font11.setWeight(50)
+        self.label_credits.setFont(font11)
         self.label_credits.setStyleSheet(u"image:url(UI_Functions/Resources/MOPy Cover_transparent.png);")
         self.label_credits.setPixmap(QPixmap(u"GUI-test/Resources/MOPy Cover_transparent.png"))
         self.label_credits.setScaledContents(True)
@@ -1225,6 +1519,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(0)
+        self.Orbit_type_stack.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1316,6 +1611,29 @@ class Ui_MainWindow(object):
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Km", None))
         self.label_18.setText("")
         self.soi_rad.setText("")
+        self.label_title_4.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
+        self.type_combo_search.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Type of Inputs", None))
+        self.type_combo_search.setItemText(1, QCoreApplication.translate("MainWindow", u"  a , e", None))
+        self.type_combo_search.setItemText(2, QCoreApplication.translate("MainWindow", u"  ra , rp ", None))
+        self.type_combo_search.setItemText(3, QCoreApplication.translate("MainWindow", u"  r1 , v1 , gama1 ", None))
+        self.type_combo_search.setItemText(4, QCoreApplication.translate("MainWindow", u"  Orbital Elements", None))
+        self.type_combo_search.setItemText(5, QCoreApplication.translate("MainWindow", u"  State and Velocity Vectors", None))
+
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Select any of the inputs listed in the dropdown box, about your Orbit", None))
+        self.semimajor_axis.setText("")
+        self.eccentricity.setText("")
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Semi-Major Axis:", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Eccentricity:", None))
+        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Km", None))
+        self.typeoforbit_a_e.setText("")
+        self.ra.setText("")
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Apoapsis Radius (ra):", None))
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"Periapsis Radius (rp):", None))
+        self.rp.setText("")
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"Km", None))
+        self.label_35.setText(QCoreApplication.translate("MainWindow", u"Km", None))
+        self.typeoforbit_ra_rp.setText(QCoreApplication.translate("MainWindow", u"Type Of Orbit", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_credits.setText("")
     # retranslateUi
 
