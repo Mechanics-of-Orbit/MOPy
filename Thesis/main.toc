@@ -67,7 +67,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.7}Lagrangian Points}{26}{subsection.A.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.8}Calculation Of State Vectors}{27}{subsection.A.8}% 
+\contentsline {subsection}{\numberline {A.8}Calculation Of Relative Position of two Spacecrafts}{27}{subsection.A.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.9}CRUD File Operations}{27}{subsection.A.9}% 
 \defcounter {refsection}{0}\relax 
