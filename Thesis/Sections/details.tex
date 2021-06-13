@@ -182,6 +182,25 @@ This feature simulates the orbital transfer using various numerical methods. For
 \caption{I/O for Orbital transfer}
 \label{tab:ot}
 \end{table}
+Transfer Orbit is nothing but the path followed by the satellite to travel from an initial orbit to final 
+orbit or one planet to other planet. There are many types of transfer orbits in which most commonly used transfer 
+is Hohmann Transfer because of its simplicity and its efficient to transfer.
+Transfer orbits are:
+\begin{enumerate}
+\item \textbf{Hohmann Tranfer Orbit: }A Hohmann Transfer is a two-impulse(delta-v) elliptical transfer between two co-planar circular/elliptical orbits. The transfer orbit's apoapsis lies on the target orbit and the periapsis of transfer orbit lies on the initial orbit.The fundamental assumption behind the Hohmann transfer, is that there is only one major body which exerts a gravitational force on the body of interest, such as a satellite. This is most commonly used transfer method for transferring an earth-based satellite from a low orbit to say a geosynchronous orbit.
+\begin{figure}[H]
+\includegraphics[scale=0.1]{images/ht.png}
+\caption{Hohmann Transfer}
+\end{figure}
+\item \textbf{Bielliptical Transfer Orbit}: In the bi-elliptic transfer, the first transfer is a highly eccentric orbit with an apoapsis higher than the target orbit radius. Once the spacecraft has reached apoapsis, it performs a prograde burn raising its periapsis to the height of its target orbit. Finally, once it reaches periapsis, it performs an orbital insertion burn (Retrograde burn) to put it into a circular orbit. In some cases Bielliptical Transfer is preffered over Hohmann transfer because its
+slight fuel efficint transfer.
+\begin{figure}[H]
+\includegraphics[scale=0.7]{images/bi.png}
+\caption{Hohmann Transfer}
+\end{figure}
+\item \textbf{Low Energy Transfer Orbit:} A low energy transfer is a path in space to reach a target with very little consumption of fuel.
+\item \textbf{Constant-Thrust Transfer Orbit:} In this transfer path the spacecraft's engine will be producing constant thrust through out the path. The spacecraft points straight towards the target with constant acceration till it reaches the target. 
+\end{enumerate}
 \subsection{Calculation of Julian Day}
 In this section the user can choose between Gregorian calendar and Julian calendar and with the other inputs they can obtain the Julian day of the corresponding date. 
 \begin{table}[H]
@@ -226,7 +245,8 @@ The major formula used in it are:\\
 \begin{table}[H]
 \centering
 \begin{tabular}{ccc}
-\multicolumn{1}{c|}{\textbf{Circular and Elliptical}}           & \multicolumn{1}{c|}{\textbf{Parabolic}}               & \textbf{Hyperbolic}                             \\ \hline
+\
+\textbf{Circular and Elliptical}           & \textbf{Parabolic}               & \textbf{Hyperbolic}                             \\ \hline
 \multicolumn{3}{c}{$\mu=G\times M_{Major}$}                                                                                                                               \\ 
 \multicolumn{1}{c|}{$r_p=a\times (1-e)$}                        & \multicolumn{1}{c|}{\multirow{2}{*}{$l=2\times r_p$}} & $\theta_\infty = \cos^{-1}(\dfrac{1}{e})=\beta$ \\
 \multicolumn{1}{c|}{$r_a=a\times (1+e)$}                        & \multicolumn{1}{c|}{}                                 & $\delta = 2\sin(\dfrac{1}{e})$                  \\
@@ -274,3 +294,15 @@ The Lagrangian points are points near two large orbiting bodies, the two objects
 \textbf{Output} & Lagrangian points polar coordinates and Graph showing them \\ \bottomrule
 \end{tabular}\caption{I/O for Lagrangian Points}
 \end{table}
+    Lagrange Points are positions in space around the planet/star, where the gravitational forces of two body like 
+the Sun and the Earth produce enhanced regions of attraction and repulsion. These can be used by spacecraft to reduce fuel 
+consumption required to remain in position. At these points gravitational pull of two large masses precisely equals the centripetal 
+force required for a small object to move with them.
+    These points are named in honor of Italian-French mathematician Josephy-Louis Lagrange. There are five Langrengian 
+points around the planet/satr, where a small mass can orbit in a constant pattern with two larger masses.  This mathematical 
+problem, known as the "General Three-Body Problem" was considered by Lagrange in his prize winning paper (Essai sur le Problème des 
+Trois Corps, 1772).
+    Of the five Lagrange points, three are unstable and two are stable. The unstable Lagrange points - labeled L1, L2 and L3 - lie along 
+the line connecting the two large masses.The three of them lie along the line connecting the two large bodies.
+The stable Lagrange points - labeled L4 and L5 - form the apex of two equilateral triangles 
+that have the large masses at their vertices. L4 leads the orbit of earth and L5 follows.
