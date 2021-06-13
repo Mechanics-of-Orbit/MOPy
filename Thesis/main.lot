@@ -5,20 +5,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {2}{\ignorespaces Inputs and outputs for Calculation of Orbital Elements\relax }}{6}{table.caption.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3}{\ignorespaces I/O for 2D and 3D orbits\relax }}{7}{table.caption.11}% 
+\contentsline {table}{\numberline {3}{\ignorespaces I/O for 2D and 3D orbits\relax }}{9}{table.caption.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4}{\ignorespaces I/O for conversion between Euler angle and DCM\relax }}{7}{table.caption.12}% 
+\contentsline {table}{\numberline {4}{\ignorespaces I/O for conversion between Euler angle and DCM\relax }}{10}{table.caption.12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5}{\ignorespaces I/O for Sphere of Influence\relax }}{7}{table.caption.13}% 
+\contentsline {table}{\numberline {5}{\ignorespaces I/O for Sphere of Influence\relax }}{10}{table.caption.13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {6}{\ignorespaces I/O for Orbital transfer\relax }}{8}{table.caption.14}% 
+\contentsline {table}{\numberline {6}{\ignorespaces I/O for Orbital transfer\relax }}{11}{table.caption.14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {7}{\ignorespaces I/O for Julian-day\relax }}{8}{table.caption.15}% 
+\contentsline {table}{\numberline {7}{\ignorespaces I/O for Julian-day\relax }}{12}{table.caption.17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {8}{\ignorespaces I/O for Various Parameters of the Orbit\relax }}{8}{table.caption.16}% 
+\contentsline {table}{\numberline {8}{\ignorespaces I/O for Various Parameters of the Orbit\relax }}{13}{table.caption.18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {9}{\ignorespaces I/O for Sensitivity Analysis\relax }}{9}{table.caption.17}% 
+\contentsline {table}{\numberline {9}{\ignorespaces Formulae for Various parameters\relax }}{14}{table.caption.19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {10}{\ignorespaces I/O for Position of One Spacecraft Relative To Another\relax }}{9}{table.caption.18}% 
+\contentsline {table}{\numberline {10}{\ignorespaces I/O for Sensitivity Analysis\relax }}{14}{table.caption.20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {11}{\ignorespaces I/O for Lagrangian Points\relax }}{9}{table.caption.19}% 
+\contentsline {table}{\numberline {11}{\ignorespaces I/O for Position of One Spacecraft Relative To Another\relax }}{15}{table.caption.21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {12}{\ignorespaces I/O for Lagrangian Points\relax }}{15}{table.caption.22}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {13}{\ignorespaces Planetary Details\relax }}{27}{table.caption.23}% 
