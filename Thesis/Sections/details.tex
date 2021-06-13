@@ -149,6 +149,14 @@ The inputs for this are as in table(\ref{eadcm}). This code can be fed the model
 \caption{I/O for conversion between Euler angle and DCM}
 \label{eadcm}
 \end{table}
+Euler Angles:
+	The Euler angles are three angles introduced by Leonhard Euler to describe the orientation of a rigid body with respect to a fixed coordinate system. They can also represent the orientation of a mobile frame of reference in physics or the orientation of a general basis in 3-dimensional linear algebra. Euler angles can be defined by elemental geometry or by composition of rotations (matrix).
+	The three elemental rotations may be extrinsic (rotations about the axes xyz of the original coordinate system, which is assumed to remain motionless), or intrinsic (rotations about the axes of the rotating coordinate system XYZ, solidary with the moving body, which changes its orientation after each elemental rotation).Euler angles are typically denoted as $\psi, \theta, \phi$
+\begin{figure}[H]
+\includegraphics[scale=0.25]{images/EA1.png}
+\caption{Euler Vector}
+\end{figure}
+
 \subsection{Sphere of Influence}
 In this section, the user can either input the values or interact with the model in the 3D environment to see the corresponding output.
 \begin{table}[H]
@@ -169,6 +177,11 @@ To estimate the planets Sphere of Influence, the three body problem system compr
 r_{SOI}&=R\left(\dfrac{MiB\_ mass}{MaB\_ mass}\right)^{2/5}
 \end{align*}
 
+\begin{figure}[H]
+\includegraphics[scale=0.25]{images/soi.jpg}
+\caption{Sphere of Influence of Earth, which is approx 140 times it's radius}
+\end{figure}
+
 \subsection{Orbital Transfer}
 This feature simulates the orbital transfer using various numerical methods. For now, this can perform Hohmann Transfer. The Inputs and outputs are as in table(\ref{tab:ot})
 \begin{table}[H]
@@ -182,6 +195,25 @@ This feature simulates the orbital transfer using various numerical methods. For
 \caption{I/O for Orbital transfer}
 \label{tab:ot}
 \end{table}
+Transfer Orbit is nothing but the path followed by the satellite to travel from an initial orbit to final 
+orbit or one planet to other planet. There are many types of transfer orbits in which most commonly used transfer 
+is Hohmann Transfer because of its simplicity and its efficient to transfer.
+Transfer orbits are:
+\begin{enumerate}
+\item \textbf{Hohmann Tranfer Orbit: }A Hohmann Transfer is a two-impulse(delta-v) elliptical transfer between two co-planar circular/elliptical orbits. The transfer orbit's apoapsis lies on the target orbit and the periapsis of transfer orbit lies on the initial orbit.The fundamental assumption behind the Hohmann transfer, is that there is only one major body which exerts a gravitational force on the body of interest, such as a satellite. This is most commonly used transfer method for transferring an earth-based satellite from a low orbit to say a geosynchronous orbit.
+\begin{figure}[H]
+\includegraphics[scale=0.2]{images/ht.png}
+\caption{Hohmann Transfer}
+\end{figure}
+\item \textbf{Bielliptical Transfer Orbit}: In the bi-elliptic transfer, the first transfer is a highly eccentric orbit with an apoapsis higher than the target orbit radius. Once the spacecraft has reached apoapsis, it performs a prograde burn raising its periapsis to the height of its target orbit. Finally, once it reaches periapsis, it performs an orbital insertion burn (Retrograde burn) to put it into a circular orbit. In some cases Bielliptical Transfer is preffered over Hohmann transfer because its
+slight fuel efficint transfer.
+\begin{figure}[H]
+\includegraphics[scale=0.85]{images/bi.png}
+\caption{Hohmann Transfer}
+\end{figure}
+\item \textbf{Low Energy Transfer Orbit:} A low energy transfer is a path in space to reach a target with very little consumption of fuel.
+\item \textbf{Constant-Thrust Transfer Orbit:} In this transfer path the spacecraft's engine will be producing constant thrust through out the path. The spacecraft points straight towards the target with constant acceration till it reaches the target. 
+\end{enumerate}
 \subsection{Calculation of Julian Day}
 In this section the user can choose between Gregorian calendar and Julian calendar and with the other inputs they can obtain the Julian day of the corresponding date. 
 \begin{table}[H]
@@ -226,7 +258,8 @@ The major formula used in it are:\\
 \begin{table}[H]
 \centering
 \begin{tabular}{ccc}
-\multicolumn{1}{c|}{\textbf{Circular and Elliptical}}           & \multicolumn{1}{c|}{\textbf{Parabolic}}               & \textbf{Hyperbolic}                             \\ \hline
+\
+\textbf{Circular and Elliptical}           & \textbf{Parabolic}               & \textbf{Hyperbolic}                             \\ \hline
 \multicolumn{3}{c}{$\mu=G\times M_{Major}$}                                                                                                                               \\ 
 \multicolumn{1}{c|}{$r_p=a\times (1-e)$}                        & \multicolumn{1}{c|}{\multirow{2}{*}{$l=2\times r_p$}} & $\theta_\infty = \cos^{-1}(\dfrac{1}{e})=\beta$ \\
 \multicolumn{1}{c|}{$r_a=a\times (1+e)$}                        & \multicolumn{1}{c|}{}                                 & $\delta = 2\sin(\dfrac{1}{e})$                  \\
@@ -244,8 +277,7 @@ The major formula used in it are:\\
 \label{tab:vpco}
 \end{table}
 \subsection{Sensitivity Analysis}
-User has to select the type of calendar and the in the input section they have to select date and time and accuracy of digits and then by clicking on calculate button we will get Julian days in the output section. This takes in the required values an outputs how much of an error will that small change in the velocity or radius in the 3D environment.
-
+This calculates the value of the error that rises up if the initial value is very slightly different than what it is supposed to be. \\
 \begin{table}[H]
 \begin{tabular}{@{}cl@{}}
 \toprule
@@ -254,6 +286,7 @@ User has to select the type of calendar and the in the input section they have t
 \end{tabular}\caption{I/O for Sensitivity Analysis}
 \end{table}
 The analysis is done to know what is the effect, if small error occurs in position and velocity at the maneuver point while the space mission is on the trajectory. There is a derived formula to calculate the sensitivity analysis from which change in position and velocity can be obtained in terms of percentage . This helps in analysing the position and velocity tolerance of any particular mission and design accordingly.
+$$\dfrac{\delta R_2}{R_2}=\dfrac{2}{1-\dfrac{R_1\left[V_D^{v}\right]^2}{2\mu_{sun}}}\left(\dfrac{\mu_1}{V_D^{v}v_\infty r_p}\dfrac{\delta r_p}{r_p}+\dfrac{v_\infty+\dfrac{2\mu_1}{r_pv_\infty}}{V_D^{v}}\dfrac{\delta v_p}{v_p}\right)$$
 \subsection{Position of One Spacecraft Relative To Another}
 Based on the inputs of the user the relative velocity and orbit can be visualized in this section.
 \begin{table}[H]
@@ -274,3 +307,7 @@ The Lagrangian points are points near two large orbiting bodies, the two objects
 \textbf{Output} & Lagrangian points polar coordinates and Graph showing them \\ \bottomrule
 \end{tabular}\caption{I/O for Lagrangian Points}
 \end{table}
+    Lagrange Points are positions in space around the planet/star, where the gravitational forces of two body like the Sun and the Earth produce enhanced regions of attraction and repulsion. These can be used by spacecraft to reduce fuel consumption required to remain in position. At these points gravitational pull of two large masses precisely equals the centripetal force required for a small object to move with them.
+    
+    These points are named in honor of Italian-French mathematician Josephy-Louis Lagrange. There are five Langrengian points around the planet/satr, where a small mass can orbit in a constant pattern with two larger masses.  This mathematical problem, known as the "General Three-Body Problem" was considered by Lagrange in his prize winning paper (Essai sur le Problème des Trois Corps, 1772).     Of the five Lagrange points, three are unstable and two are stable. The unstable Lagrange points - labeled L1, L2 and L3 - lie along the line connecting the two large masses.The three of them lie along the line connecting the two large bodies.
+The stable Lagrange points - labeled L4 and L5 - form the apex of two equilateral triangles that have the large masses at their vertices. L4 leads the orbit of earth and L5 follows.

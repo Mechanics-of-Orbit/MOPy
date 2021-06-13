@@ -82,8 +82,9 @@ class EA():
         else:
             return ('No transformation matrix')
 
-order = '321' #input("Enter the order:")
-DCM = [[0.6405, 0.75319, -0.15038],[0.76736, -0.63531, 0.086824],[-0.030154, -0.17101, -0.98481]]
-print(EA.DCMtoEA(DCM,order))
+if __name__ == '__main__':
+    order = '321' #input("Enter the order:")
+    DCM = [[0.6405, 0.75319, -0.15038],[0.76736, -0.63531, 0.086824],[-0.030154, -0.17101, -0.98481]]
+    print(EA.DCMtoEA(DCM,order))
 
-print(EA.EAtoDCM(8.6489  * 180/pi, 49.619 * 180/pi, -5.039 * 180/pi, order))
+    # print(EA.EAtoDCM(8.6489  * 180/pi, 49.619 * 180/pi, -5.039 * 180/pi, order))
