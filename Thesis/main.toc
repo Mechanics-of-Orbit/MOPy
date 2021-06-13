@@ -3,7 +3,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{List of Figures}{6}{section*.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Tables}{6}{section*.3}% 
+\contentsline {section}{List of Tables}{1}{section*.3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}% 
 \defcounter {refsection}{0}\relax 
@@ -69,4 +69,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.8}CRUD File Operations}{23}{subsection.A.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{24}{section*.20}% 
+\contentsline {section}{\numberline {A}Database:}{24}{appendix.A}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{25}{section*.21}% 
