@@ -218,6 +218,31 @@ The user can obtain various parameters by giving the details that they know of. 
 \caption{I/O for Various Parameters of the Orbit}
 \label{vpco}
 \end{table}
+The Semi major axis ,Eccentricity, Radius of perigee, Radius of apogee, Specific mechanical energy, Specific angular momentum, Time period , Mean motion, Velocity at perigee, Velocity at apogee, Gravitational force at perigee, Gravitational force at apogee, Semi-latus rectum, Velocity at semi-latus rectum, Escape velocity at perigee and Escape velocity at apogee all these parameters can be calculated. These parameters can be calculated at any given point of time in the ongoing mission.
+The major formula used in it are:\\
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
+\centering
+\begin{tabular}{ccc}
+\multicolumn{1}{c|}{\textbf{Circular and Elliptical}}           & \multicolumn{1}{c|}{\textbf{Parabolic}}               & \textbf{Hyperbolic}                             \\ \hline
+\multicolumn{3}{c}{$\mu=G\times M_{Major}$}                                                                                                                               \\ 
+\multicolumn{1}{c|}{$r_p=a\times (1-e)$}                        & \multicolumn{1}{c|}{\multirow{2}{*}{$l=2\times r_p$}} & $\theta_\infty = \cos^{-1}(\dfrac{1}{e})=\beta$ \\
+\multicolumn{1}{c|}{$r_a=a\times (1+e)$}                        & \multicolumn{1}{c|}{}                                 & $\delta = 2\sin(\dfrac{1}{e})$                  \\
+\multicolumn{1}{c|}{$\epsilon = \dfrac{-\mu}{2a}$}              & \multicolumn{1}{c|}{$0$}                              & $h=\sqrt{\mu a(e^2-1)}$                         \\
+\multicolumn{1}{l|}{}                                           & \multicolumn{1}{l|}{}                                 & \multicolumn{1}{l}{}                            \\
+\multicolumn{1}{c|}{$h=\sqrt{r_p\times(1+e)\mu}$}               & \multicolumn{1}{c|}{$h=\sqrt{2\mu r_p}$}              & $b=ae\sin(\theta_\infty)=\Delta$                \\
+\multicolumn{1}{l}{}                                            & \multirow{2}{*}{$F_g=\dfrac{GMm}{r^2}$}               & \multicolumn{1}{l}{}                            \\
+                                                                &                                                       &                                                 \\
+\multicolumn{1}{c|}{$V= \sqrt{\dfrac{2\mu}{r}-\dfrac{\mu}{a}}$} & \multicolumn{1}{c|}{$V_r=\sqrt{\dfrac{2\mu}{r}}$}     & $V_\infty=e\mu\sin(\theta_\infty)/h$            \\
+\multicolumn{1}{c|}{$T = \sqrt{\dfrac{4\pi^2}{\mu}\times a^3}$} & \multicolumn{1}{c|}{}                                 & $\epsilon=\dfrac{\mu}{2a}$                      \\
+\multicolumn{1}{c|}{$n = \dfrac{2 \pi}{T}$}                     & \multicolumn{1}{c|}{}                                 & $l=\dfrac{-b^2}{a}$                             \\
+\multicolumn{1}{c|}{$l=a\times(1-e^2)$}                         & \multicolumn{1}{c|}{}                                 & $r_p,r_a = \dfrac{h^2/\mu}{1 \pm e}$           
+\end{tabular}
+\caption{Formulae for Various parameters}
+\label{tab:vpco}
+\end{table}
 \subsection{Sensitivity Analysis}
 User has to select the type of calendar and the in the input section they have to select date and time and accuracy of digits and then by clicking on calculate button we will get Julian days in the output section. This takes in the required values an outputs how much of an error will that small change in the velocity or radius in the 3D environment.
 
@@ -228,7 +253,7 @@ User has to select the type of calendar and the in the input section they have t
 \textbf{Output} & \begin{tabular}[c]{@{}l@{}}Percentage difference caused to the final orbit parameters due to slight \\ difference in delta-v\end{tabular} \\ \bottomrule
 \end{tabular}\caption{I/O for Sensitivity Analysis}
 \end{table}
-
+The analysis is done to know what is the effect, if small error occurs in position and velocity at the maneuver point while the space mission is on the trajectory. There is a derived formula to calculate the sensitivity analysis from which change in position and velocity can be obtained in terms of percentage . This helps in analysing the position and velocity tolerance of any particular mission and design accordingly.
 \subsection{Position of One Spacecraft Relative To Another}
 Based on the inputs of the user the relative velocity and orbit can be visualized in this section.
 \begin{table}[H]
@@ -238,6 +263,8 @@ Based on the inputs of the user the relative velocity and orbit can be visualize
 \textbf{Output} & Graph Showing the Minor bodies in the orbit around Major Body \\ \bottomrule
 \end{tabular}\caption{I/O for Position of One Spacecraft Relative To Another}
 \end{table}
+
+In situations like a rendezvous maneuver the relative motion between the space vehicles is utilised. This can be done in two different ways, utilising the algorithm to calculate the relative orbit or utilise the camera viewpoint and plotting as the orbit propagates with the camera fixed on one of the spacecraft.
 \subsection{Lagrangian Points}
 The Lagrangian points are points near two large orbiting bodies, the two objects exert an unbalanced gravitational force at a point, altering the orbit of whatever is at that point. At the Lagrange points, the gravitational forces of the two large bodies and the centrifugal force balance each other, The inputs and outputs are as follows.
 \begin{table}[H]
