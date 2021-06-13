@@ -1,7 +1,7 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Figures}{6}{section*.2}% 
+\contentsline {section}{List of Figures}{vii}{section*.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{List of Tables}{1}{section*.3}% 
 \defcounter {refsection}{0}\relax 

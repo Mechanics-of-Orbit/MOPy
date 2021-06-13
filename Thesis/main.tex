@@ -43,6 +43,7 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
+
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
@@ -99,18 +100,20 @@
 \begin{document}
 %Hello
 \input{preamble/titlepage}
+\pagenumbering{roman}
 \input{preamble/certificate}
 \input{preamble/declaration}
 \newpage
 \input{preamble/acknowledgement}
 \newpage
 \tableofcontents
+\newpage
 
 \listoffigures
-
-\listoftables
-\thispagestyle{empty}
 \newpage
+\listoftables
+\newpage
+\pagenumbering{arabic}
 \setcounter{page}{1}
 
 \section{Introduction}
@@ -189,6 +192,8 @@
 	\bibitem{p3d}{\textit{Panda3D Documentation}}, {\href{https://docs.panda3d.org/1.10/python/index}{ Panda3D.org}},{ v1.10.9}
 	
 	\bibitem{mpl}{\textit{MatPlotLib Documentation}}, {\href{https://matplotlib.org/stable/contents.html}{ matplotlib.org}}, {May 08, 2021}, { v3.4.2}
+	
+	\bibitem{vanderwall}{Wanderson M. Pimenta}, {\href{https://github.com/Wanderson-Magalhaes} {GitHub Repository}}
 	
 \end{thebibliography}
 
