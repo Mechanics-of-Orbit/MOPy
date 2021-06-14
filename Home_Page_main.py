@@ -89,11 +89,8 @@ class MainWindow(QMainWindow):
         Minor_body_mass = self.ui.soi_mass.text() 
         distance_bt_sun_plnt = self.ui.soi_mass.text()
         rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
-        #accuracy = accuracy = self.ui.soi_rad.value()
-        self.ui.soi_rad.setText(str(rSOI ))
-        
-
-    #     #return [rSOI, rSOI/MiB_radius]
+        self.ui.soi_rad.setText(str(rSOI))
+    
        
     # SOI Graph
     def soi_graph(self):
