@@ -10,10 +10,11 @@ class MyApp(ShowBase):
         ShowBase.__init__(self)
 
         load_my_model = loadMyModel()
-        model = "earth_daymap"
+        model = "earth"
         self.main_model = load_my_model.body(base, model)
         self.main_model.reparentTo(render)
 
+        self.cam.setPos(0,-100,0)
         # self.sol_sky = load_my_model.solar_sky(base)
         # self.sol_sky.reparentTo(render)
 
