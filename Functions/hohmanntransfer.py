@@ -23,18 +23,19 @@ class hohmann_method():
         self.majorbody = majorbody
 
     def coord(self):
-        [self.a1, self.a2] = [(rp1+ra1)/2, (rp2+ra2)/2]
-        [self.e1, self.e2] = [(ra1-rp1)/(ra1+rp1), (ra2-rp2)/(ra2+rp2)]
+        [self.a1, self.a2] = [(self.rp1+self.ra1)/2, (self.rp2+self.ra2)/2]
+        [self.e1, self.e2] = [(self.ra1-self.rp1)/(self.ra1+self.rp1), (self.ra2-self.rp2)/(self.ra2+self.rp2)]
         [self.l1, self.b1] = calc.cal(self.a1, self.e1)
         [self.l2, self.b1] = calc.cal(self.a2, self.e2)
-        r1 = ellipse(self.l1, self.e1, theta)
-        r2 = ellipse(self.l2, self.e1, theta)
-        self.at = (rp1+ra2)/2
-        self.et = (ra2 - rp1)/(ra2+rp1)
-        [self.lt, self.bt] = calc.cal(at, et)
+        self.theta = linspace(0,2 * pi,100000)
+        r1 = ellipse(self.l1, self.e1, self.theta)
+        r2 = ellipse(self.l2, self.e1, self.theta)
+        self.at = (self.rp1+self.ra2)/2
+        self.et = (self.ra2 - self.rp1)/(self.ra2+self.rp1)
+        [self.lt, self.bt] = calc.cal(self.at, self.et)
         self.thetat = linspace(0, pi, 10000)
         rt = ellipse(self.lt, self.et, self.thetat)
-        ct = calc.foci(at, bt)
+        ct = calc.foci(self.at, self.bt)
         return [r1, r2, rt, ct]
     
 class plot(ShowBase):
