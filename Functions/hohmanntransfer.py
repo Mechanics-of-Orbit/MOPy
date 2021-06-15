@@ -65,47 +65,44 @@ class plot(ShowBase):
         [r1, r2, rt, ct] = cuc.coord()
 
         self.theta = linspace(-pi,pi,100000)
+        
         self.x1 = (r1 * cos(self.theta))/100
         self.y1 = (r1 * sin(self.theta))/100
+
+        self.theta2 = linspace(0,2 * pi,100000)
+
+        self.x2 = (r2 * cos(self.theta2))/100
+        self.y2 = (r2 * sin(self.theta2))/100
+
         self.z = 0*arange(0,len(self.x))
         self.angle = 0
         self.i = 0
 
         self.thetat = linspace(0,2*pi,100000)
-        self.x1 = (rt * cos(self.thetat))/100
-        self.y1 = (rt * sin(self.thetat))/100
+        self.xt = (rt * cos(self.thetat))/100
+        self.yt = (rt * sin(self.thetat))/100
+
+        self.taskMgr.add(self.orbit, "orbit")
+
+    def orbit(self, task):
+        dt = globalClock.getDt()
+
+        if self.i < 99000:
+            self.sattl.setPos(self.x1[self.i],0, self.y1[self.i])
+            self.i += 1000
+        elif self.i < 99000:
+            self.i = 0
+            self.sattl.setPos(self.x2[self.i],0, self.y2[self.i])
+            self.i += 1000
+        else:
+            self.i = 0
+            self.sattl.setPos(self.xt[self.i],0, self.yt[self.i])
+            self.i += 1000
+        
+        return task.cont
+
 
 
 
 if __name__ == '__main__':
-    def plotorb(r, theta):
-        x = r * cos(theta)
-        y = r * sin(theta)
-        # fig = figure()
-        # ax = fig.add_subplot(111)
-        # set_aspect('equal', adjustable='box')
-        plot(x,y)
-
-    [rp1, ra1] = [6378+480, 6378+480]
-    [rp2, ra2] = [6378+16000, 6378+16000]
-    [a1, a2] = [(rp1+ra1)/2, (rp2+ra2)/2]
-    [e1, e2] = [(ra1-rp1)/(ra1+rp1), (ra2-rp2)/(ra2+rp2)]
-
-    [l1, b1] = calc.cal(a1, e1)
-    [l2, b1] = calc.cal(a2, e2)
-
-    theta = linspace(0, 2*pi, 10000)
-    r1 = ellipse(l1, e1, theta)
-    r2 = ellipse(l2, e1, theta)
-
-    at = (rp1+ra2)/2
-    et = (ra2 - rp1)/(ra2+rp1)
-    [lt, bt] = calc.cal(at, et)
-    thetat = linspace(0, pi, 10000)
-    rt = ellipse(lt, et, thetat)
-    ct = calc.foci(at, bt)
-
-    plotorb(r1, theta)
-    plotorb(r2, theta)
-    plotorb(rt, thetat)
-    show()
+    pass
