@@ -3,7 +3,7 @@ from matplotlib.pyplot import *
 from direct.showbase.ShowBase import ShowBase
 from ModelLoader import loadMyModel
 
-from VPCO import CalculateCircularElliptical
+#from VPCO import CalculateCircularElliptical
 
 from Sections.ellipse import ellipse
 
@@ -38,8 +38,8 @@ class hohmann_method():
         ct = calc.foci(self.at, self.bt)
         return [r1, r2, rt, ct]
     
-class plot(ShowBase):
-    def __init__(self, ra1, rp1, ra2, rp2, majorbody):
+class plotorbit(ShowBase):
+    def __init__(self, r1, r2, rt, majorbody):
         super().__init__()
         self.cam.setPos(0, -1000, 0)
         # self.cam.setHpr(0, 90, 0)
@@ -51,7 +51,7 @@ class plot(ShowBase):
         self.bg.reparentTo(self.render)
 
         load_my_model = loadMyModel()
-        model = "earth"
+        model = majorbody
         self.model = load_my_model.body(base, model)
         self.model.setScale(10)
         # self.model.setPos(c/1000000, 0, 0)
@@ -62,36 +62,33 @@ class plot(ShowBase):
         self.sattl.lookAt(self.model)
         self.sattl.reparentTo(self.render)
 
-        cuc = hohmann_method()
-        [r1, r2, rt, ct] = cuc.coord()
-
         self.theta = linspace(-pi,pi,100000)
-        
         self.x1 = (r1 * cos(self.theta))/100
         self.y1 = (r1 * sin(self.theta))/100
 
         self.theta2 = linspace(0,2 * pi,100000)
-
         self.x2 = (r2 * cos(self.theta2))/100
         self.y2 = (r2 * sin(self.theta2))/100
 
-        self.z = 0*arange(0,len(self.x))
+        self.thetat = linspace(0, pi,10000)
+        self.xt = (rt * cos(self.thetat))/100
+        self.yt = (rt * sin(self.thetat))/100
+
+        self.z = 0*arange(0,len(self.x1))
         self.angle = 0
         self.i = 0
 
-        self.thetat = linspace(0,2*pi,100000)
-        self.xt = (rt * cos(self.thetat))/100
-        self.yt = (rt * sin(self.thetat))/100
+        
 
         self.taskMgr.add(self.orbit, "orbit")
 
     def orbit(self, task):
         dt = globalClock.getDt()
 
-        if self.i < 99000:
+        if self.i < len(r1):
             self.sattl.setPos(self.x1[self.i],0, self.y1[self.i])
             self.i += 1000
-        elif self.i < 99000:
+        elif self.i < len(rt):
             self.i = 0
             self.sattl.setPos(self.x2[self.i],0, self.y2[self.i])
             self.i += 1000
@@ -106,4 +103,14 @@ class plot(ShowBase):
 
 
 if __name__ == '__main__':
-    pass
+    ra1 = 21000
+    rp1 = 8000
+    ra2 = 35000
+    rp2 = 11000
+    majorbody = "earth"
+
+    solve = hohmann_method(ra1, rp1, ra2, rp2, majorbody)
+    [r1, r2, rt, ct] = solve.coord()
+
+    trialplot = plotorbit(r1, r2, rt, majorbody)
+    trialplot.run()
