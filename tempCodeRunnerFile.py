@@ -1,4 +1,0 @@
-
-
-
-    # Julian Day Calculation
