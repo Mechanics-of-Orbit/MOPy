@@ -10,7 +10,11 @@ import sqlite3
 from math import *
 from Functions.Sections.soi import SoI
 
-from Functions.SOI3Dviz import SOI
+from SOI3Dviz import SOI
+
+from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
+
+from SOI3Dviz import SOI
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -64,6 +68,111 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentIndex(1)
         elif index == 3:
             self.ui.stackedWidget.setCurrentIndex(2)
+        elif index == 1:
+            self.ui.stackedWidget.setCurrentIndex(5)
+        elif index == 13:
+            self.ui.stackedWidget.setCurrentIndex(3)
+            self.ui.Orbit_type_stack.setCurrentIndex(0)
+
+    # vpco go button(selecting type of input)
+    def vpco_go_btn(self):
+        selct_body = self.ui.vpco_major_body.currentIndex()
+           
+        index1 = self.ui.vpco_input_type.currentIndex()
+        if index1 == 1:
+            if selct_body == 0:
+                self.ui.error_selct_body.setText("Please Select Major Body")
+            else:
+                self.ui.Orbit_type_stack.setCurrentIndex(1)
+        elif index1 == 2:
+            if selct_body == 0:
+                    self.ui.error_selct_body.setText("Please Select Major Body")
+            else:
+                self.ui.Orbit_type_stack.setCurrentIndex(2)
+        elif index1 == 3:
+            if selct_body == 0:
+                    self.ui.error_selct_body.setText("Please Select Major Body")
+            else:
+                self.ui.Orbit_type_stack.setCurrentIndex(3)
+        elif index1 == 4:
+            if selct_body == 0:
+                    self.ui.error_selct_body.setText("Please Select Major Body")
+            else:
+                self.ui.Orbit_type_stack.setCurrentIndex(4)
+        elif index1 == 5:
+            if selct_body == 0:
+                    self.ui.error_selct_body.setText("Please Select Major Body")
+            else:
+                self.ui.Orbit_type_stack.setCurrentIndex(5)
+
+    #VPCO_a_e_calculate_btn
+    def vpco_ae_cal_btn(self):
+        self.ui.stackedWidget.setCurrentIndex(4)
+        index1 = self.ui.vpco_input_type.currentIndex()
+        if index1 == 1:
+            self.ui.VPCO_output_stack.setCurrentIndex(0)
+        elif index1 == 2:
+            self.ui.VPCO_output_stack.setCurrentIndex(1)
+        elif index1 == 3:
+            self.ui.VPCO_output_stack.setCurrentIndex(2)
+        elif index1 == 4:
+            self.ui.VPCO_output_stack.setCurrentIndex(3)
+        elif index1 == 5:
+            self.ui.VPCO_output_stack.setCurrentIndex(4)
+        e = self.ui.eccentricity_inpt_ae.text()
+        e = float(e)
+        a = self.ui.semimajor_axis_input_ae.text()
+        a = float(a)
+        maj_body = self.ui.vpco_major_body.currentText()
+        db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
+        cursor = db.cursor()
+        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[maj_body])
+
+       
+        for row_number, row_data in enumerate(result):
+            maj_body_mass = row_data[1]
+        
+        if e == 0 or 0 < e < 1: 
+            [r_per, r_apo, mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.semiecc(a, e, maj_body_mass)
+
+            v_per = CalculateCircularElliptical.velocity_at_any_point(a, r_per, maj_body_mass)
+            v_apo = CalculateCircularElliptical.velocity_at_any_point(a, r_apo, maj_body_mass)
+            v_slr = CalculateCircularElliptical.velocity_at_any_point(a, slr, maj_body_mass)
+
+            esc_vp = CalculateParabola.velocity_at_any_point(r_per, maj_body_mass)
+            esc_va = CalculateParabola.velocity_at_any_point(r_apo, maj_body_mass)
+            self.ui.rp_ae.setText(str(round(r_per,4)))
+            self.ui.ra_ae.setText(str(round(r_apo,4)))
+            self.ui.mu_ae.setText(str(round(sme,4)))
+            self.ui.p_ae.setText(str(round(slr,4)))
+            self.ui.h_ae.setText(str(round(mag_h,4)))
+            self.ui.T_ae.setText(str(round(T_period,4)))
+            self.ui.n_ae.setText(str(round(mean_motion,4)))
+            self.ui.vp_ae.setText(str(round(v_per,4)))
+            self.ui.va_ae.setText(str(round(v_apo,4)))
+            self.ui.vlatus_ae.setText(str(round(v_slr,4)))
+            self.ui.escvp_ae.setText(str(round(esc_vp,4)))
+            self.ui.escva_ae.setText(str(round(esc_va,4)))
+        
+        
+            
+
+    # vpco input ae screen
+    def vpco_a_e(self):
+        e = self.ui.eccentricity_inpt_ae.text()
+        e = float(e)
+        if e == 0:
+            self.ui.orbit_type_ae.setText("Circular")
+        elif e == 1:
+             self.ui.orbit_type_ae.setText("Parabola")
+        elif 0 < e < 1:
+             self.ui.orbit_type_ae.setText("Ellipse")
+        elif e > 1:
+             self.ui.orbit_type_ae.setText("Hyperbola")
+    
+    # vpco home_btn_2
+    def homebtn2(self):
+        self.ui.Orbit_type_stack.setCurrentIndex(0)
     
     # SOI
     def SEARCH(self):
@@ -101,11 +210,15 @@ class MainWindow(QMainWindow):
         db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
         cursor = db.cursor()
         result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[planet_name1])
-
+        
         for row_number, row_data in enumerate(result):
-            planet_radius = (row_data[2]/2)
-        rSOIMiB = float(rSOI)/float(planet_radius)
-        soi_3D_graph = SOI(planet_name, rSOI, rSOIMiB)
+            r_planet = row_data[2]/2
+            r_soimb = float(rSOI)/r_planet
+        graph3d = SOI(planet_name,rSOI,r_soimb)
+        graph3d.run()
+            
+
+  
     
     # Home_btn
     def meth_Home_btn(self):

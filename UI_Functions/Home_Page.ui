@@ -535,7 +535,7 @@ QPushButton:hover{
                           <string/>
                          </property>
                          <property name="pixmap">
-                          <pixmap>../../MOPy/UI_Functions/UI_Functions/Resources/MOPy Cover_transparent.png</pixmap>
+                          <pixmap>UI_Functions/Resources/MOPy Cover_transparent.png</pixmap>
                          </property>
                          <property name="scaledContents">
                           <bool>true</bool>
@@ -652,7 +652,7 @@ QComboBox:hover{
                          </item>
                          <item>
                           <property name="text">
-                           <string>    COE and AOE of an Orbit</string>
+                           <string>    Orbital Elements of an Orbit </string>
                           </property>
                          </item>
                          <item>
@@ -712,7 +712,7 @@ QComboBox:hover{
                          </item>
                          <item>
                           <property name="text">
-                           <string>    Various Parameters Calculation at a given point in Orbit </string>
+                           <string>    Calculation of Various Parameters at a given point in Orbit </string>
                           </property>
                          </item>
                          <item>
@@ -2781,6 +2781,40 @@ QLabel:hover{
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
+                      <widget class="QPushButton" name="Home_btn_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>980</x>
+                         <y>50</y>
+                         <width>41</width>
+                         <height>36</height>
+                        </rect>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>36</height>
+                        </size>
+                       </property>
+                       <property name="toolTip">
+                        <string>Home</string>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton{
+	background-color:transparent;
+	image:url(UI_Functions/Resources/backk.svg);
+	
+}
+
+QPushButton:hover{
+	padding: 0.2em 0.2em 0.2em 0.2em;
+	
+}</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
                      </widget>
                     </item>
                     <item>
@@ -2875,7 +2909,7 @@ QFrame:hover{
 </string>
                            </property>
                            <property name="currentIndex">
-                            <number>1</number>
+                            <number>0</number>
                            </property>
                            <widget class="QWidget" name="vpco_input_type_screen">
                             <widget class="QComboBox" name="vpco_input_type">
@@ -2932,7 +2966,7 @@ QComboBox:hover{
                             <widget class="QLabel" name="label_9">
                              <property name="geometry">
                               <rect>
-                               <x>270</x>
+                               <x>170</x>
                                <y>30</y>
                                <width>671</width>
                                <height>41</height>
@@ -2953,6 +2987,9 @@ border:none;</string>
                              </property>
                              <property name="text">
                               <string>Select any of the inputs listed in the dropdown box, about your Orbit</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
                              </property>
                             </widget>
                             <widget class="QComboBox" name="vpco_major_body">
@@ -3036,72 +3073,73 @@ QComboBox:hover{
                               </property>
                              </item>
                             </widget>
+                            <widget class="QPushButton" name="input_type_go_btn_vpco">
+                             <property name="geometry">
+                              <rect>
+                               <x>450</x>
+                               <y>200</y>
+                               <width>101</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>12</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QPushButton{
+	background-color:rgb(2, 119, 189);
+	color:rgb(245, 255, 179);
+	border-radius: 20px
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(255, 170, 0);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>GO</string>
+                             </property>
+                            </widget>
+                            <widget class="QLabel" name="error_selct_body">
+                             <property name="geometry">
+                              <rect>
+                               <x>650</x>
+                               <y>90</y>
+                               <width>321</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Arial</family>
+                               <pointsize>12</pointsize>
+                               <weight>50</weight>
+                               <italic>false</italic>
+                               <bold>false</bold>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">color: rgb(255, 0, 0);
+border:none;</string>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
                            </widget>
                            <widget class="QWidget" name="a_e_screen">
-                            <widget class="QLabel" name="semimajor_axis_inpt_ae">
-                             <property name="geometry">
-                              <rect>
-                               <x>270</x>
-                               <y>30</y>
-                               <width>161</width>
-                               <height>41</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QLabel{
-	
-	border: 5px solid rgb(84, 84, 197);
-	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;
-	color:white;
-}
-
-
-QLabel:hover{
-	border: 4px solid rgb(2, 119, 189);
-
-
-}</string>
-                             </property>
-                             <property name="text">
-                              <string/>
-                             </property>
-                            </widget>
-                            <widget class="QLabel" name="eccentricity_inpt_ae">
-                             <property name="geometry">
-                              <rect>
-                               <x>760</x>
-                               <y>30</y>
-                               <width>161</width>
-                               <height>41</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QLabel{
-	
-	border: 5px solid rgb(84, 84, 197);
-	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;
-	color:white;
-}
-
-
-QLabel:hover{
-	border: 4px solid rgb(2, 119, 189);
-
-
-}</string>
-                             </property>
-                             <property name="text">
-                              <string/>
-                             </property>
-                            </widget>
                             <widget class="QLabel" name="label_13">
                              <property name="geometry">
                               <rect>
-                               <x>90</x>
+                               <x>70</x>
                                <y>40</y>
-                               <width>151</width>
+                               <width>171</width>
                                <height>21</height>
                               </rect>
                              </property>
@@ -3114,11 +3152,14 @@ QLabel:hover{
                              <property name="text">
                               <string>Semi-Major Axis:</string>
                              </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
                             </widget>
                             <widget class="QLabel" name="label_14">
                              <property name="geometry">
                               <rect>
-                               <x>590</x>
+                               <x>610</x>
                                <y>40</y>
                                <width>151</width>
                                <height>21</height>
@@ -3130,11 +3171,14 @@ QLabel:hover{
                              <property name="text">
                               <string>Eccentricity:</string>
                              </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
                             </widget>
                             <widget class="QLabel" name="label_19">
                              <property name="geometry">
                               <rect>
-                               <x>450</x>
+                               <x>380</x>
                                <y>40</y>
                                <width>71</width>
                                <height>21</height>
@@ -3145,6 +3189,9 @@ QLabel:hover{
                              </property>
                              <property name="text">
                               <string>Km</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
                              </property>
                             </widget>
                             <widget class="QLabel" name="orbit_type_ae">
@@ -3174,6 +3221,127 @@ QLabel:hover{
                              </property>
                              <property name="text">
                               <string/>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="orbit_type_btn_inpt_ae">
+                             <property name="geometry">
+                              <rect>
+                               <x>440</x>
+                               <y>90</y>
+                               <width>121</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>12</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QPushButton{
+	background-color:rgb(2, 119, 189);
+	color:rgb(245, 255, 179);
+	border-radius: 20px
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(255, 170, 0);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>Orbit Type</string>
+                             </property>
+                            </widget>
+                            <widget class="QPushButton" name="go_btn_inpt_ae">
+                             <property name="geometry">
+                              <rect>
+                               <x>450</x>
+                               <y>190</y>
+                               <width>101</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>12</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QPushButton{
+	background-color:rgb(2, 119, 189);
+	color:rgb(245, 255, 179);
+	border-radius: 20px
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(255, 170, 0);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>GO</string>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="semimajor_axis_input_ae">
+                             <property name="geometry">
+                              <rect>
+                               <x>240</x>
+                               <y>30</y>
+                               <width>131</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit{
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLineEdit:hover{
+	border: 4px solid rgb(2, 119, 189);
+
+
+}</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                            <widget class="QLineEdit" name="eccentricity_inpt_ae">
+                             <property name="geometry">
+                              <rect>
+                               <x>770</x>
+                               <y>30</y>
+                               <width>131</width>
+                               <height>41</height>
+                              </rect>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit{
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLineEdit:hover{
+	border: 4px solid rgb(2, 119, 189);
+
+
+}</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
                              </property>
                             </widget>
                            </widget>
@@ -4301,7 +4469,7 @@ QLabel:hover{
                  <item>
                   <widget class="QStackedWidget" name="VPCO_output_stack">
                    <property name="currentIndex">
-                    <number>4</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="a_e_result_screen">
                     <widget class="QLabel" name="label_22">
@@ -4357,6 +4525,9 @@ QLabel:hover{
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                     <widget class="QLabel" name="ra_ae">
                      <property name="geometry">
@@ -4385,6 +4556,9 @@ QLabel:hover{
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                     <widget class="QLabel" name="mu_ae">
@@ -4415,6 +4589,9 @@ QLabel:hover{
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                     <widget class="QLabel" name="h_ae">
                      <property name="geometry">
@@ -4443,6 +4620,9 @@ QLabel:hover{
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                     <widget class="QLabel" name="escvp_ae">
@@ -4473,6 +4653,9 @@ QLabel:hover{
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                     <widget class="QLabel" name="p_ae">
                      <property name="geometry">
@@ -4501,6 +4684,9 @@ QLabel:hover{
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                     <widget class="QLabel" name="va_ae">
@@ -4531,6 +4717,9 @@ QLabel:hover{
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                     <widget class="QLabel" name="gfa_ae">
                      <property name="geometry">
@@ -4559,6 +4748,9 @@ QLabel:hover{
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                     <widget class="QLabel" name="gfp_ae">
@@ -4589,6 +4781,9 @@ QLabel:hover{
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                     <widget class="QLabel" name="escva_ae">
                      <property name="geometry">
@@ -4618,6 +4813,9 @@ QLabel:hover{
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                     <widget class="QLabel" name="vlatus_ae">
                      <property name="geometry">
@@ -4646,6 +4844,9 @@ QLabel:hover{
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                     <widget class="QLabel" name="label_49">
@@ -4926,6 +5127,9 @@ QLabel:hover{
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                     <widget class="QLabel" name="label_113">
                      <property name="geometry">
@@ -5005,6 +5209,9 @@ QLabel:hover{
                      <property name="text">
                       <string/>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                     <widget class="QLabel" name="n_ae">
                      <property name="geometry">
@@ -5033,6 +5240,9 @@ QLabel:hover{
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                     <widget class="QLabel" name="label_117">

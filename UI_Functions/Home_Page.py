@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagelMmKDU.ui'
+## Form generated from reading UI file 'Home_PageewKCxd.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -226,7 +226,7 @@ class Ui_MainWindow(object):
         self.Search_logo.setMinimumSize(QSize(350, 250))
         self.Search_logo.setMaximumSize(QSize(390, 300))
         self.Search_logo.setStyleSheet(u"")
-        self.Search_logo.setPixmap(QPixmap(u"../../MOPy/UI_Functions/UI_Functions/Resources/MOPy Cover_transparent.png"))
+        self.Search_logo.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
         self.Search_logo.setScaledContents(True)
         self.Search_logo.setAlignment(Qt.AlignCenter)
 
@@ -1178,6 +1178,20 @@ class Ui_MainWindow(object):
         self.frame_38.setObjectName(u"frame_38")
         self.frame_38.setFrameShape(QFrame.StyledPanel)
         self.frame_38.setFrameShadow(QFrame.Raised)
+        self.Home_btn_2 = QPushButton(self.frame_38)
+        self.Home_btn_2.setObjectName(u"Home_btn_2")
+        self.Home_btn_2.setGeometry(QRect(980, 50, 41, 36))
+        self.Home_btn_2.setMinimumSize(QSize(0, 36))
+        self.Home_btn_2.setStyleSheet(u"QPushButton{\n"
+"	background-color:transparent;\n"
+"	image:url(UI_Functions/Resources/backk.svg);\n"
+"	\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	padding: 0.2em 0.2em 0.2em 0.2em;\n"
+"	\n"
+"}")
 
         self.verticalLayout_21.addWidget(self.frame_38)
 
@@ -1247,7 +1261,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_9 = QLabel(self.vpco_input_type_screen)
         self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(270, 30, 671, 41))
+        self.label_9.setGeometry(QRect(170, 30, 671, 41))
         font10 = QFont()
         font10.setFamily(u"Arial")
         font10.setPointSize(12)
@@ -1257,6 +1271,7 @@ class Ui_MainWindow(object):
         self.label_9.setFont(font10)
         self.label_9.setStyleSheet(u"color: white;\n"
 "border:none;")
+        self.label_9.setAlignment(Qt.AlignCenter)
         self.vpco_major_body = QComboBox(self.vpco_input_type_screen)
         self.vpco_major_body.addItem("")
         self.vpco_major_body.addItem("")
@@ -1281,55 +1296,45 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
+        self.input_type_go_btn_vpco = QPushButton(self.vpco_input_type_screen)
+        self.input_type_go_btn_vpco.setObjectName(u"input_type_go_btn_vpco")
+        self.input_type_go_btn_vpco.setGeometry(QRect(450, 200, 101, 41))
+        self.input_type_go_btn_vpco.setFont(font9)
+        self.input_type_go_btn_vpco.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgb(2, 119, 189);\n"
+"	color:rgb(245, 255, 179);\n"
+"	border-radius: 20px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	\n"
+"	background-color: rgb(255, 170, 0);\n"
+"}")
+        self.error_selct_body = QLabel(self.vpco_input_type_screen)
+        self.error_selct_body.setObjectName(u"error_selct_body")
+        self.error_selct_body.setGeometry(QRect(650, 90, 321, 41))
+        self.error_selct_body.setFont(font10)
+        self.error_selct_body.setStyleSheet(u"color: rgb(255, 0, 0);\n"
+"border:none;")
+        self.error_selct_body.setAlignment(Qt.AlignCenter)
         self.Orbit_type_stack.addWidget(self.vpco_input_type_screen)
         self.a_e_screen = QWidget()
         self.a_e_screen.setObjectName(u"a_e_screen")
-        self.semimajor_axis_inpt_ae = QLabel(self.a_e_screen)
-        self.semimajor_axis_inpt_ae.setObjectName(u"semimajor_axis_inpt_ae")
-        self.semimajor_axis_inpt_ae.setGeometry(QRect(270, 30, 161, 41))
-        self.semimajor_axis_inpt_ae.setStyleSheet(u"QLabel{\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;\n"
-"	color:white;\n"
-"}\n"
-"\n"
-"\n"
-"QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"\n"
-"\n"
-"}")
-        self.eccentricity_inpt_ae = QLabel(self.a_e_screen)
-        self.eccentricity_inpt_ae.setObjectName(u"eccentricity_inpt_ae")
-        self.eccentricity_inpt_ae.setGeometry(QRect(760, 30, 161, 41))
-        self.eccentricity_inpt_ae.setStyleSheet(u"QLabel{\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;\n"
-"	color:white;\n"
-"}\n"
-"\n"
-"\n"
-"QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"\n"
-"\n"
-"}")
         self.label_13 = QLabel(self.a_e_screen)
         self.label_13.setObjectName(u"label_13")
-        self.label_13.setGeometry(QRect(90, 40, 151, 21))
+        self.label_13.setGeometry(QRect(70, 40, 171, 21))
         self.label_13.setStyleSheet(u"border:none")
+        self.label_13.setAlignment(Qt.AlignCenter)
         self.label_14 = QLabel(self.a_e_screen)
         self.label_14.setObjectName(u"label_14")
-        self.label_14.setGeometry(QRect(590, 40, 151, 21))
+        self.label_14.setGeometry(QRect(610, 40, 151, 21))
         self.label_14.setStyleSheet(u"border:none")
+        self.label_14.setAlignment(Qt.AlignCenter)
         self.label_19 = QLabel(self.a_e_screen)
         self.label_19.setObjectName(u"label_19")
-        self.label_19.setGeometry(QRect(450, 40, 71, 21))
+        self.label_19.setGeometry(QRect(380, 40, 71, 21))
         self.label_19.setStyleSheet(u"border:none")
+        self.label_19.setAlignment(Qt.AlignCenter)
         self.orbit_type_ae = QLabel(self.a_e_screen)
         self.orbit_type_ae.setObjectName(u"orbit_type_ae")
         self.orbit_type_ae.setGeometry(QRect(370, 140, 261, 41))
@@ -1347,6 +1352,71 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.orbit_type_ae.setAlignment(Qt.AlignCenter)
+        self.orbit_type_btn_inpt_ae = QPushButton(self.a_e_screen)
+        self.orbit_type_btn_inpt_ae.setObjectName(u"orbit_type_btn_inpt_ae")
+        self.orbit_type_btn_inpt_ae.setGeometry(QRect(440, 90, 121, 41))
+        self.orbit_type_btn_inpt_ae.setFont(font9)
+        self.orbit_type_btn_inpt_ae.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgb(2, 119, 189);\n"
+"	color:rgb(245, 255, 179);\n"
+"	border-radius: 20px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	\n"
+"	background-color: rgb(255, 170, 0);\n"
+"}")
+        self.go_btn_inpt_ae = QPushButton(self.a_e_screen)
+        self.go_btn_inpt_ae.setObjectName(u"go_btn_inpt_ae")
+        self.go_btn_inpt_ae.setGeometry(QRect(450, 190, 101, 41))
+        self.go_btn_inpt_ae.setFont(font9)
+        self.go_btn_inpt_ae.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgb(2, 119, 189);\n"
+"	color:rgb(245, 255, 179);\n"
+"	border-radius: 20px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	\n"
+"	background-color: rgb(255, 170, 0);\n"
+"}")
+        self.semimajor_axis_input_ae = QLineEdit(self.a_e_screen)
+        self.semimajor_axis_input_ae.setObjectName(u"semimajor_axis_input_ae")
+        self.semimajor_axis_input_ae.setGeometry(QRect(240, 30, 131, 41))
+        self.semimajor_axis_input_ae.setStyleSheet(u"QLineEdit{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:black;\n"
+"}\n"
+"\n"
+"\n"
+"QLineEdit:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.semimajor_axis_input_ae.setAlignment(Qt.AlignCenter)
+        self.eccentricity_inpt_ae = QLineEdit(self.a_e_screen)
+        self.eccentricity_inpt_ae.setObjectName(u"eccentricity_inpt_ae")
+        self.eccentricity_inpt_ae.setGeometry(QRect(770, 30, 131, 41))
+        self.eccentricity_inpt_ae.setStyleSheet(u"QLineEdit{\n"
+"	\n"
+"	border: 5px solid rgb(84, 84, 197);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 20px;\n"
+"	color:black;\n"
+"}\n"
+"\n"
+"\n"
+"QLineEdit:hover{\n"
+"	border: 4px solid rgb(2, 119, 189);\n"
+"\n"
+"\n"
+"}")
+        self.eccentricity_inpt_ae.setAlignment(Qt.AlignCenter)
         self.Orbit_type_stack.addWidget(self.a_e_screen)
         self.ra_rp_screen = QWidget()
         self.ra_rp_screen.setObjectName(u"ra_rp_screen")
@@ -1871,6 +1941,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.rp_ae.setAlignment(Qt.AlignCenter)
         self.ra_ae = QLabel(self.a_e_result_screen)
         self.ra_ae.setObjectName(u"ra_ae")
         self.ra_ae.setGeometry(QRect(330, 110, 121, 41))
@@ -1888,6 +1959,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.ra_ae.setAlignment(Qt.AlignCenter)
         self.mu_ae = QLabel(self.a_e_result_screen)
         self.mu_ae.setObjectName(u"mu_ae")
         self.mu_ae.setGeometry(QRect(330, 180, 121, 41))
@@ -1905,6 +1977,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.mu_ae.setAlignment(Qt.AlignCenter)
         self.h_ae = QLabel(self.a_e_result_screen)
         self.h_ae.setObjectName(u"h_ae")
         self.h_ae.setGeometry(QRect(330, 248, 121, 41))
@@ -1922,6 +1995,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.h_ae.setAlignment(Qt.AlignCenter)
         self.escvp_ae = QLabel(self.a_e_result_screen)
         self.escvp_ae.setObjectName(u"escvp_ae")
         self.escvp_ae.setGeometry(QRect(860, 390, 121, 41))
@@ -1939,6 +2013,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.escvp_ae.setAlignment(Qt.AlignCenter)
         self.p_ae = QLabel(self.a_e_result_screen)
         self.p_ae.setObjectName(u"p_ae")
         self.p_ae.setGeometry(QRect(860, 250, 121, 41))
@@ -1956,6 +2031,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.p_ae.setAlignment(Qt.AlignCenter)
         self.va_ae = QLabel(self.a_e_result_screen)
         self.va_ae.setObjectName(u"va_ae")
         self.va_ae.setGeometry(QRect(860, 44, 121, 41))
@@ -1973,6 +2049,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.va_ae.setAlignment(Qt.AlignCenter)
         self.gfa_ae = QLabel(self.a_e_result_screen)
         self.gfa_ae.setObjectName(u"gfa_ae")
         self.gfa_ae.setGeometry(QRect(860, 182, 121, 41))
@@ -1990,6 +2067,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.gfa_ae.setAlignment(Qt.AlignCenter)
         self.gfp_ae = QLabel(self.a_e_result_screen)
         self.gfp_ae.setObjectName(u"gfp_ae")
         self.gfp_ae.setGeometry(QRect(860, 112, 121, 41))
@@ -2007,6 +2085,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.gfp_ae.setAlignment(Qt.AlignCenter)
         self.escva_ae = QLabel(self.a_e_result_screen)
         self.escva_ae.setObjectName(u"escva_ae")
         self.escva_ae.setGeometry(QRect(860, 460, 121, 41))
@@ -2024,6 +2103,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.escva_ae.setAlignment(Qt.AlignCenter)
         self.vlatus_ae = QLabel(self.a_e_result_screen)
         self.vlatus_ae.setObjectName(u"vlatus_ae")
         self.vlatus_ae.setGeometry(QRect(860, 320, 121, 41))
@@ -2041,6 +2121,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.vlatus_ae.setAlignment(Qt.AlignCenter)
         self.label_49 = QLabel(self.a_e_result_screen)
         self.label_49.setObjectName(u"label_49")
         self.label_49.setGeometry(QRect(-10, 120, 331, 21))
@@ -2128,6 +2209,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.T_ae.setAlignment(Qt.AlignCenter)
         self.label_113 = QLabel(self.a_e_result_screen)
         self.label_113.setObjectName(u"label_113")
         self.label_113.setGeometry(QRect(-10, 400, 321, 21))
@@ -2159,6 +2241,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.vp_ae.setAlignment(Qt.AlignCenter)
         self.n_ae = QLabel(self.a_e_result_screen)
         self.n_ae.setObjectName(u"n_ae")
         self.n_ae.setGeometry(QRect(330, 390, 121, 41))
@@ -2176,6 +2259,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
+        self.n_ae.setAlignment(Qt.AlignCenter)
         self.label_117 = QLabel(self.a_e_result_screen)
         self.label_117.setObjectName(u"label_117")
         self.label_117.setGeometry(QRect(-10, 330, 321, 21))
@@ -4839,8 +4923,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(0)
-        self.Orbit_type_stack.setCurrentIndex(1)
-        self.VPCO_output_stack.setCurrentIndex(4)
+        self.Orbit_type_stack.setCurrentIndex(0)
+        self.VPCO_output_stack.setCurrentIndex(0)
         self.otherbody_stack.setCurrentIndex(1)
 
 
@@ -4870,7 +4954,7 @@ class Ui_MainWindow(object):
         self.Search_combo_frame.setToolTip(QCoreApplication.translate("MainWindow", u"Click on drop down Button", None))
 #endif // QT_CONFIG(tooltip)
         self.combosearchbox.setItemText(0, "")
-        self.combosearchbox.setItemText(1, QCoreApplication.translate("MainWindow", u"    COE and AOE of an Orbit", None))
+        self.combosearchbox.setItemText(1, QCoreApplication.translate("MainWindow", u"    Orbital Elements of an Orbit ", None))
         self.combosearchbox.setItemText(2, QCoreApplication.translate("MainWindow", u"    Sensitive Analysis ", None))
         self.combosearchbox.setItemText(3, QCoreApplication.translate("MainWindow", u"    Sphere of Influence", None))
         self.combosearchbox.setItemText(4, QCoreApplication.translate("MainWindow", u"    Information about some of the Major bodies", None))
@@ -4882,7 +4966,7 @@ class Ui_MainWindow(object):
         self.combosearchbox.setItemText(10, QCoreApplication.translate("MainWindow", u"    Position of one spacecraft relative to other", None))
         self.combosearchbox.setItemText(11, QCoreApplication.translate("MainWindow", u"    Caculating whether a satellite is in Planet's Shadow", None))
         self.combosearchbox.setItemText(12, QCoreApplication.translate("MainWindow", u"    Halo Orbit Visualization", None))
-        self.combosearchbox.setItemText(13, QCoreApplication.translate("MainWindow", u"    Various Parameters Calculation at a given point in Orbit ", None))
+        self.combosearchbox.setItemText(13, QCoreApplication.translate("MainWindow", u"    Calculation of Various Parameters at a given point in Orbit ", None))
         self.combosearchbox.setItemText(14, QCoreApplication.translate("MainWindow", u"    Lagrangian Coefficients", None))
         self.combosearchbox.setItemText(15, QCoreApplication.translate("MainWindow", u"    3-Body Problem ", None))
 
@@ -4934,6 +5018,10 @@ class Ui_MainWindow(object):
         self.label_18.setText("")
         self.soi_rad.setText("")
         self.label_title_4.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
+#if QT_CONFIG(tooltip)
+        self.Home_btn_2.setToolTip(QCoreApplication.translate("MainWindow", u"Home", None))
+#endif // QT_CONFIG(tooltip)
+        self.Home_btn_2.setText("")
         self.vpco_input_type.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Type of Inputs", None))
         self.vpco_input_type.setItemText(1, QCoreApplication.translate("MainWindow", u"  a , e", None))
         self.vpco_input_type.setItemText(2, QCoreApplication.translate("MainWindow", u"  ra , rp ", None))
@@ -4955,8 +5043,8 @@ class Ui_MainWindow(object):
         self.vpco_major_body.setItemText(10, QCoreApplication.translate("MainWindow", u"  Pluto", None))
         self.vpco_major_body.setItemText(11, QCoreApplication.translate("MainWindow", u"  Sun", None))
 
-        self.semimajor_axis_inpt_ae.setText("")
-        self.eccentricity_inpt_ae.setText("")
+        self.input_type_go_btn_vpco.setText(QCoreApplication.translate("MainWindow", u"GO", None))
+        self.error_selct_body.setText("")
 #if QT_CONFIG(tooltip)
         self.label_13.setToolTip("")
 #endif // QT_CONFIG(tooltip)
@@ -4964,6 +5052,8 @@ class Ui_MainWindow(object):
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Eccentricity:", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"Km", None))
         self.orbit_type_ae.setText("")
+        self.orbit_type_btn_inpt_ae.setText(QCoreApplication.translate("MainWindow", u"Orbit Type", None))
+        self.go_btn_inpt_ae.setText(QCoreApplication.translate("MainWindow", u"GO", None))
         self.ra_inpt_rarp.setText("")
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Apoapsis Radius (ra):", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Periapsis Radius (rp):", None))

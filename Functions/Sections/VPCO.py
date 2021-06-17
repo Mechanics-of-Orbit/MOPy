@@ -25,10 +25,10 @@ class CalculateCircularElliptical:
         return
 
     @classmethod
-    def semiecc(cls, sma, mag_e, major_body):
+    def semiecc(cls, sma, mag_e, maj_body_mass):
         r_per = sma * (1 - mag_e)
         r_apo = sma * (1 + mag_e)
-        [mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.orb_const(r_per, sma, mag_e, major_body)
+        [mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.orb_const(r_per, sma, mag_e, maj_body_mass)
         return [r_per, r_apo, mean_motion, T_period, mag_h, sme, slr]
     
     @classmethod
@@ -39,9 +39,8 @@ class CalculateCircularElliptical:
         return [mag_e, sma, mean_motion, T_period, mag_h, sme, slr]
     
     @classmethod
-    def orb_const(cls, r_per, sma, mag_e, major_body):
-        major_body_mass = 5.972e24 #self.major_body * 1
-        mu = cls.G * major_body_mass
+    def orb_const(cls, r_per, sma, mag_e, maj_body_mass):
+        mu = cls.G * maj_body_mass
         slr = sma*(1-mag_e**2)
         mag_h = (r_per*(1+e)*mu)**0.5
         T_period = sqrt(((4*pi**2)/mu)*sma**3)
@@ -62,9 +61,9 @@ class CalculateCircularElliptical:
     #     return None
     
     @classmethod
-    def velocity_at_any_point(cls, sma, r, major_body):
-        major_body_mass = major_body * 1
-        mu = cls.G * major_body_mass
+    def velocity_at_any_point(cls, sma, r, maj_body_mass):
+    
+        mu = cls.G * maj_body_mass
         v_point = sqrt(((2 * mu)/r) - (mu/sma))
         return v_point
 
@@ -75,18 +74,18 @@ class CalculateParabola():
     G = 6.67e-20 #units are in km3 kg-1 s-2
 
     @classmethod
-    def const_values(cls, r_per, major_body):
-        major_body_mass = major_body * 1
-        mu = major_body_mass * cls.G
+    def const_values(cls, r_per, maj_body_mass):
+
+        mu = maj_body_mass * cls.G
         slr = 2 * r_per
         v_per = sqrt((2*mu)/r_per)
         mag_h = sqrt(mu*r_per * 2)
         return [slr, v_per, mag_h]
 
     @classmethod
-    def velocity_at_any_point(cls, r, major_body):
-        major_body_mass = major_body * 1
-        mu = major_body_mass * cls.G
+    def velocity_at_any_point(cls, r, maj_body_mass):
+        
+        mu = maj_body_mass * cls.G
         v = sqrt((2*mu)/r)
         return v
     
