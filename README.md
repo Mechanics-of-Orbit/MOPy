@@ -1,7 +1,8 @@
-# Final-Year-Project
+# Mechanics of Orbit using Python - MOPy
+## What is MOPy?
+1. Mechanics of Orbit using Python(MOPy) is learning tool designed and developed with the purpose of introducing the core concepts of Orbital Mechanics. 
+2. MOPy uses an interactive UI with tool tips and a 3D Environment with an interactive virtual universe. 
+3. The 3D Environment helps the learner to visualize the concepts in a much accessible and easier way.
 
-## Team Details
-1. Ramkiran. L - 17030141AE007
-2. Manjunath - 17030141AE009
-3. Monisha Patel A. - 17030141AE013
-4. Thoshitha R. Kumar - 17030141AE027
+## Who can use this tool?
+![User Base](https://imgur.com/a/RjTGPzW)
