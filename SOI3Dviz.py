@@ -21,6 +21,14 @@ class SOI(ShowBase):
         self.stars_tex = loader.loadTexture("Functions/Assets/Models/hi_res_tex/stars.jpg")
         self.stars.setTexture(self.stars_tex,1)
 
+        self.soi_m = self.loader.loadModel("Functions/Assets/Models/planet_sphere")
+        self.soi_m.setScale(2*rSOIMiB)
+        self.soi_m.setTransparency(1)
+        self.soi_tex = loader.loadTexture(r'Functions/Assets/Models/hi_res_tex/white.jpg')
+        self.soi_m.setTexture(self.soi_tex,1)
+        self.soi_m.setColor(1,1,1,0.1)
+        self.soi_m.reparentTo(render)
+        
         self.Minor_Body_name = Minor_Body
         self.dire = "Functions\Assets\Models\hi_res_tex" + r'\a_'
         self.ComDir = self.dire + self.Minor_Body_name + ".jpg"
@@ -30,13 +38,7 @@ class SOI(ShowBase):
         self.MinorBody.setTexture(self.MinorBody_tex, 1)
         self.MinorBody.reparentTo(render)
 
-        self.soi_m = self.loader.loadModel("Functions/Assets/Models/planet_sphere")
-        self.soi_m.setScale(2*rSOIMiB)
-        self.soi_m.setTransparency(1)
-        self.soi_tex = loader.loadTexture(r'Functions/Assets/Models/hi_res_tex/white.jpg')
-        self.soi_m.setTexture(self.soi_tex,1)
-        self.soi_m.setColor(1,1,1,.1)
-        self.soi_m.reparentTo(self.MinorBody)
+        
 
         self.cam.setPos(0,-2000,0)
 
