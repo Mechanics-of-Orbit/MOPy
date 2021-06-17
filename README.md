@@ -5,4 +5,4 @@
 3. The 3D Environment helps the learner to visualize the concepts in a much accessible and easier way.
 
 ## Who can use this tool?
-![User Base](https://imgur.com/a/RjTGPzW)
+![User Base](https://github.com/Mechanics-of-Orbit/MOPy/blob/main/UI_Functions/Resources/user_base.png?raw=true)
