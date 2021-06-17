@@ -44,6 +44,6 @@ class SOI(ShowBase):
 
 if __name__ == '__main__':
     #[rSOI, rSOIMiB] = SoI("Sun", "Earth")
-    soi = SOI("earth",800000, 140)
+    soi = SOI("mars",800000, 140)
     soi.run()
  

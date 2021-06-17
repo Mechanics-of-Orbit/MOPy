@@ -59,30 +59,30 @@ class Calculate:
         e_vec = (multi((norm(self.vel_vec)*norm(self.vel_vec)-(mu/norm(self.pos_vec))),self.pos_vec)- multi(dot(self.pos_vec,self.vel_vec),self.vel_vec))/(mu)
         inc = (acos((dot(h_vec, self.K))/norm(h_vec))) * 180/pi
         sma = 1/((2/norm(self.pos_vec))-((norm(self.vel_vec)*norm(self.vel_vec))/mu))
-        self.OE1 = "Semi-Major Axis"
-        self.OE2 = "Eccentricity"
-        self.OE3 = "Inclination"
-        return [sma, inc, e_vec]
+        OE1 = "Semi-Major Axis"
+        OE2 = "Eccentricity"
+        OE3 = "Inclination"
+        return [sma, inc, e_vec, OE1, OE2, OE3]
     
     def ACOE(self, e_vec, inc):
         [h_vec, n_vec] = Calculate.other_var(self.pos_vec, self.vel_vec)
         if inc != 0 or 180 and norm(e_vec) > 0: #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Nothing is Zero/180
             ohm = (acos((dot(self.I,n_vec))/norm(n_vec)))
-            [self.OE4, ohm] = ["RAAN", Calculate.correct_ohm(ohm, n_vec)]
-            [self.OE6, nu] = ["True Anomaly", (acos((dot(e_vec,self.pos_vec))/(norm(e_vec)*norm(self.pos_vec))))]
-            [self.OE5, omega] = ["Argument of Perigee", (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))]
-            return [ohm, omega, nu]
+            [OE4, ohm] = ["RAAN", Calculate.correct_ohm(ohm, n_vec)]
+            [OE6, nu] = ["True Anomaly", (acos((dot(e_vec,self.pos_vec))/(norm(e_vec)*norm(self.pos_vec))))]
+            [OE5, omega] = ["Argument of Perigee", (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))]
+            return [ohm, omega, nu, OE4, OE5, OE6]
         elif inc == 0 or 180: #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Inclination is Zero
             if norm(e_vec) > 0: #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Elliptical Orbit
                 nu = (acos((dot(e_vec,self.pos_vec))/(norm(e_vec)*norm(self.pos_vec))))
                 Long_of_peri_pi = acos(dot(self.I,e_vec)/(norm(self.I)*norm(e_vec)))
-                [self.OE5, self.OE6] = ["Longitude of Perigee","True Anomaly"]
-                self.OE4 = "Not Defined"
+                [OE5, OE6] = ["Longitude of Perigee","True Anomaly"]
+                OE4 = "Not Defined"
                 return [Long_of_peri_pi, nu]
             elif norm(e_vec) == 0: #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Circular Orbit
                 Tr_long_l = acos(dot(self.I,self.pos_vec)/(norm(self.pos_vec)*norm(self.I)))
-                self.OE5 = "True Longitude"
-                self.OE4 = self.OE6 = "Not Defined"
+                OE5 = "True Longitude"
+                OE4 = OE6 = "Not Defined"
                 return [Tr_long_l]
         elif norm(e_vec) == 0: #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Circular orbit with inclination non-zero/pi
             Arg_of_lattitude_u = acos(dot(n_vec,self.pos_vec)/(norm(n_vec)*norm(self.pos_vec)))

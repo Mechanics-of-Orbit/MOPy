@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.12
-[0] Config.pm:307> INFO - Logfile is 'references.blg'
-[24] biber-MSWIN64:315> INFO - === 
-[330] Utils.pm:209> ERROR - Cannot find control file 'references.bcf'! - Did latex run successfully on your .tex file before you ran biber?
-[330] Biber.pm:114> INFO - ERRORS: 1
