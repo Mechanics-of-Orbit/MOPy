@@ -10,11 +10,15 @@ import sqlite3
 from math import *
 from Functions.Sections.soi import SoI
 
+from UI_Functions.ui_splash_screen import Ui_SplashScreen
+
 from SOI3Dviz import SOI
 
 from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
 
 from SOI3Dviz import SOI
+
+from Functions.Sections.CoOE import Calculate
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -23,6 +27,9 @@ from UI_Functions.Home_Page import Ui_MainWindow
 from UI_Functions.Home_Page_functions import *
 
 path.append('..\Functions\Sections')
+
+# GLOBALS
+counter = 0
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -77,6 +84,8 @@ class MainWindow(QMainWindow):
     # vpco go button(selecting type of input)
     def vpco_go_btn(self):
         selct_body = self.ui.vpco_major_body.currentIndex()
+
+        
            
         index1 = self.ui.vpco_input_type.currentIndex()
         if index1 == 1:
@@ -111,14 +120,19 @@ class MainWindow(QMainWindow):
         index1 = self.ui.vpco_input_type.currentIndex()
         if index1 == 1:
             self.ui.VPCO_output_stack.setCurrentIndex(0)
+            
         elif index1 == 2:
             self.ui.VPCO_output_stack.setCurrentIndex(1)
+            
         elif index1 == 3:
             self.ui.VPCO_output_stack.setCurrentIndex(2)
+            
         elif index1 == 4:
             self.ui.VPCO_output_stack.setCurrentIndex(3)
+            
         elif index1 == 5:
             self.ui.VPCO_output_stack.setCurrentIndex(4)
+            
         e = self.ui.eccentricity_inpt_ae.text()
         e = float(e)
         a = self.ui.semimajor_axis_input_ae.text()
@@ -154,26 +168,65 @@ class MainWindow(QMainWindow):
             self.ui.escvp_ae.setText(str(round(esc_vp,4)))
             self.ui.escva_ae.setText(str(round(esc_va,4)))
         
-        
+        #elif e == 1:
             
+
+        
+        
+    # vpco feature back btn
+    def vpco_feature_back_btn(self):
+        self.ui.stackedWidget.setCurrentIndex(3)
+        self.ui.Orbit_type_stack.setCurrentIndex(0)          
 
     # vpco input ae screen
     def vpco_a_e(self):
         e = self.ui.eccentricity_inpt_ae.text()
         e = float(e)
-        if e == 0:
+        at = self.ui.semimajor_axis_input_ae.text()
+        try:
+            a = float(at)
+        except:
+            self.ui.orbit_type_ae.setText("")
+            self.ui.Error_parabola.setText("Please Enter Valid Semimajor Axis Value")
+        if e == 1 and a < inf:
+            self.ui.Error_parabola.setText("It is not Possible\nbecause if the eccentricity is 1 then the\nSemimajor Axis should be infinity or vice versa")
+            self.ui.orbit_type_ae.setText("")
+        elif e == 0 and 0 < a < inf:
             self.ui.orbit_type_ae.setText("Circular")
-        elif e == 1:
-             self.ui.orbit_type_ae.setText("Parabola")
-        elif 0 < e < 1:
-             self.ui.orbit_type_ae.setText("Ellipse")
-        elif e > 1:
-             self.ui.orbit_type_ae.setText("Hyperbola")
-    
+            self.ui.Error_parabola.setText("")
+        elif e == 1 and (at == "infinity" or "inf" or "Infinity" or "Inf"):
+            self.ui.orbit_type_ae.setText("Parabola")
+            self.ui.Error_parabola.setText("")
+        elif 0 < e < 1 and 0 < a < inf:
+            self.ui.orbit_type_ae.setText("Ellipse")
+            self.ui.Error_parabola.setText("")
+        elif e > 1 and 0 < a < inf:
+            self.ui.orbit_type_ae.setText("Hyperbola")
+            self.ui.Error_parabola.setText("")
+        elif (e == 0 or e < 1 or e > 1) and (at == "infinite" or "inf" or "Infinite" or "Inf"):
+            self.ui.orbit_type_ae.setText("")
+            self.ui.Error_parabola.setText("Please enter a finite Semimajor axis value")
+        
+            
+        
     # vpco home_btn_2
     def homebtn2(self):
         self.ui.Orbit_type_stack.setCurrentIndex(0)
     
+    # COE n AOE Calculation
+    def coeNaoe(self):
+        Ri = self.ui.Ri_coe_n_aoe.text()
+        Rj = self.ui.Rj_coe_n_aoe.text()
+        Rk = self.ui.Rk_coe_n_aoe.text()
+        Vi = self.ui.Vi_coe_n_aoe.text()
+        Vj = self.ui.Vj_coe_n_aoe.text()
+        Vk = self.ui.Vk_coe_n_aoe.text()
+        pos_vec = [float(Ri), float(Rj), float(Rk)]
+        vel_vec = [float(Vi), float(Vj) ,float(Vk)]
+        print(pos_vec)
+        print(vel_vec)
+
+
     # SOI
     def SEARCH(self):
         db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
@@ -251,8 +304,81 @@ class MainWindow(QMainWindow):
         #JDN to JD
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
+
+# SPLASH SCREEN
+class SplashScreen(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.ui = Ui_SplashScreen()
+        self.ui.setupUi(self)
+
+        ## UI ==> INTERFACE CODES
+        ########################################################################
+
+        ## REMOVE TITLE BAR
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+
+        ## DROP SHADOW EFFECT
+        self.shadow = QGraphicsDropShadowEffect(self)
+        self.shadow.setBlurRadius(20)
+        self.shadow.setXOffset(0)
+        self.shadow.setYOffset(0)
+        self.shadow.setColor(QColor(0, 0, 0, 60))
+        self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
+
+        ## QTIMER ==> START
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.progress)
+        # TIMER IN MILLISECONDS
+        self.timer.start(35)
+
+        # CHANGE DESCRIPTION
+
+        # Initial Text
+        self.ui.label_description.setText("WELCOME TO <strong>MOPy</strong>")
+
+        # Change Texts
+        QtCore.QTimer.singleShot(3000, lambda: self.ui.label_description.setText("<strong>LOADING</strong> Database"))
+        QtCore.QTimer.singleShot(3800, lambda: self.ui.label_description.setText("<strong>LOADING</strong> Resources"))
+        QtCore.QTimer.singleShot(5000, lambda: self.ui.label_description.setText("<strong>LOADING</strong> User Interface "))
+        QtCore.QTimer.singleShot(5500, lambda: self.ui.label_description.setText("<strong>LOADING</strong> Completed "))
+        QtCore.QTimer.singleShot(6000, lambda: self.ui.label_description.setText(" "))
+
+
+
+
+        ## SHOW ==> MAIN WINDOW
+        ########################################################################
+        self.show()
+        ## ==> END ##
+
+    ## ==> APP FUNCTIONS
+    ########################################################################
+    def progress(self):
+
+        global counter
+
+        # SET VALUE TO PROGRESS BAR
+        self.ui.progressBar.setValue(counter)
+
+        # CLOSE SPLASH SCREE AND OPEN APP
+        if counter > 100:
+            # STOP TIMER
+            self.timer.stop()
+
+            # SHOW MAIN WINDOW
+            self.main = MainWindow()
+            self.main.show()
+
+            # CLOSE SPLASH SCREEN
+            self.close()
+
+        # INCREASE COUNTER
+        counter += 1  
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = SplashScreen()
     sys.exit(app.exec_())

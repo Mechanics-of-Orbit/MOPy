@@ -91,6 +91,10 @@ class UIFunctions(MainWindow):
         self.ui.orbit_type_btn_inpt_ae.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_a_e(self))
 
         self.ui.go_btn_inpt_ae.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_ae_cal_btn(self))
+
+        self.ui.vpco_feature_back_btn.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_feature_back_btn(self))
+
+        self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
     ## RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTAURED
     def returnStatus():
         return GLOBAL_STATE

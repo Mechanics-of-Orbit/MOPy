@@ -1,21 +1,24 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagekMJnud.ui'
+## Form generated from reading UI file 'Home_PageESxfUg.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 5.14.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+    QRect, QSize, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
+    QRadialGradient)
 from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
+        if MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.ApplicationModal)
         MainWindow.resize(1110, 663)
@@ -1350,7 +1353,7 @@ class Ui_MainWindow(object):
 "QLabel:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "\n"
-"\n"
+"  	\n"
 "}")
         self.orbit_type_ae.setAlignment(Qt.AlignCenter)
         self.orbit_type_btn_inpt_ae = QPushButton(self.a_e_screen)
@@ -1399,22 +1402,66 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.semimajor_axis_input_ae.setAlignment(Qt.AlignCenter)
-        self.eccentricity_inpt_ae = QLineEdit(self.a_e_screen)
+        self.Error_parabola = QLabel(self.a_e_screen)
+        self.Error_parabola.setObjectName(u"Error_parabola")
+        self.Error_parabola.setGeometry(QRect(580, 80, 411, 61))
+        font11 = QFont()
+        font11.setFamily(u"MS Shell Dlg 2")
+        font11.setPointSize(12)
+        font11.setBold(False)
+        font11.setItalic(False)
+        font11.setWeight(50)
+        self.Error_parabola.setFont(font11)
+        self.Error_parabola.setStyleSheet(u"border:none;\n"
+"font: 12pt \"MS Shell Dlg 2\";\n"
+"color: rgb(255, 0, 0);")
+        self.Error_parabola.setAlignment(Qt.AlignCenter)
+        self.eccentricity_inpt_ae = QDoubleSpinBox(self.a_e_screen)
         self.eccentricity_inpt_ae.setObjectName(u"eccentricity_inpt_ae")
-        self.eccentricity_inpt_ae.setGeometry(QRect(770, 30, 131, 41))
-        self.eccentricity_inpt_ae.setStyleSheet(u"QLineEdit{\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;\n"
-"	color:black;\n"
+        self.eccentricity_inpt_ae.setGeometry(QRect(751, 30, 131, 41))
+        self.eccentricity_inpt_ae.setFont(font9)
+        self.eccentricity_inpt_ae.setStyleSheet(u"    /*spinbox lift style*/\n"
+"   QDoubleSpinBox::up-button {subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;  \n"
+"		\n"
+"		\n"
+"    }\n"
+"\n"
+" \n"
+"    QDoubleSpinBox::down-button {subcontrol-origin:border;\n"
+"        subcontrol-position:left;\n"
+"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"     /*Button press style*/\n"
+"   QDoubleSpinBox::up-button:pressed{subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(:/ico/pushed_right.png);\n"
+"        width: 12px;\n"
+"        height: 20px;       \n"
+"    }\n"
+"      \n"
+"	QDoubleSpinBox::down-button:pressed{\n"
+"        subcontrol-position:left;\n"
+"        image: url(:/ico/pushed_left.png);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"	QDoubleSpinBox{\n"
+"		border: 5px solid rgb(84, 84, 19"
+                        "7);\n"
+"		border-radius: 20px;	\n"
 "}\n"
+"	QDoubleSpinBox:hover{\n"
 "\n"
-"\n"
-"QLineEdit:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"\n"
-"\n"
+"		border: 4px solid rgb(2, 119, 189);\n"
+"  		\n"
 "}")
         self.eccentricity_inpt_ae.setAlignment(Qt.AlignCenter)
         self.Orbit_type_stack.addWidget(self.a_e_screen)
@@ -1909,18 +1956,36 @@ class Ui_MainWindow(object):
         self.frame_40.setStyleSheet(u"border:none;")
         self.frame_40.setFrameShape(QFrame.StyledPanel)
         self.frame_40.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_24 = QVBoxLayout(self.frame_40)
-        self.verticalLayout_24.setSpacing(0)
-        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
-        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_22 = QHBoxLayout(self.frame_40)
+        self.horizontalLayout_22.setSpacing(0)
+        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
+        self.horizontalLayout_22.setContentsMargins(0, 0, 0, 0)
         self.label_title_5 = QLabel(self.frame_40)
         self.label_title_5.setObjectName(u"label_title_5")
-        self.label_title_5.setMinimumSize(QSize(400, 0))
+        self.label_title_5.setMinimumSize(QSize(900, 0))
+        self.label_title_5.setMaximumSize(QSize(900, 16777215))
         self.label_title_5.setFont(font1)
         self.label_title_5.setStyleSheet(u"color:rgb(60, 235, 250);\n"
 "border:none;")
 
-        self.verticalLayout_24.addWidget(self.label_title_5)
+        self.horizontalLayout_22.addWidget(self.label_title_5)
+
+        self.vpco_feature_back_btn = QPushButton(self.frame_40)
+        self.vpco_feature_back_btn.setObjectName(u"vpco_feature_back_btn")
+        self.vpco_feature_back_btn.setMinimumSize(QSize(25, 25))
+        self.vpco_feature_back_btn.setMaximumSize(QSize(30, 25))
+        self.vpco_feature_back_btn.setStyleSheet(u"QPushButton{\n"
+"	background-color:transparent;\n"
+"	image:url(UI_Functions/Resources/backk.svg);\n"
+"	\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	padding: 0.2em 0.2em 0.2em 0.2em;\n"
+"	\n"
+"}")
+
+        self.horizontalLayout_22.addWidget(self.vpco_feature_back_btn)
 
 
         self.verticalLayout_23.addWidget(self.frame_40)
@@ -4315,43 +4380,43 @@ class Ui_MainWindow(object):
         self.PosNVelVector_inpt_frame.setFrameShadow(QFrame.Raised)
         self.label_25 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_25.setObjectName(u"label_25")
-        self.label_25.setGeometry(QRect(120, 50, 181, 41))
+        self.label_25.setGeometry(QRect(130, 50, 181, 41))
         self.label_25.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
         self.label_25.setAlignment(Qt.AlignCenter)
         self.label_26 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_26.setObjectName(u"label_26")
-        self.label_26.setGeometry(QRect(410, 50, 41, 41))
+        self.label_26.setGeometry(QRect(420, 50, 41, 41))
         self.label_26.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
         self.label_26.setAlignment(Qt.AlignCenter)
         self.label_27 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_27.setObjectName(u"label_27")
-        self.label_27.setGeometry(QRect(570, 50, 41, 41))
+        self.label_27.setGeometry(QRect(580, 50, 41, 41))
         self.label_27.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
         self.label_27.setAlignment(Qt.AlignCenter)
         self.label_36 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_36.setObjectName(u"label_36")
-        self.label_36.setGeometry(QRect(730, 50, 41, 41))
+        self.label_36.setGeometry(QRect(740, 50, 41, 41))
         self.label_36.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
         self.label_36.setAlignment(Qt.AlignCenter)
-        self.type_of_calendar_3 = QComboBox(self.PosNVelVector_inpt_frame)
-        self.type_of_calendar_3.addItem("")
-        self.type_of_calendar_3.addItem("")
-        self.type_of_calendar_3.addItem("")
-        self.type_of_calendar_3.addItem("")
-        self.type_of_calendar_3.setObjectName(u"type_of_calendar_3")
-        self.type_of_calendar_3.setGeometry(QRect(780, 50, 100, 40))
-        self.type_of_calendar_3.setMinimumSize(QSize(100, 40))
-        self.type_of_calendar_3.setMaximumSize(QSize(100, 40))
-        self.type_of_calendar_3.setLayoutDirection(Qt.LeftToRight)
-        self.type_of_calendar_3.setStyleSheet(u"QComboBox{\n"
+        self.R_unit_coe_n_aoe = QComboBox(self.PosNVelVector_inpt_frame)
+        self.R_unit_coe_n_aoe.addItem("")
+        self.R_unit_coe_n_aoe.addItem("")
+        self.R_unit_coe_n_aoe.addItem("")
+        self.R_unit_coe_n_aoe.addItem("")
+        self.R_unit_coe_n_aoe.setObjectName(u"R_unit_coe_n_aoe")
+        self.R_unit_coe_n_aoe.setGeometry(QRect(790, 50, 100, 40))
+        self.R_unit_coe_n_aoe.setMinimumSize(QSize(100, 40))
+        self.R_unit_coe_n_aoe.setMaximumSize(QSize(100, 40))
+        self.R_unit_coe_n_aoe.setLayoutDirection(Qt.LeftToRight)
+        self.R_unit_coe_n_aoe.setStyleSheet(u"QComboBox{\n"
 "	\n"
 "	\n"
 "	\n"
@@ -4363,11 +4428,11 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.type_of_calendar_3.setEditable(False)
-        self.lineEdit = QLineEdit(self.PosNVelVector_inpt_frame)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setGeometry(QRect(300, 50, 101, 41))
-        self.lineEdit.setStyleSheet(u"QLineEdit{\n"
+        self.R_unit_coe_n_aoe.setEditable(False)
+        self.Ri_coe_n_aoe = QLineEdit(self.PosNVelVector_inpt_frame)
+        self.Ri_coe_n_aoe.setObjectName(u"Ri_coe_n_aoe")
+        self.Ri_coe_n_aoe.setGeometry(QRect(310, 50, 101, 41))
+        self.Ri_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4378,11 +4443,11 @@ class Ui_MainWindow(object):
 "QLineEdit:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.lineEdit.setAlignment(Qt.AlignCenter)
-        self.lineEdit_2 = QLineEdit(self.PosNVelVector_inpt_frame)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setGeometry(QRect(460, 50, 101, 41))
-        self.lineEdit_2.setStyleSheet(u"QLineEdit{\n"
+        self.Ri_coe_n_aoe.setAlignment(Qt.AlignCenter)
+        self.Rj_coe_n_aoe = QLineEdit(self.PosNVelVector_inpt_frame)
+        self.Rj_coe_n_aoe.setObjectName(u"Rj_coe_n_aoe")
+        self.Rj_coe_n_aoe.setGeometry(QRect(470, 50, 101, 41))
+        self.Rj_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4393,11 +4458,11 @@ class Ui_MainWindow(object):
 "QLineEdit:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.lineEdit_2.setAlignment(Qt.AlignCenter)
-        self.lineEdit_3 = QLineEdit(self.PosNVelVector_inpt_frame)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setGeometry(QRect(620, 50, 101, 41))
-        self.lineEdit_3.setStyleSheet(u"QLineEdit{\n"
+        self.Rj_coe_n_aoe.setAlignment(Qt.AlignCenter)
+        self.Rk_coe_n_aoe = QLineEdit(self.PosNVelVector_inpt_frame)
+        self.Rk_coe_n_aoe.setObjectName(u"Rk_coe_n_aoe")
+        self.Rk_coe_n_aoe.setGeometry(QRect(630, 50, 101, 41))
+        self.Rk_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
@@ -4409,18 +4474,18 @@ class Ui_MainWindow(object):
 "QLineEdit:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.lineEdit_3.setAlignment(Qt.AlignCenter)
-        self.type_of_calendar_5 = QComboBox(self.PosNVelVector_inpt_frame)
-        self.type_of_calendar_5.addItem("")
-        self.type_of_calendar_5.addItem("")
-        self.type_of_calendar_5.addItem("")
-        self.type_of_calendar_5.addItem("")
-        self.type_of_calendar_5.setObjectName(u"type_of_calendar_5")
-        self.type_of_calendar_5.setGeometry(QRect(780, 120, 100, 40))
-        self.type_of_calendar_5.setMinimumSize(QSize(100, 40))
-        self.type_of_calendar_5.setMaximumSize(QSize(100, 40))
-        self.type_of_calendar_5.setLayoutDirection(Qt.LeftToRight)
-        self.type_of_calendar_5.setStyleSheet(u"QComboBox{\n"
+        self.Rk_coe_n_aoe.setAlignment(Qt.AlignCenter)
+        self.V_unit_coe_n_aoe = QComboBox(self.PosNVelVector_inpt_frame)
+        self.V_unit_coe_n_aoe.addItem("")
+        self.V_unit_coe_n_aoe.addItem("")
+        self.V_unit_coe_n_aoe.addItem("")
+        self.V_unit_coe_n_aoe.addItem("")
+        self.V_unit_coe_n_aoe.setObjectName(u"V_unit_coe_n_aoe")
+        self.V_unit_coe_n_aoe.setGeometry(QRect(790, 120, 100, 40))
+        self.V_unit_coe_n_aoe.setMinimumSize(QSize(100, 40))
+        self.V_unit_coe_n_aoe.setMaximumSize(QSize(100, 40))
+        self.V_unit_coe_n_aoe.setLayoutDirection(Qt.LeftToRight)
+        self.V_unit_coe_n_aoe.setStyleSheet(u"QComboBox{\n"
 "	\n"
 "	\n"
 "	\n"
@@ -4432,25 +4497,25 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.type_of_calendar_5.setEditable(False)
+        self.V_unit_coe_n_aoe.setEditable(False)
         self.label_44 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_44.setObjectName(u"label_44")
-        self.label_44.setGeometry(QRect(120, 120, 181, 41))
+        self.label_44.setGeometry(QRect(130, 120, 181, 41))
         self.label_44.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
         self.label_44.setAlignment(Qt.AlignCenter)
         self.label_45 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_45.setObjectName(u"label_45")
-        self.label_45.setGeometry(QRect(410, 120, 41, 41))
+        self.label_45.setGeometry(QRect(420, 120, 41, 41))
         self.label_45.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
         self.label_45.setAlignment(Qt.AlignCenter)
-        self.lineEdit_7 = QLineEdit(self.PosNVelVector_inpt_frame)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setGeometry(QRect(460, 120, 101, 41))
-        self.lineEdit_7.setStyleSheet(u"QLineEdit{\n"
+        self.Vj_coe_n_aoe = QLineEdit(self.PosNVelVector_inpt_frame)
+        self.Vj_coe_n_aoe.setObjectName(u"Vj_coe_n_aoe")
+        self.Vj_coe_n_aoe.setGeometry(QRect(470, 120, 101, 41))
+        self.Vj_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4461,11 +4526,11 @@ class Ui_MainWindow(object):
 "QLineEdit:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.lineEdit_7.setAlignment(Qt.AlignCenter)
-        self.lineEdit_8 = QLineEdit(self.PosNVelVector_inpt_frame)
-        self.lineEdit_8.setObjectName(u"lineEdit_8")
-        self.lineEdit_8.setGeometry(QRect(300, 120, 101, 41))
-        self.lineEdit_8.setStyleSheet(u"QLineEdit{\n"
+        self.Vj_coe_n_aoe.setAlignment(Qt.AlignCenter)
+        self.Vi_coe_n_aoe = QLineEdit(self.PosNVelVector_inpt_frame)
+        self.Vi_coe_n_aoe.setObjectName(u"Vi_coe_n_aoe")
+        self.Vi_coe_n_aoe.setGeometry(QRect(310, 120, 101, 41))
+        self.Vi_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4476,25 +4541,25 @@ class Ui_MainWindow(object):
 "QLineEdit:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.lineEdit_8.setAlignment(Qt.AlignCenter)
+        self.Vi_coe_n_aoe.setAlignment(Qt.AlignCenter)
         self.label_46 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_46.setObjectName(u"label_46")
-        self.label_46.setGeometry(QRect(570, 120, 41, 41))
+        self.label_46.setGeometry(QRect(580, 120, 41, 41))
         self.label_46.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
         self.label_46.setAlignment(Qt.AlignCenter)
         self.label_47 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_47.setObjectName(u"label_47")
-        self.label_47.setGeometry(QRect(730, 120, 41, 41))
+        self.label_47.setGeometry(QRect(740, 120, 41, 41))
         self.label_47.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
         self.label_47.setAlignment(Qt.AlignCenter)
-        self.lineEdit_9 = QLineEdit(self.PosNVelVector_inpt_frame)
-        self.lineEdit_9.setObjectName(u"lineEdit_9")
-        self.lineEdit_9.setGeometry(QRect(620, 120, 101, 41))
-        self.lineEdit_9.setStyleSheet(u"QLineEdit{\n"
+        self.Vk_coe_n_aoe = QLineEdit(self.PosNVelVector_inpt_frame)
+        self.Vk_coe_n_aoe.setObjectName(u"Vk_coe_n_aoe")
+        self.Vk_coe_n_aoe.setGeometry(QRect(630, 120, 101, 41))
+        self.Vk_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
@@ -4506,23 +4571,23 @@ class Ui_MainWindow(object):
 "QLineEdit:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.lineEdit_9.setAlignment(Qt.AlignCenter)
-        self.SOI_planet_name_3 = QComboBox(self.PosNVelVector_inpt_frame)
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.addItem("")
-        self.SOI_planet_name_3.setObjectName(u"SOI_planet_name_3")
-        self.SOI_planet_name_3.setGeometry(QRect(390, 190, 251, 41))
-        self.SOI_planet_name_3.setStyleSheet(u"QComboBox{\n"
+        self.Vk_coe_n_aoe.setAlignment(Qt.AlignCenter)
+        self.maj_body_coe_n_aoe = QComboBox(self.PosNVelVector_inpt_frame)
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.addItem("")
+        self.maj_body_coe_n_aoe.setObjectName(u"maj_body_coe_n_aoe")
+        self.maj_body_coe_n_aoe.setGeometry(QRect(110, 190, 251, 41))
+        self.maj_body_coe_n_aoe.setStyleSheet(u"QComboBox{\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
 "	font: 12pt \"Arial\";\n"
 "	border-radius: 20px;}\n"
@@ -4580,6 +4645,20 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "")
         self.label_264.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.cal_btn_coe_n_aoe = QPushButton(self.PosNVelVector_inpt_frame)
+        self.cal_btn_coe_n_aoe.setObjectName(u"cal_btn_coe_n_aoe")
+        self.cal_btn_coe_n_aoe.setGeometry(QRect(460, 190, 121, 41))
+        self.cal_btn_coe_n_aoe.setFont(font9)
+        self.cal_btn_coe_n_aoe.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgb(2, 119, 189);\n"
+"	color:rgb(245, 255, 179);\n"
+"	border-radius: 20px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	\n"
+"	background-color: rgb(255, 170, 0);\n"
+"}")
 
         self.verticalLayout_49.addWidget(self.PosNVelVector_inpt_frame)
 
@@ -4613,10 +4692,10 @@ class Ui_MainWindow(object):
 "")
         self.frame_85.setFrameShape(QFrame.StyledPanel)
         self.frame_85.setFrameShadow(QFrame.Raised)
-        self.label_10 = QLabel(self.frame_85)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(230, 40, 141, 41))
-        self.label_10.setStyleSheet(u"QLabel{\n"
+        self.semimajor_axis_coe_n_aoe = QLabel(self.frame_85)
+        self.semimajor_axis_coe_n_aoe.setObjectName(u"semimajor_axis_coe_n_aoe")
+        self.semimajor_axis_coe_n_aoe.setGeometry(QRect(230, 40, 141, 41))
+        self.semimajor_axis_coe_n_aoe.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4627,10 +4706,10 @@ class Ui_MainWindow(object):
 "QLabel:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.label_23 = QLabel(self.frame_85)
-        self.label_23.setObjectName(u"label_23")
-        self.label_23.setGeometry(QRect(230, 110, 141, 41))
-        self.label_23.setStyleSheet(u"QLabel{\n"
+        self.eccentricity_coe_n_aoe = QLabel(self.frame_85)
+        self.eccentricity_coe_n_aoe.setObjectName(u"eccentricity_coe_n_aoe")
+        self.eccentricity_coe_n_aoe.setGeometry(QRect(230, 110, 141, 41))
+        self.eccentricity_coe_n_aoe.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4641,10 +4720,10 @@ class Ui_MainWindow(object):
 "QLabel:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.label_24 = QLabel(self.frame_85)
-        self.label_24.setObjectName(u"label_24")
-        self.label_24.setGeometry(QRect(230, 180, 141, 41))
-        self.label_24.setStyleSheet(u"QLabel{\n"
+        self.inclination_coe_n_aoe = QLabel(self.frame_85)
+        self.inclination_coe_n_aoe.setObjectName(u"inclination_coe_n_aoe")
+        self.inclination_coe_n_aoe.setGeometry(QRect(230, 180, 141, 41))
+        self.inclination_coe_n_aoe.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4655,10 +4734,10 @@ class Ui_MainWindow(object):
 "QLabel:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.label_116 = QLabel(self.frame_85)
-        self.label_116.setObjectName(u"label_116")
-        self.label_116.setGeometry(QRect(730, 110, 141, 41))
-        self.label_116.setStyleSheet(u"QLabel{\n"
+        self.arg_of_per_coe_n_aoe = QLabel(self.frame_85)
+        self.arg_of_per_coe_n_aoe.setObjectName(u"arg_of_per_coe_n_aoe")
+        self.arg_of_per_coe_n_aoe.setGeometry(QRect(730, 110, 141, 41))
+        self.arg_of_per_coe_n_aoe.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4669,10 +4748,10 @@ class Ui_MainWindow(object):
 "QLabel:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.label_148 = QLabel(self.frame_85)
-        self.label_148.setObjectName(u"label_148")
-        self.label_148.setGeometry(QRect(730, 40, 141, 41))
-        self.label_148.setStyleSheet(u"QLabel{\n"
+        self.RAAN_coe_n_aoe = QLabel(self.frame_85)
+        self.RAAN_coe_n_aoe.setObjectName(u"RAAN_coe_n_aoe")
+        self.RAAN_coe_n_aoe.setGeometry(QRect(730, 40, 141, 41))
+        self.RAAN_coe_n_aoe.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4683,10 +4762,10 @@ class Ui_MainWindow(object):
 "QLabel:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.label_149 = QLabel(self.frame_85)
-        self.label_149.setObjectName(u"label_149")
-        self.label_149.setGeometry(QRect(730, 180, 141, 41))
-        self.label_149.setStyleSheet(u"QLabel{\n"
+        self.tru_ana_coe_n_aoe = QLabel(self.frame_85)
+        self.tru_ana_coe_n_aoe.setObjectName(u"tru_ana_coe_n_aoe")
+        self.tru_ana_coe_n_aoe.setGeometry(QRect(730, 180, 141, 41))
+        self.tru_ana_coe_n_aoe.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4746,17 +4825,17 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "")
         self.label_262.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.type_of_calendar_8 = QComboBox(self.frame_85)
-        self.type_of_calendar_8.addItem("")
-        self.type_of_calendar_8.addItem("")
-        self.type_of_calendar_8.addItem("")
-        self.type_of_calendar_8.addItem("")
-        self.type_of_calendar_8.setObjectName(u"type_of_calendar_8")
-        self.type_of_calendar_8.setGeometry(QRect(380, 40, 100, 40))
-        self.type_of_calendar_8.setMinimumSize(QSize(100, 40))
-        self.type_of_calendar_8.setMaximumSize(QSize(100, 40))
-        self.type_of_calendar_8.setLayoutDirection(Qt.LeftToRight)
-        self.type_of_calendar_8.setStyleSheet(u"QComboBox{\n"
+        self.semimajor_axis_unit_coe_n_aoe = QComboBox(self.frame_85)
+        self.semimajor_axis_unit_coe_n_aoe.addItem("")
+        self.semimajor_axis_unit_coe_n_aoe.addItem("")
+        self.semimajor_axis_unit_coe_n_aoe.addItem("")
+        self.semimajor_axis_unit_coe_n_aoe.addItem("")
+        self.semimajor_axis_unit_coe_n_aoe.setObjectName(u"semimajor_axis_unit_coe_n_aoe")
+        self.semimajor_axis_unit_coe_n_aoe.setGeometry(QRect(380, 40, 100, 40))
+        self.semimajor_axis_unit_coe_n_aoe.setMinimumSize(QSize(100, 40))
+        self.semimajor_axis_unit_coe_n_aoe.setMaximumSize(QSize(100, 40))
+        self.semimajor_axis_unit_coe_n_aoe.setLayoutDirection(Qt.LeftToRight)
+        self.semimajor_axis_unit_coe_n_aoe.setStyleSheet(u"QComboBox{\n"
 "	\n"
 "	\n"
 "	\n"
@@ -4768,16 +4847,16 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.type_of_calendar_8.setEditable(False)
-        self.type_of_calendar_9 = QComboBox(self.frame_85)
-        self.type_of_calendar_9.addItem("")
-        self.type_of_calendar_9.addItem("")
-        self.type_of_calendar_9.setObjectName(u"type_of_calendar_9")
-        self.type_of_calendar_9.setGeometry(QRect(380, 180, 100, 40))
-        self.type_of_calendar_9.setMinimumSize(QSize(100, 40))
-        self.type_of_calendar_9.setMaximumSize(QSize(100, 40))
-        self.type_of_calendar_9.setLayoutDirection(Qt.LeftToRight)
-        self.type_of_calendar_9.setStyleSheet(u"QComboBox{\n"
+        self.semimajor_axis_unit_coe_n_aoe.setEditable(False)
+        self.inclination_unit_coe_n_aoe = QComboBox(self.frame_85)
+        self.inclination_unit_coe_n_aoe.addItem("")
+        self.inclination_unit_coe_n_aoe.addItem("")
+        self.inclination_unit_coe_n_aoe.setObjectName(u"inclination_unit_coe_n_aoe")
+        self.inclination_unit_coe_n_aoe.setGeometry(QRect(380, 180, 100, 40))
+        self.inclination_unit_coe_n_aoe.setMinimumSize(QSize(100, 40))
+        self.inclination_unit_coe_n_aoe.setMaximumSize(QSize(100, 40))
+        self.inclination_unit_coe_n_aoe.setLayoutDirection(Qt.LeftToRight)
+        self.inclination_unit_coe_n_aoe.setStyleSheet(u"QComboBox{\n"
 "	\n"
 "	\n"
 "	\n"
@@ -4789,16 +4868,16 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.type_of_calendar_9.setEditable(False)
-        self.type_of_calendar_10 = QComboBox(self.frame_85)
-        self.type_of_calendar_10.addItem("")
-        self.type_of_calendar_10.addItem("")
-        self.type_of_calendar_10.setObjectName(u"type_of_calendar_10")
-        self.type_of_calendar_10.setGeometry(QRect(880, 40, 100, 40))
-        self.type_of_calendar_10.setMinimumSize(QSize(100, 40))
-        self.type_of_calendar_10.setMaximumSize(QSize(100, 40))
-        self.type_of_calendar_10.setLayoutDirection(Qt.LeftToRight)
-        self.type_of_calendar_10.setStyleSheet(u"QComboBox{\n"
+        self.inclination_unit_coe_n_aoe.setEditable(False)
+        self.RAAN_unit_coe_n_aoe = QComboBox(self.frame_85)
+        self.RAAN_unit_coe_n_aoe.addItem("")
+        self.RAAN_unit_coe_n_aoe.addItem("")
+        self.RAAN_unit_coe_n_aoe.setObjectName(u"RAAN_unit_coe_n_aoe")
+        self.RAAN_unit_coe_n_aoe.setGeometry(QRect(880, 40, 100, 40))
+        self.RAAN_unit_coe_n_aoe.setMinimumSize(QSize(100, 40))
+        self.RAAN_unit_coe_n_aoe.setMaximumSize(QSize(100, 40))
+        self.RAAN_unit_coe_n_aoe.setLayoutDirection(Qt.LeftToRight)
+        self.RAAN_unit_coe_n_aoe.setStyleSheet(u"QComboBox{\n"
 "	\n"
 "	\n"
 "	\n"
@@ -4810,16 +4889,16 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.type_of_calendar_10.setEditable(False)
-        self.type_of_calendar_11 = QComboBox(self.frame_85)
-        self.type_of_calendar_11.addItem("")
-        self.type_of_calendar_11.addItem("")
-        self.type_of_calendar_11.setObjectName(u"type_of_calendar_11")
-        self.type_of_calendar_11.setGeometry(QRect(880, 110, 100, 40))
-        self.type_of_calendar_11.setMinimumSize(QSize(100, 40))
-        self.type_of_calendar_11.setMaximumSize(QSize(100, 40))
-        self.type_of_calendar_11.setLayoutDirection(Qt.LeftToRight)
-        self.type_of_calendar_11.setStyleSheet(u"QComboBox{\n"
+        self.RAAN_unit_coe_n_aoe.setEditable(False)
+        self.arg_of_per_unit_coe_n_aoe = QComboBox(self.frame_85)
+        self.arg_of_per_unit_coe_n_aoe.addItem("")
+        self.arg_of_per_unit_coe_n_aoe.addItem("")
+        self.arg_of_per_unit_coe_n_aoe.setObjectName(u"arg_of_per_unit_coe_n_aoe")
+        self.arg_of_per_unit_coe_n_aoe.setGeometry(QRect(880, 110, 100, 40))
+        self.arg_of_per_unit_coe_n_aoe.setMinimumSize(QSize(100, 40))
+        self.arg_of_per_unit_coe_n_aoe.setMaximumSize(QSize(100, 40))
+        self.arg_of_per_unit_coe_n_aoe.setLayoutDirection(Qt.LeftToRight)
+        self.arg_of_per_unit_coe_n_aoe.setStyleSheet(u"QComboBox{\n"
 "	\n"
 "	\n"
 "	\n"
@@ -4831,16 +4910,16 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.type_of_calendar_11.setEditable(False)
-        self.type_of_calendar_12 = QComboBox(self.frame_85)
-        self.type_of_calendar_12.addItem("")
-        self.type_of_calendar_12.addItem("")
-        self.type_of_calendar_12.setObjectName(u"type_of_calendar_12")
-        self.type_of_calendar_12.setGeometry(QRect(880, 180, 100, 40))
-        self.type_of_calendar_12.setMinimumSize(QSize(100, 40))
-        self.type_of_calendar_12.setMaximumSize(QSize(100, 40))
-        self.type_of_calendar_12.setLayoutDirection(Qt.LeftToRight)
-        self.type_of_calendar_12.setStyleSheet(u"QComboBox{\n"
+        self.arg_of_per_unit_coe_n_aoe.setEditable(False)
+        self.tru_ana_unit_coe_n_aoe = QComboBox(self.frame_85)
+        self.tru_ana_unit_coe_n_aoe.addItem("")
+        self.tru_ana_unit_coe_n_aoe.addItem("")
+        self.tru_ana_unit_coe_n_aoe.setObjectName(u"tru_ana_unit_coe_n_aoe")
+        self.tru_ana_unit_coe_n_aoe.setGeometry(QRect(880, 180, 100, 40))
+        self.tru_ana_unit_coe_n_aoe.setMinimumSize(QSize(100, 40))
+        self.tru_ana_unit_coe_n_aoe.setMaximumSize(QSize(100, 40))
+        self.tru_ana_unit_coe_n_aoe.setLayoutDirection(Qt.LeftToRight)
+        self.tru_ana_unit_coe_n_aoe.setStyleSheet(u"QComboBox{\n"
 "	\n"
 "	\n"
 "	\n"
@@ -4852,7 +4931,7 @@ class Ui_MainWindow(object):
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.type_of_calendar_12.setEditable(False)
+        self.tru_ana_unit_coe_n_aoe.setEditable(False)
 
         self.verticalLayout_49.addWidget(self.frame_85)
 
@@ -4899,13 +4978,13 @@ class Ui_MainWindow(object):
         self.label_credits.setObjectName(u"label_credits")
         self.label_credits.setMinimumSize(QSize(50, 0))
         self.label_credits.setMaximumSize(QSize(50, 16777215))
-        font11 = QFont()
-        font11.setFamily(u"Arial")
-        font11.setPointSize(6)
-        font11.setBold(False)
-        font11.setItalic(False)
-        font11.setWeight(50)
-        self.label_credits.setFont(font11)
+        font12 = QFont()
+        font12.setFamily(u"Arial")
+        font12.setPointSize(6)
+        font12.setBold(False)
+        font12.setItalic(False)
+        font12.setWeight(50)
+        self.label_credits.setFont(font12)
         self.label_credits.setStyleSheet(u"image:url(UI_Functions/Resources/MOPy Cover_transparent.png);")
         self.label_credits.setPixmap(QPixmap(u"../../MOPy/UI_Functions/GUI-test/Resources/MOPy Cover_transparent.png"))
         self.label_credits.setScaledContents(True)
@@ -4944,8 +5023,8 @@ class Ui_MainWindow(object):
 
         self.stackedWidget.setCurrentIndex(0)
         self.Orbit_type_stack.setCurrentIndex(0)
-        self.VPCO_output_stack.setCurrentIndex(2)
-        self.otherbody_stack.setCurrentIndex(1)
+        self.VPCO_output_stack.setCurrentIndex(0)
+        self.otherbody_stack.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -5039,7 +5118,7 @@ class Ui_MainWindow(object):
         self.soi_rad.setText("")
         self.label_title_4.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
 #if QT_CONFIG(tooltip)
-        self.Home_btn_2.setToolTip(QCoreApplication.translate("MainWindow", u"Home", None))
+        self.Home_btn_2.setToolTip(QCoreApplication.translate("MainWindow", u"VPCO Home", None))
 #endif // QT_CONFIG(tooltip)
         self.Home_btn_2.setText("")
         self.vpco_input_type.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Type of Inputs", None))
@@ -5074,6 +5153,7 @@ class Ui_MainWindow(object):
         self.orbit_type_ae.setText("")
         self.orbit_type_btn_inpt_ae.setText(QCoreApplication.translate("MainWindow", u"Orbit Type", None))
         self.go_btn_inpt_ae.setText(QCoreApplication.translate("MainWindow", u"GO", None))
+        self.Error_parabola.setText("")
         self.ra_inpt_rarp.setText("")
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Apoapsis Radius (ra):", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Periapsis Radius (rp):", None))
@@ -5118,6 +5198,10 @@ class Ui_MainWindow(object):
         self.label_154.setText(QCoreApplication.translate("MainWindow", u"km/s", None))
         self.orbit_type_stateVector.setText("")
         self.label_title_5.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
+#if QT_CONFIG(tooltip)
+        self.vpco_feature_back_btn.setToolTip(QCoreApplication.translate("MainWindow", u"VPCO Home", None))
+#endif // QT_CONFIG(tooltip)
+        self.vpco_feature_back_btn.setText("")
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"Radius of Periapsis", None))
         self.rp_ae.setText("")
         self.ra_ae.setText("")
@@ -5346,42 +5430,43 @@ class Ui_MainWindow(object):
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"i       +", None))
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"j       +", None))
         self.label_36.setText(QCoreApplication.translate("MainWindow", u"k       ", None))
-        self.type_of_calendar_3.setItemText(0, QCoreApplication.translate("MainWindow", u"  km", None))
-        self.type_of_calendar_3.setItemText(1, QCoreApplication.translate("MainWindow", u"  miles", None))
-        self.type_of_calendar_3.setItemText(2, QCoreApplication.translate("MainWindow", u"  AU", None))
-        self.type_of_calendar_3.setItemText(3, QCoreApplication.translate("MainWindow", u"  DU", None))
+        self.R_unit_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  km", None))
+        self.R_unit_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  miles", None))
+        self.R_unit_coe_n_aoe.setItemText(2, QCoreApplication.translate("MainWindow", u"  AU", None))
+        self.R_unit_coe_n_aoe.setItemText(3, QCoreApplication.translate("MainWindow", u"  DU", None))
 
-        self.type_of_calendar_5.setItemText(0, QCoreApplication.translate("MainWindow", u"  km/s", None))
-        self.type_of_calendar_5.setItemText(1, QCoreApplication.translate("MainWindow", u"  miles/s", None))
-        self.type_of_calendar_5.setItemText(2, QCoreApplication.translate("MainWindow", u"  AU/s", None))
-        self.type_of_calendar_5.setItemText(3, QCoreApplication.translate("MainWindow", u"  DU/TU", None))
+        self.V_unit_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  km/s", None))
+        self.V_unit_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  miles/s", None))
+        self.V_unit_coe_n_aoe.setItemText(2, QCoreApplication.translate("MainWindow", u"  AU/s", None))
+        self.V_unit_coe_n_aoe.setItemText(3, QCoreApplication.translate("MainWindow", u"  DU/TU", None))
 
         self.label_44.setText(QCoreApplication.translate("MainWindow", u"Velocity Vector", None))
         self.label_45.setText(QCoreApplication.translate("MainWindow", u"i       +", None))
         self.label_46.setText(QCoreApplication.translate("MainWindow", u"j       +", None))
         self.label_47.setText(QCoreApplication.translate("MainWindow", u"k       ", None))
-        self.SOI_planet_name_3.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Major Body", None))
-        self.SOI_planet_name_3.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
-        self.SOI_planet_name_3.setItemText(2, QCoreApplication.translate("MainWindow", u"  Earth", None))
-        self.SOI_planet_name_3.setItemText(3, QCoreApplication.translate("MainWindow", u"  Jupiter", None))
-        self.SOI_planet_name_3.setItemText(4, QCoreApplication.translate("MainWindow", u"  Mercury", None))
-        self.SOI_planet_name_3.setItemText(5, QCoreApplication.translate("MainWindow", u"  Venus", None))
-        self.SOI_planet_name_3.setItemText(6, QCoreApplication.translate("MainWindow", u"  Mars", None))
-        self.SOI_planet_name_3.setItemText(7, QCoreApplication.translate("MainWindow", u"  Saturn", None))
-        self.SOI_planet_name_3.setItemText(8, QCoreApplication.translate("MainWindow", u"  Uranus", None))
-        self.SOI_planet_name_3.setItemText(9, QCoreApplication.translate("MainWindow", u"  Neptune", None))
-        self.SOI_planet_name_3.setItemText(10, QCoreApplication.translate("MainWindow", u"  Pluto", None))
-        self.SOI_planet_name_3.setItemText(11, QCoreApplication.translate("MainWindow", u"  Other", None))
+        self.maj_body_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Major Body", None))
+        self.maj_body_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
+        self.maj_body_coe_n_aoe.setItemText(2, QCoreApplication.translate("MainWindow", u"  Earth", None))
+        self.maj_body_coe_n_aoe.setItemText(3, QCoreApplication.translate("MainWindow", u"  Jupiter", None))
+        self.maj_body_coe_n_aoe.setItemText(4, QCoreApplication.translate("MainWindow", u"  Mercury", None))
+        self.maj_body_coe_n_aoe.setItemText(5, QCoreApplication.translate("MainWindow", u"  Venus", None))
+        self.maj_body_coe_n_aoe.setItemText(6, QCoreApplication.translate("MainWindow", u"  Mars", None))
+        self.maj_body_coe_n_aoe.setItemText(7, QCoreApplication.translate("MainWindow", u"  Saturn", None))
+        self.maj_body_coe_n_aoe.setItemText(8, QCoreApplication.translate("MainWindow", u"  Uranus", None))
+        self.maj_body_coe_n_aoe.setItemText(9, QCoreApplication.translate("MainWindow", u"  Neptune", None))
+        self.maj_body_coe_n_aoe.setItemText(10, QCoreApplication.translate("MainWindow", u"  Pluto", None))
+        self.maj_body_coe_n_aoe.setItemText(11, QCoreApplication.translate("MainWindow", u"  Other", None))
 
         self.lineEdit_16.setText(QCoreApplication.translate("MainWindow", u"Enter Mass", None))
         self.lineEdit_17.setText(QCoreApplication.translate("MainWindow", u"Enter Radius", None))
         self.label_264.setText(QCoreApplication.translate("MainWindow", u"Input:", None))
-        self.label_10.setText("")
-        self.label_23.setText("")
-        self.label_24.setText("")
-        self.label_116.setText("")
-        self.label_148.setText("")
-        self.label_149.setText("")
+        self.cal_btn_coe_n_aoe.setText(QCoreApplication.translate("MainWindow", u"Calculate", None))
+        self.semimajor_axis_coe_n_aoe.setText("")
+        self.eccentricity_coe_n_aoe.setText("")
+        self.inclination_coe_n_aoe.setText("")
+        self.arg_of_per_coe_n_aoe.setText("")
+        self.RAAN_coe_n_aoe.setText("")
+        self.tru_ana_coe_n_aoe.setText("")
         self.label_151.setText(QCoreApplication.translate("MainWindow", u"Semi-major Axis", None))
         self.label_155.setText(QCoreApplication.translate("MainWindow", u"Eccentricity", None))
         self.label_245.setText(QCoreApplication.translate("MainWindow", u"Inclination", None))
@@ -5389,22 +5474,22 @@ class Ui_MainWindow(object):
         self.label_252.setText(QCoreApplication.translate("MainWindow", u"Argument of Periapsis", None))
         self.label_253.setText(QCoreApplication.translate("MainWindow", u"True Anamoly", None))
         self.label_262.setText(QCoreApplication.translate("MainWindow", u"Output:", None))
-        self.type_of_calendar_8.setItemText(0, QCoreApplication.translate("MainWindow", u"  km", None))
-        self.type_of_calendar_8.setItemText(1, QCoreApplication.translate("MainWindow", u"  miles", None))
-        self.type_of_calendar_8.setItemText(2, QCoreApplication.translate("MainWindow", u"  AU", None))
-        self.type_of_calendar_8.setItemText(3, QCoreApplication.translate("MainWindow", u"  DU", None))
+        self.semimajor_axis_unit_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  km", None))
+        self.semimajor_axis_unit_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  miles", None))
+        self.semimajor_axis_unit_coe_n_aoe.setItemText(2, QCoreApplication.translate("MainWindow", u"  AU", None))
+        self.semimajor_axis_unit_coe_n_aoe.setItemText(3, QCoreApplication.translate("MainWindow", u"  DU", None))
 
-        self.type_of_calendar_9.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
-        self.type_of_calendar_9.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
+        self.inclination_unit_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
+        self.inclination_unit_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
 
-        self.type_of_calendar_10.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
-        self.type_of_calendar_10.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
+        self.RAAN_unit_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
+        self.RAAN_unit_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
 
-        self.type_of_calendar_11.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
-        self.type_of_calendar_11.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
+        self.arg_of_per_unit_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
+        self.arg_of_per_unit_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
 
-        self.type_of_calendar_12.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
-        self.type_of_calendar_12.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
+        self.tru_ana_unit_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
+        self.tru_ana_unit_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
 
         self.label_credits.setText("")
     # retranslateUi
