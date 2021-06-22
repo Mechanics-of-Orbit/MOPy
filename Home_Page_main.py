@@ -343,7 +343,7 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(1200, lambda: self.ui.label_description.setText("<strong>Initializing</strong> Database"))
         QtCore.QTimer.singleShot(2500, lambda: self.ui.label_description.setText("<strong>Pulling</strong> Resources"))
         QtCore.QTimer.singleShot(3500, lambda: self.ui.label_description.setText("<strong>Arranging</strong> User Interface "))
-        QtCore.QTimer.singleShot(4700, lambda: self.ui.label_description.setText("Ready to <strong>takeoff</strong> "))
+        QtCore.QTimer.singleShot(4700, lambda: self.ui.label_description.setText("Ready to <strong>Takeoff</strong> "))
         QtCore.QTimer.singleShot(4700, lambda: self.ui.label.setPixmap(QPixmap("UI_Functions/Resources/back_arrow.png")))
         QtCore.QTimer.singleShot(4700, lambda: self.ui.label.setScaledContents(True))
         QtCore.QTimer.singleShot(4700, lambda: self.ui.label.setAlignment(Qt.AlignCenter))
