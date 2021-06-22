@@ -12005,7 +12005,7 @@ QComboBox:hover{
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>../../MOPy/UI_Functions/GUI-test/Resources/MOPy Cover_transparent.png</pixmap>
+                <pixmap>GUI-test/Resources/MOPy Cover_transparent.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>

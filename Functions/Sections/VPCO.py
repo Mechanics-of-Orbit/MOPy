@@ -75,7 +75,6 @@ class CalculateParabola():
 
     @classmethod
     def const_values(cls, r_per, maj_body_mass):
-
         mu = maj_body_mass * cls.G
         slr = 2 * r_per
         v_per = sqrt((2*mu)/r_per)
@@ -84,7 +83,6 @@ class CalculateParabola():
 
     @classmethod
     def velocity_at_any_point(cls, r, maj_body_mass):
-        
         mu = maj_body_mass * cls.G
         v = sqrt((2*mu)/r)
         return v
