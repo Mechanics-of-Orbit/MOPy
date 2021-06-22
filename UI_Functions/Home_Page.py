@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagerIspym.ui'
+## Form generated from reading UI file 'Home_PageVrYLbz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -4941,6 +4941,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_43.addWidget(self.COEnAOE_frame)
 
         self.stackedWidget.addWidget(self.COEnAOE)
+        self.page = QWidget()
+        self.page.setObjectName(u"page")
+        self.stackedWidget.addWidget(self.page)
 
         self.horizontalLayout_3.addWidget(self.stackedWidget)
 
@@ -4971,6 +4974,7 @@ class Ui_MainWindow(object):
         self.frame_31.setObjectName(u"frame_31")
         self.frame_31.setMinimumSize(QSize(1000, 0))
         self.frame_31.setMaximumSize(QSize(1000, 16777215))
+        self.frame_31.setStyleSheet(u"padding:5px")
         self.frame_31.setFrameShape(QFrame.StyledPanel)
         self.frame_31.setFrameShadow(QFrame.Raised)
 
@@ -4992,13 +4996,6 @@ class Ui_MainWindow(object):
         self.label_credits.setScaledContents(True)
 
         self.horizontalLayout_18.addWidget(self.label_credits)
-
-        self.frame_30 = QFrame(self.frame_label_credits)
-        self.frame_30.setObjectName(u"frame_30")
-        self.frame_30.setFrameShape(QFrame.StyledPanel)
-        self.frame_30.setFrameShadow(QFrame.Raised)
-
-        self.horizontalLayout_18.addWidget(self.frame_30)
 
 
         self.horizontalLayout_2.addWidget(self.frame_label_credits)

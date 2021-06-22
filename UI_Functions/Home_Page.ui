@@ -11879,6 +11879,7 @@ QComboBox:hover{
               </item>
              </layout>
             </widget>
+            <widget class="QWidget" name="page"/>
            </widget>
           </item>
          </layout>
@@ -11967,6 +11968,9 @@ QComboBox:hover{
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="styleSheet">
+                <string notr="true">padding:5px</string>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -12009,16 +12013,6 @@ QComboBox:hover{
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="frame_30">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
                </property>
               </widget>
              </item>
