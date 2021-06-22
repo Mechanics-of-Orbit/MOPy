@@ -347,7 +347,7 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(5500, lambda: self.ui.label.setPixmap(QPixmap("UI_Functions/Resources/back_arrow.png")))
         QtCore.QTimer.singleShot(5500, lambda: self.ui.label.setScaledContents(True))
         QtCore.QTimer.singleShot(5500, lambda: self.ui.label.setAlignment(Qt.AlignCenter))
-        QtCore.QTimer.singleShot(6500, lambda: self.ui.label_description.setText(" "))
+        QtCore.QTimer.singleShot(7000, lambda: self.ui.label_description.setText(" "))
 
 
 
