@@ -340,14 +340,14 @@ class SplashScreen(QMainWindow):
         self.ui.label_description.setText("WELCOME TO <strong>MOPy</strong>")
 
         # Change Texts
-        QtCore.QTimer.singleShot(1500, lambda: self.ui.label_description.setText("<strong>Initializing</strong> Database"))
-        QtCore.QTimer.singleShot(2800, lambda: self.ui.label_description.setText("<strong>Pulling</strong> Resources"))
-        QtCore.QTimer.singleShot(4000, lambda: self.ui.label_description.setText("<strong>Arranging</strong> User Interface "))
-        QtCore.QTimer.singleShot(8500, lambda: self.ui.label_description.setText("Ready to <strong>takeoff</strong> "))
-        QtCore.QTimer.singleShot(8500, lambda: self.ui.label.setPixmap(QPixmap("UI_Functions/Resources/back_arrow.png")))
-        QtCore.QTimer.singleShot(8500, lambda: self.ui.label.setScaledContents(True))
-        QtCore.QTimer.singleShot(8500, lambda: self.ui.label.setAlignment(Qt.AlignCenter))
-        QtCore.QTimer.singleShot(17000, lambda: self.ui.label_description.setText(" "))
+        QtCore.QTimer.singleShot(1200, lambda: self.ui.label_description.setText("<strong>Initializing</strong> Database"))
+        QtCore.QTimer.singleShot(2500, lambda: self.ui.label_description.setText("<strong>Pulling</strong> Resources"))
+        QtCore.QTimer.singleShot(3500, lambda: self.ui.label_description.setText("<strong>Arranging</strong> User Interface "))
+        QtCore.QTimer.singleShot(4700, lambda: self.ui.label_description.setText("Ready to <strong>takeoff</strong> "))
+        QtCore.QTimer.singleShot(6000, lambda: self.ui.label.setPixmap(QPixmap("UI_Functions/Resources/back_arrow.png")))
+        QtCore.QTimer.singleShot(6000, lambda: self.ui.label.setScaledContents(True))
+        QtCore.QTimer.singleShot(6000, lambda: self.ui.label.setAlignment(Qt.AlignCenter))
+        QtCore.QTimer.singleShot(6800, lambda: self.ui.label_description.setText(" "))
 
 
 
