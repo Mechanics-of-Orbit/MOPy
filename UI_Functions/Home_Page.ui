@@ -404,7 +404,7 @@ QPushButton:hover{
              <string notr="true">background-color:none</string>
             </property>
             <property name="currentIndex">
-             <number>5</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -1019,7 +1019,7 @@ QPushButton:hover{
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_9">
-                       <item>
+                       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
                         <widget class="QComboBox" name="type_of_calendar">
                          <property name="minimumSize">
                           <size>
@@ -1042,7 +1042,9 @@ QPushButton:hover{
 
 QComboBox:hover{
 	border: 4px solid rgb(2, 119, 189);
-}</string>
+}
+
+</string>
                          </property>
                          <item>
                           <property name="text">

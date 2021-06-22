@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageESxfUg.ui'
+## Form generated from reading UI file 'Home_PageYYAzvf.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -441,9 +441,11 @@ class Ui_MainWindow(object):
 "\n"
 "QComboBox:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
-"}")
+"}\n"
+"\n"
+"")
 
-        self.verticalLayout_9.addWidget(self.type_of_calendar)
+        self.verticalLayout_9.addWidget(self.type_of_calendar, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
 
         self.horizontalLayout_9.addWidget(self.frame_11)
@@ -5022,7 +5024,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(0)
-        self.Orbit_type_stack.setCurrentIndex(0)
+        self.Orbit_type_stack.setCurrentIndex(1)
         self.VPCO_output_stack.setCurrentIndex(0)
         self.otherbody_stack.setCurrentIndex(0)
 

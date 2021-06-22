@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenRfOWgA.ui'
+## Form generated from reading UI file 'splash_screenymRvmK.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -30,7 +30,7 @@ class Ui_SplashScreen(object):
         self.dropShadowFrame = QFrame(self.centralwidget)
         self.dropShadowFrame.setObjectName(u"dropShadowFrame")
         self.dropShadowFrame.setStyleSheet(u"QFrame {	\n"
-"	background-color: rgb(56, 58, 89);	\n"
+"	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 255), stop:0.488636 rgba(28, 30, 72, 255));	\n"
 "	\n"
 "\n"
 "	color: rgb(220, 220, 220);\n"
@@ -45,7 +45,8 @@ class Ui_SplashScreen(object):
         font.setFamily(u"Segoe UI")
         font.setPointSize(14)
         self.label_description.setFont(font)
-        self.label_description.setStyleSheet(u"color: rgb(98, 114, 164);")
+        self.label_description.setStyleSheet(u"color: rgb(98, 114, 164);\n"
+"background-color:transparent;")
         self.label_description.setAlignment(Qt.AlignCenter)
         self.progressBar = QProgressBar(self.dropShadowFrame)
         self.progressBar.setObjectName(u"progressBar")
@@ -77,11 +78,13 @@ class Ui_SplashScreen(object):
         font1.setFamily(u"Segoe UI")
         font1.setPointSize(12)
         self.label_loading.setFont(font1)
-        self.label_loading.setStyleSheet(u"color: rgb(98, 114, 164);")
+        self.label_loading.setStyleSheet(u"background-color:transparent;\n"
+"color: rgb(98, 114, 164);")
         self.label_loading.setAlignment(Qt.AlignCenter)
         self.frame = QFrame(self.dropShadowFrame)
         self.frame.setObjectName(u"frame")
         self.frame.setGeometry(QRect(0, -1, 731, 221))
+        self.frame.setStyleSheet(u"background-color:transparent;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame)
@@ -93,13 +96,18 @@ class Ui_SplashScreen(object):
         font2.setFamily(u"Segoe UI")
         font2.setPointSize(40)
         self.label_title.setFont(font2)
-        self.label_title.setStyleSheet(u"color: rgb(254, 121, 199);")
+        self.label_title.setStyleSheet(u"color: rgb(254, 121, 199);\n"
+"background-color:transparent;")
         self.label_title.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
         self.label_title.setScaledContents(True)
         self.label_title.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout.addWidget(self.label_title)
 
+        self.label = QLabel(self.dropShadowFrame)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(570, 330, 47, 41))
+        self.label.setStyleSheet(u"background-color:transparent;")
 
         self.verticalLayout.addWidget(self.dropShadowFrame)
 
@@ -115,5 +123,6 @@ class Ui_SplashScreen(object):
         self.label_description.setText(QCoreApplication.translate("SplashScreen", u"<strong>APP</strong> DESCRIPTION", None))
         self.label_loading.setText(QCoreApplication.translate("SplashScreen", u"loading...", None))
         self.label_title.setText("")
+        self.label.setText("")
     # retranslateUi
 
