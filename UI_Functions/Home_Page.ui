@@ -647,82 +647,82 @@ QComboBox:hover{
                          </property>
                          <item>
                           <property name="text">
-                           <string>                                Choose the option from the Drop-down </string>
+                           <string/>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                         Orbital Elements of an Orbit </string>
+                           <string>    Orbital Elements of an Orbit </string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                                  Sensitive Analysis </string>
+                           <string>    Sensitive Analysis </string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                                Sphere of Influence</string>
+                           <string>    Sphere of Influence</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                           Information about some of the Major bodies</string>
+                           <string>    Information about some of the Major bodies</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                                     Euler Angles</string>
+                           <string>    Euler Angles</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                     Ground Tracking Visualization</string>
+                           <string>    Ground Tracking Visualization</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                         State Vector and Velocity Vector Calculation</string>
+                           <string>    State Vector and Velocity Vector Calculation</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                   Orbital Transfer Graph sketcher</string>
+                           <string>    Orbital Transfer Graph sketcher</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                    Calculation of Julian Day and Local Side real day</string>
+                           <string>    Calculation of Julian Day and Local Side real day</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                         Position of one spacecraft relative to other</string>
+                           <string>    Position of one spacecraft relative to other</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                  Caculating whether a satellite is in Planet's Shadow</string>
+                           <string>    Caculating whether a satellite is in Planet's Shadow</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                        Halo Orbit Visualization</string>
+                           <string>    Halo Orbit Visualization</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>             Calculation of Various Parameters at a given point in Orbit </string>
+                           <string>    Calculation of Various Parameters at a given point in Orbit </string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                        Lagrangian Coefficients</string>
+                           <string>    Lagrangian Coefficients</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                                              3-Body Problem </string>
+                           <string>    3-Body Problem </string>
                           </property>
                          </item>
                         </widget>
@@ -1048,17 +1048,17 @@ QComboBox:hover{
                          </property>
                          <item>
                           <property name="text">
-                           <string>            Select the Type Of Calendar</string>
+                           <string>  Select the Type Of Calendar</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                      Julian Calendar</string>
+                           <string>  Julian Calendar</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>                  Gregorian Calendar</string>
+                           <string>  Gregorian Calendar</string>
                           </property>
                          </item>
                         </widget>
@@ -2196,57 +2196,57 @@ QComboBox:hover{
                        </property>
                        <item>
                         <property name="text">
-                         <string>           Select the Body</string>
+                         <string>  Select the Body</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                   Moon</string>
+                         <string>  Moon</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                    Earth</string>
+                         <string>  Earth</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                   Jupiter</string>
+                         <string>  Jupiter</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                 Mercury</string>
+                         <string>  Mercury</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                   Venus</string>
+                         <string>  Venus</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                    Mars</string>
+                         <string>  Mars</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                  Saturn</string>
+                         <string>  Saturn</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                  Uranus</string>
+                         <string>  Uranus</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                Neptune</string>
+                         <string>  Neptune</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>                   Pluto</string>
+                         <string>  Pluto</string>
                         </property>
                        </item>
                       </widget>
@@ -12005,7 +12005,7 @@ QComboBox:hover{
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>../../MOPy/UI_Functions/GUI-test/Resources/MOPy Cover_transparent.png</pixmap>
+                <pixmap>GUI-test/Resources/MOPy Cover_transparent.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
