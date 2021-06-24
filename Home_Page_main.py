@@ -20,6 +20,8 @@ from SOI3Dviz import SOI
 
 from Functions.Sections.CoOE import Calculate
 
+
+
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
 
@@ -30,8 +32,11 @@ path.append('..\Functions\Sections')
 
 # GLOBALS
 counter = 0
-
 class MainWindow(QMainWindow):
+    I = [1, 0, 0]
+    J = [0, 1, 0]
+    K = [0, 0, 1]
+    G = 6.67e-20 #units are in km3 kg-1 s-2
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
@@ -188,9 +193,11 @@ class MainWindow(QMainWindow):
         except:
             self.ui.orbit_type_ae.setText("")
             self.ui.Error_parabola.setText("Please Enter Valid Semimajor Axis Value")
+            self.ui.Error_parabola.setStyleSheet(u"color:red;")
         if e == 1 and a < inf:
             self.ui.Error_parabola.setText("It is not Possible\nbecause if the eccentricity is 1 then the\nSemimajor Axis should be infinity or vice versa")
             self.ui.orbit_type_ae.setText("")
+            self.ui.Error_parabola.setStyleSheet(u"color:red;")
         elif e == 0 and 0 < a < inf:
             self.ui.orbit_type_ae.setText("Circular")
             self.ui.Error_parabola.setText("")
@@ -206,12 +213,14 @@ class MainWindow(QMainWindow):
         elif (e == 0 or e < 1 or e > 1) and (at == "infinite" or "inf" or "Infinite" or "Inf"):
             self.ui.orbit_type_ae.setText("")
             self.ui.Error_parabola.setText("Please enter a finite Semimajor axis value")
+            self.ui.Error_parabola.setStyleSheet(u"color:red;")
         
             
         
     # vpco home_btn_2
     def homebtn2(self):
         self.ui.Orbit_type_stack.setCurrentIndex(0)
+        self.ui.Error_parabola.setText("")
     
     # COE n AOE Calculation
     def coeNaoe(self):
@@ -222,9 +231,16 @@ class MainWindow(QMainWindow):
         Vj = self.ui.Vj_coe_n_aoe.text()
         Vk = self.ui.Vk_coe_n_aoe.text()
         pos_vec = [float(Ri), float(Rj), float(Rk)]
-        vel_vec = [float(Vi), float(Vj) ,float(Vk)]
-        print(pos_vec)
-        print(vel_vec)
+        vel_vec = [float(Vi), float(Vj) ,float(Vk)] 
+        Major_Body = self.ui.maj_body_CoOE.currentText()
+        Major_Body = Major_Body.strip()
+        [mu, major_body_radius] = Calculate.muvalue(self, Major_Body)
+        [sma, inc, e_vec, e_norm] = Calculate.OE(self, pos_vec, vel_vec, mu)
+        self.ui.CoOE_output_stack.setCurrentIndex(1)
+        self.ui.semimajor_axis_coe_n_aoe.setText(str(round(sma, 4)))
+        self.ui.inclination_coe_n_aoe.setText(str(round(inc, 4)))
+        self.ui.eccentricity_coe_n_aoe.setText(str(round(e_norm, 4)))
+
 
 
     # SOI
@@ -246,12 +262,13 @@ class MainWindow(QMainWindow):
             
     def SOI(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        self.ui.label_18.setText("Radius of SOI of" + str(planet_name) + ":")
+        self.ui.label_18.setText("Radius of SOI of " + str(planet_name.strip()) + ":")
         Mass_of_Sun = 1.989e30
         Minor_body_mass = self.ui.soi_mass.text() 
         distance_bt_sun_plnt = self.ui.soi_mass.text()
         rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
-        self.ui.soi_rad.setText(str(rSOI))
+        rSOI = float(rSOI)
+        self.ui.soi_rad.setText(str(round(rSOI,4)))
     
        
     # SOI Graph
@@ -304,6 +321,9 @@ class MainWindow(QMainWindow):
         #JDN to JD
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
+    
+
+
 
 # SPLASH SCREEN
 class SplashScreen(QMainWindow):
@@ -344,9 +364,6 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(2500, lambda: self.ui.label_description.setText("<strong>Pulling</strong> Resources"))
         QtCore.QTimer.singleShot(3500, lambda: self.ui.label_description.setText("<strong>Arranging</strong> User Interface "))
         QtCore.QTimer.singleShot(4700, lambda: self.ui.label_description.setText("Ready to <strong>Takeoff</strong> "))
-        QtCore.QTimer.singleShot(4700, lambda: self.ui.label.setPixmap(QPixmap("UI_Functions/Resources/back_arrow.png")))
-        QtCore.QTimer.singleShot(4700, lambda: self.ui.label.setScaledContents(True))
-        QtCore.QTimer.singleShot(4700, lambda: self.ui.label.setAlignment(Qt.AlignCenter))
         QtCore.QTimer.singleShot(6000, lambda: self.ui.label_description.setText(" "))
 
 

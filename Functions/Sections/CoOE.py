@@ -1,7 +1,7 @@
 from numpy.linalg import norm
 from numpy import dot, pi, cross, multiply as multi
 from math import acos
-import pandas
+import sqlite3
 
 class Calculate():
     I = [1, 0, 0]
@@ -10,13 +10,16 @@ class Calculate():
     G = 6.67e-20 #units are in km3 kg-1 s-2
 
     def muvalue(self, major_body):
-        major_body_list = pandas.read_csv("Major_and_Minor_Bodies.csv")
-        major_bodies = list(major_body_list.Major_Body)
-        major_bodies_mass = list(major_body_list.Mass)
-        major_bodies_radius = list(major_body_list.Radius)        
-        sel_major_body = major_bodies.index(major_body)
-        major_body_mass = major_bodies_mass[sel_major_body]
-        major_body_radius = major_bodies_radius[sel_major_body]
+        db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
+        cursor = db.cursor()
+        major_body = "  " + major_body
+        
+        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[major_body])
+        
+        for row_number, row_data in enumerate(result):
+            major_body_radius = row_data[2]/2
+            major_body_mass = row_data[1]
+             
         mu = self.G * major_body_mass
         return [mu, major_body_radius]
     
@@ -45,11 +48,12 @@ class Calculate():
         return [h_vec, n_vec]
     
     def OE(self, pos_vec, vel_vec, mu):
-        [h_vec, n_vec] = Calculate.other_var(pos_vec, vel_vec)
+        [h_vec, n_vec] = Calculate.other_var(self, pos_vec, vel_vec)
         e_vec = (multi((norm(vel_vec)*norm(vel_vec)-(mu/norm(pos_vec))),pos_vec)- multi(dot(pos_vec,vel_vec),vel_vec))/(mu)
         inc = (acos((dot(h_vec, self.K))/norm(h_vec))) * 180/pi
         sma = 1/((2/norm(pos_vec))-((norm(vel_vec)*norm(vel_vec))/mu))
-        return [sma, inc, e_vec]
+        e_norm = norm(e_vec)
+        return [sma, inc, e_vec, e_norm]
     
     def ACOE(self, pos_vec, vel_vec, e_vec, inc):
         [h_vec, n_vec] = Calculate.other_var(pos_vec, vel_vec)
