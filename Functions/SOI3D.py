@@ -14,27 +14,26 @@ class SOI(ShowBase):
     def __init__(self, Minor_Body, rSOI, rSOIMiB):
         super().__init__()
 
-        self.scalesize = 0.005
         self.stars = self.loader.loadModel("Assets/Models/solar_sky_sphere")
-        self.stars.setScale(100000)
+        self.stars.setScale(10000)
         self.stars.reparentTo(render)
         self.stars_tex = loader.loadTexture("Functions/Assets/Models/hi_res_tex/stars.jpg")
         self.stars.setTexture(self.stars_tex,1)
 
         load_my_model = loadMyModel()
         self.Minor_Body_Model = load_my_model.body(base, Minor_Body)
-        self.Minor_Body_Model.setScale(rSOI/rSOIMiB*self.scalesize)
+        self.Minor_Body_Model.setScale(2)
         self.Minor_Body_Model.reparentTo(render)
 
         load_my_model = loadMyModel()
         self.SOI_Model = load_my_model.body(base, "white")
-        self.SOI_Model.setScale(2*rSOI*self.scalesize)
+        self.SOI_Model.setScale(5)
         self.SOI_Model.setTransparency(1)
         self.SOI_Model.setColor(1,1,1,0.1)
         self.SOI_Model.reparentTo(render)
 
 
-        self.cam.setPos(0,-rSOI*self.scalesize,0)
+        self.cam.setPos(0,-100,0)
 
 if __name__ == '__main__':
     #[rSOI, rSOIMiB] = SoI("Sun", "Earth")
