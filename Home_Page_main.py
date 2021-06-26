@@ -195,7 +195,7 @@ class MainWindow(QMainWindow):
         elif e == 0 and 0 < a < inf:
             self.ui.orbit_type_ae.setText("Circular")
             self.ui.Error_parabola.setText("")
-        elif e == 1 and (at == "infinity" or "inf" or "Infinity" or "Inf"):
+        elif e == 1 and (at == "infinite" or "inf" or "Infinite" or "Inf" or 'infinity' or 'Infinity'):
             self.ui.orbit_type_ae.setText("Parabola")
             self.ui.Error_parabola.setText("")
         elif 0 < e < 1 and 0 < a < inf:
@@ -204,7 +204,7 @@ class MainWindow(QMainWindow):
         elif e > 1 and 0 < a < inf:
             self.ui.orbit_type_ae.setText("Hyperbola")
             self.ui.Error_parabola.setText("")
-        elif (e == 0 or e < 1 or e > 1) and (at == "infinite" or "inf" or "Infinite" or "Inf"):
+        elif (e == 0 or e < 1 or e > 1) and (at == "infinite" or "inf" or "Infinite" or "Inf" or 'infinity' or 'Infinity'):
             self.ui.orbit_type_ae.setText("")
             self.ui.Error_parabola.setText("Please enter a finite Semimajor axis value")
             self.ui.Error_parabola.setStyleSheet(u"color:red;")
