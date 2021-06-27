@@ -16,7 +16,9 @@ from SOI3Dviz import SOI
 
 from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
 
-from SOI3Dviz import SOI
+from Functions.SOI3D import SOI
+
+#from SOI3Dviz import SOI
 
 from Functions.Sections.CoOE import Calculate
 

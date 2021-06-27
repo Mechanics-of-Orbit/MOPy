@@ -24,7 +24,7 @@ class SOI(ShowBase):
         self.soi_m = self.loader.loadModel("Functions/Assets/Models/planet_sphere")
         self.soi_m.setScale(2*rSOIMiB)
         self.soi_m.setTransparency(1)
-        self.soi_tex = loader.loadTexture('Functions/Assets/Models/hi_res_tex/white.jpg')
+        self.soi_tex = loader.loadTexture(r'Functions/Assets/Models/hi_res_tex/white.jpg')
         self.soi_m.setTexture(self.soi_tex,1)
         self.soi_m.setColor(1,1,1,0.1)
         self.soi_m.reparentTo(render)
