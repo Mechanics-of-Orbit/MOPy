@@ -22,7 +22,7 @@ from Functions.SOI3D import SOI
 
 from Functions.Sections.CoOE import Calculate
 
-from Functions.call_database import call, raund
+
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -145,7 +145,13 @@ class MainWindow(QMainWindow):
         a = self.ui.semimajor_axis_input_ae.text()
         a = float(a)
         maj_body = self.ui.vpco_major_body.currentText()
-        maj_body_mass = call.mass(maj_body)
+        db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
+        cursor = db.cursor()
+        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[maj_body])
+
+       
+        for row_number, row_data in enumerate(result):
+            maj_body_mass = row_data[1]
         
         if e == 0 or 0 < e < 1: 
             [r_per, r_apo, mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.semiecc(a, e, maj_body_mass)
@@ -177,7 +183,7 @@ class MainWindow(QMainWindow):
     # vpco feature back btn
     def vpco_feature_back_btn(self):
         self.ui.stackedWidget.setCurrentIndex(3)
-        self.ui.Orbit_type_stack.setCurrentIndex(1)          
+        self.ui.Orbit_type_stack.setCurrentIndex(0)          
 
     # vpco input ae screen
     def vpco_a_e(self):
@@ -241,22 +247,30 @@ class MainWindow(QMainWindow):
 
     # SOI
     def SEARCH(self):
-        planet_name = self.ui.SOI_planet_name.currentText()
-        planet_name = planet_name.strip()
+        db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
+        cursor = db.cursor()
 
-        self.ui.lbl_mass.setText("Mass of " + str(planet_name)+":")
-        self.ui.soi_mass.setText(str(call.mass(planet_name)))
-        self.ui.dist_frm_sun.setText(str(call.dist_frm_sun(planet_name)))
+        planet_name = self.ui.SOI_planet_name.currentText()
+        
+        self.ui.lbl_mass.setText("Mass of" + str(planet_name)+":")
        
+
+        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[planet_name])
+
+       
+        for row_number, row_data in enumerate(result):
+            self.ui.soi_mass.setText(str(row_data[1]))
+            self.ui.dist_frm_sun.setText(str(row_data[8]))
             
     def SOI(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        self.ui.rSOI_of_planet_lbl.setText("Radius of SOI of " + str(planet_name.strip()) + ":")
-        Mass_of_Sun = call.mass('Sun')
+        self.ui.label_18.setText("Radius of SOI of " + str(planet_name.strip()) + ":")
+        Mass_of_Sun = 1.989e30
         Minor_body_mass = self.ui.soi_mass.text() 
         distance_bt_sun_plnt = self.ui.soi_mass.text()
         rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
-        self.ui.soi_rad.setText(raund(rSOI,4))
+        rSOI = float(rSOI)
+        self.ui.soi_rad.setText(str(round(rSOI,4)))
     
        
     # SOI Graph
@@ -265,9 +279,13 @@ class MainWindow(QMainWindow):
         planet_name = planet_name1.strip()
         planet_name = planet_name.lower()
         rSOI = self.ui.soi_rad.text()
-
-        r_planet = call.radius(planet_name1)
-        r_soimb = float(rSOI)/r_planet
+        db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
+        cursor = db.cursor()
+        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[planet_name1])
+        
+        for row_number, row_data in enumerate(result):
+            r_planet = row_data[2]/2
+            r_soimb = float(rSOI)/r_planet
         graph3d = SOI(planet_name,rSOI,r_soimb)
         graph3d.run()
             
@@ -304,7 +322,6 @@ class MainWindow(QMainWindow):
                 
         #JDN to JD
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
-        print(type(JD),'\n',JD)
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
     
 
