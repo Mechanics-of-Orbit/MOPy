@@ -23,23 +23,23 @@ class Calculate():
         mu = self.G * major_body_mass
         return [mu, major_body_radius]
     
-    def correct_ohm(self, ohm, n_vec):
+    def correct_ohm(ohm, n_vec):
         if n_vec[0] > 0 and n_vec[1] > 0: 
-            quad = ("This is a Prograde Elliptical Orbit and is in first Quadrant.")
+            quad = ("This is a Prograde Elliptical Orbit and n vector lies in first Quadrant.")
             if ohm >90:
-                ohm -= 360
+                ohm = 360 - ohm
         elif n_vec[0] < 0 and n_vec[1] > 0:
-            quad = ("This is a Retrograde Elliptical Orbit and is in second Quadrant.")
+            quad = ("This is a Retrograde Elliptical Orbit and n vector lies in second Quadrant.")
             if ohm > 180:
-                ohm -= 360
+                ohm = 360 - ohm
         elif n_vec[0] < 0 and n_vec[1] < 0:
-            quad = ("This is a Retrograde Elliptical Orbit and is in Third Quadrant.")
+            quad = ("This is a Retrograde Elliptical Orbit and n vector lies in Third Quadrant.")
             if ohm < 180:
-                ohm -= 360
+                ohm = 360 - ohm
         elif n_vec[0] > 0 and n_vec[1] < 0:
-            quad = ("This is a Prograde Elliptical Orbit and is in fourth Quadrant.")
+            quad = ("This is a Prograde Elliptical Orbit and n vector lies in fourth Quadrant.")
             if ohm < 90:
-                ohm -= 360
+                ohm = 360 - ohm
         return [ohm, quad]
     
     def other_var(self, pos_vec, vel_vec):

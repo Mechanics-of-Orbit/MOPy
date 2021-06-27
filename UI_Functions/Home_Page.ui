@@ -11350,7 +11350,7 @@ QFrame:hover{
                        <string notr="true">border:none;</string>
                       </property>
                       <property name="currentIndex">
-                       <number>1</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="CoOE_output_lbl_error_screen">
                        <widget class="QLineEdit" name="CoOE_output_lbl_error">
@@ -11362,9 +11362,18 @@ QFrame:hover{
                           <height>41</height>
                          </rect>
                         </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-color:transparent;
+color: rgb(176, 255, 152);</string>
+                        </property>
                        </widget>
                       </widget>
-                      <widget class="QWidget" name="CoOE_output_parameters_screen">
+                      <widget class="QWidget" name="CoOE_output_classic_parameters_screen">
                        <widget class="QComboBox" name="arg_of_per_unit_coe_n_aoe">
                         <property name="geometry">
                          <rect>
@@ -11417,7 +11426,7 @@ QComboBox:hover{
                          </property>
                         </item>
                        </widget>
-                       <widget class="QLabel" name="label_247">
+                       <widget class="QLabel" name="raan_lbl_coe_n_aoe">
                         <property name="geometry">
                          <rect>
                           <x>490</x>
@@ -11438,7 +11447,7 @@ color:white;
                          <set>Qt::AlignCenter</set>
                         </property>
                        </widget>
-                       <widget class="QLabel" name="label_151">
+                       <widget class="QLabel" name="semi_major_axis_lbl_coe_n_aoe">
                         <property name="geometry">
                          <rect>
                           <x>0</x>
@@ -11521,7 +11530,7 @@ QLabel:hover{
                          <set>Qt::AlignCenter</set>
                         </property>
                        </widget>
-                       <widget class="QLabel" name="label_253">
+                       <widget class="QLabel" name="true_anamoly_lbl_coe_n_aoe">
                         <property name="geometry">
                          <rect>
                           <x>490</x>
@@ -11666,7 +11675,7 @@ QComboBox:hover{
                          </property>
                         </item>
                        </widget>
-                       <widget class="QLabel" name="label_252">
+                       <widget class="QLabel" name="Arguementofperiapsis_lbl_coe_n_aoe">
                         <property name="geometry">
                          <rect>
                           <x>490</x>
@@ -11843,7 +11852,7 @@ QComboBox:hover{
                          </property>
                         </item>
                        </widget>
-                       <widget class="QLabel" name="label_245">
+                       <widget class="QLabel" name="inclination_lbl_coe_n_aoe">
                         <property name="geometry">
                          <rect>
                           <x>0</x>
@@ -11864,7 +11873,7 @@ color:white;
                          <set>Qt::AlignCenter</set>
                         </property>
                        </widget>
-                       <widget class="QLabel" name="label_155">
+                       <widget class="QLabel" name="Eccentricity_lbl_aoe_n_coe">
                         <property name="geometry">
                          <rect>
                           <x>0</x>
@@ -11977,12 +11986,960 @@ QLabel:hover{
                           <height>31</height>
                          </rect>
                         </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                         </font>
+                        </property>
                         <property name="styleSheet">
-                         <string notr="true">background-color:transparent;</string>
+                         <string notr="true">background-color:transparent;
+color: rgb(176, 255, 152);</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
+                       </widget>
+                      </widget>
+                      <widget class="QWidget" name="CoOE_output_alternate_parameters_screen">
+                       <widget class="QLabel" name="inclination_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>230</x>
+                          <y>200</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="longitude_of_periapsis_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>730</x>
+                          <y>60</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="label_267">
+                        <property name="geometry">
+                         <rect>
+                          <x>20</x>
+                          <y>30</y>
+                          <width>221</width>
+                          <height>21</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Output:</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="Eccentricity_lbl_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>0</x>
+                          <y>130</y>
+                          <width>221</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Eccentricity</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="semimajor_axis_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>230</x>
+                          <y>60</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="inclination_lbl_2_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>0</x>
+                          <y>200</y>
+                          <width>221</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Inclination</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QComboBox" name="longitude_of_periapsis_unit_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>880</x>
+                          <y>60</y>
+                          <width>100</width>
+                          <height>40</height>
+                         </rect>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QComboBox{
+	
+	
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 17px;}
+
+
+QComboBox:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="editable">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>  Degree</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  Radians</string>
+                         </property>
+                        </item>
+                       </widget>
+                       <widget class="QLineEdit" name="CoOE_output_para_lbl_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>30</x>
+                          <y>-1</y>
+                          <width>961</width>
+                          <height>31</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-color:transparent;
+color: rgb(176, 255, 152);</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QComboBox" name="tru_ana_unit_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>880</x>
+                          <y>130</y>
+                          <width>100</width>
+                          <height>40</height>
+                         </rect>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QComboBox{
+	
+	
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 17px;}
+
+
+QComboBox:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="editable">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>  Degree</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  Radians</string>
+                         </property>
+                        </item>
+                       </widget>
+                       <widget class="QLabel" name="longitude_of_periapsis__lbl_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>490</x>
+                          <y>60</y>
+                          <width>231</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Logitude of Periapsis</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="semi_majoraxis_lbl_2_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>0</x>
+                          <y>60</y>
+                          <width>221</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Semi-major Axis</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="tru_ana_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>730</x>
+                          <y>130</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="eccentricity_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>230</x>
+                          <y>130</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QComboBox" name="semimajor_axis_unit_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>380</x>
+                          <y>60</y>
+                          <width>100</width>
+                          <height>40</height>
+                         </rect>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QComboBox{
+	
+	
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 17px;}
+
+
+QComboBox:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="editable">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>  km</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  miles</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  AU</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  DU</string>
+                         </property>
+                        </item>
+                       </widget>
+                       <widget class="QLabel" name="true_anamoly_lbl_2_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>490</x>
+                          <y>130</y>
+                          <width>231</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>True Anamoly</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QComboBox" name="inclination_unit_coe_n_aoe_2">
+                        <property name="geometry">
+                         <rect>
+                          <x>380</x>
+                          <y>200</y>
+                          <width>100</width>
+                          <height>40</height>
+                         </rect>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QComboBox{
+	
+	
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 17px;}
+
+
+QComboBox:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="editable">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>  Degree</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  Radians</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </widget>
+                      <widget class="QWidget" name="CoOE_output_alternate2_parameters_screen">
+                       <widget class="QLabel" name="inclination_coe_n_aoe_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>230</x>
+                          <y>200</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="true_longitude_coe_n_aoe_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>730</x>
+                          <y>60</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="label_270">
+                        <property name="geometry">
+                         <rect>
+                          <x>20</x>
+                          <y>30</y>
+                          <width>221</width>
+                          <height>21</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Output:</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="eccentricity_lbl_3_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>0</x>
+                          <y>130</y>
+                          <width>221</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Eccentricity</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="semimajor_axis_coe_n_aoe_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>230</x>
+                          <y>60</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="inclination_lbl_3_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>0</x>
+                          <y>200</y>
+                          <width>221</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Inclination</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QComboBox" name="true_longitude_unit_coe_n_aoe_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>880</x>
+                          <y>60</y>
+                          <width>100</width>
+                          <height>40</height>
+                         </rect>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QComboBox{
+	
+	
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 17px;}
+
+
+QComboBox:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="editable">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>  Degree</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  Radians</string>
+                         </property>
+                        </item>
+                       </widget>
+                       <widget class="QLineEdit" name="CoOE_output_para_lbl_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>30</x>
+                          <y>-1</y>
+                          <width>961</width>
+                          <height>31</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-color:transparent;
+color: rgb(176, 255, 152);</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="true_longitude_lbl_3_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>490</x>
+                          <y>60</y>
+                          <width>231</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>True Longitude</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="semi_major_axis_lbl_3_coe_n_aoe">
+                        <property name="geometry">
+                         <rect>
+                          <x>0</x>
+                          <y>60</y>
+                          <width>221</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border:none;
+color:white;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Semi-major Axis</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="eccentricity_coe_n_aoe_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>230</x>
+                          <y>130</y>
+                          <width>141</width>
+                          <height>41</height>
+                         </rect>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 20px;
+	color:black;
+}
+
+
+QLabel:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QComboBox" name="semimajor_axis_unit_coe_n_aoe_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>380</x>
+                          <y>60</y>
+                          <width>100</width>
+                          <height>40</height>
+                         </rect>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QComboBox{
+	
+	
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 17px;}
+
+
+QComboBox:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="editable">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>  km</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  miles</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  AU</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  DU</string>
+                         </property>
+                        </item>
+                       </widget>
+                       <widget class="QComboBox" name="inclination_unit_coe_n_aoe_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>380</x>
+                          <y>200</y>
+                          <width>100</width>
+                          <height>40</height>
+                         </rect>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QComboBox{
+	
+	
+	
+	border: 5px solid rgb(84, 84, 197);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 17px;}
+
+
+QComboBox:hover{
+	border: 4px solid rgb(2, 119, 189);
+}</string>
+                        </property>
+                        <property name="editable">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>  Degree</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>  Radians</string>
+                         </property>
+                        </item>
                        </widget>
                       </widget>
                      </widget>
