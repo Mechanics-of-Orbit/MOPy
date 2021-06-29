@@ -18,7 +18,7 @@ class Calculate:
         mu = 3.986e5 # self.G * major_body_mass
         return [mu, major_body_radius]
     
-    def correct_ohm(self, ohm, n_vec):
+    def correct_ohm(ohm, n_vec):
         if n_vec[0] > 0 and n_vec[1] > 0: 
             quad = ("This is a Prograde Elliptical Orbit and is in first Quadrant.")
             if ohm >90:
@@ -49,7 +49,6 @@ class Calculate:
         K = [0, 0, 1]
         inc = (acos((dot(h_vec, K))/norm(h_vec))) * 180/pi
         sma = 1/((2/norm(pos_vec))-((norm(vel_vec)*norm(vel_vec))/mu))
-        return [sma, inc, e_vec]
         return {"Semi-Major Axis": sma, "Inclination": inc, "Eccentricity": e_vec}
 
     def ACOE(pos_vec, vel_vec, e_vec, inc):
@@ -60,7 +59,6 @@ class Calculate:
             ohm = Calculate.correct_ohm(ohm, n_vec)
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            return [ohm, omega, nu]
             return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
         elif inc == 0 or 180: #Inclination is Zero
             if norm(e_vec) > 0: #Elliptical Orbit
@@ -70,11 +68,9 @@ class Calculate:
                 return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu}
             elif norm(e_vec) == 0: #Circular Orbit
                 Tr_long_l = acos(dot(I,pos_vec)/(norm(pos_vec)*norm(I)))
-                return [Tr_long_l]
                 return {"True Longitude": Tr_long_l}
         elif norm(e_vec) == 0: #Circular orbit with inclination non-zero/pi
             Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
-            return [Arg_of_lattitude_u]
             return {"Argument of Latitude": Arg_of_lattitude_u}
 
     def possibility(cls, major_body, pos_vec, vel_vec):
@@ -90,15 +86,10 @@ class Calculate:
         return True
 
 if __name__ == '__main__':
-    pos_vec = [1, 2, 3]
-    vel_vec = [4, 5, 6]
     pos_vec = [8250, 390, 6900]
     vel_vec = [-0.7, 6.6, -0.6]
     Major_Body = "Earth"
     [mu, major_body_radius] = Calculate.muvalue("Earth")
-    [sma, inc, e_vec] = Calculate.OE(pos_vec, vel_vec, mu)
-    oon = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
-    print(oon)
     BOE = Calculate.OE(pos_vec, vel_vec, mu)
     OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Eccentricity'], BOE['Inclination'])
     print(BOE)
