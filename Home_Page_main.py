@@ -22,9 +22,7 @@ from Functions.SOI3D import SOI
 
 from Functions.Sections.CoOE import Calculate
 
-from numpy.linalg import norm
-from numpy import dot, pi, cross, multiply as multi
-from math import acos
+
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -244,59 +242,6 @@ class MainWindow(QMainWindow):
         self.ui.semimajor_axis_coe_n_aoe.setText(str(round(sma, 4)))
         self.ui.inclination_coe_n_aoe.setText(str(round(inc, 4)))
         self.ui.eccentricity_coe_n_aoe.setText(str(round(e_norm, 4)))
-
-        [h_vec, n_vec] = Calculate.other_var(self, pos_vec, vel_vec)
-
-        
-        ohm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
-        [ohm,quad] = Calculate.correct_ohm(ohm, n_vec)
-
-        pos = norm(pos_vec)
-        vel = norm(vel_vec)
-        sma = 1/((2/pos)-(vel*vel/mu))
-        r_peri = sma*(1-norm(e_vec))
-        if r_peri < major_body_radius:
-            self.ui.CoOE_output_stack.setCurrentIndex(1)
-            self.ui.CoOE_output_lbl_error.setText('Satellite will crash into the planets surface')
-
-        if inc != 0 or 180 and norm(e_vec) > 0: #Nothing is Zero/180
-            nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))*(180/pi)
-            omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))*(180/pi)
-            
-            self.ui.CoOE_output_para_lbl.setText(quad)
-
-            self.ui.CoOE_output_stack.setCurrentIndex(1)
-            self.ui.RAAN_coe_n_aoe.setText(str(round(ohm, 4)))
-            self.ui.arg_of_per_coe_n_aoe.setText(str(round(omega, 4)))  
-            self.ui.tru_ana_coe_n_aoe.setText(str(round(nu, 4)))                                   
-            
-        elif inc == 0 or 180: #Inclination is Zero
-            if norm(e_vec) > 0: #Elliptical Orbit
-                nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
-                Long_of_peri_pi = acos(dot(self.I,e_vec)/(norm(self.I)*norm(e_vec)))
-
-                self.ui.CoOE_output_para_lbl_2.text(quad)
-
-                self.ui.CoOE_output_stack.setCurrentIndex(2)
-                self.ui.longitude_of_periapsis_coe_n_aoe_2.setText(Long_of_peri_pi)
-                self.ui.tru_ana_coe_n_aoe_2.setText(nu)
-                
-            elif norm(e_vec) == 0: #Circular Orbit
-                Tr_long_l = acos(dot(self.I,pos_vec)/(norm(pos_vec)*norm(self.I)))
-
-                self.ui.CoOE_output_para_lbl_3.text(quad)
-
-                self.ui.CoOE_output_stack.setCurrentIndex(3)
-                self.ui.true_longitude_coe_n_aoe_3.setText(Tr_long_l)
-                
-        elif norm(e_vec) == 0: #Circular orbit with inclination non-zero/pi
-            Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
-            self.ui.CoOE_output_para_lbl_3.text(quad)
-            self.ui.CoOE_output_stack.setCurrentIndex(3)
-            self.ui.true_longitude_lbl_3_coe_n_aoe.text('Arguement of Periapsis')
-            self.ui.true_longitude_coe_n_aoe_3.setText(Arg_of_lattitude_u)
-            
-
 
 
 
