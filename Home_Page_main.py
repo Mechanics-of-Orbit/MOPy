@@ -230,7 +230,15 @@ class MainWindow(QMainWindow):
         vel_vec = [float(Vi), float(Vj) ,float(Vk)] 
         Major_Body = self.ui.maj_body_CoOE.currentText()
         Major_Body = Major_Body.strip()
-        [mu, major_body_radius] = Calculate.muvalue(self, Major_Body)
+
+        if Major_Body != 'Other':
+            self.ui.otherbody_stack.setCurrentIndex(0)
+            [mu, major_body_radius] = Calculate.muvalue(self, Major_Body)
+        
+        elif Major_Body == 'Other':
+            self.ui.otherbody_stack.setCurrentIndex(1)
+            self.ui.CoOE_output_lbl_error.setText('')
+            Body_mass = self.ui.other_body_mass_coe_n_aoe
         [sma, inc, e_vec, e_norm] = Calculate.OE(self, pos_vec, vel_vec, mu)
         self.ui.CoOE_output_stack.setCurrentIndex(1)
         self.ui.semimajor_axis_coe_n_aoe.setText(str(round(sma, 4)))
