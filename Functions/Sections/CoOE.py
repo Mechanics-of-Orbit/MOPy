@@ -18,7 +18,7 @@ class Calculate:
         mu = 3.986e5 # self.G * major_body_mass
         return [mu, major_body_radius]
     
-    def correct_ohm(ohm, n_vec):
+    def correct_ohm(self, ohm, n_vec):
         if n_vec[0] > 0 and n_vec[1] > 0: 
             quad = ("This is a Prograde Elliptical Orbit and is in first Quadrant.")
             if ohm >90:
