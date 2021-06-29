@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageTEKZVP.ui'
+## Form generated from reading UI file 'Home_PageSdFBOH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -4593,7 +4593,7 @@ class Ui_MainWindow(object):
         self.maj_body_CoOE.addItem("")
         self.maj_body_CoOE.addItem("")
         self.maj_body_CoOE.setObjectName(u"maj_body_CoOE")
-        self.maj_body_CoOE.setGeometry(QRect(110, 190, 251, 41))
+        self.maj_body_CoOE.setGeometry(QRect(410, 190, 251, 41))
         self.maj_body_CoOE.setStyleSheet(u"QComboBox{\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
 "	font: 12pt \"Arial\";\n"
@@ -4605,7 +4605,7 @@ class Ui_MainWindow(object):
 "}")
         self.otherbody_stack = QStackedWidget(self.PosNVelVector_inpt_frame)
         self.otherbody_stack.setObjectName(u"otherbody_stack")
-        self.otherbody_stack.setGeometry(QRect(690, 170, 331, 71))
+        self.otherbody_stack.setGeometry(QRect(690, 160, 331, 91))
         self.otherbody_stack.setStyleSheet(u"border:none;\n"
 "color:white;\n"
 "")
@@ -4614,10 +4614,10 @@ class Ui_MainWindow(object):
         self.otherbody_stack.addWidget(self.blanck)
         self.show_page = QWidget()
         self.show_page.setObjectName(u"show_page")
-        self.lineEdit_16 = QLineEdit(self.show_page)
-        self.lineEdit_16.setObjectName(u"lineEdit_16")
-        self.lineEdit_16.setGeometry(QRect(10, 20, 141, 41))
-        self.lineEdit_16.setStyleSheet(u"QLineEdit{\n"
+        self.other_body_mass_coe_n_aoe = QLineEdit(self.show_page)
+        self.other_body_mass_coe_n_aoe.setObjectName(u"other_body_mass_coe_n_aoe")
+        self.other_body_mass_coe_n_aoe.setGeometry(QRect(10, 10, 141, 41))
+        self.other_body_mass_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4628,11 +4628,11 @@ class Ui_MainWindow(object):
 "QLineEdit:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.lineEdit_16.setAlignment(Qt.AlignCenter)
-        self.lineEdit_17 = QLineEdit(self.show_page)
-        self.lineEdit_17.setObjectName(u"lineEdit_17")
-        self.lineEdit_17.setGeometry(QRect(180, 20, 141, 41))
-        self.lineEdit_17.setStyleSheet(u"QLineEdit{\n"
+        self.other_body_mass_coe_n_aoe.setAlignment(Qt.AlignCenter)
+        self.other_body_radius_coe_n_aoe = QLineEdit(self.show_page)
+        self.other_body_radius_coe_n_aoe.setObjectName(u"other_body_radius_coe_n_aoe")
+        self.other_body_radius_coe_n_aoe.setGeometry(QRect(180, 10, 141, 41))
+        self.other_body_radius_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -4643,7 +4643,21 @@ class Ui_MainWindow(object):
 "QLineEdit:hover{\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
-        self.lineEdit_17.setAlignment(Qt.AlignCenter)
+        self.other_body_radius_coe_n_aoe.setAlignment(Qt.AlignCenter)
+        self.cal_btn_coe_n_aoe = QPushButton(self.show_page)
+        self.cal_btn_coe_n_aoe.setObjectName(u"cal_btn_coe_n_aoe")
+        self.cal_btn_coe_n_aoe.setGeometry(QRect(130, 60, 71, 21))
+        self.cal_btn_coe_n_aoe.setFont(font5)
+        self.cal_btn_coe_n_aoe.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgb(2, 119, 189);\n"
+"	color:rgb(245, 255, 179);\n"
+"	border-radius: 10px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	\n"
+"	background-color: rgb(255, 170, 0);\n"
+"}")
         self.otherbody_stack.addWidget(self.show_page)
         self.label_264 = QLabel(self.PosNVelVector_inpt_frame)
         self.label_264.setObjectName(u"label_264")
@@ -4652,20 +4666,6 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "")
         self.label_264.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.cal_btn_coe_n_aoe = QPushButton(self.PosNVelVector_inpt_frame)
-        self.cal_btn_coe_n_aoe.setObjectName(u"cal_btn_coe_n_aoe")
-        self.cal_btn_coe_n_aoe.setGeometry(QRect(460, 190, 121, 41))
-        self.cal_btn_coe_n_aoe.setFont(font9)
-        self.cal_btn_coe_n_aoe.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
-"	color:rgb(245, 255, 179);\n"
-"	border-radius: 20px\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	\n"
-"	background-color: rgb(255, 170, 0);\n"
-"}")
 
         self.verticalLayout_49.addWidget(self.PosNVelVector_inpt_frame)
 
@@ -4716,6 +4716,7 @@ class Ui_MainWindow(object):
         self.CoOE_output_lbl_error.setFont(font9)
         self.CoOE_output_lbl_error.setStyleSheet(u"background-color:transparent;\n"
 "color: rgb(176, 255, 152);")
+        self.CoOE_output_lbl_error.setAlignment(Qt.AlignCenter)
         self.CoOE_output_stack.addWidget(self.CoOE_output_lbl_error_screen)
         self.CoOE_output_classic_parameters_screen = QWidget()
         self.CoOE_output_classic_parameters_screen.setObjectName(u"CoOE_output_classic_parameters_screen")
@@ -5482,7 +5483,7 @@ class Ui_MainWindow(object):
         self.Orbit_type_stack.setCurrentIndex(1)
         self.VPCO_output_stack.setCurrentIndex(0)
         self.otherbody_stack.setCurrentIndex(0)
-        self.CoOE_output_stack.setCurrentIndex(0)
+        self.CoOE_output_stack.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -5921,10 +5922,10 @@ class Ui_MainWindow(object):
         self.maj_body_CoOE.setItemText(10, QCoreApplication.translate("MainWindow", u"  Pluto", None))
         self.maj_body_CoOE.setItemText(11, QCoreApplication.translate("MainWindow", u"  Other", None))
 
-        self.lineEdit_16.setText(QCoreApplication.translate("MainWindow", u"Enter Mass", None))
-        self.lineEdit_17.setText(QCoreApplication.translate("MainWindow", u"Enter Radius", None))
-        self.label_264.setText(QCoreApplication.translate("MainWindow", u"Input:", None))
+        self.other_body_mass_coe_n_aoe.setText(QCoreApplication.translate("MainWindow", u"Enter Mass", None))
+        self.other_body_radius_coe_n_aoe.setText(QCoreApplication.translate("MainWindow", u"Enter Radius", None))
         self.cal_btn_coe_n_aoe.setText(QCoreApplication.translate("MainWindow", u"Calculate", None))
+        self.label_264.setText(QCoreApplication.translate("MainWindow", u"Input:", None))
         self.arg_of_per_unit_coe_n_aoe.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
         self.arg_of_per_unit_coe_n_aoe.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
 

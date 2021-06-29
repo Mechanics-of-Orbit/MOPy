@@ -11070,7 +11070,7 @@ QLineEdit:hover{
                    <widget class="QComboBox" name="maj_body_CoOE">
                     <property name="geometry">
                      <rect>
-                      <x>110</x>
+                      <x>410</x>
                       <y>190</y>
                       <width>251</width>
                       <height>41</height>
@@ -11152,9 +11152,9 @@ QComboBox:hover{
                     <property name="geometry">
                      <rect>
                       <x>690</x>
-                      <y>170</y>
+                      <y>160</y>
                       <width>331</width>
-                      <height>71</height>
+                      <height>91</height>
                      </rect>
                     </property>
                     <property name="styleSheet">
@@ -11167,11 +11167,11 @@ color:white;
                     </property>
                     <widget class="QWidget" name="blanck"/>
                     <widget class="QWidget" name="show_page">
-                     <widget class="QLineEdit" name="lineEdit_16">
+                     <widget class="QLineEdit" name="other_body_mass_coe_n_aoe">
                       <property name="geometry">
                        <rect>
                         <x>10</x>
-                        <y>20</y>
+                        <y>10</y>
                         <width>141</width>
                         <height>41</height>
                        </rect>
@@ -11196,11 +11196,11 @@ QLineEdit:hover{
                        <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
-                     <widget class="QLineEdit" name="lineEdit_17">
+                     <widget class="QLineEdit" name="other_body_radius_coe_n_aoe">
                       <property name="geometry">
                        <rect>
                         <x>180</x>
-                        <y>20</y>
+                        <y>10</y>
                         <width>141</width>
                         <height>41</height>
                        </rect>
@@ -11225,6 +11225,36 @@ QLineEdit:hover{
                        <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
+                     <widget class="QPushButton" name="cal_btn_coe_n_aoe">
+                      <property name="geometry">
+                       <rect>
+                        <x>130</x>
+                        <y>60</y>
+                        <width>71</width>
+                        <height>21</height>
+                       </rect>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	background-color:rgb(2, 119, 189);
+	color:rgb(245, 255, 179);
+	border-radius: 10px
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(255, 170, 0);
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Calculate</string>
+                      </property>
+                     </widget>
                     </widget>
                    </widget>
                    <widget class="QLabel" name="label_264">
@@ -11246,36 +11276,6 @@ color:white;
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                   <widget class="QPushButton" name="cal_btn_coe_n_aoe">
-                    <property name="geometry">
-                     <rect>
-                      <x>460</x>
-                      <y>190</y>
-                      <width>121</width>
-                      <height>41</height>
-                     </rect>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>12</pointsize>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189);
-	color:rgb(245, 255, 179);
-	border-radius: 20px
-}
-
-QPushButton:hover{
-	
-	background-color: rgb(255, 170, 0);
-}</string>
-                    </property>
-                    <property name="text">
-                     <string>Calculate</string>
                     </property>
                    </widget>
                   </widget>
@@ -11350,7 +11350,7 @@ QFrame:hover{
                        <string notr="true">border:none;</string>
                       </property>
                       <property name="currentIndex">
-                       <number>0</number>
+                       <number>1</number>
                       </property>
                       <widget class="QWidget" name="CoOE_output_lbl_error_screen">
                        <widget class="QLineEdit" name="CoOE_output_lbl_error">
@@ -11370,6 +11370,9 @@ QFrame:hover{
                         <property name="styleSheet">
                          <string notr="true">background-color:transparent;
 color: rgb(176, 255, 152);</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
                         </property>
                        </widget>
                       </widget>

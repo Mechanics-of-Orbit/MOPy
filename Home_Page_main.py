@@ -236,18 +236,31 @@ class MainWindow(QMainWindow):
         Vk = self.ui.Vk_coe_n_aoe.text()
         pos_vec = [float(Ri), float(Rj), float(Rk)]
         vel_vec = [float(Vi), float(Vj) ,float(Vk)] 
+        self.ui.CoOE_output_stack.setCurrentIndex(0)
         Major_Body = self.ui.maj_body_CoOE.currentText()
         Major_Body = Major_Body.strip()
-        [mu, major_body_radius] = Calculate.muvalue(self, Major_Body)
+        if Major_Body != 'Other':
+            self.ui.otherbody_stack.setCurrentIndex(0)
+            [mu, major_body_radius] = Calculate.muvalue(self, Major_Body)
+            
+        elif Major_Body == 'Other':
+            self.ui.otherbody_stack.setCurrentIndex(1)
+            self.ui.CoOE_output_lbl_error.setText('')
+            Body_mass = self.ui.other_body_mass_coe_n_aoe.text()
+            major_body_radius = self.ui.other_body_radius_coe_n_aoe.text()
+            mu = self.G * float(Body_mass)
+
         [sma, inc, e_vec, e_norm] = Calculate.OE(self, pos_vec, vel_vec, mu)
-        self.ui.CoOE_output_stack.setCurrentIndex(1)
+
+        inc = inc * (180/pi)
+        
         self.ui.semimajor_axis_coe_n_aoe.setText(str(round(sma, 4)))
         self.ui.inclination_coe_n_aoe.setText(str(round(inc, 4)))
         self.ui.eccentricity_coe_n_aoe.setText(str(round(e_norm, 4)))
 
         [h_vec, n_vec] = Calculate.other_var(self, pos_vec, vel_vec)
 
-        
+            
         ohm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
         [ohm,quad] = Calculate.correct_ohm(ohm, n_vec)
 
@@ -258,18 +271,20 @@ class MainWindow(QMainWindow):
         if r_peri < major_body_radius:
             self.ui.CoOE_output_stack.setCurrentIndex(1)
             self.ui.CoOE_output_lbl_error.setText('Satellite will crash into the planets surface')
+        else:
+            self.ui.CoOE_output_lbl_error.setText('')
 
         if inc != 0 or 180 and norm(e_vec) > 0: #Nothing is Zero/180
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))*(180/pi)
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))*(180/pi)
-            
+                
             self.ui.CoOE_output_para_lbl.setText(quad)
 
             self.ui.CoOE_output_stack.setCurrentIndex(1)
             self.ui.RAAN_coe_n_aoe.setText(str(round(ohm, 4)))
             self.ui.arg_of_per_coe_n_aoe.setText(str(round(omega, 4)))  
             self.ui.tru_ana_coe_n_aoe.setText(str(round(nu, 4)))                                   
-            
+                
         elif inc == 0 or 180: #Inclination is Zero
             if norm(e_vec) > 0: #Elliptical Orbit
                 nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
@@ -280,7 +295,7 @@ class MainWindow(QMainWindow):
                 self.ui.CoOE_output_stack.setCurrentIndex(2)
                 self.ui.longitude_of_periapsis_coe_n_aoe_2.setText(Long_of_peri_pi)
                 self.ui.tru_ana_coe_n_aoe_2.setText(nu)
-                
+                    
             elif norm(e_vec) == 0: #Circular Orbit
                 Tr_long_l = acos(dot(self.I,pos_vec)/(norm(pos_vec)*norm(self.I)))
 
@@ -288,17 +303,13 @@ class MainWindow(QMainWindow):
 
                 self.ui.CoOE_output_stack.setCurrentIndex(3)
                 self.ui.true_longitude_coe_n_aoe_3.setText(Tr_long_l)
-                
+                    
         elif norm(e_vec) == 0: #Circular orbit with inclination non-zero/pi
             Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
             self.ui.CoOE_output_para_lbl_3.text(quad)
             self.ui.CoOE_output_stack.setCurrentIndex(3)
             self.ui.true_longitude_lbl_3_coe_n_aoe.text('Arguement of Periapsis')
             self.ui.true_longitude_coe_n_aoe_3.setText(Arg_of_lattitude_u)
-            
-
-
-
 
     # SOI
     def SEARCH(self):

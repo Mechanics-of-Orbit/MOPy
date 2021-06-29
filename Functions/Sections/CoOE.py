@@ -50,7 +50,7 @@ class Calculate():
     def OE(self, pos_vec, vel_vec, mu):
         [h_vec, n_vec] = Calculate.other_var(self, pos_vec, vel_vec)
         e_vec = (multi((norm(vel_vec)*norm(vel_vec)-(mu/norm(pos_vec))),pos_vec)- multi(dot(pos_vec,vel_vec),vel_vec))/(mu)
-        inc = (acos((dot(h_vec, self.K))/norm(h_vec))) * 180/pi
+        inc = (acos((dot(h_vec, self.K))/norm(h_vec))) 
         sma = 1/((2/norm(pos_vec))-((norm(vel_vec)*norm(vel_vec))/mu))
         e_norm = norm(e_vec)
         return [sma, inc, e_vec, e_norm]
