@@ -47,13 +47,14 @@ class Calculate:
         [h_vec, n_vec] = Calculate.other_var(pos_vec, vel_vec)
         e_vec = (multi((norm(vel_vec)*norm(vel_vec)-(mu/norm(pos_vec))),pos_vec)- multi(dot(pos_vec,vel_vec),vel_vec))/(mu)
         K = [0, 0, 1]
-        inc = (acos((dot(h_vec, K))/norm(h_vec))) * 180/pi
+        inc = (acos((dot(h_vec, K))/norm(h_vec)))
         sma = 1/((2/norm(pos_vec))-((norm(vel_vec)*norm(vel_vec))/mu))
         return {"Semi-Major Axis": sma, "Inclination": inc, "Eccentricity": e_vec}
 
     def ACOE(pos_vec, vel_vec, e_vec, inc):
         [h_vec, n_vec] = Calculate.other_var(pos_vec, vel_vec)
         I = [1, 0, 0]
+        inc = inc * 180/pi
         if inc != 0 or 180 and norm(e_vec) > 0: #Nothing is Zero/180
             ohm = (acos((dot(I,n_vec))/norm(n_vec)))
             ohm = Calculate.correct_ohm(ohm, n_vec)
