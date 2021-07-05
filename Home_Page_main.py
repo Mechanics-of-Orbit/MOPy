@@ -262,7 +262,7 @@ class MainWindow(QMainWindow):
         
         
         OER = Calculate.OE(pos_vec, vel_vec, mu)
-        print(type(OER['Inclination']))
+        
         sma = float(OER['Semi-Major Axis'])
         inc_deg = float(OER['Inclination'])*(180/pi)
 
@@ -316,50 +316,48 @@ class MainWindow(QMainWindow):
             self.ui.CoOE_output_lbl_error.setText('Satellite will crash into the planets surface')
         else:
             self.ui.CoOE_output_lbl_error.setText('')
-        print(inc)
+        
         ty = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
-        # if len(ty) == 4:
-            
-        print(pos_vec, vel_vec, e_vec, inc, int(ty[0])*(180/pi))
+        
+        if len(ty) == 4:
+            keys = list(ty.keys())
+            values = list(ty.values()) 
+            self.ui.RAAN_CoOE_lbl.setText(keys[0])
+            self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
+            self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
+            self.ui.arg_of_per_coe_n_aoe.setText(str(round(values[1] * (180/pi), 4)))
+            self.ui.tru_ano_CoOE_lbl.setText(keys[2])
+            self.ui.tru_ana_coe_n_aoe.setText(str(round(values[2] * (180/pi), 4))) 
 
-        if inc != 0 or 180 and norm(e_vec) > 0: #Nothing is Zero/180
-            nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))*(180/pi)
-            omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))*(180/pi)
-                
-            self.ui.CoOE_output_para_lbl.setText(quad)
+        elif len(ty) == 3:
+            keys = list(ty.keys())
+            values = list(ty.values())
+            self.ui.RAAN_CoOE_lbl.setText(keys[0])
+            self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
+            self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
+            self.ui.arg_of_per_coe_n_aoe.setText(str(round(values[1] * (180/pi), 4)))
+            self.ui.tru_ano_CoOE_lbl.setHidden(1)
+            self.ui.tru_ana_coe_n_aoe.setHidden(1)
 
-            self.ui.CoOE_output_stack.setCurrentIndex(1)
-            self.ui.RAAN_coe_n_aoe.setText(str(round(ohm, 4)))
-            self.ui.arg_of_per_coe_n_aoe.setText(str(round(omega, 4)))  
-            self.ui.tru_ana_coe_n_aoe.setText(str(round(nu, 4)))                                   
-                
-        elif inc == 0 or 180: #Inclination is Zero
-            if norm(e_vec) > 0: #Elliptical Orbit
-                nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
-                Long_of_peri_pi = acos(dot(self.I,e_vec)/(norm(self.I)*norm(e_vec)))
+        elif len(ty) == 2:
+            keys = list(ty.keys())
+            values = list(ty.values())
+            self.ui.RAAN_CoOE_lbl.setText(keys[0])
+            self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
+            self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
+            self.ui.arg_of_per_coe_n_aoe.setText(str(round(values[1] * (180/pi), 4)))
+            self.ui.tru_ano_CoOE_lbl.setHidden(1)
+            self.ui.tru_ana_coe_n_aoe.setHidden(1)
 
-                self.ui.CoOE_output_para_lbl_2.text(quad)
-
-                self.ui.CoOE_output_stack.setCurrentIndex(2)
-                self.ui.longitude_of_periapsis_coe_n_aoe_2.setText(Long_of_peri_pi)
-                self.ui.tru_ana_coe_n_aoe_2.setText(nu)
-                    
-            elif norm(e_vec) == 0: #Circular Orbit
-                Tr_long_l = acos(dot(self.I,pos_vec)/(norm(pos_vec)*norm(self.I)))
-
-                self.ui.CoOE_output_para_lbl_3.text(quad)
-
-                self.ui.CoOE_output_stack.setCurrentIndex(3)
-                self.ui.true_longitude_coe_n_aoe_3.setText(Tr_long_l)
-                    
-        elif norm(e_vec) == 0: #Circular orbit with inclination non-zero/pi
-            Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
-            self.ui.CoOE_output_para_lbl_3.text(quad)
-            self.ui.CoOE_output_stack.setCurrentIndex(3)
-            self.ui.true_longitude_lbl_3_coe_n_aoe.text('Arguement of Periapsis')
-            self.ui.true_longitude_coe_n_aoe_3.setText('Arg_of_lattitude_u')
-
-
+        elif len(ty) == 1:
+            keys = list(ty.keys())
+            values = list(ty.values())
+            self.ui.RAAN_CoOE_lbl.setText(keys[0])
+            self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
+            self.ui.arg_of_per_CoOE_lbl.setHidden(1)
+            self.ui.arg_of_per_coe_n_aoe.setHidden(1)
+            self.ui.tru_ano_CoOE_lbl.setHidden(1)
+            self.ui.tru_ana_coe_n_aoe.setHidden(1)
 
     # SOI
     def SEARCH(self):

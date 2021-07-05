@@ -11182,7 +11182,9 @@ color:white;
 	
 	border: 5px solid rgb(84, 84, 197);
 	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;}
+	border-radius: 20px;
+	color: black;
+}
 
 
 QLineEdit:hover{
@@ -11211,7 +11213,9 @@ QLineEdit:hover{
 	
 	border: 5px solid rgb(84, 84, 197);
 	font: 12pt &quot;Arial&quot;;
-	border-radius: 20px;}
+	border-radius: 20px;
+	color: black;
+}
 
 
 QLineEdit:hover{
@@ -11350,7 +11354,7 @@ QFrame:hover{
                        <string notr="true">border:none;</string>
                       </property>
                       <property name="currentIndex">
-                       <number>2</number>
+                       <number>1</number>
                       </property>
                       <widget class="QWidget" name="CoOE_output_lbl_error_screen">
                        <widget class="QLineEdit" name="CoOE_output_lbl_error">
@@ -11430,7 +11434,7 @@ QComboBox:hover{
                          </property>
                         </item>
                        </widget>
-                       <widget class="QLabel" name="label_247">
+                       <widget class="QLabel" name="RAAN_CoOE_lbl">
                         <property name="geometry">
                          <rect>
                           <x>490</x>
@@ -11445,13 +11449,13 @@ color:white;
 </string>
                         </property>
                         <property name="text">
-                         <string>RAAN</string>
+                         <string/>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
                        </widget>
-                       <widget class="QLabel" name="label_151">
+                       <widget class="QLabel" name="sma_CoOE_lbl">
                         <property name="geometry">
                          <rect>
                           <x>0</x>
@@ -11534,7 +11538,7 @@ QLabel:hover{
                          <set>Qt::AlignCenter</set>
                         </property>
                        </widget>
-                       <widget class="QLabel" name="label_253">
+                       <widget class="QLabel" name="tru_ano_CoOE_lbl">
                         <property name="geometry">
                          <rect>
                           <x>490</x>
@@ -11679,7 +11683,7 @@ QComboBox:hover{
                          </property>
                         </item>
                        </widget>
-                       <widget class="QLabel" name="label_252">
+                       <widget class="QLabel" name="arg_of_per_CoOE_lbl">
                         <property name="geometry">
                          <rect>
                           <x>490</x>
@@ -11694,7 +11698,7 @@ color:white;
 </string>
                         </property>
                         <property name="text">
-                         <string>Argument of Periapsis</string>
+                         <string/>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
@@ -11856,7 +11860,7 @@ QComboBox:hover{
                          </property>
                         </item>
                        </widget>
-                       <widget class="QLabel" name="label_245">
+                       <widget class="QLabel" name="inc_CoOE_lbl">
                         <property name="geometry">
                          <rect>
                           <x>0</x>
@@ -11877,7 +11881,7 @@ color:white;
                          <set>Qt::AlignCenter</set>
                         </property>
                        </widget>
-                       <widget class="QLabel" name="label_155">
+                       <widget class="QLabel" name="ecce_CoOE_lbl">
                         <property name="geometry">
                          <rect>
                           <x>0</x>

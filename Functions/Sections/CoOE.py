@@ -20,19 +20,19 @@ class Calculate:
         if n_vec[0] > 0 and n_vec[1] > 0: 
             quad = ("This is a Prograde Elliptical Orbit and is in first Quadrant.")
             if ohm > pi/2:
-                ohm -= 2*pi
+                ohm = 2*pi - ohm
         elif n_vec[0] < 0 and n_vec[1] > 0:
             quad = ("This is a Retrograde Elliptical Orbit and is in second Quadrant.")
             if ohm > pi:
-                ohm -= 2*pi
+                ohm = 2*pi - ohm
         elif n_vec[0] < 0 and n_vec[1] < 0:
             quad = ("This is a Retrograde Elliptical Orbit and is in Third Quadrant.")
             if ohm < pi:
-                ohm -= 2*pi
+                ohm = 2*pi - ohm
         elif n_vec[0] > 0 and n_vec[1] < 0:
             quad = ("This is a Prograde Elliptical Orbit and is in fourth Quadrant.")
             if ohm < pi/2:
-                ohm -= 2*pi
+                ohm = 2*pi - ohm
         return [ohm, quad]
     
     def other_var(pos_vec, vel_vec):
@@ -59,24 +59,24 @@ class Calculate:
             [ohm, quad] = Calculate.correct_ohm(ohm, n_vec)
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            #return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu, }
-            nothing = 4
-            return [ohm, omega, nu, nothing]
+            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
+            
+            
         elif (inc == 0 or 180): #Inclination is Zero
             nothing = 4
             if norm(e_vec) > 0: #Elliptical Orbit
                 nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
                 Long_of_peri_pi = acos(dot(I,e_vec)/(norm(I)*norm(e_vec)))
-                return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu, "NA":"NA"}
+                return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu, "nothing":4}
             elif norm(e_vec) == 0: #Circular Orbit
                 Tr_long_l = acos(dot(I,pos_vec)/(norm(pos_vec)*norm(I)))
-                # return {"True Longitude": Tr_long_l}
-                return [Tr_long_l]
+                return {"True Longitude": Tr_long_l}
+        
         elif (inc != 0 or 180) and norm(e_vec) == 0: #Circular orbit with inclination non-zero/pi
             ohm = (acos((dot(I,n_vec))/norm(n_vec)))
             ohm = Calculate.correct_ohm(ohm, n_vec)
             Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
-            return {"Argument of Latitude": Arg_of_lattitude_u, "NA":"NA", "NA":"NA"}
+            return {"Argument of Latitude": Arg_of_lattitude_u, "RAAN": ohm}
 
     def possibility(cls, major_body, pos_vec, vel_vec):
         [mu, major_body_radius] = Calculate.muvalue(major_body)
