@@ -21,20 +21,20 @@ class Calculate:
     def correct_ohm(ohm, n_vec):
         if n_vec[0] > 0 and n_vec[1] > 0: 
             quad = ("This is a Prograde Elliptical Orbit and is in first Quadrant.")
-            if ohm >90:
-                ohm -= 360
+            if ohm > pi/2:
+                ohm = 2*pi - ohm
         elif n_vec[0] < 0 and n_vec[1] > 0:
             quad = ("This is a Retrograde Elliptical Orbit and is in second Quadrant.")
-            if ohm > 180:
-                ohm -= 360
+            if ohm > pi:
+                ohm = 2*pi  - ohm
         elif n_vec[0] < 0 and n_vec[1] < 0:
             quad = ("This is a Retrograde Elliptical Orbit and is in Third Quadrant.")
-            if ohm < 180:
-                ohm -= 360
+            if ohm < pi:
+                ohm = 2*pi - ohm
         elif n_vec[0] > 0 and n_vec[1] < 0:
             quad = ("This is a Prograde Elliptical Orbit and is in fourth Quadrant.")
-            if ohm < 90:
-                ohm -= 360
+            if ohm < pi/2:
+                ohm = 2*pi - ohm
         return [ohm, quad]
     
     def other_var(pos_vec, vel_vec):
@@ -65,13 +65,13 @@ class Calculate:
             if norm(e_vec) > 0: #Elliptical Orbit
                 nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
                 Long_of_peri_pi = acos(dot(I,e_vec)/(norm(I)*norm(e_vec)))
-                return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu}
+                return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu, "NA":"NA"}
             elif norm(e_vec) == 0: #Circular Orbit
                 Tr_long_l = acos(dot(I,pos_vec)/(norm(pos_vec)*norm(I)))
                 return {"True Longitude": Tr_long_l}
         elif norm(e_vec) == 0: #Circular orbit with inclination non-zero/pi
             Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
-            return {"Argument of Latitude": Arg_of_lattitude_u}
+            return {"Argument of Latitude": Arg_of_lattitude_u, "NA":"NA", "NA":"NA"}
 
     def possibility(cls, major_body, pos_vec, vel_vec):
         [mu, major_body_radius] = Calculate.muvalue(major_body)
@@ -88,13 +88,15 @@ class Calculate:
 if __name__ == '__main__':
     pos_vec = [8250, 390, 6900]
     vel_vec = [-0.7, 6.6, -0.6]
-    e_vec = [0.140621, 0.12893, 0.117342]
-    inc = 39.94
-    manju = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
-    print(manju)
-    # Major_Body = "Earth"
-    # [mu, major_body_radius] = Calculate.muvalue("Earth")
-    # BOE = Calculate.OE(pos_vec, vel_vec, mu)
-    # OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Eccentricity'], BOE['Inclination'])
-    # print(BOE)
-    # print(OOE)
+    # e_vec = [0.140621, 0.12893, 0.117342]
+    # inc = 39.94
+    # manju = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
+    # print(manju)
+    Major_Body = "Earth"
+    [mu, major_body_radius] = Calculate.muvalue("Earth")
+    BOE = Calculate.OE(pos_vec, vel_vec, mu)
+    print(type(BOE['Inclination']))
+    OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Eccentricity'], BOE['Inclination'])
+    print(BOE)
+    print(OOE)
+    
