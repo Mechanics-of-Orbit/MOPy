@@ -65,7 +65,6 @@ class Calculate:
             if norm(e_vec) > 0: #Elliptical Orbit
                 nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
                 Long_of_peri_pi = acos(dot(I,e_vec)/(norm(I)*norm(e_vec)))
-                return [Long_of_peri_pi, nu]
                 return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu}
             elif norm(e_vec) == 0: #Circular Orbit
                 Tr_long_l = acos(dot(I,pos_vec)/(norm(pos_vec)*norm(I)))
@@ -89,9 +88,13 @@ class Calculate:
 if __name__ == '__main__':
     pos_vec = [8250, 390, 6900]
     vel_vec = [-0.7, 6.6, -0.6]
-    Major_Body = "Earth"
-    [mu, major_body_radius] = Calculate.muvalue("Earth")
-    BOE = Calculate.OE(pos_vec, vel_vec, mu)
-    OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Eccentricity'], BOE['Inclination'])
-    print(BOE)
-    print(OOE)
+    e_vec = [0.140621, 0.12893, 0.117342]
+    inc = 39.94
+    manju = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
+    print(manju)
+    # Major_Body = "Earth"
+    # [mu, major_body_radius] = Calculate.muvalue("Earth")
+    # BOE = Calculate.OE(pos_vec, vel_vec, mu)
+    # OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Eccentricity'], BOE['Inclination'])
+    # print(BOE)
+    # print(OOE)
