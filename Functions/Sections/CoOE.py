@@ -20,19 +20,19 @@ class Calculate:
         if n_vec[0] > 0 and n_vec[1] > 0: 
             quad = ("This is a Prograde Elliptical Orbit and is in first Quadrant.")
             if ohm > pi/2:
-                ohm = 2*pi - ohm
+                ohm -= 2*pi
         elif n_vec[0] < 0 and n_vec[1] > 0:
             quad = ("This is a Retrograde Elliptical Orbit and is in second Quadrant.")
             if ohm > pi:
-                ohm = 2*pi  - ohm
+                ohm -= 2*pi
         elif n_vec[0] < 0 and n_vec[1] < 0:
             quad = ("This is a Retrograde Elliptical Orbit and is in Third Quadrant.")
             if ohm < pi:
-                ohm = 2*pi - ohm
+                ohm -= 2*pi
         elif n_vec[0] > 0 and n_vec[1] < 0:
             quad = ("This is a Prograde Elliptical Orbit and is in fourth Quadrant.")
             if ohm < pi/2:
-                ohm = 2*pi - ohm
+                ohm -= 2*pi
         return [ohm, quad]
     
     def other_var(pos_vec, vel_vec):
