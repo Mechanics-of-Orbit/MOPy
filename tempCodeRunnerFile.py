@@ -1,1 +1,2 @@
-vpco_ae_cal_btn(self)
+
+            self.ui.CoOE_output_stack.setCurrentIndex(1)
