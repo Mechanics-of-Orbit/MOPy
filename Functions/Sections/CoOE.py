@@ -59,13 +59,9 @@ class Calculate:
             [ohm, quad] = Calculate.correct_ohm(ohm, n_vec)
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-<<<<<<< Updated upstream
             return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
             
             
-=======
-            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
->>>>>>> Stashed changes
         elif (inc == 0 or 180): #Inclination is Zero
             nothing = 4
             if norm(e_vec) > 0: #Elliptical Orbit
