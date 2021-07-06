@@ -3,9 +3,9 @@ from numpy import dot, pi, cross, multiply as multi
 from math import acos
 
 if __name__ == '__main__':
-    from call_database import call
+    from DB.call_database import call
 else:
-    from Functions.call_database import call
+    from Functions.Sections.DB.call_database import call
 
 class Calculate:
     I = [1, 0, 0]
