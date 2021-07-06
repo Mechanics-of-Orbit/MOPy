@@ -2598,7 +2598,7 @@ border:none;</string>
                         <string>Km</string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="label_18">
+                      <widget class="QLabel" name="rSOI_of_planet_lbl">
                        <property name="geometry">
                         <rect>
                          <x>10</x>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageRxcnvE.ui'
+## Form generated from reading UI file 'Home_PageBkCSak.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -1102,11 +1102,11 @@ class Ui_MainWindow(object):
         self.label_17.setFont(font8)
         self.label_17.setStyleSheet(u"color: white;\n"
 "border:none;")
-        self.label_18 = QLabel(self.frame_36)
-        self.label_18.setObjectName(u"label_18")
-        self.label_18.setGeometry(QRect(10, 30, 211, 21))
-        self.label_18.setFont(font8)
-        self.label_18.setStyleSheet(u"color: white;\n"
+        self.rSOI_of_planet_lbl = QLabel(self.frame_36)
+        self.rSOI_of_planet_lbl.setObjectName(u"rSOI_of_planet_lbl")
+        self.rSOI_of_planet_lbl.setGeometry(QRect(10, 30, 211, 21))
+        self.rSOI_of_planet_lbl.setFont(font8)
+        self.rSOI_of_planet_lbl.setStyleSheet(u"color: white;\n"
 "border:none;")
         self.soi_rad = QLabel(self.frame_36)
         self.soi_rad.setObjectName(u"soi_rad")
@@ -5179,7 +5179,7 @@ class Ui_MainWindow(object):
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"                      Outputs:", None))
         self.get_3D_soi.setText(QCoreApplication.translate("MainWindow", u"Get 3D Visualization", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Km", None))
-        self.label_18.setText("")
+        self.rSOI_of_planet_lbl.setText("")
         self.soi_rad.setText("")
         self.label_title_4.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
 #if QT_CONFIG(tooltip)
