@@ -33,7 +33,7 @@ class Calculate:
             quad = ("This is a Prograde Elliptical Orbit and is in fourth Quadrant.")
             if ohm < pi/2:
                 ohm = 2*pi - ohm
-        return [ohm, quad]
+        return [ohm, quad] 
     
     def other_var(pos_vec, vel_vec):
         h_vec = cross(pos_vec, vel_vec)

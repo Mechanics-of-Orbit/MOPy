@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageaCNxOT.ui'
+## Form generated from reading UI file 'Home_PageRxcnvE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.drop_shadow_layout.setContentsMargins(10, 10, 10, 10)
         self.drop_shadow_frame = QFrame(self.centralwidget)
         self.drop_shadow_frame.setObjectName(u"drop_shadow_frame")
-        self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 255), stop:0.488636 rgba(28, 30, 72, 255));\n"
+        self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 220), stop:0.488636 rgba(28, 30, 72, 220));\n"
 "border-radius: 15px")
         self.drop_shadow_frame.setFrameShape(QFrame.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QFrame.Raised)
@@ -4359,7 +4359,7 @@ class Ui_MainWindow(object):
         self.PosNVelVector_inpt_frame.setObjectName(u"PosNVelVector_inpt_frame")
         self.PosNVelVector_inpt_frame.setStyleSheet(u"QLabel{\n"
 "	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
+"	border: 5px solid rgb(84, 84, 197,180);\n"
 "	font: 12pt \"Arial\";\n"
 "	border-radius: 20px;\n"
 "	color:white;\n"
@@ -4367,19 +4367,19 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
+"	border: 4px solid rgb(2, 119, 189,180);\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QFrame{\n"
 "\n"
-"border: 5px solid rgb(143, 55, 143);\n"
+"border: 5px solid rgb(143, 55, 143,180);\n"
 "border-radius: 15px;\n"
 "}\n"
 "\n"
 "QFrame:hover{\n"
-"	border: 5px solid  rgb(255, 248, 166);\n"
+"	border: 5px solid  rgb(255, 248, 166,180);\n"
 "	\n"
 "}\n"
 "")
@@ -4679,7 +4679,7 @@ class Ui_MainWindow(object):
         self.CoOE_output_frame.setMaximumSize(QSize(1036, 256))
         self.CoOE_output_frame.setStyleSheet(u"QLabel{\n"
 "	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
+"	border: 5px solid rgb(84, 84, 197,180);\n"
 "	font: 12pt \"Arial\";\n"
 "	border-radius: 20px;\n"
 "	color:white;\n"
@@ -4687,19 +4687,19 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
+"	border: 4px solid rgb(2, 119, 189,180);\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QFrame{\n"
 "\n"
-"border: 5px solid rgb(143, 55, 143);\n"
+"border: 5px solid rgb(143, 55, 143,180);\n"
 "border-radius: 15px;\n"
 "}\n"
 "\n"
 "QFrame:hover{\n"
-"	border: 5px solid  rgb(255, 248, 166);\n"
+"	border: 5px solid  rgb(255, 248, 166,180);\n"
 "	\n"
 "}\n"
 "")
@@ -4993,259 +4993,6 @@ class Ui_MainWindow(object):
 "border-radius:10px;")
         self.CoOE_output_para_lbl.setAlignment(Qt.AlignCenter)
         self.CoOE_output_stack.addWidget(self.CoOE_output_parameters_screen)
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.arg_of_per_unit_coe_n_aoe_2 = QComboBox(self.page)
-        self.arg_of_per_unit_coe_n_aoe_2.addItem("")
-        self.arg_of_per_unit_coe_n_aoe_2.addItem("")
-        self.arg_of_per_unit_coe_n_aoe_2.setObjectName(u"arg_of_per_unit_coe_n_aoe_2")
-        self.arg_of_per_unit_coe_n_aoe_2.setGeometry(QRect(880, 130, 100, 40))
-        self.arg_of_per_unit_coe_n_aoe_2.setMinimumSize(QSize(100, 40))
-        self.arg_of_per_unit_coe_n_aoe_2.setMaximumSize(QSize(100, 40))
-        self.arg_of_per_unit_coe_n_aoe_2.setLayoutDirection(Qt.LeftToRight)
-        self.arg_of_per_unit_coe_n_aoe_2.setStyleSheet(u"QComboBox{\n"
-"	\n"
-"	\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 17px;}\n"
-"\n"
-"\n"
-"QComboBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.arg_of_per_unit_coe_n_aoe_2.setEditable(False)
-        self.tru_ana_unit_coe_n_aoe_2 = QComboBox(self.page)
-        self.tru_ana_unit_coe_n_aoe_2.addItem("")
-        self.tru_ana_unit_coe_n_aoe_2.addItem("")
-        self.tru_ana_unit_coe_n_aoe_2.setObjectName(u"tru_ana_unit_coe_n_aoe_2")
-        self.tru_ana_unit_coe_n_aoe_2.setGeometry(QRect(880, 200, 100, 40))
-        self.tru_ana_unit_coe_n_aoe_2.setMinimumSize(QSize(100, 40))
-        self.tru_ana_unit_coe_n_aoe_2.setMaximumSize(QSize(100, 40))
-        self.tru_ana_unit_coe_n_aoe_2.setLayoutDirection(Qt.LeftToRight)
-        self.tru_ana_unit_coe_n_aoe_2.setStyleSheet(u"QComboBox{\n"
-"	\n"
-"	\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 17px;}\n"
-"\n"
-"\n"
-"QComboBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.tru_ana_unit_coe_n_aoe_2.setEditable(False)
-        self.tru_ana_coe_n_aoe_2 = QLabel(self.page)
-        self.tru_ana_coe_n_aoe_2.setObjectName(u"tru_ana_coe_n_aoe_2")
-        self.tru_ana_coe_n_aoe_2.setGeometry(QRect(730, 200, 141, 41))
-        self.tru_ana_coe_n_aoe_2.setStyleSheet(u"QLabel{\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;\n"
-"	color:black;\n"
-"}\n"
-"\n"
-"\n"
-"QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.tru_ana_coe_n_aoe_2.setAlignment(Qt.AlignCenter)
-        self.semimajor_axis_unit_coe_n_aoe_2 = QComboBox(self.page)
-        self.semimajor_axis_unit_coe_n_aoe_2.addItem("")
-        self.semimajor_axis_unit_coe_n_aoe_2.addItem("")
-        self.semimajor_axis_unit_coe_n_aoe_2.addItem("")
-        self.semimajor_axis_unit_coe_n_aoe_2.addItem("")
-        self.semimajor_axis_unit_coe_n_aoe_2.setObjectName(u"semimajor_axis_unit_coe_n_aoe_2")
-        self.semimajor_axis_unit_coe_n_aoe_2.setGeometry(QRect(380, 60, 100, 40))
-        self.semimajor_axis_unit_coe_n_aoe_2.setMinimumSize(QSize(100, 40))
-        self.semimajor_axis_unit_coe_n_aoe_2.setMaximumSize(QSize(100, 40))
-        self.semimajor_axis_unit_coe_n_aoe_2.setLayoutDirection(Qt.LeftToRight)
-        self.semimajor_axis_unit_coe_n_aoe_2.setStyleSheet(u"QComboBox{\n"
-"	\n"
-"	\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 17px;}\n"
-"\n"
-"\n"
-"QComboBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.semimajor_axis_unit_coe_n_aoe_2.setEditable(False)
-        self.inclination_unit_coe_n_aoe_2 = QComboBox(self.page)
-        self.inclination_unit_coe_n_aoe_2.addItem("")
-        self.inclination_unit_coe_n_aoe_2.addItem("")
-        self.inclination_unit_coe_n_aoe_2.setObjectName(u"inclination_unit_coe_n_aoe_2")
-        self.inclination_unit_coe_n_aoe_2.setGeometry(QRect(380, 200, 100, 40))
-        self.inclination_unit_coe_n_aoe_2.setMinimumSize(QSize(100, 40))
-        self.inclination_unit_coe_n_aoe_2.setMaximumSize(QSize(100, 40))
-        self.inclination_unit_coe_n_aoe_2.setLayoutDirection(Qt.LeftToRight)
-        self.inclination_unit_coe_n_aoe_2.setStyleSheet(u"QComboBox{\n"
-"	\n"
-"	\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 17px;}\n"
-"\n"
-"\n"
-"QComboBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.inclination_unit_coe_n_aoe_2.setEditable(False)
-        self.label_156 = QLabel(self.page)
-        self.label_156.setObjectName(u"label_156")
-        self.label_156.setGeometry(QRect(0, 130, 221, 41))
-        self.label_156.setStyleSheet(u"border:none;\n"
-"color:white;\n"
-"")
-        self.label_156.setAlignment(Qt.AlignCenter)
-        self.label_255 = QLabel(self.page)
-        self.label_255.setObjectName(u"label_255")
-        self.label_255.setGeometry(QRect(0, 200, 221, 41))
-        self.label_255.setStyleSheet(u"border:none;\n"
-"color:white;\n"
-"")
-        self.label_255.setAlignment(Qt.AlignCenter)
-        self.eccentricity_coe_n_aoe_2 = QLabel(self.page)
-        self.eccentricity_coe_n_aoe_2.setObjectName(u"eccentricity_coe_n_aoe_2")
-        self.eccentricity_coe_n_aoe_2.setGeometry(QRect(230, 130, 141, 41))
-        self.eccentricity_coe_n_aoe_2.setStyleSheet(u"QLabel{\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;\n"
-"	color:black;\n"
-"}\n"
-"\n"
-"\n"
-"QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.eccentricity_coe_n_aoe_2.setAlignment(Qt.AlignCenter)
-        self.RAAN_unit_coe_n_aoe_2 = QComboBox(self.page)
-        self.RAAN_unit_coe_n_aoe_2.addItem("")
-        self.RAAN_unit_coe_n_aoe_2.addItem("")
-        self.RAAN_unit_coe_n_aoe_2.setObjectName(u"RAAN_unit_coe_n_aoe_2")
-        self.RAAN_unit_coe_n_aoe_2.setGeometry(QRect(880, 60, 100, 40))
-        self.RAAN_unit_coe_n_aoe_2.setMinimumSize(QSize(100, 40))
-        self.RAAN_unit_coe_n_aoe_2.setMaximumSize(QSize(100, 40))
-        self.RAAN_unit_coe_n_aoe_2.setLayoutDirection(Qt.LeftToRight)
-        self.RAAN_unit_coe_n_aoe_2.setStyleSheet(u"QComboBox{\n"
-"	\n"
-"	\n"
-"	\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 17px;}\n"
-"\n"
-"\n"
-"QComboBox:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.RAAN_unit_coe_n_aoe_2.setEditable(False)
-        self.label_256 = QLabel(self.page)
-        self.label_256.setObjectName(u"label_256")
-        self.label_256.setGeometry(QRect(490, 60, 231, 41))
-        self.label_256.setStyleSheet(u"border:none;\n"
-"color:white;\n"
-"")
-        self.label_256.setAlignment(Qt.AlignCenter)
-        self.arg_of_per_coe_n_aoe_2 = QLabel(self.page)
-        self.arg_of_per_coe_n_aoe_2.setObjectName(u"arg_of_per_coe_n_aoe_2")
-        self.arg_of_per_coe_n_aoe_2.setGeometry(QRect(730, 130, 141, 41))
-        self.arg_of_per_coe_n_aoe_2.setStyleSheet(u"QLabel{\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;\n"
-"	color:black;\n"
-"}\n"
-"\n"
-"\n"
-"QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.arg_of_per_coe_n_aoe_2.setAlignment(Qt.AlignCenter)
-        self.label_267 = QLabel(self.page)
-        self.label_267.setObjectName(u"label_267")
-        self.label_267.setGeometry(QRect(20, 30, 221, 21))
-        self.label_267.setStyleSheet(u"border:none;\n"
-"color:white;\n"
-"")
-        self.label_267.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.semimajor_axis_coe_n_aoe_2 = QLabel(self.page)
-        self.semimajor_axis_coe_n_aoe_2.setObjectName(u"semimajor_axis_coe_n_aoe_2")
-        self.semimajor_axis_coe_n_aoe_2.setGeometry(QRect(230, 60, 141, 41))
-        self.semimajor_axis_coe_n_aoe_2.setStyleSheet(u"QLabel{\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;\n"
-"	color:black;\n"
-"}\n"
-"\n"
-"\n"
-"QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.semimajor_axis_coe_n_aoe_2.setAlignment(Qt.AlignCenter)
-        self.label_157 = QLabel(self.page)
-        self.label_157.setObjectName(u"label_157")
-        self.label_157.setGeometry(QRect(0, 60, 221, 41))
-        self.label_157.setStyleSheet(u"border:none;\n"
-"color:white;\n"
-"")
-        self.label_157.setAlignment(Qt.AlignCenter)
-        self.inclination_coe_n_aoe_2 = QLabel(self.page)
-        self.inclination_coe_n_aoe_2.setObjectName(u"inclination_coe_n_aoe_2")
-        self.inclination_coe_n_aoe_2.setGeometry(QRect(230, 200, 141, 41))
-        self.inclination_coe_n_aoe_2.setStyleSheet(u"QLabel{\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
-"	border: 5px solid rgb(84, 84, 197);\n"
-"	font: 12pt \"Arial\";\n"
-"	border-radius: 20px;\n"
-"	color:black;\n"
-"}\n"
-"\n"
-"\n"
-"QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189);\n"
-"}")
-        self.inclination_coe_n_aoe_2.setAlignment(Qt.AlignCenter)
-        self.label_258 = QLabel(self.page)
-        self.label_258.setObjectName(u"label_258")
-        self.label_258.setGeometry(QRect(490, 130, 231, 41))
-        self.label_258.setStyleSheet(u"border:none;\n"
-"color:white;\n"
-"")
-        self.label_258.setAlignment(Qt.AlignCenter)
-        self.CoOE_output_para_lbl_2 = QLineEdit(self.page)
-        self.CoOE_output_para_lbl_2.setObjectName(u"CoOE_output_para_lbl_2")
-        self.CoOE_output_para_lbl_2.setGeometry(QRect(90, 10, 901, 31))
-        self.CoOE_output_para_lbl_2.setFont(font9)
-        self.CoOE_output_para_lbl_2.setStyleSheet(u"background-color:transparent;\n"
-"\n"
-"color:black;\n"
-"border-radius:10px;")
-        self.CoOE_output_para_lbl_2.setAlignment(Qt.AlignCenter)
-        self.label_260 = QLabel(self.page)
-        self.label_260.setObjectName(u"label_260")
-        self.label_260.setGeometry(QRect(490, 200, 231, 41))
-        self.label_260.setStyleSheet(u"border:none;\n"
-"color:white;\n"
-"")
-        self.label_260.setAlignment(Qt.AlignCenter)
-        self.CoOE_output_stack.addWidget(self.page)
 
         self.horizontalLayout_24.addWidget(self.CoOE_output_stack)
 
@@ -5338,11 +5085,11 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(0)
         self.Orbit_type_stack.setCurrentIndex(1)
         self.VPCO_output_stack.setCurrentIndex(0)
         self.otherbody_stack.setCurrentIndex(0)
-        self.CoOE_output_stack.setCurrentIndex(1)
+        self.CoOE_output_stack.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -5815,35 +5562,6 @@ class Ui_MainWindow(object):
         self.label_262.setText(QCoreApplication.translate("MainWindow", u"Output:", None))
         self.eccentricity_coe_n_aoe.setText("")
         self.RAAN_coe_n_aoe.setText("")
-        self.arg_of_per_unit_coe_n_aoe_2.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
-        self.arg_of_per_unit_coe_n_aoe_2.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
-
-        self.tru_ana_unit_coe_n_aoe_2.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
-        self.tru_ana_unit_coe_n_aoe_2.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
-
-        self.tru_ana_coe_n_aoe_2.setText("")
-        self.semimajor_axis_unit_coe_n_aoe_2.setItemText(0, QCoreApplication.translate("MainWindow", u"  km", None))
-        self.semimajor_axis_unit_coe_n_aoe_2.setItemText(1, QCoreApplication.translate("MainWindow", u"  miles", None))
-        self.semimajor_axis_unit_coe_n_aoe_2.setItemText(2, QCoreApplication.translate("MainWindow", u"  AU", None))
-        self.semimajor_axis_unit_coe_n_aoe_2.setItemText(3, QCoreApplication.translate("MainWindow", u"  DU", None))
-
-        self.inclination_unit_coe_n_aoe_2.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
-        self.inclination_unit_coe_n_aoe_2.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
-
-        self.label_156.setText(QCoreApplication.translate("MainWindow", u"Eccentricity", None))
-        self.label_255.setText(QCoreApplication.translate("MainWindow", u"Inclination", None))
-        self.eccentricity_coe_n_aoe_2.setText("")
-        self.RAAN_unit_coe_n_aoe_2.setItemText(0, QCoreApplication.translate("MainWindow", u"  Degree", None))
-        self.RAAN_unit_coe_n_aoe_2.setItemText(1, QCoreApplication.translate("MainWindow", u"  Radians", None))
-
-        self.label_256.setText(QCoreApplication.translate("MainWindow", u"RAAN", None))
-        self.arg_of_per_coe_n_aoe_2.setText("")
-        self.label_267.setText(QCoreApplication.translate("MainWindow", u"Output:", None))
-        self.semimajor_axis_coe_n_aoe_2.setText("")
-        self.label_157.setText(QCoreApplication.translate("MainWindow", u"Semi-major Axis", None))
-        self.inclination_coe_n_aoe_2.setText("")
-        self.label_258.setText(QCoreApplication.translate("MainWindow", u"Argument of Periapsis", None))
-        self.label_260.setText(QCoreApplication.translate("MainWindow", u"True Anamoly", None))
         self.label_credits.setText("")
     # retranslateUi
 

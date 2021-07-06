@@ -275,38 +275,36 @@ class MainWindow(QMainWindow):
 
         
 
-        if e_vec[0] > 0 and e_vec[1] > 0 and e_vec[2] > 0:
-            e_vec = [e_vec[0], e_vec[1], e_vec[2]]
+        # if e_vec[0] > 0 and e_vec[1] > 0 and e_vec[2] > 0:
+        #     e_vec = [e_vec[0], e_vec[1], e_vec[2]]
 
-        elif e_vec[0] > 0 and e_vec[1] > 0 and e_vec[2] < 0:
-            e_vec = [e_vec[0], e_vec[1], -e_vec[2]]
+        # elif e_vec[0] > 0 and e_vec[1] > 0 and e_vec[2] < 0:
+        #     e_vec = [e_vec[0], e_vec[1], -e_vec[2]]
 
-        elif e_vec[0] > 0 and e_vec[1] < 0 and e_vec[2] < 0:
-            e_vec = [e_vec[0], -e_vec[1], -e_vec[2]]
+        # elif e_vec[0] > 0 and e_vec[1] < 0 and e_vec[2] < 0:
+        #     e_vec = [e_vec[0], -e_vec[1], -e_vec[2]]
 
-        elif e_vec[0] < 0 and e_vec[1] < 0 and e_vec[2] < 0:
-            e_vec = [-e_vec[0], -e_vec[1], -e_vec[2]]
+        # elif e_vec[0] < 0 and e_vec[1] < 0 and e_vec[2] < 0:
+        #     e_vec = [-e_vec[0], -e_vec[1], -e_vec[2]]
 
-        elif e_vec[0] < 0 and e_vec[1] > 0 and e_vec[2] > 0:
-            e_vec = [-e_vec[0], e_vec[1], e_vec[2]]
+        # elif e_vec[0] < 0 and e_vec[1] > 0 and e_vec[2] > 0:
+        #     e_vec = [-e_vec[0], e_vec[1], e_vec[2]]
 
-        elif e_vec[0] < 0 and e_vec[1] > 0 and e_vec[2] < 0:
-            e_vec = [-e_vec[0], e_vec[1], -e_vec[2]]
+        # elif e_vec[0] < 0 and e_vec[1] > 0 and e_vec[2] < 0:
+        #     e_vec = [-e_vec[0], e_vec[1], -e_vec[2]]
 
-        elif e_vec[0] > 0 and e_vec[1] < 0 and e_vec[2] > 0:
-            e_vec = [e_vec[0], -e_vec[1], e_vec[2]]
+        # elif e_vec[0] > 0 and e_vec[1] < 0 and e_vec[2] > 0:
+        #     e_vec = [e_vec[0], -e_vec[1], e_vec[2]]
 
-        elif e_vec[0] < 0 and e_vec[1] < 0 and e_vec[2] > 0:
-            e_vec = [-e_vec[0], -e_vec[1], e_vec[2]]
+        # elif e_vec[0] < 0 and e_vec[1] < 0 and e_vec[2] > 0:
+        #     e_vec = [-e_vec[0], -e_vec[1], e_vec[2]]
             
 
 
         [h_vec, n_vec] = Calculate.other_var(pos_vec, vel_vec)
 
             
-        ohm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
-        [ohm,quad] = Calculate.correct_ohm(ohm, n_vec)
-
+        
         pos = norm(pos_vec)
         vel = norm(vel_vec)
         sma = 1/((2/pos)-(vel*vel/mu))
@@ -320,6 +318,9 @@ class MainWindow(QMainWindow):
         ty = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
         
         if len(ty) == 4:
+            ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
+            quad = Calculate.correct_ohm(ohmm, n_vec)
+            self.ui.CoOE_output_para_lbl.setText(quad[1])
             keys = list(ty.keys())
             values = list(ty.values()) 
             self.ui.RAAN_CoOE_lbl.setText(keys[0])
@@ -330,6 +331,9 @@ class MainWindow(QMainWindow):
             self.ui.tru_ana_coe_n_aoe.setText(str(round(values[2] * (180/pi), 4))) 
 
         elif len(ty) == 3:
+            ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
+            quad = Calculate.correct_ohm(ohmm, n_vec)
+            self.ui.CoOE_output_para_lbl.setText(quad[1])
             keys = list(ty.keys())
             values = list(ty.values())
             self.ui.RAAN_CoOE_lbl.setText(keys[0])
@@ -340,6 +344,9 @@ class MainWindow(QMainWindow):
             self.ui.tru_ana_coe_n_aoe.setHidden(1)
 
         elif len(ty) == 2:
+            ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
+            quad = Calculate.correct_ohm(ohmm, n_vec)
+            self.ui.CoOE_output_para_lbl.setText(quad[1])
             keys = list(ty.keys())
             values = list(ty.values())
             self.ui.RAAN_CoOE_lbl.setText(keys[0])
@@ -350,6 +357,9 @@ class MainWindow(QMainWindow):
             self.ui.tru_ana_coe_n_aoe.setHidden(1)
 
         elif len(ty) == 1:
+            ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
+            quad = Calculate.correct_ohm(ohmm, n_vec)
+            self.ui.CoOE_output_para_lbl.setText(quad[1])
             keys = list(ty.keys())
             values = list(ty.values())
             self.ui.RAAN_CoOE_lbl.setText(keys[0])
@@ -462,14 +472,14 @@ class SplashScreen(QMainWindow):
         # CHANGE DESCRIPTION
 
         # Initial Text
-        self.ui.label_description.setText("WELCOME TO <strong>MOPy</strong>")
+        self.ui.app_description_lbl.setText("WELCOME TO <strong>MOPy</strong>")
 
         # Change Texts
-        QtCore.QTimer.singleShot(1200, lambda: self.ui.label_description.setText("<strong>Initializing</strong> Database"))
-        QtCore.QTimer.singleShot(2500, lambda: self.ui.label_description.setText("<strong>Pulling</strong> Resources"))
-        QtCore.QTimer.singleShot(3500, lambda: self.ui.label_description.setText("<strong>Arranging</strong> User Interface "))
-        QtCore.QTimer.singleShot(4700, lambda: self.ui.label_description.setText("Ready to <strong>Takeoff</strong> "))
-        QtCore.QTimer.singleShot(6000, lambda: self.ui.label_description.setText(" "))
+        QtCore.QTimer.singleShot(1200, lambda: self.ui.app_description_lbl.setText("<strong>Initializing</strong> Database"))
+        QtCore.QTimer.singleShot(2500, lambda: self.ui.app_description_lbl.setText("<strong>Pulling</strong> Resources"))
+        QtCore.QTimer.singleShot(3500, lambda: self.ui.app_description_lbl.setText("<strong>Arranging</strong> User Interface "))
+        QtCore.QTimer.singleShot(4700, lambda: self.ui.app_description_lbl.setText("Ready to <strong>Takeoff</strong> "))
+        QtCore.QTimer.singleShot(6000, lambda: self.ui.app_description_lbl.setText(" "))
 
 
 
