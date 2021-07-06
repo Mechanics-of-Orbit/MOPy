@@ -20,24 +20,35 @@ class Calculate:
         return [mu, major_body_radius]
     
     def correct_ohm(ohm, n_vec):
-        if n_vec[0] >= 0 and n_vec[1] >= 0: 
-            quad = ("This is a Prograde Elliptical Orbit and is in first Quadrant.")
+        if n_vec[0] > 0 and n_vec[1] > 0: 
             if ohm > pi/2:
                 ohm = 2*pi - ohm
-        elif n_vec[0] <= 0 and n_vec[1] >= 0:
-            quad = ("This is a Retrograde Elliptical Orbit and is in second Quadrant.")
+        elif n_vec[0] < 0 and n_vec[1] > 0:
             if ohm > pi:
                 ohm = 2*pi - ohm
-        elif n_vec[0] <= 0 and n_vec[1] <= 0:
-            quad = ("This is a Retrograde Elliptical Orbit and is in Third Quadrant.")
+        elif n_vec[0] < 0 and n_vec[1] < 0:
             if ohm < pi:
                 ohm = 2*pi - ohm
-        elif n_vec[0] >= 0 and n_vec[1] <= 0:
-            quad = ("This is a Prograde Elliptical Orbit and is in fourth Quadrant.")
+        elif n_vec[0] > 0 and n_vec[1] < 0:
             if ohm < pi/2:
                 ohm = 2*pi - ohm
-        return [ohm, quad] 
-    
+        return ohm
+
+    def position_of_n_vector(n_vec):
+        if n_vec[0] == 0 and n_vec[1] == 0:
+            quad = "The n vector doesn't exist as there is no Orbital Inclination"
+        elif n_vec[0] == 0 or n_vec[1] == 0:
+            if n_vec[0] < 0:
+                quad = "TThis is a Retrograde Elliptical Or"
+        elif n_vec[0] > 0 and n_vec[1] > 0: 
+            quad = ("This is a Prograde Elliptical Orbit and the n-vector lies in first Quadrant.")
+        elif n_vec[0] < 0 and n_vec[1] > 0:
+            quad = ("This is a Retrograde Elliptical Orbit and the n-vector lies in second Quadrant.")
+        elif n_vec[0] < 0 and n_vec[1] < 0:
+            quad = ("This is a Retrograde Elliptical Orbit and the n-vector lies in Third Quadrant.")
+        elif n_vec[0] > 0 and n_vec[1] < 0:
+            quad = ("This is a Prograde Elliptical Orbit and the n-vector lies in fourth Quadrant.")
+        
     def other_var(pos_vec, vel_vec):
         h_vec = cross(pos_vec, vel_vec)
         K = [0, 0, 1]
