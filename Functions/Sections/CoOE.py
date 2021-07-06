@@ -2,8 +2,11 @@ from numpy.linalg import norm
 from numpy import dot, pi, cross, multiply as multi
 from math import acos
 
-from Functions.call_database import call
-import pandas
+if __name__ == '__main__':
+    from call_database import call
+else:
+    from Functions.call_database import call
+
 class Calculate:
     I = [1, 0, 0]
     J = [0, 1, 0]
@@ -18,23 +21,34 @@ class Calculate:
     
     def correct_ohm(ohm, n_vec):
         if n_vec[0] > 0 and n_vec[1] > 0: 
-            quad = ("This is a Prograde Elliptical Orbit and is in first Quadrant.")
             if ohm > pi/2:
                 ohm = 2*pi - ohm
         elif n_vec[0] < 0 and n_vec[1] > 0:
-            quad = ("This is a Retrograde Elliptical Orbit and is in second Quadrant.")
             if ohm > pi:
                 ohm = 2*pi - ohm
         elif n_vec[0] < 0 and n_vec[1] < 0:
-            quad = ("This is a Retrograde Elliptical Orbit and is in Third Quadrant.")
             if ohm < pi:
                 ohm = 2*pi - ohm
         elif n_vec[0] > 0 and n_vec[1] < 0:
-            quad = ("This is a Prograde Elliptical Orbit and is in fourth Quadrant.")
             if ohm < pi/2:
                 ohm = 2*pi - ohm
-        return [ohm, quad] 
-    
+        return ohm
+
+    def position_of_n_vector(n_vec):
+        if n_vec[0] == 0 and n_vec[1] == 0:
+            quad = "The n vector doesn't exist as there is no Orbital Inclination"
+        elif n_vec[0] == 0 or n_vec[1] == 0:
+            if n_vec[0] < 0:
+                quad = "TThis is a Retrograde Elliptical Or"
+        elif n_vec[0] > 0 and n_vec[1] > 0: 
+            quad = ("This is a Prograde Elliptical Orbit and the n-vector lies in first Quadrant.")
+        elif n_vec[0] < 0 and n_vec[1] > 0:
+            quad = ("This is a Retrograde Elliptical Orbit and the n-vector lies in second Quadrant.")
+        elif n_vec[0] < 0 and n_vec[1] < 0:
+            quad = ("This is a Retrograde Elliptical Orbit and the n-vector lies in Third Quadrant.")
+        elif n_vec[0] > 0 and n_vec[1] < 0:
+            quad = ("This is a Prograde Elliptical Orbit and the n-vector lies in fourth Quadrant.")
+        
     def other_var(pos_vec, vel_vec):
         h_vec = cross(pos_vec, vel_vec)
         K = [0, 0, 1]
@@ -56,12 +70,11 @@ class Calculate:
         I = [1, 0, 0]
         if (inc != 0 or 180) and norm(e_vec) > 0: #Nothing is Zero/180
             ohm = (acos((dot(I,n_vec))/norm(n_vec)))
-            [ohm, quad] = Calculate.correct_ohm(ohm, n_vec)
+            ohm = Calculate.correct_ohm(ohm, n_vec)
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
-            
-            
+            return {"RAAN":ohm[0], "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
+      
         elif (inc == 0 or 180): #Inclination is Zero
             nothing = 4
             if norm(e_vec) > 0: #Elliptical Orbit
@@ -91,17 +104,17 @@ class Calculate:
         return True
 
 if __name__ == '__main__':
-    pos_vec = [8250, 390, 6900]
-    vel_vec = [-0.7, 6.6, -0.6]
+    pos_vec = [10000, 0, 0]
+    vel_vec = [0, 4.464, -4.464]
     # e_vec = [0.140621, 0.12893, 0.117342]
     # inc = 39.94
     # manju = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
     # print(manju)
     Major_Body = "Earth"
-    [mu, major_body_radius] = Calculate.muvalue("Earth")
+    # [mu, major_body_radius] = Calculate.muvalue(Major_Body)
+    mu = 3.986e5
     BOE = Calculate.OE(pos_vec, vel_vec, mu)
-    print(type(BOE['Inclination']))
-    OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Eccentricity'], BOE['Inclination'])
     print(BOE)
+    OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Eccentricity'], BOE['Inclination'])
     print(OOE)
     
