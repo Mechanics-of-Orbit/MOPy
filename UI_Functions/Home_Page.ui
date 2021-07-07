@@ -858,14 +858,14 @@ QComboBox:hover{
                             </property>
                             <property name="styleSheet">
                              <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189,50%);
+	background-color:rgb(2, 119, 189,70%);
 	color:rgb(245, 255, 179);
 	border-radius: 20px
 }
 
 QPushButton:hover{
 	
-	background-color: rgb(255, 170, 0,50%);
+	background-color: rgb(255, 170, 0,70%);
 }</string>
                             </property>
                             <property name="text">

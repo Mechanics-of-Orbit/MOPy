@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageeSaUUM.ui'
+## Form generated from reading UI file 'Home_PagetiUDSW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -346,14 +346,14 @@ class Ui_MainWindow(object):
         font3.setWeight(50)
         self.Go_btn.setFont(font3)
         self.Go_btn.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189,50%);\n"
+"	background-color:rgb(2, 119, 189,70%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0,50%);\n"
+"	background-color: rgb(255, 170, 0,70%);\n"
 "}")
 
         self.verticalLayout_13.addWidget(self.Go_btn)
