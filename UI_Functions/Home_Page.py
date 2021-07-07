@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageBkCSak.ui'
+## Form generated from reading UI file 'Home_PageeSaUUM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.drop_shadow_layout.setContentsMargins(10, 10, 10, 10)
         self.drop_shadow_frame = QFrame(self.centralwidget)
         self.drop_shadow_frame.setObjectName(u"drop_shadow_frame")
-        self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 220), stop:0.488636 rgba(28, 30, 72, 220));\n"
+        self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 88%), stop:0.488636 rgba(28, 30, 72,88%));\n"
 "border-radius: 15px")
         self.drop_shadow_frame.setFrameShape(QFrame.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QFrame.Raised)
@@ -184,6 +184,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.setStyleSheet(u"background-color:none")
         self.Home_Page_Screen = QWidget()
         self.Home_Page_Screen.setObjectName(u"Home_Page_Screen")
+        self.Home_Page_Screen.setStyleSheet(u"")
         self.verticalLayout_4 = QVBoxLayout(self.Home_Page_Screen)
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
@@ -214,6 +215,7 @@ class Ui_MainWindow(object):
         self.Search_logo_frame.setObjectName(u"Search_logo_frame")
         self.Search_logo_frame.setMinimumSize(QSize(380, 300))
         self.Search_logo_frame.setMaximumSize(QSize(380, 400))
+        self.Search_logo_frame.setStyleSheet(u"background-color:transparent;")
         self.Search_logo_frame.setFrameShape(QFrame.StyledPanel)
         self.Search_logo_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_12 = QVBoxLayout(self.Search_logo_frame)
@@ -228,7 +230,7 @@ class Ui_MainWindow(object):
         self.Search_logo.setSizePolicy(sizePolicy)
         self.Search_logo.setMinimumSize(QSize(350, 250))
         self.Search_logo.setMaximumSize(QSize(390, 300))
-        self.Search_logo.setStyleSheet(u"")
+        self.Search_logo.setStyleSheet(u"opacity:50%;")
         self.Search_logo.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
         self.Search_logo.setScaledContents(True)
         self.Search_logo.setAlignment(Qt.AlignCenter)
@@ -245,6 +247,7 @@ class Ui_MainWindow(object):
         self.search_frame.setObjectName(u"search_frame")
         self.search_frame.setEnabled(True)
         self.search_frame.setMaximumSize(QSize(16777215, 200))
+        self.search_frame.setStyleSheet(u"background-color: transparent;")
         self.search_frame.setFrameShape(QFrame.StyledPanel)
         self.search_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_6 = QVBoxLayout(self.search_frame)
@@ -255,6 +258,7 @@ class Ui_MainWindow(object):
         self.Search_combo_frame.setObjectName(u"Search_combo_frame")
         self.Search_combo_frame.setMinimumSize(QSize(0, 40))
         self.Search_combo_frame.setMaximumSize(QSize(16777215, 40))
+        self.Search_combo_frame.setStyleSheet(u"background-color:transparent;")
         self.Search_combo_frame.setFrameShape(QFrame.NoFrame)
         self.Search_combo_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.Search_combo_frame)
@@ -282,12 +286,14 @@ class Ui_MainWindow(object):
         self.combosearchbox.setMaximumSize(QSize(533, 35))
         self.combosearchbox.setFocusPolicy(Qt.NoFocus)
         self.combosearchbox.setStyleSheet(u"QComboBox{\n"
+"	background-color: rgb(255, 255, 255,70%);\n"
 "	border: 5px solid rgb(255, 170, 0);\n"
 "	font: 12pt \"Arial\";\n"
 "	border-radius: 17px;}\n"
 "\n"
 "\n"
 "QComboBox:hover{\n"
+"	background-color: rgb(255, 255, 255,70%);\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
 
@@ -300,6 +306,7 @@ class Ui_MainWindow(object):
         self.Go_btn_frame.setObjectName(u"Go_btn_frame")
         self.Go_btn_frame.setMinimumSize(QSize(0, 50))
         self.Go_btn_frame.setMaximumSize(QSize(16777215, 50))
+        self.Go_btn_frame.setStyleSheet(u"background-color:transparent;")
         self.Go_btn_frame.setFrameShape(QFrame.StyledPanel)
         self.Go_btn_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_8 = QHBoxLayout(self.Go_btn_frame)
@@ -308,6 +315,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
         self.frame_2 = QFrame(self.Go_btn_frame)
         self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setStyleSheet(u"background-color:transparent;")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
 
@@ -316,10 +324,13 @@ class Ui_MainWindow(object):
         self.frame_3 = QFrame(self.Go_btn_frame)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setMaximumSize(QSize(167, 300))
+        self.frame_3.setStyleSheet(u"background-color:transparent;")
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_13 = QVBoxLayout(self.frame_3)
+        self.verticalLayout_13.setSpacing(0)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.Go_btn = QPushButton(self.frame_3)
         self.Go_btn.setObjectName(u"Go_btn")
         sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
@@ -335,14 +346,14 @@ class Ui_MainWindow(object):
         font3.setWeight(50)
         self.Go_btn.setFont(font3)
         self.Go_btn.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
+"	background-color:rgb(2, 119, 189,50%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0);\n"
+"	background-color: rgb(255, 170, 0,50%);\n"
 "}")
 
         self.verticalLayout_13.addWidget(self.Go_btn)
@@ -352,6 +363,7 @@ class Ui_MainWindow(object):
 
         self.frame_8 = QFrame(self.Go_btn_frame)
         self.frame_8.setObjectName(u"frame_8")
+        self.frame_8.setStyleSheet(u"background-color:transparent;")
         self.frame_8.setFrameShape(QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QFrame.Raised)
 
@@ -4359,7 +4371,7 @@ class Ui_MainWindow(object):
         self.PosNVelVector_inpt_frame.setObjectName(u"PosNVelVector_inpt_frame")
         self.PosNVelVector_inpt_frame.setStyleSheet(u"QLabel{\n"
 "	\n"
-"	border: 5px solid rgb(84, 84, 197,180);\n"
+"	border: 5px solid rgb(84, 84, 197,88%);\n"
 "	font: 12pt \"Arial\";\n"
 "	border-radius: 20px;\n"
 "	color:white;\n"
@@ -4367,19 +4379,19 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189,180);\n"
+"	border: 4px solid rgb(2, 119, 189,88%);\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QFrame{\n"
 "\n"
-"border: 5px solid rgb(143, 55, 143,180);\n"
+"border: 5px solid rgb(143, 55, 143,88%);\n"
 "border-radius: 15px;\n"
 "}\n"
 "\n"
 "QFrame:hover{\n"
-"	border: 5px solid  rgb(255, 248, 166,180);\n"
+"	border: 5px solid  rgb(255, 248, 166,88%);\n"
 "	\n"
 "}\n"
 "")
@@ -4679,7 +4691,7 @@ class Ui_MainWindow(object):
         self.CoOE_output_frame.setMaximumSize(QSize(1036, 256))
         self.CoOE_output_frame.setStyleSheet(u"QLabel{\n"
 "	\n"
-"	border: 5px solid rgb(84, 84, 197,180);\n"
+"	border: 5px solid rgb(84, 84, 197,88%);\n"
 "	font: 12pt \"Arial\";\n"
 "	border-radius: 20px;\n"
 "	color:white;\n"
@@ -4687,19 +4699,19 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QLabel:hover{\n"
-"	border: 4px solid rgb(2, 119, 189,180);\n"
+"	border: 4px solid rgb(2, 119, 189,88%);\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QFrame{\n"
 "\n"
-"border: 5px solid rgb(143, 55, 143,180);\n"
+"border: 5px solid rgb(143, 55, 143,88%);\n"
 "border-radius: 15px;\n"
 "}\n"
 "\n"
 "QFrame:hover{\n"
-"	border: 5px solid  rgb(255, 248, 166,180);\n"
+"	border: 5px solid  rgb(255, 248, 166,88%);\n"
 "	\n"
 "}\n"
 "")
