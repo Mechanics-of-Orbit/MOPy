@@ -39,15 +39,21 @@ class Calculate:
             quad = "The n vector doesn't exist as there is no Orbital Inclination"
         elif n_vec[0] == 0 or n_vec[1] == 0:
             if n_vec[0] < 0:
-                quad = "TThis is a Retrograde Elliptical Or"
+                quad = "This is a Retrograde Orbit and the n-vector lies on negative x-axis"
+            elif n_vec[0] > 0:
+                quad = "This is a Prograde Orbit and the n-vector lies on Positive x-axis"
+            elif n_vec[1] > 0:
+                quad = "This is a Prograde Orbit and the n-vector lies on Positive y-axis"
+            elif n_vec[1] < 0:
+                quad = "This is a Retrograde Orbit and the n-vector lies on Negative y-axis"
         elif n_vec[0] > 0 and n_vec[1] > 0: 
-            quad = ("This is a Prograde Elliptical Orbit and the n-vector lies in first Quadrant.")
+            quad = ("This is a Prograde Orbit and the n-vector lies in first Quadrant.")
         elif n_vec[0] < 0 and n_vec[1] > 0:
-            quad = ("This is a Retrograde Elliptical Orbit and the n-vector lies in second Quadrant.")
+            quad = ("This is a Retrograde Orbit and the n-vector lies in second Quadrant.")
         elif n_vec[0] < 0 and n_vec[1] < 0:
-            quad = ("This is a Retrograde Elliptical Orbit and the n-vector lies in Third Quadrant.")
+            quad = ("This is a Retrograde Orbit and the n-vector lies in Third Quadrant.")
         elif n_vec[0] > 0 and n_vec[1] < 0:
-            quad = ("This is a Prograde Elliptical Orbit and the n-vector lies in fourth Quadrant.")
+            quad = ("This is a Prograde Orbit and the n-vector lies in fourth Quadrant.")
         
     def other_var(pos_vec, vel_vec):
         h_vec = cross(pos_vec, vel_vec)
@@ -73,7 +79,7 @@ class Calculate:
             ohm = Calculate.correct_ohm(ohm, n_vec)
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            return {"RAAN":ohm[0], "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
+            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
       
         elif (inc == 0 or 180): #Inclination is Zero
             
