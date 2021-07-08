@@ -49,7 +49,9 @@
      <widget class="QFrame" name="drop_shadow_frame">
       <property name="styleSheet">
        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 88%), stop:0.488636 rgba(28, 30, 72,88%));
-border-radius: 15px</string>
+
+
+border-radius: 15px;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -535,7 +537,7 @@ QPushButton:hover{
                           </size>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">opacity:50%;</string>
+                          <string notr="true">background-color:transparent;</string>
                          </property>
                          <property name="text">
                           <string/>
@@ -648,14 +650,14 @@ QPushButton:hover{
                          </property>
                          <property name="styleSheet">
                           <string notr="true">QComboBox{
-	background-color: rgb(255, 255, 255,70%);
+	background-color: rgb(255, 255, 255,80%);
 	border: 5px solid rgb(255, 170, 0);
 	font: 12pt &quot;Arial&quot;;
 	border-radius: 17px;}
 
 
 QComboBox:hover{
-	background-color: rgb(255, 255, 255,70%);
+	background-color: rgb(255, 255, 255,80%);
 	border: 4px solid rgb(2, 119, 189);
 }</string>
                          </property>
@@ -858,14 +860,14 @@ QComboBox:hover{
                             </property>
                             <property name="styleSheet">
                              <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189,70%);
+	background-color:rgb(2, 119, 189,60%);
 	color:rgb(245, 255, 179);
 	border-radius: 20px
 }
 
 QPushButton:hover{
 	
-	background-color: rgb(255, 170, 0,70%);
+	background-color: rgb(255, 170, 0,60%);
 }</string>
                             </property>
                             <property name="text">
@@ -1486,7 +1488,7 @@ QFrame:hover{
                          <widget class="QSpinBox" name="digits_accuracy">
                           <property name="geometry">
                            <rect>
-                            <x>180</x>
+                            <x>230</x>
                             <y>120</y>
                             <width>61</width>
                             <height>31</height>
@@ -1542,7 +1544,7 @@ QFrame:hover{
                          <widget class="QLabel" name="label">
                           <property name="geometry">
                            <rect>
-                            <x>10</x>
+                            <x>20</x>
                             <y>40</y>
                             <width>111</width>
                             <height>16</height>
@@ -1567,7 +1569,7 @@ color: white;</string>
                          <widget class="QTimeEdit" name="timeEdit">
                           <property name="geometry">
                            <rect>
-                            <x>120</x>
+                            <x>130</x>
                             <y>30</y>
                             <width>141</width>
                             <height>31</height>
@@ -1625,10 +1627,10 @@ color: white;</string>
                          <widget class="QLabel" name="label_2">
                           <property name="geometry">
                            <rect>
-                            <x>270</x>
-                            <y>40</y>
-                            <width>41</width>
-                            <height>16</height>
+                            <x>280</x>
+                            <y>35</y>
+                            <width>31</width>
+                            <height>21</height>
                            </rect>
                           </property>
                           <property name="font">
@@ -1645,6 +1647,9 @@ color: white;</string>
                           </property>
                           <property name="text">
                            <string>UT</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                          <widget class="QLabel" name="label_3">
@@ -1675,7 +1680,7 @@ color: white;</string>
                          <widget class="QLabel" name="label_4">
                           <property name="geometry">
                            <rect>
-                            <x>10</x>
+                            <x>30</x>
                             <y>120</y>
                             <width>171</width>
                             <height>31</height>
@@ -1715,14 +1720,14 @@ color: white;</string>
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QPushButton{
-	border: 5px solid rgb(34, 14, 36);
-	border-radius: 15px;
-	color: white;
-	background-color: rgb(34, 14, 36);
+	background-color:rgb(2, 119, 189,60%);
+	color:rgb(245, 255, 179);
+	border-radius: 14px
 }
 
 QPushButton:hover{
-	border: 3px solid white;
+	
+	background-color: rgb(255, 170, 0,60%);
 }</string>
                           </property>
                           <property name="text">
@@ -2171,8 +2176,8 @@ QFrame:hover{
                       <widget class="QLabel" name="label_8">
                        <property name="geometry">
                         <rect>
-                         <x>120</x>
-                         <y>30</y>
+                         <x>150</x>
+                         <y>50</y>
                          <width>171</width>
                          <height>21</height>
                         </rect>
@@ -2218,8 +2223,8 @@ border:none;</string>
                       <widget class="QComboBox" name="SOI_planet_name">
                        <property name="geometry">
                         <rect>
-                         <x>410</x>
-                         <y>20</y>
+                         <x>440</x>
+                         <y>40</y>
                          <width>211</width>
                          <height>41</height>
                         </rect>
@@ -2357,36 +2362,6 @@ border:none;</string>
                         <string>Km</string>
                        </property>
                       </widget>
-                      <widget class="QPushButton" name="get_mass">
-                       <property name="geometry">
-                        <rect>
-                         <x>350</x>
-                         <y>70</y>
-                         <width>101</width>
-                         <height>41</height>
-                        </rect>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                        </font>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189);
-	color:rgb(245, 255, 179);
-	border-radius: 20px
-}
-
-QPushButton:hover{
-	
-	background-color: rgb(255, 170, 0);
-}</string>
-                       </property>
-                       <property name="text">
-                        <string>Get Data</string>
-                       </property>
-                      </widget>
                       <widget class="QLabel" name="soi_mass">
                        <property name="geometry">
                         <rect>
@@ -2471,14 +2446,14 @@ QLabel:hover{
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189);
+	background-color:rgb(2, 119, 189,60%);
 	color:rgb(245, 255, 179);
 	border-radius: 20px
 }
 
 QPushButton:hover{
 	
-	background-color: rgb(255, 170, 0);
+	background-color: rgb(255, 170, 0,60%);
 }</string>
                        </property>
                        <property name="text">
@@ -2603,14 +2578,14 @@ QFrame:hover{
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189);
+	background-color:rgb(2, 119, 189,60%);
 	color:rgb(245, 255, 179);
 	border-radius: 20px
 }
 
 QPushButton:hover{
 	
-	background-color: rgb(255, 170, 0);
+	background-color: rgb(255, 170, 0,60%);
 }</string>
                        </property>
                        <property name="text">
@@ -2952,7 +2927,7 @@ QFrame:hover{
 </string>
                            </property>
                            <property name="currentIndex">
-                            <number>1</number>
+                            <number>0</number>
                            </property>
                            <widget class="QWidget" name="vpco_input_type_screen">
                             <widget class="QComboBox" name="vpco_input_type">
@@ -3132,14 +3107,14 @@ QComboBox:hover{
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189);
+	background-color:rgb(2, 119, 189,60%);
 	color:rgb(245, 255, 179);
 	border-radius: 20px
 }
 
 QPushButton:hover{
 	
-	background-color: rgb(255, 170, 0);
+	background-color: rgb(255, 170, 0,60%);
 }</string>
                              </property>
                              <property name="text">
@@ -3285,14 +3260,14 @@ QLabel:hover{
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189);
+	background-color:rgb(2, 119, 189,60%);
 	color:rgb(245, 255, 179);
 	border-radius: 20px
 }
 
 QPushButton:hover{
 	
-	background-color: rgb(255, 170, 0);
+	background-color: rgb(255, 170, 0,60%);
 }</string>
                              </property>
                              <property name="text">
@@ -3315,14 +3290,14 @@ QPushButton:hover{
                              </property>
                              <property name="styleSheet">
                               <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189);
+	background-color:rgb(2, 119, 189,60%);
 	color:rgb(245, 255, 179);
 	border-radius: 20px
 }
 
 QPushButton:hover{
 	
-	background-color: rgb(255, 170, 0);
+	background-color: rgb(255, 170, 0,60%);
 }</string>
                              </property>
                              <property name="text">
@@ -4633,7 +4608,7 @@ QPushButton:hover{
                     <string notr="true">border:none;</string>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <widget class="QWidget" name="a_e_result_screen">
                     <widget class="QLabel" name="label_22">
@@ -11211,9 +11186,9 @@ color:white;
                      <widget class="QLineEdit" name="other_body_mass_coe_n_aoe">
                       <property name="geometry">
                        <rect>
-                        <x>10</x>
+                        <x>40</x>
                         <y>10</y>
-                        <width>141</width>
+                        <width>111</width>
                         <height>41</height>
                        </rect>
                       </property>
@@ -11244,7 +11219,7 @@ QLineEdit:hover{
                        <rect>
                         <x>180</x>
                         <y>10</y>
-                        <width>141</width>
+                        <width>111</width>
                         <height>41</height>
                        </rect>
                       </property>
@@ -11286,14 +11261,14 @@ QLineEdit:hover{
                       </property>
                       <property name="styleSheet">
                        <string notr="true">QPushButton{
-	background-color:rgb(2, 119, 189);
+	background-color:rgb(2, 119, 189,60%);
 	color:rgb(245, 255, 179);
 	border-radius: 10px
 }
 
 QPushButton:hover{
 	
-	background-color: rgb(255, 170, 0);
+	background-color: rgb(255, 170, 0,60%);
 }</string>
                       </property>
                       <property name="text">

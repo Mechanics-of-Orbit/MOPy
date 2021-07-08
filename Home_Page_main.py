@@ -26,7 +26,7 @@ from Functions.SOI3D import SOI
 
 from Functions.Sections.CoOE import Calculate
 
-from Functions.Sections.DB.call_database import call, raund
+from Functions.Sections.DB.call_database import call,raund
 
 # GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
@@ -272,32 +272,6 @@ class MainWindow(QMainWindow):
         self.ui.semimajor_axis_coe_n_aoe.setText(str(round(sma, 4)))
         self.ui.inclination_coe_n_aoe.setText(str(round(inc_deg, 4)))
         self.ui.eccentricity_coe_n_aoe.setText(str(round(e_norm, 4)))
-
-        
-
-        # if e_vec[0] > 0 and e_vec[1] > 0 and e_vec[2] > 0:
-        #     e_vec = [e_vec[0], e_vec[1], e_vec[2]]
-
-        # elif e_vec[0] > 0 and e_vec[1] > 0 and e_vec[2] < 0:
-        #     e_vec = [e_vec[0], e_vec[1], -e_vec[2]]
-
-        # elif e_vec[0] > 0 and e_vec[1] < 0 and e_vec[2] < 0:
-        #     e_vec = [e_vec[0], -e_vec[1], -e_vec[2]]
-
-        # elif e_vec[0] < 0 and e_vec[1] < 0 and e_vec[2] < 0:
-        #     e_vec = [-e_vec[0], -e_vec[1], -e_vec[2]]
-
-        # elif e_vec[0] < 0 and e_vec[1] > 0 and e_vec[2] > 0:
-        #     e_vec = [-e_vec[0], e_vec[1], e_vec[2]]
-
-        # elif e_vec[0] < 0 and e_vec[1] > 0 and e_vec[2] < 0:
-        #     e_vec = [-e_vec[0], e_vec[1], -e_vec[2]]
-
-        # elif e_vec[0] > 0 and e_vec[1] < 0 and e_vec[2] > 0:
-        #     e_vec = [e_vec[0], -e_vec[1], e_vec[2]]
-
-        # elif e_vec[0] < 0 and e_vec[1] < 0 and e_vec[2] > 0:
-        #     e_vec = [-e_vec[0], -e_vec[1], e_vec[2]]
             
 
 
@@ -316,7 +290,7 @@ class MainWindow(QMainWindow):
             self.ui.CoOE_output_lbl_error.setText('')
         
         ty = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
-        
+        print(ty)
         if len(ty) == 4:
             ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
             quad = Calculate.correct_ohm(ohmm, n_vec)
@@ -372,20 +346,20 @@ class MainWindow(QMainWindow):
     # SOI
     def SEARCH(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        planet_name = planet_name.strip()
-
-        self.ui.lbl_mass.setText("Mass of " + str(planet_name)+":")
-        self.ui.soi_mass.setText(str(call.mass(planet_name)))
-        self.ui.dist_frm_sun.setText(str(call.dist_frm_sun(planet_name)))
+        planet_mass = call.data(planet_name,'mass')
+        dist_frm_sun = call.data(planet_name,'dist_frm_sun')
+        self.ui.lbl_mass.setText("Mass of " + str(planet_mass[1])+":")
+        self.ui.soi_mass.setText(str(planet_mass[0]))
+        self.ui.dist_frm_sun.setText(str(dist_frm_sun[0]))
        
             
     def SOI(self):
         planet_name = self.ui.SOI_planet_name.currentText()
         self.ui.rSOI_of_planet_lbl.setText("Radius of SOI of " + str(planet_name.strip()) + ":")
-        Mass_of_Sun = call.mass('Sun')
+        Mass_of_Sun = call.data('Sun','mass')
         Minor_body_mass = self.ui.soi_mass.text() 
         distance_bt_sun_plnt = self.ui.soi_mass.text()
-        rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun)**(2/5))
+        rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun[0])**(2/5))
         self.ui.soi_rad.setText(raund(rSOI,4))
     
        
@@ -396,7 +370,7 @@ class MainWindow(QMainWindow):
         planet_name = planet_name.lower()
         rSOI = self.ui.soi_rad.text()
 
-        r_planet = call.radius(planet_name1)
+        r_planet = call.data(planet_name1,'maj_bdy_rad')[0]
         r_soimb = float(rSOI)/r_planet
         graph3d = SOI(planet_name,rSOI,r_soimb)
         graph3d.run()

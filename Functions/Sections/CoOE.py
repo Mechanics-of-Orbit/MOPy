@@ -14,8 +14,8 @@ class Calculate:
     G = 6.67e-20 #units are in km3 kg-1 s-2
     def muvalue(self,major_body):
         
-        major_body_radius = call.radius(major_body) #major_bodies_radius[sel_major_body]
-        major_body_mass = call.mass(major_body)
+        major_body_radius = call.data(major_body,'maj_bdy_rad')[0] #major_bodies_radius[sel_major_body]
+        major_body_mass = call.data(major_body,'mass')[0]
         mu = self.G * major_body_mass
         return [mu, major_body_radius]
     
@@ -76,7 +76,7 @@ class Calculate:
             return {"RAAN":ohm[0], "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
       
         elif (inc == 0 or 180): #Inclination is Zero
-            nothing = 4
+            
             if norm(e_vec) > 0: #Elliptical Orbit
                 nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
                 Long_of_peri_pi = acos(dot(I,e_vec)/(norm(I)*norm(e_vec)))

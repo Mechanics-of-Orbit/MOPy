@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagetiUDSW.ui'
+## Form generated from reading UI file 'Home_PageGRJzQo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -33,7 +33,9 @@ class Ui_MainWindow(object):
         self.drop_shadow_frame = QFrame(self.centralwidget)
         self.drop_shadow_frame.setObjectName(u"drop_shadow_frame")
         self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 88%), stop:0.488636 rgba(28, 30, 72,88%));\n"
-"border-radius: 15px")
+"\n"
+"\n"
+"border-radius: 15px;")
         self.drop_shadow_frame.setFrameShape(QFrame.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout = QVBoxLayout(self.drop_shadow_frame)
@@ -230,7 +232,7 @@ class Ui_MainWindow(object):
         self.Search_logo.setSizePolicy(sizePolicy)
         self.Search_logo.setMinimumSize(QSize(350, 250))
         self.Search_logo.setMaximumSize(QSize(390, 300))
-        self.Search_logo.setStyleSheet(u"opacity:50%;")
+        self.Search_logo.setStyleSheet(u"background-color:transparent;")
         self.Search_logo.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
         self.Search_logo.setScaledContents(True)
         self.Search_logo.setAlignment(Qt.AlignCenter)
@@ -286,14 +288,14 @@ class Ui_MainWindow(object):
         self.combosearchbox.setMaximumSize(QSize(533, 35))
         self.combosearchbox.setFocusPolicy(Qt.NoFocus)
         self.combosearchbox.setStyleSheet(u"QComboBox{\n"
-"	background-color: rgb(255, 255, 255,70%);\n"
+"	background-color: rgb(255, 255, 255,80%);\n"
 "	border: 5px solid rgb(255, 170, 0);\n"
 "	font: 12pt \"Arial\";\n"
 "	border-radius: 17px;}\n"
 "\n"
 "\n"
 "QComboBox:hover{\n"
-"	background-color: rgb(255, 255, 255,70%);\n"
+"	background-color: rgb(255, 255, 255,80%);\n"
 "	border: 4px solid rgb(2, 119, 189);\n"
 "}")
 
@@ -346,14 +348,14 @@ class Ui_MainWindow(object):
         font3.setWeight(50)
         self.Go_btn.setFont(font3)
         self.Go_btn.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189,70%);\n"
+"	background-color:rgb(2, 119, 189,60%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0,70%);\n"
+"	background-color: rgb(255, 170, 0,60%);\n"
 "}")
 
         self.verticalLayout_13.addWidget(self.Go_btn)
@@ -618,7 +620,7 @@ class Ui_MainWindow(object):
         self.Date_time_frame.setFrameShadow(QFrame.Raised)
         self.digits_accuracy = QSpinBox(self.Date_time_frame)
         self.digits_accuracy.setObjectName(u"digits_accuracy")
-        self.digits_accuracy.setGeometry(QRect(180, 120, 61, 31))
+        self.digits_accuracy.setGeometry(QRect(230, 120, 61, 31))
         self.digits_accuracy.setFont(font3)
         self.digits_accuracy.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
@@ -656,13 +658,13 @@ class Ui_MainWindow(object):
         self.digits_accuracy.setMaximum(8)
         self.label = QLabel(self.Date_time_frame)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(10, 40, 111, 16))
+        self.label.setGeometry(QRect(20, 40, 111, 16))
         self.label.setFont(font4)
         self.label.setStyleSheet(u"border: none;\n"
 "color: white;")
         self.timeEdit = QTimeEdit(self.Date_time_frame)
         self.timeEdit.setObjectName(u"timeEdit")
-        self.timeEdit.setGeometry(QRect(120, 30, 141, 31))
+        self.timeEdit.setGeometry(QRect(130, 30, 141, 31))
         self.timeEdit.setFont(font6)
         self.timeEdit.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
@@ -699,10 +701,11 @@ class Ui_MainWindow(object):
         self.timeEdit.setCurrentSection(QDateTimeEdit.HourSection)
         self.label_2 = QLabel(self.Date_time_frame)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(270, 40, 41, 16))
+        self.label_2.setGeometry(QRect(280, 35, 31, 21))
         self.label_2.setFont(font4)
         self.label_2.setStyleSheet(u"border: none;\n"
 "color: white;")
+        self.label_2.setAlignment(Qt.AlignCenter)
         self.label_3 = QLabel(self.Date_time_frame)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(140, 70, 101, 16))
@@ -711,7 +714,7 @@ class Ui_MainWindow(object):
 "color: white;")
         self.label_4 = QLabel(self.Date_time_frame)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(10, 120, 171, 31))
+        self.label_4.setGeometry(QRect(30, 120, 171, 31))
         self.label_4.setFont(font4)
         self.label_4.setStyleSheet(u"border: none;\n"
 "color: white;")
@@ -724,14 +727,14 @@ class Ui_MainWindow(object):
         font7.setWeight(75)
         self.calculate_btn.setFont(font7)
         self.calculate_btn.setStyleSheet(u"QPushButton{\n"
-"	border: 5px solid rgb(34, 14, 36);\n"
-"	border-radius: 15px;\n"
-"	color: white;\n"
-"	background-color: rgb(34, 14, 36);\n"
+"	background-color:rgb(2, 119, 189,60%);\n"
+"	color:rgb(245, 255, 179);\n"
+"	border-radius: 14px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	border: 3px solid white;\n"
+"	\n"
+"	background-color: rgb(255, 170, 0,60%);\n"
 "}")
 
         self.verticalLayout_10.addWidget(self.Date_time_frame)
@@ -925,7 +928,7 @@ class Ui_MainWindow(object):
         self.frame_35.setFrameShadow(QFrame.Raised)
         self.label_8 = QLabel(self.frame_35)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(120, 30, 171, 21))
+        self.label_8.setGeometry(QRect(150, 50, 171, 21))
         self.label_8.setFont(font8)
         self.label_8.setStyleSheet(u"color: white;\n"
 "border:none;")
@@ -949,7 +952,7 @@ class Ui_MainWindow(object):
         self.SOI_planet_name.addItem("")
         self.SOI_planet_name.addItem("")
         self.SOI_planet_name.setObjectName(u"SOI_planet_name")
-        self.SOI_planet_name.setGeometry(QRect(410, 20, 211, 41))
+        self.SOI_planet_name.setGeometry(QRect(440, 40, 211, 41))
         self.SOI_planet_name.setStyleSheet(u"QComboBox{\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
 "	font: 12pt \"Arial\";\n"
@@ -977,22 +980,6 @@ class Ui_MainWindow(object):
         self.label_16.setFont(font8)
         self.label_16.setStyleSheet(u"color: white;\n"
 "border:none;")
-        self.get_mass = QPushButton(self.frame_35)
-        self.get_mass.setObjectName(u"get_mass")
-        self.get_mass.setGeometry(QRect(350, 70, 101, 41))
-        font9 = QFont()
-        font9.setPointSize(12)
-        self.get_mass.setFont(font9)
-        self.get_mass.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
-"	color:rgb(245, 255, 179);\n"
-"	border-radius: 20px\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	\n"
-"	background-color: rgb(255, 170, 0);\n"
-"}")
         self.soi_mass = QLabel(self.frame_35)
         self.soi_mass.setObjectName(u"soi_mass")
         self.soi_mass.setGeometry(QRect(170, 120, 161, 41))
@@ -1036,16 +1023,18 @@ class Ui_MainWindow(object):
         self.soi_cal = QPushButton(self.frame_35)
         self.soi_cal.setObjectName(u"soi_cal")
         self.soi_cal.setGeometry(QRect(350, 170, 101, 41))
+        font9 = QFont()
+        font9.setPointSize(12)
         self.soi_cal.setFont(font9)
         self.soi_cal.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
+"	background-color:rgb(2, 119, 189,60%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0);\n"
+"	background-color: rgb(255, 170, 0,60%);\n"
 "}")
 
         self.verticalLayout_18.addWidget(self.frame_35)
@@ -1099,14 +1088,14 @@ class Ui_MainWindow(object):
         self.get_3D_soi.setGeometry(QRect(130, 100, 254, 41))
         self.get_3D_soi.setFont(font9)
         self.get_3D_soi.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
+"	background-color:rgb(2, 119, 189,60%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0);\n"
+"	background-color: rgb(255, 170, 0,60%);\n"
 "}")
         self.label_17 = QLabel(self.frame_36)
         self.label_17.setObjectName(u"label_17")
@@ -1318,14 +1307,14 @@ class Ui_MainWindow(object):
         self.input_type_go_btn_vpco.setGeometry(QRect(450, 200, 101, 41))
         self.input_type_go_btn_vpco.setFont(font9)
         self.input_type_go_btn_vpco.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
+"	background-color:rgb(2, 119, 189,60%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0);\n"
+"	background-color: rgb(255, 170, 0,60%);\n"
 "}")
         self.error_selct_body = QLabel(self.vpco_input_type_screen)
         self.error_selct_body.setObjectName(u"error_selct_body")
@@ -1375,28 +1364,28 @@ class Ui_MainWindow(object):
         self.orbit_type_btn_inpt_ae.setGeometry(QRect(440, 90, 121, 41))
         self.orbit_type_btn_inpt_ae.setFont(font9)
         self.orbit_type_btn_inpt_ae.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
+"	background-color:rgb(2, 119, 189,60%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0);\n"
+"	background-color: rgb(255, 170, 0,60%);\n"
 "}")
         self.go_btn_inpt_ae = QPushButton(self.a_e_screen)
         self.go_btn_inpt_ae.setObjectName(u"go_btn_inpt_ae")
         self.go_btn_inpt_ae.setGeometry(QRect(450, 190, 101, 41))
         self.go_btn_inpt_ae.setFont(font9)
         self.go_btn_inpt_ae.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
+"	background-color:rgb(2, 119, 189,60%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0);\n"
+"	background-color: rgb(255, 170, 0,60%);\n"
 "}")
         self.semimajor_axis_input_ae = QLineEdit(self.a_e_screen)
         self.semimajor_axis_input_ae.setObjectName(u"semimajor_axis_input_ae")
@@ -4628,7 +4617,7 @@ class Ui_MainWindow(object):
         self.show_page.setObjectName(u"show_page")
         self.other_body_mass_coe_n_aoe = QLineEdit(self.show_page)
         self.other_body_mass_coe_n_aoe.setObjectName(u"other_body_mass_coe_n_aoe")
-        self.other_body_mass_coe_n_aoe.setGeometry(QRect(10, 10, 141, 41))
+        self.other_body_mass_coe_n_aoe.setGeometry(QRect(40, 10, 111, 41))
         self.other_body_mass_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	\n"
@@ -4645,7 +4634,7 @@ class Ui_MainWindow(object):
         self.other_body_mass_coe_n_aoe.setAlignment(Qt.AlignCenter)
         self.other_body_radius_coe_n_aoe = QLineEdit(self.show_page)
         self.other_body_radius_coe_n_aoe.setObjectName(u"other_body_radius_coe_n_aoe")
-        self.other_body_radius_coe_n_aoe.setGeometry(QRect(180, 10, 141, 41))
+        self.other_body_radius_coe_n_aoe.setGeometry(QRect(180, 10, 111, 41))
         self.other_body_radius_coe_n_aoe.setStyleSheet(u"QLineEdit{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(131, 200, 168, 255), stop:1 rgba(224, 255, 190, 255));\n"
 "	\n"
@@ -4665,14 +4654,14 @@ class Ui_MainWindow(object):
         self.cal_btn_coe_n_aoe.setGeometry(QRect(130, 60, 71, 21))
         self.cal_btn_coe_n_aoe.setFont(font5)
         self.cal_btn_coe_n_aoe.setStyleSheet(u"QPushButton{\n"
-"	background-color:rgb(2, 119, 189);\n"
+"	background-color:rgb(2, 119, 189,60%);\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 10px\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	\n"
-"	background-color: rgb(255, 170, 0);\n"
+"	background-color: rgb(255, 170, 0,60%);\n"
 "}")
         self.otherbody_stack.addWidget(self.show_page)
         self.label_264 = QLabel(self.PosNVelVector_inpt_frame)
@@ -5098,8 +5087,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(0)
-        self.Orbit_type_stack.setCurrentIndex(1)
-        self.VPCO_output_stack.setCurrentIndex(0)
+        self.Orbit_type_stack.setCurrentIndex(0)
+        self.VPCO_output_stack.setCurrentIndex(1)
         self.otherbody_stack.setCurrentIndex(0)
         self.CoOE_output_stack.setCurrentIndex(0)
 
@@ -5184,7 +5173,6 @@ class Ui_MainWindow(object):
         self.lbl_dist_frm_sun.setText(QCoreApplication.translate("MainWindow", u"Distance From Sun:", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Kg", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Km", None))
-        self.get_mass.setText(QCoreApplication.translate("MainWindow", u"Get Data", None))
         self.soi_mass.setText("")
         self.dist_frm_sun.setText("")
         self.soi_cal.setText(QCoreApplication.translate("MainWindow", u"Calculate", None))

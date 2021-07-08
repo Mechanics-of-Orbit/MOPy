@@ -78,7 +78,7 @@ class UIFunctions(MainWindow):
         # When Home_btn is clicked
         self.ui.Home_btn.clicked.connect(lambda: Home_Page_main.MainWindow.meth_Home_btn(self))
 
-        self.ui.get_mass.clicked.connect(lambda:Home_Page_main.MainWindow.SEARCH(self))
+        self.ui.SOI_planet_name.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.SEARCH(self))
 
         self.ui.soi_cal.clicked.connect(lambda:Home_Page_main.MainWindow.SOI(self))
 
