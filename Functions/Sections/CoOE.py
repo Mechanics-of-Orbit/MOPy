@@ -3,9 +3,9 @@ from numpy import dot, pi, cross, multiply as multi
 from math import acos
 
 if __name__ == '__main__':
-    from DB.call_database import call
+    from call_database import call
 else:
-    from Functions.Sections.DB.call_database import call
+    from Functions.call_database import call
 
 class Calculate:
     I = [1, 0, 0]
@@ -39,15 +39,21 @@ class Calculate:
             quad = "The n vector doesn't exist as there is no Orbital Inclination"
         elif n_vec[0] == 0 or n_vec[1] == 0:
             if n_vec[0] < 0:
-                quad = "TThis is a Retrograde Elliptical Or"
+                quad = "This is a Retrograde Orbit and the n-vector lies on negative x-axis"
+            elif n_vec[0] > 0:
+                quad = "This is a Prograde Orbit and the n-vector lies on Positive x-axis"
+            elif n_vec[1] > 0:
+                quad = "This is a Prograde Orbit and the n-vector lies on Positive y-axis"
+            elif n_vec[1] < 0:
+                quad = "This is a Retrograde Orbit and the n-vector lies on Negative y-axis"
         elif n_vec[0] > 0 and n_vec[1] > 0: 
-            quad = ("This is a Prograde Elliptical Orbit and the n-vector lies in first Quadrant.")
+            quad = ("This is a Prograde Orbit and the n-vector lies in first Quadrant.")
         elif n_vec[0] < 0 and n_vec[1] > 0:
-            quad = ("This is a Retrograde Elliptical Orbit and the n-vector lies in second Quadrant.")
+            quad = ("This is a Retrograde Orbit and the n-vector lies in second Quadrant.")
         elif n_vec[0] < 0 and n_vec[1] < 0:
-            quad = ("This is a Retrograde Elliptical Orbit and the n-vector lies in Third Quadrant.")
+            quad = ("This is a Retrograde Orbit and the n-vector lies in Third Quadrant.")
         elif n_vec[0] > 0 and n_vec[1] < 0:
-            quad = ("This is a Prograde Elliptical Orbit and the n-vector lies in fourth Quadrant.")
+            quad = ("This is a Prograde Orbit and the n-vector lies in fourth Quadrant.")
         
     def other_var(pos_vec, vel_vec):
         h_vec = cross(pos_vec, vel_vec)
