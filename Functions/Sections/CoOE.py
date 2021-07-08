@@ -3,9 +3,9 @@ from numpy import dot, pi, cross, multiply as multi
 from math import acos
 
 if __name__ == '__main__':
-    from call_database import call
+    from DB.call_database import call
 else:
-    from Functions.call_database import call
+    from Functions.Sections.DB.call_database import call
 
 class Calculate:
     I = [1, 0, 0]
@@ -79,7 +79,7 @@ class Calculate:
             ohm = Calculate.correct_ohm(ohm, n_vec)
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            return {"RAAN":ohm[0], "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
+            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
       
         elif (inc == 0 or 180): #Inclination is Zero
             nothing = 4
