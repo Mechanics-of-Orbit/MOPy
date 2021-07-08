@@ -237,22 +237,22 @@ class MainWindow(QMainWindow):
 
         if Major_Body != 'Other':
             self.ui.otherbody_stack.setCurrentIndex(0)
-            self.ui.CoOE_output_stack.setCurrentIndex(1)
             [mu, major_body_radius] = Calculate.muvalue(self,Major_Body)
         
         elif Major_Body == 'Other':
             self.ui.otherbody_stack.setCurrentIndex(1)
-            self.ui.CoOE_output_stack.setCurrentIndex(1)
-            self.ui.CoOE_output_lbl_error.setText('')
             Body_mass = self.ui.other_body_mass_coe_n_aoe.text()
-            Body_mass = Body_mass.split('e')
+            try:
+                Body_mass = Body_mass.split('e')
+            except:
+                Body_mass = Body_mass
             if len(Body_mass) == 1:
-                Body_mass = int(Body_mass[0])
+                Body_mass = int(Body_mass)
                 
             elif len(Body_mass) == 2:
                 b1 = int(Body_mass[0])
                 b2 = int(Body_mass[1])
-                Body_mass = b1 * 10**b2
+                Body_mass = b1 * 10**b2  
             
             major_body_radius = self.ui.other_body_radius_coe_n_aoe.text()
             major_body_radius = float(major_body_radius)
@@ -265,36 +265,30 @@ class MainWindow(QMainWindow):
         
         sma = float(OER['Semi-Major Axis'])
         inc_deg = float(OER['Inclination'])*(180/pi)
-
-        e_vec = OER['Eccentricity']
+        e_vec = OER['Vec_Eccentricity']
         e_norm = float(OER['Norm_Eccentricity'])
 
         self.ui.semimajor_axis_coe_n_aoe.setText(str(round(sma, 4)))
         self.ui.inclination_coe_n_aoe.setText(str(round(inc_deg, 4)))
         self.ui.eccentricity_coe_n_aoe.setText(str(round(e_norm, 4)))
-            
-
 
         [h_vec, n_vec] = Calculate.other_var(pos_vec, vel_vec)
-
-            
         
-        pos = norm(pos_vec)
-        vel = norm(vel_vec)
-        sma = 1/((2/pos)-(vel*vel/mu))
         r_peri = sma*(1-norm(e_vec))
+        
+
         if r_peri < major_body_radius:
             self.ui.CoOE_output_stack.setCurrentIndex(0)
             self.ui.CoOE_output_lbl_error.setText('Satellite will crash into the planets surface')
         else:
+            self.ui.CoOE_output_stack.setCurrentIndex(1)
             self.ui.CoOE_output_lbl_error.setText('')
         
         ty = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
-        print(ty)
+        
         if len(ty) == 4:
-            ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
-            quad = Calculate.correct_ohm(ohmm, n_vec)
-            self.ui.CoOE_output_para_lbl.setText(quad[1])
+            quad = Calculate.position_of_n_vector(n_vec)
+            self.ui.CoOE_output_para_lbl.setText(quad)
             keys = list(ty.keys())
             values = list(ty.values()) 
             self.ui.RAAN_CoOE_lbl.setText(keys[0])
@@ -408,7 +402,7 @@ class MainWindow(QMainWindow):
                 
         #JDN to JD
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
-        print(type(JD),'\n',JD)
+        
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
     
 

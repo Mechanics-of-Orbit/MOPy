@@ -14,7 +14,7 @@ class Calculate:
     G = 6.67e-20 #units are in km3 kg-1 s-2
     def muvalue(self,major_body):
         
-        major_body_radius = call.data(major_body,'maj_bdy_rad')[0] #major_bodies_radius[sel_major_body]
+        major_body_radius = call.data(major_body,'maj_bdy_rad')[0]/2 #major_bodies_radius[sel_major_body]
         major_body_mass = call.data(major_body,'mass')[0]
         mu = self.G * major_body_mass
         return [mu, major_body_radius]
@@ -54,6 +54,7 @@ class Calculate:
             quad = ("This is a Retrograde Orbit and the n-vector lies in Third Quadrant.")
         elif n_vec[0] > 0 and n_vec[1] < 0:
             quad = ("This is a Prograde Orbit and the n-vector lies in fourth Quadrant.")
+        return quad
         
     def other_var(pos_vec, vel_vec):
         h_vec = cross(pos_vec, vel_vec)
@@ -68,7 +69,7 @@ class Calculate:
         inc = (acos((dot(h_vec, K))/norm(h_vec))) 
         sma = 1/((2/norm(pos_vec))-((norm(vel_vec)*norm(vel_vec))/mu))
         e_norm = norm(e_vec)
-        return {"Semi-Major Axis": sma, "Inclination": inc, "Eccentricity": e_vec, "Norm_Eccentricity": e_norm}
+        return {"Semi-Major Axis": sma, "Inclination": inc, "Vec_Eccentricity": e_vec, "Norm_Eccentricity": e_norm}
         
         
     def ACOE(pos_vec, vel_vec, e_vec, inc):
@@ -121,6 +122,6 @@ if __name__ == '__main__':
     mu = 3.986e5
     BOE = Calculate.OE(pos_vec, vel_vec, mu)
     print(BOE)
-    OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Eccentricity'], BOE['Inclination'])
+    OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Vec_Eccentricity'], BOE['Inclination'])
     print(OOE)
     
