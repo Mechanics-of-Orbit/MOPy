@@ -78,10 +78,12 @@ class Calculate:
         if (inc != 0 or 180) and norm(e_vec) > 0: #Nothing is Zero/180
             ohm = (acos((dot(I,n_vec))/norm(n_vec)))
             ohm = Calculate.correct_ohm(ohm, n_vec)
+            
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
+            
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            oi = {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
-            return [{"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu},oi]
+            print(ohm,omega,nu,n_vec)
+            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
       
         elif (inc == 0 or 180): #Inclination is Zero
             

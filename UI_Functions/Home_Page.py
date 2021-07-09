@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageOOvwuW.ui'
+## Form generated from reading UI file 'Home_PagekNKwur.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -5090,7 +5090,7 @@ class Ui_MainWindow(object):
         self.Orbit_type_stack.setCurrentIndex(0)
         self.VPCO_output_stack.setCurrentIndex(1)
         self.otherbody_stack.setCurrentIndex(0)
-        self.CoOE_output_stack.setCurrentIndex(1)
+        self.CoOE_output_stack.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

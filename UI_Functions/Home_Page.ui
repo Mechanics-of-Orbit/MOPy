@@ -11370,7 +11370,7 @@ QFrame:hover{
                        <string notr="true">border:none;</string>
                       </property>
                       <property name="currentIndex">
-                       <number>1</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="CoOE_output_lbl_error_screen">
                        <widget class="QLineEdit" name="CoOE_output_lbl_error">
