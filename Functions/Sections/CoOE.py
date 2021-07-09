@@ -80,7 +80,8 @@ class Calculate:
             ohm = Calculate.correct_ohm(ohm, n_vec)
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
+            oi = {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
+            return [{"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu},oi]
       
         elif (inc == 0 or 180): #Inclination is Zero
             
@@ -111,8 +112,8 @@ class Calculate:
         return True
 
 if __name__ == '__main__':
-    pos_vec = [8250, 390, 6900]
-    vel_vec = [-0.7, 6.6, -0.6]
+    pos_vec = [10000, 0, 0]
+    vel_vec = [0, 4.464, -4.464]
     # e_vec = [0.140621, 0.12893, 0.117342]
     # inc = 39.94
     # manju = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)

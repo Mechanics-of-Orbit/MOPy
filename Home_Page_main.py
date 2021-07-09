@@ -290,8 +290,8 @@ class MainWindow(QMainWindow):
         
         quad = Calculate.position_of_n_vector(n_vec)
         self.ui.CoOE_output_para_lbl.setText(quad)
-        keys = list(ty.keys())
-        values = list(ty.values()) 
+        keys = list(ty[0].keys())
+        values = list(ty[0].values()) 
         self.ui.RAAN_CoOE_lbl.setText(keys[0])
         self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
         self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
