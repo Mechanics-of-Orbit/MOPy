@@ -111,8 +111,8 @@ class Calculate:
         return True
 
 if __name__ == '__main__':
-    pos_vec = [8250, 390, 6900]
-    vel_vec = [-0.7, 6.6, -0.6]
+    pos_vec = [10000.0, 0.0, 0.0]
+    vel_vec = [0.0, 4.464, -4.464]
     # e_vec = [0.140621, 0.12893, 0.117342]
     # inc = 39.94
     # manju = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
