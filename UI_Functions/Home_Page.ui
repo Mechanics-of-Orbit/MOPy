@@ -406,7 +406,7 @@ QPushButton:hover{
              <string notr="true">background-color:none</string>
             </property>
             <property name="currentIndex">
-             <number>5</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <property name="styleSheet">
@@ -11179,7 +11179,7 @@ color:white;
 </string>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="blanck"/>
                     <widget class="QWidget" name="show_page">
@@ -12018,7 +12018,7 @@ QLabel:hover{
                         <property name="styleSheet">
                          <string notr="true">background-color:transparent;
 
-color:black;
+color:white;
 border-radius:10px;</string>
                         </property>
                         <property name="alignment">

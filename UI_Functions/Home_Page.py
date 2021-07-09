@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageGRJzQo.ui'
+## Form generated from reading UI file 'Home_PageOOvwuW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -4990,7 +4990,7 @@ class Ui_MainWindow(object):
         self.CoOE_output_para_lbl.setFont(font9)
         self.CoOE_output_para_lbl.setStyleSheet(u"background-color:transparent;\n"
 "\n"
-"color:black;\n"
+"color:white;\n"
 "border-radius:10px;")
         self.CoOE_output_para_lbl.setAlignment(Qt.AlignCenter)
         self.CoOE_output_stack.addWidget(self.CoOE_output_parameters_screen)
@@ -5090,7 +5090,7 @@ class Ui_MainWindow(object):
         self.Orbit_type_stack.setCurrentIndex(0)
         self.VPCO_output_stack.setCurrentIndex(1)
         self.otherbody_stack.setCurrentIndex(0)
-        self.CoOE_output_stack.setCurrentIndex(0)
+        self.CoOE_output_stack.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
