@@ -406,7 +406,7 @@ QPushButton:hover{
              <string notr="true">background-color:none</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <property name="styleSheet">
@@ -11179,7 +11179,7 @@ color:white;
 </string>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                     <widget class="QWidget" name="blanck"/>
                     <widget class="QWidget" name="show_page">
@@ -11370,7 +11370,7 @@ QFrame:hover{
                        <string notr="true">border:none;</string>
                       </property>
                       <property name="currentIndex">
-                       <number>0</number>
+                       <number>1</number>
                       </property>
                       <widget class="QWidget" name="CoOE_output_lbl_error_screen">
                        <widget class="QLineEdit" name="CoOE_output_lbl_error">
