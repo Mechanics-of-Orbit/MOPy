@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenXBLbsI.ui'
+## Form generated from reading UI file 'splash_screenGaVuUz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -20,7 +20,7 @@ class Ui_SplashScreen(object):
     def setupUi(self, SplashScreen):
         if SplashScreen.objectName():
             SplashScreen.setObjectName(u"SplashScreen")
-        SplashScreen.resize(750, 400)
+        SplashScreen.resize(850, 450)
         self.centralwidget = QWidget(SplashScreen)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -40,7 +40,7 @@ class Ui_SplashScreen(object):
         self.dropShadowFrame.setFrameShadow(QFrame.Raised)
         self.app_description_lbl = QLabel(self.dropShadowFrame)
         self.app_description_lbl.setObjectName(u"app_description_lbl")
-        self.app_description_lbl.setGeometry(QRect(0, 230, 731, 31))
+        self.app_description_lbl.setGeometry(QRect(0, 270, 831, 31))
         font = QFont()
         font.setFamily(u"Segoe UI")
         font.setPointSize(14)
@@ -50,7 +50,7 @@ class Ui_SplashScreen(object):
         self.app_description_lbl.setAlignment(Qt.AlignCenter)
         self.progressBar = QProgressBar(self.dropShadowFrame)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setGeometry(QRect(50, 280, 631, 23))
+        self.progressBar.setGeometry(QRect(50, 320, 731, 23))
         self.progressBar.setStyleSheet(u"QProgressBar {\n"
 "	\n"
 "	background-color: rgb(98, 114, 164,200);\n"
@@ -73,7 +73,7 @@ class Ui_SplashScreen(object):
         self.progressBar.setValue(24)
         self.loading_lbl = QLabel(self.dropShadowFrame)
         self.loading_lbl.setObjectName(u"loading_lbl")
-        self.loading_lbl.setGeometry(QRect(0, 320, 731, 21))
+        self.loading_lbl.setGeometry(QRect(10, 350, 811, 61))
         font1 = QFont()
         font1.setFamily(u"Segoe UI")
         font1.setPointSize(12)
@@ -81,15 +81,16 @@ class Ui_SplashScreen(object):
         self.loading_lbl.setStyleSheet(u"background-color:transparent;\n"
 "color: rgb(98, 114, 164);")
         self.loading_lbl.setAlignment(Qt.AlignCenter)
+        self.loading_lbl.setWordWrap(True)
         self.logo_frame = QFrame(self.dropShadowFrame)
         self.logo_frame.setObjectName(u"logo_frame")
-        self.logo_frame.setGeometry(QRect(0, -1, 731, 221))
+        self.logo_frame.setGeometry(QRect(0, -1, 831, 261))
         self.logo_frame.setStyleSheet(u"background-color:transparent;")
         self.logo_frame.setFrameShape(QFrame.StyledPanel)
         self.logo_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.logo_frame)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(232, -1, 232, 0)
+        self.horizontalLayout.setContentsMargins(262, -1, 262, 0)
         self.logo_lbl = QLabel(self.logo_frame)
         self.logo_lbl.setObjectName(u"logo_lbl")
         font2 = QFont()
@@ -121,7 +122,7 @@ class Ui_SplashScreen(object):
     def retranslateUi(self, SplashScreen):
         SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"MainWindow", None))
         self.app_description_lbl.setText(QCoreApplication.translate("SplashScreen", u"<strong>APP</strong> DESCRIPTION", None))
-        self.loading_lbl.setText(QCoreApplication.translate("SplashScreen", u"loading...", None))
+        self.loading_lbl.setText("")
         self.logo_lbl.setText("")
         self.label.setText("")
     # retranslateUi

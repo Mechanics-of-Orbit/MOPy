@@ -10,6 +10,8 @@ import sqlite3
 from math import *
 from Functions.Sections.soi import SoI
 
+from jsontrial import fun_fact
+
 from numpy.linalg import norm
 from numpy import dot, pi, cross, multiply as multi
 from math import acos
@@ -247,7 +249,7 @@ class MainWindow(QMainWindow):
             except:
                 Body_mass = Body_mass
             if len(Body_mass) == 1:
-                Body_mass = int(Body_mass)
+                Body_mass = int(Body_mass[0])
                 
             elif len(Body_mass) == 2:
                 b1 = int(Body_mass[0])
@@ -449,8 +451,9 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(4700, lambda: self.ui.app_description_lbl.setText("Ready to <strong>Takeoff</strong> "))
         QtCore.QTimer.singleShot(6000, lambda: self.ui.app_description_lbl.setText(" "))
 
-
-
+        # Fun Facts
+        
+        self.ui.loading_lbl.setText("<strong>Do you know: </strong>"+ fun_fact())
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################
