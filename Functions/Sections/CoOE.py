@@ -80,7 +80,7 @@ class Calculate:
             ohm = Calculate.correct_ohm(ohm, n_vec)
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu, "nothing":4}
+            return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
       
         elif (inc == 0 or 180): #Inclination is Zero
             
@@ -90,13 +90,13 @@ class Calculate:
                 return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu, "nothing":4}
             elif norm(e_vec) == 0: #Circular Orbit
                 Tr_long_l = acos(dot(I,pos_vec)/(norm(pos_vec)*norm(I)))
-                return {"True Longitude": Tr_long_l}
+                return {"True Longitude": Tr_long_l, "nothing":4, "nothing":4}
         
         elif (inc != 0 or 180) and norm(e_vec) == 0: #Circular orbit with inclination non-zero/pi
             ohm = (acos((dot(I,n_vec))/norm(n_vec)))
             ohm = Calculate.correct_ohm(ohm, n_vec)
             Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
-            return {"Argument of Latitude": Arg_of_lattitude_u, "RAAN": ohm}
+            return {"Argument of Latitude": Arg_of_lattitude_u, "RAAN": ohm, "nothing":4}
 
     def possibility(cls, major_body, pos_vec, vel_vec):
         [mu, major_body_radius] = Calculate.muvalue(major_body)
@@ -111,8 +111,8 @@ class Calculate:
         return True
 
 if __name__ == '__main__':
-    pos_vec = [10000, 0, 0]
-    vel_vec = [0, 4.464, -4.464]
+    pos_vec = [8250, 390, 6900]
+    vel_vec = [-0.7, 6.6, -0.6]
     # e_vec = [0.140621, 0.12893, 0.117342]
     # inc = 39.94
     # manju = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)

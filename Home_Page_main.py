@@ -278,7 +278,7 @@ class MainWindow(QMainWindow):
         
         r_peri = sma*(1-norm(e_vec))
         
-
+        #possibility(cls, major_body, pos_vec, vel_vec)
         if r_peri < major_body_radius:
             self.ui.CoOE_output_stack.setCurrentIndex(0)
             self.ui.CoOE_output_lbl_error.setText('Satellite will crash into the planets surface')
@@ -288,57 +288,18 @@ class MainWindow(QMainWindow):
         
         ty = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
         
-        if len(ty) == 4:
-            print(ty)
-            quad = Calculate.position_of_n_vector(n_vec)
-            self.ui.CoOE_output_para_lbl.setText(quad)
-            keys = list(ty.keys())
-            values = list(ty.values()) 
-            self.ui.RAAN_CoOE_lbl.setText(keys[0])
-            self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
-            self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
-            self.ui.arg_of_per_coe_n_aoe.setText(str(round(values[1] * (180/pi), 4)))
-            self.ui.tru_ano_CoOE_lbl.setText(keys[2])
-            self.ui.tru_ana_coe_n_aoe.setText(str(round(values[2] * (180/pi), 4))) 
+        quad = Calculate.position_of_n_vector(n_vec)
+        self.ui.CoOE_output_para_lbl.setText(quad)
+        keys = list(ty.keys())
+        values = list(ty.values()) 
+        self.ui.RAAN_CoOE_lbl.setText(keys[0])
+        self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
+        self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
+        self.ui.arg_of_per_coe_n_aoe.setText(str(round(values[1] * (180/pi), 4)))
+        self.ui.tru_ano_CoOE_lbl.setText(keys[2])
+        self.ui.tru_ana_coe_n_aoe.setText(str(round(values[2] * (180/pi), 4))) 
 
-        elif len(ty) == 3:
-            ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
-            quad = Calculate.correct_ohm(ohmm, n_vec)
-            self.ui.CoOE_output_para_lbl.setText(quad[1])
-            keys = list(ty.keys())
-            values = list(ty.values())
-            self.ui.RAAN_CoOE_lbl.setText(keys[0])
-            self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
-            self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
-            self.ui.arg_of_per_coe_n_aoe.setText(str(round(values[1] * (180/pi), 4)))
-            self.ui.tru_ano_CoOE_lbl.setHidden(1)
-            self.ui.tru_ana_coe_n_aoe.setHidden(1)
-
-        elif len(ty) == 2:
-            ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
-            quad = Calculate.correct_ohm(ohmm, n_vec)
-            self.ui.CoOE_output_para_lbl.setText(quad[1])
-            keys = list(ty.keys())
-            values = list(ty.values())
-            self.ui.RAAN_CoOE_lbl.setText(keys[0])
-            self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
-            self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
-            self.ui.arg_of_per_coe_n_aoe.setText(str(round(values[1] * (180/pi), 4)))
-            self.ui.tru_ano_CoOE_lbl.setHidden(1)
-            self.ui.tru_ana_coe_n_aoe.setHidden(1)
-
-        elif len(ty) == 1:
-            ohmm = (acos((dot(self.I,n_vec))/norm(n_vec)))*(180/pi)
-            quad = Calculate.correct_ohm(ohmm, n_vec)
-            self.ui.CoOE_output_para_lbl.setText(quad[1])
-            keys = list(ty.keys())
-            values = list(ty.values())
-            self.ui.RAAN_CoOE_lbl.setText(keys[0])
-            self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
-            self.ui.arg_of_per_CoOE_lbl.setHidden(1)
-            self.ui.arg_of_per_coe_n_aoe.setHidden(1)
-            self.ui.tru_ano_CoOE_lbl.setHidden(1)
-            self.ui.tru_ana_coe_n_aoe.setHidden(1)
+        
 
     # SOI
     def SEARCH(self):
