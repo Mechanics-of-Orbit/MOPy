@@ -87,16 +87,16 @@ class Calculate:
             if norm(e_vec) > 0: #Elliptical Orbit
                 nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
                 Long_of_peri_pi = acos(dot(I,e_vec)/(norm(I)*norm(e_vec)))
-                return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu, "nothing":4}
+                return {"Longitude of Perigee":Long_of_peri_pi, "True Anomaly":nu, "nothing":'NA'}
             elif norm(e_vec) == 0: #Circular Orbit
                 Tr_long_l = acos(dot(I,pos_vec)/(norm(pos_vec)*norm(I)))
-                return {"True Longitude": Tr_long_l, "nothing":4, "nothing":4}
+                return {"True Longitude": Tr_long_l, "nothing":'NA', "nothing":'NA'}
         
         elif (inc != 0 or 180) and norm(e_vec) == 0: #Circular orbit with inclination non-zero/pi
             ohm = (acos((dot(I,n_vec))/norm(n_vec)))
             ohm = Calculate.correct_ohm(ohm, n_vec)
             Arg_of_lattitude_u = acos(dot(n_vec,pos_vec)/(norm(n_vec)*norm(pos_vec)))
-            return {"Argument of Latitude": Arg_of_lattitude_u, "RAAN": ohm, "nothing":4}
+            return {"Argument of Latitude": Arg_of_lattitude_u, "RAAN": ohm, "nothing":'NA'}
 
     def possibility(cls, major_body, pos_vec, vel_vec):
         [mu, major_body_radius] = Calculate.muvalue(major_body)
