@@ -289,6 +289,7 @@ class MainWindow(QMainWindow):
         ty = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
         
         if len(ty) == 4:
+            print(ty)
             quad = Calculate.position_of_n_vector(n_vec)
             self.ui.CoOE_output_para_lbl.setText(quad)
             keys = list(ty.keys())
