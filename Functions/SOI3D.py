@@ -8,16 +8,24 @@ show-scene-graph-analyzer-meter true
 loadPrcFileData("", confVars)
 
 from direct.showbase.ShowBase import ShowBase
-from Functions.ModelLoader import loadMyModel
+from ModelLoader import loadMyModel
+
+if __name__ == '__main__':
+    from DB.call_database import call
+else:
+    from Functions.Sections.DB.call_database import call
 
 class SOI(ShowBase):
     def __init__(self, Minor_Body, rSOI, rSOIMiB):
         super().__init__()
 
-        self.stars = self.loader.loadModel("Functions/Assets/Models/solar_sky_sphere")
+        self.model_scale = 1e-6
+        minor_body_radius = call.data(Minor_Body,'maj_bdy_rad')[0]/2
+
+        self.stars = self.loader.loadModel("Assets/Models/solar_sky_sphere")
         self.stars.setScale(10000)
         self.stars.reparentTo(render)
-        self.stars_tex = loader.loadTexture("Functions/Assets/Models/hi_res_tex/stars.jpg")
+        self.stars_tex = loader.loadTexture("Assets/Models/hi_res_tex/stars.jpg")
         self.stars.setTexture(self.stars_tex,1)
 
         load_my_model = loadMyModel()
