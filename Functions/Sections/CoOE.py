@@ -69,7 +69,7 @@ class Calculate:
         inc = (acos((dot(h_vec, K))/norm(h_vec))) 
         sma = 1/((2/norm(pos_vec))-((norm(vel_vec)*norm(vel_vec))/mu))
         e_norm = norm(e_vec)
-        ACOE_values = Calculate.ACOE(pos_vec, vel_vec, e_vec, Inc)
+        ACOE_values = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
         OE_values = {"Semi-Major Axis": sma, "Inclination": inc, "Vec_Eccentricity": e_vec, "Norm_Eccentricity": e_norm}
         return [OE_values, ACOE_values]
         
@@ -125,8 +125,6 @@ if __name__ == '__main__':
     Major_Body = "Earth"
     # [mu, major_body_radius] = Calculate.muvalue(Major_Body)
     mu = 3.986e5
-    BOE = Calculate.OE(pos_vec, vel_vec, mu)
-    print(BOE)
-    OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Vec_Eccentricity'], BOE['Inclination'])
-    print(OOE)
+    OE = Calculate.OE(pos_vec, vel_vec, mu)
+    print(OE)
     
