@@ -69,7 +69,7 @@ class Calculate:
         inc = (acos((dot(h_vec, K))/norm(h_vec))) 
         sma = 1/((2/norm(pos_vec))-((norm(vel_vec)*norm(vel_vec))/mu))
         e_norm = norm(e_vec)
-        ACOE_values = Calculate.ACOE(pos_vec, vel_vec, e_vec, Inc)
+        ACOE_values = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
         OE_values = {"Semi-Major Axis": sma, "Inclination": inc, "Vec_Eccentricity": e_vec, "Norm_Eccentricity": e_norm}
         return [OE_values, ACOE_values]
         
@@ -84,7 +84,7 @@ class Calculate:
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            print(ohm,omega,nu,n_vec)
+            
             return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
       
         elif (inc == 0 or 180): #Inclination is Zero
