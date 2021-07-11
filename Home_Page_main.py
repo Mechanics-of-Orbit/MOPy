@@ -278,7 +278,6 @@ class MainWindow(QMainWindow):
         
         r_peri = sma*(1-norm(e_vec))
         
-        #possibility(cls, major_body, pos_vec, vel_vec)
         if r_peri < major_body_radius:
             self.ui.CoOE_output_stack.setCurrentIndex(0)
             self.ui.CoOE_output_lbl_error.setText('Satellite will crash into the planets surface')
