@@ -3,8 +3,8 @@ class loadMyModel():
         pass
 
     def body(self, base, model):
-        ob = base.loader.loadModel(r"Assets\Models\planetsphere")
-        ComDir = r"Assets\Models\hi_res_tex\a_" + model + ".jpg"
+        ob = base.loader.loadModel(r"Functions\Assets\Models\planetsphere")
+        ComDir = r"Functions\Assets\Models\hi_res_tex\a_" + model + ".jpg"
         ob_tex = base.loader.loadTexture(ComDir)
         ob.setTexture(ob_tex)
         return ob
