@@ -125,8 +125,6 @@ if __name__ == '__main__':
     Major_Body = "Earth"
     # [mu, major_body_radius] = Calculate.muvalue(Major_Body)
     mu = 3.986e5
-    BOE = Calculate.OE(pos_vec, vel_vec, mu)
-    print(BOE)
-    OOE = Calculate.ACOE(pos_vec, vel_vec, BOE['Vec_Eccentricity'], BOE['Inclination'])
-    print(OOE)
+    OE = Calculate.OE(pos_vec, vel_vec, mu)
+    print(OE)
     
