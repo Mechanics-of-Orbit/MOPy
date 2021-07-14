@@ -84,7 +84,7 @@ class Calculate:
             nu = (acos((dot(e_vec,pos_vec))/(norm(e_vec)*norm(pos_vec))))
             
             omega = (acos((dot(n_vec,e_vec))/multi(norm(n_vec),norm(e_vec))))
-            print(ohm,omega,nu,n_vec)
+            
             return {"RAAN":ohm, "Argument of Perigee":omega, "True Anomaly":nu}
       
         elif (inc == 0 or 180): #Inclination is Zero

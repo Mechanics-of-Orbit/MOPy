@@ -260,15 +260,13 @@ class MainWindow(QMainWindow):
             major_body_radius = float(major_body_radius)
             mu = float(self.G) * float(int(Body_mass))
 
-        [sma, inc, e_vec, e_norm] = Calculate.OE(pos_vec, vel_vec, mu)
+        OE_values, ACOE_values = Calculate.OE(pos_vec, vel_vec, mu)
         
         
-        OER = Calculate.OE(pos_vec, vel_vec, mu)
-        
-        sma = float(OER['Semi-Major Axis'])
-        inc_deg = float(OER['Inclination'])*(180/pi)
-        e_vec = OER['Vec_Eccentricity']
-        e_norm = float(OER['Norm_Eccentricity'])
+        sma = float(OE_values['Semi-Major Axis'])
+        inc_deg = float(OE_values['Inclination'])*(180/pi)
+        e_vec = OE_values['Vec_Eccentricity']
+        e_norm = float(OE_values['Norm_Eccentricity'])
 
         self.ui.semimajor_axis_coe_n_aoe.setText(str(round(sma, 4)))
         self.ui.inclination_coe_n_aoe.setText(str(round(inc_deg, 4)))
@@ -284,13 +282,12 @@ class MainWindow(QMainWindow):
         else:
             self.ui.CoOE_output_stack.setCurrentIndex(1)
             self.ui.CoOE_output_lbl_error.setText('')
-        
-        ty = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
+
         
         quad = Calculate.position_of_n_vector(n_vec)
         self.ui.CoOE_output_para_lbl.setText(quad)
-        keys = list(ty.keys())
-        values = list(ty.values()) 
+        keys = list(ACOE_values.keys())
+        values = list(ACOE_values.values()) 
         self.ui.RAAN_CoOE_lbl.setText(keys[0])
         self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
         self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
@@ -327,7 +324,7 @@ class MainWindow(QMainWindow):
         planet_name = planet_name.lower()
         rSOI = self.ui.soi_rad.text()
 
-        r_planet = call.data(planet_name1,'maj_bdy_rad')[0]
+        r_planet = call.data(planet_name1,'radius')[0]
         r_soimb = float(rSOI)/r_planet
         graph3d = SOI(planet_name,rSOI,r_soimb)
         graph3d.run()
