@@ -25,10 +25,10 @@ class SOI(ShowBase):
         minor_body_radius = call.data(Minor_Body,'radius')[0]/2
         
 
-        self.stars = self.loader.loadModel("Assets/Models/solar_sky_sphere")
+        self.stars = self.loader.loadModel("Functions/Assets/Models/solar_sky_sphere")
         self.stars.setScale(10000)
         self.stars.reparentTo(render)
-        self.stars_tex = loader.loadTexture("Assets/Models/hi_res_tex/stars.jpg")
+        self.stars_tex = loader.loadTexture("Functions/Assets/Models/hi_res_tex/stars.jpg")
         self.stars.setTexture(self.stars_tex,1)
 
         load_my_model = loadMyModel()
