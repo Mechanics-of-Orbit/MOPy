@@ -22,7 +22,8 @@ class SOI(ShowBase):
         super().__init__()
 
         self.model_scale = 1e-6
-        minor_body_radius = call.data(Minor_Body,'maj_bdy_rad')[0]/2
+        minor_body_radius = call.data(Minor_Body,'radius')[0]/2
+        
 
         self.stars = self.loader.loadModel("Assets/Models/solar_sky_sphere")
         self.stars.setScale(10000)

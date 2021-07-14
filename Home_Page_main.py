@@ -151,17 +151,17 @@ class MainWindow(QMainWindow):
         a = self.ui.semimajor_axis_input_ae.text()
         a = float(a)
         maj_body = self.ui.vpco_major_body.currentText()
-        maj_body_mass = call.mass(maj_body)
+        maj_body_mass = call.data(maj_body,'mass')
         
         if e == 0 or 0 < e < 1: 
-            [r_per, r_apo, mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.semiecc(a, e, maj_body_mass)
+            [r_per, r_apo, mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.semiecc(a, e, maj_body_mass[0])
 
-            v_per = CalculateCircularElliptical.velocity_at_any_point(a, r_per, maj_body_mass)
-            v_apo = CalculateCircularElliptical.velocity_at_any_point(a, r_apo, maj_body_mass)
-            v_slr = CalculateCircularElliptical.velocity_at_any_point(a, slr, maj_body_mass)
+            v_per = CalculateCircularElliptical.velocity_at_any_point(a, r_per, maj_body_mass[0])
+            v_apo = CalculateCircularElliptical.velocity_at_any_point(a, r_apo, maj_body_mass[0])
+            v_slr = CalculateCircularElliptical.velocity_at_any_point(a, slr, maj_body_mass[0])
 
-            esc_vp = CalculateParabola.velocity_at_any_point(r_per, maj_body_mass)
-            esc_va = CalculateParabola.velocity_at_any_point(r_apo, maj_body_mass)
+            esc_vp = CalculateParabola.velocity_at_any_point(r_per, maj_body_mass[0])
+            esc_va = CalculateParabola.velocity_at_any_point(r_apo, maj_body_mass[0])
             self.ui.rp_ae.setText(str(round(r_per,4)))
             self.ui.ra_ae.setText(str(round(r_apo,4)))
             self.ui.mu_ae.setText(str(round(sme,4)))

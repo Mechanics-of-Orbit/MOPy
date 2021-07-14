@@ -77,10 +77,16 @@ border-radius: 15px;</string>
        </property>
        <item>
         <widget class="QFrame" name="title_bar">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>55</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>50</height>
+           <height>55</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -158,71 +164,26 @@ border-radius: 15px;</string>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_3">
-                <property name="spacing">
-                 <number>0</number>
+               <widget class="QPushButton" name="Home_btn">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>10</y>
+                  <width>36</width>
+                  <height>36</height>
+                 </rect>
                 </property>
-                <property name="leftMargin">
-                 <number>25</number>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>36</height>
+                 </size>
                 </property>
-                <property name="topMargin">
-                 <number>0</number>
+                <property name="toolTip">
+                 <string>Home</string>
                 </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-                <item>
-                 <widget class="QFrame" name="frame_27">
-                  <property name="minimumSize">
-                   <size>
-                    <width>35</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>35</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_2">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <property name="leftMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QPushButton" name="Home_btn">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>36</height>
-                      </size>
-                     </property>
-                     <property name="toolTip">
-                      <string>Home</string>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton{
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
 	background-color:transparent;
 	color:rgb(245, 255, 179);
 	border-radius: 20px;
@@ -234,16 +195,11 @@ QPushButton:hover{
 	padding: 0.2em 0.2em 0.2em 0.2em;
 	
 }</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-               </layout>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
               </widget>
              </item>
              <item>
@@ -400,6 +356,21 @@ QPushButton:hover{
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="styleSheet">

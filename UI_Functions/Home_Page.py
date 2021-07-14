@@ -1,24 +1,21 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagekNKwur.ui'
+## Form generated from reading UI file 'Home_PageqswMoC.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if MainWindow.objectName():
+        if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.ApplicationModal)
         MainWindow.resize(1110, 663)
@@ -44,7 +41,8 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.title_bar = QFrame(self.drop_shadow_frame)
         self.title_bar.setObjectName(u"title_bar")
-        self.title_bar.setMaximumSize(QSize(16777215, 50))
+        self.title_bar.setMinimumSize(QSize(0, 55))
+        self.title_bar.setMaximumSize(QSize(16777215, 55))
         self.title_bar.setStyleSheet(u"background-color: None")
         self.title_bar.setFrameShape(QFrame.NoFrame)
         self.title_bar.setFrameShadow(QFrame.Raised)
@@ -70,22 +68,9 @@ class Ui_MainWindow(object):
         self.frame_10.setMaximumSize(QSize(60, 16777215))
         self.frame_10.setFrameShape(QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_3 = QVBoxLayout(self.frame_10)
-        self.verticalLayout_3.setSpacing(0)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_3.setContentsMargins(25, 0, 0, 0)
-        self.frame_27 = QFrame(self.frame_10)
-        self.frame_27.setObjectName(u"frame_27")
-        self.frame_27.setMinimumSize(QSize(35, 0))
-        self.frame_27.setMaximumSize(QSize(35, 16777215))
-        self.frame_27.setFrameShape(QFrame.StyledPanel)
-        self.frame_27.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_2 = QVBoxLayout(self.frame_27)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.Home_btn = QPushButton(self.frame_27)
+        self.Home_btn = QPushButton(self.frame_10)
         self.Home_btn.setObjectName(u"Home_btn")
+        self.Home_btn.setGeometry(QRect(20, 10, 36, 36))
         self.Home_btn.setMinimumSize(QSize(0, 36))
         self.Home_btn.setStyleSheet(u"QPushButton{\n"
 "	background-color:transparent;\n"
@@ -99,12 +84,6 @@ class Ui_MainWindow(object):
 "	padding: 0.2em 0.2em 0.2em 0.2em;\n"
 "	\n"
 "}")
-
-        self.verticalLayout_2.addWidget(self.Home_btn)
-
-
-        self.verticalLayout_3.addWidget(self.frame_27)
-
 
         self.horizontalLayout_14.addWidget(self.frame_10)
 
@@ -180,7 +159,9 @@ class Ui_MainWindow(object):
         self.content_bar.setFrameShape(QFrame.NoFrame)
         self.content_bar.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.content_bar)
+        self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.stackedWidget = QStackedWidget(self.content_bar)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setStyleSheet(u"background-color:none")
