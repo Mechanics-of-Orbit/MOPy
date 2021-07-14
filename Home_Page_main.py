@@ -324,7 +324,7 @@ class MainWindow(QMainWindow):
         planet_name = planet_name.lower()
         rSOI = self.ui.soi_rad.text()
 
-        r_planet = call.data(planet_name1,'maj_bdy_rad')[0]
+        r_planet = call.data(planet_name1,'radius')[0]
         r_soimb = float(rSOI)/r_planet
         graph3d = SOI(planet_name,rSOI,r_soimb)
         graph3d.run()
