@@ -10,28 +10,6 @@ GLOBAL_STATE = 0
 
 class UIFunctions(MainWindow):
 
-    # Function for toggle menu in vpco output 
-    def expand(self, maxwidth, enable):
-        
-        if enable:
-
-            width = self.ui.menu_toggle_frame.width()
-            maxExtent = maxwidth
-            standard = 43
-
-            if width == standard:
-                widthExtended = maxExtent
-                
-            elif width != standard:
-                widthExtended = standard
-        print(widthExtended)
-        self.animation = QPropertyAnimation(self.ui.menu_toggle_frame,b"minimumWidth")
-        self.animation.setDuration(200)
-        self.animation.setStartValue(width)
-        self.animation.setEndValue(widthExtended)
-        # self.animation.setEasingCurve(QtCore.QEasingCurve.Linear)
-        self.animation.start()
-
 
     ## ==> MAXIMIZE RESTORE FUNCTION
     def maximize_restore(self):
