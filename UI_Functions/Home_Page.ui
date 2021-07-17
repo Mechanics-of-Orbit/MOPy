@@ -383,7 +383,7 @@ QPushButton:hover{
              <string notr="true">background-color:none</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>4</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <property name="styleSheet">
@@ -4527,7 +4527,7 @@ border-radius:none;</string>
                       <property name="styleSheet">
                        <string notr="true">QPushButton{
 	background-color:transparent;
-	image:url(UI_Functions/Resources/new_toggle_menu_btn.svg);
+	image:url(C:/Users/manjunath neelmath/Downloads/new_toggle_menu_btn.svg);
 	
 }
 
