@@ -1,24 +1,21 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageuEplVL.ui'
+## Form generated from reading UI file 'Home_PageKWKnTt.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if MainWindow.objectName():
+        if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.ApplicationModal)
         MainWindow.resize(1110, 663)
@@ -1960,7 +1957,7 @@ class Ui_MainWindow(object):
         self.toggle_menu_btn.setMaximumSize(QSize(30, 25))
         self.toggle_menu_btn.setStyleSheet(u"QPushButton{\n"
 "	background-color:transparent;\n"
-"	image:url(C:/Users/manjunath neelmath/Downloads/new_toggle_menu_btn.svg);\n"
+"	image:url(UI_Functions/Resources/new_toggle_menu_btn.svg);\n"
 "	\n"
 "}\n"
 "\n"
@@ -5137,7 +5134,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(0)
         self.Orbit_type_stack.setCurrentIndex(0)
         self.vpco_output_stack.setCurrentIndex(1)
         self.otherbody_stack.setCurrentIndex(0)
