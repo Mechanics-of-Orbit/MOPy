@@ -50,6 +50,7 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         
+        self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 300, True))
         
 
         # MOVE WINDOW
@@ -385,7 +386,7 @@ class SplashScreen(QMainWindow):
 
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
-        self.shadow.setBlurRadius(20)
+        self.shadow.setBlurRadius(15)
         self.shadow.setXOffset(0)
         self.shadow.setYOffset(0)
         self.shadow.setColor(QColor(0, 0, 0, 60))
@@ -395,7 +396,7 @@ class SplashScreen(QMainWindow):
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.progress)
         # TIMER IN MILLISECONDS
-        self.timer.start(35)
+        self.timer.start(43)
 
         # CHANGE DESCRIPTION
 

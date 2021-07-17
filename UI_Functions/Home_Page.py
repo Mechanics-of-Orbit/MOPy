@@ -1,21 +1,24 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageSxBneF.ui'
+## Form generated from reading UI file 'Home_PageuEplVL.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 5.14.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+    QRect, QSize, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
+    QRadialGradient)
 from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
+        if MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.ApplicationModal)
         MainWindow.resize(1110, 663)
@@ -41,7 +44,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.title_bar = QFrame(self.drop_shadow_frame)
         self.title_bar.setObjectName(u"title_bar")
-        self.title_bar.setMinimumSize(QSize(0, 55))
+        self.title_bar.setMinimumSize(QSize(0, 40))
         self.title_bar.setMaximumSize(QSize(16777215, 55))
         self.title_bar.setStyleSheet(u"background-color: None")
         self.title_bar.setFrameShape(QFrame.NoFrame)
@@ -64,7 +67,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14.setContentsMargins(0, 0, 0, 0)
         self.frame_10 = QFrame(self.frame_title)
         self.frame_10.setObjectName(u"frame_10")
-        self.frame_10.setMinimumSize(QSize(60, 0))
+        self.frame_10.setMinimumSize(QSize(50, 0))
         self.frame_10.setMaximumSize(QSize(60, 16777215))
         self.frame_10.setFrameShape(QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QFrame.Raised)
@@ -155,6 +158,7 @@ class Ui_MainWindow(object):
 
         self.content_bar = QFrame(self.drop_shadow_frame)
         self.content_bar.setObjectName(u"content_bar")
+        self.content_bar.setMaximumSize(QSize(16777215, 10000))
         self.content_bar.setStyleSheet(u"background-color: None")
         self.content_bar.setFrameShape(QFrame.NoFrame)
         self.content_bar.setFrameShadow(QFrame.Raised)
@@ -1184,7 +1188,7 @@ class Ui_MainWindow(object):
 
         self.type_of_orbit_frame = QFrame(self.frame_29)
         self.type_of_orbit_frame.setObjectName(u"type_of_orbit_frame")
-        self.type_of_orbit_frame.setMinimumSize(QSize(1050, 250))
+        self.type_of_orbit_frame.setMinimumSize(QSize(1050, 300))
         self.type_of_orbit_frame.setMaximumSize(QSize(1070, 300))
         self.type_of_orbit_frame.setFont(font9)
         self.type_of_orbit_frame.setStyleSheet(u"")
@@ -1236,7 +1240,7 @@ class Ui_MainWindow(object):
         self.vpco_input_type.addItem("")
         self.vpco_input_type.addItem("")
         self.vpco_input_type.setObjectName(u"vpco_input_type")
-        self.vpco_input_type.setGeometry(QRect(310, 150, 391, 41))
+        self.vpco_input_type.setGeometry(QRect(310, 130, 391, 41))
         self.vpco_input_type.setStyleSheet(u"QComboBox{\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
 "	font: 12pt \"Arial\";\n"
@@ -1248,7 +1252,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_9 = QLabel(self.vpco_input_type_screen)
         self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(170, 30, 671, 41))
+        self.label_9.setGeometry(QRect(170, 20, 671, 41))
         font10 = QFont()
         font10.setFamily(u"Arial")
         font10.setPointSize(12)
@@ -1273,7 +1277,7 @@ class Ui_MainWindow(object):
         self.vpco_major_body.addItem("")
         self.vpco_major_body.addItem("")
         self.vpco_major_body.setObjectName(u"vpco_major_body")
-        self.vpco_major_body.setGeometry(QRect(400, 90, 211, 41))
+        self.vpco_major_body.setGeometry(QRect(400, 70, 211, 41))
         self.vpco_major_body.setStyleSheet(u"QComboBox{\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
 "	font: 12pt \"Arial\";\n"
@@ -1324,7 +1328,7 @@ class Ui_MainWindow(object):
         self.label_19.setAlignment(Qt.AlignCenter)
         self.orbit_type_ae = QLabel(self.a_e_screen)
         self.orbit_type_ae.setObjectName(u"orbit_type_ae")
-        self.orbit_type_ae.setGeometry(QRect(370, 140, 261, 41))
+        self.orbit_type_ae.setGeometry(QRect(370, 150, 261, 41))
         self.orbit_type_ae.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -1356,7 +1360,7 @@ class Ui_MainWindow(object):
 "}")
         self.go_btn_inpt_ae = QPushButton(self.a_e_screen)
         self.go_btn_inpt_ae.setObjectName(u"go_btn_inpt_ae")
-        self.go_btn_inpt_ae.setGeometry(QRect(450, 190, 101, 41))
+        self.go_btn_inpt_ae.setGeometry(QRect(450, 200, 101, 41))
         self.go_btn_inpt_ae.setFont(font9)
         self.go_btn_inpt_ae.setStyleSheet(u"QPushButton{\n"
 "	background-color:rgb(2, 119, 189,60%);\n"
@@ -1918,10 +1922,12 @@ class Ui_MainWindow(object):
         self.VPCO_output = QWidget()
         self.VPCO_output.setObjectName(u"VPCO_output")
         self.horizontalLayout_21 = QHBoxLayout(self.VPCO_output)
+        self.horizontalLayout_21.setSpacing(0)
         self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
-        self.frame_41 = QFrame(self.VPCO_output)
-        self.frame_41.setObjectName(u"frame_41")
-        self.frame_41.setStyleSheet(u"QFrame{\n"
+        self.horizontalLayout_21.setContentsMargins(9, 0, 9, 0)
+        self.toggle_menu_n_VPCO_output_containg_frame = QFrame(self.VPCO_output)
+        self.toggle_menu_n_VPCO_output_containg_frame.setObjectName(u"toggle_menu_n_VPCO_output_containg_frame")
+        self.toggle_menu_n_VPCO_output_containg_frame.setStyleSheet(u"QFrame{\n"
 "\n"
 "border: 5px solid rgb(34, 14, 36);\n"
 "border-radius: 15px;\n"
@@ -1932,35 +1938,111 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        self.frame_41.setFrameShape(QFrame.StyledPanel)
-        self.frame_41.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_23 = QVBoxLayout(self.frame_41)
-        self.verticalLayout_23.setSpacing(0)
-        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
-        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
-        self.frame_40 = QFrame(self.frame_41)
+        self.toggle_menu_n_VPCO_output_containg_frame.setFrameShape(QFrame.StyledPanel)
+        self.toggle_menu_n_VPCO_output_containg_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_25 = QHBoxLayout(self.toggle_menu_n_VPCO_output_containg_frame)
+        self.horizontalLayout_25.setSpacing(0)
+        self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
+        self.horizontalLayout_25.setContentsMargins(0, 0, 0, 0)
+        self.menu_toggle_frame = QFrame(self.toggle_menu_n_VPCO_output_containg_frame)
+        self.menu_toggle_frame.setObjectName(u"menu_toggle_frame")
+        self.menu_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.menu_toggle_frame.setStyleSheet(u"border:none;\n"
+"background-color: rgb(63, 63, 109);\n"
+"border-radius:none;")
+        self.menu_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.menu_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_2 = QVBoxLayout(self.menu_toggle_frame)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.toggle_menu_btn = QPushButton(self.menu_toggle_frame)
+        self.toggle_menu_btn.setObjectName(u"toggle_menu_btn")
+        self.toggle_menu_btn.setMinimumSize(QSize(25, 25))
+        self.toggle_menu_btn.setMaximumSize(QSize(30, 25))
+        self.toggle_menu_btn.setStyleSheet(u"QPushButton{\n"
+"	background-color:transparent;\n"
+"	image:url(C:/Users/manjunath neelmath/Downloads/new_toggle_menu_btn.svg);\n"
+"	\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	padding: 0.2em 0.2em 0.2em 0.2em;\n"
+"	\n"
+"}")
+
+        self.verticalLayout_2.addWidget(self.toggle_menu_btn)
+
+        self.frame_27 = QFrame(self.menu_toggle_frame)
+        self.frame_27.setObjectName(u"frame_27")
+        self.frame_27.setFrameShape(QFrame.StyledPanel)
+        self.frame_27.setFrameShadow(QFrame.Raised)
+        self.label_10 = QLabel(self.frame_27)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(0, 30, 31, 21))
+        self.label_10.setFont(font9)
+        self.label_10.setStyleSheet(u"color: rgb(105, 170, 141);")
+        self.label_10.setAlignment(Qt.AlignCenter)
+        self.label_18 = QLabel(self.frame_27)
+        self.label_18.setObjectName(u"label_18")
+        self.label_18.setGeometry(QRect(0, 70, 31, 21))
+        self.label_18.setFont(font9)
+        self.label_18.setStyleSheet(u"color: rgb(105, 170, 141);")
+        self.label_18.setAlignment(Qt.AlignCenter)
+        self.label_23 = QLabel(self.frame_27)
+        self.label_23.setObjectName(u"label_23")
+        self.label_23.setGeometry(QRect(0, 110, 31, 21))
+        self.label_23.setFont(font9)
+        self.label_23.setStyleSheet(u"color: rgb(105, 170, 141);")
+        self.label_23.setAlignment(Qt.AlignCenter)
+        self.label_24 = QLabel(self.frame_27)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setGeometry(QRect(0, 150, 31, 21))
+        self.label_24.setFont(font9)
+        self.label_24.setStyleSheet(u"color: rgb(105, 170, 141);")
+        self.label_24.setAlignment(Qt.AlignCenter)
+        self.label_28 = QLabel(self.frame_27)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setGeometry(QRect(0, 190, 31, 21))
+        self.label_28.setFont(font9)
+        self.label_28.setStyleSheet(u"color: rgb(105, 170, 141);")
+        self.label_28.setAlignment(Qt.AlignCenter)
+        self.label_29 = QLabel(self.frame_27)
+        self.label_29.setObjectName(u"label_29")
+        self.label_29.setGeometry(QRect(0, 230, 31, 21))
+        self.label_29.setFont(font9)
+        self.label_29.setStyleSheet(u"color: rgb(105, 170, 141);")
+        self.label_29.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_2.addWidget(self.frame_27)
+
+
+        self.horizontalLayout_25.addWidget(self.menu_toggle_frame)
+
+        self.VPCO_output_frame = QFrame(self.toggle_menu_n_VPCO_output_containg_frame)
+        self.VPCO_output_frame.setObjectName(u"VPCO_output_frame")
+        sizePolicy1.setHeightForWidth(self.VPCO_output_frame.sizePolicy().hasHeightForWidth())
+        self.VPCO_output_frame.setSizePolicy(sizePolicy1)
+        self.VPCO_output_frame.setStyleSheet(u"border:none;")
+        self.VPCO_output_frame.setFrameShape(QFrame.StyledPanel)
+        self.VPCO_output_frame.setFrameShadow(QFrame.Raised)
+        self.frame_40 = QFrame(self.VPCO_output_frame)
         self.frame_40.setObjectName(u"frame_40")
+        self.frame_40.setGeometry(QRect(4, 0, 1011, 25))
         self.frame_40.setMinimumSize(QSize(0, 25))
         self.frame_40.setMaximumSize(QSize(16777215, 25))
         self.frame_40.setStyleSheet(u"border:none;")
         self.frame_40.setFrameShape(QFrame.StyledPanel)
         self.frame_40.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_22 = QHBoxLayout(self.frame_40)
-        self.horizontalLayout_22.setSpacing(0)
-        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
-        self.horizontalLayout_22.setContentsMargins(0, 0, 0, 0)
-        self.label_title_5 = QLabel(self.frame_40)
-        self.label_title_5.setObjectName(u"label_title_5")
-        self.label_title_5.setMinimumSize(QSize(900, 0))
-        self.label_title_5.setMaximumSize(QSize(900, 16777215))
-        self.label_title_5.setFont(font1)
-        self.label_title_5.setStyleSheet(u"color:rgb(60, 235, 250);\n"
+        self.Module_lbl = QLabel(self.frame_40)
+        self.Module_lbl.setObjectName(u"Module_lbl")
+        self.Module_lbl.setGeometry(QRect(0, 0, 900, 21))
+        self.Module_lbl.setMinimumSize(QSize(900, 0))
+        self.Module_lbl.setMaximumSize(QSize(900, 16777215))
+        self.Module_lbl.setFont(font1)
+        self.Module_lbl.setStyleSheet(u"color:rgb(60, 235, 250);\n"
 "border:none;")
-
-        self.horizontalLayout_22.addWidget(self.label_title_5)
-
         self.vpco_feature_back_btn = QPushButton(self.frame_40)
         self.vpco_feature_back_btn.setObjectName(u"vpco_feature_back_btn")
+        self.vpco_feature_back_btn.setGeometry(QRect(956, 0, 25, 25))
         self.vpco_feature_back_btn.setMinimumSize(QSize(25, 25))
         self.vpco_feature_back_btn.setMaximumSize(QSize(30, 25))
         self.vpco_feature_back_btn.setStyleSheet(u"QPushButton{\n"
@@ -1973,15 +2055,10 @@ class Ui_MainWindow(object):
 "	padding: 0.2em 0.2em 0.2em 0.2em;\n"
 "	\n"
 "}")
-
-        self.horizontalLayout_22.addWidget(self.vpco_feature_back_btn)
-
-
-        self.verticalLayout_23.addWidget(self.frame_40)
-
-        self.VPCO_output_stack = QStackedWidget(self.frame_41)
-        self.VPCO_output_stack.setObjectName(u"VPCO_output_stack")
-        self.VPCO_output_stack.setStyleSheet(u"border:none;")
+        self.vpco_output_stack = QStackedWidget(self.VPCO_output_frame)
+        self.vpco_output_stack.setObjectName(u"vpco_output_stack")
+        self.vpco_output_stack.setGeometry(QRect(1, 27, 1011, 531))
+        self.vpco_output_stack.setStyleSheet(u"border:none;")
         self.a_e_result_screen = QWidget()
         self.a_e_result_screen.setObjectName(u"a_e_result_screen")
         self.label_22 = QLabel(self.a_e_result_screen)
@@ -2439,40 +2516,40 @@ class Ui_MainWindow(object):
         self.label_132.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_132.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.VPCO_output_stack.addWidget(self.a_e_result_screen)
+        self.vpco_output_stack.addWidget(self.a_e_result_screen)
         self.ra_rp_result_screen = QWidget()
         self.ra_rp_result_screen.setObjectName(u"ra_rp_result_screen")
         self.label_241 = QLabel(self.ra_rp_result_screen)
         self.label_241.setObjectName(u"label_241")
-        self.label_241.setGeometry(QRect(500, 300, 321, 41))
+        self.label_241.setGeometry(QRect(680, 360, 321, 21))
         self.label_241.setFont(font9)
         self.label_241.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_241.setAlignment(Qt.AlignCenter)
         self.label_242 = QLabel(self.ra_rp_result_screen)
         self.label_242.setObjectName(u"label_242")
-        self.label_242.setGeometry(QRect(980, 230, 47, 41))
+        self.label_242.setGeometry(QRect(900, 300, 47, 41))
         self.label_242.setFont(font9)
         self.label_242.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_242.setAlignment(Qt.AlignCenter)
         self.label_243 = QLabel(self.ra_rp_result_screen)
         self.label_243.setObjectName(u"label_243")
-        self.label_243.setGeometry(QRect(500, 90, 321, 41))
+        self.label_243.setGeometry(QRect(690, 90, 321, 21))
         self.label_243.setFont(font9)
         self.label_243.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_243.setAlignment(Qt.AlignCenter)
         self.label_244 = QLabel(self.ra_rp_result_screen)
         self.label_244.setObjectName(u"label_244")
-        self.label_244.setGeometry(QRect(500, 230, 321, 41))
+        self.label_244.setGeometry(QRect(690, 270, 321, 21))
         self.label_244.setFont(font9)
         self.label_244.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_244.setAlignment(Qt.AlignCenter)
         self.escvp_rarp = QLabel(self.ra_rp_result_screen)
         self.escvp_rarp.setObjectName(u"escvp_rarp")
-        self.escvp_rarp.setGeometry(QRect(860, 370, 121, 41))
+        self.escvp_rarp.setGeometry(QRect(780, 480, 121, 41))
         self.escvp_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2489,14 +2566,14 @@ class Ui_MainWindow(object):
 "}")
         self.label_246 = QLabel(self.ra_rp_result_screen)
         self.label_246.setObjectName(u"label_246")
-        self.label_246.setGeometry(QRect(440, 370, 47, 41))
+        self.label_246.setGeometry(QRect(250, 480, 41, 41))
         self.label_246.setFont(font9)
         self.label_246.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_246.setAlignment(Qt.AlignCenter)
         self.gfp_rarp = QLabel(self.ra_rp_result_screen)
         self.gfp_rarp.setObjectName(u"gfp_rarp")
-        self.gfp_rarp.setGeometry(QRect(860, 92, 121, 41))
+        self.gfp_rarp.setGeometry(QRect(780, 122, 121, 41))
         self.gfp_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2513,35 +2590,35 @@ class Ui_MainWindow(object):
 "}")
         self.label_248 = QLabel(self.ra_rp_result_screen)
         self.label_248.setObjectName(u"label_248")
-        self.label_248.setGeometry(QRect(450, 230, 47, 41))
+        self.label_248.setGeometry(QRect(250, 300, 47, 41))
         self.label_248.setFont(font9)
         self.label_248.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_248.setAlignment(Qt.AlignCenter)
         self.label_249 = QLabel(self.ra_rp_result_screen)
         self.label_249.setObjectName(u"label_249")
-        self.label_249.setGeometry(QRect(980, 370, 47, 41))
+        self.label_249.setGeometry(QRect(900, 480, 47, 41))
         self.label_249.setFont(font9)
         self.label_249.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_249.setAlignment(Qt.AlignCenter)
         self.label_250 = QLabel(self.ra_rp_result_screen)
         self.label_250.setObjectName(u"label_250")
-        self.label_250.setGeometry(QRect(-30, 450, 321, 21))
+        self.label_250.setGeometry(QRect(350, 430, 321, 21))
         self.label_250.setFont(font9)
         self.label_250.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_250.setAlignment(Qt.AlignCenter)
         self.label_251 = QLabel(self.ra_rp_result_screen)
         self.label_251.setObjectName(u"label_251")
-        self.label_251.setGeometry(QRect(-30, 240, 321, 21))
+        self.label_251.setGeometry(QRect(20, 270, 321, 21))
         self.label_251.setFont(font9)
         self.label_251.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_251.setAlignment(Qt.AlignCenter)
         self.vlatus_rarp = QLabel(self.ra_rp_result_screen)
         self.vlatus_rarp.setObjectName(u"vlatus_rarp")
-        self.vlatus_rarp.setGeometry(QRect(860, 300, 121, 41))
+        self.vlatus_rarp.setGeometry(QRect(780, 390, 121, 41))
         self.vlatus_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2558,7 +2635,7 @@ class Ui_MainWindow(object):
 "}")
         self.escva_rarp = QLabel(self.ra_rp_result_screen)
         self.escva_rarp.setObjectName(u"escva_rarp")
-        self.escva_rarp.setGeometry(QRect(860, 440, 121, 41))
+        self.escva_rarp.setGeometry(QRect(450, 370, 121, 41))
         self.escva_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2575,14 +2652,14 @@ class Ui_MainWindow(object):
 "}")
         self.label_254 = QLabel(self.ra_rp_result_screen)
         self.label_254.setObjectName(u"label_254")
-        self.label_254.setGeometry(QRect(-30, 310, 321, 21))
+        self.label_254.setGeometry(QRect(20, 360, 321, 21))
         self.label_254.setFont(font9)
         self.label_254.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_254.setAlignment(Qt.AlignCenter)
         self.e_rarp = QLabel(self.ra_rp_result_screen)
         self.e_rarp.setObjectName(u"e_rarp")
-        self.e_rarp.setGeometry(QRect(310, 90, 121, 41))
+        self.e_rarp.setGeometry(QRect(120, 120, 121, 41))
         self.e_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2599,7 +2676,7 @@ class Ui_MainWindow(object):
 "}")
         self.h_rarp = QLabel(self.ra_rp_result_screen)
         self.h_rarp.setObjectName(u"h_rarp")
-        self.h_rarp.setGeometry(QRect(310, 228, 121, 41))
+        self.h_rarp.setGeometry(QRect(120, 300, 121, 41))
         self.h_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2616,14 +2693,14 @@ class Ui_MainWindow(object):
 "}")
         self.label_257 = QLabel(self.ra_rp_result_screen)
         self.label_257.setObjectName(u"label_257")
-        self.label_257.setGeometry(QRect(980, 160, 47, 41))
+        self.label_257.setGeometry(QRect(900, 210, 47, 41))
         self.label_257.setFont(font9)
         self.label_257.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_257.setAlignment(Qt.AlignCenter)
         self.vp_rarp = QLabel(self.ra_rp_result_screen)
         self.vp_rarp.setObjectName(u"vp_rarp")
-        self.vp_rarp.setGeometry(QRect(310, 438, 121, 41))
+        self.vp_rarp.setGeometry(QRect(450, 458, 121, 41))
         self.vp_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2640,14 +2717,14 @@ class Ui_MainWindow(object):
 "}")
         self.label_259 = QLabel(self.ra_rp_result_screen)
         self.label_259.setObjectName(u"label_259")
-        self.label_259.setGeometry(QRect(-30, 30, 321, 21))
+        self.label_259.setGeometry(QRect(20, 0, 321, 21))
         self.label_259.setFont(font9)
         self.label_259.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_259.setAlignment(Qt.AlignCenter)
         self.T_rarp = QLabel(self.ra_rp_result_screen)
         self.T_rarp.setObjectName(u"T_rarp")
-        self.T_rarp.setGeometry(QRect(310, 300, 121, 41))
+        self.T_rarp.setGeometry(QRect(120, 390, 121, 41))
         self.T_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2664,7 +2741,7 @@ class Ui_MainWindow(object):
 "}")
         self.p_rarp = QLabel(self.ra_rp_result_screen)
         self.p_rarp.setObjectName(u"p_rarp")
-        self.p_rarp.setGeometry(QRect(860, 230, 121, 41))
+        self.p_rarp.setGeometry(QRect(780, 300, 121, 41))
         self.p_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2681,7 +2758,7 @@ class Ui_MainWindow(object):
 "}")
         self.gfa_rarp = QLabel(self.ra_rp_result_screen)
         self.gfa_rarp.setObjectName(u"gfa_rarp")
-        self.gfa_rarp.setGeometry(QRect(860, 162, 121, 41))
+        self.gfa_rarp.setGeometry(QRect(780, 212, 121, 41))
         self.gfa_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2698,14 +2775,14 @@ class Ui_MainWindow(object):
 "}")
         self.label_263 = QLabel(self.ra_rp_result_screen)
         self.label_263.setObjectName(u"label_263")
-        self.label_263.setGeometry(QRect(980, 90, 47, 41))
+        self.label_263.setGeometry(QRect(900, 120, 47, 41))
         self.label_263.setFont(font9)
         self.label_263.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_263.setAlignment(Qt.AlignCenter)
         self.va_rarp = QLabel(self.ra_rp_result_screen)
         self.va_rarp.setObjectName(u"va_rarp")
-        self.va_rarp.setGeometry(QRect(860, 24, 121, 41))
+        self.va_rarp.setGeometry(QRect(780, 30, 121, 41))
         self.va_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2720,23 +2797,16 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "}")
-        self.label_265 = QLabel(self.ra_rp_result_screen)
-        self.label_265.setObjectName(u"label_265")
-        self.label_265.setGeometry(QRect(0, 0, 1051, 21))
-        self.label_265.setFont(font9)
-        self.label_265.setStyleSheet(u"border:none;\n"
-"color:white;")
-        self.label_265.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.label_266 = QLabel(self.ra_rp_result_screen)
         self.label_266.setObjectName(u"label_266")
-        self.label_266.setGeometry(QRect(980, 300, 47, 41))
+        self.label_266.setGeometry(QRect(900, 390, 47, 41))
         self.label_266.setFont(font9)
         self.label_266.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_266.setAlignment(Qt.AlignCenter)
         self.a_rarp = QLabel(self.ra_rp_result_screen)
         self.a_rarp.setObjectName(u"a_rarp")
-        self.a_rarp.setGeometry(QRect(310, 22, 121, 41))
+        self.a_rarp.setGeometry(QRect(120, 30, 121, 41))
         self.a_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2753,21 +2823,21 @@ class Ui_MainWindow(object):
 "}")
         self.label_268 = QLabel(self.ra_rp_result_screen)
         self.label_268.setObjectName(u"label_268")
-        self.label_268.setGeometry(QRect(440, 20, 47, 41))
+        self.label_268.setGeometry(QRect(240, 30, 47, 41))
         self.label_268.setFont(font9)
         self.label_268.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_268.setAlignment(Qt.AlignCenter)
         self.label_269 = QLabel(self.ra_rp_result_screen)
         self.label_269.setObjectName(u"label_269")
-        self.label_269.setGeometry(QRect(440, 440, 47, 41))
+        self.label_269.setGeometry(QRect(580, 460, 47, 41))
         self.label_269.setFont(font9)
         self.label_269.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_269.setAlignment(Qt.AlignCenter)
         self.mu_rarp = QLabel(self.ra_rp_result_screen)
         self.mu_rarp.setObjectName(u"mu_rarp")
-        self.mu_rarp.setGeometry(QRect(310, 160, 121, 41))
+        self.mu_rarp.setGeometry(QRect(120, 210, 121, 41))
         self.mu_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2784,49 +2854,49 @@ class Ui_MainWindow(object):
 "}")
         self.label_271 = QLabel(self.ra_rp_result_screen)
         self.label_271.setObjectName(u"label_271")
-        self.label_271.setGeometry(QRect(440, 300, 47, 41))
+        self.label_271.setGeometry(QRect(230, 390, 47, 41))
         self.label_271.setFont(font9)
         self.label_271.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_271.setAlignment(Qt.AlignCenter)
         self.label_272 = QLabel(self.ra_rp_result_screen)
         self.label_272.setObjectName(u"label_272")
-        self.label_272.setGeometry(QRect(-30, 380, 321, 21))
+        self.label_272.setGeometry(QRect(20, 450, 321, 21))
         self.label_272.setFont(font9)
         self.label_272.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_272.setAlignment(Qt.AlignCenter)
         self.label_274 = QLabel(self.ra_rp_result_screen)
         self.label_274.setObjectName(u"label_274")
-        self.label_274.setGeometry(QRect(500, 160, 321, 41))
+        self.label_274.setGeometry(QRect(680, 180, 321, 21))
         self.label_274.setFont(font9)
         self.label_274.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_274.setAlignment(Qt.AlignCenter)
         self.label_275 = QLabel(self.ra_rp_result_screen)
         self.label_275.setObjectName(u"label_275")
-        self.label_275.setGeometry(QRect(980, 440, 47, 41))
+        self.label_275.setGeometry(QRect(570, 370, 47, 41))
         self.label_275.setFont(font9)
         self.label_275.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_275.setAlignment(Qt.AlignCenter)
         self.label_276 = QLabel(self.ra_rp_result_screen)
         self.label_276.setObjectName(u"label_276")
-        self.label_276.setGeometry(QRect(-30, 170, 321, 21))
+        self.label_276.setGeometry(QRect(20, 180, 321, 21))
         self.label_276.setFont(font9)
         self.label_276.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_276.setAlignment(Qt.AlignCenter)
         self.label_277 = QLabel(self.ra_rp_result_screen)
         self.label_277.setObjectName(u"label_277")
-        self.label_277.setGeometry(QRect(980, 20, 47, 41))
+        self.label_277.setGeometry(QRect(910, 30, 47, 41))
         self.label_277.setFont(font9)
         self.label_277.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_277.setAlignment(Qt.AlignCenter)
         self.n_rarp = QLabel(self.ra_rp_result_screen)
         self.n_rarp.setObjectName(u"n_rarp")
-        self.n_rarp.setGeometry(QRect(310, 370, 121, 41))
+        self.n_rarp.setGeometry(QRect(120, 480, 121, 41))
         self.n_rarp.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	border: 5px solid rgb(84, 84, 197);\n"
@@ -2843,40 +2913,40 @@ class Ui_MainWindow(object):
 "}")
         self.label_279 = QLabel(self.ra_rp_result_screen)
         self.label_279.setObjectName(u"label_279")
-        self.label_279.setGeometry(QRect(500, 440, 321, 41))
+        self.label_279.setGeometry(QRect(350, 340, 321, 21))
         self.label_279.setFont(font9)
         self.label_279.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_279.setAlignment(Qt.AlignCenter)
         self.label_280 = QLabel(self.ra_rp_result_screen)
         self.label_280.setObjectName(u"label_280")
-        self.label_280.setGeometry(QRect(500, 20, 321, 41))
+        self.label_280.setGeometry(QRect(690, 0, 321, 21))
         self.label_280.setFont(font9)
         self.label_280.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_280.setAlignment(Qt.AlignCenter)
         self.label_281 = QLabel(self.ra_rp_result_screen)
         self.label_281.setObjectName(u"label_281")
-        self.label_281.setGeometry(QRect(440, 160, 47, 41))
+        self.label_281.setGeometry(QRect(240, 210, 47, 41))
         self.label_281.setFont(font9)
         self.label_281.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_281.setAlignment(Qt.AlignCenter)
         self.label_282 = QLabel(self.ra_rp_result_screen)
         self.label_282.setObjectName(u"label_282")
-        self.label_282.setGeometry(QRect(500, 370, 321, 41))
+        self.label_282.setGeometry(QRect(680, 450, 321, 21))
         self.label_282.setFont(font9)
         self.label_282.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_282.setAlignment(Qt.AlignCenter)
         self.label_283 = QLabel(self.ra_rp_result_screen)
         self.label_283.setObjectName(u"label_283")
-        self.label_283.setGeometry(QRect(-30, 100, 331, 21))
+        self.label_283.setGeometry(QRect(10, 90, 341, 21))
         self.label_283.setFont(font9)
         self.label_283.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_283.setAlignment(Qt.AlignCenter)
-        self.VPCO_output_stack.addWidget(self.ra_rp_result_screen)
+        self.vpco_output_stack.addWidget(self.ra_rp_result_screen)
         self.r_v_gamma_result_screen = QWidget()
         self.r_v_gamma_result_screen.setObjectName(u"r_v_gamma_result_screen")
         self.label_273 = QLabel(self.r_v_gamma_result_screen)
@@ -3375,7 +3445,7 @@ class Ui_MainWindow(object):
         self.label_462.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_462.setAlignment(Qt.AlignCenter)
-        self.VPCO_output_stack.addWidget(self.r_v_gamma_result_screen)
+        self.vpco_output_stack.addWidget(self.r_v_gamma_result_screen)
         self.OrbitalElements_result_screen = QWidget()
         self.OrbitalElements_result_screen.setObjectName(u"OrbitalElements_result_screen")
         self.label_463 = QLabel(self.OrbitalElements_result_screen)
@@ -3819,7 +3889,7 @@ class Ui_MainWindow(object):
         self.label_499.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_499.setAlignment(Qt.AlignCenter)
-        self.VPCO_output_stack.addWidget(self.OrbitalElements_result_screen)
+        self.vpco_output_stack.addWidget(self.OrbitalElements_result_screen)
         self.StateVector_result_screen = QWidget()
         self.StateVector_result_screen.setObjectName(u"StateVector_result_screen")
         self.label_505 = QLabel(self.StateVector_result_screen)
@@ -4318,12 +4388,12 @@ class Ui_MainWindow(object):
         self.label_552.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_552.setAlignment(Qt.AlignCenter)
-        self.VPCO_output_stack.addWidget(self.StateVector_result_screen)
+        self.vpco_output_stack.addWidget(self.StateVector_result_screen)
 
-        self.verticalLayout_23.addWidget(self.VPCO_output_stack)
+        self.horizontalLayout_25.addWidget(self.VPCO_output_frame)
 
 
-        self.horizontalLayout_21.addWidget(self.frame_41)
+        self.horizontalLayout_21.addWidget(self.toggle_menu_n_VPCO_output_containg_frame)
 
         self.stackedWidget.addWidget(self.VPCO_output)
         self.COEnAOE = QWidget()
@@ -5067,9 +5137,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(4)
         self.Orbit_type_stack.setCurrentIndex(0)
-        self.VPCO_output_stack.setCurrentIndex(1)
+        self.vpco_output_stack.setCurrentIndex(1)
         self.otherbody_stack.setCurrentIndex(0)
         self.CoOE_output_stack.setCurrentIndex(0)
 
@@ -5243,7 +5313,17 @@ class Ui_MainWindow(object):
         self.label_154.setText(QCoreApplication.translate("MainWindow", u"km/s", None))
         self.orbit_type_stateVector.setText("")
         self.Error_parabola.setText("")
-        self.label_title_5.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
+#if QT_CONFIG(tooltip)
+        self.toggle_menu_btn.setToolTip(QCoreApplication.translate("MainWindow", u"VPCO Home", None))
+#endif // QT_CONFIG(tooltip)
+        self.toggle_menu_btn.setText("")
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"a", None))
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"e", None))
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"i", None))
+        self.label_24.setText(QCoreApplication.translate("MainWindow", u"\u03a9", None))
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u"\u03c9", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"\ud835\udece", None))
+        self.Module_lbl.setText(QCoreApplication.translate("MainWindow", u"Various Parameters of an Orbit", None))
 #if QT_CONFIG(tooltip)
         self.vpco_feature_back_btn.setToolTip(QCoreApplication.translate("MainWindow", u"VPCO Home", None))
 #endif // QT_CONFIG(tooltip)
@@ -5315,7 +5395,6 @@ class Ui_MainWindow(object):
         self.gfa_rarp.setText("")
         self.label_263.setText(QCoreApplication.translate("MainWindow", u"N", None))
         self.va_rarp.setText("")
-        self.label_265.setText(QCoreApplication.translate("MainWindow", u"         Output:", None))
         self.label_266.setText(QCoreApplication.translate("MainWindow", u"km/s", None))
         self.a_rarp.setText("")
         self.label_268.setText(QCoreApplication.translate("MainWindow", u"km", None))
