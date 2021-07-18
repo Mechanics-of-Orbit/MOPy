@@ -6,5 +6,3 @@
 
 ## Who can use this tool?
 ![User Base](https://github.com/Mechanics-of-Orbit/MOPy/blob/main/UI_Functions/Resources/user_base.png?raw=true)
-
-## 
