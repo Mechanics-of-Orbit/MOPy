@@ -4548,7 +4548,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
                       <property name="styleSheet">
                        <string notr="true">QPushButton{
 	background-color:transparent;
-	image:url(C:/Users/manjunath neelmath/Downloads/Toggle_menu_btn_VPCO.svg);
+	image:url(UI_Functions/Resources/Toggle_menu_btn_VPCO.svg);
 	
 }
 
@@ -4565,7 +4565,7 @@ QPushButton:hover{
                    </layout>
                   </widget>
                  </item>
-                 <item alignment="Qt::AlignTop">
+                 <item>
                   <widget class="QFrame" name="toggle_menu_slider_frame">
                    <property name="styleSheet">
                     <string notr="true">border:none;
@@ -4579,7 +4579,7 @@ QPushButton:hover{
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_3">
                     <property name="spacing">
-                     <number>9</number>
+                     <number>6</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -4832,8 +4832,8 @@ border-radius: 10px;
                       <property name="font">
                        <font>
                         <pointsize>12</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
+                        <weight>50</weight>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="styleSheet">

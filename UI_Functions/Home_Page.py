@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagezLLXqQ.ui'
+## Form generated from reading UI file 'Home_PageDCcWfs.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1971,7 +1971,7 @@ class Ui_MainWindow(object):
         self.toggle_menu_btn.setMaximumSize(QSize(16777215, 15))
         self.toggle_menu_btn.setStyleSheet(u"QPushButton{\n"
 "	background-color:transparent;\n"
-"	image:url(C:/Users/manjunath neelmath/Downloads/Toggle_menu_btn_VPCO.svg);\n"
+"	image:url(UI_Functions/Resources/Toggle_menu_btn_VPCO.svg);\n"
 "	\n"
 "}\n"
 "\n"
@@ -1992,7 +1992,7 @@ class Ui_MainWindow(object):
         self.toggle_menu_slider_frame.setFrameShape(QFrame.StyledPanel)
         self.toggle_menu_slider_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.toggle_menu_slider_frame)
-        self.verticalLayout_3.setSpacing(9)
+        self.verticalLayout_3.setSpacing(6)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.semi_major_axis_toggle_menu_lbl = QLabel(self.toggle_menu_slider_frame)
@@ -2186,7 +2186,11 @@ class Ui_MainWindow(object):
 
         self.RAAN_toggle_menu_lbl = QLabel(self.toggle_menu_slider_frame)
         self.RAAN_toggle_menu_lbl.setObjectName(u"RAAN_toggle_menu_lbl")
-        self.RAAN_toggle_menu_lbl.setFont(font7)
+        font12 = QFont()
+        font12.setPointSize(12)
+        font12.setBold(False)
+        font12.setWeight(50)
+        self.RAAN_toggle_menu_lbl.setFont(font12)
         self.RAAN_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
@@ -2374,7 +2378,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.tru_ano_toggle_menu_slider)
 
 
-        self.verticalLayout_2.addWidget(self.toggle_menu_slider_frame, 0, Qt.AlignTop)
+        self.verticalLayout_2.addWidget(self.toggle_menu_slider_frame)
 
 
         self.horizontalLayout_21.addWidget(self.VPCO_menu_toggle_frame)
@@ -5487,13 +5491,13 @@ class Ui_MainWindow(object):
         self.label_credits.setObjectName(u"label_credits")
         self.label_credits.setMinimumSize(QSize(50, 0))
         self.label_credits.setMaximumSize(QSize(50, 16777215))
-        font12 = QFont()
-        font12.setFamily(u"Arial")
-        font12.setPointSize(6)
-        font12.setBold(False)
-        font12.setItalic(False)
-        font12.setWeight(50)
-        self.label_credits.setFont(font12)
+        font13 = QFont()
+        font13.setFamily(u"Arial")
+        font13.setPointSize(6)
+        font13.setBold(False)
+        font13.setItalic(False)
+        font13.setWeight(50)
+        self.label_credits.setFont(font13)
         self.label_credits.setStyleSheet(u"image:url(UI_Functions/Resources/MOPy Cover_transparent.png);")
         self.label_credits.setPixmap(QPixmap(u"../../../../Users/manjunath neelmath/.designer/backup/GUI-test/Resources/MOPy Cover_transparent.png"))
         self.label_credits.setScaledContents(True)
