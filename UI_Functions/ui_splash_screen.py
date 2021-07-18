@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenGaVuUz.ui'
+## Form generated from reading UI file 'splash_screenYhvpZU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -30,8 +30,8 @@ class Ui_SplashScreen(object):
         self.dropShadowFrame = QFrame(self.centralwidget)
         self.dropShadowFrame.setObjectName(u"dropShadowFrame")
         self.dropShadowFrame.setStyleSheet(u"QFrame {	\n"
-"	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 220), stop:0.488636 rgba(28, 30, 72, 220));	\n"
-"	\n"
+"	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 220), stop:0.488636 rgba(28, 30, 72, 220));\n"
+"\n"
 "\n"
 "	color: rgb(220, 220, 220);\n"
 "	border-radius: 50px;\n"

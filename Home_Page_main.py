@@ -50,7 +50,24 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         
-        
+        # Hidding some of the widgets in VPCO output
+        self.ui.semi_major_axis_toggle_menu_spinbox.hide()
+        self.ui.eccentricity_toggle_menu_spinbox.hide()
+        self.ui.inclination_toggle_menu_spinbox.hide()
+        self.ui.RAAN_toggle_menu_spinbox.hide()
+        self.ui.arg_of_per_toggle_menu_spinbox.hide()
+        self.ui.tru_ano_toggle_menu_spinbox.hide()
+
+        self.ui.semi_major_axis_toggle_menu_slider.hide()
+        self.ui.eccentricity_toggle_menu_slider.hide()
+        self.ui.inclination_toggle_menu_slider.hide()
+        self.ui.RAAN_toggle_menu_slider.hide()
+        self.ui.arg_of_per_toggle_menu_slider.hide()
+        self.ui.tru_ano_toggle_menu_slider.hide()
+
+
+        # Connecting the toggle menu btn to the expand function
+        self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 150, True))
 
         # MOVE WINDOW
         def moveWindow(event):

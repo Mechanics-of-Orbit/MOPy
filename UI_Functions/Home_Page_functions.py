@@ -10,6 +10,8 @@ GLOBAL_STATE = 0
 
 class UIFunctions(MainWindow):
 
+    
+
 
     ## ==> MAXIMIZE RESTORE FUNCTION
     def maximize_restore(self):
@@ -99,3 +101,66 @@ class UIFunctions(MainWindow):
         self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
     def returnStatus():
         return GLOBAL_STATE
+
+    def expand(self, maxwidth, enable):
+        
+        if enable:
+
+            width = self.ui.VPCO_menu_toggle_frame.width()
+            maxExtent = maxwidth
+            standard = 40
+
+            if width == standard:
+                widthExtended = maxExtent
+
+                self.ui.semi_major_axis_toggle_menu_lbl.setText('Semi-major axis')
+                self.ui.eccentricity_toggle_menu_lbl.setText('Eccentricity')
+                self.ui.inclination_toggle_menu_lbl.setText('Inclination')
+                self.ui.RAAN_toggle_menu_lbl.setText('RAAN')
+                self.ui.arg_of_per_toggle_menu_lbl.setText('Arg_of_Per')
+                self.ui.tru_ano_toggle_menu_lbl.setText('True_anomaly')
+
+                self.ui.semi_major_axis_toggle_menu_spinbox.show()
+                self.ui.eccentricity_toggle_menu_spinbox.show()
+                self.ui.inclination_toggle_menu_spinbox.show()
+                self.ui.RAAN_toggle_menu_spinbox.show()
+                self.ui.arg_of_per_toggle_menu_spinbox.show()
+                self.ui.tru_ano_toggle_menu_spinbox.show()
+
+                self.ui.semi_major_axis_toggle_menu_slider.show()
+                self.ui.eccentricity_toggle_menu_slider.show()
+                self.ui.inclination_toggle_menu_slider.show()
+                self.ui.RAAN_toggle_menu_slider.show()
+                self.ui.arg_of_per_toggle_menu_slider.show()
+                self.ui.tru_ano_toggle_menu_slider.show()
+                
+            elif width != standard:
+                widthExtended = standard
+                self.ui.semi_major_axis_toggle_menu_lbl.setText('a')
+                self.ui.eccentricity_toggle_menu_lbl.setText('e')
+                self.ui.inclination_toggle_menu_lbl.setText('i')
+                self.ui.RAAN_toggle_menu_lbl.setText('Ω')
+                self.ui.arg_of_per_toggle_menu_lbl.setText('ω')
+                self.ui.tru_ano_toggle_menu_lbl.setText('ν')
+
+                self.ui.semi_major_axis_toggle_menu_spinbox.hide()
+                self.ui.eccentricity_toggle_menu_spinbox.hide()
+                self.ui.inclination_toggle_menu_spinbox.hide()
+                self.ui.RAAN_toggle_menu_spinbox.hide()
+                self.ui.arg_of_per_toggle_menu_spinbox.hide()
+                self.ui.tru_ano_toggle_menu_spinbox.hide()
+
+                self.ui.semi_major_axis_toggle_menu_slider.hide()
+                self.ui.eccentricity_toggle_menu_slider.hide()
+                self.ui.inclination_toggle_menu_slider.hide()
+                self.ui.RAAN_toggle_menu_slider.hide()
+                self.ui.arg_of_per_toggle_menu_slider.hide()
+                self.ui.tru_ano_toggle_menu_slider.hide()
+
+        
+        self.animation = QPropertyAnimation(self.ui.VPCO_menu_toggle_frame,b"minimumWidth")
+        self.animation.setDuration(200)
+        self.animation.setStartValue(width)
+        self.animation.setEndValue(widthExtended)
+        # self.animation.setEasingCurve(QtCore.QEasingCurve.Linear)
+        self.animation.start() 
