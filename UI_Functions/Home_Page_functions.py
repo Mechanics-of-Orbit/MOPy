@@ -99,6 +99,10 @@ class UIFunctions(MainWindow):
         self.ui.maj_body_CoOE.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
 
         self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
+
+        self.ui.semi_major_axis_toggle_menu_slider.sliderReleased.connect(lambda:Home_Page_main.MainWindow.slider_released(self))
+
+        self.ui.semi_major_axis_toggle_menu_slider.sliderPressed.connect(lambda:Home_Page_main.MainWindow.slider_pressed(self))
     def returnStatus():
         return GLOBAL_STATE
 
@@ -113,12 +117,14 @@ class UIFunctions(MainWindow):
             if width == standard:
                 widthExtended = maxExtent
 
-                self.ui.semi_major_axis_toggle_menu_lbl.setText('Semi-major axis')
-                self.ui.eccentricity_toggle_menu_lbl.setText('Eccentricity')
-                self.ui.inclination_toggle_menu_lbl.setText('Inclination')
-                self.ui.RAAN_toggle_menu_lbl.setText('RAAN')
-                self.ui.arg_of_per_toggle_menu_lbl.setText('Arg_of_Per')
-                self.ui.tru_ano_toggle_menu_lbl.setText('True_anomaly')
+                self.ui.stackedWidget_2.setCurrentIndex(1)
+
+                # self.ui.semi_major_axis_toggle_menu_lbl.setText('Semi-major axis')
+                # self.ui.eccentricity_toggle_menu_lbl.setText('Eccentricity')
+                # self.ui.inclination_toggle_menu_lbl.setText('Inclination')
+                # self.ui.RAAN_toggle_menu_lbl.setText('RAAN')
+                # self.ui.arg_of_per_toggle_menu_lbl.setText('Arg_of_Per')
+                # self.ui.tru_ano_toggle_menu_lbl.setText('True_anomaly')
 
                 self.ui.semi_major_axis_toggle_menu_spinbox.show()
                 self.ui.eccentricity_toggle_menu_spinbox.show()
@@ -135,6 +141,9 @@ class UIFunctions(MainWindow):
                 self.ui.tru_ano_toggle_menu_slider.show()
                 
             elif width != standard:
+
+                self.ui.stackedWidget_2.setCurrentIndex(1)
+
                 widthExtended = standard
                 self.ui.semi_major_axis_toggle_menu_lbl.setText('a')
                 self.ui.eccentricity_toggle_menu_lbl.setText('e')

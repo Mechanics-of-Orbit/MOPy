@@ -382,8 +382,25 @@ class MainWindow(QMainWindow):
         
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
     
+    def slider_released(self):
+        changed_slidervalue = self.ui.semi_major_axis_toggle_menu_slider.value()
+        #print(changed_slidervalue)
+        current_slidervalue = self.slider_pressed()
+        print(current_slidervalue, changed_slidervalue)
+        current_spinvalue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
+        if changed_slidervalue > current_slidervalue:
+            remain = changed_slidervalue - current_slidervalue
+            print(remain)
+            self.ui.semi_major_axis_toggle_menu_spinbox.setValue(current_spinvalue + remain)
+        else:
+            add = -changed_slidervalue + current_slidervalue
+            print(add)
+            self.ui.semi_major_axis_toggle_menu_spinbox.setValue(current_spinvalue - add)
 
-
+    def slider_pressed(self):
+        current_slidervalue = self.ui.semi_major_axis_toggle_menu_slider.value()
+        #print(current_slidervalue)
+        return current_slidervalue
 
 # SPLASH SCREEN
 class SplashScreen(QMainWindow):

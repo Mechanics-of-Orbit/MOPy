@@ -194,6 +194,11 @@ border-radius: 15px;</string>
 QPushButton:hover{
 	padding: 0.2em 0.2em 0.2em 0.2em;
 	
+}
+
+QPushButton:pressed{
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	
 }</string>
                 </property>
                 <property name="text">
@@ -290,6 +295,11 @@ QPushButton:hover{
 QPushButton:hover{
 	border: 1px solid transparent;
 	
+}
+
+QPushButton:pressed{
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	
 }</string>
              </property>
              <property name="text">
@@ -333,7 +343,11 @@ QPushButton:hover{
 	border: 1px solid transparent;
 
 }
-</string>
+
+QPushButton:pressed{
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	
+}</string>
              </property>
              <property name="text">
               <string/>
@@ -4567,35 +4581,93 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QScrollArea" name="scrollArea">
+                  <widget class="QFrame" name="toggle_menu_btn_frame">
                    <property name="minimumSize">
                     <size>
-                     <width>20</width>
-                     <height>0</height>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border:none;
-background:transparent;</string>
+                    <string notr="true">
+
+QFrame{
+border:none;
+background:transparent;
+
+
+}
+
+QFrame:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 243, 70%), stop:1 rgba(108, 121, 240, 70%));
+
+}</string>
                    </property>
-                   <property name="widgetResizable">
-                    <bool>true</bool>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
                    </property>
-                   <widget class="QWidget" name="scrollAreaWidgetContents">
-                    <property name="geometry">
-                     <rect>
-                      <x>0</x>
-                      <y>0</y>
-                      <width>35</width>
-                      <height>680</height>
-                     </rect>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_25">
+                    <property name="spacing">
+                     <number>0</number>
                     </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>35</width>
-                      <height>680</height>
-                     </size>
+                    <property name="leftMargin">
+                     <number>0</number>
                     </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="toggle_menu_btn">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	background-color:transparent;
+	image:url(UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg);
+	
+}
+
+QPushButton:pressed{
+	padding: 0.1em 0.1em 0.1em 0.1em;
+	
+}</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QStackedWidget" name="stackedWidget_2">
+                   <property name="styleSheet">
+                    <string notr="true">border:none;</string>
+                   </property>
+                   <property name="currentIndex">
+                    <number>1</number>
+                   </property>
+                   <widget class="QWidget" name="page">
                     <layout class="QVBoxLayout" name="verticalLayout_24">
                      <property name="spacing">
                       <number>0</number>
@@ -4613,85 +4685,160 @@ background:transparent;</string>
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QFrame" name="toggle_menu_btn_frame">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>40</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>40</height>
-                        </size>
+                      <widget class="QLabel" name="semi_major_axis_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-
-QFrame{
-border:none;
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
 background:transparent;
-
-
 }
 
-QFrame:hover{
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 243, 255), stop:1 rgba(108, 121, 240, 255));
-
-}</string>
+</string>
                        </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
+                       <property name="text">
+                        <string>a</string>
                        </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
                        </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_25">
-                        <property name="spacing">
-                         <number>0</number>
-                        </property>
-                        <property name="leftMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
-                         <number>0</number>
-                        </property>
-                        <item>
-                         <widget class="QPushButton" name="toggle_menu_btn">
-                          <property name="styleSheet">
-                           <string notr="true">QPushButton{
-	background-color:transparent;
-	image:url(UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg);
-	
-}
-
-QPushButton:hover{
-	padding: 0.1em 0.1em 0.1em 0.1em;
-	
-}</string>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
                       </widget>
                      </item>
-                     <item alignment="Qt::AlignTop">
-                      <widget class="QFrame" name="toggle_menu_slider_frame">
+                     <item>
+                      <widget class="QLabel" name="eccentricity_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="styleSheet">
-                        <string notr="true">QFrame{
-border:none;
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
 }
-QSlider::handle:horizontal {
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>e</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="inclination_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>i</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="RAAN_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Ω</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="arg_of_per_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>ω</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="tru_ano_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>ν</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="page_2">
+                    <property name="styleSheet">
+                     <string notr="true">QSlider::handle:horizontal {
     
 	
 	background-color: rgb(0, 0, 0);
@@ -4705,58 +4852,62 @@ QSlider::handle:horizontal {
     }
 
 </string>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_26">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>2</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>2</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <layout class="QVBoxLayout" name="Toggle_frame_Menu_layout_holder">
+                       <property name="spacing">
+                        <number>0</number>
                        </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_3">
-                        <property name="spacing">
-                         <number>20</number>
-                        </property>
-                        <property name="leftMargin">
-                         <number>2</number>
-                        </property>
-                        <property name="topMargin">
-                         <number>10</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>2</number>
-                        </property>
-                        <property name="bottomMargin">
-                         <number>0</number>
-                        </property>
-                        <item>
-                         <widget class="QLabel" name="semi_major_axis_toggle_menu_lbl">
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                            <weight>50</weight>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_27">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="semi_major_axis_toggle_menu_lbl">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel{
 color: rgb(131, 255, 160);
 background:transparent;
 }
 
 </string>
-                          </property>
-                          <property name="text">
-                           <string>a</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QDoubleSpinBox" name="semi_major_axis_toggle_menu_spinbox">
-                          <property name="styleSheet">
-                           <string notr="true">    /*spinbox lift style*/
+                           </property>
+                           <property name="text">
+                            <string>a</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="semi_major_axis_toggle_menu_spinbox">
+                           <property name="styleSheet">
+                            <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
         image: url(UI_Functions/Resources/right_arrow.svg);
@@ -4791,54 +4942,74 @@ QDoubleSpinBox{
 border: 2px solid black;
 border-radius: 8px;
 }</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSlider" name="semi_major_axis_toggle_menu_slider">
-                          <property name="styleSheet">
-                           <string notr="true"/>
-                          </property>
-                          <property name="maximum">
-                           <number>10</number>
-                          </property>
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="eccentricity_toggle_menu_lbl">
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                            <weight>50</weight>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                           <property name="maximum">
+                            <double>10000000000000000.000000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_35">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QSlider" name="semi_major_axis_toggle_menu_slider">
+                           <property name="styleSheet">
+                            <string notr="true"/>
+                           </property>
+                           <property name="maximum">
+                            <number>100</number>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="tickPosition">
+                            <enum>QSlider::TicksAbove</enum>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_28">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="eccentricity_toggle_menu_lbl">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel{
 color: rgb(131, 255, 160);
 background:transparent;
 }
 
 </string>
-                          </property>
-                          <property name="text">
-                           <string>e</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QDoubleSpinBox" name="eccentricity_toggle_menu_spinbox">
-                          <property name="styleSheet">
-                           <string notr="true">    /*spinbox lift style*/
+                           </property>
+                           <property name="text">
+                            <string>e</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="eccentricity_toggle_menu_spinbox">
+                           <property name="styleSheet">
+                            <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
         image: url(UI_Functions/Resources/right_arrow.svg);
@@ -4873,51 +5044,77 @@ QDoubleSpinBox{
 border: 2px solid black;
 border-radius: 8px;
 }</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSlider" name="eccentricity_toggle_menu_slider">
-                          <property name="styleSheet">
-                           <string notr="true"/>
-                          </property>
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="inclination_toggle_menu_lbl">
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                            <weight>50</weight>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                           <property name="maximum">
+                            <double>10000000000000000.000000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_34">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QSlider" name="eccentricity_toggle_menu_slider">
+                           <property name="styleSheet">
+                            <string notr="true"/>
+                           </property>
+                           <property name="maximum">
+                            <number>100</number>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="tickPosition">
+                            <enum>QSlider::TicksAbove</enum>
+                           </property>
+                           <property name="tickInterval">
+                            <number>10</number>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_29">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="inclination_toggle_menu_lbl">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel{
 color: rgb(131, 255, 160);
 background:transparent;
 }
 
 </string>
-                          </property>
-                          <property name="text">
-                           <string>i</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QDoubleSpinBox" name="inclination_toggle_menu_spinbox">
-                          <property name="styleSheet">
-                           <string notr="true">    /*spinbox lift style*/
+                           </property>
+                           <property name="text">
+                            <string>i</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="inclination_toggle_menu_spinbox">
+                           <property name="styleSheet">
+                            <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
         image: url(UI_Functions/Resources/right_arrow.svg);
@@ -4952,51 +5149,77 @@ QDoubleSpinBox{
 border: 2px solid black;
 border-radius: 8px;
 }</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSlider" name="inclination_toggle_menu_slider">
-                          <property name="styleSheet">
-                           <string notr="true"/>
-                          </property>
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="RAAN_toggle_menu_lbl">
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                            <weight>50</weight>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                           <property name="maximum">
+                            <double>10000000000000000.000000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_33">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QSlider" name="inclination_toggle_menu_slider">
+                           <property name="styleSheet">
+                            <string notr="true"/>
+                           </property>
+                           <property name="maximum">
+                            <number>100</number>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="tickPosition">
+                            <enum>QSlider::TicksAbove</enum>
+                           </property>
+                           <property name="tickInterval">
+                            <number>10</number>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_30">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="RAAN_toggle_menu_lbl">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel{
 color: rgb(131, 255, 160);
 background:transparent;
 }
 
 </string>
-                          </property>
-                          <property name="text">
-                           <string>Ω</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QDoubleSpinBox" name="RAAN_toggle_menu_spinbox">
-                          <property name="styleSheet">
-                           <string notr="true">    /*spinbox lift style*/
+                           </property>
+                           <property name="text">
+                            <string>Ω</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="RAAN_toggle_menu_spinbox">
+                           <property name="styleSheet">
+                            <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
         image: url(UI_Functions/Resources/right_arrow.svg);
@@ -5031,51 +5254,77 @@ QDoubleSpinBox{
 border: 2px solid black;
 border-radius: 8px;
 }</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSlider" name="RAAN_toggle_menu_slider">
-                          <property name="styleSheet">
-                           <string notr="true"/>
-                          </property>
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="arg_of_per_toggle_menu_lbl">
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                            <weight>50</weight>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                           <property name="maximum">
+                            <double>10000000000000000.000000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_45">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QSlider" name="RAAN_toggle_menu_slider">
+                           <property name="styleSheet">
+                            <string notr="true"/>
+                           </property>
+                           <property name="maximum">
+                            <number>100</number>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="tickPosition">
+                            <enum>QSlider::TicksAbove</enum>
+                           </property>
+                           <property name="tickInterval">
+                            <number>10</number>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_31">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="arg_of_per_toggle_menu_lbl">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel{
 color: rgb(131, 255, 160);
 background:transparent;
 }
 
 </string>
-                          </property>
-                          <property name="text">
-                           <string>ω</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QDoubleSpinBox" name="arg_of_per_toggle_menu_spinbox">
-                          <property name="styleSheet">
-                           <string notr="true">    /*spinbox lift style*/
+                           </property>
+                           <property name="text">
+                            <string>ω</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="arg_of_per_toggle_menu_spinbox">
+                           <property name="styleSheet">
+                            <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
         image: url(UI_Functions/Resources/right_arrow.svg);
@@ -5110,51 +5359,77 @@ QDoubleSpinBox{
 border: 2px solid black;
 border-radius: 8px;
 }</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSlider" name="arg_of_per_toggle_menu_slider">
-                          <property name="styleSheet">
-                           <string notr="true"/>
-                          </property>
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="tru_ano_toggle_menu_lbl">
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                            <weight>50</weight>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                           <property name="maximum">
+                            <double>10000000000000000.000000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_47">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QSlider" name="arg_of_per_toggle_menu_slider">
+                           <property name="styleSheet">
+                            <string notr="true"/>
+                           </property>
+                           <property name="maximum">
+                            <number>100</number>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="tickPosition">
+                            <enum>QSlider::TicksAbove</enum>
+                           </property>
+                           <property name="tickInterval">
+                            <number>10</number>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_32">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="tru_ano_toggle_menu_lbl">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel{
 color: rgb(131, 255, 160);
 background:transparent;
 }
 
 </string>
-                          </property>
-                          <property name="text">
-                           <string>ν</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QDoubleSpinBox" name="tru_ano_toggle_menu_spinbox">
-                          <property name="styleSheet">
-                           <string notr="true">    /*spinbox lift style*/
+                           </property>
+                           <property name="text">
+                            <string>ν</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="tru_ano_toggle_menu_spinbox">
+                           <property name="styleSheet">
+                            <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
         image: url(UI_Functions/Resources/right_arrow.svg);
@@ -5189,24 +5464,44 @@ QDoubleSpinBox{
 border: 2px solid black;
 border-radius: 8px;
 }</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSlider" name="tru_ano_toggle_menu_slider">
-                          <property name="styleSheet">
-                           <string notr="true"/>
-                          </property>
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                           <property name="maximum">
+                            <double>10000000000000000.000000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_46">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QSlider" name="tru_ano_toggle_menu_slider">
+                           <property name="styleSheet">
+                            <string notr="true"/>
+                           </property>
+                           <property name="maximum">
+                            <number>100</number>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="tickPosition">
+                            <enum>QSlider::TicksAbove</enum>
+                           </property>
+                           <property name="tickInterval">
+                            <number>10</number>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
                      </item>
                     </layout>
                    </widget>
