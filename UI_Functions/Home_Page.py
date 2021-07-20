@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagepiFCQk.ui'
+## Form generated from reading UI file 'Home_PagepIhuop.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -2085,7 +2085,8 @@ class Ui_MainWindow(object):
 "}\n"
 "QSlider::handle:horizontal {\n"
 "    \n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"	\n"
+"	background-color: rgb(0, 0, 0);\n"
 "	\n"
 "    border: 0px solid;\n"
 "    height: 20px;\n"
