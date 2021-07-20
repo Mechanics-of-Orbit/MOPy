@@ -1,21 +1,24 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageDCcWfs.ui'
+## Form generated from reading UI file 'Home_PageMCfkTI.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 5.14.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+    QRect, QSize, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
+    QRadialGradient)
 from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
+        if MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.ApplicationModal)
         MainWindow.resize(1110, 663)
@@ -1929,14 +1932,90 @@ class Ui_MainWindow(object):
 "\n"
 "border: 3px solid rgb(34, 14, 36);\n"
 "border-radius: 15px;\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 243, 255), stop:1 rgba(108, 121, 240, 255));\n"
+"background-color: rgb(85, 85, 255);\n"
 "}\n"
 "\n"
 "QFrame:hover{\n"
 "	border: 3px solid white;\n"
 "}\n"
 "\n"
-"")
+"/* VERTICAL SCROLLBAR */\n"
+" QScrollBar:vertical {\n"
+"	border: none;\n"
+"    background: rgb(45, 45, 68);\n"
+"    width: 5px;\n"
+"    margin: 15px 0 15px 0;\n"
+"	border-radius: 0px;\n"
+" }\n"
+"\n"
+"/*  HANDLE BAR VERTICAL */\n"
+"QScrollBar::handle:vertical {	\n"
+"	background: transparent;\n"
+"	min-height: 30px;\n"
+"	border-radius: 2.4px;\n"
+"}\n"
+"QScrollBar::handle:vertical:hover{	\n"
+"	background-color: rgb(255, 0, 127);\n"
+"}\n"
+"QScrollBar::handle:vertical:pressed {	\n"
+"	background-color: rgb(185, 0, 92);\n"
+"}\n"
+"\n"
+"/* BTN TOP - SCROLLBAR */\n"
+"QScrollBar::sub-line:vertical {\n"
+"	border: none;\n"
+"	background:transparent;\n"
+"	height: 15px;\n"
+"	border-top-left-radius: 7px;\n"
+"	border-top-right-radius: 7px;\n"
+"	subcontrol-position: top;\n"
+"	subcontrol-origin: margin;\n"
+"}\n"
+"QScrollBar::sub-line:vertical:"
+                        "hover {	\n"
+"	background-color: rgb(255, 0, 127);\n"
+"}\n"
+"QScrollBar::sub-line:vertical:pressed {	\n"
+"	background-color: rgb(185, 0, 92);\n"
+"}\n"
+"\n"
+"/* BTN BOTTOM - SCROLLBAR */\n"
+"QScrollBar::add-line:vertical {\n"
+"	border: none;\n"
+"	background:transparent;\n"
+"	height: 15px;\n"
+"	border-bottom-left-radius: 7px;\n"
+"	border-bottom-right-radius: 7px;\n"
+"	subcontrol-position: bottom;\n"
+"	subcontrol-origin: margin;\n"
+"}\n"
+"QScrollBar::add-line:vertical:hover {	\n"
+"	background-color: rgb(255, 0, 127);\n"
+"}\n"
+"QScrollBar::add-line:vertical:pressed {	\n"
+"	background-color: rgb(185, 0, 92);\n"
+"}\n"
+"\n"
+"/* RESET ARROW */\n"
+"QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {\n"
+"	background: none;\n"
+"}\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"	background: none;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+" QScrollBar:horizontal {\n"
+"	border: none;\n"
+"    background: rgb(45, 45, 68);\n"
+"    width: 5px;\n"
+"    margin: 15px 0 15px 0;\n"
+"	border-radius: 0px;\n"
+""
+                        " }")
         self.VPCO_menu_toggle_frame.setFrameShape(QFrame.StyledPanel)
         self.VPCO_menu_toggle_frame.setFrameShadow(QFrame.Raised)
         self.VPCO_menu_toggle_frame.setMidLineWidth(0)
@@ -1944,8 +2023,23 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.toggle_menu_btn_frame = QFrame(self.VPCO_menu_toggle_frame)
+        self.scrollArea = QScrollArea(self.VPCO_menu_toggle_frame)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setMinimumSize(QSize(20, 0))
+        self.scrollArea.setStyleSheet(u"border:none;\n"
+"background:transparent;")
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 35, 680))
+        self.scrollAreaWidgetContents.setMinimumSize(QSize(35, 680))
+        self.verticalLayout_24 = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_24.setSpacing(0)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
+        self.toggle_menu_btn_frame = QFrame(self.scrollAreaWidgetContents)
         self.toggle_menu_btn_frame.setObjectName(u"toggle_menu_btn_frame")
+        self.toggle_menu_btn_frame.setMinimumSize(QSize(0, 40))
         self.toggle_menu_btn_frame.setMaximumSize(QSize(16777215, 40))
         self.toggle_menu_btn_frame.setStyleSheet(u"\n"
 "\n"
@@ -1968,10 +2062,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_25.setContentsMargins(0, 0, 0, 0)
         self.toggle_menu_btn = QPushButton(self.toggle_menu_btn_frame)
         self.toggle_menu_btn.setObjectName(u"toggle_menu_btn")
-        self.toggle_menu_btn.setMaximumSize(QSize(16777215, 15))
         self.toggle_menu_btn.setStyleSheet(u"QPushButton{\n"
 "	background-color:transparent;\n"
-"	image:url(UI_Functions/Resources/Toggle_menu_btn_VPCO.svg);\n"
+"	image:url(UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg);\n"
 "	\n"
 "}\n"
 "\n"
@@ -1983,29 +2076,45 @@ class Ui_MainWindow(object):
         self.horizontalLayout_25.addWidget(self.toggle_menu_btn)
 
 
-        self.verticalLayout_2.addWidget(self.toggle_menu_btn_frame)
+        self.verticalLayout_24.addWidget(self.toggle_menu_btn_frame)
 
-        self.toggle_menu_slider_frame = QFrame(self.VPCO_menu_toggle_frame)
+        self.toggle_menu_slider_frame = QFrame(self.scrollAreaWidgetContents)
         self.toggle_menu_slider_frame.setObjectName(u"toggle_menu_slider_frame")
-        self.toggle_menu_slider_frame.setStyleSheet(u"border:none;\n"
+        self.toggle_menu_slider_frame.setStyleSheet(u"QFrame{\n"
+"border:none;\n"
+"}\n"
+"QSlider::handle:horizontal {\n"
+"    \n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"	\n"
+"    border: 0px solid;\n"
+"    height: 20px;\n"
+"    width: 20px;\n"
+"	border-radius:5.4px;\n"
+"	\n"
+"    \n"
+"    }\n"
+"\n"
 "")
         self.toggle_menu_slider_frame.setFrameShape(QFrame.StyledPanel)
         self.toggle_menu_slider_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.toggle_menu_slider_frame)
-        self.verticalLayout_3.setSpacing(6)
+        self.verticalLayout_3.setSpacing(20)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setContentsMargins(2, 10, 2, 0)
         self.semi_major_axis_toggle_menu_lbl = QLabel(self.toggle_menu_slider_frame)
         self.semi_major_axis_toggle_menu_lbl.setObjectName(u"semi_major_axis_toggle_menu_lbl")
-        self.semi_major_axis_toggle_menu_lbl.setFont(font7)
+        font12 = QFont()
+        font12.setPointSize(12)
+        font12.setBold(False)
+        font12.setWeight(50)
+        self.semi_major_axis_toggle_menu_lbl.setFont(font12)
         self.semi_major_axis_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
 "}\n"
 "\n"
-"QLabel:hover{\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 260, 255), stop:1 rgba(108, 121, 240, 255));\n"
-"}")
+"")
         self.semi_major_axis_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.semi_major_axis_toggle_menu_lbl)
@@ -2046,7 +2155,7 @@ class Ui_MainWindow(object):
 "\n"
 "QDoubleSpinBox{\n"
 "border: 2px solid black;\n"
-"border-radius: 10px;\n"
+"border-radius: 8px;\n"
 "}")
         self.semi_major_axis_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
 
@@ -2054,21 +2163,21 @@ class Ui_MainWindow(object):
 
         self.semi_major_axis_toggle_menu_slider = QSlider(self.toggle_menu_slider_frame)
         self.semi_major_axis_toggle_menu_slider.setObjectName(u"semi_major_axis_toggle_menu_slider")
+        self.semi_major_axis_toggle_menu_slider.setStyleSheet(u"")
+        self.semi_major_axis_toggle_menu_slider.setMaximum(10)
         self.semi_major_axis_toggle_menu_slider.setOrientation(Qt.Horizontal)
 
         self.verticalLayout_3.addWidget(self.semi_major_axis_toggle_menu_slider)
 
         self.eccentricity_toggle_menu_lbl = QLabel(self.toggle_menu_slider_frame)
         self.eccentricity_toggle_menu_lbl.setObjectName(u"eccentricity_toggle_menu_lbl")
-        self.eccentricity_toggle_menu_lbl.setFont(font7)
+        self.eccentricity_toggle_menu_lbl.setFont(font12)
         self.eccentricity_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
 "}\n"
 "\n"
-"QLabel:hover{\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 260, 255), stop:1 rgba(108, 121, 240, 255));\n"
-"}")
+"")
         self.eccentricity_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.eccentricity_toggle_menu_lbl)
@@ -2109,7 +2218,7 @@ class Ui_MainWindow(object):
 "\n"
 "QDoubleSpinBox{\n"
 "border: 2px solid black;\n"
-"border-radius: 10px;\n"
+"border-radius: 8px;\n"
 "}")
         self.eccentricity_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
 
@@ -2117,21 +2226,20 @@ class Ui_MainWindow(object):
 
         self.eccentricity_toggle_menu_slider = QSlider(self.toggle_menu_slider_frame)
         self.eccentricity_toggle_menu_slider.setObjectName(u"eccentricity_toggle_menu_slider")
+        self.eccentricity_toggle_menu_slider.setStyleSheet(u"")
         self.eccentricity_toggle_menu_slider.setOrientation(Qt.Horizontal)
 
         self.verticalLayout_3.addWidget(self.eccentricity_toggle_menu_slider)
 
         self.inclination_toggle_menu_lbl = QLabel(self.toggle_menu_slider_frame)
         self.inclination_toggle_menu_lbl.setObjectName(u"inclination_toggle_menu_lbl")
-        self.inclination_toggle_menu_lbl.setFont(font7)
+        self.inclination_toggle_menu_lbl.setFont(font12)
         self.inclination_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
 "}\n"
 "\n"
-"QLabel:hover{\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 260, 255), stop:1 rgba(108, 121, 240, 255));\n"
-"}")
+"")
         self.inclination_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.inclination_toggle_menu_lbl)
@@ -2172,7 +2280,7 @@ class Ui_MainWindow(object):
 "\n"
 "QDoubleSpinBox{\n"
 "border: 2px solid black;\n"
-"border-radius: 10px;\n"
+"border-radius: 8px;\n"
 "}")
         self.inclination_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
 
@@ -2180,25 +2288,20 @@ class Ui_MainWindow(object):
 
         self.inclination_toggle_menu_slider = QSlider(self.toggle_menu_slider_frame)
         self.inclination_toggle_menu_slider.setObjectName(u"inclination_toggle_menu_slider")
+        self.inclination_toggle_menu_slider.setStyleSheet(u"")
         self.inclination_toggle_menu_slider.setOrientation(Qt.Horizontal)
 
         self.verticalLayout_3.addWidget(self.inclination_toggle_menu_slider)
 
         self.RAAN_toggle_menu_lbl = QLabel(self.toggle_menu_slider_frame)
         self.RAAN_toggle_menu_lbl.setObjectName(u"RAAN_toggle_menu_lbl")
-        font12 = QFont()
-        font12.setPointSize(12)
-        font12.setBold(False)
-        font12.setWeight(50)
         self.RAAN_toggle_menu_lbl.setFont(font12)
         self.RAAN_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
 "}\n"
 "\n"
-"QLabel:hover{\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 260, 255), stop:1 rgba(108, 121, 240, 255));\n"
-"}")
+"")
         self.RAAN_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.RAAN_toggle_menu_lbl)
@@ -2239,7 +2342,7 @@ class Ui_MainWindow(object):
 "\n"
 "QDoubleSpinBox{\n"
 "border: 2px solid black;\n"
-"border-radius: 10px;\n"
+"border-radius: 8px;\n"
 "}")
         self.RAAN_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
 
@@ -2247,21 +2350,20 @@ class Ui_MainWindow(object):
 
         self.RAAN_toggle_menu_slider = QSlider(self.toggle_menu_slider_frame)
         self.RAAN_toggle_menu_slider.setObjectName(u"RAAN_toggle_menu_slider")
+        self.RAAN_toggle_menu_slider.setStyleSheet(u"")
         self.RAAN_toggle_menu_slider.setOrientation(Qt.Horizontal)
 
         self.verticalLayout_3.addWidget(self.RAAN_toggle_menu_slider)
 
         self.arg_of_per_toggle_menu_lbl = QLabel(self.toggle_menu_slider_frame)
         self.arg_of_per_toggle_menu_lbl.setObjectName(u"arg_of_per_toggle_menu_lbl")
-        self.arg_of_per_toggle_menu_lbl.setFont(font7)
+        self.arg_of_per_toggle_menu_lbl.setFont(font12)
         self.arg_of_per_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
 "}\n"
 "\n"
-"QLabel:hover{\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 260, 255), stop:1 rgba(108, 121, 240, 255));\n"
-"}")
+"")
         self.arg_of_per_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.arg_of_per_toggle_menu_lbl)
@@ -2302,7 +2404,7 @@ class Ui_MainWindow(object):
 "\n"
 "QDoubleSpinBox{\n"
 "border: 2px solid black;\n"
-"border-radius: 10px;\n"
+"border-radius: 8px;\n"
 "}")
         self.arg_of_per_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
 
@@ -2310,21 +2412,20 @@ class Ui_MainWindow(object):
 
         self.arg_of_per_toggle_menu_slider = QSlider(self.toggle_menu_slider_frame)
         self.arg_of_per_toggle_menu_slider.setObjectName(u"arg_of_per_toggle_menu_slider")
+        self.arg_of_per_toggle_menu_slider.setStyleSheet(u"")
         self.arg_of_per_toggle_menu_slider.setOrientation(Qt.Horizontal)
 
         self.verticalLayout_3.addWidget(self.arg_of_per_toggle_menu_slider)
 
         self.tru_ano_toggle_menu_lbl = QLabel(self.toggle_menu_slider_frame)
         self.tru_ano_toggle_menu_lbl.setObjectName(u"tru_ano_toggle_menu_lbl")
-        self.tru_ano_toggle_menu_lbl.setFont(font7)
+        self.tru_ano_toggle_menu_lbl.setFont(font12)
         self.tru_ano_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
 "}\n"
 "\n"
-"QLabel:hover{\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(168, 128, 260, 255), stop:1 rgba(108, 121, 240, 255));\n"
-"}")
+"")
         self.tru_ano_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.tru_ano_toggle_menu_lbl)
@@ -2365,7 +2466,7 @@ class Ui_MainWindow(object):
 "\n"
 "QDoubleSpinBox{\n"
 "border: 2px solid black;\n"
-"border-radius: 10px;\n"
+"border-radius: 8px;\n"
 "}")
         self.tru_ano_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
 
@@ -2373,12 +2474,17 @@ class Ui_MainWindow(object):
 
         self.tru_ano_toggle_menu_slider = QSlider(self.toggle_menu_slider_frame)
         self.tru_ano_toggle_menu_slider.setObjectName(u"tru_ano_toggle_menu_slider")
+        self.tru_ano_toggle_menu_slider.setStyleSheet(u"")
         self.tru_ano_toggle_menu_slider.setOrientation(Qt.Horizontal)
 
         self.verticalLayout_3.addWidget(self.tru_ano_toggle_menu_slider)
 
 
-        self.verticalLayout_2.addWidget(self.toggle_menu_slider_frame)
+        self.verticalLayout_24.addWidget(self.toggle_menu_slider_frame)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        self.verticalLayout_2.addWidget(self.scrollArea)
 
 
         self.horizontalLayout_21.addWidget(self.VPCO_menu_toggle_frame)
@@ -5534,7 +5640,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(4)
         self.Orbit_type_stack.setCurrentIndex(0)
         self.VPCO_output_stack.setCurrentIndex(0)
         self.otherbody_stack.setCurrentIndex(0)
