@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagepIhuop.ui'
+## Form generated from reading UI file 'Home_PagePmFULU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -1932,7 +1932,7 @@ class Ui_MainWindow(object):
 "\n"
 "border: 3px solid rgb(34, 14, 36);\n"
 "border-radius: 15px;\n"
-"background-color: rgb(85, 85, 255);\n"
+"background:transparent;\n"
 "}\n"
 "\n"
 "QFrame:hover{\n"
@@ -1971,9 +1971,9 @@ class Ui_MainWindow(object):
 "	subcontrol-position: top;\n"
 "	subcontrol-origin: margin;\n"
 "}\n"
-"QScrollBar::sub-line:vertical:"
-                        "hover {	\n"
-"	background-color: rgb(255, 0, 127);\n"
+"QScrollBar::sub-line:vertical:hover {	\n"
+""
+                        "	background-color: rgb(255, 0, 127);\n"
 "}\n"
 "QScrollBar::sub-line:vertical:pressed {	\n"
 "	background-color: rgb(185, 0, 92);\n"
@@ -2014,8 +2014,7 @@ class Ui_MainWindow(object):
 "    width: 5px;\n"
 "    margin: 15px 0 15px 0;\n"
 "	border-radius: 0px;\n"
-""
-                        " }")
+" }")
         self.VPCO_menu_toggle_frame.setFrameShape(QFrame.StyledPanel)
         self.VPCO_menu_toggle_frame.setFrameShadow(QFrame.Raised)
         self.VPCO_menu_toggle_frame.setMidLineWidth(0)

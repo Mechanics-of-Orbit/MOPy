@@ -4458,7 +4458,7 @@ color: rgb(255, 0, 0);</string>
 
 border: 3px solid rgb(34, 14, 36);
 border-radius: 15px;
-background-color: rgb(85, 85, 255);
+background:transparent;
 }
 
 QFrame:hover{
