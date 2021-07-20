@@ -4685,7 +4685,7 @@ QPushButton:hover{
                        </layout>
                       </widget>
                      </item>
-                     <item>
+                     <item alignment="Qt::AlignTop">
                       <widget class="QFrame" name="toggle_menu_slider_frame">
                        <property name="styleSheet">
                         <string notr="true">QFrame{

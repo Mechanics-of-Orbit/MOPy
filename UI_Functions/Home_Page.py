@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageMCfkTI.ui'
+## Form generated from reading UI file 'Home_PagepiFCQk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -2480,7 +2480,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.tru_ano_toggle_menu_slider)
 
 
-        self.verticalLayout_24.addWidget(self.toggle_menu_slider_frame)
+        self.verticalLayout_24.addWidget(self.toggle_menu_slider_frame, 0, Qt.AlignTop)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
