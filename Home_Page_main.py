@@ -50,6 +50,16 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         
+        # Getting and storing the window properties in desktoprect 
+        desktoprect = QApplication.desktop().availableGeometry(self)
+
+        # Getting the center of the window
+        center = desktoprect.center()
+
+        # Moving the window to the center of the screen
+        self.move(center.x() - (self.width() * 0.5), center.y() - (self.height() * 0.5)) 
+
+
         # Hidding some of the widgets in VPCO output
         self.ui.semi_major_axis_toggle_menu_spinbox.hide()
         self.ui.eccentricity_toggle_menu_spinbox.hide()
@@ -382,7 +392,7 @@ class MainWindow(QMainWindow):
         
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
     
-    def slider_released(self):
+    def slider_released(self,event):
         changed_slidervalue = self.ui.semi_major_axis_toggle_menu_slider.value()
         #print(changed_slidervalue)
         current_slidervalue = self.slider_pressed()
@@ -397,10 +407,10 @@ class MainWindow(QMainWindow):
             print(add)
             self.ui.semi_major_axis_toggle_menu_spinbox.setValue(current_spinvalue - add)
 
-    def slider_pressed(self):
-        current_slidervalue = self.ui.semi_major_axis_toggle_menu_slider.value()
+    def slider_pressed(self, event):
+        self.ui.semi_major_axis_toggle_menu_spinbox.setValue(event)
         #print(current_slidervalue)
-        return current_slidervalue
+        return event
 
 # SPLASH SCREEN
 class SplashScreen(QMainWindow):
