@@ -100,13 +100,13 @@ class UIFunctions(MainWindow):
 
         self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
 
-        event_released = self.ui.semi_major_axis_toggle_menu_slider.sliderMoved
-
-        self.ui.semi_major_axis_toggle_menu_slider.sliderMoved.connect(lambda:Home_Page_main.MainWindow.slider_released(self, event_released))
         
-        event_pressed = self.ui.semi_major_axis_toggle_menu_slider.sliderPressed
 
-        self.ui.semi_major_axis_toggle_menu_slider.sliderPressed.connect(lambda:Home_Page_main.MainWindow.slider_pressed(self, event_pressed))
+        # self.ui.semi_major_axis_toggle_menu_slider.sliderMoved.connect(lambda event:Home_Page_main.MainWindow.slider_released(self, event))
+        
+        
+
+        self.ui.semi_major_axis_toggle_menu_slider.sliderPressed.connect(lambda event:Home_Page_main.MainWindow.slider_pressed(self, event))
     def returnStatus():
         return GLOBAL_STATE
 

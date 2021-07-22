@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>850</width>
-    <height>450</height>
+    <height>474</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -107,35 +107,6 @@ QProgressBar::chunk{
         <number>24</number>
        </property>
       </widget>
-      <widget class="QLabel" name="loading_lbl">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>350</y>
-         <width>811</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Segoe UI</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:transparent;
-color: rgb(98, 114, 164);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-      </widget>
       <widget class="QFrame" name="logo_frame">
        <property name="geometry">
         <rect>
@@ -192,20 +163,65 @@ background-color:transparent;</string>
         </item>
        </layout>
       </widget>
-      <widget class="QLabel" name="label">
+      <widget class="QFrame" name="ProgressBarContainer">
        <property name="geometry">
         <rect>
-         <x>570</x>
-         <y>330</y>
-         <width>47</width>
-         <height>41</height>
+         <x>10</x>
+         <y>390</y>
+         <width>811</width>
+         <height>61</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color:transparent;</string>
+        <string notr="true">background:transparent</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+         <widget class="spiralProgressBar" name="progressBar_2" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>45</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>45</width>
+            <height>40</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="loading_lbl">
+       <property name="geometry">
+        <rect>
+         <x>26</x>
+         <y>350</y>
+         <width>781</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:transparent;</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </widget>
@@ -213,6 +229,14 @@ background-color:transparent;</string>
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>spiralProgressBar</class>
+   <extends>QWidget</extends>
+   <header>PySide2extn.SpiralProgressBar.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

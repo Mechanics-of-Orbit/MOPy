@@ -40,6 +40,7 @@ path.append('..\Functions\Sections')
 
 # GLOBALS
 counter = 0
+progress_val = 0
 class MainWindow(QMainWindow):
     I = [1, 0, 0]
     J = [0, 1, 0]
@@ -59,6 +60,7 @@ class MainWindow(QMainWindow):
         # Moving the window to the center of the screen
         self.move(center.x() - (self.width() * 0.5), center.y() - (self.height() * 0.5)) 
 
+        
 
         # Hidding some of the widgets in VPCO output
         self.ui.semi_major_axis_toggle_menu_spinbox.hide()
@@ -395,19 +397,20 @@ class MainWindow(QMainWindow):
     def slider_released(self,event):
         changed_slidervalue = self.ui.semi_major_axis_toggle_menu_slider.value()
         #print(changed_slidervalue)
-        current_slidervalue = self.slider_pressed()
-        print(current_slidervalue, changed_slidervalue)
+        #current_slidervalue = self.slider_pressed()
+        #print(current_slidervalue, changed_slidervalue)
         current_spinvalue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
         if changed_slidervalue > current_slidervalue:
             remain = changed_slidervalue - current_slidervalue
-            print(remain)
+            #print(remain)
             self.ui.semi_major_axis_toggle_menu_spinbox.setValue(current_spinvalue + remain)
         else:
             add = -changed_slidervalue + current_slidervalue
-            print(add)
+            #print(add)
             self.ui.semi_major_axis_toggle_menu_spinbox.setValue(current_spinvalue - add)
 
     def slider_pressed(self, event):
+        print(event)
         self.ui.semi_major_axis_toggle_menu_spinbox.setValue(event)
         #print(current_slidervalue)
         return event
@@ -439,7 +442,7 @@ class SplashScreen(QMainWindow):
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.progress)
         # TIMER IN MILLISECONDS
-        self.timer.start(35)
+        self.timer.start(50)
 
         # CHANGE DESCRIPTION
 
@@ -457,10 +460,53 @@ class SplashScreen(QMainWindow):
         
         self.ui.loading_lbl.setText("<strong>Do you know: </strong>"+ fun_fact())
 
+        ### Spiral Progress BAR
+
+        # Setting the Minimum value 
+        self.ui.progressBar_2.spb_setMinimum((0, 0, 0))
+
+        # Setting the maximum value 
+        self.ui.progressBar_2.spb_setMaximum((120, 220, 320))
+
+        # Set progress value
+        x = 100
+        self.ui.progressBar_2.spb_setValue((x, x*2, x*3))
+
+        #Set Progress Color
+        self.ui.progressBar_2.spb_lineColor(((233, 152, 6), (6, 201, 233), (233, 6, 88)))
+
+        # Setting the initial position of the progress bar
+        self.ui.progressBar_2.spb_setInitialPos(('West', 'South', 'East'))
+
+        # Setting the direction of Progress of ProgressBar
+        self.ui.progressBar_2.spb_setDirection(('Clockwise', 'Clockwise', 'Clockwise'))
+
+        # Set line width of Progressbar
+        self.ui.progressBar_2.spb_lineWidth(4)
+
+        # Setting the gap width between the progress Bar
+        self.ui.progressBar_2.spb_setGap(4)
+
+        # Set line Style
+        self.ui.progressBar_2.spb_lineStyle(('SolidLine', 'SolidLine', 'SolidLine'))
+
+        # Set end cap to progress Bar
+        self.ui.progressBar_2.spb_lineCap(('RoundCap','RoundCap', 'RoundCap'))
+
+        # Hide the path followed by the progress Bar
+        self.ui.progressBar_2.spb_setPathHidden(True)
+
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         self.show()
         ## ==> END ##
+
+        self.timer_2 = QtCore.QTimer() 
+        self.timer_2.timeout.connect(self.progress_2)
+        self.timer_2.start(5)
+
+        # Set all the progress bar to zero on start
+        QtCore.QTimer.singleShot(0, lambda: self.ui.progressBar_2.spb_setValue((0, 0, 0)))
 
     ## ==> APP FUNCTIONS
     ########################################################################
@@ -485,6 +531,19 @@ class SplashScreen(QMainWindow):
 
         # INCREASE COUNTER
         counter += 1  
+
+    def progress_2(self):
+            global progress_val
+            # Set Progress Values
+            self.ui.progressBar_2.spb_setValue((progress_val, progress_val*2, progress_val*3))
+
+            # Reset Progresses if the maximum value is reached
+            if progress_val > 120:
+                progress_val = 0
+
+            # Increase progress value by one, every 60ms
+
+            progress_val += 1
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)

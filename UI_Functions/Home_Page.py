@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagehVrUDc.ui'
+## Form generated from reading UI file 'Home_PagebtOHPZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -2064,7 +2064,7 @@ class Ui_MainWindow(object):
         self.toggle_menu_btn.setMinimumSize(QSize(0, 20))
         self.toggle_menu_btn.setStyleSheet(u"QPushButton{\n"
 "	background-color:transparent;\n"
-"	image:url(UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg);\n"
+"	\n"
 "	\n"
 "}\n"
 "\n"
@@ -2072,6 +2072,10 @@ class Ui_MainWindow(object):
 "	padding: 0.1em 0.1em 0.1em 0.1em;\n"
 "	\n"
 "}")
+        icon = QIcon()
+        icon.addFile(u"UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.toggle_menu_btn.setIcon(icon)
+        self.toggle_menu_btn.setIconSize(QSize(18, 18))
 
         self.horizontalLayout_25.addWidget(self.toggle_menu_btn)
 
