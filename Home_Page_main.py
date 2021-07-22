@@ -479,7 +479,7 @@ class SplashScreen(QMainWindow):
         self.ui.progressBar_2.spb_setInitialPos(('West', 'South', 'East'))
 
         # Setting the direction of Progress of ProgressBar
-        self.ui.progressBar_2.spb_setDirection(('Clockwise', 'Clockwise', 'Clockwise'))
+        #self.ui.progressBar_2.spb_setDirection(('Clockwise', 'Clockwise', 'Clockwise'))
 
         # Set line width of Progressbar
         self.ui.progressBar_2.spb_lineWidth(4)
