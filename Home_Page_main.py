@@ -41,6 +41,7 @@ path.append('..\Functions\Sections')
 # GLOBALS
 counter = 0
 progress_val = 0
+slider_pressed = 0
 class MainWindow(QMainWindow):
     I = [1, 0, 0]
     J = [0, 1, 0]
@@ -394,26 +395,34 @@ class MainWindow(QMainWindow):
         
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
     
-    def slider_released(self,event):
-        changed_slidervalue = self.ui.semi_major_axis_toggle_menu_slider.value()
-        #print(changed_slidervalue)
-        #current_slidervalue = self.slider_pressed()
-        #print(current_slidervalue, changed_slidervalue)
-        current_spinvalue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
-        if changed_slidervalue > current_slidervalue:
-            remain = changed_slidervalue - current_slidervalue
-            #print(remain)
-            self.ui.semi_major_axis_toggle_menu_spinbox.setValue(current_spinvalue + remain)
+    def slider_pressed(self):
+        #current_spinvalue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
+        pressed = self.ui.semi_major_axis_toggle_menu_slider.value()
+        print('pressed',pressed)
+        # self.ui.label_pressed.setText(str(pressed))
+        global slider_pressed
+        slider_pressed = pressed
+    
+    def slider_released(self):
+        released  = self.ui.semi_major_axis_toggle_menu_slider.value()
+        print('released',released)
+        pressed = slider_pressed
+        difference = released - pressed
+        print('difference', difference)
+        spinValue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
+        if difference > 0:
+            spinValue += difference
+            self.ui.semi_major_axis_toggle_menu_spinbox.setValue(spinValue)
         else:
-            add = -changed_slidervalue + current_slidervalue
-            #print(add)
-            self.ui.semi_major_axis_toggle_menu_spinbox.setValue(current_spinvalue - add)
+            spinValue += difference
+            print(spinValue)
+            self.ui.semi_major_axis_toggle_menu_spinbox.setValue(spinValue)
 
-    def slider_pressed(self, event):
-        print(event)
-        self.ui.semi_major_axis_toggle_menu_spinbox.setValue(event)
-        #print(current_slidervalue)
-        return event
+        
+        
+       
+
+    
 
 # SPLASH SCREEN
 class SplashScreen(QMainWindow):
@@ -479,7 +488,7 @@ class SplashScreen(QMainWindow):
         self.ui.progressBar_2.spb_setInitialPos(('West', 'South', 'East'))
 
         # Setting the direction of Progress of ProgressBar
-        #self.ui.progressBar_2.spb_setDirection(('Clockwise', 'Clockwise', 'Clockwise'))
+        self.ui.progressBar_2.spb_setDirection(('Clockwise', 'Clockwise', 'Clockwise'))
 
         # Set line width of Progressbar
         self.ui.progressBar_2.spb_lineWidth(4)

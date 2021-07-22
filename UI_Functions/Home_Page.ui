@@ -4661,7 +4661,7 @@ QPushButton:pressed{
                       <property name="iconSize">
                        <size>
                         <width>18</width>
-                        <height>16</height>
+                        <height>18</height>
                        </size>
                       </property>
                      </widget>
@@ -4916,6 +4916,18 @@ background:transparent;
                          </item>
                          <item>
                           <widget class="QDoubleSpinBox" name="semi_major_axis_toggle_menu_spinbox">
+                           <property name="minimumSize">
+                            <size>
+                             <width>100</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
@@ -4956,8 +4968,11 @@ border-radius: 8px;
                            <property name="alignment">
                             <set>Qt::AlignCenter</set>
                            </property>
+                           <property name="minimum">
+                            <double>-999999996.000000000000000</double>
+                           </property>
                            <property name="maximum">
-                            <double>10000000000000000.000000000000000</double>
+                            <double>1000000000.000000000000000</double>
                            </property>
                           </widget>
                          </item>
@@ -4974,6 +4989,12 @@ border-radius: 8px;
                             <string notr="true"/>
                            </property>
                            <property name="maximum">
+                            <number>200</number>
+                           </property>
+                           <property name="pageStep">
+                            <number>10</number>
+                           </property>
+                           <property name="sliderPosition">
                             <number>100</number>
                            </property>
                            <property name="orientation">
@@ -4981,6 +5002,9 @@ border-radius: 8px;
                            </property>
                            <property name="tickPosition">
                             <enum>QSlider::TicksAbove</enum>
+                           </property>
+                           <property name="tickInterval">
+                            <number>20</number>
                            </property>
                           </widget>
                          </item>
@@ -5018,6 +5042,18 @@ background:transparent;
                          </item>
                          <item>
                           <widget class="QDoubleSpinBox" name="eccentricity_toggle_menu_spinbox">
+                           <property name="minimumSize">
+                            <size>
+                             <width>100</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
@@ -5058,8 +5094,11 @@ border-radius: 8px;
                            <property name="alignment">
                             <set>Qt::AlignCenter</set>
                            </property>
+                           <property name="minimum">
+                            <double>-50.000000000000000</double>
+                           </property>
                            <property name="maximum">
-                            <double>10000000000000000.000000000000000</double>
+                            <double>50.000000000000000</double>
                            </property>
                           </widget>
                          </item>
@@ -5076,7 +5115,10 @@ border-radius: 8px;
                             <string notr="true"/>
                            </property>
                            <property name="maximum">
-                            <number>100</number>
+                            <number>10</number>
+                           </property>
+                           <property name="sliderPosition">
+                            <number>5</number>
                            </property>
                            <property name="orientation">
                             <enum>Qt::Horizontal</enum>
@@ -5085,7 +5127,7 @@ border-radius: 8px;
                             <enum>QSlider::TicksAbove</enum>
                            </property>
                            <property name="tickInterval">
-                            <number>10</number>
+                            <number>1</number>
                            </property>
                           </widget>
                          </item>
@@ -5123,6 +5165,18 @@ background:transparent;
                          </item>
                          <item>
                           <widget class="QDoubleSpinBox" name="inclination_toggle_menu_spinbox">
+                           <property name="minimumSize">
+                            <size>
+                             <width>100</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
@@ -5163,8 +5217,11 @@ border-radius: 8px;
                            <property name="alignment">
                             <set>Qt::AlignCenter</set>
                            </property>
+                           <property name="minimum">
+                            <double>-360.000000000000000</double>
+                           </property>
                            <property name="maximum">
-                            <double>10000000000000000.000000000000000</double>
+                            <double>360.000000000000000</double>
                            </property>
                           </widget>
                          </item>
@@ -5181,7 +5238,10 @@ border-radius: 8px;
                             <string notr="true"/>
                            </property>
                            <property name="maximum">
-                            <number>100</number>
+                            <number>360</number>
+                           </property>
+                           <property name="sliderPosition">
+                            <number>180</number>
                            </property>
                            <property name="orientation">
                             <enum>Qt::Horizontal</enum>
@@ -5190,7 +5250,7 @@ border-radius: 8px;
                             <enum>QSlider::TicksAbove</enum>
                            </property>
                            <property name="tickInterval">
-                            <number>10</number>
+                            <number>36</number>
                            </property>
                           </widget>
                          </item>
@@ -5228,6 +5288,18 @@ background:transparent;
                          </item>
                          <item>
                           <widget class="QDoubleSpinBox" name="RAAN_toggle_menu_spinbox">
+                           <property name="minimumSize">
+                            <size>
+                             <width>100</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
@@ -5268,8 +5340,11 @@ border-radius: 8px;
                            <property name="alignment">
                             <set>Qt::AlignCenter</set>
                            </property>
+                           <property name="minimum">
+                            <double>-360.000000000000000</double>
+                           </property>
                            <property name="maximum">
-                            <double>10000000000000000.000000000000000</double>
+                            <double>360.000000000000000</double>
                            </property>
                           </widget>
                          </item>
@@ -5286,7 +5361,10 @@ border-radius: 8px;
                             <string notr="true"/>
                            </property>
                            <property name="maximum">
-                            <number>100</number>
+                            <number>360</number>
+                           </property>
+                           <property name="sliderPosition">
+                            <number>180</number>
                            </property>
                            <property name="orientation">
                             <enum>Qt::Horizontal</enum>
@@ -5295,7 +5373,7 @@ border-radius: 8px;
                             <enum>QSlider::TicksAbove</enum>
                            </property>
                            <property name="tickInterval">
-                            <number>10</number>
+                            <number>36</number>
                            </property>
                           </widget>
                          </item>
@@ -5333,6 +5411,18 @@ background:transparent;
                          </item>
                          <item>
                           <widget class="QDoubleSpinBox" name="arg_of_per_toggle_menu_spinbox">
+                           <property name="minimumSize">
+                            <size>
+                             <width>100</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
@@ -5373,8 +5463,11 @@ border-radius: 8px;
                            <property name="alignment">
                             <set>Qt::AlignCenter</set>
                            </property>
+                           <property name="minimum">
+                            <double>-360.000000000000000</double>
+                           </property>
                            <property name="maximum">
-                            <double>10000000000000000.000000000000000</double>
+                            <double>360.000000000000000</double>
                            </property>
                           </widget>
                          </item>
@@ -5391,7 +5484,10 @@ border-radius: 8px;
                             <string notr="true"/>
                            </property>
                            <property name="maximum">
-                            <number>100</number>
+                            <number>360</number>
+                           </property>
+                           <property name="sliderPosition">
+                            <number>180</number>
                            </property>
                            <property name="orientation">
                             <enum>Qt::Horizontal</enum>
@@ -5400,7 +5496,7 @@ border-radius: 8px;
                             <enum>QSlider::TicksAbove</enum>
                            </property>
                            <property name="tickInterval">
-                            <number>10</number>
+                            <number>36</number>
                            </property>
                           </widget>
                          </item>
@@ -5438,6 +5534,18 @@ background:transparent;
                          </item>
                          <item>
                           <widget class="QDoubleSpinBox" name="tru_ano_toggle_menu_spinbox">
+                           <property name="minimumSize">
+                            <size>
+                             <width>100</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
@@ -5478,8 +5586,11 @@ border-radius: 8px;
                            <property name="alignment">
                             <set>Qt::AlignCenter</set>
                            </property>
+                           <property name="minimum">
+                            <double>-360.000000000000000</double>
+                           </property>
                            <property name="maximum">
-                            <double>10000000000000000.000000000000000</double>
+                            <double>360.000000000000000</double>
                            </property>
                           </widget>
                          </item>
@@ -5496,7 +5607,10 @@ border-radius: 8px;
                             <string notr="true"/>
                            </property>
                            <property name="maximum">
-                            <number>100</number>
+                            <number>360</number>
+                           </property>
+                           <property name="sliderPosition">
+                            <number>180</number>
                            </property>
                            <property name="orientation">
                             <enum>Qt::Horizontal</enum>
@@ -5505,7 +5619,7 @@ border-radius: 8px;
                             <enum>QSlider::TicksAbove</enum>
                            </property>
                            <property name="tickInterval">
-                            <number>10</number>
+                            <number>36</number>
                            </property>
                           </widget>
                          </item>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screeniPnAGO.ui'
+## Form generated from reading UI file 'splash_screenKAvmtp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -42,7 +42,7 @@ class Ui_SplashScreen(object):
         self.dropShadowFrame.setFrameShadow(QFrame.Raised)
         self.app_description_lbl = QLabel(self.dropShadowFrame)
         self.app_description_lbl.setObjectName(u"app_description_lbl")
-        self.app_description_lbl.setGeometry(QRect(0, 270, 831, 31))
+        self.app_description_lbl.setGeometry(QRect(0, 320, 831, 31))
         font = QFont()
         font.setFamily(u"Segoe UI")
         font.setPointSize(14)
@@ -52,7 +52,7 @@ class Ui_SplashScreen(object):
         self.app_description_lbl.setAlignment(Qt.AlignCenter)
         self.progressBar = QProgressBar(self.dropShadowFrame)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setGeometry(QRect(50, 320, 731, 23))
+        self.progressBar.setGeometry(QRect(50, 370, 731, 23))
         self.progressBar.setStyleSheet(u"QProgressBar {\n"
 "	\n"
 "	background-color: rgb(98, 114, 164,200);\n"
@@ -98,7 +98,7 @@ class Ui_SplashScreen(object):
 
         self.ProgressBarContainer = QFrame(self.dropShadowFrame)
         self.ProgressBarContainer.setObjectName(u"ProgressBarContainer")
-        self.ProgressBarContainer.setGeometry(QRect(10, 390, 811, 61))
+        self.ProgressBarContainer.setGeometry(QRect(10, 260, 811, 61))
         self.ProgressBarContainer.setStyleSheet(u"background:transparent")
         self.ProgressBarContainer.setFrameShape(QFrame.StyledPanel)
         self.ProgressBarContainer.setFrameShadow(QFrame.Raised)
@@ -113,7 +113,7 @@ class Ui_SplashScreen(object):
 
         self.loading_lbl = QLabel(self.dropShadowFrame)
         self.loading_lbl.setObjectName(u"loading_lbl")
-        self.loading_lbl.setGeometry(QRect(26, 350, 781, 41))
+        self.loading_lbl.setGeometry(QRect(26, 400, 781, 41))
         font2 = QFont()
         font2.setPointSize(10)
         self.loading_lbl.setFont(font2)

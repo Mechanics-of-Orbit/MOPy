@@ -51,7 +51,7 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>270</y>
+         <y>320</y>
          <width>831</width>
          <height>31</height>
         </rect>
@@ -77,7 +77,7 @@ background-color:transparent;</string>
        <property name="geometry">
         <rect>
          <x>50</x>
-         <y>320</y>
+         <y>370</y>
          <width>731</width>
          <height>23</height>
         </rect>
@@ -167,7 +167,7 @@ background-color:transparent;</string>
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>390</y>
+         <y>260</y>
          <width>811</width>
          <height>61</height>
         </rect>
@@ -204,7 +204,7 @@ background-color:transparent;</string>
        <property name="geometry">
         <rect>
          <x>26</x>
-         <y>350</y>
+         <y>400</y>
          <width>781</width>
          <height>41</height>
         </rect>

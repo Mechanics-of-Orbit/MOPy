@@ -102,11 +102,13 @@ class UIFunctions(MainWindow):
 
         
 
-        # self.ui.semi_major_axis_toggle_menu_slider.sliderMoved.connect(lambda event:Home_Page_main.MainWindow.slider_released(self, event))
+        self.ui.semi_major_axis_toggle_menu_slider.sliderPressed.connect(lambda :Home_Page_main.MainWindow.slider_pressed(self))
+
+        self.ui.semi_major_axis_toggle_menu_slider.sliderReleased.connect(lambda :Home_Page_main.MainWindow.slider_released(self))
         
         
 
-        self.ui.semi_major_axis_toggle_menu_slider.sliderPressed.connect(lambda event:Home_Page_main.MainWindow.slider_pressed(self, event))
+        
     def returnStatus():
         return GLOBAL_STATE
 

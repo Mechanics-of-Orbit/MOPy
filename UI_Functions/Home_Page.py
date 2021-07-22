@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagebtOHPZ.ui'
+## Form generated from reading UI file 'Home_PageqeRKqo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -2211,6 +2211,8 @@ class Ui_MainWindow(object):
 
         self.semi_major_axis_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
         self.semi_major_axis_toggle_menu_spinbox.setObjectName(u"semi_major_axis_toggle_menu_spinbox")
+        self.semi_major_axis_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.semi_major_axis_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
         self.semi_major_axis_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -2248,7 +2250,8 @@ class Ui_MainWindow(object):
 "border-radius: 8px;\n"
 "}")
         self.semi_major_axis_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.semi_major_axis_toggle_menu_spinbox.setMaximum(10000000000000000.000000000000000)
+        self.semi_major_axis_toggle_menu_spinbox.setMinimum(-999999996.000000000000000)
+        self.semi_major_axis_toggle_menu_spinbox.setMaximum(1000000000.000000000000000)
 
         self.horizontalLayout_27.addWidget(self.semi_major_axis_toggle_menu_spinbox)
 
@@ -2261,9 +2264,12 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_slider = QSlider(self.page_2)
         self.semi_major_axis_toggle_menu_slider.setObjectName(u"semi_major_axis_toggle_menu_slider")
         self.semi_major_axis_toggle_menu_slider.setStyleSheet(u"")
-        self.semi_major_axis_toggle_menu_slider.setMaximum(100)
+        self.semi_major_axis_toggle_menu_slider.setMaximum(200)
+        self.semi_major_axis_toggle_menu_slider.setPageStep(10)
+        self.semi_major_axis_toggle_menu_slider.setSliderPosition(100)
         self.semi_major_axis_toggle_menu_slider.setOrientation(Qt.Horizontal)
         self.semi_major_axis_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
+        self.semi_major_axis_toggle_menu_slider.setTickInterval(20)
 
         self.horizontalLayout_35.addWidget(self.semi_major_axis_toggle_menu_slider)
 
@@ -2288,6 +2294,8 @@ class Ui_MainWindow(object):
 
         self.eccentricity_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
         self.eccentricity_toggle_menu_spinbox.setObjectName(u"eccentricity_toggle_menu_spinbox")
+        self.eccentricity_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.eccentricity_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
         self.eccentricity_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -2325,7 +2333,8 @@ class Ui_MainWindow(object):
 "border-radius: 8px;\n"
 "}")
         self.eccentricity_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.eccentricity_toggle_menu_spinbox.setMaximum(10000000000000000.000000000000000)
+        self.eccentricity_toggle_menu_spinbox.setMinimum(-50.000000000000000)
+        self.eccentricity_toggle_menu_spinbox.setMaximum(50.000000000000000)
 
         self.horizontalLayout_28.addWidget(self.eccentricity_toggle_menu_spinbox)
 
@@ -2338,10 +2347,11 @@ class Ui_MainWindow(object):
         self.eccentricity_toggle_menu_slider = QSlider(self.page_2)
         self.eccentricity_toggle_menu_slider.setObjectName(u"eccentricity_toggle_menu_slider")
         self.eccentricity_toggle_menu_slider.setStyleSheet(u"")
-        self.eccentricity_toggle_menu_slider.setMaximum(100)
+        self.eccentricity_toggle_menu_slider.setMaximum(10)
+        self.eccentricity_toggle_menu_slider.setSliderPosition(5)
         self.eccentricity_toggle_menu_slider.setOrientation(Qt.Horizontal)
         self.eccentricity_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.eccentricity_toggle_menu_slider.setTickInterval(10)
+        self.eccentricity_toggle_menu_slider.setTickInterval(1)
 
         self.horizontalLayout_34.addWidget(self.eccentricity_toggle_menu_slider)
 
@@ -2366,6 +2376,8 @@ class Ui_MainWindow(object):
 
         self.inclination_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
         self.inclination_toggle_menu_spinbox.setObjectName(u"inclination_toggle_menu_spinbox")
+        self.inclination_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.inclination_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
         self.inclination_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -2403,7 +2415,8 @@ class Ui_MainWindow(object):
 "border-radius: 8px;\n"
 "}")
         self.inclination_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.inclination_toggle_menu_spinbox.setMaximum(10000000000000000.000000000000000)
+        self.inclination_toggle_menu_spinbox.setMinimum(-360.000000000000000)
+        self.inclination_toggle_menu_spinbox.setMaximum(360.000000000000000)
 
         self.horizontalLayout_29.addWidget(self.inclination_toggle_menu_spinbox)
 
@@ -2416,10 +2429,11 @@ class Ui_MainWindow(object):
         self.inclination_toggle_menu_slider = QSlider(self.page_2)
         self.inclination_toggle_menu_slider.setObjectName(u"inclination_toggle_menu_slider")
         self.inclination_toggle_menu_slider.setStyleSheet(u"")
-        self.inclination_toggle_menu_slider.setMaximum(100)
+        self.inclination_toggle_menu_slider.setMaximum(360)
+        self.inclination_toggle_menu_slider.setSliderPosition(180)
         self.inclination_toggle_menu_slider.setOrientation(Qt.Horizontal)
         self.inclination_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.inclination_toggle_menu_slider.setTickInterval(10)
+        self.inclination_toggle_menu_slider.setTickInterval(36)
 
         self.horizontalLayout_33.addWidget(self.inclination_toggle_menu_slider)
 
@@ -2444,6 +2458,8 @@ class Ui_MainWindow(object):
 
         self.RAAN_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
         self.RAAN_toggle_menu_spinbox.setObjectName(u"RAAN_toggle_menu_spinbox")
+        self.RAAN_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.RAAN_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
         self.RAAN_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -2481,7 +2497,8 @@ class Ui_MainWindow(object):
 "border-radius: 8px;\n"
 "}")
         self.RAAN_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.RAAN_toggle_menu_spinbox.setMaximum(10000000000000000.000000000000000)
+        self.RAAN_toggle_menu_spinbox.setMinimum(-360.000000000000000)
+        self.RAAN_toggle_menu_spinbox.setMaximum(360.000000000000000)
 
         self.horizontalLayout_30.addWidget(self.RAAN_toggle_menu_spinbox)
 
@@ -2494,10 +2511,11 @@ class Ui_MainWindow(object):
         self.RAAN_toggle_menu_slider = QSlider(self.page_2)
         self.RAAN_toggle_menu_slider.setObjectName(u"RAAN_toggle_menu_slider")
         self.RAAN_toggle_menu_slider.setStyleSheet(u"")
-        self.RAAN_toggle_menu_slider.setMaximum(100)
+        self.RAAN_toggle_menu_slider.setMaximum(360)
+        self.RAAN_toggle_menu_slider.setSliderPosition(180)
         self.RAAN_toggle_menu_slider.setOrientation(Qt.Horizontal)
         self.RAAN_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.RAAN_toggle_menu_slider.setTickInterval(10)
+        self.RAAN_toggle_menu_slider.setTickInterval(36)
 
         self.horizontalLayout_45.addWidget(self.RAAN_toggle_menu_slider)
 
@@ -2522,6 +2540,8 @@ class Ui_MainWindow(object):
 
         self.arg_of_per_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
         self.arg_of_per_toggle_menu_spinbox.setObjectName(u"arg_of_per_toggle_menu_spinbox")
+        self.arg_of_per_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.arg_of_per_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
         self.arg_of_per_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -2559,7 +2579,8 @@ class Ui_MainWindow(object):
 "border-radius: 8px;\n"
 "}")
         self.arg_of_per_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.arg_of_per_toggle_menu_spinbox.setMaximum(10000000000000000.000000000000000)
+        self.arg_of_per_toggle_menu_spinbox.setMinimum(-360.000000000000000)
+        self.arg_of_per_toggle_menu_spinbox.setMaximum(360.000000000000000)
 
         self.horizontalLayout_31.addWidget(self.arg_of_per_toggle_menu_spinbox)
 
@@ -2572,10 +2593,11 @@ class Ui_MainWindow(object):
         self.arg_of_per_toggle_menu_slider = QSlider(self.page_2)
         self.arg_of_per_toggle_menu_slider.setObjectName(u"arg_of_per_toggle_menu_slider")
         self.arg_of_per_toggle_menu_slider.setStyleSheet(u"")
-        self.arg_of_per_toggle_menu_slider.setMaximum(100)
+        self.arg_of_per_toggle_menu_slider.setMaximum(360)
+        self.arg_of_per_toggle_menu_slider.setSliderPosition(180)
         self.arg_of_per_toggle_menu_slider.setOrientation(Qt.Horizontal)
         self.arg_of_per_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.arg_of_per_toggle_menu_slider.setTickInterval(10)
+        self.arg_of_per_toggle_menu_slider.setTickInterval(36)
 
         self.horizontalLayout_47.addWidget(self.arg_of_per_toggle_menu_slider)
 
@@ -2600,6 +2622,8 @@ class Ui_MainWindow(object):
 
         self.tru_ano_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
         self.tru_ano_toggle_menu_spinbox.setObjectName(u"tru_ano_toggle_menu_spinbox")
+        self.tru_ano_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.tru_ano_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
         self.tru_ano_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -2637,7 +2661,8 @@ class Ui_MainWindow(object):
 "border-radius: 8px;\n"
 "}")
         self.tru_ano_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.tru_ano_toggle_menu_spinbox.setMaximum(10000000000000000.000000000000000)
+        self.tru_ano_toggle_menu_spinbox.setMinimum(-360.000000000000000)
+        self.tru_ano_toggle_menu_spinbox.setMaximum(360.000000000000000)
 
         self.horizontalLayout_32.addWidget(self.tru_ano_toggle_menu_spinbox)
 
@@ -2650,10 +2675,11 @@ class Ui_MainWindow(object):
         self.tru_ano_toggle_menu_slider = QSlider(self.page_2)
         self.tru_ano_toggle_menu_slider.setObjectName(u"tru_ano_toggle_menu_slider")
         self.tru_ano_toggle_menu_slider.setStyleSheet(u"")
-        self.tru_ano_toggle_menu_slider.setMaximum(100)
+        self.tru_ano_toggle_menu_slider.setMaximum(360)
+        self.tru_ano_toggle_menu_slider.setSliderPosition(180)
         self.tru_ano_toggle_menu_slider.setOrientation(Qt.Horizontal)
         self.tru_ano_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.tru_ano_toggle_menu_slider.setTickInterval(10)
+        self.tru_ano_toggle_menu_slider.setTickInterval(36)
 
         self.horizontalLayout_46.addWidget(self.tru_ano_toggle_menu_slider)
 
