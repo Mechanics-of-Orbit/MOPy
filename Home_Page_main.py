@@ -17,7 +17,10 @@ from math import acos
 
 from UI_Functions.ui_splash_screen import Ui_SplashScreen
 
-from SOI3Dviz import SOI
+# Importing custom spin loader
+#from UI_Functions.Circular_Progress import PyCircularProgress
+
+from UI_Functions.Circular_Progress.py_circular_progress import PyCircularProgress
 
 from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
 
@@ -98,7 +101,6 @@ class MainWindow(QMainWindow):
 
         ## ==> SET UI DEFINITIONS
         UIFunctions.uiDefinitions(self)
-
     
 
         ## SHOW ==> MAIN WINDOW
@@ -408,6 +410,7 @@ class MainWindow(QMainWindow):
         pressed = slider_pressed
         difference = released - pressed
         print('difference', difference)
+        
         spinValue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
         if difference > 0:
             spinValue += difference
@@ -450,7 +453,7 @@ class SplashScreen(QMainWindow):
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.progress)
         # TIMER IN MILLISECONDS
-        self.timer.start(50)
+        self.timer.start(75)
 
         # CHANGE DESCRIPTION
 
@@ -471,50 +474,66 @@ class SplashScreen(QMainWindow):
         ### Spiral Progress BAR
 
         # Setting the Minimum value 
-        self.ui.progressBar_2.spb_setMinimum((0, 0, 0))
+        # self.ui.progressBar_2.spb_setMinimum((0, 0, 0))
 
-        # Setting the maximum value 
-        self.ui.progressBar_2.spb_setMaximum((120, 220, 320))
+        # # Setting the maximum value 
+        # self.ui.progressBar_2.spb_setMaximum((120, 220, 320))
 
-        # Set progress value
-        x = 100
-        self.ui.progressBar_2.spb_setValue((x, x*2, x*3))
+        # # Set progress value
+        # x = 100
+        # self.ui.progressBar_2.spb_setValue((x, x*2, x*3))
 
-        #Set Progress Color
-        self.ui.progressBar_2.spb_lineColor(((233, 152, 6), (6, 201, 233), (233, 6, 88)))
+        # #Set Progress Color
+        # self.ui.progressBar_2.spb_lineColor(((233, 152, 6), (6, 201, 233), (233, 6, 88)))
 
-        # Setting the initial position of the progress bar
-        self.ui.progressBar_2.spb_setInitialPos(('West', 'South', 'East'))
+        # # Setting the initial position of the progress bar
+        # self.ui.progressBar_2.spb_setInitialPos(('West', 'South', 'East'))
 
-        # Setting the direction of Progress of ProgressBar
-        self.ui.progressBar_2.spb_setDirection(('Clockwise', 'Clockwise', 'Clockwise'))
+        # # Setting the direction of Progress of ProgressBar
+        # self.ui.progressBar_2.spb_setDirection(('Clockwise', 'Clockwise', 'Clockwise'))
 
-        # Set line width of Progressbar
-        self.ui.progressBar_2.spb_lineWidth(4)
+        # # Set line width of Progressbar
+        # self.ui.progressBar_2.spb_lineWidth(4)
 
-        # Setting the gap width between the progress Bar
-        self.ui.progressBar_2.spb_setGap(4)
+        # # Setting the gap width between the progress Bar
+        # self.ui.progressBar_2.spb_setGap(4)
 
-        # Set line Style
-        self.ui.progressBar_2.spb_lineStyle(('SolidLine', 'SolidLine', 'SolidLine'))
+        # # Set line Style
+        # self.ui.progressBar_2.spb_lineStyle(('SolidLine', 'SolidLine', 'SolidLine'))
 
-        # Set end cap to progress Bar
-        self.ui.progressBar_2.spb_lineCap(('RoundCap','RoundCap', 'RoundCap'))
+        # # Set end cap to progress Bar
+        # self.ui.progressBar_2.spb_lineCap(('RoundCap','RoundCap', 'RoundCap'))
 
-        # Hide the path followed by the progress Bar
-        self.ui.progressBar_2.spb_setPathHidden(True)
+        # # Hide the path followed by the progress Bar
+        # self.ui.progressBar_2.spb_setPathHidden(True)
+
+        # Defining Spin Loader
+        self.circular_progress_1 = PyCircularProgress(
+            value=45,
+            progress_width=4,
+            font_size=14,
+            animate=True,
+            speed=50,
+            try_me=True,
+            
+        )
+        self.circular_progress_1.setMinimumSize(self.circular_progress_1.width, self.circular_progress_1.height)
+        self.circular_progress_1.setMinimumSize(QSize(45, 40))
+        self.circular_progress_1.setMaximumSize(QSize(45, 40))
+
+        self.ui.horizontalLayout_2.addWidget(self.circular_progress_1, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         self.show()
         ## ==> END ##
 
-        self.timer_2 = QtCore.QTimer() 
-        self.timer_2.timeout.connect(self.progress_2)
-        self.timer_2.start(5)
+        # self.timer_2 = QtCore.QTimer() 
+        # self.timer_2.timeout.connect(self.progress_2)
+        # self.timer_2.start(5)
 
         # Set all the progress bar to zero on start
-        QtCore.QTimer.singleShot(0, lambda: self.ui.progressBar_2.spb_setValue((0, 0, 0)))
+        # QtCore.QTimer.singleShot(0, lambda: self.ui.progressBar_2.spb_setValue((0, 0, 0)))
 
     ## ==> APP FUNCTIONS
     ########################################################################
@@ -540,18 +559,18 @@ class SplashScreen(QMainWindow):
         # INCREASE COUNTER
         counter += 1  
 
-    def progress_2(self):
-            global progress_val
-            # Set Progress Values
-            self.ui.progressBar_2.spb_setValue((progress_val, progress_val*2, progress_val*3))
+    # def progress_2(self):
+    #         global progress_val
+    #         # Set Progress Values
+    #         self.ui.progressBar_2.spb_setValue((progress_val, progress_val*2, progress_val*3))
 
-            # Reset Progresses if the maximum value is reached
-            if progress_val > 120:
-                progress_val = 0
+    #         # Reset Progresses if the maximum value is reached
+    #         if progress_val > 120:
+    #             progress_val = 0
 
-            # Increase progress value by one, every 60ms
+    #         # Increase progress value by one, every 60ms
 
-            progress_val += 1
+    #         progress_val += 1
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)

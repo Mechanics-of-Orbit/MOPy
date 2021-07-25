@@ -104,12 +104,14 @@ class Ui_SplashScreen(object):
         self.ProgressBarContainer.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.ProgressBarContainer)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.progressBar_2 = spiralProgressBar(self.ProgressBarContainer)
-        self.progressBar_2.setObjectName(u"progressBar_2")
-        self.progressBar_2.setMinimumSize(QSize(45, 40))
-        self.progressBar_2.setMaximumSize(QSize(45, 40))
 
-        self.horizontalLayout_2.addWidget(self.progressBar_2, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        
+        # self.progressBar_2 = spiralProgressBar(self.ProgressBarContainer)
+        # self.progressBar_2.setObjectName(u"progressBar_2")
+        # self.progressBar_2.setMinimumSize(QSize(45, 40))
+        # self.progressBar_2.setMaximumSize(QSize(45, 40))
+
+        # self.horizontalLayout_2.addWidget(self.progressBar_2, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.loading_lbl = QLabel(self.dropShadowFrame)
         self.loading_lbl.setObjectName(u"loading_lbl")
