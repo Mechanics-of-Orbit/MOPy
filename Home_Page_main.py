@@ -1,48 +1,31 @@
-
-from sys import path
-import sys
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
-import sqlite3
+
+import sys
 from math import *
-from Functions.Sections.soi import SoI
-
-from jsontrial import fun_fact
-
+from sys import path
 from numpy.linalg import norm
 from numpy import dot, pi, cross, multiply as multi
 from math import acos
 
-from UI_Functions.ui_splash_screen import Ui_SplashScreen
-
-# Importing custom spin loader
-#from UI_Functions.Circular_Progress import PyCircularProgress
-
+# IMPORT FUNCTIONS 
+from jsontrial import fun_fact
 from UI_Functions.Circular_Progress.py_circular_progress import PyCircularProgress
-
+from UI_Functions.ui_splash_screen import Ui_SplashScreen
 from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
-
 from Functions.SOI3D import SOI
-
-#from SOI3Dviz import SOI
-
+from Functions.Sections.soi import SoI
 from Functions.Sections.CoOE import Calculate
-
 from Functions.Sections.DB.call_database import call,raund
-
-# GUI FILE
 from UI_Functions.Home_Page import Ui_MainWindow
-
-# IMPORT FUNCTIONS
 from UI_Functions.Home_Page_functions import *
 
 path.append('..\Functions\Sections')
 
 # GLOBALS
 counter = 0
-progress_val = 0
 slider_pressed = 0
 class MainWindow(QMainWindow):
     I = [1, 0, 0]
@@ -125,7 +108,10 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidget.setCurrentIndex(3)
             self.ui.Orbit_type_stack.setCurrentIndex(0)
 
+#########################################################################################################################
+
     # vpco go button(selecting type of input)
+
     def vpco_go_btn(self):
         selct_body = self.ui.vpco_major_body.currentIndex()
 
@@ -255,7 +241,10 @@ class MainWindow(QMainWindow):
         self.ui.Orbit_type_stack.setCurrentIndex(0)
         self.ui.Error_parabola.setText("")
     
+#########################################################################################################################
+
     # COE n AOE Calculation
+    
     def coeNaoe(self):
         Ri = self.ui.Ri_coe_n_aoe.text()
         Rj = self.ui.Rj_coe_n_aoe.text()
@@ -326,7 +315,7 @@ class MainWindow(QMainWindow):
         self.ui.tru_ano_CoOE_lbl.setText(keys[2])
         self.ui.tru_ana_coe_n_aoe.setText(str(round(values[2] * (180/pi), 4))) 
 
-        
+#########################################################################################################################        
 
     # SOI
     def SEARCH(self):
@@ -360,15 +349,17 @@ class MainWindow(QMainWindow):
         graph3d = SOI(planet_name,rSOI,r_soimb)
         graph3d.run()
             
-
+#########################################################################################################################
   
-    
     # Home_btn
+
     def meth_Home_btn(self):
         self.ui.stackedWidget.setCurrentIndex(0)
 
+#########################################################################################################################
 
     # Julian Day Calculation
+
     def calendar_time(self):
         selected_date = self.ui.calendarWidget.selectedDate()
         year = selected_date.year()
@@ -395,22 +386,20 @@ class MainWindow(QMainWindow):
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
         
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
+
+#########################################################################################################################
     
+    # Slider pressed and released functions for sliders in the VPCO toggle menu
+
     def slider_pressed(self):
-        #current_spinvalue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
         pressed = self.ui.semi_major_axis_toggle_menu_slider.value()
-        print('pressed',pressed)
-        # self.ui.label_pressed.setText(str(pressed))
         global slider_pressed
         slider_pressed = pressed
     
     def slider_released(self):
         released  = self.ui.semi_major_axis_toggle_menu_slider.value()
-        print('released',released)
         pressed = slider_pressed
         difference = released - pressed
-        print('difference', difference)
-        
         spinValue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
         if difference > 0:
             spinValue += difference
@@ -420,8 +409,7 @@ class MainWindow(QMainWindow):
             print(spinValue)
             self.ui.semi_major_axis_toggle_menu_spinbox.setValue(spinValue)
 
-        
-        
+#########################################################################################################################
        
 
     
@@ -465,7 +453,10 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(2500, lambda: self.ui.app_description_lbl.setText("<strong>Pulling</strong> Resources"))
         QtCore.QTimer.singleShot(3500, lambda: self.ui.app_description_lbl.setText("<strong>Arranging</strong> User Interface "))
         QtCore.QTimer.singleShot(4700, lambda: self.ui.app_description_lbl.setText("Ready to <strong>Takeoff</strong> "))
-        QtCore.QTimer.singleShot(6000, lambda: self.ui.app_description_lbl.setText(" "))
+        QtCore.QTimer.singleShot(6000, lambda: self.ui.app_description_lbl.setText("3"))
+        QtCore.QTimer.singleShot(6600, lambda: self.ui.app_description_lbl.setText("2"))
+        QtCore.QTimer.singleShot(7200, lambda: self.ui.app_description_lbl.setText("1"))
+        QtCore.QTimer.singleShot(7600, lambda: self.ui.app_description_lbl.setText("<strong>Lift</strong> Off"))
 
         # Fun Facts
         
@@ -511,15 +502,14 @@ class SplashScreen(QMainWindow):
         self.circular_progress_1 = PyCircularProgress(
             value=45,
             progress_width=4,
-            font_size=14,
             animate=True,
-            speed=50,
+            speed=120,
             try_me=True,
             
         )
         self.circular_progress_1.setMinimumSize(self.circular_progress_1.width, self.circular_progress_1.height)
-        self.circular_progress_1.setMinimumSize(QSize(45, 40))
-        self.circular_progress_1.setMaximumSize(QSize(45, 40))
+        self.circular_progress_1.setMinimumSize(QSize(60, 60))
+        self.circular_progress_1.setMaximumSize(QSize(60, 60))
 
         self.ui.horizontalLayout_2.addWidget(self.circular_progress_1, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenKAvmtp.ui'
+## Form generated from reading UI file 'splash_screenqynhgB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -14,8 +14,6 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
     QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
     QRadialGradient)
 from PySide2.QtWidgets import *
-
-from PySide2extn.SpiralProgressBar import spiralProgressBar
 
 
 class Ui_SplashScreen(object):
@@ -52,7 +50,7 @@ class Ui_SplashScreen(object):
         self.app_description_lbl.setAlignment(Qt.AlignCenter)
         self.progressBar = QProgressBar(self.dropShadowFrame)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setGeometry(QRect(50, 370, 731, 23))
+        self.progressBar.setGeometry(QRect(50, 360, 731, 23))
         self.progressBar.setStyleSheet(u"QProgressBar {\n"
 "	\n"
 "	background-color: rgb(98, 114, 164,200);\n"
@@ -98,29 +96,21 @@ class Ui_SplashScreen(object):
 
         self.ProgressBarContainer = QFrame(self.dropShadowFrame)
         self.ProgressBarContainer.setObjectName(u"ProgressBarContainer")
-        self.ProgressBarContainer.setGeometry(QRect(10, 260, 811, 61))
+        self.ProgressBarContainer.setGeometry(QRect(10, 250, 811, 61))
         self.ProgressBarContainer.setStyleSheet(u"background:transparent")
         self.ProgressBarContainer.setFrameShape(QFrame.StyledPanel)
         self.ProgressBarContainer.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.ProgressBarContainer)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-
-        
-        # self.progressBar_2 = spiralProgressBar(self.ProgressBarContainer)
-        # self.progressBar_2.setObjectName(u"progressBar_2")
-        # self.progressBar_2.setMinimumSize(QSize(45, 40))
-        # self.progressBar_2.setMaximumSize(QSize(45, 40))
-
-        # self.horizontalLayout_2.addWidget(self.progressBar_2, 0, Qt.AlignHCenter|Qt.AlignVCenter)
-
         self.loading_lbl = QLabel(self.dropShadowFrame)
         self.loading_lbl.setObjectName(u"loading_lbl")
         self.loading_lbl.setGeometry(QRect(26, 400, 781, 41))
         font2 = QFont()
-        font2.setPointSize(10)
+        font2.setPointSize(12)
         self.loading_lbl.setFont(font2)
         self.loading_lbl.setStyleSheet(u"background:transparent;")
         self.loading_lbl.setAlignment(Qt.AlignCenter)
+        self.loading_lbl.setWordWrap(True)
 
         self.verticalLayout.addWidget(self.dropShadowFrame)
 

@@ -51,8 +51,8 @@ class PyCircularProgress(QMainWindow):
         QMainWindow.__init__(self)
 
         # CUSTOM PROPERTIES
-        self.width = 40
-        self.height = 40
+        self.width = 50
+        self.height = 50
         self.value = value
         self.progress_width = progress_width
         self.progress_rounded_cap = is_rounded
@@ -88,7 +88,7 @@ class PyCircularProgress(QMainWindow):
         if self.animate:
             self.timer = QTimer(self)
             self.timer.setSingleShot(False)
-            #self.timer.setInterval(speed)
+            self.timer.setInterval(speed)
             self.timer.timeout.connect(self.idle_move)
             self.timer.start(25)
 
@@ -117,15 +117,15 @@ class PyCircularProgress(QMainWindow):
         self.turning += 1
         if self.plus:
             if self.smol > 20:
-                self.size_idle += 1
+                self.size_idle += 2
             elif self.smol == 20:
-                self.size_idle += 1
-                self.smol += 1
+                self.size_idle += 2
+                self.smol += 2
             else:
                 self.smol += 1
         else:
-            self.size_idle -= 1
-            self.turning += 1
+            self.size_idle -= 2
+            self.turning += 2
         self.repaint()
 
     # ADD DROPSHADOW

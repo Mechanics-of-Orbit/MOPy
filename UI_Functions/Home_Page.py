@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageqeRKqo.ui'
+## Form generated from reading UI file 'Home_PageWoFKFF.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -2117,58 +2117,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_24.addWidget(self.eccentricity_toggle_menu_lbl_2)
 
-        self.inclination_toggle_menu_lbl_2 = QLabel(self.page)
-        self.inclination_toggle_menu_lbl_2.setObjectName(u"inclination_toggle_menu_lbl_2")
-        self.inclination_toggle_menu_lbl_2.setFont(font7)
-        self.inclination_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.inclination_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_24.addWidget(self.inclination_toggle_menu_lbl_2)
-
-        self.RAAN_toggle_menu_lbl_2 = QLabel(self.page)
-        self.RAAN_toggle_menu_lbl_2.setObjectName(u"RAAN_toggle_menu_lbl_2")
-        self.RAAN_toggle_menu_lbl_2.setFont(font7)
-        self.RAAN_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.RAAN_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_24.addWidget(self.RAAN_toggle_menu_lbl_2)
-
-        self.arg_of_per_toggle_menu_lbl_2 = QLabel(self.page)
-        self.arg_of_per_toggle_menu_lbl_2.setObjectName(u"arg_of_per_toggle_menu_lbl_2")
-        self.arg_of_per_toggle_menu_lbl_2.setFont(font7)
-        self.arg_of_per_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.arg_of_per_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_24.addWidget(self.arg_of_per_toggle_menu_lbl_2)
-
-        self.tru_ano_toggle_menu_lbl_2 = QLabel(self.page)
-        self.tru_ano_toggle_menu_lbl_2.setObjectName(u"tru_ano_toggle_menu_lbl_2")
-        self.tru_ano_toggle_menu_lbl_2.setFont(font7)
-        self.tru_ano_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.tru_ano_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_24.addWidget(self.tru_ano_toggle_menu_lbl_2)
-
         self.stackedWidget_2.addWidget(self.page)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
@@ -2258,6 +2206,13 @@ class Ui_MainWindow(object):
 
         self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_27)
 
+        self.dial = QDial(self.page_2)
+        self.dial.setObjectName(u"dial")
+        self.dial.setMinimumSize(QSize(75, 75))
+        self.dial.setMaximumSize(QSize(75, 75))
+
+        self.Toggle_frame_Menu_layout_holder.addWidget(self.dial)
+
         self.horizontalLayout_35 = QHBoxLayout()
         self.horizontalLayout_35.setSpacing(0)
         self.horizontalLayout_35.setObjectName(u"horizontalLayout_35")
@@ -2341,6 +2296,13 @@ class Ui_MainWindow(object):
 
         self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_28)
 
+        self.dial_2 = QDial(self.page_2)
+        self.dial_2.setObjectName(u"dial_2")
+        self.dial_2.setMinimumSize(QSize(75, 75))
+        self.dial_2.setMaximumSize(QSize(75, 75))
+
+        self.Toggle_frame_Menu_layout_holder.addWidget(self.dial_2)
+
         self.horizontalLayout_34 = QHBoxLayout()
         self.horizontalLayout_34.setSpacing(0)
         self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
@@ -2357,334 +2319,6 @@ class Ui_MainWindow(object):
 
 
         self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_34)
-
-        self.horizontalLayout_29 = QHBoxLayout()
-        self.horizontalLayout_29.setSpacing(0)
-        self.horizontalLayout_29.setObjectName(u"horizontalLayout_29")
-        self.inclination_toggle_menu_lbl = QLabel(self.page_2)
-        self.inclination_toggle_menu_lbl.setObjectName(u"inclination_toggle_menu_lbl")
-        self.inclination_toggle_menu_lbl.setFont(font7)
-        self.inclination_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.inclination_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_29.addWidget(self.inclination_toggle_menu_lbl)
-
-        self.inclination_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
-        self.inclination_toggle_menu_spinbox.setObjectName(u"inclination_toggle_menu_spinbox")
-        self.inclination_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
-        self.inclination_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
-        self.inclination_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
-"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;  	\n"
-"    }\n"
-"\n"
-" \n"
-"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
-"        subcontrol-position:left;\n"
-"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"     /*Button press style*/\n"
-"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(:/ico/pushed_right.png);\n"
-"        width: 12px;\n"
-"        height: 20px;       \n"
-"    }\n"
-"      \n"
-"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
-                        "ton:pressed{\n"
-"        subcontrol-position:left;\n"
-"        image: url(:/ico/pushed_left.png);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"QDoubleSpinBox{\n"
-"border: 2px solid black;\n"
-"border-radius: 8px;\n"
-"}")
-        self.inclination_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.inclination_toggle_menu_spinbox.setMinimum(-360.000000000000000)
-        self.inclination_toggle_menu_spinbox.setMaximum(360.000000000000000)
-
-        self.horizontalLayout_29.addWidget(self.inclination_toggle_menu_spinbox)
-
-
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_29)
-
-        self.horizontalLayout_33 = QHBoxLayout()
-        self.horizontalLayout_33.setSpacing(0)
-        self.horizontalLayout_33.setObjectName(u"horizontalLayout_33")
-        self.inclination_toggle_menu_slider = QSlider(self.page_2)
-        self.inclination_toggle_menu_slider.setObjectName(u"inclination_toggle_menu_slider")
-        self.inclination_toggle_menu_slider.setStyleSheet(u"")
-        self.inclination_toggle_menu_slider.setMaximum(360)
-        self.inclination_toggle_menu_slider.setSliderPosition(180)
-        self.inclination_toggle_menu_slider.setOrientation(Qt.Horizontal)
-        self.inclination_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.inclination_toggle_menu_slider.setTickInterval(36)
-
-        self.horizontalLayout_33.addWidget(self.inclination_toggle_menu_slider)
-
-
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_33)
-
-        self.horizontalLayout_30 = QHBoxLayout()
-        self.horizontalLayout_30.setSpacing(0)
-        self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
-        self.RAAN_toggle_menu_lbl = QLabel(self.page_2)
-        self.RAAN_toggle_menu_lbl.setObjectName(u"RAAN_toggle_menu_lbl")
-        self.RAAN_toggle_menu_lbl.setFont(font7)
-        self.RAAN_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.RAAN_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_30.addWidget(self.RAAN_toggle_menu_lbl)
-
-        self.RAAN_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
-        self.RAAN_toggle_menu_spinbox.setObjectName(u"RAAN_toggle_menu_spinbox")
-        self.RAAN_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
-        self.RAAN_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
-        self.RAAN_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
-"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;  	\n"
-"    }\n"
-"\n"
-" \n"
-"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
-"        subcontrol-position:left;\n"
-"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"     /*Button press style*/\n"
-"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(:/ico/pushed_right.png);\n"
-"        width: 12px;\n"
-"        height: 20px;       \n"
-"    }\n"
-"      \n"
-"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
-                        "ton:pressed{\n"
-"        subcontrol-position:left;\n"
-"        image: url(:/ico/pushed_left.png);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"QDoubleSpinBox{\n"
-"border: 2px solid black;\n"
-"border-radius: 8px;\n"
-"}")
-        self.RAAN_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.RAAN_toggle_menu_spinbox.setMinimum(-360.000000000000000)
-        self.RAAN_toggle_menu_spinbox.setMaximum(360.000000000000000)
-
-        self.horizontalLayout_30.addWidget(self.RAAN_toggle_menu_spinbox)
-
-
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_30)
-
-        self.horizontalLayout_45 = QHBoxLayout()
-        self.horizontalLayout_45.setSpacing(0)
-        self.horizontalLayout_45.setObjectName(u"horizontalLayout_45")
-        self.RAAN_toggle_menu_slider = QSlider(self.page_2)
-        self.RAAN_toggle_menu_slider.setObjectName(u"RAAN_toggle_menu_slider")
-        self.RAAN_toggle_menu_slider.setStyleSheet(u"")
-        self.RAAN_toggle_menu_slider.setMaximum(360)
-        self.RAAN_toggle_menu_slider.setSliderPosition(180)
-        self.RAAN_toggle_menu_slider.setOrientation(Qt.Horizontal)
-        self.RAAN_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.RAAN_toggle_menu_slider.setTickInterval(36)
-
-        self.horizontalLayout_45.addWidget(self.RAAN_toggle_menu_slider)
-
-
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_45)
-
-        self.horizontalLayout_31 = QHBoxLayout()
-        self.horizontalLayout_31.setSpacing(0)
-        self.horizontalLayout_31.setObjectName(u"horizontalLayout_31")
-        self.arg_of_per_toggle_menu_lbl = QLabel(self.page_2)
-        self.arg_of_per_toggle_menu_lbl.setObjectName(u"arg_of_per_toggle_menu_lbl")
-        self.arg_of_per_toggle_menu_lbl.setFont(font7)
-        self.arg_of_per_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.arg_of_per_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_31.addWidget(self.arg_of_per_toggle_menu_lbl)
-
-        self.arg_of_per_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
-        self.arg_of_per_toggle_menu_spinbox.setObjectName(u"arg_of_per_toggle_menu_spinbox")
-        self.arg_of_per_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
-        self.arg_of_per_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
-        self.arg_of_per_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
-"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;  	\n"
-"    }\n"
-"\n"
-" \n"
-"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
-"        subcontrol-position:left;\n"
-"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"     /*Button press style*/\n"
-"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(:/ico/pushed_right.png);\n"
-"        width: 12px;\n"
-"        height: 20px;       \n"
-"    }\n"
-"      \n"
-"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
-                        "ton:pressed{\n"
-"        subcontrol-position:left;\n"
-"        image: url(:/ico/pushed_left.png);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"QDoubleSpinBox{\n"
-"border: 2px solid black;\n"
-"border-radius: 8px;\n"
-"}")
-        self.arg_of_per_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.arg_of_per_toggle_menu_spinbox.setMinimum(-360.000000000000000)
-        self.arg_of_per_toggle_menu_spinbox.setMaximum(360.000000000000000)
-
-        self.horizontalLayout_31.addWidget(self.arg_of_per_toggle_menu_spinbox)
-
-
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_31)
-
-        self.horizontalLayout_47 = QHBoxLayout()
-        self.horizontalLayout_47.setSpacing(0)
-        self.horizontalLayout_47.setObjectName(u"horizontalLayout_47")
-        self.arg_of_per_toggle_menu_slider = QSlider(self.page_2)
-        self.arg_of_per_toggle_menu_slider.setObjectName(u"arg_of_per_toggle_menu_slider")
-        self.arg_of_per_toggle_menu_slider.setStyleSheet(u"")
-        self.arg_of_per_toggle_menu_slider.setMaximum(360)
-        self.arg_of_per_toggle_menu_slider.setSliderPosition(180)
-        self.arg_of_per_toggle_menu_slider.setOrientation(Qt.Horizontal)
-        self.arg_of_per_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.arg_of_per_toggle_menu_slider.setTickInterval(36)
-
-        self.horizontalLayout_47.addWidget(self.arg_of_per_toggle_menu_slider)
-
-
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_47)
-
-        self.horizontalLayout_32 = QHBoxLayout()
-        self.horizontalLayout_32.setSpacing(0)
-        self.horizontalLayout_32.setObjectName(u"horizontalLayout_32")
-        self.tru_ano_toggle_menu_lbl = QLabel(self.page_2)
-        self.tru_ano_toggle_menu_lbl.setObjectName(u"tru_ano_toggle_menu_lbl")
-        self.tru_ano_toggle_menu_lbl.setFont(font7)
-        self.tru_ano_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.tru_ano_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_32.addWidget(self.tru_ano_toggle_menu_lbl)
-
-        self.tru_ano_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
-        self.tru_ano_toggle_menu_spinbox.setObjectName(u"tru_ano_toggle_menu_spinbox")
-        self.tru_ano_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
-        self.tru_ano_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
-        self.tru_ano_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
-"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;  	\n"
-"    }\n"
-"\n"
-" \n"
-"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
-"        subcontrol-position:left;\n"
-"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"     /*Button press style*/\n"
-"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
-"        subcontrol-position:right;\n"
-"        image: url(:/ico/pushed_right.png);\n"
-"        width: 12px;\n"
-"        height: 20px;       \n"
-"    }\n"
-"      \n"
-"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
-                        "ton:pressed{\n"
-"        subcontrol-position:left;\n"
-"        image: url(:/ico/pushed_left.png);\n"
-"        width: 12px;\n"
-"        height: 20px;\n"
-"    }\n"
-"\n"
-"QDoubleSpinBox{\n"
-"border: 2px solid black;\n"
-"border-radius: 8px;\n"
-"}")
-        self.tru_ano_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
-        self.tru_ano_toggle_menu_spinbox.setMinimum(-360.000000000000000)
-        self.tru_ano_toggle_menu_spinbox.setMaximum(360.000000000000000)
-
-        self.horizontalLayout_32.addWidget(self.tru_ano_toggle_menu_spinbox)
-
-
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_32)
-
-        self.horizontalLayout_46 = QHBoxLayout()
-        self.horizontalLayout_46.setSpacing(0)
-        self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
-        self.tru_ano_toggle_menu_slider = QSlider(self.page_2)
-        self.tru_ano_toggle_menu_slider.setObjectName(u"tru_ano_toggle_menu_slider")
-        self.tru_ano_toggle_menu_slider.setStyleSheet(u"")
-        self.tru_ano_toggle_menu_slider.setMaximum(360)
-        self.tru_ano_toggle_menu_slider.setSliderPosition(180)
-        self.tru_ano_toggle_menu_slider.setOrientation(Qt.Horizontal)
-        self.tru_ano_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.tru_ano_toggle_menu_slider.setTickInterval(36)
-
-        self.horizontalLayout_46.addWidget(self.tru_ano_toggle_menu_slider)
-
-
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_46)
 
 
         self.horizontalLayout_26.addLayout(self.Toggle_frame_Menu_layout_holder)
@@ -3217,6 +2851,306 @@ class Ui_MainWindow(object):
         self.label_132.setStyleSheet(u"border:none;\n"
 "color:white;")
         self.label_132.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.tru_ano_toggle_menu_slider = QSlider(self.a_e_result_screen)
+        self.tru_ano_toggle_menu_slider.setObjectName(u"tru_ano_toggle_menu_slider")
+        self.tru_ano_toggle_menu_slider.setGeometry(QRect(30, 350, 26, 27))
+        self.tru_ano_toggle_menu_slider.setStyleSheet(u"")
+        self.tru_ano_toggle_menu_slider.setMaximum(360)
+        self.tru_ano_toggle_menu_slider.setSliderPosition(180)
+        self.tru_ano_toggle_menu_slider.setOrientation(Qt.Horizontal)
+        self.tru_ano_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
+        self.tru_ano_toggle_menu_slider.setTickInterval(36)
+        self.arg_of_per_toggle_menu_slider = QSlider(self.a_e_result_screen)
+        self.arg_of_per_toggle_menu_slider.setObjectName(u"arg_of_per_toggle_menu_slider")
+        self.arg_of_per_toggle_menu_slider.setGeometry(QRect(30, 267, 26, 27))
+        self.arg_of_per_toggle_menu_slider.setStyleSheet(u"")
+        self.arg_of_per_toggle_menu_slider.setMaximum(360)
+        self.arg_of_per_toggle_menu_slider.setSliderPosition(180)
+        self.arg_of_per_toggle_menu_slider.setOrientation(Qt.Horizontal)
+        self.arg_of_per_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
+        self.arg_of_per_toggle_menu_slider.setTickInterval(36)
+        self.tru_ano_toggle_menu_spinbox = QDoubleSpinBox(self.a_e_result_screen)
+        self.tru_ano_toggle_menu_spinbox.setObjectName(u"tru_ano_toggle_menu_spinbox")
+        self.tru_ano_toggle_menu_spinbox.setGeometry(QRect(39, 312, 100, 20))
+        self.tru_ano_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.tru_ano_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
+        self.tru_ano_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
+"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;  	\n"
+"    }\n"
+"\n"
+" \n"
+"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
+"        subcontrol-position:left;\n"
+"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"     /*Button press style*/\n"
+"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(:/ico/pushed_right.png);\n"
+"        width: 12px;\n"
+"        height: 20px;       \n"
+"    }\n"
+"      \n"
+"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
+                        "ton:pressed{\n"
+"        subcontrol-position:left;\n"
+"        image: url(:/ico/pushed_left.png);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"QDoubleSpinBox{\n"
+"border: 2px solid black;\n"
+"border-radius: 8px;\n"
+"}")
+        self.tru_ano_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
+        self.tru_ano_toggle_menu_spinbox.setMinimum(-360.000000000000000)
+        self.tru_ano_toggle_menu_spinbox.setMaximum(360.000000000000000)
+        self.RAAN_toggle_menu_lbl = QLabel(self.a_e_result_screen)
+        self.RAAN_toggle_menu_lbl.setObjectName(u"RAAN_toggle_menu_lbl")
+        self.RAAN_toggle_menu_lbl.setGeometry(QRect(30, 136, 12, 40))
+        self.RAAN_toggle_menu_lbl.setFont(font7)
+        self.RAAN_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.RAAN_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
+        self.inclination_toggle_menu_slider = QSlider(self.a_e_result_screen)
+        self.inclination_toggle_menu_slider.setObjectName(u"inclination_toggle_menu_slider")
+        self.inclination_toggle_menu_slider.setGeometry(QRect(30, 100, 26, 27))
+        self.inclination_toggle_menu_slider.setStyleSheet(u"")
+        self.inclination_toggle_menu_slider.setMaximum(360)
+        self.inclination_toggle_menu_slider.setSliderPosition(180)
+        self.inclination_toggle_menu_slider.setOrientation(Qt.Horizontal)
+        self.inclination_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
+        self.inclination_toggle_menu_slider.setTickInterval(36)
+        self.arg_of_per_toggle_menu_lbl = QLabel(self.a_e_result_screen)
+        self.arg_of_per_toggle_menu_lbl.setObjectName(u"arg_of_per_toggle_menu_lbl")
+        self.arg_of_per_toggle_menu_lbl.setGeometry(QRect(30, 219, 13, 40))
+        self.arg_of_per_toggle_menu_lbl.setFont(font7)
+        self.arg_of_per_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.arg_of_per_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
+        self.RAAN_toggle_menu_slider = QSlider(self.a_e_result_screen)
+        self.RAAN_toggle_menu_slider.setObjectName(u"RAAN_toggle_menu_slider")
+        self.RAAN_toggle_menu_slider.setGeometry(QRect(30, 184, 26, 27))
+        self.RAAN_toggle_menu_slider.setStyleSheet(u"")
+        self.RAAN_toggle_menu_slider.setMaximum(360)
+        self.RAAN_toggle_menu_slider.setSliderPosition(180)
+        self.RAAN_toggle_menu_slider.setOrientation(Qt.Horizontal)
+        self.RAAN_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
+        self.RAAN_toggle_menu_slider.setTickInterval(36)
+        self.inclination_toggle_menu_spinbox = QDoubleSpinBox(self.a_e_result_screen)
+        self.inclination_toggle_menu_spinbox.setObjectName(u"inclination_toggle_menu_spinbox")
+        self.inclination_toggle_menu_spinbox.setGeometry(QRect(35, 62, 100, 20))
+        self.inclination_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.inclination_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
+        self.inclination_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
+"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;  	\n"
+"    }\n"
+"\n"
+" \n"
+"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
+"        subcontrol-position:left;\n"
+"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"     /*Button press style*/\n"
+"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(:/ico/pushed_right.png);\n"
+"        width: 12px;\n"
+"        height: 20px;       \n"
+"    }\n"
+"      \n"
+"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
+                        "ton:pressed{\n"
+"        subcontrol-position:left;\n"
+"        image: url(:/ico/pushed_left.png);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"QDoubleSpinBox{\n"
+"border: 2px solid black;\n"
+"border-radius: 8px;\n"
+"}")
+        self.inclination_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
+        self.inclination_toggle_menu_spinbox.setMinimum(-360.000000000000000)
+        self.inclination_toggle_menu_spinbox.setMaximum(360.000000000000000)
+        self.inclination_toggle_menu_lbl = QLabel(self.a_e_result_screen)
+        self.inclination_toggle_menu_lbl.setObjectName(u"inclination_toggle_menu_lbl")
+        self.inclination_toggle_menu_lbl.setGeometry(QRect(30, 53, 5, 39))
+        self.inclination_toggle_menu_lbl.setFont(font7)
+        self.inclination_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.inclination_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
+        self.arg_of_per_toggle_menu_spinbox = QDoubleSpinBox(self.a_e_result_screen)
+        self.arg_of_per_toggle_menu_spinbox.setObjectName(u"arg_of_per_toggle_menu_spinbox")
+        self.arg_of_per_toggle_menu_spinbox.setGeometry(QRect(43, 229, 100, 20))
+        self.arg_of_per_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.arg_of_per_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
+        self.arg_of_per_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
+"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;  	\n"
+"    }\n"
+"\n"
+" \n"
+"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
+"        subcontrol-position:left;\n"
+"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"     /*Button press style*/\n"
+"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(:/ico/pushed_right.png);\n"
+"        width: 12px;\n"
+"        height: 20px;       \n"
+"    }\n"
+"      \n"
+"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
+                        "ton:pressed{\n"
+"        subcontrol-position:left;\n"
+"        image: url(:/ico/pushed_left.png);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"QDoubleSpinBox{\n"
+"border: 2px solid black;\n"
+"border-radius: 8px;\n"
+"}")
+        self.arg_of_per_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
+        self.arg_of_per_toggle_menu_spinbox.setMinimum(-360.000000000000000)
+        self.arg_of_per_toggle_menu_spinbox.setMaximum(360.000000000000000)
+        self.RAAN_toggle_menu_spinbox = QDoubleSpinBox(self.a_e_result_screen)
+        self.RAAN_toggle_menu_spinbox.setObjectName(u"RAAN_toggle_menu_spinbox")
+        self.RAAN_toggle_menu_spinbox.setGeometry(QRect(42, 146, 100, 20))
+        self.RAAN_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
+        self.RAAN_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
+        self.RAAN_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
+"    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;  	\n"
+"    }\n"
+"\n"
+" \n"
+"    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
+"        subcontrol-position:left;\n"
+"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"     /*Button press style*/\n"
+"    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;\n"
+"        subcontrol-position:right;\n"
+"        image: url(:/ico/pushed_right.png);\n"
+"        width: 12px;\n"
+"        height: 20px;       \n"
+"    }\n"
+"      \n"
+"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
+                        "ton:pressed{\n"
+"        subcontrol-position:left;\n"
+"        image: url(:/ico/pushed_left.png);\n"
+"        width: 12px;\n"
+"        height: 20px;\n"
+"    }\n"
+"\n"
+"QDoubleSpinBox{\n"
+"border: 2px solid black;\n"
+"border-radius: 8px;\n"
+"}")
+        self.RAAN_toggle_menu_spinbox.setAlignment(Qt.AlignCenter)
+        self.RAAN_toggle_menu_spinbox.setMinimum(-360.000000000000000)
+        self.RAAN_toggle_menu_spinbox.setMaximum(360.000000000000000)
+        self.tru_ano_toggle_menu_lbl = QLabel(self.a_e_result_screen)
+        self.tru_ano_toggle_menu_lbl.setObjectName(u"tru_ano_toggle_menu_lbl")
+        self.tru_ano_toggle_menu_lbl.setGeometry(QRect(30, 303, 9, 39))
+        self.tru_ano_toggle_menu_lbl.setFont(font7)
+        self.tru_ano_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.tru_ano_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
+        self.tru_ano_toggle_menu_lbl_2 = QLabel(self.a_e_result_screen)
+        self.tru_ano_toggle_menu_lbl_2.setObjectName(u"tru_ano_toggle_menu_lbl_2")
+        self.tru_ano_toggle_menu_lbl_2.setGeometry(QRect(240, 360, 34, 84))
+        self.tru_ano_toggle_menu_lbl_2.setFont(font7)
+        self.tru_ano_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.tru_ano_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
+        self.inclination_toggle_menu_lbl_2 = QLabel(self.a_e_result_screen)
+        self.inclination_toggle_menu_lbl_2.setObjectName(u"inclination_toggle_menu_lbl_2")
+        self.inclination_toggle_menu_lbl_2.setGeometry(QRect(240, 109, 34, 84))
+        self.inclination_toggle_menu_lbl_2.setFont(font7)
+        self.inclination_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.inclination_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
+        self.arg_of_per_toggle_menu_lbl_2 = QLabel(self.a_e_result_screen)
+        self.arg_of_per_toggle_menu_lbl_2.setObjectName(u"arg_of_per_toggle_menu_lbl_2")
+        self.arg_of_per_toggle_menu_lbl_2.setGeometry(QRect(240, 277, 34, 83))
+        self.arg_of_per_toggle_menu_lbl_2.setFont(font7)
+        self.arg_of_per_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.arg_of_per_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
+        self.RAAN_toggle_menu_lbl_2 = QLabel(self.a_e_result_screen)
+        self.RAAN_toggle_menu_lbl_2.setObjectName(u"RAAN_toggle_menu_lbl_2")
+        self.RAAN_toggle_menu_lbl_2.setGeometry(QRect(240, 193, 34, 84))
+        self.RAAN_toggle_menu_lbl_2.setFont(font7)
+        self.RAAN_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.RAAN_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
         self.VPCO_output_stack.addWidget(self.a_e_result_screen)
         self.ra_rp_result_screen = QWidget()
         self.ra_rp_result_screen.setObjectName(u"ra_rp_result_screen")
@@ -6027,16 +5961,8 @@ class Ui_MainWindow(object):
         self.toggle_menu_btn.setText("")
         self.semi_major_axis_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"a", None))
         self.eccentricity_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"e", None))
-        self.inclination_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"i", None))
-        self.RAAN_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03a9", None))
-        self.arg_of_per_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03c9", None))
-        self.tru_ano_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03bd", None))
         self.semi_major_axis_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"a", None))
         self.eccentricity_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"e", None))
-        self.inclination_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"i", None))
-        self.RAAN_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"\u03a9", None))
-        self.arg_of_per_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"\u03c9", None))
-        self.tru_ano_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"\u03bd", None))
         self.label_title_5.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
 #if QT_CONFIG(tooltip)
         self.vpco_feature_back_btn.setToolTip(QCoreApplication.translate("MainWindow", u"VPCO Home", None))
@@ -6085,6 +6011,14 @@ class Ui_MainWindow(object):
         self.label_130.setText(QCoreApplication.translate("MainWindow", u"N", None))
         self.label_131.setText(QCoreApplication.translate("MainWindow", u"N", None))
         self.label_132.setText(QCoreApplication.translate("MainWindow", u"     Output:", None))
+        self.RAAN_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"\u03a9", None))
+        self.arg_of_per_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"\u03c9", None))
+        self.inclination_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"i", None))
+        self.tru_ano_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"\u03bd", None))
+        self.tru_ano_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03bd", None))
+        self.inclination_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"i", None))
+        self.arg_of_per_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03c9", None))
+        self.RAAN_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03a9", None))
         self.label_241.setText(QCoreApplication.translate("MainWindow", u"Velocity at Semi-latus Rectum", None))
         self.label_242.setText(QCoreApplication.translate("MainWindow", u"km", None))
         self.label_243.setText(QCoreApplication.translate("MainWindow", u"Gravitational Force at Periapsis", None))
