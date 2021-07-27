@@ -2,7 +2,8 @@ from math import *
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-import sqlite3
+from Sections.DB.call_database import call
+
 
 
 def plot(r):
@@ -30,11 +31,16 @@ def plot(r):
     plt.show()
 
 
-def SoI(MiB_mass, r_maj_to_min, MiB_radius):
-    MaB_mass = 1.989e30
+
+def SOICalc(MinorBody):
+    [MiB_mass, a] = call.data(MinorBody, 'mass')
+    [MiB_radius,a] = call.data(MinorBody, 'radius')
+    [MaB_mass, a] = call.data("Sun", 'mass')
+    [r_maj_to_min, a] = call.data(MinorBody, 'dist_frm_sun')
+    # print(MiB_mass, MiB_radius, MaB_mass, r_maj_to_min)
     rSOI = (r_maj_to_min*(MiB_mass/MaB_mass)**(2/5))
     return [rSOI, rSOI/MiB_radius]
 
 if __name__ == '__main__':  
-    [rSOI, rSOIMiB] = SoI(5.972e24, )
+    [rSOI, rSOIMiB] = SOICalc("Earth")
     print([rSOI, rSOIMiB])
