@@ -27,6 +27,9 @@ path.append('..\Functions\Sections')
 # GLOBALS
 counter = 0
 slider_pressed = 0
+
+a = 0
+
 class MainWindow(QMainWindow):
     I = [1, 0, 0]
     J = [0, 1, 0]
@@ -46,9 +49,18 @@ class MainWindow(QMainWindow):
         # Moving the window to the center of the screen
         self.move(center.x() - (self.width() * 0.5), center.y() - (self.height() * 0.5)) 
 
+
+        self.ui.Semi_dial.setNotchesVisible(1)
+        self.ui.ecce_dial.setNotchesVisible(1)
         
 
         # Hidding some of the widgets in VPCO output
+
+        self.ui.Semi_dial.hide()
+        self.ui.ecce_dial.hide()
+
+        self.ui.type_of_input_toggle.hide()
+
         self.ui.semi_major_axis_toggle_menu_spinbox.hide()
         self.ui.eccentricity_toggle_menu_spinbox.hide()
         self.ui.inclination_toggle_menu_spinbox.hide()
@@ -391,28 +403,66 @@ class MainWindow(QMainWindow):
     
     # Slider pressed and released functions for sliders in the VPCO toggle menu
 
-    def slider_pressed(self):
-        pressed = self.ui.semi_major_axis_toggle_menu_slider.value()
-        global slider_pressed
-        slider_pressed = pressed
-    
-    def slider_released(self):
-        released  = self.ui.semi_major_axis_toggle_menu_slider.value()
-        pressed = slider_pressed
-        difference = released - pressed
-        spinValue = self.ui.semi_major_axis_toggle_menu_spinbox.value()
-        if difference > 0:
-            spinValue += difference
-            self.ui.semi_major_axis_toggle_menu_spinbox.setValue(spinValue)
+    def semi_maj_slider_changed(self):
+        slider_value = self.ui.semi_major_axis_toggle_menu_slider.value()
+        if slider_value == 0:
+            step = 10
+        elif slider_value == 1:
+            step = 100
+        elif slider_value == 2:
+            step = 1000
+        elif slider_value == 3:
+            step = 10000
+        elif slider_value == 4:
+            step = 100000
+        elif slider_value == 5:
+            step = 1000000
+        elif slider_value == 6:
+            step = 10000000
+        elif slider_value == 7:
+            step = 100000000
+        elif slider_value == 8:
+            step = 1000000000
+        elif slider_value == 9:
+            step = 10000000000
+        return step
+
+
+    def dial_changed(self):
+        step = MainWindow.semi_maj_slider_changed(self)
+        sma = self.ui.semi_major_axis_toggle_menu_spinbox.value()
+        direction = MainWindow.dial_direction(self)
+        if direction == "Clockwise":
+            sma += step
+        elif direction == "Anti-Clockwise":
+            sma -= step
         else:
-            spinValue += difference
-            print(spinValue)
-            self.ui.semi_major_axis_toggle_menu_spinbox.setValue(spinValue)
-
-#########################################################################################################################
-       
-
+            sma = sma
+        self.ui.semi_major_axis_toggle_menu_spinbox.setValue(sma)
     
+    def dial_direction(self):
+        global a
+        current_value = self.ui.Semi_dial.value()
+        difference = current_value - a
+        previous_value = current_value - difference
+        a = current_value
+        minimum_dial = self.ui.Semi_dial.maximum()
+        maximum_dial = self.ui.Semi_dial.minimum()
+        corner_case = [minimum_dial, maximum_dial]
+        if current_value in corner_case and previous_value in corner_case:
+            if difference < 0:
+                direction = 'Clockwise'
+            elif difference > 0:
+                direction = 'Anti-Clockwise'
+            else:
+                direction = "No Change"
+        elif difference < 0:
+            direction = "Anti-Clockwise"
+        elif difference > 0:
+            direction = "Clockwise"
+        elif current_value:
+            direction = "No Change"
+        return direction
 
 # SPLASH SCREEN
 class SplashScreen(QMainWindow):
@@ -454,7 +504,7 @@ class SplashScreen(QMainWindow):
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.progress)
         # TIMER IN MILLISECONDS
-        self.timer.start(75)
+        self.timer.start(5)
 
         # CHANGE DESCRIPTION
 

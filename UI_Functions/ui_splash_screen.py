@@ -1,24 +1,21 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenRDGnQM.ui'
+## Form generated from reading UI file 'splash_screeneeijFM.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
 class Ui_SplashScreen(object):
     def setupUi(self, SplashScreen):
-        if SplashScreen.objectName():
+        if not SplashScreen.objectName():
             SplashScreen.setObjectName(u"SplashScreen")
         SplashScreen.resize(850, 474)
         self.centralwidget = QWidget(SplashScreen)
@@ -41,7 +38,7 @@ class Ui_SplashScreen(object):
         self.verticalLayout_2 = QVBoxLayout(self.dropShadowFrame)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(10, 0, 10, 0)
+        self.verticalLayout_2.setContentsMargins(40, 0, 40, 0)
         self.logo_frame = QFrame(self.dropShadowFrame)
         self.logo_frame.setObjectName(u"logo_frame")
         self.logo_frame.setMaximumSize(QSize(16777215, 250))
@@ -119,7 +116,7 @@ class Ui_SplashScreen(object):
 "	\n"
 "\n"
 "}")
-        self.progressBar.setValue(24)
+        self.progressBar.setValue(69)
 
         self.verticalLayout_2.addWidget(self.progressBar)
 

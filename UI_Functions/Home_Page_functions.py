@@ -102,11 +102,10 @@ class UIFunctions(MainWindow):
 
         
 
-        self.ui.semi_major_axis_toggle_menu_slider.sliderPressed.connect(lambda :Home_Page_main.MainWindow.slider_pressed(self))
+        # self.ui.semi_major_axis_toggle_menu_slider.sliderPressed.connect(lambda :Home_Page_main.MainWindow.slider_changed(self))
 
-        self.ui.semi_major_axis_toggle_menu_slider.sliderReleased.connect(lambda :Home_Page_main.MainWindow.slider_released(self))
         
-        
+        self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.dial_changed(self))
 
         
     def returnStatus():
@@ -132,6 +131,11 @@ class UIFunctions(MainWindow):
                 # self.ui.arg_of_per_toggle_menu_lbl.setText('Arg_of_Per')
                 # self.ui.tru_ano_toggle_menu_lbl.setText('True_anomaly')
 
+                self.ui.Semi_dial.show()
+                self.ui.ecce_dial.show()
+
+                self.ui.type_of_input_toggle.show()
+
                 self.ui.semi_major_axis_toggle_menu_spinbox.show()
                 self.ui.eccentricity_toggle_menu_spinbox.show()
                 self.ui.inclination_toggle_menu_spinbox.show()
@@ -148,15 +152,15 @@ class UIFunctions(MainWindow):
                 
             elif width != standard:
 
-                self.ui.stackedWidget_2.setCurrentIndex(1)
+                self.ui.stackedWidget_2.setCurrentIndex(0)
+
+                self.ui.Semi_dial.hide()
+                self.ui.ecce_dial.hide()
+
+                self.ui.type_of_input_toggle.hide()
 
                 widthExtended = standard
-                self.ui.semi_major_axis_toggle_menu_lbl.setText('a')
-                self.ui.eccentricity_toggle_menu_lbl.setText('e')
-                self.ui.inclination_toggle_menu_lbl.setText('i')
-                self.ui.RAAN_toggle_menu_lbl.setText('Ω')
-                self.ui.arg_of_per_toggle_menu_lbl.setText('ω')
-                self.ui.tru_ano_toggle_menu_lbl.setText('ν')
+                
 
                 self.ui.semi_major_axis_toggle_menu_spinbox.hide()
                 self.ui.eccentricity_toggle_menu_spinbox.hide()

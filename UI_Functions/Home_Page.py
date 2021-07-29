@@ -1,24 +1,21 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageWoFKFF.ui'
+## Form generated from reading UI file 'Home_PageWgvxOR.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if MainWindow.objectName():
+        if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.ApplicationModal)
         MainWindow.resize(1110, 663)
@@ -2059,9 +2056,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout_25.setSpacing(0)
         self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
         self.horizontalLayout_25.setContentsMargins(0, 0, 0, 0)
-        self.toggle_menu_btn = QPushButton(self.toggle_menu_btn_frame)
+        self.drop_frame_toggle = QFrame(self.toggle_menu_btn_frame)
+        self.drop_frame_toggle.setObjectName(u"drop_frame_toggle")
+        self.drop_frame_toggle.setMinimumSize(QSize(0, 40))
+        self.drop_frame_toggle.setMaximumSize(QSize(16777215, 40))
+        self.drop_frame_toggle.setFrameShape(QFrame.StyledPanel)
+        self.drop_frame_toggle.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_36 = QHBoxLayout(self.drop_frame_toggle)
+        self.horizontalLayout_36.setSpacing(0)
+        self.horizontalLayout_36.setObjectName(u"horizontalLayout_36")
+        self.horizontalLayout_36.setContentsMargins(0, 0, 0, 0)
+        self.toggle_menu_btn = QPushButton(self.drop_frame_toggle)
         self.toggle_menu_btn.setObjectName(u"toggle_menu_btn")
-        self.toggle_menu_btn.setMinimumSize(QSize(0, 20))
+        self.toggle_menu_btn.setMinimumSize(QSize(35, 20))
+        self.toggle_menu_btn.setMaximumSize(QSize(35, 20))
         self.toggle_menu_btn.setStyleSheet(u"QPushButton{\n"
 "	background-color:transparent;\n"
 "	\n"
@@ -2077,7 +2085,37 @@ class Ui_MainWindow(object):
         self.toggle_menu_btn.setIcon(icon)
         self.toggle_menu_btn.setIconSize(QSize(18, 18))
 
-        self.horizontalLayout_25.addWidget(self.toggle_menu_btn)
+        self.horizontalLayout_36.addWidget(self.toggle_menu_btn)
+
+        self.type_of_input_toggle = QComboBox(self.drop_frame_toggle)
+        self.type_of_input_toggle.addItem("")
+        self.type_of_input_toggle.addItem("")
+        self.type_of_input_toggle.addItem("")
+        self.type_of_input_toggle.addItem("")
+        self.type_of_input_toggle.setObjectName(u"type_of_input_toggle")
+        self.type_of_input_toggle.setMinimumSize(QSize(100, 30))
+        self.type_of_input_toggle.setMaximumSize(QSize(100, 30))
+        self.type_of_input_toggle.setLayoutDirection(Qt.LeftToRight)
+        self.type_of_input_toggle.setStyleSheet(u"QComboBox{\n"
+"	\n"
+"	\n"
+"	\n"
+"	border: 3px solid rgb(34, 14, 36);\n"
+"	font: 12pt \"Arial\";\n"
+"	border-radius: 15px;}\n"
+"\n"
+"\n"
+"QComboBox:hover{\n"
+"	border: 4px solid white;\n"
+"}\n"
+"\n"
+"")
+        self.type_of_input_toggle.setEditable(False)
+
+        self.horizontalLayout_36.addWidget(self.type_of_input_toggle)
+
+
+        self.horizontalLayout_25.addWidget(self.drop_frame_toggle)
 
 
         self.verticalLayout_2.addWidget(self.toggle_menu_btn_frame)
@@ -2085,13 +2123,13 @@ class Ui_MainWindow(object):
         self.stackedWidget_2 = QStackedWidget(self.VPCO_menu_toggle_frame)
         self.stackedWidget_2.setObjectName(u"stackedWidget_2")
         self.stackedWidget_2.setStyleSheet(u"border:none;")
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.verticalLayout_24 = QVBoxLayout(self.page)
+        self.all_elements_show_page = QWidget()
+        self.all_elements_show_page.setObjectName(u"all_elements_show_page")
+        self.verticalLayout_24 = QVBoxLayout(self.all_elements_show_page)
         self.verticalLayout_24.setSpacing(0)
         self.verticalLayout_24.setObjectName(u"verticalLayout_24")
-        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
-        self.semi_major_axis_toggle_menu_lbl_2 = QLabel(self.page)
+        self.verticalLayout_24.setContentsMargins(0, 0, 0, 10)
+        self.semi_major_axis_toggle_menu_lbl_2 = QLabel(self.all_elements_show_page)
         self.semi_major_axis_toggle_menu_lbl_2.setObjectName(u"semi_major_axis_toggle_menu_lbl_2")
         self.semi_major_axis_toggle_menu_lbl_2.setFont(font7)
         self.semi_major_axis_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
@@ -2104,7 +2142,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_24.addWidget(self.semi_major_axis_toggle_menu_lbl_2)
 
-        self.eccentricity_toggle_menu_lbl_2 = QLabel(self.page)
+        self.eccentricity_toggle_menu_lbl_2 = QLabel(self.all_elements_show_page)
         self.eccentricity_toggle_menu_lbl_2.setObjectName(u"eccentricity_toggle_menu_lbl_2")
         self.eccentricity_toggle_menu_lbl_2.setFont(font7)
         self.eccentricity_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
@@ -2117,50 +2155,129 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_24.addWidget(self.eccentricity_toggle_menu_lbl_2)
 
-        self.stackedWidget_2.addWidget(self.page)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.page_2.setStyleSheet(u"QSlider::handle:horizontal {\n"
+        self.inclination_toggle_menu_lbl_2 = QLabel(self.all_elements_show_page)
+        self.inclination_toggle_menu_lbl_2.setObjectName(u"inclination_toggle_menu_lbl_2")
+        self.inclination_toggle_menu_lbl_2.setFont(font7)
+        self.inclination_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.inclination_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_24.addWidget(self.inclination_toggle_menu_lbl_2)
+
+        self.RAAN_toggle_menu_lbl_2 = QLabel(self.all_elements_show_page)
+        self.RAAN_toggle_menu_lbl_2.setObjectName(u"RAAN_toggle_menu_lbl_2")
+        self.RAAN_toggle_menu_lbl_2.setFont(font7)
+        self.RAAN_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.RAAN_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_24.addWidget(self.RAAN_toggle_menu_lbl_2)
+
+        self.arg_of_per_toggle_menu_lbl_2 = QLabel(self.all_elements_show_page)
+        self.arg_of_per_toggle_menu_lbl_2.setObjectName(u"arg_of_per_toggle_menu_lbl_2")
+        self.arg_of_per_toggle_menu_lbl_2.setFont(font7)
+        self.arg_of_per_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.arg_of_per_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_24.addWidget(self.arg_of_per_toggle_menu_lbl_2)
+
+        self.tru_ano_toggle_menu_lbl_2 = QLabel(self.all_elements_show_page)
+        self.tru_ano_toggle_menu_lbl_2.setObjectName(u"tru_ano_toggle_menu_lbl_2")
+        self.tru_ano_toggle_menu_lbl_2.setFont(font7)
+        self.tru_ano_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
+"color: rgb(131, 255, 160);\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"")
+        self.tru_ano_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_24.addWidget(self.tru_ano_toggle_menu_lbl_2)
+
+        self.stackedWidget_2.addWidget(self.all_elements_show_page)
+        self.Toggle_Menu_page_layout_holder_2 = QWidget()
+        self.Toggle_Menu_page_layout_holder_2.setObjectName(u"Toggle_Menu_page_layout_holder_2")
+        self.Toggle_Menu_page_layout_holder_2.setStyleSheet(u"QSlider::handle:horizontal {\n"
 "    \n"
 "	\n"
 "	background-color: rgb(0, 0, 0);\n"
-"	\n"
 "    border: 0px solid;\n"
-"    height: 20px;\n"
-"    width: 20px;\n"
+"    height: 10px;\n"
+"    width: 10px;\n"
 "	border-radius:5.4px;\n"
 "	\n"
 "    \n"
 "    }\n"
 "\n"
 "")
-        self.horizontalLayout_26 = QHBoxLayout(self.page_2)
-        self.horizontalLayout_26.setSpacing(0)
+        self.verticalLayout_3 = QVBoxLayout(self.Toggle_Menu_page_layout_holder_2)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.frame_27 = QFrame(self.Toggle_Menu_page_layout_holder_2)
+        self.frame_27.setObjectName(u"frame_27")
+        self.frame_27.setStyleSheet(u"QFrame{\n"
+"\n"
+"border: 3px solid rgb(34, 14, 36);\n"
+"border-radius: 15px;\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"QFrame:hover{\n"
+"	border: 3px solid white;\n"
+"}")
+        self.frame_27.setFrameShape(QFrame.StyledPanel)
+        self.frame_27.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_26 = QHBoxLayout(self.frame_27)
         self.horizontalLayout_26.setObjectName(u"horizontalLayout_26")
-        self.horizontalLayout_26.setContentsMargins(2, 0, 2, 0)
-        self.Toggle_frame_Menu_layout_holder = QVBoxLayout()
-        self.Toggle_frame_Menu_layout_holder.setSpacing(0)
-        self.Toggle_frame_Menu_layout_holder.setObjectName(u"Toggle_frame_Menu_layout_holder")
-        self.horizontalLayout_27 = QHBoxLayout()
-        self.horizontalLayout_27.setSpacing(0)
-        self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
-        self.semi_major_axis_toggle_menu_lbl = QLabel(self.page_2)
+        self.Semi_major_axis_toggle_menu_layout = QVBoxLayout()
+        self.Semi_major_axis_toggle_menu_layout.setSpacing(0)
+        self.Semi_major_axis_toggle_menu_layout.setObjectName(u"Semi_major_axis_toggle_menu_layout")
+        self.Semi_major_axis_toggle_menu_layout.setContentsMargins(-1, 0, -1, -1)
+        self.horizontalLayout_32 = QHBoxLayout()
+        self.horizontalLayout_32.setSpacing(0)
+        self.horizontalLayout_32.setObjectName(u"horizontalLayout_32")
+        self.semi_major_axis_toggle_menu_lbl = QLabel(self.frame_27)
         self.semi_major_axis_toggle_menu_lbl.setObjectName(u"semi_major_axis_toggle_menu_lbl")
-        self.semi_major_axis_toggle_menu_lbl.setFont(font7)
+        self.semi_major_axis_toggle_menu_lbl.setMinimumSize(QSize(0, 20))
+        self.semi_major_axis_toggle_menu_lbl.setMaximumSize(QSize(16777215, 20))
+        font12 = QFont()
+        font12.setPointSize(10)
+        font12.setBold(True)
+        font12.setWeight(75)
+        self.semi_major_axis_toggle_menu_lbl.setFont(font12)
         self.semi_major_axis_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
+"border:none;\n"
 "}\n"
 "\n"
 "")
         self.semi_major_axis_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_27.addWidget(self.semi_major_axis_toggle_menu_lbl)
+        self.horizontalLayout_32.addWidget(self.semi_major_axis_toggle_menu_lbl)
 
-        self.semi_major_axis_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
+
+        self.Semi_major_axis_toggle_menu_layout.addLayout(self.horizontalLayout_32)
+
+        self.horizontalLayout_27 = QHBoxLayout()
+        self.horizontalLayout_27.setSpacing(0)
+        self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
+        self.semi_major_axis_toggle_menu_spinbox = QDoubleSpinBox(self.frame_27)
         self.semi_major_axis_toggle_menu_spinbox.setObjectName(u"semi_major_axis_toggle_menu_spinbox")
-        self.semi_major_axis_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
-        self.semi_major_axis_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
+        self.semi_major_axis_toggle_menu_spinbox.setMinimumSize(QSize(80, 0))
+        self.semi_major_axis_toggle_menu_spinbox.setMaximumSize(QSize(80, 16777215))
         self.semi_major_axis_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -2204,53 +2321,99 @@ class Ui_MainWindow(object):
         self.horizontalLayout_27.addWidget(self.semi_major_axis_toggle_menu_spinbox)
 
 
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_27)
+        self.Semi_major_axis_toggle_menu_layout.addLayout(self.horizontalLayout_27)
 
-        self.dial = QDial(self.page_2)
-        self.dial.setObjectName(u"dial")
-        self.dial.setMinimumSize(QSize(75, 75))
-        self.dial.setMaximumSize(QSize(75, 75))
+        self.horizontalLayout_30 = QHBoxLayout()
+        self.horizontalLayout_30.setSpacing(0)
+        self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
+        self.Semi_dial = QDial(self.frame_27)
+        self.Semi_dial.setObjectName(u"Semi_dial")
+        self.Semi_dial.setMinimumSize(QSize(75, 75))
+        self.Semi_dial.setMaximumSize(QSize(75, 75))
+        self.Semi_dial.setMouseTracking(False)
+        self.Semi_dial.setStyleSheet(u"QDial::handle { background-color: black }")
+        self.Semi_dial.setMinimum(1)
+        self.Semi_dial.setMaximum(50)
 
-        self.Toggle_frame_Menu_layout_holder.addWidget(self.dial)
+        self.horizontalLayout_30.addWidget(self.Semi_dial)
+
+
+        self.Semi_major_axis_toggle_menu_layout.addLayout(self.horizontalLayout_30)
 
         self.horizontalLayout_35 = QHBoxLayout()
         self.horizontalLayout_35.setSpacing(0)
         self.horizontalLayout_35.setObjectName(u"horizontalLayout_35")
-        self.semi_major_axis_toggle_menu_slider = QSlider(self.page_2)
+        self.semi_major_axis_toggle_menu_slider = QSlider(self.frame_27)
         self.semi_major_axis_toggle_menu_slider.setObjectName(u"semi_major_axis_toggle_menu_slider")
         self.semi_major_axis_toggle_menu_slider.setStyleSheet(u"")
-        self.semi_major_axis_toggle_menu_slider.setMaximum(200)
+        self.semi_major_axis_toggle_menu_slider.setMaximum(9)
         self.semi_major_axis_toggle_menu_slider.setPageStep(10)
-        self.semi_major_axis_toggle_menu_slider.setSliderPosition(100)
+        self.semi_major_axis_toggle_menu_slider.setValue(0)
+        self.semi_major_axis_toggle_menu_slider.setSliderPosition(0)
         self.semi_major_axis_toggle_menu_slider.setOrientation(Qt.Horizontal)
         self.semi_major_axis_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
-        self.semi_major_axis_toggle_menu_slider.setTickInterval(20)
+        self.semi_major_axis_toggle_menu_slider.setTickInterval(1)
 
         self.horizontalLayout_35.addWidget(self.semi_major_axis_toggle_menu_slider)
 
 
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_35)
+        self.Semi_major_axis_toggle_menu_layout.addLayout(self.horizontalLayout_35)
 
-        self.horizontalLayout_28 = QHBoxLayout()
-        self.horizontalLayout_28.setSpacing(0)
-        self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
-        self.eccentricity_toggle_menu_lbl = QLabel(self.page_2)
+
+        self.horizontalLayout_26.addLayout(self.Semi_major_axis_toggle_menu_layout)
+
+
+        self.verticalLayout_3.addWidget(self.frame_27)
+
+        self.frame_41 = QFrame(self.Toggle_Menu_page_layout_holder_2)
+        self.frame_41.setObjectName(u"frame_41")
+        self.frame_41.setStyleSheet(u"QFrame{\n"
+"\n"
+"border: 3px solid rgb(34, 14, 36);\n"
+"border-radius: 15px;\n"
+"background:transparent;\n"
+"}\n"
+"\n"
+"QFrame:hover{\n"
+"	border: 3px solid white;\n"
+"}")
+        self.frame_41.setFrameShape(QFrame.StyledPanel)
+        self.frame_41.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_31 = QHBoxLayout(self.frame_41)
+        self.horizontalLayout_31.setObjectName(u"horizontalLayout_31")
+        self.eccentricity_toggle_menu_layout = QVBoxLayout()
+        self.eccentricity_toggle_menu_layout.setSpacing(0)
+        self.eccentricity_toggle_menu_layout.setObjectName(u"eccentricity_toggle_menu_layout")
+        self.eccentricity_toggle_menu_layout.setContentsMargins(-1, 0, -1, -1)
+        self.horizontalLayout_33 = QHBoxLayout()
+        self.horizontalLayout_33.setSpacing(0)
+        self.horizontalLayout_33.setObjectName(u"horizontalLayout_33")
+        self.eccentricity_toggle_menu_lbl = QLabel(self.frame_41)
         self.eccentricity_toggle_menu_lbl.setObjectName(u"eccentricity_toggle_menu_lbl")
-        self.eccentricity_toggle_menu_lbl.setFont(font7)
+        self.eccentricity_toggle_menu_lbl.setMinimumSize(QSize(0, 20))
+        self.eccentricity_toggle_menu_lbl.setMaximumSize(QSize(16777215, 20))
+        self.eccentricity_toggle_menu_lbl.setFont(font12)
         self.eccentricity_toggle_menu_lbl.setStyleSheet(u"QLabel{\n"
 "color: rgb(131, 255, 160);\n"
 "background:transparent;\n"
+"border:none;\n"
 "}\n"
 "\n"
 "")
         self.eccentricity_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_28.addWidget(self.eccentricity_toggle_menu_lbl)
+        self.horizontalLayout_33.addWidget(self.eccentricity_toggle_menu_lbl)
 
-        self.eccentricity_toggle_menu_spinbox = QDoubleSpinBox(self.page_2)
+
+        self.eccentricity_toggle_menu_layout.addLayout(self.horizontalLayout_33)
+
+        self.horizontalLayout_28 = QHBoxLayout()
+        self.horizontalLayout_28.setSpacing(0)
+        self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
+        self.eccentricity_toggle_menu_spinbox = QDoubleSpinBox(self.frame_41)
         self.eccentricity_toggle_menu_spinbox.setObjectName(u"eccentricity_toggle_menu_spinbox")
-        self.eccentricity_toggle_menu_spinbox.setMinimumSize(QSize(100, 0))
-        self.eccentricity_toggle_menu_spinbox.setMaximumSize(QSize(100, 16777215))
+        self.eccentricity_toggle_menu_spinbox.setMinimumSize(QSize(80, 0))
+        self.eccentricity_toggle_menu_spinbox.setMaximumSize(QSize(80, 16777215))
         self.eccentricity_toggle_menu_spinbox.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
@@ -2294,23 +2457,30 @@ class Ui_MainWindow(object):
         self.horizontalLayout_28.addWidget(self.eccentricity_toggle_menu_spinbox)
 
 
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_28)
+        self.eccentricity_toggle_menu_layout.addLayout(self.horizontalLayout_28)
 
-        self.dial_2 = QDial(self.page_2)
-        self.dial_2.setObjectName(u"dial_2")
-        self.dial_2.setMinimumSize(QSize(75, 75))
-        self.dial_2.setMaximumSize(QSize(75, 75))
+        self.horizontalLayout_29 = QHBoxLayout()
+        self.horizontalLayout_29.setObjectName(u"horizontalLayout_29")
+        self.ecce_dial = QDial(self.frame_41)
+        self.ecce_dial.setObjectName(u"ecce_dial")
+        self.ecce_dial.setMinimumSize(QSize(75, 75))
+        self.ecce_dial.setMaximumSize(QSize(75, 75))
+        self.ecce_dial.setMaximum(99)
 
-        self.Toggle_frame_Menu_layout_holder.addWidget(self.dial_2)
+        self.horizontalLayout_29.addWidget(self.ecce_dial)
+
+
+        self.eccentricity_toggle_menu_layout.addLayout(self.horizontalLayout_29)
 
         self.horizontalLayout_34 = QHBoxLayout()
         self.horizontalLayout_34.setSpacing(0)
         self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
-        self.eccentricity_toggle_menu_slider = QSlider(self.page_2)
+        self.eccentricity_toggle_menu_slider = QSlider(self.frame_41)
         self.eccentricity_toggle_menu_slider.setObjectName(u"eccentricity_toggle_menu_slider")
         self.eccentricity_toggle_menu_slider.setStyleSheet(u"")
-        self.eccentricity_toggle_menu_slider.setMaximum(10)
-        self.eccentricity_toggle_menu_slider.setSliderPosition(5)
+        self.eccentricity_toggle_menu_slider.setMaximum(9)
+        self.eccentricity_toggle_menu_slider.setValue(0)
+        self.eccentricity_toggle_menu_slider.setSliderPosition(0)
         self.eccentricity_toggle_menu_slider.setOrientation(Qt.Horizontal)
         self.eccentricity_toggle_menu_slider.setTickPosition(QSlider.TicksAbove)
         self.eccentricity_toggle_menu_slider.setTickInterval(1)
@@ -2318,12 +2488,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_34.addWidget(self.eccentricity_toggle_menu_slider)
 
 
-        self.Toggle_frame_Menu_layout_holder.addLayout(self.horizontalLayout_34)
+        self.eccentricity_toggle_menu_layout.addLayout(self.horizontalLayout_34)
 
 
-        self.horizontalLayout_26.addLayout(self.Toggle_frame_Menu_layout_holder)
+        self.horizontalLayout_31.addLayout(self.eccentricity_toggle_menu_layout)
 
-        self.stackedWidget_2.addWidget(self.page_2)
+
+        self.verticalLayout_3.addWidget(self.frame_41)
+
+        self.stackedWidget_2.addWidget(self.Toggle_Menu_page_layout_holder_2)
 
         self.verticalLayout_2.addWidget(self.stackedWidget_2)
 
@@ -3107,50 +3280,6 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.tru_ano_toggle_menu_lbl.setAlignment(Qt.AlignCenter)
-        self.tru_ano_toggle_menu_lbl_2 = QLabel(self.a_e_result_screen)
-        self.tru_ano_toggle_menu_lbl_2.setObjectName(u"tru_ano_toggle_menu_lbl_2")
-        self.tru_ano_toggle_menu_lbl_2.setGeometry(QRect(240, 360, 34, 84))
-        self.tru_ano_toggle_menu_lbl_2.setFont(font7)
-        self.tru_ano_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.tru_ano_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
-        self.inclination_toggle_menu_lbl_2 = QLabel(self.a_e_result_screen)
-        self.inclination_toggle_menu_lbl_2.setObjectName(u"inclination_toggle_menu_lbl_2")
-        self.inclination_toggle_menu_lbl_2.setGeometry(QRect(240, 109, 34, 84))
-        self.inclination_toggle_menu_lbl_2.setFont(font7)
-        self.inclination_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.inclination_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
-        self.arg_of_per_toggle_menu_lbl_2 = QLabel(self.a_e_result_screen)
-        self.arg_of_per_toggle_menu_lbl_2.setObjectName(u"arg_of_per_toggle_menu_lbl_2")
-        self.arg_of_per_toggle_menu_lbl_2.setGeometry(QRect(240, 277, 34, 83))
-        self.arg_of_per_toggle_menu_lbl_2.setFont(font7)
-        self.arg_of_per_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.arg_of_per_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
-        self.RAAN_toggle_menu_lbl_2 = QLabel(self.a_e_result_screen)
-        self.RAAN_toggle_menu_lbl_2.setObjectName(u"RAAN_toggle_menu_lbl_2")
-        self.RAAN_toggle_menu_lbl_2.setGeometry(QRect(240, 193, 34, 84))
-        self.RAAN_toggle_menu_lbl_2.setFont(font7)
-        self.RAAN_toggle_menu_lbl_2.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160);\n"
-"background:transparent;\n"
-"}\n"
-"\n"
-"")
-        self.RAAN_toggle_menu_lbl_2.setAlignment(Qt.AlignCenter)
         self.VPCO_output_stack.addWidget(self.a_e_result_screen)
         self.ra_rp_result_screen = QWidget()
         self.ra_rp_result_screen.setObjectName(u"ra_rp_result_screen")
@@ -5738,13 +5867,13 @@ class Ui_MainWindow(object):
         self.label_credits.setObjectName(u"label_credits")
         self.label_credits.setMinimumSize(QSize(50, 0))
         self.label_credits.setMaximumSize(QSize(50, 16777215))
-        font12 = QFont()
-        font12.setFamily(u"Arial")
-        font12.setPointSize(6)
-        font12.setBold(False)
-        font12.setItalic(False)
-        font12.setWeight(50)
-        self.label_credits.setFont(font12)
+        font13 = QFont()
+        font13.setFamily(u"Arial")
+        font13.setPointSize(6)
+        font13.setBold(False)
+        font13.setItalic(False)
+        font13.setWeight(50)
+        self.label_credits.setFont(font13)
         self.label_credits.setStyleSheet(u"image:url(UI_Functions/Resources/MOPy Cover_transparent.png);")
         self.label_credits.setPixmap(QPixmap(u"../../../../Users/manjunath neelmath/.designer/backup/GUI-test/Resources/MOPy Cover_transparent.png"))
         self.label_credits.setScaledContents(True)
@@ -5783,7 +5912,7 @@ class Ui_MainWindow(object):
 
         self.stackedWidget.setCurrentIndex(4)
         self.Orbit_type_stack.setCurrentIndex(0)
-        self.stackedWidget_2.setCurrentIndex(1)
+        self.stackedWidget_2.setCurrentIndex(0)
         self.VPCO_output_stack.setCurrentIndex(0)
         self.otherbody_stack.setCurrentIndex(0)
         self.CoOE_output_stack.setCurrentIndex(0)
@@ -5959,10 +6088,19 @@ class Ui_MainWindow(object):
         self.orbit_type_stateVector.setText("")
         self.Error_parabola.setText("")
         self.toggle_menu_btn.setText("")
+        self.type_of_input_toggle.setItemText(0, QCoreApplication.translate("MainWindow", u"  km", None))
+        self.type_of_input_toggle.setItemText(1, QCoreApplication.translate("MainWindow", u"  miles", None))
+        self.type_of_input_toggle.setItemText(2, QCoreApplication.translate("MainWindow", u"  AU", None))
+        self.type_of_input_toggle.setItemText(3, QCoreApplication.translate("MainWindow", u"  DU", None))
+
         self.semi_major_axis_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"a", None))
         self.eccentricity_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"e", None))
-        self.semi_major_axis_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"a", None))
-        self.eccentricity_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"e", None))
+        self.inclination_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"i", None))
+        self.RAAN_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03a9", None))
+        self.arg_of_per_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03c9", None))
+        self.tru_ano_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03bd", None))
+        self.semi_major_axis_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"Semi-Major Axis", None))
+        self.eccentricity_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"Eccentricity", None))
         self.label_title_5.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
 #if QT_CONFIG(tooltip)
         self.vpco_feature_back_btn.setToolTip(QCoreApplication.translate("MainWindow", u"VPCO Home", None))
@@ -6015,10 +6153,6 @@ class Ui_MainWindow(object):
         self.arg_of_per_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"\u03c9", None))
         self.inclination_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"i", None))
         self.tru_ano_toggle_menu_lbl.setText(QCoreApplication.translate("MainWindow", u"\u03bd", None))
-        self.tru_ano_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03bd", None))
-        self.inclination_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"i", None))
-        self.arg_of_per_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03c9", None))
-        self.RAAN_toggle_menu_lbl_2.setText(QCoreApplication.translate("MainWindow", u"\u03a9", None))
         self.label_241.setText(QCoreApplication.translate("MainWindow", u"Velocity at Semi-latus Rectum", None))
         self.label_242.setText(QCoreApplication.translate("MainWindow", u"km", None))
         self.label_243.setText(QCoreApplication.translate("MainWindow", u"Gravitational Force at Periapsis", None))

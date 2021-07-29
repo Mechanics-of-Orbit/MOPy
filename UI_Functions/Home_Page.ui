@@ -4632,15 +4632,57 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QPushButton" name="toggle_menu_btn">
+                     <widget class="QFrame" name="drop_frame_toggle">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>20</height>
+                        <height>40</height>
                        </size>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton{
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_36">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="toggle_menu_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>35</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>35</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton{
 	background-color:transparent;
 	
 	
@@ -4650,20 +4692,81 @@ QPushButton:pressed{
 	padding: 0.1em 0.1em 0.1em 0.1em;
 	
 }</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="icon">
-                       <iconset>
-                        <normaloff>UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg</normaloff>UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>18</width>
-                        <height>18</height>
-                       </size>
-                      </property>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg</normaloff>UI_Functions/Resources/Toggle_menu_btn_VPCO_rounded.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>18</width>
+                           <height>18</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="type_of_input_toggle">
+                         <property name="minimumSize">
+                          <size>
+                           <width>100</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>100</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox{
+	
+	
+	
+	border: 3px solid rgb(34, 14, 36);
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 15px;}
+
+
+QComboBox:hover{
+	border: 4px solid white;
+}
+
+</string>
+                         </property>
+                         <property name="editable">
+                          <bool>false</bool>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>  km</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>  miles</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>  AU</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>  DU</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
                    </layout>
@@ -4675,9 +4778,9 @@ QPushButton:pressed{
                     <string notr="true">border:none;</string>
                    </property>
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>0</number>
                    </property>
-                   <widget class="QWidget" name="page">
+                   <widget class="QWidget" name="all_elements_show_page">
                     <layout class="QVBoxLayout" name="verticalLayout_24">
                      <property name="spacing">
                       <number>0</number>
@@ -4692,7 +4795,7 @@ QPushButton:pressed{
                       <number>0</number>
                      </property>
                      <property name="bottomMargin">
-                      <number>0</number>
+                      <number>10</number>
                      </property>
                      <item>
                       <widget class="QLabel" name="semi_major_axis_toggle_menu_lbl_2">
@@ -4744,9 +4847,109 @@ background:transparent;
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <widget class="QLabel" name="inclination_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>i</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="RAAN_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Ω</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="arg_of_per_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>ω</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="tru_ano_toggle_menu_lbl_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>ν</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
                    </widget>
-                   <widget class="QWidget" name="page_2">
+                   <widget class="QWidget" name="Toggle_Menu_page_layout_holder_2">
                     <property name="styleSheet">
                      <string notr="true">QSlider::handle:horizontal {
     
@@ -4762,73 +4965,102 @@ background:transparent;
 
 </string>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_26">
-                     <property name="spacing">
-                      <number>0</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>2</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>2</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_3">
                      <item>
-                      <layout class="QVBoxLayout" name="Toggle_frame_Menu_layout_holder">
-                       <property name="spacing">
-                        <number>0</number>
+                      <widget class="QFrame" name="frame_27">
+                       <property name="styleSheet">
+                        <string notr="true">QFrame{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 15px;
+background:transparent;
+}
+
+QFrame:hover{
+	border: 3px solid white;
+}</string>
                        </property>
-                       <item>
-                        <layout class="QHBoxLayout" name="horizontalLayout_27">
-                         <property name="spacing">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QLabel" name="semi_major_axis_toggle_menu_lbl">
-                           <property name="font">
-                            <font>
-                             <pointsize>12</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QLabel{
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_26">
+                        <item>
+                         <layout class="QVBoxLayout" name="Semi_major_axis_toggle_menu_layout">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_32">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="semi_major_axis_toggle_menu_lbl">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLabel{
 color: rgb(131, 255, 160);
 background:transparent;
+border:none;
 }
 
 </string>
-                           </property>
-                           <property name="text">
-                            <string>a</string>
-                           </property>
-                           <property name="alignment">
-                            <set>Qt::AlignCenter</set>
-                           </property>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QDoubleSpinBox" name="semi_major_axis_toggle_menu_spinbox">
-                           <property name="minimumSize">
-                            <size>
-                             <width>100</width>
-                             <height>0</height>
-                            </size>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>100</width>
-                             <height>16777215</height>
-                            </size>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">    /*spinbox lift style*/
+                              </property>
+                              <property name="text">
+                               <string>Semi-Major Axis</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_27">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QDoubleSpinBox" name="semi_major_axis_toggle_menu_spinbox">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
         image: url(UI_Functions/Resources/right_arrow.svg);
@@ -4863,117 +5095,190 @@ QDoubleSpinBox{
 border: 2px solid black;
 border-radius: 8px;
 }</string>
-                           </property>
-                           <property name="alignment">
-                            <set>Qt::AlignCenter</set>
-                           </property>
-                           <property name="minimum">
-                            <double>-999999996.000000000000000</double>
-                           </property>
-                           <property name="maximum">
-                            <double>1000000000.000000000000000</double>
-                           </property>
-                          </widget>
-                         </item>
-                        </layout>
-                       </item>
-                       <item>
-                        <widget class="QDial" name="dial">
-                         <property name="minimumSize">
-                          <size>
-                           <width>75</width>
-                           <height>75</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>75</width>
-                           <height>75</height>
-                          </size>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QDial::handle { background-color: black }</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <layout class="QHBoxLayout" name="horizontalLayout_35">
-                         <property name="spacing">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QSlider" name="semi_major_axis_toggle_menu_slider">
-                           <property name="styleSheet">
-                            <string notr="true"/>
-                           </property>
-                           <property name="maximum">
-                            <number>200</number>
-                           </property>
-                           <property name="pageStep">
-                            <number>10</number>
-                           </property>
-                           <property name="sliderPosition">
-                            <number>100</number>
-                           </property>
-                           <property name="orientation">
-                            <enum>Qt::Horizontal</enum>
-                           </property>
-                           <property name="tickPosition">
-                            <enum>QSlider::TicksAbove</enum>
-                           </property>
-                           <property name="tickInterval">
-                            <number>20</number>
-                           </property>
-                          </widget>
-                         </item>
-                        </layout>
-                       </item>
-                       <item>
-                        <layout class="QHBoxLayout" name="horizontalLayout_28">
-                         <property name="spacing">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QLabel" name="eccentricity_toggle_menu_lbl">
-                           <property name="font">
-                            <font>
-                             <pointsize>12</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QLabel{
-color: rgb(131, 255, 160);
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                              <property name="minimum">
+                               <double>-999999996.000000000000000</double>
+                              </property>
+                              <property name="maximum">
+                               <double>1000000000.000000000000000</double>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_30">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QDial" name="Semi_dial">
+                              <property name="minimumSize">
+                               <size>
+                                <width>75</width>
+                                <height>75</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>75</width>
+                                <height>75</height>
+                               </size>
+                              </property>
+                              <property name="mouseTracking">
+                               <bool>false</bool>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QDial::handle { background-color: black }</string>
+                              </property>
+                              <property name="minimum">
+                               <number>1</number>
+                              </property>
+                              <property name="maximum">
+                               <number>50</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_35">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QSlider" name="semi_major_axis_toggle_menu_slider">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="maximum">
+                               <number>9</number>
+                              </property>
+                              <property name="pageStep">
+                               <number>10</number>
+                              </property>
+                              <property name="value">
+                               <number>0</number>
+                              </property>
+                              <property name="sliderPosition">
+                               <number>0</number>
+                              </property>
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="tickPosition">
+                               <enum>QSlider::TicksAbove</enum>
+                              </property>
+                              <property name="tickInterval">
+                               <number>1</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_41">
+                       <property name="styleSheet">
+                        <string notr="true">QFrame{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 15px;
 background:transparent;
 }
 
+QFrame:hover{
+	border: 3px solid white;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_31">
+                        <item>
+                         <layout class="QVBoxLayout" name="eccentricity_toggle_menu_layout">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_33">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="eccentricity_toggle_menu_lbl">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+border:none;
+}
+
 </string>
-                           </property>
-                           <property name="text">
-                            <string>e</string>
-                           </property>
-                           <property name="alignment">
-                            <set>Qt::AlignCenter</set>
-                           </property>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QDoubleSpinBox" name="eccentricity_toggle_menu_spinbox">
-                           <property name="minimumSize">
-                            <size>
-                             <width>100</width>
-                             <height>0</height>
-                            </size>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>100</width>
-                             <height>16777215</height>
-                            </size>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">    /*spinbox lift style*/
+                              </property>
+                              <property name="text">
+                               <string>Eccentricity</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_28">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QDoubleSpinBox" name="eccentricity_toggle_menu_spinbox">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
         image: url(UI_Functions/Resources/right_arrow.svg);
@@ -5008,66 +5313,79 @@ QDoubleSpinBox{
 border: 2px solid black;
 border-radius: 8px;
 }</string>
-                           </property>
-                           <property name="alignment">
-                            <set>Qt::AlignCenter</set>
-                           </property>
-                           <property name="minimum">
-                            <double>-50.000000000000000</double>
-                           </property>
-                           <property name="maximum">
-                            <double>50.000000000000000</double>
-                           </property>
-                          </widget>
-                         </item>
-                        </layout>
-                       </item>
-                       <item>
-                        <widget class="QDial" name="dial_2">
-                         <property name="minimumSize">
-                          <size>
-                           <width>75</width>
-                           <height>75</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>75</width>
-                           <height>75</height>
-                          </size>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <layout class="QHBoxLayout" name="horizontalLayout_34">
-                         <property name="spacing">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QSlider" name="eccentricity_toggle_menu_slider">
-                           <property name="styleSheet">
-                            <string notr="true"/>
-                           </property>
-                           <property name="maximum">
-                            <number>10</number>
-                           </property>
-                           <property name="sliderPosition">
-                            <number>5</number>
-                           </property>
-                           <property name="orientation">
-                            <enum>Qt::Horizontal</enum>
-                           </property>
-                           <property name="tickPosition">
-                            <enum>QSlider::TicksAbove</enum>
-                           </property>
-                           <property name="tickInterval">
-                            <number>1</number>
-                           </property>
-                          </widget>
-                         </item>
-                        </layout>
-                       </item>
-                      </layout>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                              <property name="minimum">
+                               <double>-50.000000000000000</double>
+                              </property>
+                              <property name="maximum">
+                               <double>50.000000000000000</double>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_29">
+                            <item>
+                             <widget class="QDial" name="ecce_dial">
+                              <property name="minimumSize">
+                               <size>
+                                <width>75</width>
+                                <height>75</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>75</width>
+                                <height>75</height>
+                               </size>
+                              </property>
+                              <property name="maximum">
+                               <number>99</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_34">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QSlider" name="eccentricity_toggle_menu_slider">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="maximum">
+                               <number>9</number>
+                              </property>
+                              <property name="value">
+                               <number>0</number>
+                              </property>
+                              <property name="sliderPosition">
+                               <number>0</number>
+                              </property>
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="tickPosition">
+                               <enum>QSlider::TicksAbove</enum>
+                              </property>
+                              <property name="tickInterval">
+                               <number>1</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
                      </item>
                     </layout>
                    </widget>
@@ -6914,155 +7232,6 @@ background:transparent;
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="tru_ano_toggle_menu_lbl_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>240</x>
-                       <y>360</y>
-                       <width>34</width>
-                       <height>84</height>
-                      </rect>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QLabel{
-color: rgb(131, 255, 160);
-background:transparent;
-}
-
-</string>
-                     </property>
-                     <property name="text">
-                      <string>ν</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="inclination_toggle_menu_lbl_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>240</x>
-                       <y>109</y>
-                       <width>34</width>
-                       <height>84</height>
-                      </rect>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QLabel{
-color: rgb(131, 255, 160);
-background:transparent;
-}
-
-</string>
-                     </property>
-                     <property name="text">
-                      <string>i</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="arg_of_per_toggle_menu_lbl_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>240</x>
-                       <y>277</y>
-                       <width>34</width>
-                       <height>83</height>
-                      </rect>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QLabel{
-color: rgb(131, 255, 160);
-background:transparent;
-}
-
-</string>
-                     </property>
-                     <property name="text">
-                      <string>ω</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="RAAN_toggle_menu_lbl_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>240</x>
-                       <y>193</y>
-                       <width>34</width>
-                       <height>84</height>
-                      </rect>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QLabel{
-color: rgb(131, 255, 160);
-background:transparent;
-}
-
-</string>
-                     </property>
-                     <property name="text">
-                      <string>Ω</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                    <widget class="QDial" name="dial_3">
-                     <property name="geometry">
-                      <rect>
-                       <x>430</x>
-                       <y>130</y>
-                       <width>50</width>
-                       <height>64</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QDial
-    {
-        background-color:QLinearGradient( 
-            x1: 0.177, y1: 0.004, x2: 0.831, y2: 0.911, 
-            stop: 0 white, 
-            stop: 0.061 white, 
-            stop: 0.066 lightgray, 
-            stop: 0.5 #242424, 
-            stop: 0.505 #000000,
-            stop: 0.827 #040404,
-            stop: 0.966 #292929,
-            stop: 0.983 #2e2e2e
-        )}</string>
                      </property>
                     </widget>
                    </widget>

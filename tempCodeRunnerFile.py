@@ -1,1 +1,1 @@
-QtCore.QTimer.singleShot(0, lambda: self.ui.progressBar_2.spb_setValue((0, 0, 0)))
+self.ui.type_of_input_toggle.hide()
