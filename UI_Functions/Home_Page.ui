@@ -4752,10 +4752,9 @@ background:transparent;
     
 	
 	background-color: rgb(0, 0, 0);
-	
     border: 0px solid;
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
 	border-radius:5.4px;
 	
     
@@ -4891,6 +4890,9 @@ border-radius: 8px;
                            <width>75</width>
                            <height>75</height>
                           </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QDial::handle { background-color: black }</string>
                          </property>
                         </widget>
                        </item>
@@ -7036,6 +7038,31 @@ background:transparent;
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                    <widget class="QDial" name="dial_3">
+                     <property name="geometry">
+                      <rect>
+                       <x>430</x>
+                       <y>130</y>
+                       <width>50</width>
+                       <height>64</height>
+                      </rect>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QDial
+    {
+        background-color:QLinearGradient( 
+            x1: 0.177, y1: 0.004, x2: 0.831, y2: 0.911, 
+            stop: 0 white, 
+            stop: 0.061 white, 
+            stop: 0.066 lightgray, 
+            stop: 0.5 #242424, 
+            stop: 0.505 #000000,
+            stop: 0.827 #040404,
+            stop: 0.966 #292929,
+            stop: 0.983 #2e2e2e
+        )}</string>
                      </property>
                     </widget>
                    </widget>

@@ -88,7 +88,7 @@ class MainWindow(QMainWindow):
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################
-        self.show()
+        
 
     ## APP EVENTS
     ########################################################################
@@ -416,8 +416,11 @@ class MainWindow(QMainWindow):
 
 # SPLASH SCREEN
 class SplashScreen(QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__(self)
+    def __init__(self, windowsize):
+        super().__init__()
+        self.windowsize = windowsize
+        self.setFixedSize(self.windowsize)
+        # QMainWindow.__init__(self)
         self.ui = Ui_SplashScreen()
         self.ui.setupUi(self)
 
@@ -564,5 +567,10 @@ class SplashScreen(QMainWindow):
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = SplashScreen()
+    screensize = app.desktop().availableGeometry().size()
+    
+    
+    window = SplashScreen(screensize/1.6)
+
+    window.show()
     sys.exit(app.exec_())

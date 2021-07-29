@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenqynhgB.ui'
+## Form generated from reading UI file 'splash_screenTwtEVx.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -38,19 +38,63 @@ class Ui_SplashScreen(object):
 "}")
         self.dropShadowFrame.setFrameShape(QFrame.StyledPanel)
         self.dropShadowFrame.setFrameShadow(QFrame.Raised)
-        self.app_description_lbl = QLabel(self.dropShadowFrame)
-        self.app_description_lbl.setObjectName(u"app_description_lbl")
-        self.app_description_lbl.setGeometry(QRect(0, 320, 831, 31))
+        self.verticalLayout_2 = QVBoxLayout(self.dropShadowFrame)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(10, 0, 10, 0)
+        self.logo_frame = QFrame(self.dropShadowFrame)
+        self.logo_frame.setObjectName(u"logo_frame")
+        self.logo_frame.setStyleSheet(u"background-color:transparent;")
+        self.logo_frame.setFrameShape(QFrame.StyledPanel)
+        self.logo_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout = QHBoxLayout(self.logo_frame)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(262, -1, 262, 0)
+        self.logo_lbl = QLabel(self.logo_frame)
+        self.logo_lbl.setObjectName(u"logo_lbl")
         font = QFont()
         font.setFamily(u"Segoe UI")
-        font.setPointSize(14)
-        self.app_description_lbl.setFont(font)
+        font.setPointSize(40)
+        self.logo_lbl.setFont(font)
+        self.logo_lbl.setStyleSheet(u"color: rgb(254, 121, 199);\n"
+"background-color:transparent;")
+        self.logo_lbl.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
+        self.logo_lbl.setScaledContents(True)
+        self.logo_lbl.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout.addWidget(self.logo_lbl)
+
+
+        self.verticalLayout_2.addWidget(self.logo_frame)
+
+        self.ProgressBarContainer = QFrame(self.dropShadowFrame)
+        self.ProgressBarContainer.setObjectName(u"ProgressBarContainer")
+        self.ProgressBarContainer.setMinimumSize(QSize(500, 60))
+        self.ProgressBarContainer.setMaximumSize(QSize(16777215, 60))
+        self.ProgressBarContainer.setStyleSheet(u"background:transparent")
+        self.ProgressBarContainer.setFrameShape(QFrame.StyledPanel)
+        self.ProgressBarContainer.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_2 = QHBoxLayout(self.ProgressBarContainer)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+
+        self.verticalLayout_2.addWidget(self.ProgressBarContainer)
+
+        self.app_description_lbl = QLabel(self.dropShadowFrame)
+        self.app_description_lbl.setObjectName(u"app_description_lbl")
+        self.app_description_lbl.setMinimumSize(QSize(500, 40))
+        self.app_description_lbl.setMaximumSize(QSize(16777215, 50))
+        font1 = QFont()
+        font1.setFamily(u"Segoe UI")
+        font1.setPointSize(14)
+        self.app_description_lbl.setFont(font1)
         self.app_description_lbl.setStyleSheet(u"color: rgb(98, 114, 164);\n"
 "background-color:transparent;")
         self.app_description_lbl.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_2.addWidget(self.app_description_lbl)
+
         self.progressBar = QProgressBar(self.dropShadowFrame)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setGeometry(QRect(50, 360, 731, 23))
         self.progressBar.setStyleSheet(u"QProgressBar {\n"
 "	\n"
 "	background-color: rgb(98, 114, 164,200);\n"
@@ -71,46 +115,22 @@ class Ui_SplashScreen(object):
 "\n"
 "}")
         self.progressBar.setValue(24)
-        self.logo_frame = QFrame(self.dropShadowFrame)
-        self.logo_frame.setObjectName(u"logo_frame")
-        self.logo_frame.setGeometry(QRect(0, -1, 831, 261))
-        self.logo_frame.setStyleSheet(u"background-color:transparent;")
-        self.logo_frame.setFrameShape(QFrame.StyledPanel)
-        self.logo_frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout = QHBoxLayout(self.logo_frame)
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(262, -1, 262, 0)
-        self.logo_lbl = QLabel(self.logo_frame)
-        self.logo_lbl.setObjectName(u"logo_lbl")
-        font1 = QFont()
-        font1.setFamily(u"Segoe UI")
-        font1.setPointSize(40)
-        self.logo_lbl.setFont(font1)
-        self.logo_lbl.setStyleSheet(u"color: rgb(254, 121, 199);\n"
-"background-color:transparent;")
-        self.logo_lbl.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
-        self.logo_lbl.setScaledContents(True)
-        self.logo_lbl.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout.addWidget(self.logo_lbl)
+        self.verticalLayout_2.addWidget(self.progressBar)
 
-        self.ProgressBarContainer = QFrame(self.dropShadowFrame)
-        self.ProgressBarContainer.setObjectName(u"ProgressBarContainer")
-        self.ProgressBarContainer.setGeometry(QRect(10, 250, 811, 61))
-        self.ProgressBarContainer.setStyleSheet(u"background:transparent")
-        self.ProgressBarContainer.setFrameShape(QFrame.StyledPanel)
-        self.ProgressBarContainer.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_2 = QHBoxLayout(self.ProgressBarContainer)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.loading_lbl = QLabel(self.dropShadowFrame)
         self.loading_lbl.setObjectName(u"loading_lbl")
-        self.loading_lbl.setGeometry(QRect(26, 400, 781, 41))
+        self.loading_lbl.setMinimumSize(QSize(500, 50))
+        self.loading_lbl.setMaximumSize(QSize(16777215, 60))
         font2 = QFont()
         font2.setPointSize(12)
         self.loading_lbl.setFont(font2)
         self.loading_lbl.setStyleSheet(u"background:transparent;")
         self.loading_lbl.setAlignment(Qt.AlignCenter)
         self.loading_lbl.setWordWrap(True)
+
+        self.verticalLayout_2.addWidget(self.loading_lbl)
+
 
         self.verticalLayout.addWidget(self.dropShadowFrame)
 
@@ -123,8 +143,8 @@ class Ui_SplashScreen(object):
 
     def retranslateUi(self, SplashScreen):
         SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"MainWindow", None))
-        self.app_description_lbl.setText(QCoreApplication.translate("SplashScreen", u"<strong>APP</strong> DESCRIPTION", None))
         self.logo_lbl.setText("")
+        self.app_description_lbl.setText(QCoreApplication.translate("SplashScreen", u"<strong>APP</strong> DESCRIPTION", None))
         self.loading_lbl.setText("")
     # retranslateUi
 
