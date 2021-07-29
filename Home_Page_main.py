@@ -346,8 +346,8 @@ class MainWindow(QMainWindow):
 
         r_planet = call.data(planet_name1,'radius')[0]
         r_soimb = float(rSOI)/r_planet
-        graph3d = SOI(planet_name,rSOI,r_soimb)
-        graph3d.run()
+        SOI3D(planet_name)
+        
             
 #########################################################################################################################
   
@@ -430,6 +430,16 @@ class SplashScreen(QMainWindow):
         ## REMOVE TITLE BAR
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+
+        screensize = app.desktop().availableGeometry().size()
+        window_size = screensize/1.6
+        sts = str(window_size)
+        window_height = int(sts[-4] + sts[-3] + sts[-2])
+        window_width = int(sts[-9] + sts[-8] + sts[-7])
+        logo_frame_height = window_height*21/38
+        self.ui.logo_frame.setFixedHeight(logo_frame_height)
+        self.ui.logo.setFixedWidth(logo_frame_height * 143/127)
 
 
         ## DROP SHADOW EFFECT
@@ -568,9 +578,8 @@ class SplashScreen(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     screensize = app.desktop().availableGeometry().size()
+    window_size = screensize/1.6
+    window = SplashScreen(window_size)
     
-    
-    window = SplashScreen(screensize/1.6)
-
     window.show()
     sys.exit(app.exec_())

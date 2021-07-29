@@ -45,7 +45,7 @@ class SOI3D(ShowBase):
         self.SOIModel.setTransparency(1)
         self.SOIModel.setColor(1, 1, 1, 0.1)
         self.SOIModel.reparentTo(render)
-
+        self.run()
 
 if __name__ == '__main__':
     viz = SOI3D("Uranus")

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenJJILAy.ui'
+## Form generated from reading UI file 'splash_screenRDGnQM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -50,22 +50,22 @@ class Ui_SplashScreen(object):
         self.logo_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.logo_frame)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(262, -1, 262, 0)
-        self.logo_lbl = QLabel(self.logo_frame)
-        self.logo_lbl.setObjectName(u"logo_lbl")
-        self.logo_lbl.setMinimumSize(QSize(286, 254))
-        self.logo_lbl.setMaximumSize(QSize(338, 300))
+        self.horizontalLayout.setContentsMargins(262, 0, 262, 0)
+        self.logo = QLabel(self.logo_frame)
+        self.logo.setObjectName(u"logo")
+        self.logo.setMinimumSize(QSize(286, 254))
+        self.logo.setMaximumSize(QSize(338, 300))
         font = QFont()
         font.setFamily(u"Segoe UI")
         font.setPointSize(40)
-        self.logo_lbl.setFont(font)
-        self.logo_lbl.setStyleSheet(u"color: rgb(254, 121, 199);\n"
+        self.logo.setFont(font)
+        self.logo.setStyleSheet(u"color: rgb(254, 121, 199);\n"
 "background-color:transparent;")
-        self.logo_lbl.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
-        self.logo_lbl.setScaledContents(True)
-        self.logo_lbl.setAlignment(Qt.AlignCenter)
+        self.logo.setPixmap(QPixmap(u"UI_Functions/Resources/MOPy Cover_transparent.png"))
+        self.logo.setScaledContents(True)
+        self.logo.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout.addWidget(self.logo_lbl)
+        self.horizontalLayout.addWidget(self.logo)
 
 
         self.verticalLayout_2.addWidget(self.logo_frame)
@@ -148,7 +148,7 @@ class Ui_SplashScreen(object):
 
     def retranslateUi(self, SplashScreen):
         SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"MainWindow", None))
-        self.logo_lbl.setText("")
+        self.logo.setText("")
         self.app_description_lbl.setText(QCoreApplication.translate("SplashScreen", u"<strong>APP</strong> DESCRIPTION", None))
         self.loading_lbl.setText("")
     # retranslateUi
