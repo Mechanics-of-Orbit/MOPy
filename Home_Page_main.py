@@ -434,7 +434,7 @@ class SplashScreen(QMainWindow):
 
         # screensize = app.desktop().availableGeometry().size()
         # window_size = screensize/1.6
-        # sts = str(window_size)
+        # sts = str(window_size)kk
         # window_height = int(sts[-4] + sts[-3] + sts[-2])
         # window_width = int(sts[-9] + sts[-8] + sts[-7])
         # logo_frame_height = window_height*21/38
