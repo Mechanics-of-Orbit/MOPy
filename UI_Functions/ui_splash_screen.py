@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenTwtEVx.ui'
+## Form generated from reading UI file 'splash_screenJJILAy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -44,6 +44,7 @@ class Ui_SplashScreen(object):
         self.verticalLayout_2.setContentsMargins(10, 0, 10, 0)
         self.logo_frame = QFrame(self.dropShadowFrame)
         self.logo_frame.setObjectName(u"logo_frame")
+        self.logo_frame.setMaximumSize(QSize(16777215, 250))
         self.logo_frame.setStyleSheet(u"background-color:transparent;")
         self.logo_frame.setFrameShape(QFrame.StyledPanel)
         self.logo_frame.setFrameShadow(QFrame.Raised)
@@ -52,6 +53,8 @@ class Ui_SplashScreen(object):
         self.horizontalLayout.setContentsMargins(262, -1, 262, 0)
         self.logo_lbl = QLabel(self.logo_frame)
         self.logo_lbl.setObjectName(u"logo_lbl")
+        self.logo_lbl.setMinimumSize(QSize(286, 254))
+        self.logo_lbl.setMaximumSize(QSize(338, 300))
         font = QFont()
         font.setFamily(u"Segoe UI")
         font.setPointSize(40)
@@ -82,7 +85,7 @@ class Ui_SplashScreen(object):
         self.app_description_lbl = QLabel(self.dropShadowFrame)
         self.app_description_lbl.setObjectName(u"app_description_lbl")
         self.app_description_lbl.setMinimumSize(QSize(500, 40))
-        self.app_description_lbl.setMaximumSize(QSize(16777215, 50))
+        self.app_description_lbl.setMaximumSize(QSize(16777215, 40))
         font1 = QFont()
         font1.setFamily(u"Segoe UI")
         font1.setPointSize(14)
@@ -95,12 +98,14 @@ class Ui_SplashScreen(object):
 
         self.progressBar = QProgressBar(self.dropShadowFrame)
         self.progressBar.setObjectName(u"progressBar")
+        self.progressBar.setMinimumSize(QSize(0, 25))
+        self.progressBar.setMaximumSize(QSize(16777215, 25))
         self.progressBar.setStyleSheet(u"QProgressBar {\n"
 "	\n"
 "	background-color: rgb(98, 114, 164,200);\n"
 "	color: rgb(200, 200, 200);\n"
 "	border-style: none;\n"
-"	border-radius: 10px;\n"
+"	border-radius: 12px;\n"
 "	text-align: center;\n"
 "}\n"
 "QProgressBar::chunk{\n"
@@ -120,10 +125,10 @@ class Ui_SplashScreen(object):
 
         self.loading_lbl = QLabel(self.dropShadowFrame)
         self.loading_lbl.setObjectName(u"loading_lbl")
-        self.loading_lbl.setMinimumSize(QSize(500, 50))
-        self.loading_lbl.setMaximumSize(QSize(16777215, 60))
+        self.loading_lbl.setMinimumSize(QSize(500, 70))
+        self.loading_lbl.setMaximumSize(QSize(16777215, 70))
         font2 = QFont()
-        font2.setPointSize(12)
+        font2.setPointSize(11)
         self.loading_lbl.setFont(font2)
         self.loading_lbl.setStyleSheet(u"background:transparent;")
         self.loading_lbl.setAlignment(Qt.AlignCenter)

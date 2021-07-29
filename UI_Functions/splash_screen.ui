@@ -65,6 +65,12 @@
        </property>
        <item>
         <widget class="QFrame" name="logo_frame">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>250</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">background-color:transparent;</string>
          </property>
@@ -86,6 +92,18 @@
           </property>
           <item>
            <widget class="QLabel" name="logo_lbl">
+            <property name="minimumSize">
+             <size>
+              <width>286</width>
+              <height>254</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>338</width>
+              <height>300</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <family>Segoe UI</family>
@@ -150,7 +168,7 @@ background-color:transparent;</string>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>50</height>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
@@ -173,13 +191,25 @@ background-color:transparent;</string>
        </item>
        <item>
         <widget class="QProgressBar" name="progressBar">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>25</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">QProgressBar {
 	
 	background-color: rgb(98, 114, 164,200);
 	color: rgb(200, 200, 200);
 	border-style: none;
-	border-radius: 10px;
+	border-radius: 12px;
 	text-align: center;
 }
 QProgressBar::chunk{
@@ -204,18 +234,18 @@ QProgressBar::chunk{
          <property name="minimumSize">
           <size>
            <width>500</width>
-           <height>50</height>
+           <height>70</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>60</height>
+           <height>70</height>
           </size>
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>11</pointsize>
           </font>
          </property>
          <property name="styleSheet">

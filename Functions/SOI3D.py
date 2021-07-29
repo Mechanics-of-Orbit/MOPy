@@ -8,9 +8,9 @@ show-scene-graph-analyzer-meter true
 loadPrcFileData("", confVars)
 
 from direct.showbase.ShowBase import ShowBase
-from ModelLoader import loadMyModel
-from Sections.soi import SOICalc
-from Sections.DB.call_database import call
+from Functions.ModelLoader import loadMyModel
+from Functions.Sections.soi import SOICalc
+from Functions.Sections.DB.call_database import call
 
 class SOI3D(ShowBase):
     def __init__(self, MinorBody):
@@ -19,8 +19,8 @@ class SOI3D(ShowBase):
         scale = 0.001
 
         #Loading the BG Stars
-        self.stars = self.loader.loadModel("Assets/Models/solar_sky_sphere")
-        self.stars_tex = self.loader.loadTexture("Assets/Models/hi_res_tex/stars.jpg")
+        self.stars = self.loader.loadModel("Functions/Assets/Models/solar_sky_sphere")
+        self.stars_tex = self.loader.loadTexture("Functions/Assets/Models/hi_res_tex/stars.jpg")
         self.stars.setTexture(self.stars_tex,1)
         
         self.stars.reparentTo(render)
@@ -47,7 +47,7 @@ class SOI3D(ShowBase):
         self.SOIModel.reparentTo(render)
 
 
-
-viz = SOI3D("Uranus")
-viz.run()
+if __name__ == '__main__':
+    viz = SOI3D("Uranus")
+    viz.run()
 

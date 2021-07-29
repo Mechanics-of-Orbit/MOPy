@@ -15,8 +15,8 @@ from jsontrial import fun_fact
 from UI_Functions.Circular_Progress.py_circular_progress import PyCircularProgress
 from UI_Functions.ui_splash_screen import Ui_SplashScreen
 from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
-from Functions.SOI3D import SOI
-from Functions.Sections.soi import SoI
+from Functions.SOI3D import SOI3D
+from Functions.Sections.soi import *
 from Functions.Sections.CoOE import Calculate
 from Functions.Sections.DB.call_database import call,raund
 from UI_Functions.Home_Page import Ui_MainWindow
