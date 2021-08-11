@@ -102,12 +102,17 @@ class UIFunctions(MainWindow):
 
         
 
-        # self.ui.semi_major_axis_toggle_menu_slider.sliderPressed.connect(lambda :Home_Page_main.MainWindow.slider_changed(self))
+        self.ui.ecce_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_dial_changed(self))
 
         
-        self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.dial_changed(self))
+        self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_dial_changed(self))
+
+        self.ui.semi_major_axis_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_slider_single_step(self))
+
+        self.ui.eccentricity_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_slider_single_step(self))
 
         
+
     def returnStatus():
         return GLOBAL_STATE
 
@@ -124,13 +129,6 @@ class UIFunctions(MainWindow):
 
                 self.ui.stackedWidget_2.setCurrentIndex(1)
 
-                # self.ui.semi_major_axis_toggle_menu_lbl.setText('Semi-major axis')
-                # self.ui.eccentricity_toggle_menu_lbl.setText('Eccentricity')
-                # self.ui.inclination_toggle_menu_lbl.setText('Inclination')
-                # self.ui.RAAN_toggle_menu_lbl.setText('RAAN')
-                # self.ui.arg_of_per_toggle_menu_lbl.setText('Arg_of_Per')
-                # self.ui.tru_ano_toggle_menu_lbl.setText('True_anomaly')
-
                 self.ui.Semi_dial.show()
                 self.ui.ecce_dial.show()
 
@@ -138,17 +136,11 @@ class UIFunctions(MainWindow):
 
                 self.ui.semi_major_axis_toggle_menu_spinbox.show()
                 self.ui.eccentricity_toggle_menu_spinbox.show()
-                self.ui.inclination_toggle_menu_spinbox.show()
-                self.ui.RAAN_toggle_menu_spinbox.show()
-                self.ui.arg_of_per_toggle_menu_spinbox.show()
-                self.ui.tru_ano_toggle_menu_spinbox.show()
+                
 
                 self.ui.semi_major_axis_toggle_menu_slider.show()
                 self.ui.eccentricity_toggle_menu_slider.show()
-                self.ui.inclination_toggle_menu_slider.show()
-                self.ui.RAAN_toggle_menu_slider.show()
-                self.ui.arg_of_per_toggle_menu_slider.show()
-                self.ui.tru_ano_toggle_menu_slider.show()
+                
                 
             elif width != standard:
 
@@ -164,17 +156,11 @@ class UIFunctions(MainWindow):
 
                 self.ui.semi_major_axis_toggle_menu_spinbox.hide()
                 self.ui.eccentricity_toggle_menu_spinbox.hide()
-                self.ui.inclination_toggle_menu_spinbox.hide()
-                self.ui.RAAN_toggle_menu_spinbox.hide()
-                self.ui.arg_of_per_toggle_menu_spinbox.hide()
-                self.ui.tru_ano_toggle_menu_spinbox.hide()
+                
 
                 self.ui.semi_major_axis_toggle_menu_slider.hide()
                 self.ui.eccentricity_toggle_menu_slider.hide()
-                self.ui.inclination_toggle_menu_slider.hide()
-                self.ui.RAAN_toggle_menu_slider.hide()
-                self.ui.arg_of_per_toggle_menu_slider.hide()
-                self.ui.tru_ano_toggle_menu_slider.hide()
+                
 
         
         self.animation = QPropertyAnimation(self.ui.VPCO_menu_toggle_frame,b"minimumWidth")

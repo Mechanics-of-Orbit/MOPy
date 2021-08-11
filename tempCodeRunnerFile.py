@@ -1,1 +1,1 @@
-self.ui.type_of_input_toggle.hide()
+horizontalLayout_2

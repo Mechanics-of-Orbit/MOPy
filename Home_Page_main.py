@@ -22,6 +22,8 @@ from Functions.Sections.DB.call_database import call,raund
 from UI_Functions.Home_Page import Ui_MainWindow
 from UI_Functions.Home_Page_functions import *
 
+
+
 path.append('..\Functions\Sections')
 
 # GLOBALS
@@ -53,6 +55,7 @@ class MainWindow(QMainWindow):
         self.ui.Semi_dial.setNotchesVisible(1)
         self.ui.ecce_dial.setNotchesVisible(1)
         
+        
 
         # Hidding some of the widgets in VPCO output
 
@@ -63,21 +66,26 @@ class MainWindow(QMainWindow):
 
         self.ui.semi_major_axis_toggle_menu_spinbox.hide()
         self.ui.eccentricity_toggle_menu_spinbox.hide()
-        self.ui.inclination_toggle_menu_spinbox.hide()
-        self.ui.RAAN_toggle_menu_spinbox.hide()
-        self.ui.arg_of_per_toggle_menu_spinbox.hide()
-        self.ui.tru_ano_toggle_menu_spinbox.hide()
+        
 
         self.ui.semi_major_axis_toggle_menu_slider.hide()
         self.ui.eccentricity_toggle_menu_slider.hide()
-        self.ui.inclination_toggle_menu_slider.hide()
-        self.ui.RAAN_toggle_menu_slider.hide()
-        self.ui.arg_of_per_toggle_menu_slider.hide()
-        self.ui.tru_ano_toggle_menu_slider.hide()
+
+        # Dial with circular Progress Bar
+        # self.dial_progress = CircularProgress()
+        # self.dial_progress.setMinimumSize(self.dial_progress.width, self.dial_progress.height)
+        # self.dial_progress.setMinimumSize(QSize(60, 60))
+        # self.dial_progress.setMaximumSize(QSize(60, 60))
+
+        # self.layyout = QVBoxLayout(self.ui.dial_frame)
+        # self.layyout.addWidget(self.dial_progress)
+        
 
 
         # Connecting the toggle menu btn to the expand function
         self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 150, True))
+        
+        
 
         # MOVE WINDOW
         def moveWindow(event):
@@ -90,7 +98,7 @@ class MainWindow(QMainWindow):
                 self.move(self.pos() + event.globalPos() - self.dragPos)
                 self.dragPos = event.globalPos()
                 event.accept()
-
+            
         # SET TITLE BAR
         self.ui.title_bar.mouseMoveEvent = moveWindow
 
@@ -400,47 +408,56 @@ class MainWindow(QMainWindow):
         self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
 
 #########################################################################################################################
-    
+                                             ##---->>((( New VPCO )))<<----##
+
     # Slider pressed and released functions for sliders in the VPCO toggle menu
 
-    def semi_maj_slider_changed(self):
-        slider_value = self.ui.semi_major_axis_toggle_menu_slider.value()
-        if slider_value == 0:
-            step = 10
-        elif slider_value == 1:
-            step = 100
-        elif slider_value == 2:
-            step = 1000
-        elif slider_value == 3:
-            step = 10000
-        elif slider_value == 4:
-            step = 100000
-        elif slider_value == 5:
-            step = 1000000
-        elif slider_value == 6:
-            step = 10000000
-        elif slider_value == 7:
-            step = 100000000
-        elif slider_value == 8:
-            step = 1000000000
-        elif slider_value == 9:
-            step = 10000000000
-        return step
+    def semi_slider_changed(self):
+        semi_step_dict = {0:10, 1:100, 2:1000, 3:10000, 4:100000, 5:1000000, 6:10000000, 7:100000000, 8:1000000000, 9:10000000000}
+        semi_slider_value = self.ui.semi_major_axis_toggle_menu_slider.value()
+        semi_step = semi_step_dict[semi_slider_value]
+        return semi_step
 
+    def ecce_slider_changed(self):
+        ecce_step_dict = {0:0.01, 1:0.05, 2:0.1, 3:0.5, 4:1, 5:2, 6:5, 7:10}
+        ecce_slider_value = self.ui.eccentricity_toggle_menu_slider.value()
+        ecce_step = ecce_step_dict[ecce_slider_value]
+        return ecce_step
 
-    def dial_changed(self):
-        step = MainWindow.semi_maj_slider_changed(self)
+    def semi_dial_changed(self):
+        semi_step = MainWindow.semi_slider_changed(self)
         sma = self.ui.semi_major_axis_toggle_menu_spinbox.value()
-        direction = MainWindow.dial_direction(self)
+        direction = MainWindow.semi_dial_direction(self)
         if direction == "Clockwise":
-            sma += step
+            sma += semi_step 
         elif direction == "Anti-Clockwise":
-            sma -= step
+            sma -= semi_step
         else:
             sma = sma
         self.ui.semi_major_axis_toggle_menu_spinbox.setValue(sma)
     
-    def dial_direction(self):
+    def semi_slider_single_step(self):
+        semi_step = MainWindow.semi_slider_changed(self)
+        self.ui.semi_major_axis_toggle_menu_single_step.setValue(semi_step)
+        
+    def ecce_slider_single_step(self):
+        ecce_step = MainWindow.ecce_slider_changed(self)
+        self.ui.eccentricity_toggle_menu_single_step.setValue(ecce_step)
+    
+    def ecce_dial_changed(self):
+        ecce_step = MainWindow.ecce_slider_changed(self)
+        ecce = self.ui.eccentricity_toggle_menu_spinbox.value()
+        direction = MainWindow.ecce_dial_direction(self)
+        if direction == "Clockwise":
+            ecce += ecce_step 
+        elif direction == "Anti-Clockwise":
+            ecce -= ecce_step 
+        else:
+            ecce = ecce
+        self.ui.eccentricity_toggle_menu_spinbox.setValue(ecce)
+        self.ui.eccentricity_toggle_menu_single_step.setValue(ecce_step)
+
+    def semi_dial_direction(self):
         global a
         current_value = self.ui.Semi_dial.value()
         difference = current_value - a
@@ -449,6 +466,22 @@ class MainWindow(QMainWindow):
         minimum_dial = self.ui.Semi_dial.maximum()
         maximum_dial = self.ui.Semi_dial.minimum()
         corner_case = [minimum_dial, maximum_dial]
+        direction = self.direction_of_dial(current_value,corner_case,previous_value, difference)
+        return direction
+
+    def ecce_dial_direction(self):
+        global a
+        current_value = self.ui.ecce_dial.value()
+        difference = current_value - a
+        previous_value = current_value - difference
+        a = current_value
+        minimum_dial = self.ui.ecce_dial.maximum()
+        maximum_dial = self.ui.ecce_dial.minimum()
+        corner_case = [minimum_dial, maximum_dial]
+        direction = self.direction_of_dial(current_value,corner_case,previous_value, difference)
+        return direction
+
+    def direction_of_dial(self, current_value,corner_case,previous_value, difference):
         if current_value in corner_case and previous_value in corner_case:
             if difference < 0:
                 direction = 'Clockwise'
@@ -464,6 +497,34 @@ class MainWindow(QMainWindow):
             direction = "No Change"
         return direction
 
+    ########################################################################################
+                                    ##--->>((( Test )))---##
+    # def test_dial_changed(self):
+    #     test_step = MainWindow.ecce_slider_changed(self)
+    #     test = self.ui.eccentricity_toggle_menu_spinbox.value()
+    #     direction = MainWindow.test_dial_direction(self)
+    #     if direction == "Clockwise":
+    #         test += test_step 
+    #     elif direction == "Anti-Clockwise":
+    #         test -= test_step 
+    #     else:
+    #         test = test
+    #     self.ui.eccentricity_toggle_menu_spinbox.setValue(test)
+    #     self.ui.eccentricity_toggle_menu_single_step.setValue(test_step)
+
+    # def test_dial_direction(self):
+    #     global a
+    #     current_value = self.ui.test_dial.value()
+    #     difference = current_value - a
+    #     previous_value = current_value - difference
+    #     a = current_value
+    #     minimum_dial = self.ui.test_dial.maximum()
+    #     maximum_dial = self.ui.test_dial.minimum()
+    #     corner_case = [minimum_dial, maximum_dial]
+    #     direction = self.direction_of_dial(current_value,corner_case,previous_value, difference)
+    #     return direction
+
+###########################################################################################################################################################
 # SPLASH SCREEN
 class SplashScreen(QMainWindow):
     def __init__(self, windowsize):
@@ -525,42 +586,6 @@ class SplashScreen(QMainWindow):
         
         self.ui.loading_lbl.setText("<strong>Do you know: </strong>"+ fun_fact())
 
-        ### Spiral Progress BAR
-
-        # Setting the Minimum value 
-        # self.ui.progressBar_2.spb_setMinimum((0, 0, 0))
-
-        # # Setting the maximum value 
-        # self.ui.progressBar_2.spb_setMaximum((120, 220, 320))
-
-        # # Set progress value
-        # x = 100
-        # self.ui.progressBar_2.spb_setValue((x, x*2, x*3))
-
-        # #Set Progress Color
-        # self.ui.progressBar_2.spb_lineColor(((233, 152, 6), (6, 201, 233), (233, 6, 88)))
-
-        # # Setting the initial position of the progress bar
-        # self.ui.progressBar_2.spb_setInitialPos(('West', 'South', 'East'))
-
-        # # Setting the direction of Progress of ProgressBar
-        # self.ui.progressBar_2.spb_setDirection(('Clockwise', 'Clockwise', 'Clockwise'))
-
-        # # Set line width of Progressbar
-        # self.ui.progressBar_2.spb_lineWidth(4)
-
-        # # Setting the gap width between the progress Bar
-        # self.ui.progressBar_2.spb_setGap(4)
-
-        # # Set line Style
-        # self.ui.progressBar_2.spb_lineStyle(('SolidLine', 'SolidLine', 'SolidLine'))
-
-        # # Set end cap to progress Bar
-        # self.ui.progressBar_2.spb_lineCap(('RoundCap','RoundCap', 'RoundCap'))
-
-        # # Hide the path followed by the progress Bar
-        # self.ui.progressBar_2.spb_setPathHidden(True)
-
         # Defining Spin Loader
         self.circular_progress_1 = PyCircularProgress(
             value=45,
@@ -579,14 +604,7 @@ class SplashScreen(QMainWindow):
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         self.show()
-        ## ==> END ##
-
-        # self.timer_2 = QtCore.QTimer() 
-        # self.timer_2.timeout.connect(self.progress_2)
-        # self.timer_2.start(5)
-
-        # Set all the progress bar to zero on start
-        # QtCore.QTimer.singleShot(0, lambda: self.ui.progressBar_2.spb_setValue((0, 0, 0)))
+        
 
     ## ==> APP FUNCTIONS
     ########################################################################
@@ -612,19 +630,6 @@ class SplashScreen(QMainWindow):
         # INCREASE COUNTER
         counter += 1  
 
-    # def progress_2(self):
-    #         global progress_val
-    #         # Set Progress Values
-    #         self.ui.progressBar_2.spb_setValue((progress_val, progress_val*2, progress_val*3))
-
-    #         # Reset Progresses if the maximum value is reached
-    #         if progress_val > 120:
-    #             progress_val = 0
-
-    #         # Increase progress value by one, every 60ms
-
-    #         progress_val += 1
-        
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     screensize = app.desktop().availableGeometry().size()
