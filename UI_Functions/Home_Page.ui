@@ -5173,7 +5173,7 @@ border-radius: 8px;
                                <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
-        image: url(UI_Functions/Resources/right_arrow.svg);
+        image: url(UI_Functions/Resources/right_arrow_white.svg);
         width: 12px;
         height: 20px;  	
     }
@@ -5181,7 +5181,7 @@ border-radius: 8px;
  
     QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
         subcontrol-position:left;
-        image: url(UI_Functions/Resources/left_arrow.svg);
+        image: url(UI_Functions/Resources/left_arrow_white.svg);
         width: 12px;
         height: 20px;
     }
@@ -5233,7 +5233,7 @@ border-radius: 8px;
                                <string notr="true"/>
                               </property>
                               <property name="maximum">
-                               <number>9</number>
+                               <number>5</number>
                               </property>
                               <property name="pageStep">
                                <number>10</number>
@@ -5460,7 +5460,7 @@ border-radius: 8px;
                                <string notr="true">    /*spinbox lift style*/
     QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
         subcontrol-position:right;
-        image: url(UI_Functions/Resources/right_arrow.svg);
+        image: url(UI_Functions/Resources/right_arrow_white.svg);
         width: 12px;
         height: 20px;  	
     }
@@ -5468,7 +5468,7 @@ border-radius: 8px;
  
     QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
         subcontrol-position:left;
-        image: url(UI_Functions/Resources/left_arrow.svg);
+        image: url(UI_Functions/Resources/left_arrow_white.svg);
         width: 12px;
         height: 20px;
     }

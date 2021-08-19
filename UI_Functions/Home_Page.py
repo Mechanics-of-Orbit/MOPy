@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageXhvFXb.ui'
+## Form generated from reading UI file 'Home_PageCUGjvw.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -2352,7 +2352,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_single_step.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
-"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
+"        image: url(UI_Functions/Resources/right_arrow_white.svg);\n"
 "        width: 12px;\n"
 "        height: 20px;  	\n"
 "    }\n"
@@ -2360,7 +2360,7 @@ class Ui_MainWindow(object):
 " \n"
 "    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
 "        subcontrol-position:left;\n"
-"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
+"        image: url(UI_Functions/Resources/left_arrow_white.svg);\n"
 "        width: 12px;\n"
 "        height: 20px;\n"
 "    }\n"
@@ -2373,8 +2373,8 @@ class Ui_MainWindow(object):
 "        height: 20px;       \n"
 "    }\n"
 "      \n"
-"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
-                        "ton:pressed{\n"
+"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinB"
+                        "ox::down-button:pressed{\n"
 "        subcontrol-position:left;\n"
 "        image: url(:/ico/pushed_left.png);\n"
 "        width: 12px;\n"
@@ -2400,7 +2400,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_slider = QSlider(self.frame_27)
         self.semi_major_axis_toggle_menu_slider.setObjectName(u"semi_major_axis_toggle_menu_slider")
         self.semi_major_axis_toggle_menu_slider.setStyleSheet(u"")
-        self.semi_major_axis_toggle_menu_slider.setMaximum(9)
+        self.semi_major_axis_toggle_menu_slider.setMaximum(5)
         self.semi_major_axis_toggle_menu_slider.setPageStep(10)
         self.semi_major_axis_toggle_menu_slider.setValue(0)
         self.semi_major_axis_toggle_menu_slider.setSliderPosition(0)
@@ -2536,7 +2536,7 @@ class Ui_MainWindow(object):
         self.eccentricity_toggle_menu_single_step.setStyleSheet(u"    /*spinbox lift style*/\n"
 "    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;\n"
 "        subcontrol-position:right;\n"
-"        image: url(UI_Functions/Resources/right_arrow.svg);\n"
+"        image: url(UI_Functions/Resources/right_arrow_white.svg);\n"
 "        width: 12px;\n"
 "        height: 20px;  	\n"
 "    }\n"
@@ -2544,7 +2544,7 @@ class Ui_MainWindow(object):
 " \n"
 "    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;\n"
 "        subcontrol-position:left;\n"
-"        image: url(UI_Functions/Resources/left_arrow.svg);\n"
+"        image: url(UI_Functions/Resources/left_arrow_white.svg);\n"
 "        width: 12px;\n"
 "        height: 20px;\n"
 "    }\n"
@@ -2557,8 +2557,8 @@ class Ui_MainWindow(object):
 "        height: 20px;       \n"
 "    }\n"
 "      \n"
-"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-but"
-                        "ton:pressed{\n"
+"	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinB"
+                        "ox::down-button:pressed{\n"
 "        subcontrol-position:left;\n"
 "        image: url(:/ico/pushed_left.png);\n"
 "        width: 12px;\n"
