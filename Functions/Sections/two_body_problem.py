@@ -52,13 +52,6 @@ def diffy_q(t,y,mu):
 
 if __name__ == '__main__':
 
-    mu = 3.986e5
-    rp = 10000
-    ra = 20000
-    e = (ra-rp)/(ra+rp)
-    h = (rp*(1+e)*mu)**0.5
-    theta = np.linspace(0, 2*np.pi, 1000)
-    r = (h**2/mu)/(1-e*cos(theta))    
     r_mag = earth_radius + 500
     v_mag = np.sqrt(earth_mu/r_mag)
 
