@@ -4,8 +4,8 @@ from PySide2.QtGui import *
 import sys
 
 class CircularProgress(QWidget):
-    def __init__(self):
-        QWidget.__init__(self)
+    def __init__(self, parent = None):
+        super(CircularProgress, self).__init__(parent)
 
         # Custom Properties
         self.value = 0
@@ -35,7 +35,7 @@ class CircularProgress(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground)
 
         # Set Default size without layout
-        self.resize(self.width, self.height)
+        # self.resize(self.width, self.height)
         self.show()
 
     def add_shadow(self, enable):
@@ -81,12 +81,12 @@ class CircularProgress(QWidget):
                 penn.setWidth(self.progress_width)
                 penn.setColor(QColor(self.bg_color))
                 paint.setPen(penn)
-                paint.drawArc(margin_x+1, margin_y+1, width-5, height-5, 0, 360 * 16)
+                paint.drawArc(margin_x, margin_y, width-5, height-5, 0, 360 * 16)
 
             # Create the arc of the circular bar
             paint.setPen(pen)
             
-            paint.drawArc(margin_x+1, margin_y+1, width-5, height-5, -90 * 16, -value * 16)
+            paint.drawArc(margin_x, margin_y, width-5, height-5, -90 * 16, -value * 16)
             # End Painting
             paint.end()
     

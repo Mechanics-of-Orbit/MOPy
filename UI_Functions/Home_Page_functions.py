@@ -111,6 +111,8 @@ class UIFunctions(MainWindow):
 
         self.ui.eccentricity_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_slider_single_step(self))
 
+        self.ui.type_of_input_toggle.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.toggle_option_index(self))
+
         
 
     def returnStatus():

@@ -237,5 +237,3 @@ class PyCircularProgress(QMainWindow):
 
         # END
         paint.end()
-
-

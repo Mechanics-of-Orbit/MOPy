@@ -24,6 +24,7 @@ from UI_Functions.Home_Page_functions import *
 
 
 
+
 path.append('..\Functions\Sections')
 
 # GLOBALS
@@ -72,18 +73,12 @@ class MainWindow(QMainWindow):
         self.ui.eccentricity_toggle_menu_slider.hide()
 
         # Dial with circular Progress Bar
-        # self.dial_progress = CircularProgress()
-        # self.dial_progress.setMinimumSize(self.dial_progress.width, self.dial_progress.height)
-        # self.dial_progress.setMinimumSize(QSize(60, 60))
-        # self.dial_progress.setMaximumSize(QSize(60, 60))
-
-        # self.layyout = QVBoxLayout(self.ui.dial_frame)
-        # self.layyout.addWidget(self.dial_progress)
+        
+        
         
 
-
         # Connecting the toggle menu btn to the expand function
-        self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 150, True))
+        self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 170, True))
         
         
 
@@ -104,11 +99,13 @@ class MainWindow(QMainWindow):
 
         ## ==> SET UI DEFINITIONS
         UIFunctions.uiDefinitions(self)
-    
+        
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         
+
+   
 
     ## APP EVENTS
     ########################################################################
@@ -167,21 +164,10 @@ class MainWindow(QMainWindow):
     #VPCO_a_e_calculate_btn
     def vpco_ae_cal_btn(self):
         self.ui.stackedWidget.setCurrentIndex(4)
+        index_dict = {1:0, 2:1, 3:2, 4:3, 5:4}
         index1 = self.ui.vpco_input_type.currentIndex()
-        if index1 == 1:
-            self.ui.VPCO_output_stack.setCurrentIndex(0)
-            
-        elif index1 == 2:
-            self.ui.VPCO_output_stack.setCurrentIndex(1)
-            
-        elif index1 == 3:
-            self.ui.VPCO_output_stack.setCurrentIndex(2)
-            
-        elif index1 == 4:
-            self.ui.VPCO_output_stack.setCurrentIndex(3)
-            
-        elif index1 == 5:
-            self.ui.VPCO_output_stack.setCurrentIndex(4)
+        setIndex = index_dict[index1]
+        self.ui.VPCO_output_stack.setCurrentIndex(setIndex)
             
         e = self.ui.eccentricity_inpt_ae.text()
         e = float(e)
@@ -497,6 +483,13 @@ class MainWindow(QMainWindow):
             direction = "No Change"
         return direction
 
+    def toggle_option_index(self):
+        toggle_dict = {0:1,1:2,2:3}
+        dropdown_toggle_index = self.ui.type_of_input_toggle.currentIndex()
+        print(dropdown_toggle_index)
+        screen_toggle_menu = toggle_dict[dropdown_toggle_index]
+        self.ui.stackedWidget_2.setCurrentIndex(screen_toggle_menu)
+
     ########################################################################################
                                     ##--->>((( Test )))---##
     # def test_dial_changed(self):
@@ -634,7 +627,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     screensize = app.desktop().availableGeometry().size()
     window_size = screensize/1.6
-    window = SplashScreen(window_size)
-    
+    # window = SplashScreen(window_size)
+    window = MainWindow()
     window.show()
     sys.exit(app.exec_())

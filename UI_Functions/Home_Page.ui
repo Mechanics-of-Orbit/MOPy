@@ -990,7 +990,7 @@ QPushButton:hover{
 </string>
                       </property>
                       <property name="text">
-                       <string>   JulianDay Calculation:</string>
+                       <string>            JulianDay Calculation:</string>
                       </property>
                      </widget>
                     </item>
@@ -1948,7 +1948,7 @@ QLabel:hover{
                        <item>
                         <widget class="QFrame" name="frame_23">
                          <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
+                          <enum>QFrame::NoFrame</enum>
                          </property>
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
@@ -4780,7 +4780,7 @@ QComboBox:hover{
                    <property name="currentIndex">
                     <number>0</number>
                    </property>
-                   <widget class="QWidget" name="all_elements_show_page">
+                   <widget class="QWidget" name="all_classic_orbital_elements_show_page">
                     <layout class="QVBoxLayout" name="verticalLayout_24">
                      <property name="spacing">
                       <number>0</number>
@@ -4949,7 +4949,7 @@ background:transparent;
                      </item>
                     </layout>
                    </widget>
-                   <widget class="QWidget" name="Toggle_Menu_page_layout_holder_2">
+                   <widget class="QWidget" name="Semi_major_axis_and_Eccentricity_page">
                     <property name="styleSheet">
                      <string notr="true">QSlider::handle:horizontal {
     
@@ -4967,7 +4967,7 @@ background:transparent;
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_3">
                      <item>
-                      <widget class="QFrame" name="frame_27">
+                      <widget class="QFrame" name="Semi_major_axis_toggle_frame">
                        <property name="styleSheet">
                         <string notr="true">QFrame{
 
@@ -4987,6 +4987,21 @@ QFrame:hover{
                         <enum>QFrame::Raised</enum>
                        </property>
                        <layout class="QHBoxLayout" name="horizontalLayout_26">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>8</number>
+                        </property>
                         <item>
                          <layout class="QVBoxLayout" name="Semi_major_axis_toggle_menu_layout">
                           <property name="spacing">
@@ -5263,7 +5278,7 @@ border-radius: 8px;
                       </widget>
                      </item>
                      <item>
-                      <widget class="QFrame" name="frame_41">
+                      <widget class="QFrame" name="Eccentricity_toggle_frame">
                        <property name="styleSheet">
                         <string notr="true">QFrame{
 
@@ -5283,6 +5298,21 @@ QFrame:hover{
                         <enum>QFrame::Raised</enum>
                        </property>
                        <layout class="QHBoxLayout" name="horizontalLayout_31">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>8</number>
+                        </property>
                         <item>
                          <layout class="QVBoxLayout" name="eccentricity_toggle_menu_layout">
                           <property name="spacing">
@@ -5548,6 +5578,1842 @@ border-radius: 8px;
                      </item>
                     </layout>
                    </widget>
+                   <widget class="QWidget" name="Radius_of_apoapsis_and_periapsis_page">
+                    <layout class="QVBoxLayout" name="verticalLayout_27">
+                     <item>
+                      <widget class="QFrame" name="Radius_of_Apoapsis_frame">
+                       <property name="styleSheet">
+                        <string notr="true">QFrame{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 15px;
+background:transparent;
+}
+
+QFrame:hover{
+	border: 3px solid white;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_37">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>8</number>
+                        </property>
+                        <item>
+                         <layout class="QVBoxLayout" name="Radius_of_Apoapsis_frame_layout">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_38">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="Radius_of_Apoapsis_frame_lbl">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+border:none;
+}
+
+</string>
+                              </property>
+                              <property name="text">
+                               <string>Radius of Apoapsis</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_39">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QDoubleSpinBox" name="Radius_of_Apoapsis_spinbox">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="toolTip">
+                               <string>Semi-Major Axis</string>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">    /*spinbox lift style*/
+    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
+        subcontrol-position:right;
+        image: url(UI_Functions/Resources/right_arrow.svg);
+        width: 12px;
+        height: 20px;  	
+    }
+
+ 
+    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
+        subcontrol-position:left;
+        image: url(UI_Functions/Resources/left_arrow.svg);
+        width: 12px;
+        height: 20px;
+    }
+
+     /*Button press style*/
+    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
+        subcontrol-position:right;
+        image: url(:/ico/pushed_right.png);
+        width: 12px;
+        height: 20px;       
+    }
+      
+	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
+        subcontrol-position:left;
+        image: url(:/ico/pushed_left.png);
+        width: 12px;
+        height: 20px;
+    }
+
+QDoubleSpinBox{
+border: 2px solid black;
+border-radius: 8px;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                              <property name="minimum">
+                               <double>-999999996.000000000000000</double>
+                              </property>
+                              <property name="maximum">
+                               <double>100000000000.000000000000000</double>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_40">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QDial" name="Radius_of_Apoapsis_dial">
+                              <property name="minimumSize">
+                               <size>
+                                <width>75</width>
+                                <height>75</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>75</width>
+                                <height>75</height>
+                               </size>
+                              </property>
+                              <property name="mouseTracking">
+                               <bool>false</bool>
+                              </property>
+                              <property name="toolTip">
+                               <string>Rotate to alter the Semi-Major axis value</string>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QDial::handle { background-color: black }</string>
+                              </property>
+                              <property name="minimum">
+                               <number>0</number>
+                              </property>
+                              <property name="maximum">
+                               <number>10</number>
+                              </property>
+                              <property name="wrapping">
+                               <bool>true</bool>
+                              </property>
+                              <property name="notchesVisible">
+                               <bool>true</bool>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_45">
+                            <item>
+                             <widget class="QDoubleSpinBox" name="Radius_of_Apoapsis_single_step">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="toolTip">
+                               <string>Current Single Step</string>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">    /*spinbox lift style*/
+    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
+        subcontrol-position:right;
+        image: url(UI_Functions/Resources/right_arrow_white.svg);
+        width: 12px;
+        height: 20px;  	
+    }
+
+ 
+    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
+        subcontrol-position:left;
+        image: url(UI_Functions/Resources/left_arrow_white.svg);
+        width: 12px;
+        height: 20px;
+    }
+
+     /*Button press style*/
+    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
+        subcontrol-position:right;
+        image: url(:/ico/pushed_right.png);
+        width: 12px;
+        height: 20px;       
+    }
+      
+	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
+        subcontrol-position:left;
+        image: url(:/ico/pushed_left.png);
+        width: 12px;
+        height: 20px;
+    }
+
+QDoubleSpinBox{
+border: 2px solid black;
+border-radius: 8px;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                              <property name="minimum">
+                               <double>10.000000000000000</double>
+                              </property>
+                              <property name="maximum">
+                               <double>100000.000000000000000</double>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_41">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QSlider" name="Radius_of_Apoapsis_slider">
+                              <property name="toolTip">
+                               <string>Slide to Change the single step to be altered</string>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="maximum">
+                               <number>5</number>
+                              </property>
+                              <property name="pageStep">
+                               <number>10</number>
+                              </property>
+                              <property name="value">
+                               <number>0</number>
+                              </property>
+                              <property name="sliderPosition">
+                               <number>0</number>
+                              </property>
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="tickPosition">
+                               <enum>QSlider::TicksAbove</enum>
+                              </property>
+                              <property name="tickInterval">
+                               <number>1</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="Radius_of_Periapsis_frame">
+                       <property name="styleSheet">
+                        <string notr="true">QFrame{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 15px;
+background:transparent;
+}
+
+QFrame:hover{
+	border: 3px solid white;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_46">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>8</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>8</number>
+                        </property>
+                        <item>
+                         <layout class="QVBoxLayout" name="Radius_of_Periapsis_frame_layout">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_47">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="Radius_of_Periapsis_frame_lbl">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+border:none;
+}
+
+</string>
+                              </property>
+                              <property name="text">
+                               <string>Radius of Periapsis</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_48">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QDoubleSpinBox" name="Radius_of_Periapsis_spinbox">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="toolTip">
+                               <string>Semi-Major Axis</string>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">    /*spinbox lift style*/
+    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
+        subcontrol-position:right;
+        image: url(UI_Functions/Resources/right_arrow.svg);
+        width: 12px;
+        height: 20px;  	
+    }
+
+ 
+    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
+        subcontrol-position:left;
+        image: url(UI_Functions/Resources/left_arrow.svg);
+        width: 12px;
+        height: 20px;
+    }
+
+     /*Button press style*/
+    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
+        subcontrol-position:right;
+        image: url(:/ico/pushed_right.png);
+        width: 12px;
+        height: 20px;       
+    }
+      
+	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
+        subcontrol-position:left;
+        image: url(:/ico/pushed_left.png);
+        width: 12px;
+        height: 20px;
+    }
+
+QDoubleSpinBox{
+border: 2px solid black;
+border-radius: 8px;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                              <property name="minimum">
+                               <double>-999999996.000000000000000</double>
+                              </property>
+                              <property name="maximum">
+                               <double>100000000000.000000000000000</double>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_49">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QDial" name="Radius_of_Periapsis_dial">
+                              <property name="minimumSize">
+                               <size>
+                                <width>75</width>
+                                <height>75</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>75</width>
+                                <height>75</height>
+                               </size>
+                              </property>
+                              <property name="mouseTracking">
+                               <bool>false</bool>
+                              </property>
+                              <property name="toolTip">
+                               <string>Rotate to alter the Semi-Major axis value</string>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QDial::handle { background-color: black }</string>
+                              </property>
+                              <property name="minimum">
+                               <number>0</number>
+                              </property>
+                              <property name="maximum">
+                               <number>10</number>
+                              </property>
+                              <property name="wrapping">
+                               <bool>true</bool>
+                              </property>
+                              <property name="notchesVisible">
+                               <bool>true</bool>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_50">
+                            <item>
+                             <widget class="QDoubleSpinBox" name="Radius_of_Periapsis_single_step">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="toolTip">
+                               <string>Current Single Step</string>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">    /*spinbox lift style*/
+    QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
+        subcontrol-position:right;
+        image: url(UI_Functions/Resources/right_arrow_white.svg);
+        width: 12px;
+        height: 20px;  	
+    }
+
+ 
+    QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
+        subcontrol-position:left;
+        image: url(UI_Functions/Resources/left_arrow_white.svg);
+        width: 12px;
+        height: 20px;
+    }
+
+     /*Button press style*/
+    QTimeEdit::up-button:pressed,QDoubleSpinBox::up-button:pressed,QSpinBox::up-button:pressed{subcontrol-origin:border;
+        subcontrol-position:right;
+        image: url(:/ico/pushed_right.png);
+        width: 12px;
+        height: 20px;       
+    }
+      
+	QTimeEdit::down-button:pressed,QDoubleSpinBox::down-button:pressed,QSpinBox::down-button:pressed,QSpinBox::down-button:pressed{
+        subcontrol-position:left;
+        image: url(:/ico/pushed_left.png);
+        width: 12px;
+        height: 20px;
+    }
+
+QDoubleSpinBox{
+border: 2px solid black;
+border-radius: 8px;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                              <property name="minimum">
+                               <double>10.000000000000000</double>
+                              </property>
+                              <property name="maximum">
+                               <double>100000.000000000000000</double>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_51">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QSlider" name="Radius_of_Periapsis_slider">
+                              <property name="toolTip">
+                               <string>Slide to Change the single step to be altered</string>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="maximum">
+                               <number>5</number>
+                              </property>
+                              <property name="pageStep">
+                               <number>10</number>
+                              </property>
+                              <property name="value">
+                               <number>0</number>
+                              </property>
+                              <property name="sliderPosition">
+                               <number>0</number>
+                              </property>
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="tickPosition">
+                               <enum>QSlider::TicksAbove</enum>
+                              </property>
+                              <property name="tickInterval">
+                               <number>1</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="r1v1gamma1_page">
+                    <layout class="QVBoxLayout" name="verticalLayout_28">
+                     <item>
+                      <widget class="QFrame" name="Radius_of_Apoapsis_frame_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>160</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 15px;
+background:transparent;
+}
+
+QFrame:hover{
+	border: 3px solid white;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_52">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <layout class="QVBoxLayout" name="Radius_of_Apoapsis_frame_layout_2">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_53">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>5</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="Radius_of_Apoapsis_frame_lbl_2">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+border:none;
+}
+
+</string>
+                              </property>
+                              <property name="text">
+                               <string>Position Vector</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_54">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <spacer name="verticalSpacer_8">
+                              <property name="orientation">
+                               <enum>Qt::Vertical</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>20</width>
+                                <height>40</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_56">
+                            <item>
+                             <widget class="QLabel" name="label_29">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string/>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_4">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>25</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 10px;
+background:transparent;
+}
+
+QLineEdit:hover{
+	border: 2px solid white;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_23">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>i</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_55">
+                            <item>
+                             <widget class="QLabel" name="label_10">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>+</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_57">
+                            <item>
+                             <widget class="QLabel" name="label_33">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string/>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 10px;
+background:transparent;
+}
+
+QLineEdit:hover{
+	border: 2px solid white;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_24">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>j</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_58">
+                            <item>
+                             <widget class="QLabel" name="label_18">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>+</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_59">
+                            <item>
+                             <widget class="QLabel" name="label_37">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string/>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_3">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 10px;
+background:transparent;
+}
+
+QLineEdit:hover{
+	border: 2px solid white;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_28">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>k</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_9">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="Radius_of_Apoapsis_frame_3">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>160</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 15px;
+background:transparent;
+}
+
+QFrame:hover{
+	border: 3px solid white;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_60">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <layout class="QVBoxLayout" name="Radius_of_Apoapsis_frame_layout_3">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_61">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>5</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="Radius_of_Apoapsis_frame_lbl_3">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+border:none;
+}
+
+</string>
+                              </property>
+                              <property name="text">
+                               <string>Velocity Vector</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_62">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <spacer name="verticalSpacer_10">
+                              <property name="orientation">
+                               <enum>Qt::Vertical</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>20</width>
+                                <height>40</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_63">
+                            <item>
+                             <widget class="QLabel" name="label_38">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string/>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_5">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>25</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 10px;
+background:transparent;
+}
+
+QLineEdit:hover{
+	border: 2px solid white;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_40">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>i</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_64">
+                            <item>
+                             <widget class="QLabel" name="label_43">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>+</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_65">
+                            <item>
+                             <widget class="QLabel" name="label_48">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string/>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_2">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 10px;
+background:transparent;
+}
+
+QLineEdit:hover{
+	border: 2px solid white;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_52">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>j</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_66">
+                            <item>
+                             <widget class="QLabel" name="label_53">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>+</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_67">
+                            <item>
+                             <widget class="QLabel" name="label_54">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string/>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_6">
+                              <property name="minimumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>80</width>
+                                <height>25</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 10px;
+background:transparent;
+}
+
+QLineEdit:hover{
+	border: 2px solid white;
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_55">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>10</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:none</string>
+                              </property>
+                              <property name="text">
+                               <string>k</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_11">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_27">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>160</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 15px;
+background:transparent;
+}
+
+QFrame:hover{
+	border: 3px solid white;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_29">
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QFrame" name="frame_41">
+                          <property name="styleSheet">
+                           <string notr="true">border:none</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_77">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>5</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="label_56">
+                             <property name="font">
+                              <font>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLabel{
+color: rgb(131, 255, 160);
+background:transparent;
+border:none;
+}
+
+</string>
+                             </property>
+                             <property name="text">
+                              <string>Gamma</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">border:none</string>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_74">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QDial" name="dial_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>75</width>
+                               <height>75</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>85</width>
+                               <height>85</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="wrapping">
+                              <bool>true</bool>
+                             </property>
+                             <property name="notchesVisible">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_42">
+                          <property name="styleSheet">
+                           <string notr="true">border:none</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_76">
+                           <item>
+                            <widget class="QLineEdit" name="lineEdit_9">
+                             <property name="minimumSize">
+                              <size>
+                               <width>50</width>
+                               <height>25</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>80</width>
+                               <height>25</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QLineEdit{
+
+border: 3px solid rgb(34, 14, 36);
+border-radius: 10px;
+background:transparent;
+}
+
+QLineEdit:hover{
+	border: 2px solid white;
+}</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_63">
+                             <property name="minimumSize">
+                              <size>
+                               <width>50</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>30</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>10</pointsize>
+                               <weight>75</weight>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="text">
+                              <string>degree</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="page"/>
                   </widget>
                  </item>
                 </layout>
