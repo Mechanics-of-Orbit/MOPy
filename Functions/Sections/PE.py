@@ -32,10 +32,10 @@ def PECalculation(JDN, elements_0, rates, MajorBodyDetails):
 
 
 def zeroTo360(x):
-    if x>= 360
+    if x>= 360:
         x = x - int(x/360)*360
         return x
-    elif x < 0
+    elif x < 0:
         x = x - (int(x/360)-1)*360
         return x
     

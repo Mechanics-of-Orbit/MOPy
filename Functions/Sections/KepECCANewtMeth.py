@@ -4,13 +4,13 @@ import numpy as np
 def keplerECCA(ecc, MeAnom)
     error = 1e-90
 
-    if M < np.pi
+    if M < np.pi:
         ECCA = MeAnom + ecc/2
-    else
+    else:
         ECCA = MeAnom - ecc/2
     
     ratio = 1
-    while abs(ratio) > error
+    while abs(ratio) > error:
         ratio = (ECCA - ecc*np.sin(E) - MeAnom)/(1 - ecc*np.cos(ECCA))
         ECCA = ECCA - ratio
     return ECCA
