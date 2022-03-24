@@ -28,6 +28,17 @@ class call():
 
         return [major_body_data,major_body]
 
+    def planetary_ephimeris(Major_Body, data_type):
+        title = {'aAU':1, 'aDotAUCentury-1':2,'e':3, 'eDotCentury-1':4, 'iDeg':5, 'iDotDegCentury-1':6, 'RAANDeg':7, 'RAANDotDegCentury-1':8, 'OmegaDeg':9, 'OmegaDotDegCentury-1':10, 'nudeg':11, 'nuDotDegCentury-1':12}
+        key = title[data_type]
+        major_body = str(Major_Body)
+        major_body = major_body.strip()
+        result = cursor.execute(''' SELECT * from PlanetaryEphemeris WHERE PlanetaryBody==?''',[major_body])
+        for row_number, row_data in enumerate(result):
+            major_body_data = row_data[key]
+        return [major_body_data,major_body]
+
+
 def raund(f, n):
     rSOI = str(f).split('e')
     rSOI1 = str(round(float(rSOI[0]),n))
