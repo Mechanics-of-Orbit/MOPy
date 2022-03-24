@@ -1,5 +1,6 @@
 import numpy as np
 
+# todo: Calculate the Sun Pos with satellite Orbital Elements and Planetary Ephemeris
 
 def DSPS(rVecSat, rVecSun, PlanetRadius):
     rSat = np.linalg.norm(rVecSat)
