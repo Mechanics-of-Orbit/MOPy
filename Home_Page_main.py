@@ -83,8 +83,7 @@ class MainWindow(QMainWindow):
         self.progress.widthh = 50
         self.progress.heightt = 50
         
-        
-        
+       
 
         layyout = QVBoxLayout()
         layyout.addWidget(self.progress)
@@ -94,6 +93,7 @@ class MainWindow(QMainWindow):
 
         # Connecting the toggle menu btn to the expand function
         self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 170, True))
+        
         
         
 
