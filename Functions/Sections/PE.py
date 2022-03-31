@@ -13,6 +13,7 @@ def PECalculation(JDN, elements_0, rates, SunMass):
     T_0 = (JDN-2451545)/36525
     print(T_0)
     elements = elements_0 + T_0 * np.array(rates)
+    print(elements)
     deg = np.pi/360
     # Call mu from db
     G = 6.67e-20
@@ -39,6 +40,8 @@ def zeroTo360(x):
     elif x < 0:
         x = x - (int(x/360)-1)*360
         return x
+    else:
+        return x
 
 if __name__ == '__main__':
     print("Testing")
@@ -59,7 +62,9 @@ if __name__ == '__main__':
     SunMass = 1.9885e30
 
     elements_0 = [sma_0, ecc_0, inc_0, RAAN_0, omega_0, nu_0]
+    print(elements_0)
     rates = [smaDot, eccDot, incDot, RAANDot, omegaDot, nuDot]
+    print(rates)
     
     
     # print(elements_0)

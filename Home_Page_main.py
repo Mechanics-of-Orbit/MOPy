@@ -21,6 +21,8 @@ from Functions.Sections.CoOE import Calculate
 from Functions.Sections.DB.call_database import call,raund
 from UI_Functions.Home_Page import Ui_MainWindow
 from UI_Functions.Home_Page_functions import *
+from UI_Functions.circular_progress import CircularProgress
+# from power_bar import PowerBar
 
 
 
@@ -73,8 +75,21 @@ class MainWindow(QMainWindow):
         self.ui.eccentricity_toggle_menu_slider.hide()
 
         # Dial with circular Progress Bar
+        self.progress = CircularProgress() 
+        self.layyout = QGridLayout(self.ui.widget)
+        self.layyout.addWidget(self.progress)
+        widget_width = self.ui.widget.width()
+        widget_height = self.ui.widget.height()
+        self.progress.widthh = 50
+        self.progress.heightt = 50
         
        
+
+        layyout = QVBoxLayout()
+        layyout.addWidget(self.progress)
+        self.ui.frame_43.setLayout(layyout)
+            
+        
 
         # Connecting the toggle menu btn to the expand function
         self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 170, True))
@@ -484,7 +499,7 @@ class MainWindow(QMainWindow):
         return direction
 
     def toggle_option_index(self):
-        toggle_dict = {0:1,1:2,2:3}
+        toggle_dict = {0:1,1:2,2:3, 3:4, 4:5, 5:6}
         dropdown_toggle_index = self.ui.type_of_input_toggle.currentIndex()
         print(dropdown_toggle_index)
         screen_toggle_menu = toggle_dict[dropdown_toggle_index]
@@ -571,9 +586,9 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(3500, lambda: self.ui.app_description_lbl.setText("<strong>Arranging</strong> User Interface "))
         QtCore.QTimer.singleShot(4700, lambda: self.ui.app_description_lbl.setText("Ready to <strong>Takeoff</strong> "))
         QtCore.QTimer.singleShot(6000, lambda: self.ui.app_description_lbl.setText("3"))
-        QtCore.QTimer.singleShot(6600, lambda: self.ui.app_description_lbl.setText("2"))
-        QtCore.QTimer.singleShot(7200, lambda: self.ui.app_description_lbl.setText("1"))
-        QtCore.QTimer.singleShot(7600, lambda: self.ui.app_description_lbl.setText("<strong>Lift</strong> Off"))
+        QtCore.QTimer.singleShot(7600, lambda: self.ui.app_description_lbl.setText("2"))
+        QtCore.QTimer.singleShot(8200, lambda: self.ui.app_description_lbl.setText("1"))
+        QtCore.QTimer.singleShot(9600, lambda: self.ui.app_description_lbl.setText("<strong>Lift</strong> Off"))
 
         # Fun Facts
         
@@ -627,7 +642,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     screensize = app.desktop().availableGeometry().size()
     window_size = screensize/1.6
-    # window = SplashScreen(window_size)
-    window = MainWindow()
+    window = SplashScreen(window_size)
+    # window = MainWindow()
     window.show()
     sys.exit(app.exec_())

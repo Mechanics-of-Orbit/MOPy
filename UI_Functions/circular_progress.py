@@ -4,8 +4,8 @@ from PySide2.QtGui import *
 import sys
 
 class CircularProgress(QWidget):
-    def __init__(self, parent = None):
-        super(CircularProgress, self).__init__(parent)
+    def __init__(self):
+        QWidget.__init__(self)
 
         # Custom Properties
         self.value = 0
@@ -15,10 +15,10 @@ class CircularProgress(QWidget):
         self.progress_rounded_cap = True
         self.progress_color = "#ff79c6"
         self.max_value = 100
-        self.font_family = "Segoe UI"
-        self.font_size = 12
-        self.suffix = "%"
-        self.text_color = 0x498BD1
+        # self.font_family = "Segoe UI"
+        # self.font_size = 12
+        # self.suffix = "%"
+        # self.text_color = 0x498BD1
 
         # Set Background
         self.enable_bg = True
@@ -26,7 +26,6 @@ class CircularProgress(QWidget):
        
         self.dial = QDial(self)
         self.dial.move(self.width/120, self.height/450)
-        self.dial.valueChanged.connect(lambda:self.dial_changed())
         self.dial.setMaximum(360)
         self.dial.setMinimum(0)
         self.dial.setWrapping(1)
@@ -36,6 +35,7 @@ class CircularProgress(QWidget):
 
         # Set Default size without layout
         # self.resize(self.width, self.height)
+        self.resize(self.dial.width()*1.2, self.dial.height()*4)
         self.show()
 
     def add_shadow(self, enable):
@@ -55,15 +55,21 @@ class CircularProgress(QWidget):
             # Set progress Parameters
             width = self.width - self.progress_width
             height = self.height - self.progress_width
-            margin_x = self.width/20
-            margin_y = self.height/18
             value = self.dial.value()
+
+            self.dial.move(9,9)
+
+            dial_pos = str(self.dial.pos())
+            dial_x = int(dial_pos[-5])
+            dial_y = int(dial_pos[-2])
+            
+
 
             # Create a Painter
             paint = QPainter()
             paint.begin(self)
             paint.setRenderHint(QPainter.Antialiasing) # To remove pixelated edges and smoothen the render/animation
-            paint.setFont(QFont(self.font_family, self.font_size))
+           
 
         
             # PEN TO set the progress bar style
@@ -81,18 +87,15 @@ class CircularProgress(QWidget):
                 penn.setWidth(self.progress_width)
                 penn.setColor(QColor(self.bg_color))
                 paint.setPen(penn)
-                paint.drawArc(margin_x, margin_y, width-5, height-5, 0, 360 * 16)
+                paint.drawArc(dial_x + self.dial.width()/16, dial_y + self.dial.height()/16 , self.dial.width()*0.88, self.dial.height()*0.88, 0, 360 * 16)
 
             # Create the arc of the circular bar
             paint.setPen(pen)
             
-            paint.drawArc(margin_x, margin_y, width-5, height-5, -90 * 16, -value * 16)
+            paint.drawArc(dial_x + self.dial.width()/16, dial_y + self.dial.height()/16, width-5, height-5, -90 * 16, -value * 16)
             # End Painting
             paint.end()
     
-    def dial_changed(self):
-        self.value = self.dial.value()
-        print(self.value)
 
 
 if __name__ == "__main__":

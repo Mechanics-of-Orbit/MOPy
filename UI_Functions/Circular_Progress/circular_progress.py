@@ -90,3 +90,9 @@ class CircularProgress(QWidget):
             paint.end()
 
 
+if __name__ == "__main__":
+    import sys
+    app = QApplication(sys.argv)
+    window = CircularProgress()
+    window.show()
+    sys.exit(app.exec_())
