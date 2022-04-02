@@ -1,50 +1,29 @@
 import sqlite3
-import math
 
+conn = sqlite3.connect("Functions\Sections\DB\DataTables\MajorBody_data.db")
+cursor = conn.cursor()
 
-db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
-cursor = db.cursor()
-
-class call():
-    def data(Major_Body, data_type):
-
-        title = {'mass':1, 'diameter':2,'density':3, 'acc_due_to_grty':4, 'esc_vel':5, 'rot_perd':6, 'len_of_day':7, 'dist_frm_sun':8, 'perihelion':9, 'apohelion':10, 'orital_period':11, 'orbital_velocity':12, 'orbital_inclination':13, 'orital_eccentricity':14, 'obliquity_to_orbit':15, 'mean_temperature':16, 'number_of_moons':17, 'ring_system':18, 'global_magnetic_field':19}
-        
-        rad = 'a'
-        if data_type == 'radius':
-            key = title['diameter']
-            rad = 'radius'
-        else:
-            key = title[data_type]
-    
-        major_body = str(Major_Body)
-        major_body = major_body.strip()
-        result = cursor.execute(''' SELECT * from Planet_Table WHERE Major_body==?''',[major_body])
-        for row_number, row_data in enumerate(result):
-            major_body_data = row_data[key]
-        
-        if rad == 'radius':
-            major_body_data = major_body_data/2
-
-        return [major_body_data,major_body]
-
-    def planetary_ephimeris(Major_Body, data_type):
-        title = {'aAU':1, 'aDotAUCentury-1':2,'e':3, 'eDotCentury-1':4, 'iDeg':5, 'iDotDegCentury-1':6, 'RAANDeg':7, 'RAANDotDegCentury-1':8, 'OmegaDeg':9, 'OmegaDotDegCentury-1':10, 'nudeg':11, 'nuDotDegCentury-1':12}
-        key = title[data_type]
-        major_body = str(Major_Body)
-        major_body = major_body.strip()
-        result = cursor.execute(''' SELECT * from PlanetaryEphemeris WHERE PlanetaryBody==?''',[major_body])
-        for row_number, row_data in enumerate(result):
-            major_body_data = row_data[key]
-        return [major_body_data,major_body]
-
+def planet_data(major_body,major_body_data):
+    major_body = str(major_body).strip()
+    major_body_data = str(major_body_data).strip()
+    if major_body == "Select the Major Body":
+        print("Scroll down and select the major body from the list")
+    cursor.execute("SELECT * FROM Planet_Table")
+    Celestial_Bodies = {"Mercury":0, "Venus":1, "Earth":2, "Moon":3, "Mars":4, "Jupiter":5, "Saturn":6, "Uranus":7, "Neptune":8, "Pluto":9, "Sun":10}  
+    Celestial_Bodies_features = {"Mass":1, "Diameter":2, "Density":3, "Acceleration_due_to_Gravity":4, "Escape_Velocity":5, "Rotation_Period":6, "Length_of_Day":7, "Distance_from_sun":8, "Radius":20}   
+    Major_Body = Celestial_Bodies[major_body]
+    Major_Body_Data = Celestial_Bodies_features[major_body_data]
+    out_data = cursor.fetchall()[Major_Body][Major_Body_Data]
+    return[out_data,major_body]
 
 def raund(f, n):
     rSOI = str(f).split('e')
     rSOI1 = str(round(float(rSOI[0]),n))
     rSOI = rSOI1 + 'e' + str(rSOI[1])
     return rSOI
+
+
+
     
 
- 
-    
+

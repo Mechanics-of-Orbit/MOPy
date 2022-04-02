@@ -2,7 +2,7 @@ from math import *
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-from Functions.Sections.DB.call_database import call
+from Functions.Sections.DB.call_database import *
 
 
 
@@ -33,10 +33,10 @@ def plot(r):
 
 
 def SOICalc(MinorBody):
-    [MiB_mass, a] = call.data(MinorBody, 'mass')
-    [MiB_radius,a] = call.data(MinorBody, 'radius')
-    [MaB_mass, a] = call.data("Sun", 'mass')
-    [r_maj_to_min, a] = call.data(MinorBody, 'dist_frm_sun')
+    [MiB_mass, a] = planet_data(MinorBody, 'mass')
+    [MiB_radius,a] = planet_data(MinorBody, 'radius')
+    [MaB_mass, a] = planet_data("Sun", 'mass')
+    [r_maj_to_min, a] = planet_data(MinorBody, 'dist_frm_sun')
     # print(MiB_mass, MiB_radius, MaB_mass, r_maj_to_min)
     rSOI = (r_maj_to_min*(MiB_mass/MaB_mass)**(2/5))
     return [rSOI, rSOI/MiB_radius]

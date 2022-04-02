@@ -18,7 +18,7 @@ from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabo
 from Functions.SOI3D import SOI3D
 from Functions.Sections.soi import *
 from Functions.Sections.CoOE import Calculate
-from Functions.Sections.DB.call_database import call,raund
+from Functions.Sections.DB.call_database import *
 from UI_Functions.Home_Page import Ui_MainWindow
 from UI_Functions.Home_Page_functions import *
 from UI_Functions.circular_progress import CircularProgress
@@ -189,7 +189,7 @@ class MainWindow(QMainWindow):
         a = self.ui.semimajor_axis_input_ae.text()
         a = float(a)
         maj_body = self.ui.vpco_major_body.currentText()
-        maj_body_mass = call.data(maj_body,'mass')
+        maj_body_mass = planet_data(maj_body,'Mass')
         
         if e == 0 or 0 < e < 1: 
             [r_per, r_apo, mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.semiecc(a, e, maj_body_mass[0])
@@ -341,8 +341,8 @@ class MainWindow(QMainWindow):
     # SOI
     def SEARCH(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        planet_mass = call.data(planet_name,'mass')
-        dist_frm_sun = call.data(planet_name,'dist_frm_sun')
+        planet_mass = planet_data(planet_name,'Mass')
+        dist_frm_sun = planet_data(planet_name,'Distance_from_sun')
         self.ui.lbl_mass.setText("Mass of " + str(planet_mass[1])+":")
         self.ui.soi_mass.setText(str(planet_mass[0]))
         self.ui.dist_frm_sun.setText(str(dist_frm_sun[0]))
@@ -351,7 +351,7 @@ class MainWindow(QMainWindow):
     def SOI(self):
         planet_name = self.ui.SOI_planet_name.currentText()
         self.ui.rSOI_of_planet_lbl.setText("Radius of SOI of " + str(planet_name.strip()) + ":")
-        Mass_of_Sun = call.data('Sun','mass')
+        Mass_of_Sun = planet_data('Sun','Mass')
         Minor_body_mass = self.ui.soi_mass.text() 
         distance_bt_sun_plnt = self.ui.soi_mass.text()
         rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun[0])**(2/5))
@@ -365,7 +365,7 @@ class MainWindow(QMainWindow):
         planet_name = planet_name.lower()
         rSOI = self.ui.soi_rad.text()
 
-        r_planet = call.data(planet_name1,'radius')[0]
+        r_planet = planet_data(planet_name1,'Radius')[0]
         r_soimb = float(rSOI)/r_planet
         SOI3D(planet_name)
         

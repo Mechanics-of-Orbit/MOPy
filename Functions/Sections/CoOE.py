@@ -3,9 +3,9 @@ from numpy import dot, pi, cross, multiply as multi
 from math import acos
 
 if __name__ == '__main__':
-    from DB.call_database import call
+    from DB.call_database import *
 else:
-    from Functions.Sections.DB.call_database import call
+    from Functions.Sections.DB.call_database import *
 
 class Calculate:
     I = [1, 0, 0]
@@ -13,9 +13,8 @@ class Calculate:
     K = [0, 0, 1]
     G = 6.67e-20 #units are in km3 kg-1 s-2
     def muvalue(self,major_body):
-        
-        major_body_radius = call.data(major_body,'radius')[0]/2 #major_bodies_radius[sel_major_body]
-        major_body_mass = call.data(major_body,'mass')[0]
+        major_body_radius = planet_data(major_body,'Radius') #major_bodies_radius[sel_major_body]
+        major_body_mass = planet_data(major_body,'Mass')[0]
         mu = self.G * major_body_mass
         return [mu, major_body_radius]
     
@@ -116,8 +115,8 @@ class Calculate:
         return True
 
 if __name__ == '__main__':
-    pos_vec = [10000.0, 0.0, 0.0]
-    vel_vec = [0.0, 4.464, -4.464]
+    pos_vec = [8250.0, 390.0, 6900.0]
+    vel_vec = [-0.7, 6.6, -0.6]
     # e_vec = [0.140621, 0.12893, 0.117342]
     # inc = 39.94
     # manju = Calculate.ACOE(pos_vec, vel_vec, e_vec, inc)
@@ -125,6 +124,7 @@ if __name__ == '__main__':
     Major_Body = "Earth"
     # [mu, major_body_radius] = Calculate.muvalue(Major_Body)
     mu = 3.986e5
+    test = Calculate.muvalue("Earth")
     OE = Calculate.OE(pos_vec, vel_vec, mu)
     print(OE)
     
