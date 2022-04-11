@@ -72,7 +72,7 @@ class UIFunctions(MainWindow):
         self.sizegrip.setToolTip("Resize Window")
 
         #When Go_btn clicked
-        self.ui.Go_btn.clicked.connect(lambda: Home_Page_main.MainWindow.search(self))
+        ##########=>>>self.ui.Go_btn.clicked.connect(lambda: Home_Page_main.MainWindow.search(self))
 
         # When Calculate_but for Julian Day is clicked 
         self.ui.calculate_btn.clicked.connect(lambda: Home_Page_main.MainWindow.calendar_time(self))
@@ -118,56 +118,23 @@ class UIFunctions(MainWindow):
     def returnStatus():
         return GLOBAL_STATE
 
-    def expand(self, maxwidth, enable):
-        
+    def toggleMenu(self, maxHeight, enable, slider):
         if enable:
 
-            width = self.ui.VPCO_menu_toggle_frame.width()
-            maxExtent = maxwidth
-            standard = 40
+            # GET WIDTH
+            height = slider.height()
+            maxExtend = maxHeight
+            standard = 91
 
-            if width == standard:
-                widthExtended = maxExtent
-
-                self.ui.stackedWidget_2.setCurrentIndex(1)
-
-                self.ui.Semi_dial.show()
-                self.ui.ecce_dial.show()
-
-                self.ui.type_of_input_toggle.show()
-
-                self.ui.semi_major_axis_toggle_menu_spinbox.show()
-                self.ui.eccentricity_toggle_menu_spinbox.show()
-                
-
-                self.ui.semi_major_axis_toggle_menu_slider.show()
-                self.ui.eccentricity_toggle_menu_slider.show()
-                
-                
-            elif width != standard:
-
-                self.ui.stackedWidget_2.setCurrentIndex(0)
-
-                self.ui.Semi_dial.hide()
-                self.ui.ecce_dial.hide()
-
-                self.ui.type_of_input_toggle.hide()
-
-                widthExtended = standard
-                
-
-                self.ui.semi_major_axis_toggle_menu_spinbox.hide()
-                self.ui.eccentricity_toggle_menu_spinbox.hide()
-                
-
-                self.ui.semi_major_axis_toggle_menu_slider.hide()
-                self.ui.eccentricity_toggle_menu_slider.hide()
-                
-
-        
-        self.animation = QPropertyAnimation(self.ui.VPCO_menu_toggle_frame,b"minimumWidth")
-        self.animation.setDuration(200)
-        self.animation.setStartValue(width)
-        self.animation.setEndValue(widthExtended)
-        # self.animation.setEasingCurve(QtCore.QEasingCurve.Linear)
-        self.animation.start() 
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation = QPropertyAnimation(slider, b"minimumHeight")
+            self.animation.setDuration(100)
+            self.animation.setStartValue(height)
+            self.animation.setEndValue(heightExtended)
+            self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation.start() 

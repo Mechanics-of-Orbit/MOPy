@@ -51,7 +51,9 @@
        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 88%), stop:0.488636 rgba(28, 30, 72,88%));
 
 
-border-radius: 15px;</string>
+	border-radius: 15px;
+	
+	border-color:rgb(8, 255, 173);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -392,7 +394,7 @@ QPushButton:pressed{
 </string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <property name="styleSheet">
@@ -15772,7 +15774,7 @@ border-radius:10px;</string>
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>../../../../Users/manjunath neelmath/.designer/backup/GUI-test/Resources/MOPy Cover_transparent.png</pixmap>
+                <pixmap>../../Users/manjunath neelmath/.designer/backup/GUI-test/Resources/MOPy Cover_transparent.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>

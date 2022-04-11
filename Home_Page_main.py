@@ -40,8 +40,9 @@ class MainWindow(QMainWindow):
     J = [0, 1, 0]
     K = [0, 0, 1]
     G = 6.67e-20 #units are in km3 kg-1 s-2
-    def __init__(self):
-        QMainWindow.__init__(self)
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        #QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         
@@ -59,43 +60,36 @@ class MainWindow(QMainWindow):
         self.ui.ecce_dial.setNotchesVisible(1)
         
         
-
-        # Hidding some of the widgets in VPCO output
-
-        self.ui.Semi_dial.hide()
-        self.ui.ecce_dial.hide()
-
-        self.ui.type_of_input_toggle.hide()
-
-        self.ui.semi_major_axis_toggle_menu_spinbox.hide()
-        self.ui.eccentricity_toggle_menu_spinbox.hide()
+        # Assigning hover signal to the squares in the home screen
+        self.ui.VPCO.installEventFilter(self)
+        self.ui.Julian_Day.installEventFilter(self)
+        
+        
         
 
-        self.ui.semi_major_axis_toggle_menu_slider.hide()
-        self.ui.eccentricity_toggle_menu_slider.hide()
-
         # Dial with circular Progress Bar
-        self.progress = CircularProgress() 
-        self.layyout = QGridLayout(self.ui.widget)
-        self.layyout.addWidget(self.progress)
-        widget_width = self.ui.widget.width()
-        widget_height = self.ui.widget.height()
-        self.progress.widthh = 50
-        self.progress.heightt = 50
+        #self.progress = CircularProgress() 
+        #self.layyout = QGridLayout(self.ui.widget)
+        #self.layyout.addWidget(self.progress)
+        #widget_width = self.ui.widget.width()
+        #widget_height = self.ui.widget.height()
+        #self.progress.widthh = 50
+        #self.progress.heightt = 50
         
        
 
-        layyout = QVBoxLayout()
-        layyout.addWidget(self.progress)
-        self.ui.frame_43.setLayout(layyout)
+        #layyout = QVBoxLayout()
+        #layyout.addWidget(self.progress)
+        #self.ui.frame_43.setLayout(layyout)
             
         
 
         # Connecting the toggle menu btn to the expand function
         self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 170, True))
+        #self.ui.widget_4.clicked.connect(lambda: UIFunctions.expand(self, 170, True))
         
         
-        
+    
 
         # MOVE WINDOW
         def moveWindow(event):
@@ -120,7 +114,17 @@ class MainWindow(QMainWindow):
         ########################################################################
         
 
-   
+    def eventFilter(self, source, event):
+        if (source == self.ui.VPCO and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu(self, 182,'true',self.ui.slider_1)
+        elif source == self.ui.VPCO and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu(self, 91, "true",self.ui.slider_1)
+
+        elif (source == self.ui.Julian_Day and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu(self, 182,'true',self.ui.slider_2)
+        elif source == self.ui.Julian_Day and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu(self, 91, "true",self.ui.slider_2) 
+        
 
     ## APP EVENTS
     ########################################################################

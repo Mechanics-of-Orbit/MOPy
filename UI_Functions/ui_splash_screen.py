@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screeneyTqKx.ui'
+## Form generated from reading UI file 'splash_screenWDKdNE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -17,7 +17,7 @@ class Ui_SplashScreen(object):
     def setupUi(self, SplashScreen):
         if not SplashScreen.objectName():
             SplashScreen.setObjectName(u"SplashScreen")
-        SplashScreen.resize(910, 474)
+        SplashScreen.resize(910, 484)
         self.centralwidget = QWidget(SplashScreen)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -27,7 +27,9 @@ class Ui_SplashScreen(object):
         self.dropShadowFrame = QFrame(self.centralwidget)
         self.dropShadowFrame.setObjectName(u"dropShadowFrame")
         self.dropShadowFrame.setStyleSheet(u"QFrame {	\n"
-"	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(50, 47, 111, 220), stop:0.488636 rgba(28, 30, 72, 220));\n"
+"	 \n"
+"	\n"
+"	background-color: rgb(16, 255, 147);\n"
 "\n"
 "\n"
 "	color: rgb(220, 220, 220);\n"
@@ -38,10 +40,25 @@ class Ui_SplashScreen(object):
         self.verticalLayout_2 = QVBoxLayout(self.dropShadowFrame)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(40, 0, 40, 0)
-        self.logo_frame = QFrame(self.dropShadowFrame)
+        self.verticalLayout_2.setContentsMargins(3, 3, 3, 3)
+        self.frame = QFrame(self.dropShadowFrame)
+        self.frame.setObjectName(u"frame")
+        self.frame.setStyleSheet(u"QFrame {	\n"
+"	 \n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(109, 11, 255, 255));\n"
+"\n"
+"\n"
+"	color: rgb(220, 220, 220);\n"
+"	border-radius: 50px;\n"
+"}")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_3 = QVBoxLayout(self.frame)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.logo_frame = QFrame(self.frame)
         self.logo_frame.setObjectName(u"logo_frame")
-        self.logo_frame.setMaximumSize(QSize(16777215, 250))
+        self.logo_frame.setMinimumSize(QSize(286, 254))
+        self.logo_frame.setMaximumSize(QSize(16777215, 338))
         self.logo_frame.setStyleSheet(u"background-color:transparent;")
         self.logo_frame.setFrameShape(QFrame.StyledPanel)
         self.logo_frame.setFrameShadow(QFrame.Raised)
@@ -65,21 +82,23 @@ class Ui_SplashScreen(object):
         self.horizontalLayout.addWidget(self.logo)
 
 
-        self.verticalLayout_2.addWidget(self.logo_frame)
+        self.verticalLayout_3.addWidget(self.logo_frame)
 
-        self.ProgressBarContainer = QFrame(self.dropShadowFrame)
+        self.ProgressBarContainer = QFrame(self.frame)
         self.ProgressBarContainer.setObjectName(u"ProgressBarContainer")
-        self.ProgressBarContainer.setMinimumSize(QSize(500, 60))
-        self.ProgressBarContainer.setMaximumSize(QSize(16777215, 60))
+        self.ProgressBarContainer.setMinimumSize(QSize(500, 55))
+        self.ProgressBarContainer.setMaximumSize(QSize(16777215, 40))
         self.ProgressBarContainer.setStyleSheet(u"background:transparent")
         self.ProgressBarContainer.setFrameShape(QFrame.StyledPanel)
         self.ProgressBarContainer.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.ProgressBarContainer)
+        self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
 
-        self.verticalLayout_2.addWidget(self.ProgressBarContainer)
+        self.verticalLayout_3.addWidget(self.ProgressBarContainer)
 
-        self.app_description_lbl = QLabel(self.dropShadowFrame)
+        self.app_description_lbl = QLabel(self.frame)
         self.app_description_lbl.setObjectName(u"app_description_lbl")
         self.app_description_lbl.setMinimumSize(QSize(500, 40))
         self.app_description_lbl.setMaximumSize(QSize(16777215, 40))
@@ -91,9 +110,9 @@ class Ui_SplashScreen(object):
 "background-color:transparent;")
         self.app_description_lbl.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_2.addWidget(self.app_description_lbl)
+        self.verticalLayout_3.addWidget(self.app_description_lbl)
 
-        self.progressBar = QProgressBar(self.dropShadowFrame)
+        self.progressBar = QProgressBar(self.frame)
         self.progressBar.setObjectName(u"progressBar")
         self.progressBar.setMinimumSize(QSize(0, 25))
         self.progressBar.setMaximumSize(QSize(16777215, 25))
@@ -118,11 +137,11 @@ class Ui_SplashScreen(object):
 "}")
         self.progressBar.setValue(69)
 
-        self.verticalLayout_2.addWidget(self.progressBar)
+        self.verticalLayout_3.addWidget(self.progressBar)
 
-        self.loading_lbl = QLabel(self.dropShadowFrame)
+        self.loading_lbl = QLabel(self.frame)
         self.loading_lbl.setObjectName(u"loading_lbl")
-        self.loading_lbl.setMinimumSize(QSize(500, 70))
+        self.loading_lbl.setMinimumSize(QSize(30, 40))
         self.loading_lbl.setMaximumSize(QSize(16777215, 70))
         font2 = QFont()
         font2.setPointSize(11)
@@ -131,7 +150,10 @@ class Ui_SplashScreen(object):
         self.loading_lbl.setAlignment(Qt.AlignCenter)
         self.loading_lbl.setWordWrap(True)
 
-        self.verticalLayout_2.addWidget(self.loading_lbl)
+        self.verticalLayout_3.addWidget(self.loading_lbl)
+
+
+        self.verticalLayout_2.addWidget(self.frame)
 
 
         self.verticalLayout.addWidget(self.dropShadowFrame)
