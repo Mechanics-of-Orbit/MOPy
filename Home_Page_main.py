@@ -124,6 +124,8 @@ class MainWindow(QMainWindow):
             UIFunctions.toggleMenu(self, 182,'true',self.ui.slider_2)
         elif source == self.ui.Julian_Day and event.type() == QEvent.Leave:
             UIFunctions.toggleMenu(self, 91, "true",self.ui.slider_2) 
+
+    
         
 
     ## APP EVENTS
