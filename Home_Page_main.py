@@ -63,33 +63,15 @@ class MainWindow(QMainWindow):
         # Assigning hover signal to the squares in the home screen
         self.ui.VPCO.installEventFilter(self)
         self.ui.Julian_Day.installEventFilter(self)
-        
-        
-        
-
-        # Dial with circular Progress Bar
-        #self.progress = CircularProgress() 
-        #self.layyout = QGridLayout(self.ui.widget)
-        #self.layyout.addWidget(self.progress)
-        #widget_width = self.ui.widget.width()
-        #widget_height = self.ui.widget.height()
-        #self.progress.widthh = 50
-        #self.progress.heightt = 50
-        
-       
-
-        #layyout = QVBoxLayout()
-        #layyout.addWidget(self.progress)
-        #self.ui.frame_43.setLayout(layyout)
-            
-        
-
-        # Connecting the toggle menu btn to the expand function
-        self.ui.toggle_menu_btn.clicked.connect(lambda: UIFunctions.expand(self, 170, True))
-        #self.ui.widget_4.clicked.connect(lambda: UIFunctions.expand(self, 170, True))
-        
-        
-    
+        self.ui.Orbital_Elements.installEventFilter(self)
+        self.ui.SOI.installEventFilter(self)
+        self.ui.Orbit_Visualization.installEventFilter(self)
+        self.ui.Ground_Track.installEventFilter(self)
+        self.ui.Planet_in_Shadow.installEventFilter(self)
+        self.ui.Planetary_Ephimeris.installEventFilter(self)
+        self.ui.Numerical_integ.installEventFilter(self)
+        self.ui.Orbital_transfer.installEventFilter(self)
+        self.ui.Eulers_Angle.installEventFilter(self)
 
         # MOVE WINDOW
         def moveWindow(event):
@@ -116,14 +98,59 @@ class MainWindow(QMainWindow):
 
     def eventFilter(self, source, event):
         if (source == self.ui.VPCO and event.type() == QEvent.Enter):
-            UIFunctions.toggleMenu(self, 182,'true',self.ui.slider_1)
+            UIFunctions.toggleMenu_VPCO(self, 182,"true")
         elif source == self.ui.VPCO and event.type() == QEvent.Leave:
-            UIFunctions.toggleMenu(self, 91, "true",self.ui.slider_1)
+            UIFunctions.toggleMenu_VPCO(self, 91, "true")
 
         elif (source == self.ui.Julian_Day and event.type() == QEvent.Enter):
-            UIFunctions.toggleMenu(self, 182,'true',self.ui.slider_2)
+            UIFunctions.toggleMenu_Julian_Day(self, 182,'true')
         elif source == self.ui.Julian_Day and event.type() == QEvent.Leave:
-            UIFunctions.toggleMenu(self, 91, "true",self.ui.slider_2) 
+            UIFunctions.toggleMenu_Julian_Day(self, 91, "true") 
+
+        elif (source == self.ui.Orbital_Elements and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_Orbital_Elements(self, 182,'true')
+        elif source == self.ui.Orbital_Elements and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_Orbital_Elements(self, 91, "true")
+
+        elif (source == self.ui.SOI and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_SOI(self, 182,'true')
+        elif source == self.ui.SOI and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_SOI(self, 91, "true")
+        
+        elif (source == self.ui.Orbit_Visualization and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_Orbit_Visualization(self, 182,'true')
+        elif source == self.ui.Orbit_Visualization and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_Orbit_Visualization(self, 91, "true")
+        
+        elif (source == self.ui.Ground_Track and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_Ground_Track(self, 182,'true')
+        elif source == self.ui.Ground_Track and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_Ground_Track(self, 91, "true")
+
+        elif (source == self.ui.Planet_in_Shadow and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_Planet_in_Shadow(self, 182,'true')
+        elif source == self.ui.Planet_in_Shadow and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_Planet_in_Shadow(self, 91, "true")
+        
+        elif (source == self.ui.Planetary_Ephimeris and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_Planetary_Ephimeris(self, 182,'true')
+        elif source == self.ui.Planetary_Ephimeris and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_Planetary_Ephimeris(self, 91, "true")
+        
+        elif (source == self.ui.Numerical_integ and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_Numerical_integ(self, 182,'true')
+        elif source == self.ui.Numerical_integ and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_Numerical_integ(self, 91, "true")
+        
+        elif (source == self.ui.Orbital_transfer and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_Orbital_transfer(self, 182,'true')
+        elif source == self.ui.Orbital_transfer and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_Orbital_transfer(self, 91, "true")
+
+        elif (source == self.ui.Eulers_Angle and event.type() == QEvent.Enter):
+            UIFunctions.toggleMenu_Eulers_Angle(self, 490,'true')
+        elif source == self.ui.Eulers_Angle and event.type() == QEvent.Leave:
+            UIFunctions.toggleMenu_Eulers_Angle(self, 245, "true")
 
     
         

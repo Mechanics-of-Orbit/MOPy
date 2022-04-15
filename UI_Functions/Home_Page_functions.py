@@ -117,12 +117,62 @@ class UIFunctions(MainWindow):
 
     def returnStatus():
         return GLOBAL_STATE
+    
+    ###############################################################################################
+    #--<<Hover_Effect>>--#
 
-    def toggleMenu(self, maxHeight, enable, slider):
+    def toggleMenu_VPCO(self, maxHeight, enable):
         if enable:
 
             # GET WIDTH
-            height = slider.height()
+            height = self.ui.Home_VPCO_Slider.height()
+            maxExtend = maxHeight
+            standard = 91
+            
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+                self.ui.Home_VPCO_Label.setText("Calculation of Various Parameters\n----------------------------\n Calculation of various parameters of an orbit in space, such as escape velocity, Specific angular moment, etc.")
+            else:
+                heightExtended = standard
+                self.ui.Home_VPCO_Label.setText("Various Parameters at any given point and Constants in orbit")
+            # ANIMATION
+            self.animation_1 = QPropertyAnimation(self.ui.Home_VPCO_Slider, b"minimumHeight")
+            self.animation_1.setDuration(100)
+            self.animation_1.setStartValue(height)
+            self.animation_1.setEndValue(heightExtended)
+            self.animation_1.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_1.start() 
+            
+
+    def toggleMenu_Julian_Day(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_2.height()
+            maxExtend = maxHeight
+            standard = 91
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+                #self.ui.Home_VPCO_Label.setText(
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation_2 = QPropertyAnimation(self.ui.slider_2, b"minimumHeight")
+            self.animation_2.setDuration(100)
+            self.animation_2.setStartValue(height)
+            self.animation_2.setEndValue(heightExtended)
+            self.animation_2.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_2.start()   
+
+    def toggleMenu_Orbital_Elements(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_6.height()
             maxExtend = maxHeight
             standard = 91
 
@@ -132,9 +182,177 @@ class UIFunctions(MainWindow):
             else:
                 heightExtended = standard
             # ANIMATION
-            self.animation = QPropertyAnimation(slider, b"minimumHeight")
-            self.animation.setDuration(100)
-            self.animation.setStartValue(height)
-            self.animation.setEndValue(heightExtended)
-            self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
-            self.animation.start() 
+            self.animation_3 = QPropertyAnimation(self.ui.slider_6, b"minimumHeight")
+            self.animation_3.setDuration(100)
+            self.animation_3.setStartValue(height)
+            self.animation_3.setEndValue(heightExtended)
+            self.animation_3.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_3.start() 
+        
+    def toggleMenu_SOI(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_7.height()
+            maxExtend = maxHeight
+            standard = 91
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation_4 = QPropertyAnimation(self.ui.slider_7, b"minimumHeight")
+            self.animation_4.setDuration(100)
+            self.animation_4.setStartValue(height)
+            self.animation_4.setEndValue(heightExtended)
+            self.animation_4.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_4.start() 
+    
+    def toggleMenu_Orbit_Visualization(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_3.height()
+            maxExtend = maxHeight
+            standard = 91
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation_5 = QPropertyAnimation(self.ui.slider_3, b"minimumHeight")
+            self.animation_5.setDuration(100)
+            self.animation_5.setStartValue(height)
+            self.animation_5.setEndValue(heightExtended)
+            self.animation_5.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_5.start() 
+        
+    def toggleMenu_Ground_Track(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_4.height()
+            maxExtend = maxHeight
+            standard = 91
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation_6 = QPropertyAnimation(self.ui.slider_4, b"minimumHeight")
+            self.animation_6.setDuration(100)
+            self.animation_6.setStartValue(height)
+            self.animation_6.setEndValue(heightExtended)
+            self.animation_6.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_6.start() 
+        
+    def toggleMenu_Planet_in_Shadow(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_5.height()
+            maxExtend = maxHeight
+            standard = 91
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation_7 = QPropertyAnimation(self.ui.slider_5, b"minimumHeight")
+            self.animation_7.setDuration(100)
+            self.animation_7.setStartValue(height)
+            self.animation_7.setEndValue(heightExtended)
+            self.animation_7.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_7.start() 
+        
+    def toggleMenu_Planetary_Ephimeris(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_8.height()
+            maxExtend = maxHeight
+            standard = 91
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation_8 = QPropertyAnimation(self.ui.slider_8, b"minimumHeight")
+            self.animation_8.setDuration(100)
+            self.animation_8.setStartValue(height)
+            self.animation_8.setEndValue(heightExtended)
+            self.animation_8.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_8.start() 
+        
+    def toggleMenu_Numerical_integ(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_9.height()
+            maxExtend = maxHeight
+            standard = 91
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation_9 = QPropertyAnimation(self.ui.slider_9, b"minimumHeight")
+            self.animation_9.setDuration(100)
+            self.animation_9.setStartValue(height)
+            self.animation_9.setEndValue(heightExtended)
+            self.animation_9.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_9.start() 
+        
+    def toggleMenu_Orbital_transfer(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.slider_10.height()
+            maxExtend = maxHeight
+            standard = 91
+
+            # SET MAX WIDTH
+            if height == 91:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+            # ANIMATION
+            self.animation_10 = QPropertyAnimation(self.ui.slider_10, b"minimumHeight")
+            self.animation_10.setDuration(100)
+            self.animation_10.setStartValue(height)
+            self.animation_10.setEndValue(heightExtended)
+            self.animation_10.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_10.start() 
+        
+    def toggleMenu_Eulers_Angle(self, maxWidth, enable):
+        if enable:
+
+            # GET WIDTH
+            width = self.ui.slider_11.width()
+            maxExtend = maxWidth
+            standard = 245
+
+            # SET MAX WIDTH
+            if width == 245:
+                widthExtended = maxExtend
+            else:
+                widthExtended = standard
+            # ANIMATION
+            self.animation_11 = QPropertyAnimation(self.ui.slider_11, b"minimumWidth")
+            self.animation_11.setDuration(100)
+            self.animation_11.setStartValue(width)
+            self.animation_11.setEndValue(widthExtended)
+            self.animation_11.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation_11.start() 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageuIecOx.ui'
+## Form generated from reading UI file 'Home_PageWGKtVe.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.ApplicationModal)
-        MainWindow.resize(1110, 663)
+        MainWindow.resize(1044, 663)
         MainWindow.setMinimumSize(QSize(750, 0))
         MainWindow.setMaximumSize(QSize(1198, 16777215))
         MainWindow.setStyleSheet(u"QToolTip{\n"
@@ -101,7 +101,7 @@ class Ui_MainWindow(object):
 "	background-color:transparent;\n"
 "	color:rgb(245, 255, 179);\n"
 "	border-radius: 20px;\n"
-"	image:url(UI_Functions/Resources/Home_btn.png);\n"
+"	image:url(UI_Functions/Resources/MOPy Cover_transparent.png);\n"
 "	border:none;\n"
 "	\n"
 "}\n"
@@ -170,7 +170,7 @@ class Ui_MainWindow(object):
         self.btn_minimize.setStyleSheet(u"QPushButton{\n"
 "	border: none;\n"
 "	border-radius:8px;\n"
-"	image:url(UI_Functions/Resources/minimize.svg);\n"
+"	image:url(UI_Functions/Resources/Minimize_2.drawio.png);\n"
 "	padding: 0.2em 0.2em 0.2em 0.2em;\n"
 "}\n"
 "\n"
@@ -199,7 +199,7 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "	\n"
 "	border-radius:8px;\n"
-"	image:url(UI_Functions/Resources/close.svg);\n"
+"	image:url(UI_Functions/Resources/Close_2.drawio.png);\n"
 "	padding: 0.1em 0.1em 0.2em 0.1em;\n"
 "}\n"
 "\n"
@@ -327,6 +327,87 @@ class Ui_MainWindow(object):
 "QScrollBar:vertical{\n"
 "border:none;\n"
 "background: rgb(78, 79, 132);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"/*Horizontal Scrollbar*/\n"
+"QScrollBar:horizontal{\n"
+"border:none;\n"
+"background-color:rgb(59, 59, 90);\n"
+"width:8px;\n"
+"margin: 15px 0 15px 0;\n"
+"border-radius:0px;\n"
+"}\n"
+"\n"
+"/* Handle Bar Horizontal *"
+                        "/\n"
+"QScrollBar::handle:horizontal{\n"
+"background-color: rgb(80, 80, 122);\n"
+"min-height: 30px;\n"
+"border-radius: 4px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal:hover{\n"
+"background-color: rgb(108, 87, 134);\n"
+"	\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal:pressed{\n"
+"background-color: rgb(185, 0, 92);\n"
+"}\n"
+"\n"
+"/* BTN TOP - Scrollbar*/\n"
+"QScrollBar::sub-line:horizontal{\n"
+"border:none;\n"
+"background-color: rgb(59, 59, 90);\n"
+"height:15px;\n"
+"border-top-left-radius: 4px;\n"
+"border-top-right-radius: 4px;\n"
+"subcontrol-position: top;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:horizontal:hover{\n"
+"background-color: rgb(255, 0, 127);\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:horizontal:pressed{\n"
+"background-color: rgb(185, 0, 92);\n"
+"}\n"
+"\n"
+"/* BTN BOTTOM - Scrollbar*/\n"
+"QScrollBar::add-line:horizontal{\n"
+"border:none;\n"
+"background-color: rgb(59, 59, 90);\n"
+"height:15px;\n"
+"border-bottom-left-radius: 4px;\n"
+"border-bottom-right-radius: 4px;\n"
+"subcontrol-po"
+                        "sition: bottom;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:horizontal:hover{\n"
+"background-color: rgb(255, 0, 127);\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:horizontal:pressed{\n"
+"background-color: rgb(185, 0, 92);\n"
+"}\n"
+"\n"
+"/* RESET ARROW*/\n"
+"QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal{\n"
+"background: none;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{\n"
+"background:none;\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal{\n"
+"border:none;\n"
+"background: rgb(78, 79, 132);\n"
 "}")
         self.frame_content_home.setFrameShape(QFrame.NoFrame)
         self.frame_content_home.setFrameShadow(QFrame.Raised)
@@ -340,7 +421,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -48, 1072, 630))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1006, 630))
         self.verticalLayout_6 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.frame_2 = QFrame(self.scrollAreaWidgetContents)
@@ -363,39 +444,45 @@ class Ui_MainWindow(object):
         self.verticalLayout_13.setSpacing(0)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
-        self.filler_1 = QFrame(self.VPCO)
-        self.filler_1.setObjectName(u"filler_1")
-        self.filler_1.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_VPCO_Filler = QFrame(self.VPCO)
+        self.Home_VPCO_Filler.setObjectName(u"Home_VPCO_Filler")
+        self.Home_VPCO_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;")
-        self.filler_1.setFrameShape(QFrame.StyledPanel)
-        self.filler_1.setFrameShadow(QFrame.Raised)
+        self.Home_VPCO_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_VPCO_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_13.addWidget(self.filler_1)
+        self.verticalLayout_13.addWidget(self.Home_VPCO_Filler)
 
-        self.slider_1 = QFrame(self.VPCO)
-        self.slider_1.setObjectName(u"slider_1")
-        self.slider_1.setMinimumSize(QSize(150, 80))
-        self.slider_1.setMaximumSize(QSize(230, 200))
-        self.slider_1.setStyleSheet(u"background-color: rgb(67, 67, 67, 70%);\n"
+        self.Home_VPCO_Slider = QFrame(self.VPCO)
+        self.Home_VPCO_Slider.setObjectName(u"Home_VPCO_Slider")
+        self.Home_VPCO_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_VPCO_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_VPCO_Slider.setStyleSheet(u"background-color: rgb(67, 67, 67, 60%);\n"
 "image:none;")
-        self.slider_1.setFrameShape(QFrame.StyledPanel)
-        self.slider_1.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_41 = QVBoxLayout(self.slider_1)
+        self.Home_VPCO_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_VPCO_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_41 = QVBoxLayout(self.Home_VPCO_Slider)
         self.verticalLayout_41.setObjectName(u"verticalLayout_41")
         self.verticalLayout_41.setContentsMargins(6, 6, 6, 6)
-        self.label_57 = QLabel(self.slider_1)
-        self.label_57.setObjectName(u"label_57")
-        self.label_57.setStyleSheet(u"color:white;\n"
+        self.Home_VPCO_Label = QLabel(self.Home_VPCO_Slider)
+        self.Home_VPCO_Label.setObjectName(u"Home_VPCO_Label")
+        self.Home_VPCO_Label.setStyleSheet(u"QLabel{\n"
+"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
-"background-color: rgb(0, 0, 0, 70%);")
-        self.label_57.setAlignment(Qt.AlignCenter)
-        self.label_57.setWordWrap(True)
+"font: 75 12pt \"Calibri\";\n"
+"background-color: rgb(0, 0, 0, 40%);\n"
+"}\n"
+"\n"
+"QLabel:hover{\n"
+"text:\"Hu bhai change ho gaya\";\n"
+"}")
+        self.Home_VPCO_Label.setAlignment(Qt.AlignCenter)
+        self.Home_VPCO_Label.setWordWrap(True)
 
-        self.verticalLayout_41.addWidget(self.label_57)
+        self.verticalLayout_41.addWidget(self.Home_VPCO_Label)
 
 
-        self.verticalLayout_13.addWidget(self.slider_1)
+        self.verticalLayout_13.addWidget(self.Home_VPCO_Slider)
 
 
         self.horizontalLayout_4.addWidget(self.VPCO)
@@ -424,7 +511,7 @@ class Ui_MainWindow(object):
         self.slider_2.setObjectName(u"slider_2")
         self.slider_2.setMinimumSize(QSize(150, 80))
         self.slider_2.setMaximumSize(QSize(230, 200))
-        self.slider_2.setStyleSheet(u"background-color: rgb(0, 0, 0,88%);\n"
+        self.slider_2.setStyleSheet(u"background-color: rgb(0, 0, 0,60%);\n"
 "image:none;")
         self.slider_2.setFrameShape(QFrame.StyledPanel)
         self.slider_2.setFrameShadow(QFrame.Raised)
@@ -435,9 +522,9 @@ class Ui_MainWindow(object):
         self.label_58.setObjectName(u"label_58")
         self.label_58.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
-"background-color: rgb(0, 0, 0, 60%);\n"
+"background-color: rgb(0, 0, 0, 40%);\n"
 "")
         self.label_58.setAlignment(Qt.AlignCenter)
 
@@ -483,7 +570,7 @@ class Ui_MainWindow(object):
         self.label_59.setObjectName(u"label_59")
         self.label_59.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgb(0, 0, 0, 40%);")
         self.label_59.setAlignment(Qt.AlignCenter)
@@ -530,7 +617,7 @@ class Ui_MainWindow(object):
         self.label_60.setObjectName(u"label_60")
         self.label_60.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgb(0, 0, 0, 60%);")
         self.label_60.setAlignment(Qt.AlignCenter)
@@ -578,19 +665,20 @@ class Ui_MainWindow(object):
         self.slider_3.setObjectName(u"slider_3")
         self.slider_3.setMinimumSize(QSize(150, 80))
         self.slider_3.setMaximumSize(QSize(230, 200))
-        self.slider_3.setStyleSheet(u"background-color: rgb(0, 0, 0,88%);\n"
+        self.slider_3.setStyleSheet(u"background-color: rgb(0, 0, 0,60%);\n"
 "image:none;")
         self.slider_3.setFrameShape(QFrame.StyledPanel)
         self.slider_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_48 = QVBoxLayout(self.slider_3)
         self.verticalLayout_48.setObjectName(u"verticalLayout_48")
+        self.verticalLayout_48.setContentsMargins(6, 6, 6, 6)
         self.label_66 = QLabel(self.slider_3)
         self.label_66.setObjectName(u"label_66")
         self.label_66.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
-"background-color: rgb(0, 0, 0, 60%);\n"
+"background-color: rgb(0, 0, 0, 40%);\n"
 "")
         self.label_66.setAlignment(Qt.AlignCenter)
 
@@ -626,7 +714,7 @@ class Ui_MainWindow(object):
         self.slider_4.setObjectName(u"slider_4")
         self.slider_4.setMinimumSize(QSize(150, 80))
         self.slider_4.setMaximumSize(QSize(230, 200))
-        self.slider_4.setStyleSheet(u"background-color: rgb(0, 0, 0,88%);\n"
+        self.slider_4.setStyleSheet(u"background-color: rgb(0, 0, 0,60%);\n"
 "image:none;")
         self.slider_4.setFrameShape(QFrame.StyledPanel)
         self.slider_4.setFrameShadow(QFrame.Raised)
@@ -637,9 +725,9 @@ class Ui_MainWindow(object):
         self.label_61.setObjectName(u"label_61")
         self.label_61.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
-"background-color: rgb(0, 0, 0, 60%);\n"
+"background-color: rgb(0, 0, 0, 40%);\n"
 "")
         self.label_61.setAlignment(Qt.AlignCenter)
 
@@ -675,19 +763,20 @@ class Ui_MainWindow(object):
         self.slider_5.setObjectName(u"slider_5")
         self.slider_5.setMinimumSize(QSize(150, 80))
         self.slider_5.setMaximumSize(QSize(230, 200))
-        self.slider_5.setStyleSheet(u"background-color: rgb(0, 0, 0,88%);\n"
+        self.slider_5.setStyleSheet(u"background-color: rgb(47, 47, 48, 50%);\n"
 "image:none;")
         self.slider_5.setFrameShape(QFrame.StyledPanel)
         self.slider_5.setFrameShadow(QFrame.Raised)
         self.verticalLayout_50 = QVBoxLayout(self.slider_5)
         self.verticalLayout_50.setObjectName(u"verticalLayout_50")
+        self.verticalLayout_50.setContentsMargins(6, 6, 6, 6)
         self.label_67 = QLabel(self.slider_5)
         self.label_67.setObjectName(u"label_67")
         self.label_67.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
-"background-color: rgb(0, 0, 0, 60%);\n"
+"background-color: rgb(0, 0, 0, 40%);\n"
 "")
         self.label_67.setAlignment(Qt.AlignCenter)
 
@@ -733,7 +822,7 @@ class Ui_MainWindow(object):
         self.label_62.setObjectName(u"label_62")
         self.label_62.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgb(0, 0, 0, 60%);\n"
 "")
@@ -758,17 +847,17 @@ class Ui_MainWindow(object):
         self.frame_15.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_72 = QHBoxLayout(self.frame_15)
         self.horizontalLayout_72.setObjectName(u"horizontalLayout_72")
-        self.Comparision_of_numerical_integ = QWidget(self.frame_15)
-        self.Comparision_of_numerical_integ.setObjectName(u"Comparision_of_numerical_integ")
-        self.Comparision_of_numerical_integ.setMinimumSize(QSize(150, 150))
-        self.Comparision_of_numerical_integ.setMaximumSize(QSize(230, 200))
-        self.Comparision_of_numerical_integ.setStyleSheet(u"background-color:#000001;\n"
+        self.Numerical_integ = QWidget(self.frame_15)
+        self.Numerical_integ.setObjectName(u"Numerical_integ")
+        self.Numerical_integ.setMinimumSize(QSize(150, 150))
+        self.Numerical_integ.setMaximumSize(QSize(230, 200))
+        self.Numerical_integ.setStyleSheet(u"background-color:#000001;\n"
 "image:url(UI_Functions/Resources/Numerical_Integration.jpg);")
-        self.verticalLayout_38 = QVBoxLayout(self.Comparision_of_numerical_integ)
+        self.verticalLayout_38 = QVBoxLayout(self.Numerical_integ)
         self.verticalLayout_38.setSpacing(0)
         self.verticalLayout_38.setObjectName(u"verticalLayout_38")
         self.verticalLayout_38.setContentsMargins(0, 0, 0, 0)
-        self.filler_9 = QFrame(self.Comparision_of_numerical_integ)
+        self.filler_9 = QFrame(self.Numerical_integ)
         self.filler_9.setObjectName(u"filler_9")
         self.filler_9.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
@@ -778,23 +867,24 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_38.addWidget(self.filler_9)
 
-        self.slider_9 = QFrame(self.Comparision_of_numerical_integ)
+        self.slider_9 = QFrame(self.Numerical_integ)
         self.slider_9.setObjectName(u"slider_9")
         self.slider_9.setMinimumSize(QSize(150, 80))
         self.slider_9.setMaximumSize(QSize(230, 200))
-        self.slider_9.setStyleSheet(u"background-color: rgb(0, 0, 0,88%);\n"
+        self.slider_9.setStyleSheet(u"background-color: rgb(0, 0, 0,60%);\n"
 "image:none;")
         self.slider_9.setFrameShape(QFrame.StyledPanel)
         self.slider_9.setFrameShadow(QFrame.Raised)
         self.verticalLayout_46 = QVBoxLayout(self.slider_9)
         self.verticalLayout_46.setObjectName(u"verticalLayout_46")
+        self.verticalLayout_46.setContentsMargins(6, 6, 6, 6)
         self.label_64 = QLabel(self.slider_9)
         self.label_64.setObjectName(u"label_64")
         self.label_64.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
-"background-color: rgb(0, 0, 0, 60%);\n"
+"background-color: rgb(0, 0, 0, 40%);\n"
 "")
         self.label_64.setAlignment(Qt.AlignCenter)
 
@@ -804,19 +894,67 @@ class Ui_MainWindow(object):
         self.verticalLayout_38.addWidget(self.slider_9)
 
 
-        self.horizontalLayout_72.addWidget(self.Comparision_of_numerical_integ)
+        self.horizontalLayout_72.addWidget(self.Numerical_integ)
 
-        self.Orbital_transfer_and_Eulers_angle = QWidget(self.frame_15)
-        self.Orbital_transfer_and_Eulers_angle.setObjectName(u"Orbital_transfer_and_Eulers_angle")
-        self.Orbital_transfer_and_Eulers_angle.setMinimumSize(QSize(150, 150))
-        self.Orbital_transfer_and_Eulers_angle.setMaximumSize(QSize(230, 200))
-        self.Orbital_transfer_and_Eulers_angle.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(77, 169, 244, 255), stop:1 rgba(49, 96, 218, 255));\n"
+        self.Eulers_Angle = QWidget(self.frame_15)
+        self.Eulers_Angle.setObjectName(u"Eulers_Angle")
+        self.Eulers_Angle.setMinimumSize(QSize(475, 0))
+        self.Eulers_Angle.setMaximumSize(QSize(475, 16777215))
+        self.Eulers_Angle.setStyleSheet(u"background-color:#000001;\n"
+"image:url(UI_Functions/Resources/Eulers Angle.png);")
+        self.horizontalLayout_75 = QHBoxLayout(self.Eulers_Angle)
+        self.horizontalLayout_75.setSpacing(0)
+        self.horizontalLayout_75.setObjectName(u"horizontalLayout_75")
+        self.horizontalLayout_75.setContentsMargins(0, 0, 0, 0)
+        self.filler_11 = QFrame(self.Eulers_Angle)
+        self.filler_11.setObjectName(u"filler_11")
+        self.filler_11.setAutoFillBackground(False)
+        self.filler_11.setStyleSheet(u"background-color:transparent;\n"
+"image:none;\n"
+"")
+        self.filler_11.setFrameShape(QFrame.StyledPanel)
+        self.filler_11.setFrameShadow(QFrame.Raised)
+
+        self.horizontalLayout_75.addWidget(self.filler_11)
+
+        self.slider_11 = QFrame(self.Eulers_Angle)
+        self.slider_11.setObjectName(u"slider_11")
+        self.slider_11.setStyleSheet(u"background-color: rgb(47, 47, 48, 60%);\n"
+"image:none;")
+        self.slider_11.setFrameShape(QFrame.StyledPanel)
+        self.slider_11.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_51 = QVBoxLayout(self.slider_11)
+        self.verticalLayout_51.setObjectName(u"verticalLayout_51")
+        self.verticalLayout_51.setContentsMargins(6, 6, 6, 6)
+        self.label_68 = QLabel(self.slider_11)
+        self.label_68.setObjectName(u"label_68")
+        self.label_68.setStyleSheet(u"color:white;\n"
+"\n"
+"font: 75 12pt \"Calibri\";\n"
+"\n"
+"background-color: rgb(0, 0, 0, 40%);\n"
+"")
+        self.label_68.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_51.addWidget(self.label_68)
+
+
+        self.horizontalLayout_75.addWidget(self.slider_11)
+
+
+        self.horizontalLayout_72.addWidget(self.Eulers_Angle)
+
+        self.Orbital_transfer = QWidget(self.frame_15)
+        self.Orbital_transfer.setObjectName(u"Orbital_transfer")
+        self.Orbital_transfer.setMinimumSize(QSize(150, 150))
+        self.Orbital_transfer.setMaximumSize(QSize(230, 200))
+        self.Orbital_transfer.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(77, 169, 244, 255), stop:1 rgba(49, 96, 218, 255));\n"
 "image:url(UI_Functions/Resources/Orbital Transfer.png);")
-        self.verticalLayout_39 = QVBoxLayout(self.Orbital_transfer_and_Eulers_angle)
+        self.verticalLayout_39 = QVBoxLayout(self.Orbital_transfer)
         self.verticalLayout_39.setSpacing(0)
         self.verticalLayout_39.setObjectName(u"verticalLayout_39")
         self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
-        self.filler_10 = QFrame(self.Orbital_transfer_and_Eulers_angle)
+        self.filler_10 = QFrame(self.Orbital_transfer)
         self.filler_10.setObjectName(u"filler_10")
         self.filler_10.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
@@ -826,23 +964,24 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_39.addWidget(self.filler_10)
 
-        self.slider_10 = QFrame(self.Orbital_transfer_and_Eulers_angle)
+        self.slider_10 = QFrame(self.Orbital_transfer)
         self.slider_10.setObjectName(u"slider_10")
         self.slider_10.setMinimumSize(QSize(150, 80))
         self.slider_10.setMaximumSize(QSize(230, 200))
-        self.slider_10.setStyleSheet(u"background-color: rgb(0, 0, 0,88%);\n"
+        self.slider_10.setStyleSheet(u"background-color: rgb(0, 0, 0,60%);\n"
 "image:none;")
         self.slider_10.setFrameShape(QFrame.StyledPanel)
         self.slider_10.setFrameShadow(QFrame.Raised)
         self.verticalLayout_47 = QVBoxLayout(self.slider_10)
         self.verticalLayout_47.setObjectName(u"verticalLayout_47")
+        self.verticalLayout_47.setContentsMargins(6, 6, 6, 6)
         self.label_65 = QLabel(self.slider_10)
         self.label_65.setObjectName(u"label_65")
         self.label_65.setStyleSheet(u"color:white;\n"
 "\n"
-"font: 75 10pt \"Calibri\";\n"
+"font: 75 12pt \"Calibri\";\n"
 "\n"
-"background-color: rgb(0, 0, 0, 60%);\n"
+"background-color: rgb(0, 0, 0, 40%);\n"
 "")
         self.label_65.setAlignment(Qt.AlignCenter)
 
@@ -852,7 +991,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_39.addWidget(self.slider_10)
 
 
-        self.horizontalLayout_72.addWidget(self.Orbital_transfer_and_Eulers_angle)
+        self.horizontalLayout_72.addWidget(self.Orbital_transfer)
 
 
         self.verticalLayout_6.addWidget(self.frame_15)
@@ -7513,18 +7652,11 @@ class Ui_MainWindow(object):
         font14.setItalic(False)
         font14.setWeight(50)
         self.label_credits.setFont(font14)
-        self.label_credits.setStyleSheet(u"image:url(UI_Functions/Resources/MOPy Cover_transparent.png);")
+        self.label_credits.setStyleSheet(u"")
         self.label_credits.setPixmap(QPixmap(u"Users/manjunath neelmath/.designer/backup/GUI-test/Resources/MOPy Cover_transparent.png"))
         self.label_credits.setScaledContents(True)
 
         self.horizontalLayout_18.addWidget(self.label_credits)
-
-        self.frame_30 = QFrame(self.frame_label_credits)
-        self.frame_30.setObjectName(u"frame_30")
-        self.frame_30.setFrameShape(QFrame.StyledPanel)
-        self.frame_30.setFrameShadow(QFrame.Raised)
-
-        self.horizontalLayout_18.addWidget(self.frame_30)
 
 
         self.horizontalLayout_2.addWidget(self.frame_label_credits)
@@ -7575,7 +7707,7 @@ class Ui_MainWindow(object):
         self.btn_close.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.btn_close.setText("")
-        self.label_57.setText(QCoreApplication.translate("MainWindow", u"Various Parameters at any given point and Constants in orbit", None))
+        self.Home_VPCO_Label.setText(QCoreApplication.translate("MainWindow", u"Various Parameters at any given point and Constants in orbit", None))
         self.label_58.setText(QCoreApplication.translate("MainWindow", u"Calculation of Julian Day", None))
         self.label_59.setText(QCoreApplication.translate("MainWindow", u"Orbital Elements", None))
         self.label_60.setText(QCoreApplication.translate("MainWindow", u"Sphere of Influence", None))
@@ -7583,8 +7715,9 @@ class Ui_MainWindow(object):
         self.label_61.setText(QCoreApplication.translate("MainWindow", u"Ground Track", None))
         self.label_67.setText(QCoreApplication.translate("MainWindow", u"Planet in Shadow", None))
         self.label_62.setText(QCoreApplication.translate("MainWindow", u"Planetary Ephimeris", None))
-        self.label_64.setText(QCoreApplication.translate("MainWindow", u"Comparision of Numerical Methods", None))
-        self.label_65.setText(QCoreApplication.translate("MainWindow", u"Orbital_transfer_and_Eulers_angle", None))
+        self.label_64.setText(QCoreApplication.translate("MainWindow", u"Numerical Methods", None))
+        self.label_68.setText(QCoreApplication.translate("MainWindow", u"Eulers Angle", None))
+        self.label_65.setText(QCoreApplication.translate("MainWindow", u"Orbital Transfer", None))
         self.label_title_2.setText(QCoreApplication.translate("MainWindow", u"            JulianDay Calculation:", None))
         self.type_of_calendar.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Type Of Calendar", None))
         self.type_of_calendar.setItemText(1, QCoreApplication.translate("MainWindow", u"  Julian Calendar", None))
