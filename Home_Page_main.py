@@ -7,7 +7,7 @@ import sys
 from math import *
 from sys import path
 from numpy.linalg import norm
-from numpy import dot, pi, cross, multiply as multi
+from numpy import dot, pi, cross, multiply as multi,linspace
 from math import acos
 
 # IMPORT FUNCTIONS 
@@ -25,7 +25,7 @@ from UI_Functions.circular_progress import CircularProgress
 # from power_bar import PowerBar
 
 
-
+from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT as NavigationToolbar)
 
 path.append('..\Functions\Sections')
 
@@ -72,6 +72,8 @@ class MainWindow(QMainWindow):
         self.ui.Numerical_integ.installEventFilter(self)
         self.ui.Orbital_transfer.installEventFilter(self)
         self.ui.Eulers_Angle.installEventFilter(self)
+
+
 
         # MOVE WINDOW
         def moveWindow(event):
@@ -151,9 +153,7 @@ class MainWindow(QMainWindow):
             UIFunctions.toggleMenu_Eulers_Angle(self, 490,'true')
         elif source == self.ui.Eulers_Angle and event.type() == QEvent.Leave:
             UIFunctions.toggleMenu_Eulers_Angle(self, 245, "true")
-
-    
-        
+  
 
     ## APP EVENTS
     ########################################################################

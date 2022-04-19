@@ -4592,9 +4592,6 @@ QComboBoxt:focus{
                            <property name="bottomMargin">
                             <number>2</number>
                            </property>
-                           <item>
-                            <widget class="MplWidget" name="MplWidget" native="true"/>
-                           </item>
                           </layout>
                          </widget>
                         </item>
@@ -15916,14 +15913,6 @@ border-radius:10px;</string>
    </layout>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>MplWidget</class>
-   <extends>QWidget</extends>
-   <header>mplwidget.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
