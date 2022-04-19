@@ -1,6 +1,6 @@
 import sys
-import time
-
+# import time
+from orbit3d import OrbitPlot
 import numpy as np
 
 from matplotlib.backends.qt_compat import QtWidgets
@@ -27,8 +27,12 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         # layout.addWidget(NavigationToolbar(dynamic_canvas, self))
 
         self._static_ax = static_canvas.figure.subplots()
-        t = np.linspace(0, 10, 501)
-        self._static_ax.plot(t, np.tan(t), ".")
+        # t = np.linspace(0, 10, 501)
+        # self._static_ax.plot(t, np.tan(t), ".")
+
+
+        ji = OrbitPlot.plotOrbitMPL(3.986e5, 12000, 8000, 0, 2*np.pi)
+        self._static_ax.plot(ji[0], ji[1])
 
         # self._dynamic_ax = dynamic_canvas.figure.subplots()
         # t = np.linspace(0, 10, 101)
