@@ -10,6 +10,15 @@ from numpy.linalg import norm
 from numpy import dot, pi, cross, multiply as multi,linspace
 from math import acos
 
+
+from orbit3d import OrbitPlot
+import numpy as np
+
+from matplotlib.backends.qt_compat import QtWidgets
+from matplotlib.backends.backend_qt5agg import (FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
+from matplotlib.figure import Figure
+from matplotlib import style
+
 # IMPORT FUNCTIONS 
 from jsontrial import fun_fact
 from UI_Functions.Circular_Progress.py_circular_progress import PyCircularProgress
@@ -61,7 +70,7 @@ class MainWindow(QMainWindow):
         
         
         # Assigning hover signal to the squares in the home screen
-        self.ui.VPCO.installEventFilter(self)
+        self.ui.VPCO_Home_Page.installEventFilter(self)
         self.ui.Julian_Day.installEventFilter(self)
         self.ui.Orbital_Elements.installEventFilter(self)
         self.ui.SOI.installEventFilter(self)
@@ -72,7 +81,31 @@ class MainWindow(QMainWindow):
         self.ui.Numerical_integ.installEventFilter(self)
         self.ui.Orbital_transfer.installEventFilter(self)
         self.ui.Eulers_Angle.installEventFilter(self)
+        self.ui.Home_VPCO_Label.installEventFilter(self)
 
+
+
+
+        layout_graph = QtWidgets.QVBoxLayout(self.ui.graph_widget)
+        static_canvas = FigureCanvas(Figure(facecolor = "#36375c"))
+        layout_graph.addWidget(NavigationToolbar(static_canvas, self))
+        layout_graph.addWidget(static_canvas)
+        self._static_ax = static_canvas.figure.add_subplot(111,facecolor='black')
+        # ji = OrbitPlot.plotOrbitMPL(3.986e5, 12000, 12000, 0, 2*np.pi)
+        self._static_ax.axis('equal')
+        # self._static_ax.plot(ji[0], ji[1])
+
+        jo = OrbitPlot.hohmannTransfer(7178, 6878, 22378, 22378, 3.986e5, 6378)
+        self._static_ax.plot(jo[0][0], jo[0][1], "r")
+        self._static_ax.plot(jo[1][0], jo[1][1], "yellow", LineStyle = "dotted")
+        self._static_ax.plot(jo[2][0], jo[2][1],"green")
+        MajorBodyPlot = OrbitPlot.plotOrbitMPL(3.986e5,6378, 6378, 0, 2*np.pi)
+        self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
+        self._static_ax.axis('equal')
+        self._static_ax.tick_params(axis='x', colors='white') 
+        self._static_ax.tick_params(axis='y', colors='white')
+        
+        
 
 
         # MOVE WINDOW
@@ -96,12 +129,12 @@ class MainWindow(QMainWindow):
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################
-        
 
+    
     def eventFilter(self, source, event):
-        if (source == self.ui.VPCO and event.type() == QEvent.Enter):
+        if (source == self.ui.VPCO_Home_Page and event.type() == QEvent.Enter):
             UIFunctions.toggleMenu_VPCO(self, 182,"true")
-        elif source == self.ui.VPCO and event.type() == QEvent.Leave:
+        elif source == self.ui.VPCO_Home_Page and event.type() == QEvent.Leave:
             UIFunctions.toggleMenu_VPCO(self, 91, "true")
 
         elif (source == self.ui.Julian_Day and event.type() == QEvent.Enter):
@@ -153,6 +186,12 @@ class MainWindow(QMainWindow):
             UIFunctions.toggleMenu_Eulers_Angle(self, 490,'true')
         elif source == self.ui.Eulers_Angle and event.type() == QEvent.Leave:
             UIFunctions.toggleMenu_Eulers_Angle(self, 245, "true")
+
+        elif (source == self.ui.Home_VPCO_Label and event.button() == Qt.LeftButton):
+            self.ui.stackedWidget.setCurrentIndex(3)
+        
+        elif (source == self.ui.Home_VPCO_Label and event.button() == Qt.LeftButton):
+            self.ui.stackedWidget.setCurrentIndex(3)
   
 
     ## APP EVENTS
@@ -176,6 +215,7 @@ class MainWindow(QMainWindow):
 #########################################################################################################################
 
     # vpco go button(selecting type of input)
+
 
     def vpco_go_btn(self):
         selct_body = self.ui.vpco_major_body.currentIndex()

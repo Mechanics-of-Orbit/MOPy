@@ -482,7 +482,7 @@ border-radius:8px;}
 </string>
             </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <property name="styleSheet">
@@ -701,7 +701,7 @@ background: rgb(78, 79, 132);
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>823</width>
+                      <width>1066</width>
                       <height>630</height>
                      </rect>
                     </property>
@@ -728,7 +728,7 @@ background: rgb(78, 79, 132);
                        </property>
                        <layout class="QHBoxLayout" name="horizontalLayout_4">
                         <item>
-                         <widget class="QWidget" name="VPCO" native="true">
+                         <widget class="QWidget" name="VPCO_Home_Page" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -3943,7 +3943,10 @@ QFrame{
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">background-color:transparent;</string>
+                              <string notr="true">QFrame{
+	background-color:transparent;
+	border: 5px solid rgb(84, 84, 197,88%);
+}</string>
                              </property>
                              <property name="frameShape">
                               <enum>QFrame::StyledPanel</enum>
@@ -3978,6 +3981,9 @@ QFrame{
                                   <width>16777215</width>
                                   <height>60</height>
                                  </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">border:none;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -4119,7 +4125,7 @@ QFrame{
                                         <number>9</number>
                                        </property>
                                        <item>
-                                        <widget class="QLineEdit" name="lineEdit_10">
+                                        <widget class="QLineEdit" name="VPCO_Input_a_lineedit">
                                          <property name="minimumSize">
                                           <size>
                                            <width>130</width>
@@ -4200,6 +4206,9 @@ QLineEdit:focus{
                                   <width>16777215</width>
                                   <height>60</height>
                                  </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">border:none;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -4329,7 +4338,7 @@ QLineEdit:focus{
                                       </property>
                                       <layout class="QHBoxLayout" name="horizontalLayout_80">
                                        <item>
-                                        <widget class="QLineEdit" name="lineEdit_12">
+                                        <widget class="QLineEdit" name="VPCO_Input_e_lineedit">
                                          <property name="minimumSize">
                                           <size>
                                            <width>130</width>
@@ -4410,6 +4419,9 @@ QLineEdit:focus{
                                   <width>16777215</width>
                                   <height>60</height>
                                  </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">border:none;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -4592,6 +4604,9 @@ QComboBoxt:focus{
                            <property name="bottomMargin">
                             <number>2</number>
                            </property>
+                           <item>
+                            <widget class="QWidget" name="graph_widget" native="true"/>
+                           </item>
                           </layout>
                          </widget>
                         </item>

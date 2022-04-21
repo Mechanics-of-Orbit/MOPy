@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
 from matplotlib.patches import Ellipse
-import Sections.VPCO as VPCO
+import Functions.Sections.VPCO as VPCO
 from matplotlib import style
 
 import sys
@@ -26,14 +26,14 @@ class OrbitPlot():
         Orbit2 = OrbitPlot.plotOrbitMPL(mu,ra2, rp2, 0, 2*np.pi)
         MajorBodyPlot = OrbitPlot.plotOrbitMPL(mu,rMB, rMB, 0, 2*np.pi)
         style.use("dark_background")
-        plt.plot(Orbit1[0], Orbit1[1], "r")
-        plt.plot(TransferOrbit1[0], TransferOrbit1[1], "yellow", LineStyle = "dotted")
-        plt.plot(Orbit2[0], Orbit2[1],"green")
-        plt.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
-        plt.axis('equal')
-        plt.title("Hohmann Transfer")
-        plt.show()
-        # return [Orbit1, TransferOrbit1, Orbit2]
+        # plt.plot(Orbit1[0], Orbit1[1], "r")
+        # plt.plot(TransferOrbit1[0], TransferOrbit1[1], "yellow", LineStyle = "dotted")
+        # plt.plot(Orbit2[0], Orbit2[1],"green")
+        # plt.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
+        # plt.axis('equal')
+        # plt.title("Hohmann Transfer")
+        # plt.show()
+        return [Orbit1, TransferOrbit1, Orbit2]
     
     def biellipticalHohmannTransfer(mu, rMB, ra1,rp1, ra2, rp2, rt1a = None, rt1p = None):
         Orbit1 = OrbitPlot.plotOrbitMPL(mu, ra1, rp1, 0, 2*np.pi)
@@ -85,4 +85,4 @@ if __name__ == "__main__":
     # plt.show()
     # a = OrbitPlot.hohmannTransfer(7178, 6878, 22378, 22378, 3.986e5, 6378)
     # a = OrbitPlot.biellipticalHohmannTransfer(3.986e5, 6378, 7000, 7000, 105000, 105000, rt1a = 210000)
-    # a = OrbitPlot.phasingManeuver(3.986e5, 6378, 13600, 6800, 0, np.pi/2)
+    a = OrbitPlot.phasingManeuver(3.986e5, 6378, 13600, 6800, 0, np.pi/2)

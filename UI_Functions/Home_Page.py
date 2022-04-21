@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageAJmVeI.ui'
+## Form generated from reading UI file 'Home_PagefqfCGh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -421,7 +421,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 823, 630))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1066, 630))
         self.verticalLayout_6 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.frame_2 = QFrame(self.scrollAreaWidgetContents)
@@ -432,19 +432,19 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_2)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.VPCO = QWidget(self.frame_2)
-        self.VPCO.setObjectName(u"VPCO")
-        self.VPCO.setMinimumSize(QSize(150, 150))
-        self.VPCO.setMaximumSize(QSize(230, 200))
-        self.VPCO.setStyleSheet(u"QWidget{\n"
+        self.VPCO_Home_Page = QWidget(self.frame_2)
+        self.VPCO_Home_Page.setObjectName(u"VPCO_Home_Page")
+        self.VPCO_Home_Page.setMinimumSize(QSize(150, 150))
+        self.VPCO_Home_Page.setMaximumSize(QSize(230, 200))
+        self.VPCO_Home_Page.setStyleSheet(u"QWidget{\n"
 "background-color:#000005;\n"
 "image:url(UI_Functions/Resources/Orbits.jpg);\n"
 "}	")
-        self.verticalLayout_13 = QVBoxLayout(self.VPCO)
+        self.verticalLayout_13 = QVBoxLayout(self.VPCO_Home_Page)
         self.verticalLayout_13.setSpacing(0)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
-        self.Home_VPCO_Filler = QFrame(self.VPCO)
+        self.Home_VPCO_Filler = QFrame(self.VPCO_Home_Page)
         self.Home_VPCO_Filler.setObjectName(u"Home_VPCO_Filler")
         self.Home_VPCO_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;")
@@ -453,7 +453,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_13.addWidget(self.Home_VPCO_Filler)
 
-        self.Home_VPCO_Slider = QFrame(self.VPCO)
+        self.Home_VPCO_Slider = QFrame(self.VPCO_Home_Page)
         self.Home_VPCO_Slider.setObjectName(u"Home_VPCO_Slider")
         self.Home_VPCO_Slider.setMinimumSize(QSize(150, 80))
         self.Home_VPCO_Slider.setMaximumSize(QSize(230, 200))
@@ -485,7 +485,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_13.addWidget(self.Home_VPCO_Slider)
 
 
-        self.horizontalLayout_4.addWidget(self.VPCO)
+        self.horizontalLayout_4.addWidget(self.VPCO_Home_Page)
 
         self.Julian_Day = QWidget(self.frame_2)
         self.Julian_Day.setObjectName(u"Julian_Day")
@@ -1834,7 +1834,10 @@ class Ui_MainWindow(object):
         self.frame_3 = QFrame(self.a_and_e_VPCO)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setMaximumSize(QSize(528, 16777215))
-        self.frame_3.setStyleSheet(u"background-color:transparent;")
+        self.frame_3.setStyleSheet(u"QFrame{\n"
+"	background-color:transparent;\n"
+"	border: 5px solid rgb(84, 84, 197,88%);\n"
+"}")
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_53 = QVBoxLayout(self.frame_3)
@@ -1847,6 +1850,7 @@ class Ui_MainWindow(object):
         self.frame_45.setObjectName(u"frame_45")
         self.frame_45.setMinimumSize(QSize(0, 60))
         self.frame_45.setMaximumSize(QSize(16777215, 60))
+        self.frame_45.setStyleSheet(u"border:none;")
         self.frame_45.setFrameShape(QFrame.StyledPanel)
         self.frame_45.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_84 = QHBoxLayout(self.frame_45)
@@ -1905,12 +1909,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_23 = QHBoxLayout(self.frame_38)
         self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
         self.horizontalLayout_23.setContentsMargins(9, 9, 9, 9)
-        self.lineEdit_10 = QLineEdit(self.frame_38)
-        self.lineEdit_10.setObjectName(u"lineEdit_10")
-        self.lineEdit_10.setMinimumSize(QSize(130, 40))
-        self.lineEdit_10.setMaximumSize(QSize(200, 50))
-        self.lineEdit_10.setLayoutDirection(Qt.RightToLeft)
-        self.lineEdit_10.setStyleSheet(u"QLineEdit{\n"
+        self.VPCO_Input_a_lineedit = QLineEdit(self.frame_38)
+        self.VPCO_Input_a_lineedit.setObjectName(u"VPCO_Input_a_lineedit")
+        self.VPCO_Input_a_lineedit.setMinimumSize(QSize(130, 40))
+        self.VPCO_Input_a_lineedit.setMaximumSize(QSize(200, 50))
+        self.VPCO_Input_a_lineedit.setLayoutDirection(Qt.RightToLeft)
+        self.VPCO_Input_a_lineedit.setStyleSheet(u"QLineEdit{\n"
 "	\n"
 "	border:2px solid rgb(78, 79, 132);\n"
 "	border-radius:10px;\n"
@@ -1930,9 +1934,9 @@ class Ui_MainWindow(object):
 "QLineEdit:focus{\n"
 "	border: 2px solid #ff99ff\n"
 "}")
-        self.lineEdit_10.setAlignment(Qt.AlignCenter)
+        self.VPCO_Input_a_lineedit.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_23.addWidget(self.lineEdit_10)
+        self.horizontalLayout_23.addWidget(self.VPCO_Input_a_lineedit)
 
 
         self.horizontalLayout_10.addWidget(self.frame_38)
@@ -1951,6 +1955,7 @@ class Ui_MainWindow(object):
         self.frame_46.setObjectName(u"frame_46")
         self.frame_46.setMinimumSize(QSize(0, 60))
         self.frame_46.setMaximumSize(QSize(16777215, 60))
+        self.frame_46.setStyleSheet(u"border:none;")
         self.frame_46.setFrameShape(QFrame.StyledPanel)
         self.frame_46.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_83 = QHBoxLayout(self.frame_46)
@@ -2008,12 +2013,12 @@ class Ui_MainWindow(object):
         self.frame_44.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_80 = QHBoxLayout(self.frame_44)
         self.horizontalLayout_80.setObjectName(u"horizontalLayout_80")
-        self.lineEdit_12 = QLineEdit(self.frame_44)
-        self.lineEdit_12.setObjectName(u"lineEdit_12")
-        self.lineEdit_12.setMinimumSize(QSize(130, 40))
-        self.lineEdit_12.setMaximumSize(QSize(200, 50))
-        self.lineEdit_12.setLayoutDirection(Qt.RightToLeft)
-        self.lineEdit_12.setStyleSheet(u"QLineEdit{\n"
+        self.VPCO_Input_e_lineedit = QLineEdit(self.frame_44)
+        self.VPCO_Input_e_lineedit.setObjectName(u"VPCO_Input_e_lineedit")
+        self.VPCO_Input_e_lineedit.setMinimumSize(QSize(130, 40))
+        self.VPCO_Input_e_lineedit.setMaximumSize(QSize(200, 50))
+        self.VPCO_Input_e_lineedit.setLayoutDirection(Qt.RightToLeft)
+        self.VPCO_Input_e_lineedit.setStyleSheet(u"QLineEdit{\n"
 "	\n"
 "	border:2px solid rgb(78, 79, 132);\n"
 "	border-radius:10px;\n"
@@ -2033,9 +2038,9 @@ class Ui_MainWindow(object):
 "QLineEdit:focus{\n"
 "	border: 2px solid #ff99ff\n"
 "}")
-        self.lineEdit_12.setAlignment(Qt.AlignCenter)
+        self.VPCO_Input_e_lineedit.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_80.addWidget(self.lineEdit_12)
+        self.horizontalLayout_80.addWidget(self.VPCO_Input_e_lineedit)
 
 
         self.horizontalLayout_78.addWidget(self.frame_44)
@@ -2054,6 +2059,7 @@ class Ui_MainWindow(object):
         self.frame_47.setObjectName(u"frame_47")
         self.frame_47.setMinimumSize(QSize(0, 60))
         self.frame_47.setMaximumSize(QSize(16777215, 60))
+        self.frame_47.setStyleSheet(u"border:none;")
         self.frame_47.setFrameShape(QFrame.StyledPanel)
         self.frame_47.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_82 = QHBoxLayout(self.frame_47)
@@ -2127,6 +2133,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_81 = QHBoxLayout(self.a_and_e_graph_VPCO)
         self.horizontalLayout_81.setObjectName(u"horizontalLayout_81")
         self.horizontalLayout_81.setContentsMargins(2, 2, 2, 2)
+        self.graph_widget = QWidget(self.a_and_e_graph_VPCO)
+        self.graph_widget.setObjectName(u"graph_widget")
+
+        self.horizontalLayout_81.addWidget(self.graph_widget)
+
 
         self.horizontalLayout_7.addWidget(self.a_and_e_graph_VPCO)
 
@@ -7237,7 +7248,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
         self.VPCO_tabs.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(1)
         self.VPCO_output_stack.setCurrentIndex(3)
@@ -7317,9 +7328,9 @@ class Ui_MainWindow(object):
         self.rSOI_of_planet_lbl.setText("")
         self.soi_rad.setText("")
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Semi-major axis", None))
-        self.lineEdit_10.setText("")
+        self.VPCO_Input_a_lineedit.setText("")
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Eccentricity", None))
-        self.lineEdit_12.setText("")
+        self.VPCO_Input_e_lineedit.setText("")
         self.maj_body_CoOE_2.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Major Body", None))
         self.maj_body_CoOE_2.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
         self.maj_body_CoOE_2.setItemText(2, QCoreApplication.translate("MainWindow", u"  Earth", None))
