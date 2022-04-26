@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenWDKdNE.ui'
+## Form generated from reading UI file 'splash_screenuUUjnM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -45,7 +45,10 @@ class Ui_SplashScreen(object):
         self.frame.setObjectName(u"frame")
         self.frame.setStyleSheet(u"QFrame {	\n"
 "	 \n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(109, 11, 255, 255));\n"
+"	/*background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(109, 11, 255, 255));*/\n"
+"\n"
+"	\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(100, 188, 203, 255), stop:1 rgba(118, 215, 223, 255));\n"
 "\n"
 "\n"
 "	color: rgb(220, 220, 220);\n"
@@ -128,7 +131,10 @@ class Ui_SplashScreen(object):
 "	border-radius: 10px;\n"
 "	/*background-color: qlineargradient(spread:pad, x1:0, y1:0.511364, x2:1, y2:0.523, stop:0 rgba(254, 121, 199, 255), stop:1 rgba(170, 85, 255, 255));*/\n"
 "	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.977273, y2:1, stop:0 rgba(177, 45, 85, 255), stop:1 rgba(255, 170, 0, 220));\n"
+"	/*background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.977273, y2:1, stop:0 rgba(177, 45, 85, 255), stop:1 rgba(255, 170, 0, 220));*/\n"
+"\n"
+"	\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(34, 204, 156, 255), stop:1 rgba(98, 192, 255, 255));\n"
 "\n"
 "	\n"
 "	\n"

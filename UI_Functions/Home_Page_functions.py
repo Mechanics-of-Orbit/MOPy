@@ -100,7 +100,7 @@ class UIFunctions(MainWindow):
 
         self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
 
-        
+        self.ui.VPCO_Submit_button.clicked.connect(lambda:Home_Page_main.MainWindow.VPCO_output_bottom_slider(self, 300, 'true'))
 
         self.ui.ecce_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_dial_changed(self))
 
@@ -144,7 +144,9 @@ class UIFunctions(MainWindow):
             self.animation_1.setEndValue(heightExtended)
             self.animation_1.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
             self.animation_1.start() 
-            
+        
+    
+    
 
     def toggleMenu_Julian_Day(self, maxHeight, enable):
         if enable:
@@ -356,3 +358,7 @@ class UIFunctions(MainWindow):
             self.animation_11.setEndValue(widthExtended)
             self.animation_11.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
             self.animation_11.start() 
+
+
+    
+            

@@ -17,7 +17,8 @@ import numpy as np
 from matplotlib.backends.qt_compat import QtWidgets
 from matplotlib.backends.backend_qt5agg import (FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
 from matplotlib.figure import Figure
-from matplotlib import style
+
+
 
 # IMPORT FUNCTIONS 
 from jsontrial import fun_fact
@@ -31,7 +32,8 @@ from Functions.Sections.DB.call_database import *
 from UI_Functions.Home_Page import Ui_MainWindow
 from UI_Functions.Home_Page_functions import *
 from UI_Functions.circular_progress import CircularProgress
-# from power_bar import PowerBar
+
+
 
 
 from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT as NavigationToolbar)
@@ -67,6 +69,8 @@ class MainWindow(QMainWindow):
 
         self.ui.Semi_dial.setNotchesVisible(1)
         self.ui.ecce_dial.setNotchesVisible(1)
+
+        
         
         
         # Assigning hover signal to the squares in the home screen
@@ -83,6 +87,8 @@ class MainWindow(QMainWindow):
         self.ui.Eulers_Angle.installEventFilter(self)
         self.ui.Home_VPCO_Label.installEventFilter(self)
 
+        
+
 
 
 
@@ -91,17 +97,21 @@ class MainWindow(QMainWindow):
         layout_graph.addWidget(NavigationToolbar(static_canvas, self))
         layout_graph.addWidget(static_canvas)
         self._static_ax = static_canvas.figure.add_subplot(111,facecolor='black')
+        
         # ji = OrbitPlot.plotOrbitMPL(3.986e5, 12000, 12000, 0, 2*np.pi)
         self._static_ax.axis('equal')
         # self._static_ax.plot(ji[0], ji[1])
 
-        jo = OrbitPlot.hohmannTransfer(7178, 6878, 22378, 22378, 3.986e5, 6378)
-        self._static_ax.plot(jo[0][0], jo[0][1], "r")
-        self._static_ax.plot(jo[1][0], jo[1][1], "yellow", LineStyle = "dotted")
-        self._static_ax.plot(jo[2][0], jo[2][1],"green")
+        # jo = OrbitPlot.hohmannTransfer(7178, 6878, 22378, 22378, 3.986e5, 6378)
+        # self._static_ax.plot(jo[0][0], jo[0][1], "r")
+        # self._static_ax.plot(jo[1][0], jo[1][1], "yellow", LineStyle = "dotted")
+        # self._static_ax.plot(jo[2][0], jo[2][1],"green")
         MajorBodyPlot = OrbitPlot.plotOrbitMPL(3.986e5,6378, 6378, 0, 2*np.pi)
         self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
-        self._static_ax.axis('equal')
+        Orbit = OrbitPlot.plotOrbitMPL(3.986e5, 37500 ,12500, 0, 2*np.pi)
+        self._static_ax.plot(Orbit[0], Orbit[1], "r")
+        
+
         self._static_ax.tick_params(axis='x', colors='white') 
         self._static_ax.tick_params(axis='y', colors='white')
         
@@ -190,8 +200,38 @@ class MainWindow(QMainWindow):
         elif (source == self.ui.Home_VPCO_Label and event.button() == Qt.LeftButton):
             self.ui.stackedWidget.setCurrentIndex(3)
         
-        elif (source == self.ui.Home_VPCO_Label and event.button() == Qt.LeftButton):
-            self.ui.stackedWidget.setCurrentIndex(3)
+        
+    
+
+
+    def VPCO_output_bottom_slider(self, maxHeight, enable):
+        if enable:
+
+            # GET WIDTH
+            height = self.ui.Bottom_slider_VPCO_Output.height()
+            maxExtend = maxHeight
+            standard = 0
+            
+            
+
+            # SET MAX WIDTH
+            if height == 0:
+                heightExtended = maxExtend
+                
+            else:
+                heightExtended = standard
+                
+            # ANIMATION
+            self.animation_x = QPropertyAnimation(self.ui.Bottom_slider_VPCO_Output, b"maximumHeight")
+            self.animation_x.setDuration(600)
+            self.animation_x.setStartValue(height)
+            self.animation_x.setEndValue(heightExtended)
+            self.animation_x.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
+            self.animation_x.start()
+            self.ui.VPCO_Input_Stack.setCurrentIndex(1)
+
+            
+
   
 
     ## APP EVENTS
