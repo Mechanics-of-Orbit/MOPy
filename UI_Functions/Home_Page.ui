@@ -312,7 +312,7 @@ border:none;</string>
            <widget class="QFrame" name="frame_btns">
             <property name="minimumSize">
              <size>
-              <width>0</width>
+              <width>125</width>
               <height>40</height>
              </size>
             </property>
@@ -339,12 +339,46 @@ border-color: rgb(54, 55, 92);</string>
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_70">
-             <property name="topMargin">
-              <number>8</number>
-             </property>
-             <property name="bottomMargin">
-              <number>12</number>
-             </property>
+             <item>
+              <widget class="QPushButton" name="btn_go_back">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Minimize</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	border: none;
+	border-radius:8px;
+	image:url(UI_Functions/Resources/Minimize_2.drawio.png);
+	padding: 0.2em 0.2em 0.2em 0.2em;
+}
+
+QPushButton:hover{
+	border: 1px solid transparent;
+	
+}
+
+QPushButton:pressed{
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
              <item>
               <widget class="QPushButton" name="btn_minimize">
                <property name="minimumSize">
@@ -482,7 +516,7 @@ border-radius:8px;}
 </string>
             </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <property name="styleSheet">
@@ -4041,7 +4075,7 @@ background:none;</string>
 	
 	border-radius: 10px;
 	
-	background-color:rgb(175, 101, 174);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
 }</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_10">
@@ -4073,6 +4107,9 @@ background:none;</string>
                                                <width>250</width>
                                                <height>16777215</height>
                                               </size>
+                                             </property>
+                                             <property name="styleSheet">
+                                              <string notr="true">background:none;</string>
                                              </property>
                                              <property name="frameShape">
                                               <enum>QFrame::StyledPanel</enum>
@@ -4123,6 +4160,9 @@ background:none;</string>
                                            </item>
                                            <item>
                                             <widget class="QFrame" name="frame_38">
+                                             <property name="styleSheet">
+                                              <string notr="true">background:none;</string>
+                                             </property>
                                              <property name="frameShape">
                                               <enum>QFrame::StyledPanel</enum>
                                              </property>
@@ -4267,7 +4307,7 @@ background:none;</string>
 	
 	border-radius: 10px;
 	
-	background-color:rgb(175, 101, 174);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
 }</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_78">
@@ -4299,6 +4339,9 @@ background:none;</string>
                                                <width>250</width>
                                                <height>16777215</height>
                                               </size>
+                                             </property>
+                                             <property name="styleSheet">
+                                              <string notr="true">background:none;</string>
                                              </property>
                                              <property name="frameShape">
                                               <enum>QFrame::StyledPanel</enum>
@@ -4349,6 +4392,9 @@ background:none;</string>
                                            </item>
                                            <item>
                                             <widget class="QFrame" name="frame_44">
+                                             <property name="styleSheet">
+                                              <string notr="true">background:none;</string>
+                                             </property>
                                              <property name="frameShape">
                                               <enum>QFrame::StyledPanel</enum>
                                              </property>
