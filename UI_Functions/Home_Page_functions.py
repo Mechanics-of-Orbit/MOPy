@@ -100,11 +100,14 @@ class UIFunctions(MainWindow):
 
         self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
 
-        self.ui.VPCO_Submit_button.clicked.connect(lambda:Home_Page_main.MainWindow.VPCO_output_bottom_slider(self, 300, 'true'))
+        self.ui.VPCO_Submit_button.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 300, 'true'))
+
+        self.ui.Orbital_Transfer_plot_button.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 522, 'true'))
 
         self.ui.ecce_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_dial_changed(self))
 
-        
+        self.ui.btn_go_back.clicked.connect(lambda :Home_Page_main.MainWindow.Sliding_animation(self,0,'true'))
+
         self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_dial_changed(self))
 
         self.ui.semi_major_axis_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_slider_single_step(self))

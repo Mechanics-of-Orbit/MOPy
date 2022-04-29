@@ -1,5 +1,5 @@
 from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
+from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QParallelAnimationGroup, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
 
@@ -88,15 +88,16 @@ class MainWindow(QMainWindow):
         self.ui.Home_VPCO_Label.installEventFilter(self)
 
         
+###################################_______Plotting Graphs_______#########################################
 
-
-
-
-        layout_graph = QtWidgets.QVBoxLayout(self.ui.graph_widget)
-        static_canvas = FigureCanvas(Figure(facecolor = "#36375c"))
-        layout_graph.addWidget(NavigationToolbar(static_canvas, self))
-        layout_graph.addWidget(static_canvas)
-        self._static_ax = static_canvas.figure.add_subplot(111,facecolor='black')
+#
+# 1
+# ########-----------------------------------VPCO_Graph-----------------------------------------##########
+        VPCO_Graph_Layout = QtWidgets.QVBoxLayout(self.ui.graph_widget)
+        VPCO_Static_Canvas = FigureCanvas(Figure(facecolor = "#36375c"))
+        VPCO_Graph_Layout.addWidget(NavigationToolbar(VPCO_Static_Canvas, self))
+        VPCO_Graph_Layout.addWidget(VPCO_Static_Canvas)
+        self._static_ax = VPCO_Static_Canvas.figure.add_subplot(111,facecolor='black', title = "Orbit")
         
         # ji = OrbitPlot.plotOrbitMPL(3.986e5, 12000, 12000, 0, 2*np.pi)
         self._static_ax.axis('equal')
@@ -110,12 +111,53 @@ class MainWindow(QMainWindow):
         self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
         Orbit = OrbitPlot.plotOrbitMPL(3.986e5, 37500 ,12500, 0, 2*np.pi)
         self._static_ax.plot(Orbit[0], Orbit[1], "r")
-        
+        self.ui.btn_go_back.hide()
 
         self._static_ax.tick_params(axis='x', colors='white') 
         self._static_ax.tick_params(axis='y', colors='white')
+
+#
+# 2
+# ########-----------------------------------Orbital_Transfer_Graph-----------------------------------------##########
+#
+# 2------1
+# ########--------------------------Orbital_Transfer_Graph - Hohmann Transfer-------------------------------##########
+        Orbital_Transfer_Graph_Layout = QtWidgets.QVBoxLayout(self.ui.Plot_Widget_for_Orbital_Transfer)
+        Orbital_Transfer_Static_Canvas = FigureCanvas(Figure(facecolor = "#36375c"))
+        Orbital_Transfer_Graph_Layout.addWidget(NavigationToolbar(Orbital_Transfer_Static_Canvas, self))
+        Orbital_Transfer_Graph_Layout.addWidget(Orbital_Transfer_Static_Canvas)
+        self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Hohmann transfer")
+        self._static_ax.axis('equal')
+       
+        jo = OrbitPlot.hohmannTransfer(7178, 6878, 22378, 22378, 3.986e5, 6378)
+        self._static_ax.plot(jo[0][0], jo[0][1], "r")
+        self._static_ax.plot(jo[1][0], jo[1][1], "yellow", LineStyle = "dotted")
+        self._static_ax.plot(jo[2][0], jo[2][1],"green")
+        MajorBodyPlot = OrbitPlot.plotOrbitMPL(3.986e5,6378, 6378, 0, 2*np.pi)
+        self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
+        self._static_ax.tick_params(axis='x', colors='white') 
+        self._static_ax.tick_params(axis='y', colors='white')
         
+#
+# 2------2
+# ########---------------------Orbital_Transfer_Graph - Bielliptical Hohmann Transfer---------------------##########
+        # Orbital_Transfer_Graph_Layout = QtWidgets.QVBoxLayout(self.ui.Plot_Widget_for_Orbital_Transfer)
+        # Orbital_Transfer_Static_Canvas = FigureCanvas(Figure(facecolor = "#36375c"))
+        # Orbital_Transfer_Graph_Layout.addWidget(NavigationToolbar(Orbital_Transfer_Static_Canvas, self))
+        # Orbital_Transfer_Graph_Layout.addWidget(Orbital_Transfer_Static_Canvas)
+        # self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Hohmann transfer")
+        # self._static_ax.axis('equal')
+        # Orbit = OrbitPlot.biellipticalHohmannTransfer(3.986e5, 6378, 7000, 7000, 105000, 105000, rt1a = 210000)
+        # self._static_ax.plot(Orbit[0][0], Orbit[0][1])
+        # self._static_ax.plot(Orbit[1][0], Orbit[1][1])
+        # self._static_ax.plot(Orbit[2][0], Orbit[2][1])
+        # self._static_ax.plot(Orbit[3][0], Orbit[3][1])
+
         
+        # MajorBodyPlot = OrbitPlot.plotOrbitMPL(3.986e5,6378, 6378, 0, 2*np.pi)
+        # self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
+        # self._static_ax.tick_params(axis='x', colors='white') 
+        # self._static_ax.tick_params(axis='y', colors='white')
 
 
         # MOVE WINDOW
@@ -204,8 +246,8 @@ class MainWindow(QMainWindow):
     
 
 
-    def VPCO_output_bottom_slider(self, maxHeight, enable):
-        if enable:
+    def Sliding_animation(self, maxHeight, enable):
+        if enable and maxHeight == 300 or maxHeight == 0:
 
             # GET WIDTH
             height = self.ui.Bottom_slider_VPCO_Output.height()
@@ -217,9 +259,13 @@ class MainWindow(QMainWindow):
             # SET MAX WIDTH
             if height == 0:
                 heightExtended = maxExtend
+                self.ui.VPCO_Input_Stack.setCurrentIndex(1)
+                self.ui.btn_go_back.show()
                 
             else:
                 heightExtended = standard
+                self.ui.VPCO_Input_Stack.setCurrentIndex(0)
+                self.ui.btn_go_back.hide()
                 
             # ANIMATION
             self.animation_x = QPropertyAnimation(self.ui.Bottom_slider_VPCO_Output, b"maximumHeight")
@@ -228,9 +274,43 @@ class MainWindow(QMainWindow):
             self.animation_x.setEndValue(heightExtended)
             self.animation_x.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
             self.animation_x.start()
-            self.ui.VPCO_Input_Stack.setCurrentIndex(1)
-
             
+        elif enable and maxHeight == 522:
+    
+            # GET WIDTH
+            width = self.ui.Plot_frame_for_Orbital_transfer.width()
+            maxExtend = maxHeight
+            standard = 0
+            
+            
+
+            # SET MAX WIDTH
+            if width == 0:
+                widthExtended = maxExtend
+                
+            else:
+                widthExtended = standard
+            
+                
+            # ANIMATION
+            self.animaton_r = QPropertyAnimation(self.ui.Plot_frame_for_Orbital_transfer, b"maximumWidth")
+            self.animaton_r.setDuration(600)
+            self.animaton_r.setStartValue(width)
+            self.animaton_r.setEndValue(widthExtended)
+            self.animaton_r.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
+            
+
+            self.animaton_l = QPropertyAnimation(self.ui.Type_of_Orbital_transfer_frame, b"maximumWidth")
+            self.animaton_l.setDuration(600)
+            self.animaton_l.setStartValue(width)
+            self.animaton_l.setEndValue(0)
+            self.animaton_l.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
+            
+            self.animation_group = QParallelAnimationGroup(self)
+            self.animation_group.addAnimation(self.animaton_r)
+            self.animation_group.addAnimation(self.animaton_l)
+            self.animation_group.start()
+
 
   
 
