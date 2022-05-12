@@ -17,29 +17,40 @@ class OrbitPlot():
     
     def hohmannTransfer(ra1,rp1, ra2, rp2, mu, rMB):
         Orbit1 = OrbitPlot.plotOrbitMPL(mu, ra1, rp1, 0, 2*np.pi)
-        TransferOrbit1 = OrbitPlot.plotOrbitMPL(mu, ra2, rp1, 0, np.pi)
+        TransferOrbitA = OrbitPlot.plotOrbitMPL(mu, ra2, rp1, 0, np.pi)
         Orbit2 = OrbitPlot.plotOrbitMPL(mu,ra2, rp2, 0, 2*np.pi)
         MajorBodyPlot = OrbitPlot.plotOrbitMPL(mu,rMB, rMB, 0, 2*np.pi)
+        h1 = np.sqrt(2*mu)*np.sqrt(ra1*rp1/(ra1+rp1))
+        htA = np.sqrt(2*mu)*np.sqrt(ra2*rp1/(ra2+rp1))
+        h2 = np.sqrt(2*mu)*np.sqrt(ra2*rp2/(ra2+rp2))
+        vp1, va1, vatA, vptA, vp2, va2 = h1/rp1, h1/ra1, htA/ra2, htA/rp1, h2/rp2, h2/ra2
+        deltaV1 = vptA-vp1
+        deltaV2 = va2-vatA
+        DeltaVA = deltaV1+deltaV2
         style.use("dark_background")
         plt.plot(Orbit1[0], Orbit1[1], "r")
-        plt.plot(TransferOrbit1[0], TransferOrbit1[1], "yellow", LineStyle = "dotted")
+        plt.plot(TransferOrbitA[0], TransferOrbitA[1], "yellow", LineStyle = "dotted")
         plt.plot(Orbit2[0], Orbit2[1],"green")
         plt.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
         plt.axis('equal')
         plt.title("Hohmann Transfer")
         plt.show()
-        # return [Orbit1, TransferOrbit1, Orbit2]
+        return deltaV1, deltaV2, DeltaVA #[Orbit1, TransferOrbitA, Orbit2]
     
-    def biellipticalHohmannTransfer(mu, rMB, ra1,rp1, ra2, rp2, rt1a = None, rt1p = None):
+    def biellipticalHohmannTransfer(mu, rMB, ra1,rp1, ra2, rp2, rt1a):
         Orbit1 = OrbitPlot.plotOrbitMPL(mu, ra1, rp1, 0, 2*np.pi)
-        if rt1a != None:
-            TransferOrbit1 = OrbitPlot.plotOrbitMPL(mu, rt1a, rp1, 0, np.pi)
-            TransferOrbit2 = OrbitPlot.plotOrbitMPL(mu, rt1a, rp2, np.pi, 2*np.pi)
-        elif rt1p != None:
-            TransferOrbit1 = OrbitPlot.plotOrbitMPL(mu, ra1, rt1p, 0, np.pi)
-            TransferOrbit2 = OrbitPlot.plotOrbitMPL(mu, rt1p, rp2, np.pi, 2*np.pi)
+        TransferOrbit1 = OrbitPlot.plotOrbitMPL(mu, rt1a, rp1, 0, np.pi)
+        TransferOrbit2 = OrbitPlot.plotOrbitMPL(mu, rt1a, rp2, np.pi, 2*np.pi)
         Orbit2 = OrbitPlot.plotOrbitMPL(mu,ra2, rp2, 0, 2*np.pi)
         MajorBodyPlot = OrbitPlot.plotOrbitMPL(mu,rMB, rMB, 0, 2*np.pi)
+        h1 = np.sqrt(2*mu)*np.sqrt(ra1*rp1/(ra1+rp1))
+        ht1A = np.sqrt(2*mu)*np.sqrt(rt1a*rp1/(rt1a+rp1))
+        ht2A = np.sqrt(2*mu)*np.sqrt(rt1a*rp2/(rt1a+rp2))
+        h2 = np.sqrt(2*mu)*np.sqrt(ra2*rp2/(ra2+rp2))
+        vp1, va1, vat1A, vpt1A, vat2A, vpt2A ,vp2, va2 = h1/rp1, h1/ra1, ht1A/ra2, ht1A/rp1, ht2A/rt1a, ht2A/rp2 ,h2/rp2, h2/ra2
+        deltaV1 = vpt1A-vp1
+        deltaV2 = va2-vat1A
+        DeltaVA = deltaV1+deltaV2
         style.use("dark_background")
         plt.plot(Orbit1[0], Orbit1[1], "r")
         plt.plot(TransferOrbit1[0], TransferOrbit1[1], "yellow", LineStyle = "dotted")
