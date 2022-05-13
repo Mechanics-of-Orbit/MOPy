@@ -26,8 +26,8 @@ class OrbitPlot():
         a1, aT1, a2 = (ra1+rp1)/2, (ra2+rp1)/2, (ra2+rp2)/2
         vp1, va1, vatA, vptA, vp2, va2 = h1/rp1, h1/ra1, htA/ra2, htA/rp1, h2/rp2, h2/ra2
         Tt1 = 2*np.pi*aT1^(3/2)/np.sqrt(mu)
-        deltaV1 = vptA-vp1
-        deltaV2 = va2-vatA
+        deltaV1 = abs(vptA-vp1)
+        deltaV2 = abs(va2-vatA)
         DeltaVA = deltaV1+deltaV2
         style.use("dark_background")
         plt.plot(Orbit1[0], Orbit1[1], "r")
@@ -51,9 +51,9 @@ class OrbitPlot():
         h2 = np.sqrt(2*mu)*np.sqrt(ra2*rp2/(ra2+rp2))
         a1, aT1A, aT2A, a2 = (ra1+rp1)/2, (rt1a+rp1)/2, (rt1a+rp2)/2, (ra2+rp2)/2
         vp1, va1, vat1A, vpt1A, vat2A, vpt2A ,vp2, va2 = h1/rp1, h1/ra1, ht1A/ra2, ht1A/rp1, ht2A/rt1a, ht2A/rp2 ,h2/rp2, h2/ra2
-        deltaV1 = vpt1A-vp1
-        deltaVtA = vat1A-vat2A
-        deltaV2 = vp2-vpt2A
+        deltaV1 = abs(vpt1A-vp1)
+        deltaVtA = abs(vat1A-vat2A)
+        deltaV2 = abs(vp2-vpt2A)
         DeltaVA = deltaV1+deltaV2+deltaVtA
         TtA = 0.5(((2*np.pi)*(aT1A)^(3/2))/(np.sqrt(mu)) + ((2*np.pi)*(aT2A)^(3/2))/(np.sqrt(mu)))
         style.use("dark_background")
@@ -79,6 +79,10 @@ class OrbitPlot():
         ra2 = 2*a2-rp1
         Orbit2 = OrbitPlot.plotOrbitMPL(mu, ra2, rp1, 0, 2*np.pi)
         MajorBodyPlot = OrbitPlot.plotOrbitMPL(mu,rMB, rMB, 0, 2*np.pi)
+        h1 = np.sqrt(2*mu)*np.sqrt(ra1*rp1/(ra1+rp1))
+        h2 = np.sqrt(2*mu)*np.sqrt(ra2*rp1/(ra2+rp1))
+        v1, v2 = h1/rp1, h2/rp1
+        DeltaV = abs(v2-v1)
         style.use("dark_background")
         plt.plot(Orbit1[0], Orbit1[1], "r")
         plt.text(0, Orbit1[2]*np.cos(thetaA),"* Satellite-A")
@@ -88,7 +92,7 @@ class OrbitPlot():
         plt.axis('equal')
         plt.title("Hohmann Transfer")
         plt.show()
-        return T1, tAB, T2
+        return T1, tAB, T2, DeltaV
         
  
 
