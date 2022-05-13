@@ -23,7 +23,9 @@ class OrbitPlot():
         h1 = np.sqrt(2*mu)*np.sqrt(ra1*rp1/(ra1+rp1))
         htA = np.sqrt(2*mu)*np.sqrt(ra2*rp1/(ra2+rp1))
         h2 = np.sqrt(2*mu)*np.sqrt(ra2*rp2/(ra2+rp2))
+        a1, aT1, a2 = (ra1+rp1)/2, (ra2+rp1)/2, (ra2+rp2)/2
         vp1, va1, vatA, vptA, vp2, va2 = h1/rp1, h1/ra1, htA/ra2, htA/rp1, h2/rp2, h2/ra2
+        Tt1 = 2*np.pi*aT1^(3/2)/np.sqrt(mu)
         deltaV1 = vptA-vp1
         deltaV2 = va2-vatA
         DeltaVA = deltaV1+deltaV2
@@ -35,7 +37,7 @@ class OrbitPlot():
         plt.axis('equal')
         plt.title("Hohmann Transfer")
         plt.show()
-        return deltaV1, deltaV2, DeltaVA #[Orbit1, TransferOrbitA, Orbit2]
+        return deltaV1, deltaV2, DeltaVA, Tt1/2 #[Orbit1, TransferOrbitA, Orbit2]
     
     def biellipticalHohmannTransfer(mu, rMB, ra1,rp1, ra2, rp2, rt1a):
         Orbit1 = OrbitPlot.plotOrbitMPL(mu, ra1, rp1, 0, 2*np.pi)
@@ -47,10 +49,13 @@ class OrbitPlot():
         ht1A = np.sqrt(2*mu)*np.sqrt(rt1a*rp1/(rt1a+rp1))
         ht2A = np.sqrt(2*mu)*np.sqrt(rt1a*rp2/(rt1a+rp2))
         h2 = np.sqrt(2*mu)*np.sqrt(ra2*rp2/(ra2+rp2))
+        a1, aT1A, aT2A, a2 = (ra1+rp1)/2, (rt1a+rp1)/2, (rt1a+rp2)/2, (ra2+rp2)/2
         vp1, va1, vat1A, vpt1A, vat2A, vpt2A ,vp2, va2 = h1/rp1, h1/ra1, ht1A/ra2, ht1A/rp1, ht2A/rt1a, ht2A/rp2 ,h2/rp2, h2/ra2
         deltaV1 = vpt1A-vp1
-        deltaV2 = va2-vat1A
-        DeltaVA = deltaV1+deltaV2
+        deltaVtA = vat1A-vat2A
+        deltaV2 = vp2-vpt2A
+        DeltaVA = deltaV1+deltaV2+deltaVtA
+        TtA = 0.5(((2*np.pi)*(aT1A)^(3/2))/(np.sqrt(mu)) + ((2*np.pi)*(aT2A)^(3/2))/(np.sqrt(mu)))
         style.use("dark_background")
         plt.plot(Orbit1[0], Orbit1[1], "r")
         plt.plot(TransferOrbit1[0], TransferOrbit1[1], "yellow", LineStyle = "dotted")
@@ -60,6 +65,7 @@ class OrbitPlot():
         plt.axis('equal')
         plt.title("Bi-Elliptical Hohmann Transfer")
         plt.show()
+        return deltaV1, deltaVtA, deltaV2, DeltaVA, TtA
     
     def phasingManeuver(mu, rMB, ra1, rp1, thetaA, thetaB):
         Orbit1 = OrbitPlot.plotOrbitMPL(mu, ra1, rp1, 0, 2*np.pi)
@@ -82,6 +88,7 @@ class OrbitPlot():
         plt.axis('equal')
         plt.title("Hohmann Transfer")
         plt.show()
+        return T1, tAB, T2
         
  
 
