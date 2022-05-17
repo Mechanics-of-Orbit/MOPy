@@ -55,7 +55,7 @@ class OrbitPlot():
         deltaVtA = abs(vat1A-vat2A)
         deltaV2 = abs(vp2-vpt2A)
         DeltaVA = deltaV1+deltaV2+deltaVtA
-        TtA = 0.5(((2*np.pi)*(aT1A)^(3/2))/(np.sqrt(mu)) + ((2*np.pi)*(aT2A)^(3/2))/(np.sqrt(mu)))
+        TtA = 0.5*(((2*np.pi)*(aT1A)^(3/2))/(np.sqrt(mu)) + ((2*np.pi)*(aT2A)^(3/2))/(np.sqrt(mu)))
         style.use("dark_background")
         plt.plot(Orbit1[0], Orbit1[1], "r")
         plt.plot(TransferOrbit1[0], TransferOrbit1[1], "yellow", LineStyle = "dotted")
