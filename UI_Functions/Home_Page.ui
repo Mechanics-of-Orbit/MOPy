@@ -734,7 +734,7 @@ background: rgb(78, 79, 132);
                        </property>
                        <layout class="QHBoxLayout" name="horizontalLayout_4">
                         <item>
-                         <widget class="QWidget" name="VPCO_Home_Page" native="true">
+                         <widget class="QWidget" name="Home_VPCO" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -852,7 +852,7 @@ text:&quot;Hu bhai change ho gaya&quot;;
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="Julian_Day" native="true">
+                         <widget class="QWidget" name="Home_Julian_Day" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -886,7 +886,7 @@ image:url(UI_Functions/Resources/Julian_Day.png);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_2">
+                            <widget class="QFrame" name="Home_Julian_Day_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;
@@ -901,7 +901,7 @@ image:none;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_2">
+                            <widget class="QFrame" name="Home_Julian_Day_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -938,7 +938,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_58">
+                               <widget class="QLabel" name="Home_Julian_Day_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -962,7 +962,7 @@ background-color: rgba(0, 0, 0, 40%);
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="Orbital_Elements" native="true">
+                         <widget class="QWidget" name="Home_Orbital_Elements" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -996,7 +996,7 @@ image:url(UI_Functions/Resources/Orbital_Elements.png);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_6">
+                            <widget class="QFrame" name="Home_Orbital_Elements_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;</string>
@@ -1010,7 +1010,7 @@ image:none;</string>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_6">
+                            <widget class="QFrame" name="Home_Orbital_Elements_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -1047,7 +1047,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_59">
+                               <widget class="QLabel" name="Home_Orbital_Elements_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -1070,7 +1070,7 @@ background-color: rgba(0, 0, 0, 40%);</string>
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="SOI" native="true">
+                         <widget class="QWidget" name="Home_SOI" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -1104,7 +1104,7 @@ image:url(UI_Functions/Resources/SOI.jpg);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_7">
+                            <widget class="QFrame" name="Home_SOI_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;</string>
@@ -1118,7 +1118,7 @@ image:none;</string>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_7">
+                            <widget class="QFrame" name="Home_SOI_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -1155,7 +1155,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_60">
+                               <widget class="QLabel" name="Home_SOI_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -1202,7 +1202,7 @@ background-color: rgba(0, 0, 0, 60%);</string>
                        </property>
                        <layout class="QHBoxLayout" name="horizontalLayout_8">
                         <item>
-                         <widget class="QWidget" name="Orbit_Visualization" native="true">
+                         <widget class="QWidget" name="Home_Orbit_Visualization" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -1236,7 +1236,7 @@ image:url(UI_Functions/Resources/Orbit_Visualization.png);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_3">
+                            <widget class="QFrame" name="Home_Orbit_Visualization_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;
@@ -1251,7 +1251,7 @@ image:none;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_3">
+                            <widget class="QFrame" name="Home_Orbit_Visualization_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -1288,7 +1288,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_66">
+                               <widget class="QLabel" name="Home_Orbit_Visualization_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -1312,7 +1312,7 @@ background-color: rgba(0, 0, 0, 40%);
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="Ground_Track" native="true">
+                         <widget class="QWidget" name="Home_Ground_Track" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -1346,7 +1346,7 @@ image:url(UI_Functions/Resources/Ground_track.png);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_4">
+                            <widget class="QFrame" name="Home_Ground_Track_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;
@@ -1361,7 +1361,7 @@ image:none;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_4">
+                            <widget class="QFrame" name="Home_Ground_Track_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -1398,7 +1398,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_61">
+                               <widget class="QLabel" name="Home_Ground_Track_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -1422,7 +1422,7 @@ background-color: rgba(0, 0, 0, 40%);
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="Planet_in_Shadow" native="true">
+                         <widget class="QWidget" name="Home_Planet_in_Shadow" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -1456,7 +1456,7 @@ image:url(UI_Functions/Resources/DSPS.png);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_5">
+                            <widget class="QFrame" name="Home_Planet_in_Shadow_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;
@@ -1471,7 +1471,7 @@ image:none;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_5">
+                            <widget class="QFrame" name="Home_Planet_in_Shadow_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -1508,7 +1508,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_67">
+                               <widget class="QLabel" name="Home_Planet_in_Shadow_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -1532,7 +1532,7 @@ background-color: rgba(0, 0, 0, 40%);
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="Planetary_Ephimeris" native="true">
+                         <widget class="QWidget" name="Home_Planetary_Ephimeris" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -1566,7 +1566,7 @@ image:url(UI_Functions/Resources/Planetary_Ephemeris.jpg);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_8">
+                            <widget class="QFrame" name="Home_Planetary_Ephimeris_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;</string>
@@ -1580,7 +1580,7 @@ image:none;</string>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_8">
+                            <widget class="QFrame" name="Home_Planetary_Ephimeris_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -1617,7 +1617,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_62">
+                               <widget class="QLabel" name="Home_Planetary_Ephimeris_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -1665,7 +1665,7 @@ background-color: rgba(0, 0, 0, 60%);
                        </property>
                        <layout class="QHBoxLayout" name="horizontalLayout_72">
                         <item>
-                         <widget class="QWidget" name="Numerical_integ" native="true">
+                         <widget class="QWidget" name="Home_Numerical_integ" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -1699,7 +1699,7 @@ image:url(UI_Functions/Resources/Numerical_Integration.jpg);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_9">
+                            <widget class="QFrame" name="Home_Numerical_integ_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;
@@ -1714,7 +1714,7 @@ image:none;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_9">
+                            <widget class="QFrame" name="Home_Numerical_integ_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -1751,7 +1751,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_64">
+                               <widget class="QLabel" name="Home_Numerical_integ_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -1775,7 +1775,7 @@ background-color: rgba(0, 0, 0, 40%);
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="Eulers_Angle" native="true">
+                         <widget class="QWidget" name="Home_Eulers_Angle" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>475</width>
@@ -1809,7 +1809,7 @@ image:url(UI_Functions/Resources/Eulers Angle.png);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_11">
+                            <widget class="QFrame" name="Home_Eulers_Angle_Filler">
                              <property name="autoFillBackground">
                               <bool>false</bool>
                              </property>
@@ -1827,7 +1827,7 @@ image:none;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_11">
+                            <widget class="QFrame" name="Home_Eulers_Angle_Slider">
                              <property name="styleSheet">
                               <string notr="true">background-color: rgba(47, 47, 48, 60%);
 image:none;</string>
@@ -1852,7 +1852,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_68">
+                               <widget class="QLabel" name="Home_Eulers_Angle_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 
@@ -1876,7 +1876,7 @@ background-color: rgba(0, 0, 0, 40%);
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="Orbital_transfer" native="true">
+                         <widget class="QWidget" name="Home_Orbital_transfer" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>150</width>
@@ -1910,7 +1910,7 @@ image:url(UI_Functions/Resources/Orbital Transfer.png);</string>
                             <number>0</number>
                            </property>
                            <item>
-                            <widget class="QFrame" name="filler_10">
+                            <widget class="QFrame" name="Home_Orbital_transfer_Filler">
                              <property name="styleSheet">
                               <string notr="true">background-color:transparent;
 image:none;
@@ -1925,7 +1925,7 @@ image:none;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="slider_10">
+                            <widget class="QFrame" name="Home_Orbital_transfer_Slider">
                              <property name="minimumSize">
                               <size>
                                <width>150</width>
@@ -1962,7 +1962,7 @@ image:none;</string>
                                <number>6</number>
                               </property>
                               <item>
-                               <widget class="QLabel" name="label_65">
+                               <widget class="QLabel" name="Home_Orbital_transfer_Label">
                                 <property name="styleSheet">
                                  <string notr="true">color:white;
 

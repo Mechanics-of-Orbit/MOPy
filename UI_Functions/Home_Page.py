@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageGGXNJS.ui'
+## Form generated from reading UI file 'Home_PagejfCklA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -456,19 +456,19 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_2)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.VPCO_Home_Page = QWidget(self.frame_2)
-        self.VPCO_Home_Page.setObjectName(u"VPCO_Home_Page")
-        self.VPCO_Home_Page.setMinimumSize(QSize(150, 150))
-        self.VPCO_Home_Page.setMaximumSize(QSize(230, 200))
-        self.VPCO_Home_Page.setStyleSheet(u"QWidget{\n"
+        self.Home_VPCO = QWidget(self.frame_2)
+        self.Home_VPCO.setObjectName(u"Home_VPCO")
+        self.Home_VPCO.setMinimumSize(QSize(150, 150))
+        self.Home_VPCO.setMaximumSize(QSize(230, 200))
+        self.Home_VPCO.setStyleSheet(u"QWidget{\n"
 "background-color:#000005;\n"
 "image:url(UI_Functions/Resources/Orbits.jpg);\n"
 "}	")
-        self.verticalLayout_13 = QVBoxLayout(self.VPCO_Home_Page)
+        self.verticalLayout_13 = QVBoxLayout(self.Home_VPCO)
         self.verticalLayout_13.setSpacing(0)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
-        self.Home_VPCO_Filler = QFrame(self.VPCO_Home_Page)
+        self.Home_VPCO_Filler = QFrame(self.Home_VPCO)
         self.Home_VPCO_Filler.setObjectName(u"Home_VPCO_Filler")
         self.Home_VPCO_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;")
@@ -477,7 +477,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_13.addWidget(self.Home_VPCO_Filler)
 
-        self.Home_VPCO_Slider = QFrame(self.VPCO_Home_Page)
+        self.Home_VPCO_Slider = QFrame(self.Home_VPCO)
         self.Home_VPCO_Slider.setObjectName(u"Home_VPCO_Slider")
         self.Home_VPCO_Slider.setMinimumSize(QSize(150, 80))
         self.Home_VPCO_Slider.setMaximumSize(QSize(230, 200))
@@ -509,150 +509,150 @@ class Ui_MainWindow(object):
         self.verticalLayout_13.addWidget(self.Home_VPCO_Slider)
 
 
-        self.horizontalLayout_4.addWidget(self.VPCO_Home_Page)
+        self.horizontalLayout_4.addWidget(self.Home_VPCO)
 
-        self.Julian_Day = QWidget(self.frame_2)
-        self.Julian_Day.setObjectName(u"Julian_Day")
-        self.Julian_Day.setMinimumSize(QSize(150, 150))
-        self.Julian_Day.setMaximumSize(QSize(230, 200))
-        self.Julian_Day.setStyleSheet(u"background-color:#e1a2b4;\n"
+        self.Home_Julian_Day = QWidget(self.frame_2)
+        self.Home_Julian_Day.setObjectName(u"Home_Julian_Day")
+        self.Home_Julian_Day.setMinimumSize(QSize(150, 150))
+        self.Home_Julian_Day.setMaximumSize(QSize(230, 200))
+        self.Home_Julian_Day.setStyleSheet(u"background-color:#e1a2b4;\n"
 "image:url(UI_Functions/Resources/Julian_Day.png);")
-        self.verticalLayout_32 = QVBoxLayout(self.Julian_Day)
+        self.verticalLayout_32 = QVBoxLayout(self.Home_Julian_Day)
         self.verticalLayout_32.setSpacing(0)
         self.verticalLayout_32.setObjectName(u"verticalLayout_32")
         self.verticalLayout_32.setContentsMargins(0, 0, 0, 0)
-        self.filler_2 = QFrame(self.Julian_Day)
-        self.filler_2.setObjectName(u"filler_2")
-        self.filler_2.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Julian_Day_Filler = QFrame(self.Home_Julian_Day)
+        self.Home_Julian_Day_Filler.setObjectName(u"Home_Julian_Day_Filler")
+        self.Home_Julian_Day_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "")
-        self.filler_2.setFrameShape(QFrame.StyledPanel)
-        self.filler_2.setFrameShadow(QFrame.Raised)
+        self.Home_Julian_Day_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Julian_Day_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_32.addWidget(self.filler_2)
+        self.verticalLayout_32.addWidget(self.Home_Julian_Day_Filler)
 
-        self.slider_2 = QFrame(self.Julian_Day)
-        self.slider_2.setObjectName(u"slider_2")
-        self.slider_2.setMinimumSize(QSize(150, 80))
-        self.slider_2.setMaximumSize(QSize(230, 200))
-        self.slider_2.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
+        self.Home_Julian_Day_Slider = QFrame(self.Home_Julian_Day)
+        self.Home_Julian_Day_Slider.setObjectName(u"Home_Julian_Day_Slider")
+        self.Home_Julian_Day_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_Julian_Day_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_Julian_Day_Slider.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
 "image:none;")
-        self.slider_2.setFrameShape(QFrame.StyledPanel)
-        self.slider_2.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_42 = QVBoxLayout(self.slider_2)
+        self.Home_Julian_Day_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Julian_Day_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_42 = QVBoxLayout(self.Home_Julian_Day_Slider)
         self.verticalLayout_42.setObjectName(u"verticalLayout_42")
         self.verticalLayout_42.setContentsMargins(6, 6, 6, 6)
-        self.label_58 = QLabel(self.slider_2)
-        self.label_58.setObjectName(u"label_58")
-        self.label_58.setStyleSheet(u"color:white;\n"
+        self.Home_Julian_Day_Label = QLabel(self.Home_Julian_Day_Slider)
+        self.Home_Julian_Day_Label.setObjectName(u"Home_Julian_Day_Label")
+        self.Home_Julian_Day_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 40%);\n"
 "")
-        self.label_58.setAlignment(Qt.AlignCenter)
+        self.Home_Julian_Day_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_42.addWidget(self.label_58)
-
-
-        self.verticalLayout_32.addWidget(self.slider_2)
+        self.verticalLayout_42.addWidget(self.Home_Julian_Day_Label)
 
 
-        self.horizontalLayout_4.addWidget(self.Julian_Day)
+        self.verticalLayout_32.addWidget(self.Home_Julian_Day_Slider)
 
-        self.Orbital_Elements = QWidget(self.frame_2)
-        self.Orbital_Elements.setObjectName(u"Orbital_Elements")
-        self.Orbital_Elements.setMinimumSize(QSize(150, 150))
-        self.Orbital_Elements.setMaximumSize(QSize(230, 200))
-        self.Orbital_Elements.setStyleSheet(u"background-color:#081026;\n"
+
+        self.horizontalLayout_4.addWidget(self.Home_Julian_Day)
+
+        self.Home_Orbital_Elements = QWidget(self.frame_2)
+        self.Home_Orbital_Elements.setObjectName(u"Home_Orbital_Elements")
+        self.Home_Orbital_Elements.setMinimumSize(QSize(150, 150))
+        self.Home_Orbital_Elements.setMaximumSize(QSize(230, 200))
+        self.Home_Orbital_Elements.setStyleSheet(u"background-color:#081026;\n"
 "image:url(UI_Functions/Resources/Orbital_Elements.png);")
-        self.verticalLayout_36 = QVBoxLayout(self.Orbital_Elements)
+        self.verticalLayout_36 = QVBoxLayout(self.Home_Orbital_Elements)
         self.verticalLayout_36.setSpacing(0)
         self.verticalLayout_36.setObjectName(u"verticalLayout_36")
         self.verticalLayout_36.setContentsMargins(0, 0, 0, 0)
-        self.filler_6 = QFrame(self.Orbital_Elements)
-        self.filler_6.setObjectName(u"filler_6")
-        self.filler_6.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Orbital_Elements_Filler = QFrame(self.Home_Orbital_Elements)
+        self.Home_Orbital_Elements_Filler.setObjectName(u"Home_Orbital_Elements_Filler")
+        self.Home_Orbital_Elements_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;")
-        self.filler_6.setFrameShape(QFrame.StyledPanel)
-        self.filler_6.setFrameShadow(QFrame.Raised)
+        self.Home_Orbital_Elements_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Orbital_Elements_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_36.addWidget(self.filler_6)
+        self.verticalLayout_36.addWidget(self.Home_Orbital_Elements_Filler)
 
-        self.slider_6 = QFrame(self.Orbital_Elements)
-        self.slider_6.setObjectName(u"slider_6")
-        self.slider_6.setMinimumSize(QSize(150, 80))
-        self.slider_6.setMaximumSize(QSize(230, 200))
-        self.slider_6.setStyleSheet(u"background-color: rgba(0, 0, 0,30%);\n"
+        self.Home_Orbital_Elements_Slider = QFrame(self.Home_Orbital_Elements)
+        self.Home_Orbital_Elements_Slider.setObjectName(u"Home_Orbital_Elements_Slider")
+        self.Home_Orbital_Elements_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_Orbital_Elements_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_Orbital_Elements_Slider.setStyleSheet(u"background-color: rgba(0, 0, 0,30%);\n"
 "image:none;")
-        self.slider_6.setFrameShape(QFrame.StyledPanel)
-        self.slider_6.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_5 = QHBoxLayout(self.slider_6)
+        self.Home_Orbital_Elements_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Orbital_Elements_Slider.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.Home_Orbital_Elements_Slider)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(6, 6, 6, 6)
-        self.label_59 = QLabel(self.slider_6)
-        self.label_59.setObjectName(u"label_59")
-        self.label_59.setStyleSheet(u"color:white;\n"
+        self.Home_Orbital_Elements_Label = QLabel(self.Home_Orbital_Elements_Slider)
+        self.Home_Orbital_Elements_Label.setObjectName(u"Home_Orbital_Elements_Label")
+        self.Home_Orbital_Elements_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 40%);")
-        self.label_59.setAlignment(Qt.AlignCenter)
+        self.Home_Orbital_Elements_Label.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_5.addWidget(self.label_59)
-
-
-        self.verticalLayout_36.addWidget(self.slider_6)
+        self.horizontalLayout_5.addWidget(self.Home_Orbital_Elements_Label)
 
 
-        self.horizontalLayout_4.addWidget(self.Orbital_Elements)
+        self.verticalLayout_36.addWidget(self.Home_Orbital_Elements_Slider)
 
-        self.SOI = QWidget(self.frame_2)
-        self.SOI.setObjectName(u"SOI")
-        self.SOI.setMinimumSize(QSize(150, 150))
-        self.SOI.setMaximumSize(QSize(230, 200))
-        self.SOI.setStyleSheet(u"background-color:#010008;\n"
+
+        self.horizontalLayout_4.addWidget(self.Home_Orbital_Elements)
+
+        self.Home_SOI = QWidget(self.frame_2)
+        self.Home_SOI.setObjectName(u"Home_SOI")
+        self.Home_SOI.setMinimumSize(QSize(150, 150))
+        self.Home_SOI.setMaximumSize(QSize(230, 200))
+        self.Home_SOI.setStyleSheet(u"background-color:#010008;\n"
 "image:url(UI_Functions/Resources/SOI.jpg);")
-        self.verticalLayout_37 = QVBoxLayout(self.SOI)
+        self.verticalLayout_37 = QVBoxLayout(self.Home_SOI)
         self.verticalLayout_37.setSpacing(0)
         self.verticalLayout_37.setObjectName(u"verticalLayout_37")
         self.verticalLayout_37.setContentsMargins(0, 0, 0, 0)
-        self.filler_7 = QFrame(self.SOI)
-        self.filler_7.setObjectName(u"filler_7")
-        self.filler_7.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_SOI_Filler = QFrame(self.Home_SOI)
+        self.Home_SOI_Filler.setObjectName(u"Home_SOI_Filler")
+        self.Home_SOI_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;")
-        self.filler_7.setFrameShape(QFrame.StyledPanel)
-        self.filler_7.setFrameShadow(QFrame.Raised)
+        self.Home_SOI_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_SOI_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_37.addWidget(self.filler_7)
+        self.verticalLayout_37.addWidget(self.Home_SOI_Filler)
 
-        self.slider_7 = QFrame(self.SOI)
-        self.slider_7.setObjectName(u"slider_7")
-        self.slider_7.setMinimumSize(QSize(150, 80))
-        self.slider_7.setMaximumSize(QSize(230, 200))
-        self.slider_7.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
+        self.Home_SOI_Slider = QFrame(self.Home_SOI)
+        self.Home_SOI_Slider.setObjectName(u"Home_SOI_Slider")
+        self.Home_SOI_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_SOI_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_SOI_Slider.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
 "image:none;")
-        self.slider_7.setFrameShape(QFrame.StyledPanel)
-        self.slider_7.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_43 = QVBoxLayout(self.slider_7)
+        self.Home_SOI_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_SOI_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_43 = QVBoxLayout(self.Home_SOI_Slider)
         self.verticalLayout_43.setObjectName(u"verticalLayout_43")
         self.verticalLayout_43.setContentsMargins(6, 6, 6, 6)
-        self.label_60 = QLabel(self.slider_7)
-        self.label_60.setObjectName(u"label_60")
-        self.label_60.setStyleSheet(u"color:white;\n"
+        self.Home_SOI_Label = QLabel(self.Home_SOI_Slider)
+        self.Home_SOI_Label.setObjectName(u"Home_SOI_Label")
+        self.Home_SOI_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 60%);")
-        self.label_60.setAlignment(Qt.AlignCenter)
+        self.Home_SOI_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_43.addWidget(self.label_60)
-
-
-        self.verticalLayout_37.addWidget(self.slider_7)
+        self.verticalLayout_43.addWidget(self.Home_SOI_Label)
 
 
-        self.horizontalLayout_4.addWidget(self.SOI)
+        self.verticalLayout_37.addWidget(self.Home_SOI_Slider)
+
+
+        self.horizontalLayout_4.addWidget(self.Home_SOI)
 
 
         self.verticalLayout_6.addWidget(self.frame_2)
@@ -665,200 +665,200 @@ class Ui_MainWindow(object):
         self.frame_8.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_8 = QHBoxLayout(self.frame_8)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.Orbit_Visualization = QWidget(self.frame_8)
-        self.Orbit_Visualization.setObjectName(u"Orbit_Visualization")
-        self.Orbit_Visualization.setMinimumSize(QSize(150, 150))
-        self.Orbit_Visualization.setMaximumSize(QSize(230, 200))
-        self.Orbit_Visualization.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(44, 61, 146, 255), stop:1 rgba(35, 51, 126, 255));\n"
+        self.Home_Orbit_Visualization = QWidget(self.frame_8)
+        self.Home_Orbit_Visualization.setObjectName(u"Home_Orbit_Visualization")
+        self.Home_Orbit_Visualization.setMinimumSize(QSize(150, 150))
+        self.Home_Orbit_Visualization.setMaximumSize(QSize(230, 200))
+        self.Home_Orbit_Visualization.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(44, 61, 146, 255), stop:1 rgba(35, 51, 126, 255));\n"
 "image:url(UI_Functions/Resources/Orbit_Visualization.png);")
-        self.verticalLayout_33 = QVBoxLayout(self.Orbit_Visualization)
+        self.verticalLayout_33 = QVBoxLayout(self.Home_Orbit_Visualization)
         self.verticalLayout_33.setSpacing(0)
         self.verticalLayout_33.setObjectName(u"verticalLayout_33")
         self.verticalLayout_33.setContentsMargins(0, 0, 0, 0)
-        self.filler_3 = QFrame(self.Orbit_Visualization)
-        self.filler_3.setObjectName(u"filler_3")
-        self.filler_3.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Orbit_Visualization_Filler = QFrame(self.Home_Orbit_Visualization)
+        self.Home_Orbit_Visualization_Filler.setObjectName(u"Home_Orbit_Visualization_Filler")
+        self.Home_Orbit_Visualization_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "")
-        self.filler_3.setFrameShape(QFrame.StyledPanel)
-        self.filler_3.setFrameShadow(QFrame.Raised)
+        self.Home_Orbit_Visualization_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Orbit_Visualization_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_33.addWidget(self.filler_3)
+        self.verticalLayout_33.addWidget(self.Home_Orbit_Visualization_Filler)
 
-        self.slider_3 = QFrame(self.Orbit_Visualization)
-        self.slider_3.setObjectName(u"slider_3")
-        self.slider_3.setMinimumSize(QSize(150, 80))
-        self.slider_3.setMaximumSize(QSize(230, 200))
-        self.slider_3.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
+        self.Home_Orbit_Visualization_Slider = QFrame(self.Home_Orbit_Visualization)
+        self.Home_Orbit_Visualization_Slider.setObjectName(u"Home_Orbit_Visualization_Slider")
+        self.Home_Orbit_Visualization_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_Orbit_Visualization_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_Orbit_Visualization_Slider.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
 "image:none;")
-        self.slider_3.setFrameShape(QFrame.StyledPanel)
-        self.slider_3.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_48 = QVBoxLayout(self.slider_3)
+        self.Home_Orbit_Visualization_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Orbit_Visualization_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_48 = QVBoxLayout(self.Home_Orbit_Visualization_Slider)
         self.verticalLayout_48.setObjectName(u"verticalLayout_48")
         self.verticalLayout_48.setContentsMargins(6, 6, 6, 6)
-        self.label_66 = QLabel(self.slider_3)
-        self.label_66.setObjectName(u"label_66")
-        self.label_66.setStyleSheet(u"color:white;\n"
+        self.Home_Orbit_Visualization_Label = QLabel(self.Home_Orbit_Visualization_Slider)
+        self.Home_Orbit_Visualization_Label.setObjectName(u"Home_Orbit_Visualization_Label")
+        self.Home_Orbit_Visualization_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 40%);\n"
 "")
-        self.label_66.setAlignment(Qt.AlignCenter)
+        self.Home_Orbit_Visualization_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_48.addWidget(self.label_66)
-
-
-        self.verticalLayout_33.addWidget(self.slider_3)
+        self.verticalLayout_48.addWidget(self.Home_Orbit_Visualization_Label)
 
 
-        self.horizontalLayout_8.addWidget(self.Orbit_Visualization)
+        self.verticalLayout_33.addWidget(self.Home_Orbit_Visualization_Slider)
 
-        self.Ground_Track = QWidget(self.frame_8)
-        self.Ground_Track.setObjectName(u"Ground_Track")
-        self.Ground_Track.setMinimumSize(QSize(150, 150))
-        self.Ground_Track.setMaximumSize(QSize(230, 200))
-        self.Ground_Track.setStyleSheet(u"background-color:#eef3f9;\n"
+
+        self.horizontalLayout_8.addWidget(self.Home_Orbit_Visualization)
+
+        self.Home_Ground_Track = QWidget(self.frame_8)
+        self.Home_Ground_Track.setObjectName(u"Home_Ground_Track")
+        self.Home_Ground_Track.setMinimumSize(QSize(150, 150))
+        self.Home_Ground_Track.setMaximumSize(QSize(230, 200))
+        self.Home_Ground_Track.setStyleSheet(u"background-color:#eef3f9;\n"
 "image:url(UI_Functions/Resources/Ground_track.png);")
-        self.verticalLayout_34 = QVBoxLayout(self.Ground_Track)
+        self.verticalLayout_34 = QVBoxLayout(self.Home_Ground_Track)
         self.verticalLayout_34.setSpacing(0)
         self.verticalLayout_34.setObjectName(u"verticalLayout_34")
         self.verticalLayout_34.setContentsMargins(0, 0, 0, 0)
-        self.filler_4 = QFrame(self.Ground_Track)
-        self.filler_4.setObjectName(u"filler_4")
-        self.filler_4.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Ground_Track_Filler = QFrame(self.Home_Ground_Track)
+        self.Home_Ground_Track_Filler.setObjectName(u"Home_Ground_Track_Filler")
+        self.Home_Ground_Track_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "")
-        self.filler_4.setFrameShape(QFrame.StyledPanel)
-        self.filler_4.setFrameShadow(QFrame.Raised)
+        self.Home_Ground_Track_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Ground_Track_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_34.addWidget(self.filler_4)
+        self.verticalLayout_34.addWidget(self.Home_Ground_Track_Filler)
 
-        self.slider_4 = QFrame(self.Ground_Track)
-        self.slider_4.setObjectName(u"slider_4")
-        self.slider_4.setMinimumSize(QSize(150, 80))
-        self.slider_4.setMaximumSize(QSize(230, 200))
-        self.slider_4.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
+        self.Home_Ground_Track_Slider = QFrame(self.Home_Ground_Track)
+        self.Home_Ground_Track_Slider.setObjectName(u"Home_Ground_Track_Slider")
+        self.Home_Ground_Track_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_Ground_Track_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_Ground_Track_Slider.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
 "image:none;")
-        self.slider_4.setFrameShape(QFrame.StyledPanel)
-        self.slider_4.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_44 = QVBoxLayout(self.slider_4)
+        self.Home_Ground_Track_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Ground_Track_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_44 = QVBoxLayout(self.Home_Ground_Track_Slider)
         self.verticalLayout_44.setObjectName(u"verticalLayout_44")
         self.verticalLayout_44.setContentsMargins(6, 6, 6, 6)
-        self.label_61 = QLabel(self.slider_4)
-        self.label_61.setObjectName(u"label_61")
-        self.label_61.setStyleSheet(u"color:white;\n"
+        self.Home_Ground_Track_Label = QLabel(self.Home_Ground_Track_Slider)
+        self.Home_Ground_Track_Label.setObjectName(u"Home_Ground_Track_Label")
+        self.Home_Ground_Track_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 40%);\n"
 "")
-        self.label_61.setAlignment(Qt.AlignCenter)
+        self.Home_Ground_Track_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_44.addWidget(self.label_61)
-
-
-        self.verticalLayout_34.addWidget(self.slider_4)
+        self.verticalLayout_44.addWidget(self.Home_Ground_Track_Label)
 
 
-        self.horizontalLayout_8.addWidget(self.Ground_Track)
+        self.verticalLayout_34.addWidget(self.Home_Ground_Track_Slider)
 
-        self.Planet_in_Shadow = QWidget(self.frame_8)
-        self.Planet_in_Shadow.setObjectName(u"Planet_in_Shadow")
-        self.Planet_in_Shadow.setMinimumSize(QSize(150, 150))
-        self.Planet_in_Shadow.setMaximumSize(QSize(230, 200))
-        self.Planet_in_Shadow.setStyleSheet(u"background-color:#000002;\n"
+
+        self.horizontalLayout_8.addWidget(self.Home_Ground_Track)
+
+        self.Home_Planet_in_Shadow = QWidget(self.frame_8)
+        self.Home_Planet_in_Shadow.setObjectName(u"Home_Planet_in_Shadow")
+        self.Home_Planet_in_Shadow.setMinimumSize(QSize(150, 150))
+        self.Home_Planet_in_Shadow.setMaximumSize(QSize(230, 200))
+        self.Home_Planet_in_Shadow.setStyleSheet(u"background-color:#000002;\n"
 "image:url(UI_Functions/Resources/DSPS.png);")
-        self.verticalLayout_35 = QVBoxLayout(self.Planet_in_Shadow)
+        self.verticalLayout_35 = QVBoxLayout(self.Home_Planet_in_Shadow)
         self.verticalLayout_35.setSpacing(0)
         self.verticalLayout_35.setObjectName(u"verticalLayout_35")
         self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
-        self.filler_5 = QFrame(self.Planet_in_Shadow)
-        self.filler_5.setObjectName(u"filler_5")
-        self.filler_5.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Planet_in_Shadow_Filler = QFrame(self.Home_Planet_in_Shadow)
+        self.Home_Planet_in_Shadow_Filler.setObjectName(u"Home_Planet_in_Shadow_Filler")
+        self.Home_Planet_in_Shadow_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "")
-        self.filler_5.setFrameShape(QFrame.StyledPanel)
-        self.filler_5.setFrameShadow(QFrame.Raised)
+        self.Home_Planet_in_Shadow_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Planet_in_Shadow_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_35.addWidget(self.filler_5)
+        self.verticalLayout_35.addWidget(self.Home_Planet_in_Shadow_Filler)
 
-        self.slider_5 = QFrame(self.Planet_in_Shadow)
-        self.slider_5.setObjectName(u"slider_5")
-        self.slider_5.setMinimumSize(QSize(150, 80))
-        self.slider_5.setMaximumSize(QSize(230, 200))
-        self.slider_5.setStyleSheet(u"background-color: rgba(47, 47, 48, 50%);\n"
+        self.Home_Planet_in_Shadow_Slider = QFrame(self.Home_Planet_in_Shadow)
+        self.Home_Planet_in_Shadow_Slider.setObjectName(u"Home_Planet_in_Shadow_Slider")
+        self.Home_Planet_in_Shadow_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_Planet_in_Shadow_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_Planet_in_Shadow_Slider.setStyleSheet(u"background-color: rgba(47, 47, 48, 50%);\n"
 "image:none;")
-        self.slider_5.setFrameShape(QFrame.StyledPanel)
-        self.slider_5.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_50 = QVBoxLayout(self.slider_5)
+        self.Home_Planet_in_Shadow_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Planet_in_Shadow_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_50 = QVBoxLayout(self.Home_Planet_in_Shadow_Slider)
         self.verticalLayout_50.setObjectName(u"verticalLayout_50")
         self.verticalLayout_50.setContentsMargins(6, 6, 6, 6)
-        self.label_67 = QLabel(self.slider_5)
-        self.label_67.setObjectName(u"label_67")
-        self.label_67.setStyleSheet(u"color:white;\n"
+        self.Home_Planet_in_Shadow_Label = QLabel(self.Home_Planet_in_Shadow_Slider)
+        self.Home_Planet_in_Shadow_Label.setObjectName(u"Home_Planet_in_Shadow_Label")
+        self.Home_Planet_in_Shadow_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 40%);\n"
 "")
-        self.label_67.setAlignment(Qt.AlignCenter)
+        self.Home_Planet_in_Shadow_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_50.addWidget(self.label_67)
-
-
-        self.verticalLayout_35.addWidget(self.slider_5)
+        self.verticalLayout_50.addWidget(self.Home_Planet_in_Shadow_Label)
 
 
-        self.horizontalLayout_8.addWidget(self.Planet_in_Shadow)
+        self.verticalLayout_35.addWidget(self.Home_Planet_in_Shadow_Slider)
 
-        self.Planetary_Ephimeris = QWidget(self.frame_8)
-        self.Planetary_Ephimeris.setObjectName(u"Planetary_Ephimeris")
-        self.Planetary_Ephimeris.setMinimumSize(QSize(150, 150))
-        self.Planetary_Ephimeris.setMaximumSize(QSize(230, 200))
-        self.Planetary_Ephimeris.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0.597, x2:1, y2:0.08, stop:0 rgba(17, 24, 66, 255), stop:1 rgba(11, 11, 11, 255));\n"
+
+        self.horizontalLayout_8.addWidget(self.Home_Planet_in_Shadow)
+
+        self.Home_Planetary_Ephimeris = QWidget(self.frame_8)
+        self.Home_Planetary_Ephimeris.setObjectName(u"Home_Planetary_Ephimeris")
+        self.Home_Planetary_Ephimeris.setMinimumSize(QSize(150, 150))
+        self.Home_Planetary_Ephimeris.setMaximumSize(QSize(230, 200))
+        self.Home_Planetary_Ephimeris.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0.597, x2:1, y2:0.08, stop:0 rgba(17, 24, 66, 255), stop:1 rgba(11, 11, 11, 255));\n"
 "image:url(UI_Functions/Resources/Planetary_Ephemeris.jpg);")
-        self.verticalLayout_40 = QVBoxLayout(self.Planetary_Ephimeris)
+        self.verticalLayout_40 = QVBoxLayout(self.Home_Planetary_Ephimeris)
         self.verticalLayout_40.setSpacing(0)
         self.verticalLayout_40.setObjectName(u"verticalLayout_40")
         self.verticalLayout_40.setContentsMargins(0, 0, 0, 0)
-        self.filler_8 = QFrame(self.Planetary_Ephimeris)
-        self.filler_8.setObjectName(u"filler_8")
-        self.filler_8.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Planetary_Ephimeris_Filler = QFrame(self.Home_Planetary_Ephimeris)
+        self.Home_Planetary_Ephimeris_Filler.setObjectName(u"Home_Planetary_Ephimeris_Filler")
+        self.Home_Planetary_Ephimeris_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;")
-        self.filler_8.setFrameShape(QFrame.StyledPanel)
-        self.filler_8.setFrameShadow(QFrame.Raised)
+        self.Home_Planetary_Ephimeris_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Planetary_Ephimeris_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_40.addWidget(self.filler_8)
+        self.verticalLayout_40.addWidget(self.Home_Planetary_Ephimeris_Filler)
 
-        self.slider_8 = QFrame(self.Planetary_Ephimeris)
-        self.slider_8.setObjectName(u"slider_8")
-        self.slider_8.setMinimumSize(QSize(150, 80))
-        self.slider_8.setMaximumSize(QSize(230, 200))
-        self.slider_8.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
+        self.Home_Planetary_Ephimeris_Slider = QFrame(self.Home_Planetary_Ephimeris)
+        self.Home_Planetary_Ephimeris_Slider.setObjectName(u"Home_Planetary_Ephimeris_Slider")
+        self.Home_Planetary_Ephimeris_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_Planetary_Ephimeris_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_Planetary_Ephimeris_Slider.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
 "image:none;")
-        self.slider_8.setFrameShape(QFrame.StyledPanel)
-        self.slider_8.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_45 = QVBoxLayout(self.slider_8)
+        self.Home_Planetary_Ephimeris_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Planetary_Ephimeris_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_45 = QVBoxLayout(self.Home_Planetary_Ephimeris_Slider)
         self.verticalLayout_45.setObjectName(u"verticalLayout_45")
         self.verticalLayout_45.setContentsMargins(6, 6, 6, 6)
-        self.label_62 = QLabel(self.slider_8)
-        self.label_62.setObjectName(u"label_62")
-        self.label_62.setStyleSheet(u"color:white;\n"
+        self.Home_Planetary_Ephimeris_Label = QLabel(self.Home_Planetary_Ephimeris_Slider)
+        self.Home_Planetary_Ephimeris_Label.setObjectName(u"Home_Planetary_Ephimeris_Label")
+        self.Home_Planetary_Ephimeris_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 60%);\n"
 "")
-        self.label_62.setAlignment(Qt.AlignCenter)
+        self.Home_Planetary_Ephimeris_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_45.addWidget(self.label_62)
-
-
-        self.verticalLayout_40.addWidget(self.slider_8)
+        self.verticalLayout_45.addWidget(self.Home_Planetary_Ephimeris_Label)
 
 
-        self.horizontalLayout_8.addWidget(self.Planetary_Ephimeris)
+        self.verticalLayout_40.addWidget(self.Home_Planetary_Ephimeris_Slider)
+
+
+        self.horizontalLayout_8.addWidget(self.Home_Planetary_Ephimeris)
 
 
         self.verticalLayout_6.addWidget(self.frame_8)
@@ -871,151 +871,151 @@ class Ui_MainWindow(object):
         self.frame_15.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_72 = QHBoxLayout(self.frame_15)
         self.horizontalLayout_72.setObjectName(u"horizontalLayout_72")
-        self.Numerical_integ = QWidget(self.frame_15)
-        self.Numerical_integ.setObjectName(u"Numerical_integ")
-        self.Numerical_integ.setMinimumSize(QSize(150, 150))
-        self.Numerical_integ.setMaximumSize(QSize(230, 200))
-        self.Numerical_integ.setStyleSheet(u"background-color:#000001;\n"
+        self.Home_Numerical_integ = QWidget(self.frame_15)
+        self.Home_Numerical_integ.setObjectName(u"Home_Numerical_integ")
+        self.Home_Numerical_integ.setMinimumSize(QSize(150, 150))
+        self.Home_Numerical_integ.setMaximumSize(QSize(230, 200))
+        self.Home_Numerical_integ.setStyleSheet(u"background-color:#000001;\n"
 "image:url(UI_Functions/Resources/Numerical_Integration.jpg);")
-        self.verticalLayout_38 = QVBoxLayout(self.Numerical_integ)
+        self.verticalLayout_38 = QVBoxLayout(self.Home_Numerical_integ)
         self.verticalLayout_38.setSpacing(0)
         self.verticalLayout_38.setObjectName(u"verticalLayout_38")
         self.verticalLayout_38.setContentsMargins(0, 0, 0, 0)
-        self.filler_9 = QFrame(self.Numerical_integ)
-        self.filler_9.setObjectName(u"filler_9")
-        self.filler_9.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Numerical_integ_Filler = QFrame(self.Home_Numerical_integ)
+        self.Home_Numerical_integ_Filler.setObjectName(u"Home_Numerical_integ_Filler")
+        self.Home_Numerical_integ_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "")
-        self.filler_9.setFrameShape(QFrame.StyledPanel)
-        self.filler_9.setFrameShadow(QFrame.Raised)
+        self.Home_Numerical_integ_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Numerical_integ_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_38.addWidget(self.filler_9)
+        self.verticalLayout_38.addWidget(self.Home_Numerical_integ_Filler)
 
-        self.slider_9 = QFrame(self.Numerical_integ)
-        self.slider_9.setObjectName(u"slider_9")
-        self.slider_9.setMinimumSize(QSize(150, 80))
-        self.slider_9.setMaximumSize(QSize(230, 200))
-        self.slider_9.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
+        self.Home_Numerical_integ_Slider = QFrame(self.Home_Numerical_integ)
+        self.Home_Numerical_integ_Slider.setObjectName(u"Home_Numerical_integ_Slider")
+        self.Home_Numerical_integ_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_Numerical_integ_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_Numerical_integ_Slider.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
 "image:none;")
-        self.slider_9.setFrameShape(QFrame.StyledPanel)
-        self.slider_9.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_46 = QVBoxLayout(self.slider_9)
+        self.Home_Numerical_integ_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Numerical_integ_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_46 = QVBoxLayout(self.Home_Numerical_integ_Slider)
         self.verticalLayout_46.setObjectName(u"verticalLayout_46")
         self.verticalLayout_46.setContentsMargins(6, 6, 6, 6)
-        self.label_64 = QLabel(self.slider_9)
-        self.label_64.setObjectName(u"label_64")
-        self.label_64.setStyleSheet(u"color:white;\n"
+        self.Home_Numerical_integ_Label = QLabel(self.Home_Numerical_integ_Slider)
+        self.Home_Numerical_integ_Label.setObjectName(u"Home_Numerical_integ_Label")
+        self.Home_Numerical_integ_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 40%);\n"
 "")
-        self.label_64.setAlignment(Qt.AlignCenter)
+        self.Home_Numerical_integ_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_46.addWidget(self.label_64)
-
-
-        self.verticalLayout_38.addWidget(self.slider_9)
+        self.verticalLayout_46.addWidget(self.Home_Numerical_integ_Label)
 
 
-        self.horizontalLayout_72.addWidget(self.Numerical_integ)
+        self.verticalLayout_38.addWidget(self.Home_Numerical_integ_Slider)
 
-        self.Eulers_Angle = QWidget(self.frame_15)
-        self.Eulers_Angle.setObjectName(u"Eulers_Angle")
-        self.Eulers_Angle.setMinimumSize(QSize(475, 0))
-        self.Eulers_Angle.setMaximumSize(QSize(475, 16777215))
-        self.Eulers_Angle.setStyleSheet(u"background-color:#000001;\n"
+
+        self.horizontalLayout_72.addWidget(self.Home_Numerical_integ)
+
+        self.Home_Eulers_Angle = QWidget(self.frame_15)
+        self.Home_Eulers_Angle.setObjectName(u"Home_Eulers_Angle")
+        self.Home_Eulers_Angle.setMinimumSize(QSize(475, 0))
+        self.Home_Eulers_Angle.setMaximumSize(QSize(475, 16777215))
+        self.Home_Eulers_Angle.setStyleSheet(u"background-color:#000001;\n"
 "image:url(UI_Functions/Resources/Eulers Angle.png);")
-        self.horizontalLayout_75 = QHBoxLayout(self.Eulers_Angle)
+        self.horizontalLayout_75 = QHBoxLayout(self.Home_Eulers_Angle)
         self.horizontalLayout_75.setSpacing(0)
         self.horizontalLayout_75.setObjectName(u"horizontalLayout_75")
         self.horizontalLayout_75.setContentsMargins(0, 0, 0, 0)
-        self.filler_11 = QFrame(self.Eulers_Angle)
-        self.filler_11.setObjectName(u"filler_11")
-        self.filler_11.setAutoFillBackground(False)
-        self.filler_11.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Eulers_Angle_Filler = QFrame(self.Home_Eulers_Angle)
+        self.Home_Eulers_Angle_Filler.setObjectName(u"Home_Eulers_Angle_Filler")
+        self.Home_Eulers_Angle_Filler.setAutoFillBackground(False)
+        self.Home_Eulers_Angle_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "")
-        self.filler_11.setFrameShape(QFrame.StyledPanel)
-        self.filler_11.setFrameShadow(QFrame.Raised)
+        self.Home_Eulers_Angle_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Eulers_Angle_Filler.setFrameShadow(QFrame.Raised)
 
-        self.horizontalLayout_75.addWidget(self.filler_11)
+        self.horizontalLayout_75.addWidget(self.Home_Eulers_Angle_Filler)
 
-        self.slider_11 = QFrame(self.Eulers_Angle)
-        self.slider_11.setObjectName(u"slider_11")
-        self.slider_11.setStyleSheet(u"background-color: rgba(47, 47, 48, 60%);\n"
+        self.Home_Eulers_Angle_Slider = QFrame(self.Home_Eulers_Angle)
+        self.Home_Eulers_Angle_Slider.setObjectName(u"Home_Eulers_Angle_Slider")
+        self.Home_Eulers_Angle_Slider.setStyleSheet(u"background-color: rgba(47, 47, 48, 60%);\n"
 "image:none;")
-        self.slider_11.setFrameShape(QFrame.StyledPanel)
-        self.slider_11.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_51 = QVBoxLayout(self.slider_11)
+        self.Home_Eulers_Angle_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Eulers_Angle_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_51 = QVBoxLayout(self.Home_Eulers_Angle_Slider)
         self.verticalLayout_51.setObjectName(u"verticalLayout_51")
         self.verticalLayout_51.setContentsMargins(6, 6, 6, 6)
-        self.label_68 = QLabel(self.slider_11)
-        self.label_68.setObjectName(u"label_68")
-        self.label_68.setStyleSheet(u"color:white;\n"
+        self.Home_Eulers_Angle_Label = QLabel(self.Home_Eulers_Angle_Slider)
+        self.Home_Eulers_Angle_Label.setObjectName(u"Home_Eulers_Angle_Label")
+        self.Home_Eulers_Angle_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 40%);\n"
 "")
-        self.label_68.setAlignment(Qt.AlignCenter)
+        self.Home_Eulers_Angle_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_51.addWidget(self.label_68)
-
-
-        self.horizontalLayout_75.addWidget(self.slider_11)
+        self.verticalLayout_51.addWidget(self.Home_Eulers_Angle_Label)
 
 
-        self.horizontalLayout_72.addWidget(self.Eulers_Angle)
+        self.horizontalLayout_75.addWidget(self.Home_Eulers_Angle_Slider)
 
-        self.Orbital_transfer = QWidget(self.frame_15)
-        self.Orbital_transfer.setObjectName(u"Orbital_transfer")
-        self.Orbital_transfer.setMinimumSize(QSize(150, 150))
-        self.Orbital_transfer.setMaximumSize(QSize(230, 200))
-        self.Orbital_transfer.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(77, 169, 244, 255), stop:1 rgba(49, 96, 218, 255));\n"
+
+        self.horizontalLayout_72.addWidget(self.Home_Eulers_Angle)
+
+        self.Home_Orbital_transfer = QWidget(self.frame_15)
+        self.Home_Orbital_transfer.setObjectName(u"Home_Orbital_transfer")
+        self.Home_Orbital_transfer.setMinimumSize(QSize(150, 150))
+        self.Home_Orbital_transfer.setMaximumSize(QSize(230, 200))
+        self.Home_Orbital_transfer.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(77, 169, 244, 255), stop:1 rgba(49, 96, 218, 255));\n"
 "image:url(UI_Functions/Resources/Orbital Transfer.png);")
-        self.verticalLayout_39 = QVBoxLayout(self.Orbital_transfer)
+        self.verticalLayout_39 = QVBoxLayout(self.Home_Orbital_transfer)
         self.verticalLayout_39.setSpacing(0)
         self.verticalLayout_39.setObjectName(u"verticalLayout_39")
         self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
-        self.filler_10 = QFrame(self.Orbital_transfer)
-        self.filler_10.setObjectName(u"filler_10")
-        self.filler_10.setStyleSheet(u"background-color:transparent;\n"
+        self.Home_Orbital_transfer_Filler = QFrame(self.Home_Orbital_transfer)
+        self.Home_Orbital_transfer_Filler.setObjectName(u"Home_Orbital_transfer_Filler")
+        self.Home_Orbital_transfer_Filler.setStyleSheet(u"background-color:transparent;\n"
 "image:none;\n"
 "")
-        self.filler_10.setFrameShape(QFrame.StyledPanel)
-        self.filler_10.setFrameShadow(QFrame.Raised)
+        self.Home_Orbital_transfer_Filler.setFrameShape(QFrame.StyledPanel)
+        self.Home_Orbital_transfer_Filler.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_39.addWidget(self.filler_10)
+        self.verticalLayout_39.addWidget(self.Home_Orbital_transfer_Filler)
 
-        self.slider_10 = QFrame(self.Orbital_transfer)
-        self.slider_10.setObjectName(u"slider_10")
-        self.slider_10.setMinimumSize(QSize(150, 80))
-        self.slider_10.setMaximumSize(QSize(230, 200))
-        self.slider_10.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
+        self.Home_Orbital_transfer_Slider = QFrame(self.Home_Orbital_transfer)
+        self.Home_Orbital_transfer_Slider.setObjectName(u"Home_Orbital_transfer_Slider")
+        self.Home_Orbital_transfer_Slider.setMinimumSize(QSize(150, 80))
+        self.Home_Orbital_transfer_Slider.setMaximumSize(QSize(230, 200))
+        self.Home_Orbital_transfer_Slider.setStyleSheet(u"background-color: rgba(0, 0, 0,60%);\n"
 "image:none;")
-        self.slider_10.setFrameShape(QFrame.StyledPanel)
-        self.slider_10.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_47 = QVBoxLayout(self.slider_10)
+        self.Home_Orbital_transfer_Slider.setFrameShape(QFrame.StyledPanel)
+        self.Home_Orbital_transfer_Slider.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_47 = QVBoxLayout(self.Home_Orbital_transfer_Slider)
         self.verticalLayout_47.setObjectName(u"verticalLayout_47")
         self.verticalLayout_47.setContentsMargins(6, 6, 6, 6)
-        self.label_65 = QLabel(self.slider_10)
-        self.label_65.setObjectName(u"label_65")
-        self.label_65.setStyleSheet(u"color:white;\n"
+        self.Home_Orbital_transfer_Label = QLabel(self.Home_Orbital_transfer_Slider)
+        self.Home_Orbital_transfer_Label.setObjectName(u"Home_Orbital_transfer_Label")
+        self.Home_Orbital_transfer_Label.setStyleSheet(u"color:white;\n"
 "\n"
 "font: 75 12pt \"Calibri\";\n"
 "\n"
 "background-color: rgba(0, 0, 0, 40%);\n"
 "")
-        self.label_65.setAlignment(Qt.AlignCenter)
+        self.Home_Orbital_transfer_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_47.addWidget(self.label_65)
-
-
-        self.verticalLayout_39.addWidget(self.slider_10)
+        self.verticalLayout_47.addWidget(self.Home_Orbital_transfer_Label)
 
 
-        self.horizontalLayout_72.addWidget(self.Orbital_transfer)
+        self.verticalLayout_39.addWidget(self.Home_Orbital_transfer_Slider)
+
+
+        self.horizontalLayout_72.addWidget(self.Home_Orbital_transfer)
 
 
         self.verticalLayout_6.addWidget(self.frame_15)
@@ -12826,16 +12826,16 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.btn_close.setText("")
         self.Home_VPCO_Label.setText(QCoreApplication.translate("MainWindow", u"Various Parameters at any given point and Constants in orbit", None))
-        self.label_58.setText(QCoreApplication.translate("MainWindow", u"Calculation of Julian Day", None))
-        self.label_59.setText(QCoreApplication.translate("MainWindow", u"Orbital Elements", None))
-        self.label_60.setText(QCoreApplication.translate("MainWindow", u"Sphere of Influence", None))
-        self.label_66.setText(QCoreApplication.translate("MainWindow", u"Orbit Visualization", None))
-        self.label_61.setText(QCoreApplication.translate("MainWindow", u"Ground Track", None))
-        self.label_67.setText(QCoreApplication.translate("MainWindow", u"Planet in Shadow", None))
-        self.label_62.setText(QCoreApplication.translate("MainWindow", u"Planetary Ephimeris", None))
-        self.label_64.setText(QCoreApplication.translate("MainWindow", u"Numerical Methods", None))
-        self.label_68.setText(QCoreApplication.translate("MainWindow", u"Eulers Angle", None))
-        self.label_65.setText(QCoreApplication.translate("MainWindow", u"Orbital Transfer", None))
+        self.Home_Julian_Day_Label.setText(QCoreApplication.translate("MainWindow", u"Calculation of Julian Day", None))
+        self.Home_Orbital_Elements_Label.setText(QCoreApplication.translate("MainWindow", u"Orbital Elements", None))
+        self.Home_SOI_Label.setText(QCoreApplication.translate("MainWindow", u"Sphere of Influence", None))
+        self.Home_Orbit_Visualization_Label.setText(QCoreApplication.translate("MainWindow", u"Orbit Visualization", None))
+        self.Home_Ground_Track_Label.setText(QCoreApplication.translate("MainWindow", u"Ground Track", None))
+        self.Home_Planet_in_Shadow_Label.setText(QCoreApplication.translate("MainWindow", u"Planet in Shadow", None))
+        self.Home_Planetary_Ephimeris_Label.setText(QCoreApplication.translate("MainWindow", u"Planetary Ephimeris", None))
+        self.Home_Numerical_integ_Label.setText(QCoreApplication.translate("MainWindow", u"Numerical Methods", None))
+        self.Home_Eulers_Angle_Label.setText(QCoreApplication.translate("MainWindow", u"Eulers Angle", None))
+        self.Home_Orbital_transfer_Label.setText(QCoreApplication.translate("MainWindow", u"Orbital Transfer", None))
         self.type_of_calendar.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Type Of Calendar", None))
         self.type_of_calendar.setItemText(1, QCoreApplication.translate("MainWindow", u"  Julian Calendar", None))
         self.type_of_calendar.setItemText(2, QCoreApplication.translate("MainWindow", u"  Gregorian Calendar", None))
