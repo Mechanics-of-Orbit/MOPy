@@ -31,12 +31,13 @@ from Functions.Sections.CoOE import Calculate
 from Functions.Sections.DB.call_database import *
 from UI_Functions.Home_Page import Ui_MainWindow
 from UI_Functions.Home_Page_functions import *
-from UI_Functions.circular_progress import CircularProgress
+# from UI_Functions.Hover_Slide_animation_functn import *
 
 
 
 
-from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT as NavigationToolbar)
+
+# from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT as NavigationToolbar)
 
 path.append('..\Functions\Sections')
 
@@ -70,6 +71,10 @@ class MainWindow(QMainWindow):
         self.ui.Semi_dial.setNotchesVisible(1)
         self.ui.ecce_dial.setNotchesVisible(1)
 
+
+        self.ui.Orbtl_tranf_Out_frame.hide()
+        self.ui.Orbtl_tranf_Inp_n_Out_frames_container.hide()
+        self.ui.Plot_frame_for_Orbital_transfer.hide()
         
         
         
@@ -86,6 +91,7 @@ class MainWindow(QMainWindow):
         self.ui.Orbital_transfer.installEventFilter(self)
         self.ui.Eulers_Angle.installEventFilter(self)
         self.ui.Home_VPCO_Label.installEventFilter(self)
+        self.ui.Hohmn_transf_label.installEventFilter(self)
 
         
 ###################################_______Plotting Graphs_______#########################################
@@ -111,7 +117,7 @@ class MainWindow(QMainWindow):
         self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
         Orbit = OrbitPlot.plotOrbitMPL(3.986e5, 37500 ,12500, 0, 2*np.pi)
         self._static_ax.plot(Orbit[0], Orbit[1], "r")
-        self.ui.btn_go_back.hide()
+        
 
         self._static_ax.tick_params(axis='x', colors='white') 
         self._static_ax.tick_params(axis='y', colors='white')
@@ -126,18 +132,18 @@ class MainWindow(QMainWindow):
         Orbital_Transfer_Static_Canvas = FigureCanvas(Figure(facecolor = "#36375c"))
         Orbital_Transfer_Graph_Layout.addWidget(NavigationToolbar(Orbital_Transfer_Static_Canvas, self))
         Orbital_Transfer_Graph_Layout.addWidget(Orbital_Transfer_Static_Canvas)
-        self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Hohmann transfer")
+        self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Phasing Maneuver")
         self._static_ax.axis('equal')
        
-        jo = OrbitPlot.hohmannTransfer(7178, 6878, 22378, 22378, 3.986e5, 6378)
-        self._static_ax.plot(jo[0][0], jo[0][1], "r")
-        self._static_ax.plot(jo[1][0], jo[1][1], "yellow", LineStyle = "dotted")
-        self._static_ax.plot(jo[2][0], jo[2][1],"green")
+        jo = OrbitPlot.phasingManeuver(3.986e5, 6378, 13600, 6800, 0, np.pi/2)
+        self._static_ax.plot(jo[0][0], jo[0][1], "r", label = 'Initial Orbit')
+        self._static_ax.plot(jo[1][0], jo[1][1], "yellow", LineStyle = "dotted", label = 'Phasing Orbit')
+        
         MajorBodyPlot = OrbitPlot.plotOrbitMPL(3.986e5,6378, 6378, 0, 2*np.pi)
         self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
         self._static_ax.tick_params(axis='x', colors='white') 
         self._static_ax.tick_params(axis='y', colors='white')
-        
+        self._static_ax.legend(loc="upper right")
 #
 # 2------2
 # ########---------------------Orbital_Transfer_Graph - Bielliptical Hohmann Transfer---------------------##########
@@ -145,13 +151,14 @@ class MainWindow(QMainWindow):
         # Orbital_Transfer_Static_Canvas = FigureCanvas(Figure(facecolor = "#36375c"))
         # Orbital_Transfer_Graph_Layout.addWidget(NavigationToolbar(Orbital_Transfer_Static_Canvas, self))
         # Orbital_Transfer_Graph_Layout.addWidget(Orbital_Transfer_Static_Canvas)
-        # self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Hohmann transfer")
+        # self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Bi-Elliptical Hohmann transfer")
         # self._static_ax.axis('equal')
         # Orbit = OrbitPlot.biellipticalHohmannTransfer(3.986e5, 6378, 7000, 7000, 105000, 105000, rt1a = 210000)
-        # self._static_ax.plot(Orbit[0][0], Orbit[0][1])
-        # self._static_ax.plot(Orbit[1][0], Orbit[1][1])
-        # self._static_ax.plot(Orbit[2][0], Orbit[2][1])
-        # self._static_ax.plot(Orbit[3][0], Orbit[3][1])
+        # self._static_ax.plot(Orbit[0][0], Orbit[0][1], "r", label = 'Initial Orbit')
+        # self._static_ax.plot(Orbit[1][0], Orbit[1][1], "y", label = 'Final Orbit')
+        # self._static_ax.plot(Orbit[2][0], Orbit[2][1], "b", label = 'Initial Transfer Orbit', LineStyle = "dotted")
+        # self._static_ax.plot(Orbit[3][0], Orbit[3][1], "m", label = 'Final Transfer Orbit', LineStyle = "dotted")
+        # self._static_ax.legend(loc="best", fancybox=True, framealpha = 0.5)
 
         
         # MajorBodyPlot = OrbitPlot.plotOrbitMPL(3.986e5,6378, 6378, 0, 2*np.pi)
@@ -159,6 +166,28 @@ class MainWindow(QMainWindow):
         # self._static_ax.tick_params(axis='x', colors='white') 
         # self._static_ax.tick_params(axis='y', colors='white')
 
+
+#
+# 2------3
+# ########---------------------Orbital_Transfer_Graph - Hohmann Transfer---------------------##########
+        # Orbital_Transfer_Graph_Layout = QtWidgets.QVBoxLayout(self.ui.Plot_Widget_for_Orbital_Transfer)
+        # Orbital_Transfer_Static_Canvas = FigureCanvas(Figure(facecolor = "#36375c"))
+        # Orbital_Transfer_Graph_Layout.addWidget(NavigationToolbar(Orbital_Transfer_Static_Canvas, self))
+        # Orbital_Transfer_Graph_Layout.addWidget(Orbital_Transfer_Static_Canvas)
+        # self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Hohmann transfer")
+        # self._static_ax.axis('equal')
+        # Orbit = OrbitPlot.hohmannTransfer(7178, 6878, 22378, 22378, 3.986e5, 6378)
+        # self._static_ax.plot(Orbit[0][0], Orbit[0][1], "r", label = 'Initial Orbit')
+        # self._static_ax.plot(Orbit[1][0], Orbit[1][1], "y", label = 'Final Orbit')
+        # self._static_ax.plot(Orbit[2][0], Orbit[2][1], "b", label = 'Initial Transfer Orbit', LineStyle = "dotted")
+        
+        # self._static_ax.legend(loc="upper right")
+
+        
+        # MajorBodyPlot = OrbitPlot.plotOrbitMPL(3.986e5,6378, 6378, 0, 2*np.pi)
+        # self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
+        # self._static_ax.tick_params(axis='x', colors='white') 
+        # self._static_ax.tick_params(axis='y', colors='white')
 
         # MOVE WINDOW
         def moveWindow(event):
@@ -182,6 +211,10 @@ class MainWindow(QMainWindow):
         ## SHOW ==> MAIN WINDOW
         ########################################################################
 
+    def trial(self):
+        self.ui.Orbtl_tranf_Out_frame.show()
+        self.ui.Plot_frame_for_Orbital_transfer.show()
+        self.ui.Container_for_Type_of_Orbital_Transfer.hide()
     
     def eventFilter(self, source, event):
         if (source == self.ui.VPCO_Home_Page and event.type() == QEvent.Enter):
@@ -193,6 +226,11 @@ class MainWindow(QMainWindow):
             UIFunctions.toggleMenu_Julian_Day(self, 182,'true')
         elif source == self.ui.Julian_Day and event.type() == QEvent.Leave:
             UIFunctions.toggleMenu_Julian_Day(self, 91, "true") 
+
+        # elif (source == self.ui.Orbital_Elements and event.type() == QEvent.Enter):
+        #     UIFunctions.toggleMenu_Orbital_Elements(self, 182,'true')
+        # elif source == self.ui.Orbital_Elements and event.type() == QEvent.Leave:
+        #     UIFunctions.toggleMenu_Orbital_Elements(self, 91, "true")
 
         elif (source == self.ui.Orbital_Elements and event.type() == QEvent.Enter):
             UIFunctions.toggleMenu_Orbital_Elements(self, 182,'true')
@@ -242,12 +280,17 @@ class MainWindow(QMainWindow):
         elif (source == self.ui.Home_VPCO_Label and event.button() == Qt.LeftButton):
             self.ui.stackedWidget.setCurrentIndex(3)
         
+        elif (source == self.ui.Hohmn_transf_label and event.button() == Qt.LeftButton):
+            self.ui.Orbtl_tranf_Inp_n_Out_frames_container.show()
+            self.ui.Stacked_widg_Types_of_Orbital_Transfer.setCurrentIndex(2)
+        
+        
         
     
 
 
     def Sliding_animation(self, maxHeight, enable):
-        if enable and maxHeight == 300 or maxHeight == 0:
+        if enable and maxHeight == 300:
 
             # GET WIDTH
             height = self.ui.Bottom_slider_VPCO_Output.height()
@@ -311,7 +354,29 @@ class MainWindow(QMainWindow):
             self.animation_group.addAnimation(self.animaton_l)
             self.animation_group.start()
 
+        elif enable and maxHeight == 200:
+    
+            # GET WIDTH
+            height = self.ui.Bottom_slider_PE_Output.height()
+            maxExtend = maxHeight
+            standard = 0
+            
+            
 
+            # SET MAX WIDTH
+            if height == 0:
+                heightExtended = maxExtend
+            else:
+                heightExtended = standard
+                
+            # ANIMATION
+            self.animation_x = QPropertyAnimation(self.ui.Bottom_slider_PE_Output, b"maximumHeight")
+            self.animation_x.setDuration(600)
+            self.animation_x.setStartValue(height)
+            self.animation_x.setEndValue(heightExtended)
+            self.animation_x.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
+            self.animation_x.start()
+            
   
 
     ## APP EVENTS

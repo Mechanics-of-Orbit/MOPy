@@ -102,11 +102,15 @@ class UIFunctions(MainWindow):
 
         self.ui.VPCO_Submit_button.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 300, 'true'))
 
+        self.ui.PE_Cal_Btn.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 200, "true"))
+
         self.ui.Orbital_Transfer_plot_button.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 522, 'true'))
+
+        self.ui.Orbital_Transfer_plot_button.clicked.connect(lambda:Home_Page_main.MainWindow.trial(self))
 
         self.ui.ecce_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_dial_changed(self))
 
-        self.ui.btn_go_back.clicked.connect(lambda :Home_Page_main.MainWindow.Sliding_animation(self,0,'true'))
+        #self.ui.btn_go_back.clicked.connect(lambda :Home_Page_main.MainWindow.Sliding_animation(self,0,'true'))
 
         self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_dial_changed(self))
 

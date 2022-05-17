@@ -68,15 +68,16 @@ class OrbitPlot():
         ra2 = 2*a2-rp1
         Orbit2 = OrbitPlot.plotOrbitMPL(mu, ra2, rp1, 0, 2*np.pi)
         MajorBodyPlot = OrbitPlot.plotOrbitMPL(mu,rMB, rMB, 0, 2*np.pi)
-        style.use("dark_background")
-        plt.plot(Orbit1[0], Orbit1[1], "r")
-        plt.text(0, Orbit1[2]*np.cos(thetaA),"* Satellite-A")
-        plt.plot(Orbit2[0], Orbit2[1],"green", LineStyle = "dotted")
-        plt.text(Orbit1[2]*np.sin(thetaB), 0,"* Satellite-B")
-        plt.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
-        plt.axis('equal')
-        plt.title("Hohmann Transfer")
-        plt.show()
+        # style.use("dark_background")
+        # plt.plot(Orbit1[0], Orbit1[1], "r")
+        # plt.text(0, Orbit1[2]*np.cos(thetaA),"* Satellite-A")
+        # plt.plot(Orbit2[0], Orbit2[1],"green", LineStyle = "dotted")
+        # plt.text(Orbit1[2]*np.sin(thetaB), 0,"* Satellite-B")
+        # plt.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
+        # plt.axis('equal')
+        # plt.title("Hohmann Transfer")
+        # plt.show()
+        return [Orbit1, Orbit2]
         
  
 
