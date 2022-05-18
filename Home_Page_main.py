@@ -218,62 +218,62 @@ class MainWindow(QMainWindow):
     
     def eventFilter(self, source, event):
         if (source == self.ui.Home_VPCO and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_VPCO_Slider, 91, 182)
+            Animation_Home_VPCO(self,"long", self.ui.Home_VPCO_Slider, 91, 182)
         elif source == self.ui.Home_VPCO and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_VPCO_Slider, 91, 91)
+            Animation_Home_VPCO(self,"long", self.ui.Home_VPCO_Slider, 91, 91)
 
         elif (source == self.ui.Home_Julian_Day and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_Julian_Day_Slider, 91, 182)
+            Animation_Home_Julian_Day(self,"long", self.ui.Home_Julian_Day_Slider, 91, 182)
         elif source == self.ui.Home_Julian_Day and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_Julian_Day_Slider, 91, 91) 
+            Animation_Home_Julian_Day(self,"long", self.ui.Home_Julian_Day_Slider, 91, 91) 
 
 
         elif (source == self.ui.Home_Orbital_Elements and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_Orbital_Elements_Slider, 91, 182)
+            Animation_Orbital_Elements(self,"long", self.ui.Home_Orbital_Elements_Slider, 91, 182)
         elif source == self.ui.Home_Orbital_Elements and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_Orbital_Elements_Slider, 91, 91)
+            Animation_Orbital_Elements(self,"long", self.ui.Home_Orbital_Elements_Slider, 91, 91)
 
         elif (source == self.ui.Home_SOI and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_SOI_Slider, 91, 182)
+            Animation_Home_SOI(self,"long", self.ui.Home_SOI_Slider, 91, 182)
         elif source == self.ui.Home_SOI and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_SOI_Slider, 91, 91)
+            Animation_Home_SOI(self,"long", self.ui.Home_SOI_Slider, 91, 91)
         
         elif (source == self.ui.Home_Orbit_Visualization and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_Orbit_Visualization_Slider, 91, 182)
+            Animation_Home_Orbit_Visualization(self,"long", self.ui.Home_Orbit_Visualization_Slider, 91, 182)
         elif source == self.ui.Home_Orbit_Visualization and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_Orbit_Visualization_Slider, 91, 91)
+            Animation_Home_Orbit_Visualization(self,"long", self.ui.Home_Orbit_Visualization_Slider, 91, 91)
         
         elif (source == self.ui.Home_Ground_Track and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_Ground_Track_Slider, 91, 182)
+            Animation_Home_Ground_Track(self,"long", self.ui.Home_Ground_Track_Slider, 91, 182)
         elif source == self.ui.Home_Ground_Track and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_Ground_Track_Slider, 91, 91)
+            Animation_Home_Ground_Track(self,"long", self.ui.Home_Ground_Track_Slider, 91, 91)
 
         elif (source == self.ui.Home_Planet_in_Shadow and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_Planet_in_Shadow_Slider, 91, 182)
+            Animation_Home_Planet_in_Shadow(self,"long", self.ui.Home_Planet_in_Shadow_Slider, 91, 182)
         elif source == self.ui.Home_Planet_in_Shadow and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_Planet_in_Shadow_Slider, 91, 91)
+            Animation_Home_Planet_in_Shadow(self,"long", self.ui.Home_Planet_in_Shadow_Slider, 91, 91)
         
         elif (source == self.ui.Home_Planetary_Ephimeris and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_Planetary_Ephimeris_Slider, 91, 182)
+            Animation_Home_Planetary_Ephemeris(self,"long", self.ui.Home_Planetary_Ephimeris_Slider, 91, 182)
         elif source == self.ui.Home_Planetary_Ephimeris and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_Planetary_Ephimeris_Slider, 91, 91)
+            Animation_Home_Planetary_Ephemeris(self,"long", self.ui.Home_Planetary_Ephimeris_Slider, 91, 91)
         
         elif (source == self.ui.Home_Numerical_integ and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_Numerical_integ_Slider, 91, 182)
+            Animation_Home_Numerical_Methods(self,"long", self.ui.Home_Numerical_integ_Slider, 91, 182)
         elif source == self.ui.Home_Numerical_integ and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_Numerical_integ_Slider, 91, 91)
+            Animation_Home_Numerical_Methods(self,"long", self.ui.Home_Numerical_integ_Slider, 91, 91)
         
         elif (source == self.ui.Home_Orbital_transfer and event.type() == QEvent.Enter):
-            toggle_slider(self,"long", self.ui.Home_Orbital_transfer_Slider, 91, 182)
+            Animation_Home_Orbital_Transfer(self,"long", self.ui.Home_Orbital_transfer_Slider, 91, 182)
         elif source == self.ui.Home_Orbital_transfer and event.type() == QEvent.Leave:
-            toggle_slider(self,"long", self.ui.Home_Orbital_transfer_Slider, 91, 91)
+            Animation_Home_Orbital_Transfer(self,"long", self.ui.Home_Orbital_transfer_Slider, 91, 91)
 
         elif (source == self.ui.Home_Eulers_Angle and event.type() == QEvent.Enter):
-            UIFunctions.toggleMenu_Eulers_Angle(self,"wide", self.ui.Home_Eulers_Angle_Slider, 237, 490)
+            Animation_Home_Eulers_Angle(self,"wide", self.ui.Home_Eulers_Angle_Slider, 237, 490)
         elif source == self.ui.Home_Eulers_Angle and event.type() == QEvent.Leave:
-            UIFunctions.toggleMenu_Eulers_Angle(self,"wide", self.ui.Home_Eulers_Angle_Slider, 237, 237)
+            Animation_Home_Eulers_Angle(self,"wide", self.ui.Home_Eulers_Angle_Slider, 237, 237)
 
-        elif (source == self.ui.Home_VPCO_Label and event.button() == Qt.LeftButton):
+        elif (source == self.ui.Home_VPCO and event.button() == Qt.LeftButton):
             self.ui.stackedWidget.setCurrentIndex(3)
         
         elif (source == self.ui.Hohmn_transf_label and event.button() == Qt.LeftButton):
