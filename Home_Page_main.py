@@ -273,14 +273,54 @@ class MainWindow(QMainWindow):
         elif source == self.ui.Home_Eulers_Angle and event.type() == QEvent.Leave:
             Animation_Home_Eulers_Angle(self,"wide", self.ui.Home_Eulers_Angle_Slider, 237, 237)
 
-        elif (source == self.ui.Home_VPCO and event.button() == Qt.LeftButton):
+        elif (source == self.ui.Home_VPCO and event.type() == QtCore.QEvent.MouseButtonPress):
             self.ui.stackedWidget.setCurrentIndex(3)
+            self.ui.label_title.setText(" MOPy - Various Parameters at a given point in Orbit")
         
-        elif (source == self.ui.Hohmn_transf_label and event.button() == Qt.LeftButton):
-            self.ui.Orbtl_tranf_Inp_n_Out_frames_container.show()
-            self.ui.Stacked_widg_Types_of_Orbital_Transfer.setCurrentIndex(2)
+        elif (source == self.ui.Home_Orbital_transfer and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(6)
+            self.ui.label_title.setText(" MOPy - Orbital Transfer")
+
         
+        elif (source == self.ui.Home_Julian_Day and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(1)
+            self.ui.label_title.setText(" MOPy - Julian Day Calculation")
         
+        elif (source == self.ui.Home_Orbital_Elements and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(5)
+            self.ui.label_title.setText(" MOPy - Orbital Elements of an Orbit")
+        
+        elif (source == self.ui.Home_SOI and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(2)
+            self.ui.label_title.setText(" MOPy - Sphere Of Influence")
+        
+        elif (source == self.ui.Home_Orbit_Visualization and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(8)
+            self.ui.label_title.setText(" MOPy - Orbit Visualization")
+
+        elif (source == self.ui.Home_Ground_Track and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(8)
+            self.ui.label_title.setText(" MOPy - Ground Track")
+        
+        elif (source == self.ui.Home_Planet_in_Shadow and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(8)
+            self.ui.label_title.setText(" MOPy - Planet in Shadow")
+        
+        elif (source == self.ui.Home_Planetary_Ephimeris and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(7)
+            self.ui.label_title.setText(" MOPy - Planetary Ephemeris")
+        
+        elif (source == self.ui.Home_Numerical_integ and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(8)
+            self.ui.label_title.setText(" MOPy - Numerical Integration")
+        
+        elif (source == self.ui.Home_Eulers_Angle and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(8)
+            self.ui.label_title.setText(" MOPy - Eulers Angle of an Spacecraft")
+        
+        elif (source == self.ui.Home_Orbital_transfer and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.stackedWidget.setCurrentIndex(6)
+            self.ui.label_title.setText(" MOPy - Orbital Transfer")
         
     
 
@@ -630,6 +670,7 @@ class MainWindow(QMainWindow):
 
     def meth_Home_btn(self):
         self.ui.stackedWidget.setCurrentIndex(0)
+        self.ui.label_title.setText(" MOPy ")
 
 #########################################################################################################################
 
@@ -660,7 +701,7 @@ class MainWindow(QMainWindow):
         #JDN to JD
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
         
-        self.ui.JulianDay_Result.setText(str(round(JD, accuracy))+ str(' Julian Days'))
+        self.ui.JulianDay_Result.setText(str(round(JD, accuracy)))
 
 #########################################################################################################################
                                              ##---->>((( New VPCO )))<<----##

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PagejfCklA.ui'
+## Form generated from reading UI file 'Home_PageWhuYbf.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1534,26 +1534,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_192.addWidget(self.JulianDay_Result)
 
-        self.label_176 = QLabel(self.frame_125)
-        self.label_176.setObjectName(u"label_176")
-        self.label_176.setMinimumSize(QSize(30, 0))
-        self.label_176.setMaximumSize(QSize(45, 16777215))
-        self.label_176.setStyleSheet(u"QLabel{\n"
-"	\n"
-"	/*border:2px solid rgb(78, 79, 132);\n"
-"	/*border-radius:15px;*/\n"
-"	border:none;\n"
-"	color:#fff;\n"
-"	/*background-color: rgb(94, 96, 159);*/\n"
-"	background-color: transparent;\n"
-"	font-size:12px;\n"
-"	padding-left:2px;\n"
-"	padding-right:2px;\n"
-"	\n"
-"}")
-
-        self.horizontalLayout_192.addWidget(self.label_176)
-
 
         self.horizontalLayout_190.addWidget(self.frame_125)
 
@@ -1567,25 +1547,6 @@ class Ui_MainWindow(object):
         self.frame_23.setObjectName(u"frame_23")
         self.frame_23.setFrameShape(QFrame.NoFrame)
         self.frame_23.setFrameShadow(QFrame.Raised)
-        self.pushButton = QPushButton(self.frame_23)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(304, 102, 31, 31))
-        self.pushButton.setStyleSheet(u"QPushButton{\n"
-"	border: none;\n"
-"	border-radius:8px;\n"
-"	image:url(UI_Functions/Resources/Question_Mark.png);\n"
-"	padding: 0.2em 0.2em 0.2em 0.2em;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	border: 1px solid transparent;\n"
-"	\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"	padding: 0.5em 0.5em 0.5em 0.5em;\n"
-"	\n"
-"}")
 
         self.horizontalLayout_11.addWidget(self.frame_23)
 
@@ -1878,25 +1839,6 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.soi_rad.setAlignment(Qt.AlignCenter)
-        self.pushButton_2 = QPushButton(self.frame_28)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setGeometry(QRect(1030, 180, 31, 31))
-        self.pushButton_2.setStyleSheet(u"QPushButton{\n"
-"	border: none;\n"
-"	border-radius:8px;\n"
-"	image:url(UI_Functions/Resources/Question_Mark.png);\n"
-"	padding: 0.2em 0.2em 0.2em 0.2em;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	border: 1px solid transparent;\n"
-"	\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"	padding: 0.5em 0.5em 0.5em 0.5em;\n"
-"	\n"
-"}")
 
         self.verticalLayout_16.addWidget(self.frame_28)
 
@@ -12717,6 +12659,35 @@ class Ui_MainWindow(object):
         self.horizontalLayout_73.addWidget(self.frame_6)
 
         self.stackedWidget.addWidget(self.Planetary_Ephemeris)
+        self.Incomplete_Features = QWidget()
+        self.Incomplete_Features.setObjectName(u"Incomplete_Features")
+        self.horizontalLayout_150 = QHBoxLayout(self.Incomplete_Features)
+        self.horizontalLayout_150.setObjectName(u"horizontalLayout_150")
+        self.frame_134 = QFrame(self.Incomplete_Features)
+        self.frame_134.setObjectName(u"frame_134")
+        self.frame_134.setStyleSheet(u"background-color: rgb(78, 79, 132);\n"
+"border:5px solid white;\n"
+"border-color: rgb(54, 55, 92);")
+        self.frame_134.setFrameShape(QFrame.StyledPanel)
+        self.frame_134.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_92 = QVBoxLayout(self.frame_134)
+        self.verticalLayout_92.setObjectName(u"verticalLayout_92")
+        self.label_14 = QLabel(self.frame_134)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setMinimumSize(QSize(800, 100))
+        self.label_14.setMaximumSize(QSize(800, 100))
+        font16 = QFont()
+        font16.setPointSize(26)
+        self.label_14.setFont(font16)
+        self.label_14.setStyleSheet(u"background-color:#36375c;")
+        self.label_14.setScaledContents(False)
+
+        self.verticalLayout_92.addWidget(self.label_14, 0, Qt.AlignHCenter)
+
+
+        self.horizontalLayout_150.addWidget(self.frame_134)
+
+        self.stackedWidget.addWidget(self.Incomplete_Features)
 
         self.horizontalLayout_3.addWidget(self.stackedWidget)
 
@@ -12756,13 +12727,13 @@ class Ui_MainWindow(object):
         self.label_credits.setObjectName(u"label_credits")
         self.label_credits.setMinimumSize(QSize(50, 0))
         self.label_credits.setMaximumSize(QSize(50, 16777215))
-        font16 = QFont()
-        font16.setFamily(u"Arial")
-        font16.setPointSize(6)
-        font16.setBold(False)
-        font16.setItalic(False)
-        font16.setWeight(50)
-        self.label_credits.setFont(font16)
+        font17 = QFont()
+        font17.setFamily(u"Arial")
+        font17.setPointSize(6)
+        font17.setBold(False)
+        font17.setItalic(False)
+        font17.setWeight(50)
+        self.label_credits.setFont(font17)
         self.label_credits.setStyleSheet(u"")
         self.label_credits.setPixmap(QPixmap(u"Users/manjunath neelmath/.designer/backup/GUI-test/Resources/MOPy Cover_transparent.png"))
         self.label_credits.setScaledContents(True)
@@ -12811,7 +12782,7 @@ class Ui_MainWindow(object):
         self.Home_btn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Home</span></p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.Home_btn.setText("")
-        self.label_title.setText(QCoreApplication.translate("MainWindow", u"    MOPy - Orbital Transfer | Phasing Maneuver", None))
+        self.label_title.setText(QCoreApplication.translate("MainWindow", u"    MOPy ", None))
 #if QT_CONFIG(tooltip)
         self.btn_go_back_2.setToolTip(QCoreApplication.translate("MainWindow", u"Minimize", None))
 #endif // QT_CONFIG(tooltip)
@@ -12849,8 +12820,6 @@ class Ui_MainWindow(object):
         self.calculate_btn.setText(QCoreApplication.translate("MainWindow", u"Calculate", None))
         self.label_174.setText(QCoreApplication.translate("MainWindow", u"Julian Days", None))
         self.JulianDay_Result.setText(QCoreApplication.translate("MainWindow", u"12500.00", None))
-        self.label_176.setText(QCoreApplication.translate("MainWindow", u"Km", None))
-        self.pushButton.setText("")
         self.label_title_3.setText(QCoreApplication.translate("MainWindow", u"    SOI of Planet", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"                      Inputs:", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Sphere of Influence of:", None))
@@ -12878,7 +12847,6 @@ class Ui_MainWindow(object):
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Km", None))
         self.rSOI_of_planet_lbl.setText("")
         self.soi_rad.setText("")
-        self.pushButton_2.setText("")
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Semi-major axis", None))
         self.VPCO_Input_a_lineedit.setText("")
         self.label_109.setText(QCoreApplication.translate("MainWindow", u"Km", None))
@@ -13459,6 +13427,7 @@ class Ui_MainWindow(object):
         self.label_150.setText(QCoreApplication.translate("MainWindow", u"Mean Anomaly", None))
         self.label_151.setText(QCoreApplication.translate("MainWindow", u"232.3200", None))
         self.label_152.setText(QCoreApplication.translate("MainWindow", u"Degrees", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Coming Soon...", None))
         self.label_credits.setText("")
     # retranslateUi
 

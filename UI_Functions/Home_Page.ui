@@ -229,7 +229,7 @@ border-radius:1px;
 border:none;</string>
                </property>
                <property name="text">
-                <string>    MOPy - Orbital Transfer | Phasing Maneuver</string>
+                <string>    MOPy </string>
                </property>
               </widget>
              </item>
@@ -3110,40 +3110,6 @@ QLabel:focus{
                                   </property>
                                  </widget>
                                 </item>
-                                <item>
-                                 <widget class="QLabel" name="label_176">
-                                  <property name="minimumSize">
-                                   <size>
-                                    <width>30</width>
-                                    <height>0</height>
-                                   </size>
-                                  </property>
-                                  <property name="maximumSize">
-                                   <size>
-                                    <width>45</width>
-                                    <height>16777215</height>
-                                   </size>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QLabel{
-	
-	/*border:2px solid rgb(78, 79, 132);
-	/*border-radius:15px;*/
-	border:none;
-	color:#fff;
-	/*background-color: rgb(94, 96, 159);*/
-	background-color: transparent;
-	font-size:12px;
-	padding-left:2px;
-	padding-right:2px;
-	
-}</string>
-                                  </property>
-                                  <property name="text">
-                                   <string>Km</string>
-                                  </property>
-                                 </widget>
-                                </item>
                                </layout>
                               </widget>
                              </item>
@@ -3161,37 +3127,6 @@ QLabel:focus{
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QPushButton" name="pushButton">
-                          <property name="geometry">
-                           <rect>
-                            <x>304</x>
-                            <y>102</y>
-                            <width>31</width>
-                            <height>31</height>
-                           </rect>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QPushButton{
-	border: none;
-	border-radius:8px;
-	image:url(UI_Functions/Resources/Question_Mark.png);
-	padding: 0.2em 0.2em 0.2em 0.2em;
-}
-
-QPushButton:hover{
-	border: 1px solid transparent;
-	
-}
-
-QPushButton:pressed{
-	padding: 0.5em 0.5em 0.5em 0.5em;
-	
-}</string>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                         </widget>
                         </widget>
                        </item>
                       </layout>
@@ -3886,37 +3821,6 @@ QLabel:hover{
                       <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
-                   </widget>
-                   <widget class="QPushButton" name="pushButton_2">
-                    <property name="geometry">
-                     <rect>
-                      <x>1030</x>
-                      <y>180</y>
-                      <width>31</width>
-                      <height>31</height>
-                     </rect>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QPushButton{
-	border: none;
-	border-radius:8px;
-	image:url(UI_Functions/Resources/Question_Mark.png);
-	padding: 0.2em 0.2em 0.2em 0.2em;
-}
-
-QPushButton:hover{
-	border: 1px solid transparent;
-	
-}
-
-QPushButton:pressed{
-	padding: 0.5em 0.5em 0.5em 0.5em;
-	
-}</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
                    </widget>
                   </widget>
                  </item>
@@ -26669,6 +26573,57 @@ QLabel:focus{
                      </layout>
                     </item>
                    </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="Incomplete_Features">
+             <layout class="QHBoxLayout" name="horizontalLayout_150">
+              <item>
+               <widget class="QFrame" name="frame_134">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(78, 79, 132);
+border:5px solid white;
+border-color: rgb(54, 55, 92);</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_92">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_14">
+                   <property name="minimumSize">
+                    <size>
+                     <width>800</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>800</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>26</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color:#36375c;</string>
+                   </property>
+                   <property name="text">
+                    <string>Coming Soon...</string>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>false</bool>
+                   </property>
                   </widget>
                  </item>
                 </layout>

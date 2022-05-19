@@ -31,7 +31,7 @@ def toggle_slider(self, longwide, var_name, standard, maxExtent):
 def Animation_Home_Eulers_Angle(self, longwide, var_name, standard, maxExtent):
     r1 = toggle_slider(self, longwide, var_name, standard, maxExtent)
     self.animation_1 = QPropertyAnimation(var_name, b"minimumWidth")
-    self.animation_1.setDuration(200)
+    self.animation_1.setDuration(400)
     self.animation_1.setStartValue(r1[2])
     self.animation_1.setEndValue(r1[3])
     self.animation_1.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
