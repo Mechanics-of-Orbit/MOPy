@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Home_PageWhuYbf.ui'
+## Form generated from reading UI file 'Home_PagezmOhEB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -497,9 +497,7 @@ class Ui_MainWindow(object):
 "background-color: rgba(0, 0, 0, 40%);\n"
 "}\n"
 "\n"
-"QLabel:hover{\n"
-"text:\"Hu bhai change ho gaya\";\n"
-"}")
+"")
         self.Home_VPCO_Label.setAlignment(Qt.AlignCenter)
         self.Home_VPCO_Label.setWordWrap(True)
 
@@ -1207,10 +1205,10 @@ class Ui_MainWindow(object):
 "QCalendarWidget QAbstractItemView\n"
 "{\n"
 "background-color: rgb(192,192,192); \n"
-"selection-background-color: rgb(0, 170, 0, 60%);\n"
-"selection-border: 1px solid black;\n"
-"selection-border-radius:2px;\n"
-"selection-color: black; \n"
+"\n"
+"\n"
+"\n"
+"\n"
 "border:2px solid black;\n"
 "border-radius:4px;\n"
 "}")
@@ -1965,7 +1963,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.frame_30 = QFrame(self.widget_2)
         self.frame_30.setObjectName(u"frame_30")
-        self.frame_30.setMinimumSize(QSize(225, 0))
+        self.frame_30.setMinimumSize(QSize(200, 0))
         self.frame_30.setMaximumSize(QSize(250, 16777215))
         self.frame_30.setStyleSheet(u"background:none;")
         self.frame_30.setFrameShape(QFrame.StyledPanel)
@@ -2035,7 +2033,7 @@ class Ui_MainWindow(object):
 
         self.label_109 = QLabel(self.frame_38)
         self.label_109.setObjectName(u"label_109")
-        self.label_109.setMinimumSize(QSize(30, 0))
+        self.label_109.setMinimumSize(QSize(40, 0))
         self.label_109.setMaximumSize(QSize(45, 16777215))
         font11 = QFont()
         font11.setBold(True)
@@ -2063,6 +2061,10 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_75.addWidget(self.widget_2, 0, Qt.AlignHCenter)
 
+        self.verticalSpacer_18 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_75.addItem(self.verticalSpacer_18)
+
         self.widget_3 = QWidget(self.frame_56)
         self.widget_3.setObjectName(u"widget_3")
         self.widget_3.setMinimumSize(QSize(410, 50))
@@ -2079,7 +2081,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_78.setContentsMargins(0, 0, 0, 0)
         self.frame_39 = QFrame(self.widget_3)
         self.frame_39.setObjectName(u"frame_39")
-        self.frame_39.setMinimumSize(QSize(225, 0))
+        self.frame_39.setMinimumSize(QSize(200, 0))
         self.frame_39.setMaximumSize(QSize(250, 16777215))
         self.frame_39.setStyleSheet(u"background:none;")
         self.frame_39.setFrameShape(QFrame.StyledPanel)
@@ -2117,7 +2119,6 @@ class Ui_MainWindow(object):
         self.frame_44.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_80 = QHBoxLayout(self.frame_44)
         self.horizontalLayout_80.setObjectName(u"horizontalLayout_80")
-        self.horizontalLayout_80.setContentsMargins(-1, -1, 45, -1)
         self.VPCO_Input_e_lineedit = QLineEdit(self.frame_44)
         self.VPCO_Input_e_lineedit.setObjectName(u"VPCO_Input_e_lineedit")
         self.VPCO_Input_e_lineedit.setMinimumSize(QSize(130, 40))
@@ -2147,6 +2148,27 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_80.addWidget(self.VPCO_Input_e_lineedit)
 
+        self.label_116 = QLabel(self.frame_44)
+        self.label_116.setObjectName(u"label_116")
+        self.label_116.setMinimumSize(QSize(40, 0))
+        self.label_116.setMaximumSize(QSize(45, 16777215))
+        self.label_116.setFont(font11)
+        self.label_116.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	/*border:2px solid rgb(78, 79, 132);\n"
+"	/*border-radius:15px;*/\n"
+"	border:none;\n"
+"	color:#fff;\n"
+"	/*background-color: rgb(94, 96, 159);*/\n"
+"	background-color: transparent;\n"
+"	font-size:12px;\n"
+"	padding-left:2px;\n"
+"	padding-right:2px;\n"
+"	\n"
+"}")
+
+        self.horizontalLayout_80.addWidget(self.label_116)
+
 
         self.horizontalLayout_78.addWidget(self.frame_44)
 
@@ -2162,8 +2184,8 @@ class Ui_MainWindow(object):
 
         self.frame_47 = QFrame(self.frame_29)
         self.frame_47.setObjectName(u"frame_47")
-        self.frame_47.setMinimumSize(QSize(0, 40))
-        self.frame_47.setMaximumSize(QSize(16777215, 40))
+        self.frame_47.setMinimumSize(QSize(0, 50))
+        self.frame_47.setMaximumSize(QSize(16777215, 50))
         self.frame_47.setStyleSheet(u"border:none;\n"
 "background:none;")
         self.frame_47.setFrameShape(QFrame.StyledPanel)
@@ -2185,8 +2207,8 @@ class Ui_MainWindow(object):
         self.maj_body_CoOE_2.addItem("")
         self.maj_body_CoOE_2.addItem("")
         self.maj_body_CoOE_2.setObjectName(u"maj_body_CoOE_2")
-        self.maj_body_CoOE_2.setMinimumSize(QSize(300, 40))
-        self.maj_body_CoOE_2.setMaximumSize(QSize(350, 40))
+        self.maj_body_CoOE_2.setMinimumSize(QSize(300, 50))
+        self.maj_body_CoOE_2.setMaximumSize(QSize(350, 50))
         self.maj_body_CoOE_2.setStyleSheet(u"QComboBox{\n"
 "	border:2px solid rgb(78, 79, 132);\n"
 "	border-radius:12px;\n"
@@ -2223,7 +2245,7 @@ class Ui_MainWindow(object):
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.VPCO_Submit_button.sizePolicy().hasHeightForWidth())
         self.VPCO_Submit_button.setSizePolicy(sizePolicy2)
-        self.VPCO_Submit_button.setMinimumSize(QSize(125, 40))
+        self.VPCO_Submit_button.setMinimumSize(QSize(125, 50))
         self.VPCO_Submit_button.setMaximumSize(QSize(150, 80))
         self.VPCO_Submit_button.setStyleSheet(u"QPushButton{\n"
 "	\n"
@@ -4094,61 +4116,171 @@ class Ui_MainWindow(object):
         self.a_and_e_VPCO_2.setStyleSheet(u"background-color:transparent;")
         self.a_and_e_VPCO_2.setFrameShape(QFrame.StyledPanel)
         self.a_and_e_VPCO_2.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_55 = QVBoxLayout(self.a_and_e_VPCO_2)
-        self.verticalLayout_55.setSpacing(0)
-        self.verticalLayout_55.setObjectName(u"verticalLayout_55")
-        self.verticalLayout_55.setContentsMargins(0, 9, 0, 9)
-        self.frame_17 = QFrame(self.a_and_e_VPCO_2)
-        self.frame_17.setObjectName(u"frame_17")
-        self.frame_17.setMaximumSize(QSize(528, 16777215))
-        self.frame_17.setStyleSheet(u"QFrame{\n"
+        self.horizontalLayout_105 = QHBoxLayout(self.a_and_e_VPCO_2)
+        self.horizontalLayout_105.setObjectName(u"horizontalLayout_105")
+        self.frame_57 = QFrame(self.a_and_e_VPCO_2)
+        self.frame_57.setObjectName(u"frame_57")
+        self.frame_57.setMaximumSize(QSize(528, 16777215))
+        self.frame_57.setStyleSheet(u"QFrame{\n"
 "	\n"
-"	background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132, 255), stop:1 rgba(161, 161, 161, 255));\n"
+"	background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132, 60%), stop:1 rgba(161, 161, 161, 60%));\n"
 "	\n"
 "\n"
 "}")
-        self.frame_17.setFrameShape(QFrame.StyledPanel)
-        self.frame_17.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_56 = QVBoxLayout(self.frame_17)
-        self.verticalLayout_56.setObjectName(u"verticalLayout_56")
-        self.verticalSpacer_20 = QSpacerItem(20, 59, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_56.addItem(self.verticalSpacer_20)
-
-        self.frame_57 = QFrame(self.frame_17)
-        self.frame_57.setObjectName(u"frame_57")
-        self.frame_57.setMinimumSize(QSize(0, 60))
-        self.frame_57.setMaximumSize(QSize(16777215, 60))
-        self.frame_57.setStyleSheet(u"border:none;\n"
-"background:none;")
         self.frame_57.setFrameShape(QFrame.StyledPanel)
         self.frame_57.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_98 = QHBoxLayout(self.frame_57)
-        self.horizontalLayout_98.setObjectName(u"horizontalLayout_98")
-        self.horizontalLayout_98.setContentsMargins(0, 0, 0, 0)
-        self.widget_6 = QWidget(self.frame_57)
-        self.widget_6.setObjectName(u"widget_6")
-        self.widget_6.setMinimumSize(QSize(400, 50))
-        self.widget_6.setMaximumSize(QSize(450, 60))
-        self.widget_6.setStyleSheet(u"QWidget{\n"
+        self.verticalLayout_55 = QVBoxLayout(self.frame_57)
+        self.verticalLayout_55.setObjectName(u"verticalLayout_55")
+        self.verticalLayout_55.setContentsMargins(9, -1, -1, -1)
+        self.verticalSpacer_19 = QSpacerItem(20, 59, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_55.addItem(self.verticalSpacer_19)
+
+        self.frame_58 = QFrame(self.frame_57)
+        self.frame_58.setObjectName(u"frame_58")
+        self.frame_58.setFrameShape(QFrame.StyledPanel)
+        self.frame_58.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_93 = QVBoxLayout(self.frame_58)
+        self.verticalLayout_93.setObjectName(u"verticalLayout_93")
+        self.widget_4 = QWidget(self.frame_58)
+        self.widget_4.setObjectName(u"widget_4")
+        self.widget_4.setMinimumSize(QSize(410, 50))
+        self.widget_4.setMaximumSize(QSize(410, 60))
+        self.widget_4.setStyleSheet(u"QWidget{\n"
 "	\n"
 "	border-radius: 10px;\n"
 "	\n"
-"	background-color:rgb(175, 101, 174);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));\n"
 "}")
-        self.horizontalLayout_99 = QHBoxLayout(self.widget_6)
-        self.horizontalLayout_99.setSpacing(0)
+        self.horizontalLayout_98 = QHBoxLayout(self.widget_4)
+        self.horizontalLayout_98.setSpacing(0)
+        self.horizontalLayout_98.setObjectName(u"horizontalLayout_98")
+        self.horizontalLayout_98.setContentsMargins(0, 0, 0, 0)
+        self.frame_59 = QFrame(self.widget_4)
+        self.frame_59.setObjectName(u"frame_59")
+        self.frame_59.setMinimumSize(QSize(200, 0))
+        self.frame_59.setMaximumSize(QSize(250, 16777215))
+        self.frame_59.setStyleSheet(u"background:none;")
+        self.frame_59.setFrameShape(QFrame.StyledPanel)
+        self.frame_59.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_99 = QHBoxLayout(self.frame_59)
         self.horizontalLayout_99.setObjectName(u"horizontalLayout_99")
-        self.horizontalLayout_99.setContentsMargins(0, 0, 0, 0)
-        self.frame_58 = QFrame(self.widget_6)
-        self.frame_58.setObjectName(u"frame_58")
-        self.frame_58.setMinimumSize(QSize(225, 0))
-        self.frame_58.setMaximumSize(QSize(250, 16777215))
-        self.frame_58.setFrameShape(QFrame.StyledPanel)
-        self.frame_58.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_100 = QHBoxLayout(self.frame_58)
+        self.label_19 = QLabel(self.frame_59)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setMinimumSize(QSize(150, 30))
+        self.label_19.setMaximumSize(QSize(200, 16777215))
+        self.label_19.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	/*border:2px solid rgb(78, 79, 132);\n"
+"	/*border-radius:15px;*/\n"
+"	border:none;\n"
+"	color:#fff;\n"
+"	/*background-color: rgb(94, 96, 159);*/\n"
+"	background-color: transparent;\n"
+"	font-size:16px;\n"
+"	padding-left:2px;\n"
+"	padding-right:2px;\n"
+"	\n"
+"}")
+        self.label_19.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_99.addWidget(self.label_19)
+
+
+        self.horizontalLayout_98.addWidget(self.frame_59)
+
+        self.frame_60 = QFrame(self.widget_4)
+        self.frame_60.setObjectName(u"frame_60")
+        self.frame_60.setStyleSheet(u"background:none;")
+        self.frame_60.setFrameShape(QFrame.StyledPanel)
+        self.frame_60.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_100 = QHBoxLayout(self.frame_60)
         self.horizontalLayout_100.setObjectName(u"horizontalLayout_100")
-        self.label_20 = QLabel(self.frame_58)
+        self.horizontalLayout_100.setContentsMargins(9, 9, 9, 9)
+        self.VPCO_Input_a_lineedit_2 = QLineEdit(self.frame_60)
+        self.VPCO_Input_a_lineedit_2.setObjectName(u"VPCO_Input_a_lineedit_2")
+        self.VPCO_Input_a_lineedit_2.setMinimumSize(QSize(130, 40))
+        self.VPCO_Input_a_lineedit_2.setMaximumSize(QSize(200, 50))
+        self.VPCO_Input_a_lineedit_2.setLayoutDirection(Qt.RightToLeft)
+        self.VPCO_Input_a_lineedit_2.setStyleSheet(u"QLineEdit{\n"
+"	\n"
+"	border:2px solid rgb(78, 79, 132);\n"
+"	border-radius:10px;\n"
+"	color:#fff;\n"
+"	background-color: rgb(94, 96, 159);\n"
+"	font-size:12px;\n"
+"	padding-left:2px;\n"
+"	padding-right:2px;\n"
+"	\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"	\n"
+"	border: 2px solid rgb(89, 91, 147);\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #ff99ff\n"
+"}")
+        self.VPCO_Input_a_lineedit_2.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_100.addWidget(self.VPCO_Input_a_lineedit_2)
+
+        self.label_112 = QLabel(self.frame_60)
+        self.label_112.setObjectName(u"label_112")
+        self.label_112.setMinimumSize(QSize(40, 0))
+        self.label_112.setMaximumSize(QSize(45, 16777215))
+        self.label_112.setFont(font11)
+        self.label_112.setStyleSheet(u"QLabel{\n"
+"	\n"
+"	/*border:2px solid rgb(78, 79, 132);\n"
+"	/*border-radius:15px;*/\n"
+"	border:none;\n"
+"	color:#fff;\n"
+"	/*background-color: rgb(94, 96, 159);*/\n"
+"	background-color: transparent;\n"
+"	font-size:12px;\n"
+"	padding-left:2px;\n"
+"	padding-right:2px;\n"
+"	\n"
+"}")
+
+        self.horizontalLayout_100.addWidget(self.label_112)
+
+
+        self.horizontalLayout_98.addWidget(self.frame_60)
+
+
+        self.verticalLayout_93.addWidget(self.widget_4, 0, Qt.AlignHCenter)
+
+        self.verticalSpacer_20 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_93.addItem(self.verticalSpacer_20)
+
+        self.widget_5 = QWidget(self.frame_58)
+        self.widget_5.setObjectName(u"widget_5")
+        self.widget_5.setMinimumSize(QSize(410, 50))
+        self.widget_5.setMaximumSize(QSize(410, 60))
+        self.widget_5.setStyleSheet(u"QWidget{\n"
+"	\n"
+"	border-radius: 10px;\n"
+"	\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));\n"
+"}")
+        self.horizontalLayout_101 = QHBoxLayout(self.widget_5)
+        self.horizontalLayout_101.setSpacing(0)
+        self.horizontalLayout_101.setObjectName(u"horizontalLayout_101")
+        self.horizontalLayout_101.setContentsMargins(0, 0, 0, 0)
+        self.frame_61 = QFrame(self.widget_5)
+        self.frame_61.setObjectName(u"frame_61")
+        self.frame_61.setMinimumSize(QSize(200, 0))
+        self.frame_61.setMaximumSize(QSize(250, 16777215))
+        self.frame_61.setStyleSheet(u"background:none;")
+        self.frame_61.setFrameShape(QFrame.StyledPanel)
+        self.frame_61.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_102 = QHBoxLayout(self.frame_61)
+        self.horizontalLayout_102.setObjectName(u"horizontalLayout_102")
+        self.label_20 = QLabel(self.frame_61)
         self.label_20.setObjectName(u"label_20")
         self.label_20.setMinimumSize(QSize(150, 30))
         self.label_20.setMaximumSize(QSize(200, 16777215))
@@ -4167,24 +4299,24 @@ class Ui_MainWindow(object):
 "}")
         self.label_20.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_100.addWidget(self.label_20)
+        self.horizontalLayout_102.addWidget(self.label_20)
 
 
-        self.horizontalLayout_99.addWidget(self.frame_58)
+        self.horizontalLayout_101.addWidget(self.frame_61)
 
-        self.frame_59 = QFrame(self.widget_6)
-        self.frame_59.setObjectName(u"frame_59")
-        self.frame_59.setFrameShape(QFrame.StyledPanel)
-        self.frame_59.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_101 = QHBoxLayout(self.frame_59)
-        self.horizontalLayout_101.setObjectName(u"horizontalLayout_101")
-        self.horizontalLayout_101.setContentsMargins(9, 9, 9, 9)
-        self.VPCO_Input_a_lineedit_4 = QLineEdit(self.frame_59)
-        self.VPCO_Input_a_lineedit_4.setObjectName(u"VPCO_Input_a_lineedit_4")
-        self.VPCO_Input_a_lineedit_4.setMinimumSize(QSize(130, 40))
-        self.VPCO_Input_a_lineedit_4.setMaximumSize(QSize(200, 50))
-        self.VPCO_Input_a_lineedit_4.setLayoutDirection(Qt.RightToLeft)
-        self.VPCO_Input_a_lineedit_4.setStyleSheet(u"QLineEdit{\n"
+        self.frame_62 = QFrame(self.widget_5)
+        self.frame_62.setObjectName(u"frame_62")
+        self.frame_62.setStyleSheet(u"background:none;")
+        self.frame_62.setFrameShape(QFrame.StyledPanel)
+        self.frame_62.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_103 = QHBoxLayout(self.frame_62)
+        self.horizontalLayout_103.setObjectName(u"horizontalLayout_103")
+        self.VPCO_Input_e_lineedit_2 = QLineEdit(self.frame_62)
+        self.VPCO_Input_e_lineedit_2.setObjectName(u"VPCO_Input_e_lineedit_2")
+        self.VPCO_Input_e_lineedit_2.setMinimumSize(QSize(130, 40))
+        self.VPCO_Input_e_lineedit_2.setMaximumSize(QSize(200, 50))
+        self.VPCO_Input_e_lineedit_2.setLayoutDirection(Qt.RightToLeft)
+        self.VPCO_Input_e_lineedit_2.setStyleSheet(u"QLineEdit{\n"
 "	\n"
 "	border:2px solid rgb(78, 79, 132);\n"
 "	border-radius:10px;\n"
@@ -4204,61 +4336,16 @@ class Ui_MainWindow(object):
 "QLineEdit:focus{\n"
 "	border: 2px solid #ff99ff\n"
 "}")
-        self.VPCO_Input_a_lineedit_4.setAlignment(Qt.AlignCenter)
+        self.VPCO_Input_e_lineedit_2.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_101.addWidget(self.VPCO_Input_a_lineedit_4)
+        self.horizontalLayout_103.addWidget(self.VPCO_Input_e_lineedit_2)
 
-
-        self.horizontalLayout_99.addWidget(self.frame_59)
-
-
-        self.horizontalLayout_98.addWidget(self.widget_6)
-
-
-        self.verticalLayout_56.addWidget(self.frame_57)
-
-        self.verticalSpacer_21 = QSpacerItem(20, 58, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_56.addItem(self.verticalSpacer_21)
-
-        self.frame_60 = QFrame(self.frame_17)
-        self.frame_60.setObjectName(u"frame_60")
-        self.frame_60.setMinimumSize(QSize(0, 60))
-        self.frame_60.setMaximumSize(QSize(16777215, 60))
-        self.frame_60.setStyleSheet(u"border:none;\n"
-"background:none;")
-        self.frame_60.setFrameShape(QFrame.StyledPanel)
-        self.frame_60.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_102 = QHBoxLayout(self.frame_60)
-        self.horizontalLayout_102.setObjectName(u"horizontalLayout_102")
-        self.horizontalLayout_102.setContentsMargins(0, 0, 0, 0)
-        self.widget_7 = QWidget(self.frame_60)
-        self.widget_7.setObjectName(u"widget_7")
-        self.widget_7.setMinimumSize(QSize(400, 50))
-        self.widget_7.setMaximumSize(QSize(450, 60))
-        self.widget_7.setStyleSheet(u"QWidget{\n"
-"	\n"
-"	border-radius: 10px;\n"
-"	\n"
-"	background-color:rgb(175, 101, 174);\n"
-"}")
-        self.horizontalLayout_103 = QHBoxLayout(self.widget_7)
-        self.horizontalLayout_103.setSpacing(0)
-        self.horizontalLayout_103.setObjectName(u"horizontalLayout_103")
-        self.horizontalLayout_103.setContentsMargins(0, 0, 0, 0)
-        self.frame_61 = QFrame(self.widget_7)
-        self.frame_61.setObjectName(u"frame_61")
-        self.frame_61.setMinimumSize(QSize(225, 0))
-        self.frame_61.setMaximumSize(QSize(250, 16777215))
-        self.frame_61.setFrameShape(QFrame.StyledPanel)
-        self.frame_61.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_104 = QHBoxLayout(self.frame_61)
-        self.horizontalLayout_104.setObjectName(u"horizontalLayout_104")
-        self.label_21 = QLabel(self.frame_61)
-        self.label_21.setObjectName(u"label_21")
-        self.label_21.setMinimumSize(QSize(150, 30))
-        self.label_21.setMaximumSize(QSize(200, 16777215))
-        self.label_21.setStyleSheet(u"QLabel{\n"
+        self.label_133 = QLabel(self.frame_62)
+        self.label_133.setObjectName(u"label_133")
+        self.label_133.setMinimumSize(QSize(40, 0))
+        self.label_133.setMaximumSize(QSize(45, 16777215))
+        self.label_133.setFont(font11)
+        self.label_133.setStyleSheet(u"QLabel{\n"
 "	\n"
 "	/*border:2px solid rgb(78, 79, 132);\n"
 "	/*border-radius:15px;*/\n"
@@ -4266,94 +4353,55 @@ class Ui_MainWindow(object):
 "	color:#fff;\n"
 "	/*background-color: rgb(94, 96, 159);*/\n"
 "	background-color: transparent;\n"
-"	font-size:16px;\n"
-"	padding-left:2px;\n"
-"	padding-right:2px;\n"
-"	\n"
-"}")
-        self.label_21.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_104.addWidget(self.label_21)
-
-
-        self.horizontalLayout_103.addWidget(self.frame_61)
-
-        self.frame_62 = QFrame(self.widget_7)
-        self.frame_62.setObjectName(u"frame_62")
-        self.frame_62.setFrameShape(QFrame.StyledPanel)
-        self.frame_62.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_105 = QHBoxLayout(self.frame_62)
-        self.horizontalLayout_105.setObjectName(u"horizontalLayout_105")
-        self.VPCO_Input_e_lineedit_3 = QLineEdit(self.frame_62)
-        self.VPCO_Input_e_lineedit_3.setObjectName(u"VPCO_Input_e_lineedit_3")
-        self.VPCO_Input_e_lineedit_3.setMinimumSize(QSize(130, 40))
-        self.VPCO_Input_e_lineedit_3.setMaximumSize(QSize(200, 50))
-        self.VPCO_Input_e_lineedit_3.setLayoutDirection(Qt.RightToLeft)
-        self.VPCO_Input_e_lineedit_3.setStyleSheet(u"QLineEdit{\n"
-"	\n"
-"	border:2px solid rgb(78, 79, 132);\n"
-"	border-radius:10px;\n"
-"	color:#fff;\n"
-"	background-color: rgb(94, 96, 159);\n"
 "	font-size:12px;\n"
 "	padding-left:2px;\n"
 "	padding-right:2px;\n"
 "	\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-"	\n"
-"	border: 2px solid rgb(89, 91, 147);\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"	border: 2px solid #ff99ff\n"
 "}")
-        self.VPCO_Input_e_lineedit_3.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_105.addWidget(self.VPCO_Input_e_lineedit_3)
-
-
-        self.horizontalLayout_103.addWidget(self.frame_62)
+        self.horizontalLayout_103.addWidget(self.label_133)
 
 
-        self.horizontalLayout_102.addWidget(self.widget_7)
+        self.horizontalLayout_101.addWidget(self.frame_62)
 
 
-        self.verticalLayout_56.addWidget(self.frame_60)
+        self.verticalLayout_93.addWidget(self.widget_5, 0, Qt.AlignHCenter)
 
-        self.verticalSpacer_22 = QSpacerItem(20, 59, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.verticalLayout_56.addItem(self.verticalSpacer_22)
+        self.verticalLayout_55.addWidget(self.frame_58)
 
-        self.frame_63 = QFrame(self.frame_17)
+        self.verticalSpacer_21 = QSpacerItem(20, 59, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_55.addItem(self.verticalSpacer_21)
+
+        self.frame_63 = QFrame(self.frame_57)
         self.frame_63.setObjectName(u"frame_63")
-        self.frame_63.setMinimumSize(QSize(0, 60))
-        self.frame_63.setMaximumSize(QSize(16777215, 60))
+        self.frame_63.setMinimumSize(QSize(0, 50))
+        self.frame_63.setMaximumSize(QSize(16777215, 50))
         self.frame_63.setStyleSheet(u"border:none;\n"
 "background:none;")
         self.frame_63.setFrameShape(QFrame.StyledPanel)
         self.frame_63.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_106 = QHBoxLayout(self.frame_63)
-        self.horizontalLayout_106.setObjectName(u"horizontalLayout_106")
-        self.horizontalLayout_106.setContentsMargins(0, 0, 0, 0)
-        self.maj_body_CoOE_4 = QComboBox(self.frame_63)
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.addItem("")
-        self.maj_body_CoOE_4.setObjectName(u"maj_body_CoOE_4")
-        self.maj_body_CoOE_4.setMinimumSize(QSize(300, 60))
-        self.maj_body_CoOE_4.setMaximumSize(QSize(350, 60))
-        self.maj_body_CoOE_4.setStyleSheet(u"QComboBox{\n"
+        self.horizontalLayout_104 = QHBoxLayout(self.frame_63)
+        self.horizontalLayout_104.setObjectName(u"horizontalLayout_104")
+        self.horizontalLayout_104.setContentsMargins(0, 0, 0, 0)
+        self.maj_body_CoOE_3 = QComboBox(self.frame_63)
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.addItem("")
+        self.maj_body_CoOE_3.setObjectName(u"maj_body_CoOE_3")
+        self.maj_body_CoOE_3.setMinimumSize(QSize(300, 50))
+        self.maj_body_CoOE_3.setMaximumSize(QSize(350, 50))
+        self.maj_body_CoOE_3.setStyleSheet(u"QComboBox{\n"
 "	border:2px solid rgb(78, 79, 132);\n"
 "	border-radius:12px;\n"
 "	color:#fff;\n"
@@ -4373,20 +4421,20 @@ class Ui_MainWindow(object):
 "	border: 2px solid #ff99ff\n"
 "}")
 
-        self.horizontalLayout_106.addWidget(self.maj_body_CoOE_4)
+        self.horizontalLayout_104.addWidget(self.maj_body_CoOE_3)
 
 
-        self.verticalLayout_56.addWidget(self.frame_63)
+        self.verticalLayout_55.addWidget(self.frame_63)
 
-        self.verticalSpacer_23 = QSpacerItem(20, 58, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_25 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.verticalLayout_56.addItem(self.verticalSpacer_23)
+        self.verticalLayout_55.addItem(self.verticalSpacer_25)
 
-        self.VPCO_Submit_button_2 = QPushButton(self.frame_17)
+        self.VPCO_Submit_button_2 = QPushButton(self.frame_57)
         self.VPCO_Submit_button_2.setObjectName(u"VPCO_Submit_button_2")
         sizePolicy2.setHeightForWidth(self.VPCO_Submit_button_2.sizePolicy().hasHeightForWidth())
         self.VPCO_Submit_button_2.setSizePolicy(sizePolicy2)
-        self.VPCO_Submit_button_2.setMinimumSize(QSize(125, 40))
+        self.VPCO_Submit_button_2.setMinimumSize(QSize(125, 50))
         self.VPCO_Submit_button_2.setMaximumSize(QSize(150, 80))
         self.VPCO_Submit_button_2.setStyleSheet(u"QPushButton{\n"
 "	\n"
@@ -4407,10 +4455,14 @@ class Ui_MainWindow(object):
 "}\n"
 "")
 
-        self.verticalLayout_56.addWidget(self.VPCO_Submit_button_2, 0, Qt.AlignHCenter)
+        self.verticalLayout_55.addWidget(self.VPCO_Submit_button_2, 0, Qt.AlignHCenter)
+
+        self.verticalSpacer_22 = QSpacerItem(20, 58, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_55.addItem(self.verticalSpacer_22)
 
 
-        self.verticalLayout_55.addWidget(self.frame_17)
+        self.horizontalLayout_105.addWidget(self.frame_57)
 
 
         self.horizontalLayout_97.addWidget(self.a_and_e_VPCO_2)
@@ -4424,24 +4476,19 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15.setSpacing(0)
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
         self.horizontalLayout_15.setContentsMargins(0, -1, 0, -1)
-        self.graph_widget_2 = QWidget(self.a_and_e_graph_VPCO_2)
-        self.graph_widget_2.setObjectName(u"graph_widget_2")
-        self.graph_widget_2.setStyleSheet(u"background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132, 255), stop:1 rgba(161, 161, 161, 255));")
+        self.graph_stackedWidget_2 = QStackedWidget(self.a_and_e_graph_VPCO_2)
+        self.graph_stackedWidget_2.setObjectName(u"graph_stackedWidget_2")
+        self.graph_stackedWidget_2.setStyleSheet(u"QStackedWidget\n"
+"{background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132, 60%), stop:1 rgba(161, 161, 161, 60%));\n"
+"border:none;}")
+        self.graph_stackedWidget_2Page1 = QWidget()
+        self.graph_stackedWidget_2Page1.setObjectName(u"graph_stackedWidget_2Page1")
+        self.graph_stackedWidget_2.addWidget(self.graph_stackedWidget_2Page1)
+        self.page_5 = QWidget()
+        self.page_5.setObjectName(u"page_5")
+        self.graph_stackedWidget_2.addWidget(self.page_5)
 
-        self.horizontalLayout_15.addWidget(self.graph_widget_2)
-
-        self.frame_12 = QFrame(self.a_and_e_graph_VPCO_2)
-        self.frame_12.setObjectName(u"frame_12")
-        self.frame_12.setMinimumSize(QSize(35, 0))
-        self.frame_12.setMaximumSize(QSize(35, 16777215))
-        self.frame_12.setFrameShape(QFrame.StyledPanel)
-        self.frame_12.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_11 = QVBoxLayout(self.frame_12)
-        self.verticalLayout_11.setSpacing(0)
-        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
-
-        self.horizontalLayout_15.addWidget(self.frame_12)
+        self.horizontalLayout_15.addWidget(self.graph_stackedWidget_2)
 
 
         self.horizontalLayout_97.addWidget(self.a_and_e_graph_VPCO_2)
@@ -6217,23 +6264,6 @@ class Ui_MainWindow(object):
 "border:none;")
 
         self.horizontalLayout_22.addWidget(self.label_title_5)
-
-        self.vpco_feature_back_btn = QPushButton(self.frame_40)
-        self.vpco_feature_back_btn.setObjectName(u"vpco_feature_back_btn")
-        self.vpco_feature_back_btn.setMinimumSize(QSize(25, 25))
-        self.vpco_feature_back_btn.setMaximumSize(QSize(30, 25))
-        self.vpco_feature_back_btn.setStyleSheet(u"QPushButton{\n"
-"	background-color:transparent;\n"
-"	image:url(UI_Functions/Resources/backk.svg);\n"
-"	\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	padding: 0.2em 0.2em 0.2em 0.2em;\n"
-"	\n"
-"}")
-
-        self.horizontalLayout_22.addWidget(self.vpco_feature_back_btn)
 
 
         self.verticalLayout_23.addWidget(self.frame_40)
@@ -9730,7 +9760,7 @@ class Ui_MainWindow(object):
         font13.setWeight(75)
         self.semi_major_axis_toggle_menu_lbl_9.setFont(font13)
         self.semi_major_axis_toggle_menu_lbl_9.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160, 80%);\n"
+"color: rgba(131, 255, 160, 80%);\n"
 "background:transparent;\n"
 "border:none;\n"
 "}\n"
@@ -9823,7 +9853,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_lbl_10.setMaximumSize(QSize(16777215, 20))
         self.semi_major_axis_toggle_menu_lbl_10.setFont(font13)
         self.semi_major_axis_toggle_menu_lbl_10.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160, 80%);\n"
+"color: rgba(131, 255, 160, 80%);\n"
 "background:transparent;\n"
 "border:none;\n"
 "}\n"
@@ -9914,7 +9944,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_lbl_11.setMaximumSize(QSize(16777215, 20))
         self.semi_major_axis_toggle_menu_lbl_11.setFont(font13)
         self.semi_major_axis_toggle_menu_lbl_11.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160, 80%);\n"
+"color: rgba(131, 255, 160, 80%);\n"
 "background:transparent;\n"
 "border:none;\n"
 "}\n"
@@ -10263,7 +10293,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_lbl_5.setMaximumSize(QSize(16777215, 20))
         self.semi_major_axis_toggle_menu_lbl_5.setFont(font12)
         self.semi_major_axis_toggle_menu_lbl_5.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160, 80%);\n"
+"color: rgba(131, 255, 160, 80%);\n"
 "background:transparent;\n"
 "border:none;\n"
 "}\n"
@@ -10531,7 +10561,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_lbl_6.setMaximumSize(QSize(16777215, 20))
         self.semi_major_axis_toggle_menu_lbl_6.setFont(font12)
         self.semi_major_axis_toggle_menu_lbl_6.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160, 80%);\n"
+"color: rgba(131, 255, 160, 80%);\n"
 "background:transparent;\n"
 "border:none;\n"
 "}\n"
@@ -10661,7 +10691,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_lbl_8.setMaximumSize(QSize(16777215, 20))
         self.semi_major_axis_toggle_menu_lbl_8.setFont(font12)
         self.semi_major_axis_toggle_menu_lbl_8.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160, 80%);\n"
+"color: rgba(131, 255, 160, 80%);\n"
 "background:transparent;\n"
 "border:none;\n"
 "}\n"
@@ -10936,7 +10966,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_lbl_12.setMaximumSize(QSize(16777215, 20))
         self.semi_major_axis_toggle_menu_lbl_12.setFont(font12)
         self.semi_major_axis_toggle_menu_lbl_12.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160, 80%);\n"
+"color: rgba(131, 255, 160, 80%);\n"
 "background:transparent;\n"
 "border:none;\n"
 "}\n"
@@ -11267,7 +11297,7 @@ class Ui_MainWindow(object):
         self.semi_major_axis_toggle_menu_lbl_13.setMaximumSize(QSize(16777215, 20))
         self.semi_major_axis_toggle_menu_lbl_13.setFont(font12)
         self.semi_major_axis_toggle_menu_lbl_13.setStyleSheet(u"QLabel{\n"
-"color: rgb(131, 255, 160, 80%);\n"
+"color: rgba(131, 255, 160, 80%);\n"
 "background:transparent;\n"
 "border:none;\n"
 "}\n"
@@ -11535,10 +11565,6 @@ class Ui_MainWindow(object):
 "QCalendarWidget QAbstractItemView\n"
 "{\n"
 "	background-color: rgb(192,192,192); \n"
-"	selection-background-color: rgb(0, 170, 0, 60%);\n"
-"	selection-border: 1px solid black;\n"
-"	selection-border-radius:2px;\n"
-"	selection-color: black; \n"
 "	border:2px solid black;\n"
 "	border-radius:4px;\n"
 "}")
@@ -12764,13 +12790,13 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(0)
-        self.VPCO_tabs.setCurrentIndex(0)
+        self.VPCO_tabs.setCurrentIndex(1)
         self.VPCO_Input_Stack.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(1)
         self.VPCO_output_stack.setCurrentIndex(1)
         self.otherbody_stack.setCurrentIndex(1)
         self.CoOE_output_stack.setCurrentIndex(1)
-        self.Stacked_widg_Types_of_Orbital_Transfer.setCurrentIndex(0)
+        self.Stacked_widg_Types_of_Orbital_Transfer.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -12796,7 +12822,7 @@ class Ui_MainWindow(object):
         self.btn_close.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.btn_close.setText("")
-        self.Home_VPCO_Label.setText(QCoreApplication.translate("MainWindow", u"Various Parameters at any given point and Constants in orbit", None))
+        self.Home_VPCO_Label.setText(QCoreApplication.translate("MainWindow", u"Various Parameters at any given point and Constants of an orbit", None))
         self.Home_Julian_Day_Label.setText(QCoreApplication.translate("MainWindow", u"Calculation of Julian Day", None))
         self.Home_Orbital_Elements_Label.setText(QCoreApplication.translate("MainWindow", u"Orbital Elements", None))
         self.Home_SOI_Label.setText(QCoreApplication.translate("MainWindow", u"Sphere of Influence", None))
@@ -12852,6 +12878,7 @@ class Ui_MainWindow(object):
         self.label_109.setText(QCoreApplication.translate("MainWindow", u"Km", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Eccentricity", None))
         self.VPCO_Input_e_lineedit.setText("")
+        self.label_116.setText("")
         self.maj_body_CoOE_2.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Major Body", None))
         self.maj_body_CoOE_2.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
         self.maj_body_CoOE_2.setItemText(2, QCoreApplication.translate("MainWindow", u"  Earth", None))
@@ -12933,25 +12960,27 @@ class Ui_MainWindow(object):
         self.label_34.setText(QCoreApplication.translate("MainWindow", u"6.91", None))
         self.label_97.setText(QCoreApplication.translate("MainWindow", u"Km/s", None))
         self.VPCO_tabs.setTabText(self.VPCO_tabs.indexOf(self.a_and_e_tab), QCoreApplication.translate("MainWindow", u"Semi-major axis and Eccentricity", None))
-        self.label_20.setText(QCoreApplication.translate("MainWindow", u"Radius of Perigee", None))
-        self.VPCO_Input_a_lineedit_4.setText("")
-        self.label_21.setText(QCoreApplication.translate("MainWindow", u"Radius of Apogee", None))
-        self.VPCO_Input_e_lineedit_3.setText("")
-        self.maj_body_CoOE_4.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Major Body", None))
-        self.maj_body_CoOE_4.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
-        self.maj_body_CoOE_4.setItemText(2, QCoreApplication.translate("MainWindow", u"  Earth", None))
-        self.maj_body_CoOE_4.setItemText(3, QCoreApplication.translate("MainWindow", u"  Jupiter", None))
-        self.maj_body_CoOE_4.setItemText(4, QCoreApplication.translate("MainWindow", u"  Mercury", None))
-        self.maj_body_CoOE_4.setItemText(5, QCoreApplication.translate("MainWindow", u"  Venus", None))
-        self.maj_body_CoOE_4.setItemText(6, QCoreApplication.translate("MainWindow", u"  Mars", None))
-        self.maj_body_CoOE_4.setItemText(7, QCoreApplication.translate("MainWindow", u"  Saturn", None))
-        self.maj_body_CoOE_4.setItemText(8, QCoreApplication.translate("MainWindow", u"  Uranus", None))
-        self.maj_body_CoOE_4.setItemText(9, QCoreApplication.translate("MainWindow", u"  Neptune", None))
-        self.maj_body_CoOE_4.setItemText(10, QCoreApplication.translate("MainWindow", u"  Pluto", None))
-        self.maj_body_CoOE_4.setItemText(11, QCoreApplication.translate("MainWindow", u"  Other", None))
+        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Radius of Periapsis", None))
+        self.VPCO_Input_a_lineedit_2.setText("")
+        self.label_112.setText(QCoreApplication.translate("MainWindow", u"Km", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"Radius of Apoapsis", None))
+        self.VPCO_Input_e_lineedit_2.setText("")
+        self.label_133.setText(QCoreApplication.translate("MainWindow", u"Km", None))
+        self.maj_body_CoOE_3.setItemText(0, QCoreApplication.translate("MainWindow", u"  Select the Major Body", None))
+        self.maj_body_CoOE_3.setItemText(1, QCoreApplication.translate("MainWindow", u"  Moon", None))
+        self.maj_body_CoOE_3.setItemText(2, QCoreApplication.translate("MainWindow", u"  Earth", None))
+        self.maj_body_CoOE_3.setItemText(3, QCoreApplication.translate("MainWindow", u"  Jupiter", None))
+        self.maj_body_CoOE_3.setItemText(4, QCoreApplication.translate("MainWindow", u"  Mercury", None))
+        self.maj_body_CoOE_3.setItemText(5, QCoreApplication.translate("MainWindow", u"  Venus", None))
+        self.maj_body_CoOE_3.setItemText(6, QCoreApplication.translate("MainWindow", u"  Mars", None))
+        self.maj_body_CoOE_3.setItemText(7, QCoreApplication.translate("MainWindow", u"  Saturn", None))
+        self.maj_body_CoOE_3.setItemText(8, QCoreApplication.translate("MainWindow", u"  Uranus", None))
+        self.maj_body_CoOE_3.setItemText(9, QCoreApplication.translate("MainWindow", u"  Neptune", None))
+        self.maj_body_CoOE_3.setItemText(10, QCoreApplication.translate("MainWindow", u"  Pluto", None))
+        self.maj_body_CoOE_3.setItemText(11, QCoreApplication.translate("MainWindow", u"  Other", None))
 
         self.VPCO_Submit_button_2.setText(QCoreApplication.translate("MainWindow", u"Plot Orbital Transfer", None))
-        self.VPCO_tabs.setTabText(self.VPCO_tabs.indexOf(self.ra_and_rp), QCoreApplication.translate("MainWindow", u"Radius of Perigee and Radius of Apogee", None))
+        self.VPCO_tabs.setTabText(self.VPCO_tabs.indexOf(self.ra_and_rp), QCoreApplication.translate("MainWindow", u"Radius of Periapsis and Radius of Apoapsis", None))
         self.toggle_menu_btn.setText("")
         self.type_of_input_toggle.setItemText(0, QCoreApplication.translate("MainWindow", u"  a and e", None))
         self.type_of_input_toggle.setItemText(1, QCoreApplication.translate("MainWindow", u"  ra and rp", None))
@@ -13040,10 +13069,6 @@ class Ui_MainWindow(object):
         self.label_55.setText(QCoreApplication.translate("MainWindow", u"k", None))
         self.Radius_of_Apoapsis_frame_lbl_4.setText(QCoreApplication.translate("MainWindow", u"Distnce frm MainBody", None))
         self.label_title_5.setText(QCoreApplication.translate("MainWindow", u"                    Various Parameters of an Orbit", None))
-#if QT_CONFIG(tooltip)
-        self.vpco_feature_back_btn.setToolTip(QCoreApplication.translate("MainWindow", u"VPCO Home", None))
-#endif // QT_CONFIG(tooltip)
-        self.vpco_feature_back_btn.setText("")
         self.label_132.setText(QCoreApplication.translate("MainWindow", u"     Output:", None))
         self.label_51.setText(QCoreApplication.translate("MainWindow", u"Specific Angular Momentum", None))
         self.label_86.setText(QCoreApplication.translate("MainWindow", u"Escape Velocity at Periapsis", None))

@@ -36,7 +36,8 @@
        <string notr="true">QFrame {	
 	 
 	
-	background-color: rgb(16, 255, 147);
+	
+	background-color: rgb(38, 38, 38);
 
 
 	color: rgb(220, 220, 220);
@@ -73,7 +74,7 @@
 	/*background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(109, 11, 255, 255));*/
 
 	
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(100, 188, 203, 255), stop:1 rgba(118, 215, 223, 255));
+	
 
 
 	color: rgb(220, 220, 220);
@@ -102,7 +103,8 @@
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color:transparent;</string>
+             <string notr="true">background-color:transparent;
+image:none;</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -145,7 +147,8 @@
                </property>
                <property name="styleSheet">
                 <string notr="true">color: rgb(254, 121, 199);
-background-color:transparent;</string>
+background-color:transparent;
+image:none;</string>
                </property>
                <property name="text">
                 <string/>
@@ -179,7 +182,8 @@ background-color:transparent;</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent</string>
+             <string notr="true">background:transparent;
+image:none;</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -228,7 +232,8 @@ background-color:transparent;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">color: rgb(98, 114, 164);
-background-color:transparent;</string>
+background-color:transparent;
+image:none;</string>
             </property>
             <property name="text">
              <string>&lt;strong&gt;APP&lt;/strong&gt; DESCRIPTION</string>
@@ -255,7 +260,7 @@ background-color:transparent;</string>
             <property name="styleSheet">
              <string notr="true">QProgressBar {
 	
-	background-color: rgb(98, 114, 164,200);
+	background-color: rgba(98, 114, 164,200);
 	color: rgb(200, 200, 200);
 	border-style: none;
 	border-radius: 12px;
@@ -301,7 +306,8 @@ QProgressBar::chunk{
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">background:transparent;
+image:none;</string>
             </property>
             <property name="text">
              <string/>

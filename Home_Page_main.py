@@ -137,7 +137,7 @@ class MainWindow(QMainWindow):
        
         jo = OrbitPlot.phasingManeuver(3.986e5, 6378, 13600, 6800, 0, np.pi/2)
         self._static_ax.plot(jo[0][0], jo[0][1], "r", label = 'Initial Orbit')
-        self._static_ax.plot(jo[1][0], jo[1][1], "yellow", LineStyle = "dotted", label = 'Phasing Orbit')
+        self._static_ax.plot(jo[1][0], jo[1][1], "yellow", linestyle = "dotted", label = 'Phasing Orbit')
         
         MajorBodyPlot = OrbitPlot.plotOrbitMPL(3.986e5,6378, 6378, 0, 2*np.pi)
         self._static_ax.fill(MajorBodyPlot[0], MajorBodyPlot[1], "b")
@@ -510,12 +510,7 @@ class MainWindow(QMainWindow):
         #elif e == 1:
             
 
-        
-        
-    # vpco feature back btn
-    def vpco_feature_back_btn(self):
-        self.ui.stackedWidget.setCurrentIndex(3)
-        self.ui.Orbit_type_stack.setCurrentIndex(1)          
+         
 
     # vpco input ae screen
     def vpco_a_e(self):
@@ -830,10 +825,10 @@ class MainWindow(QMainWindow):
 ###########################################################################################################################################################
 # SPLASH SCREEN
 class SplashScreen(QMainWindow):
-    def __init__(self, windowsize):
+    def __init__(self):
         super().__init__()
-        self.windowsize = windowsize
-        self.setFixedSize(self.windowsize)
+        # self.windowsize = windowsize
+        # self.setFixedSize(self.windowsize)
         # QMainWindow.__init__(self)
         self.ui = Ui_SplashScreen()
         self.ui.setupUi(self)
@@ -898,6 +893,8 @@ class SplashScreen(QMainWindow):
             try_me=True,
             
         )
+        self.circular_progress_1.add_shadow("true")
+
         self.circular_progress_1.setMinimumSize(self.circular_progress_1.width, self.circular_progress_1.height)
         self.circular_progress_1.setMinimumSize(QSize(60, 60))
         self.circular_progress_1.setMaximumSize(QSize(60, 60))
@@ -935,9 +932,7 @@ class SplashScreen(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    screensize = app.desktop().availableGeometry().size()
-    window_size = screensize/1.6
-    window = SplashScreen(window_size)
+    window = SplashScreen()
     # window = MainWindow()
     window.show()
     sys.exit(app.exec_())
