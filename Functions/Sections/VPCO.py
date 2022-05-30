@@ -127,3 +127,6 @@ class CalculateHyperBola():
 # x_obj = CalculateCircularElliptical(major_body)
 
 # x_obj.orb_const()
+if __name__ == "__main__":
+    vel = CalculateCircularElliptical.velocity_at_any_point(10961, 10961, 102445252)
+    print(vel)

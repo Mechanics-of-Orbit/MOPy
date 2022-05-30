@@ -44,7 +44,7 @@ path.append('..\Functions\Sections')
 # GLOBALS
 counter = 0
 slider_pressed = 0
-
+G = 6.67e-20
 a = 0
 
 class MainWindow(QMainWindow):
@@ -76,6 +76,7 @@ class MainWindow(QMainWindow):
         self.ui.Orbtl_tranf_Inp_n_Out_frames_container.hide()
         self.ui.Plot_frame_for_Orbital_transfer.hide()
         
+        self.ui.Bottom_slider_VPCO_Output.hide()
         
         
         # Assigning hover signal to the squares in the home screen
@@ -321,38 +322,87 @@ class MainWindow(QMainWindow):
         elif (source == self.ui.Home_Orbital_transfer and event.type() == QtCore.QEvent.MouseButtonPress):
             self.ui.stackedWidget.setCurrentIndex(6)
             self.ui.label_title.setText(" MOPy - Orbital Transfer")
-        
+
+
+
     
 
-
     def Sliding_animation(self, maxHeight, enable):
-        if enable and maxHeight == 300:
-
+        if enable and maxHeight == 400:
+            self.ui.a_and_e_graph_VPCO.setCurrentIndex(0)
+            self.dummy = 0
             # GET WIDTH
             height = self.ui.Bottom_slider_VPCO_Output.height()
             maxExtend = maxHeight
             standard = 0
-            
-            
-
+    
             # SET MAX WIDTH
             if height == 0:
                 heightExtended = maxExtend
-                self.ui.VPCO_Input_Stack.setCurrentIndex(1)
-                self.ui.btn_go_back.show()
+                
                 
             else:
                 heightExtended = standard
                 self.ui.VPCO_Input_Stack.setCurrentIndex(0)
-                self.ui.btn_go_back.hide()
                 
-            # ANIMATION
-            self.animation_x = QPropertyAnimation(self.ui.Bottom_slider_VPCO_Output, b"maximumHeight")
-            self.animation_x.setDuration(600)
-            self.animation_x.setStartValue(height)
-            self.animation_x.setEndValue(heightExtended)
-            self.animation_x.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
-            self.animation_x.start()
+
+            Semi_maj_ax = self.ui.VPCO_Input_a_lineedit.text()
+            Eccentricity = self.ui.VPCO_Input_e_lineedit.text()
+
+            try:
+                Semi_maj_ax =  float(Semi_maj_ax)
+                try:
+                    
+                    Eccentricity = float(Eccentricity)
+                    
+                    self.ui.Semi_maj_ax_err_label.setText("")
+                    self.ui.VPCO_Input_Stack.setCurrentIndex(1)
+                    self.ui.a_and_e_graph_VPCO.setCurrentIndex(1) 
+                    self.dummy = 1
+                    
+                except:
+                    self.ui.Eccentricity_err_label.setText("Please Enter an integer value of Eccentricty")
+                    self.ui.Semi_maj_ax_err_label.setText("")
+
+            except:
+                try:
+                    Eccentricity = float(Eccentricity)
+                    self.ui.Semi_maj_ax_err_label.setText("Please Enter an integer value of Semi-major axis")
+                    self.ui.Eccentricity_err_label.setText("")
+                except:
+                    self.ui.Semi_maj_ax_err_label.setText("Please Enter an integer value of Semi-major axis")
+                    self.ui.Eccentricity_err_label.setText("Please Enter an integer value of Eccentricty")
+
+            if self.dummy == 1:
+                Maj_Body = self.ui.Maj_Body__Drop_VPCO.currentText()
+                m = planet_data(Maj_Body, "Mass")
+                Maj_Body_Mass = m[0]
+                vpco = CalculateCircularElliptical.semiecc(Semi_maj_ax, Eccentricity, Maj_Body_Mass)
+                
+                self.ui.VPCO_Radius_of_Peri_Label.setText(str(round(vpco[0], 4)))
+                self.ui.VPCO_Radius_of_Apo_Label.setText(str(round(vpco[1], 4)))
+                self.ui.VPCO_Sp_Mech_Energy_Label.setText(str(round(vpco[5], 4)))
+                self.ui.VPCO_Time_Period_Label.setText(str(round(vpco[3], 4)))
+                self.ui.VPCO_Sp_Angular_Mome_Label.setText(str(round(vpco[4], 4)))
+                self.ui.VPCO_Mean_Motion_Label.setText(str(round(vpco[2], 4)))
+                self.ui.VPCO_Semi_latus_Rectum_Label.setText(str(round(vpco[6], 4)))
+
+                Vel_peri = CalculateCircularElliptical.velocity_at_any_point(Semi_maj_ax, vpco[0], Maj_Body_Mass)
+                self.ui.VPCO_Velocity_at_Periapis_Label.setText(str(round(Vel_peri, 4)))
+
+                Vel_apo = CalculateCircularElliptical.velocity_at_any_point(Semi_maj_ax, vpco[1], Maj_Body_Mass)
+                self.ui.VPCO_Velocity_of_Apoapsis_Label.setText(str(round(Vel_apo, 4)))
+
+                Vel_at_Semi_latus_Rectum = CalculateCircularElliptical.velocity_at_any_point(Semi_maj_ax, vpco[6], Maj_Body_Mass)
+                self.ui.VPCO_Vel_at_Semi_latus_re_Label.setText(str(round(Vel_at_Semi_latus_Rectum, 4)))
+
+                self.ui.VPCO_Esc_Velocity_at_Periapsis_Label.setText(str(round(sqrt((2*G*Maj_Body_Mass)/vpco[0]), 4)))
+                self.ui.VPCO_Esc_Velocity_at_Apoapsis_Label.setText(str(round(sqrt((2*G*Maj_Body_Mass)/vpco[1]), 4)))
+         
+                self.ui.Bottom_slider_VPCO_Output.show()
+
+
+                
             
         elif enable and maxHeight == 522:
     
@@ -420,138 +470,10 @@ class MainWindow(QMainWindow):
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
     
-    # Screen switching defination
-    def search(self):
-        index = self.ui.combosearchbox.currentIndex()
-        if index == 9:
-            self.ui.stackedWidget.setCurrentIndex(1)
-        elif index == 3:
-            self.ui.stackedWidget.setCurrentIndex(2)
-        elif index == 1:
-            self.ui.stackedWidget.setCurrentIndex(5)
-        elif index == 13:
-            self.ui.stackedWidget.setCurrentIndex(3)
-            self.ui.Orbit_type_stack.setCurrentIndex(0)
-
-#########################################################################################################################
-
-    # vpco go button(selecting type of input)
-
-
-    def vpco_go_btn(self):
-        selct_body = self.ui.vpco_major_body.currentIndex()
-
-        
-           
-        index1 = self.ui.vpco_input_type.currentIndex()
-        if index1 == 1:
-            if selct_body == 0:
-                self.ui.error_selct_body.setText("Please Select Major Body")
-            else:
-                self.ui.Orbit_type_stack.setCurrentIndex(1)
-        elif index1 == 2:
-            if selct_body == 0:
-                    self.ui.error_selct_body.setText("Please Select Major Body")
-            else:
-                self.ui.Orbit_type_stack.setCurrentIndex(2)
-        elif index1 == 3:
-            if selct_body == 0:
-                    self.ui.error_selct_body.setText("Please Select Major Body")
-            else:
-                self.ui.Orbit_type_stack.setCurrentIndex(3)
-        elif index1 == 4:
-            if selct_body == 0:
-                    self.ui.error_selct_body.setText("Please Select Major Body")
-            else:
-                self.ui.Orbit_type_stack.setCurrentIndex(4)
-        elif index1 == 5:
-            if selct_body == 0:
-                    self.ui.error_selct_body.setText("Please Select Major Body")
-            else:
-                self.ui.Orbit_type_stack.setCurrentIndex(5)
-
-    #VPCO_a_e_calculate_btn
-    def vpco_ae_cal_btn(self):
-        self.ui.stackedWidget.setCurrentIndex(4)
-        index_dict = {1:0, 2:1, 3:2, 4:3, 5:4}
-        index1 = self.ui.vpco_input_type.currentIndex()
-        setIndex = index_dict[index1]
-        self.ui.VPCO_output_stack.setCurrentIndex(setIndex)
-            
-        e = self.ui.eccentricity_inpt_ae.text()
-        e = float(e)
-        a = self.ui.semimajor_axis_input_ae.text()
-        a = float(a)
-        maj_body = self.ui.vpco_major_body.currentText()
-        maj_body_mass = planet_data(maj_body,'Mass')
-        
-        if e == 0 or 0 < e < 1: 
-            [r_per, r_apo, mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.semiecc(a, e, maj_body_mass[0])
-
-            v_per = CalculateCircularElliptical.velocity_at_any_point(a, r_per, maj_body_mass[0])
-            v_apo = CalculateCircularElliptical.velocity_at_any_point(a, r_apo, maj_body_mass[0])
-            v_slr = CalculateCircularElliptical.velocity_at_any_point(a, slr, maj_body_mass[0])
-
-            esc_vp = CalculateParabola.velocity_at_any_point(r_per, maj_body_mass[0])
-            esc_va = CalculateParabola.velocity_at_any_point(r_apo, maj_body_mass[0])
-            self.ui.rp_ae.setText(str(round(r_per,4)))
-            self.ui.ra_ae.setText(str(round(r_apo,4)))
-            self.ui.mu_ae.setText(str(round(sme,4)))
-            self.ui.p_ae.setText(str(round(slr,4)))
-            self.ui.h_ae.setText(str(round(mag_h,4)))
-            self.ui.T_ae.setText(str(round(T_period,4)))
-            self.ui.n_ae.setText(str(round(mean_motion,4)))
-            self.ui.vp_ae.setText(str(round(v_per,4)))
-            self.ui.va_ae.setText(str(round(v_apo,4)))
-            self.ui.vlatus_ae.setText(str(round(v_slr,4)))
-            self.ui.escvp_ae.setText(str(round(esc_vp,4)))
-            self.ui.escva_ae.setText(str(round(esc_va,4)))
-        
-        #elif e == 1:
-            
-
-         
-
-    # vpco input ae screen
-    def vpco_a_e(self):
-        e = self.ui.eccentricity_inpt_ae.text()
-        e = float(e)
-        at = self.ui.semimajor_axis_input_ae.text()
-        try:
-            a = float(at)
-        except:
-            self.ui.orbit_type_ae.setText("")
-            self.ui.Error_parabola.setText("Please Enter Valid Semimajor Axis Value")
-            self.ui.Error_parabola.setStyleSheet(u"color:red;")
-        if e == 1 and a < inf:
-            self.ui.Error_parabola.setText("It is not Possible\nbecause if the eccentricity is 1 then the\nSemimajor Axis should be infinity or vice versa")
-            self.ui.orbit_type_ae.setText("")
-            self.ui.Error_parabola.setStyleSheet(u"color:red;")
-        elif e == 0 and 0 < a < inf:
-            self.ui.orbit_type_ae.setText("Circular")
-            self.ui.Error_parabola.setText("")
-        elif e == 1 and (at == "infinite" or "inf" or "Infinite" or "Inf" or 'infinity' or 'Infinity'):
-            self.ui.orbit_type_ae.setText("Parabola")
-            self.ui.Error_parabola.setText("")
-        elif 0 < e < 1 and 0 < a < inf:
-            self.ui.orbit_type_ae.setText("Ellipse")
-            self.ui.Error_parabola.setText("")
-        elif e > 1 and 0 < a < inf:
-            self.ui.orbit_type_ae.setText("Hyperbola")
-            self.ui.Error_parabola.setText("")
-        elif (e == 0 or e < 1 or e > 1) and (at == "infinite" or "inf" or "Infinite" or "Inf" or 'infinity' or 'Infinity'):
-            self.ui.orbit_type_ae.setText("")
-            self.ui.Error_parabola.setText("Please enter a finite Semimajor axis value")
-            self.ui.Error_parabola.setStyleSheet(u"color:red;")
-        
-            
-        
-    # vpco home_btn_2
-    def homebtn2(self):
-        self.ui.Orbit_type_stack.setCurrentIndex(0)
-        self.ui.Error_parabola.setText("")
     
+
 #########################################################################################################################
+  
 
     # COE n AOE Calculation
     
@@ -875,10 +797,10 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(2500, lambda: self.ui.app_description_lbl.setText("<strong>Pulling</strong> Resources"))
         QtCore.QTimer.singleShot(3500, lambda: self.ui.app_description_lbl.setText("<strong>Arranging</strong> User Interface "))
         QtCore.QTimer.singleShot(4700, lambda: self.ui.app_description_lbl.setText("Ready to <strong>Takeoff</strong> "))
-        QtCore.QTimer.singleShot(6000, lambda: self.ui.app_description_lbl.setText("3"))
-        QtCore.QTimer.singleShot(7600, lambda: self.ui.app_description_lbl.setText("2"))
-        QtCore.QTimer.singleShot(8200, lambda: self.ui.app_description_lbl.setText("1"))
-        QtCore.QTimer.singleShot(9600, lambda: self.ui.app_description_lbl.setText("<strong>Lift</strong> Off"))
+        QtCore.QTimer.singleShot(5000, lambda: self.ui.app_description_lbl.setText("3"))
+        QtCore.QTimer.singleShot(5600, lambda: self.ui.app_description_lbl.setText("2"))
+        QtCore.QTimer.singleShot(6200, lambda: self.ui.app_description_lbl.setText("1"))
+        QtCore.QTimer.singleShot(6800, lambda: self.ui.app_description_lbl.setText("<strong>Lift</strong> Off"))
 
         # Fun Facts
         
@@ -916,7 +838,7 @@ class SplashScreen(QMainWindow):
         self.ui.progressBar.setValue(counter)
 
         # CLOSE SPLASH SCREE AND OPEN APP
-        if counter > 100:
+        if counter > 300:
             # STOP TIMER
             self.timer.stop()
 

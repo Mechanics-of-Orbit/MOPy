@@ -2,11 +2,14 @@
 ## ==> GUI FILE
 import Home_Page_main
 from Home_Page_main import *
-
+from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
+from Functions.Sections.DB.call_database import *
+from math import *
 
 ## ==> GLOBALS
 
 GLOBAL_STATE = 0
+G = 6.67e-20
 
 class UIFunctions(MainWindow):
 
@@ -99,7 +102,9 @@ class UIFunctions(MainWindow):
 
         self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
 
-        self.ui.VPCO_Submit_button.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 300, 'true'))
+        self.ui.VPCO_Submit_button.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 400, 'true'))
+
+        
 
         self.ui.PE_Cal_Btn.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 200, "true"))
 
@@ -125,6 +130,6 @@ class UIFunctions(MainWindow):
         return GLOBAL_STATE
     
 
-
     
+        
             
