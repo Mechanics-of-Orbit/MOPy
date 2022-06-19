@@ -32,7 +32,7 @@ from Functions.Sections.DB.call_database import *
 from UI_Functions.Home_Page import Ui_MainWindow
 from UI_Functions.Home_Page_functions import *
 from Hover_Slide_animation_functn import *
-
+# from Functions.Sections.PE import PECalculation
 
 
 
@@ -68,8 +68,8 @@ class MainWindow(QMainWindow):
         self.move(center.x() - (self.width() * 0.5), center.y() - (self.height() * 0.5)) 
 
 
-        self.ui.Semi_dial.setNotchesVisible(1)
-        self.ui.ecce_dial.setNotchesVisible(1)
+        # self.ui.Semi_dial.setNotchesVisible(1)
+        # self.ui.ecce_dial.setNotchesVisible(1)
 
 
         self.ui.Orbtl_tranf_Out_frame.hide()
@@ -77,6 +77,14 @@ class MainWindow(QMainWindow):
         self.ui.Plot_frame_for_Orbital_transfer.hide()
         
         self.ui.Bottom_slider_VPCO_Output.hide()
+        self.ui.Error_Frame.hide()
+        self.ui.Julian_Day_Frame.hide()
+        self.ui.Mass_of_other_planet_SOI.hide()
+        self.ui.dist_from_sun_of_other_planet_SOI.hide()
+        self.ui.Body_mass_coe_n_aoe_edit.hide()
+        self.ui.Body_radius_coe_n_aoe_edit.hide()
+        self.ui.CoOE_output_frame.hide()
+        
         
         
         # Assigning hover signal to the squares in the home screen
@@ -325,8 +333,6 @@ class MainWindow(QMainWindow):
 
 
 
-    
-
     def Sliding_animation(self, maxHeight, enable):
         if enable and maxHeight == 400:
             self.ui.a_and_e_graph_VPCO.setCurrentIndex(0)
@@ -401,17 +407,17 @@ class MainWindow(QMainWindow):
          
                 self.ui.Bottom_slider_VPCO_Output.show()
 
-
-                
             
         elif enable and maxHeight == 522:
+
+            # ACOE = PECalculation()
+            
     
             # GET WIDTH
             width = self.ui.Plot_frame_for_Orbital_transfer.width()
             maxExtend = maxHeight
             standard = 0
-            
-            
+        
 
             # SET MAX WIDTH
             if width == 0:
@@ -476,6 +482,31 @@ class MainWindow(QMainWindow):
   
 
     # COE n AOE Calculation
+
+    def coeNaoe_combo_box(self):
+        Major_Body = self.ui.maj_body_CoOE.currentText()
+        Major_Body = Major_Body.strip()
+        self.ui.Planet_name_display_COEnAOE.setText(Major_Body)
+
+        if Major_Body != 'Other':
+            major_body_mass = planet_data(Major_Body, 'Mass')
+            major_body_mass = major_body_mass[0]
+            [mu, major_body_radius] = Calculate.muvalue(self,Major_Body)
+            self.ui.Body_mass_coe_n_aoe.setText(str(major_body_mass))
+            self.ui.Body_radius_coe_n_aoe.setText(str(major_body_radius[0]))
+            self.ui.Body_mass_coe_n_aoe_edit.hide()
+            self.ui.Body_radius_coe_n_aoe_edit.hide()
+            self.ui.Body_mass_coe_n_aoe.show()
+            self.ui.Body_radius_coe_n_aoe.show()
+        
+        elif Major_Body == 'Other':
+            self.ui.Body_mass_coe_n_aoe_edit.show()
+            self.ui.Body_radius_coe_n_aoe_edit.show()
+            self.ui.Body_mass_coe_n_aoe.hide()
+            self.ui.Body_radius_coe_n_aoe.hide()
+
+
+    
     
     def coeNaoe(self):
         Ri = self.ui.Ri_coe_n_aoe.text()
@@ -488,14 +519,18 @@ class MainWindow(QMainWindow):
         vel_vec = [float(Vi), float(Vj) ,float(Vk)] 
         Major_Body = self.ui.maj_body_CoOE.currentText()
         Major_Body = Major_Body.strip()
+        self.ui.CoOE_output_frame.show()
+        
 
         if Major_Body != 'Other':
-            self.ui.otherbody_stack.setCurrentIndex(0)
+            major_body_mass = planet_data(Major_Body, 'Mass')
+            major_body_mass = major_body_mass[0]
             [mu, major_body_radius] = Calculate.muvalue(self,Major_Body)
+            
         
         elif Major_Body == 'Other':
-            self.ui.otherbody_stack.setCurrentIndex(1)
-            Body_mass = self.ui.other_body_mass_coe_n_aoe.text()
+    
+            Body_mass = self.ui.Body_mass_coe_n_aoe.text()
             try:
                 Body_mass = Body_mass.split('e')
             except:
@@ -508,7 +543,7 @@ class MainWindow(QMainWindow):
                 b2 = int(Body_mass[1])
                 Body_mass = b1 * 10**b2  
             
-            major_body_radius = self.ui.other_body_radius_coe_n_aoe.text()
+            major_body_radius = self.ui.Body_radius_coe_n_aoe.text()
             major_body_radius = float(major_body_radius)
             mu = float(self.G) * float(int(Body_mass))
 
@@ -528,7 +563,7 @@ class MainWindow(QMainWindow):
         
         r_peri = sma*(1-norm(e_vec))
         
-        if r_peri < major_body_radius:
+        if float(r_peri) < float(major_body_radius[0]):
             self.ui.CoOE_output_stack.setCurrentIndex(0)
             self.ui.CoOE_output_lbl_error.setText('Satellite will crash into the planets surface')
         else:
@@ -540,11 +575,11 @@ class MainWindow(QMainWindow):
         self.ui.CoOE_output_para_lbl.setText(quad)
         keys = list(ACOE_values.keys())
         values = list(ACOE_values.values()) 
-        self.ui.RAAN_CoOE_lbl.setText(keys[0])
+        self.ui.RAAN_coe_n_aoe.setText(keys[0])
         self.ui.RAAN_coe_n_aoe.setText(str(round(values[0] * (180/pi), 4)))
-        self.ui.arg_of_per_CoOE_lbl.setText(keys[1])
+        self.ui.arg_of_per_coe_n_aoe.setText(keys[1])
         self.ui.arg_of_per_coe_n_aoe.setText(str(round(values[1] * (180/pi), 4)))
-        self.ui.tru_ano_CoOE_lbl.setText(keys[2])
+        self.ui.tru_ana_coe_n_aoe.setText(keys[2])
         self.ui.tru_ana_coe_n_aoe.setText(str(round(values[2] * (180/pi), 4))) 
 
 #########################################################################################################################        
@@ -552,21 +587,47 @@ class MainWindow(QMainWindow):
     # SOI
     def SEARCH(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        planet_mass = planet_data(planet_name,'Mass')
-        dist_frm_sun = planet_data(planet_name,'Distance_from_sun')
-        self.ui.lbl_mass.setText("Mass of " + str(planet_mass[1])+":")
-        self.ui.soi_mass.setText(str(planet_mass[0]))
-        self.ui.dist_frm_sun.setText(str(dist_frm_sun[0]))
-       
-            
+        if planet_name == '  Other':
+            self.ui.Mass_of_other_planet_SOI.show()
+            self.ui.dist_from_sun_of_other_planet_SOI.show()
+            self.ui.Mass_of_planet_SOI.hide()
+            self.ui.dist_from_sun_SOI.hide()
+            self.ui.Planet_name_display.setText('Other')
+
+        else:
+            self.ui.Mass_of_other_planet_SOI.hide()
+            self.ui.dist_from_sun_of_other_planet_SOI.hide()
+            self.ui.Mass_of_planet_SOI.show()
+            self.ui.dist_from_sun_SOI.show()
+            planet_mass = planet_data(planet_name,'Mass')
+            dist_frm_sun = planet_data(planet_name,'Distance_from_sun')
+            self.ui.Planet_name_display.setText(str(planet_mass[1]))
+            self.ui.Mass_of_planet_SOI.setText(str(planet_mass[0]))
+            self.ui.dist_from_sun_SOI.setText(str(dist_frm_sun[0]))
+        
+        
     def SOI(self):
         planet_name = self.ui.SOI_planet_name.currentText()
-        self.ui.rSOI_of_planet_lbl.setText("Radius of SOI of " + str(planet_name.strip()) + ":")
         Mass_of_Sun = planet_data('Sun','Mass')
-        Minor_body_mass = self.ui.soi_mass.text() 
-        distance_bt_sun_plnt = self.ui.soi_mass.text()
-        rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun[0])**(2/5))
-        self.ui.soi_rad.setText(raund(rSOI,4))
+        if planet_name == '  Other':
+            distance_bt_sun_plnt = self.ui.dist_from_sun_of_other_planet_SOI.text()
+            Minor_body_mass = self.ui.Mass_of_other_planet_SOI.text()
+            rSOI = (float(distance_bt_sun_plnt)*(float(Minor_body_mass)/Mass_of_Sun[0])**(2/5))
+            rSOI_str = str(rSOI)
+            print(rSOI_str)
+            if rSOI_str[0] == '0':
+                self.ui.SOI_unit.setText('m')
+            rSOI = raund(float(rSOI), 2)
+            print(rSOI)
+            self.ui.rSOI_of_planet_lbl.setText(rSOI)
+        else:
+            soi_mass = planet_data(planet_name, 'Mass')
+            dist_from_sun = planet_data(planet_name, 'Distance_from_sun')
+            Minor_body_mass = soi_mass[0] 
+            distance_bt_sun_plnt = dist_from_sun[0]
+            rSOI = (distance_bt_sun_plnt*(float(Minor_body_mass)/Mass_of_Sun[0])**(2/5))
+            rSOI = raund(float(rSOI), 2)
+            self.ui.rSOI_of_planet_lbl.setText(rSOI)
     
        
     # SOI Graph
@@ -593,32 +654,53 @@ class MainWindow(QMainWindow):
 
     # Julian Day Calculation
 
-    def calendar_time(self):
-        selected_date = self.ui.calendarWidget.selectedDate()
+    def calendar_time(self, accuracy_given):
+        if accuracy_given == 2:
+            accuracy = accuracy_given
+            selected_date = self.ui.calendarWidget_PE.selectedDate()
+            selected_time = self.ui.timeEdit_PE.time()
+            calendar = '  Julian Calendar'
+        elif accuracy_given == 'none':
+            accuracy = self.ui.digits_accuracy.value()
+            selected_date = self.ui.calendarWidget.selectedDate()
+            selected_time = self.ui.timeEdit.time()
+            calendar = self.ui.type_of_calendar.currentText()
         year = selected_date.year()
         month = selected_date.month()
         day = selected_date.day()
-        selected_time = self.ui.timeEdit.time()
+
         hour = selected_time.hour()
         minutes = selected_time.minute()
         seconds = selected_time.second()
-        accuracy = self.ui.digits_accuracy.value()
-        calendar = self.ui.type_of_calendar.currentText()
+        
+        JDN = 1
         if calendar == "  Gregorian Calendar":
             self.ui.Error_state.setText("")
             #julian day number from Gregorian calender date
             JDN = int((1461 * (year + 4800 + (month - 14)/12))/4) + int((367 * month - 2 - 12 * ((month - 14)/12))/12) - int((3 * ((year + 4900 + (month - 14)/12)/100))/4) + day - 32075
+            self.ui.Julian_Day_Frame.show()
+            self.ui.Error_Frame.hide()
         elif calendar == "  Julian Calendar":
-            self.ui.Error_state.setText("")
-            #julian day number from julian calender date
-            JDN = 367 * year - int((7 * (year + 5001 + (month - 9)/7))/4) + int((275 * month)/9) + day + 1729777
+            if accuracy_given == 2:
+                JDN = 367 * year - int((7 * (year + 5001 + (month - 9)/7))/4) + int((275 * month)/9) + day + 1729777
+            elif accuracy_given == 'none':
+                self.ui.Error_state.setText("")
+                #julian day number from julian calender date
+                JDN = 367 * year - int((7 * (year + 5001 + (month - 9)/7))/4) + int((275 * month)/9) + day + 1729777
+                self.ui.Julian_Day_Frame.show()
+                self.ui.Error_Frame.hide()
         elif calendar == "  Select the Type Of Calendar":
             self.ui.Error_state.setText("Please select the type of calendar")
+            self.ui.Error_Frame.show()
+            self.ui.Julian_Day_Frame.hide()
                 
         #JDN to JD
         JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
         
-        self.ui.JulianDay_Result.setText(str(round(JD, accuracy)))
+        if accuracy_given == 2:
+            return JD
+        elif accuracy_given == 'none':
+            self.ui.JulianDay_Result.setText(str(round(JD, accuracy)))
 
 #########################################################################################################################
                                              ##---->>((( New VPCO )))<<----##

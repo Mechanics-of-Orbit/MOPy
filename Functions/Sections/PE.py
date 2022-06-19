@@ -2,12 +2,6 @@ import numpy as np
 from KepECCANewtMeth import keplerECCA
 from DB.call_database import call
 
-
-print("testing")
-# LoPeri ¼ longitude of perihelion ( ¼ RA + w) (deg)
-# ML ¼ mean longitude ( ¼ w_hat + M) (deg)
-# MA ¼ mean anomaly (deg)
-# ECCA ¼ eccentric anomaly (deg)
  
 def PECalculation(JDN, elements_0, rates, SunMass):
     T_0 = (JDN-2451545)/36525

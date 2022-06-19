@@ -78,7 +78,7 @@ class UIFunctions(MainWindow):
         ##########=>>>self.ui.Go_btn.clicked.connect(lambda: Home_Page_main.MainWindow.search(self))
 
         # When Calculate_but for Julian Day is clicked 
-        self.ui.calculate_btn.clicked.connect(lambda: Home_Page_main.MainWindow.calendar_time(self))
+        self.ui.calculate_btn.clicked.connect(lambda: Home_Page_main.MainWindow.calendar_time(self, 'none'))
 
         # When Home_btn is clicked
         self.ui.Home_btn.clicked.connect(lambda: Home_Page_main.MainWindow.meth_Home_btn(self))
@@ -98,7 +98,7 @@ class UIFunctions(MainWindow):
         #self.ui.go_btn_inpt_ae.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_ae_cal_btn(self))
 
 
-        self.ui.maj_body_CoOE.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
+        self.ui.maj_body_CoOE.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.coeNaoe_combo_box(self))
 
         self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
 
@@ -112,17 +112,17 @@ class UIFunctions(MainWindow):
 
         self.ui.Orbital_Transfer_plot_button.clicked.connect(lambda:Home_Page_main.MainWindow.trial(self))
 
-        self.ui.ecce_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_dial_changed(self))
+        # self.ui.ecce_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_dial_changed(self))
 
         #self.ui.btn_go_back.clicked.connect(lambda :Home_Page_main.MainWindow.Sliding_animation(self,0,'true'))
 
-        self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_dial_changed(self))
+        # self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_dial_changed(self))
 
-        self.ui.semi_major_axis_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_slider_single_step(self))
+        # self.ui.semi_major_axis_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_slider_single_step(self))
 
-        self.ui.eccentricity_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_slider_single_step(self))
+        # self.ui.eccentricity_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_slider_single_step(self))
 
-        self.ui.type_of_input_toggle.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.toggle_option_index(self))
+        # self.ui.type_of_input_toggle.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.toggle_option_index(self))
 
         
 

@@ -16,11 +16,55 @@ def planet_data(major_body,major_body_data):
     out_data = cursor.fetchall()[Major_Body][Major_Body_Data]
     return[out_data,major_body]
 
+def planetary_ephemeris(major_body, major_body_data):
+    major_body = str(major_body).strip()
+    major_body_data = str(major_body_data).strip()
+    cursor.execute('SELECT * FROM PlanetaryEphemeris')
+    Celestial_Bodies = {"Mercury":0, "Venus":1, "Earth":2, "Mars":3, "Jupiter":4, "Saturn":5, "Uranus":6, "Neptune":7, "Pluto":8, "Sun":10}
+    Celestial_Bodies_features = {'SemimajorAxis':1,'SemimajorAxis_rate_per_century':2,'Eccentricity':3,'Eccentricity_rate_per_century':4,'Inclination':5,'Inclination_rate_per_century':6,'RAAN':7,'RAAN_rate_per_century':8,'Omega':9,'Omega_rate_per_century':10,'Nu':11,'Nu_rate_per_century':12}
+    Major_Body = Celestial_Bodies[major_body]
+    Major_Body_Data = Celestial_Bodies_features[major_body_data]
+    out_data = cursor.fetchall()[Major_Body][Major_Body_Data]
+    return[out_data, major_body]
+
+
 def raund(f, n):
-    rSOI = str(f).split('e')
-    rSOI1 = str(round(float(rSOI[0]),n))
-    rSOI = rSOI1 + 'e' + str(rSOI[1])
-    return rSOI
+    num = f
+    num = str(num)
+    num = num.split('.')
+    num_0 = num[0]
+    num_0_len = len(num_0)
+    num_1 = num[1]
+    if num_0_len > 3:
+        num = round(f, n)
+        if num_0[3] == '0' and num_0[4] == '0':
+            num = num_0[0:3] + 'e' + '+' + str(num_0_len - 3)
+        elif num_0[3] == '0' and num_0[4] != '0':
+            num = num_0[0:3] + '.' + num_0[3:5] + 'e' + '+' + str(num_0_len - 3)
+        elif num_0[3] != '0' and num_0[4] == '0':
+            num = num_0[0:3] + '.' + num_0[3] + 'e' + '+' + str(num_0_len - 3)
+        else:
+            num = num_0[0:3] + '.' + num_0[3:5] + 'e' + '+' + str(num_0_len - 3)
+    elif num_0_len == 1:
+        if num_1[0] == '0' and num_1[1] == '0' and num_1[2] == '0':
+            num = num_1[2] + '.' + num_1[3] + num_1[4]
+        elif num_1[0] == '0' and num_1[1] != '0' and num_1[2] == '0':
+            num = num_1[1] + num_1[2] + '.' + num_1[3] + num_1[4]
+        elif num_1[0] == '0' and num_1[1] == '0' and num_1[2] != '0':
+            num = num_1[2] + '.' + num_1[3] + num_1[4]
+        elif num_1[0] != '0' and num_1[1] == '0' and num_1[2] == '0':
+            num = num_1[0] + num_1[1] + num_1[2] + '.' + num_1[3] + num_1[4]
+        elif num_1[0] != '0' and num_1[1] != '0' and num_1[2] == '0':
+            num = num_1[0] + num_1[1] + num_1[2] + '.' + num_1[3] + num_1[4]
+        elif num_1[0] != '0' and num_1[1] == '0' and num_1[2] != '0':
+            num = num_1[0] + num_1[1] + num_1[2] + '.' + num_1[3] + num_1[4]
+        elif num_1[0] != '0' and num_1[1] != '0' and num_1[2] != '0':
+            num = num_1[0] + num_1[1] + num_1[2] + '.' + num_1[3] + num_1[4]
+    else:
+        num = round(f, n)
+        num = str(num)
+        num = num[0] +'.' + num[1]
+    return num
 
 
 
