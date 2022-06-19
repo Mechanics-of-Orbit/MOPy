@@ -1,6 +1,6 @@
 import numpy as np
 from KepECCANewtMeth import keplerECCA
-from DB.call_database import call
+
 
  
 def PECalculation(JDN, elements_0, rates, SunMass):
@@ -38,6 +38,7 @@ def zeroTo360(x):
         return x
 
 if __name__ == '__main__':
+    from DB.call_database import call
     print("Testing")
     sma_0 = call.planetary_ephimeris("Earth","aAU")[0]
     ecc_0 = call.planetary_ephimeris("Earth","e")[0]
