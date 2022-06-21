@@ -496,7 +496,7 @@ border-radius:8px;
 </string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>7</number>
             </property>
             <widget class="QWidget" name="Home_Page_Screen">
              <property name="styleSheet">
@@ -2180,6 +2180,11 @@ background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132,
 QComboBox:hover{
 	border: 1px solid rgba(168, 128, 243, 60%);
 }
+
+QFrame{
+	background-color:#04ae92;
+	border:2px solid white;
+}
 </string>
                          </property>
                          <item>
@@ -2371,7 +2376,7 @@ background: rgb(78, 79, 132);
                            <rect>
                             <x>0</x>
                             <y>0</y>
-                            <width>364</width>
+                            <width>355</width>
                             <height>454</height>
                            </rect>
                           </property>
@@ -2455,12 +2460,23 @@ QCalendarWidget QToolButton{
 QCalendarWidget QAbstractItemView
 {
 background-color: rgb(192,192,192); 
-
-
-
-
 border:2px solid black;
 border-radius:4px;
+}
+
+QSpinBox{
+	background-color:white;
+	width:54px;
+	
+}
+
+
+QWidget{
+		
+		border:2px solid white;
+		color:#04ae92;
+		
+
 }</string>
                                 </property>
                                </widget>
@@ -4407,7 +4423,7 @@ QPushButton:hover{
 
 QFrame{
 	
-	background-color:#ef7464;
+	background-color:#f4717f;
 	border:2px solid white;
 	
 
@@ -4555,8 +4571,9 @@ border-radius:8px;</string>
                                 </size>
                                </property>
                                <property name="styleSheet">
-                                <string notr="true">background-color: white;
-border-radius:8px;</string>
+                                <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                </property>
                                <property name="frameShape">
                                 <enum>QFrame::StyledPanel</enum>
@@ -4569,16 +4586,28 @@ border-radius:8px;</string>
                                  <number>6</number>
                                 </property>
                                 <property name="topMargin">
-                                 <number>6</number>
+                                 <number>0</number>
                                 </property>
                                 <property name="rightMargin">
                                  <number>6</number>
                                 </property>
                                 <property name="bottomMargin">
-                                 <number>6</number>
+                                 <number>0</number>
                                 </property>
                                 <item>
                                  <widget class="QLabel" name="rSOI_of_planet_lbl">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>84</width>
+                                    <height>23</height>
+                                   </size>
+                                  </property>
+                                  <property name="maximumSize">
+                                   <size>
+                                    <width>16777215</width>
+                                    <height>23</height>
+                                   </size>
+                                  </property>
                                   <property name="styleSheet">
                                    <string notr="true">QLabel{
 	
@@ -4629,7 +4658,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:13px;
@@ -5163,14 +5192,14 @@ border:none;</string>
                                                <widget class="QLineEdit" name="VPCO_Input_a_lineedit">
                                                 <property name="minimumSize">
                                                  <size>
-                                                  <width>130</width>
-                                                  <height>32</height>
+                                                  <width>100</width>
+                                                  <height>30</height>
                                                  </size>
                                                 </property>
                                                 <property name="maximumSize">
                                                  <size>
-                                                  <width>130</width>
-                                                  <height>32</height>
+                                                  <width>100</width>
+                                                  <height>30</height>
                                                  </size>
                                                 </property>
                                                 <property name="layoutDirection">
@@ -5414,14 +5443,14 @@ border:none;</string>
                                                <widget class="QLineEdit" name="VPCO_Input_e_lineedit">
                                                 <property name="minimumSize">
                                                  <size>
-                                                  <width>130</width>
-                                                  <height>32</height>
+                                                  <width>100</width>
+                                                  <height>30</height>
                                                  </size>
                                                 </property>
                                                 <property name="maximumSize">
                                                  <size>
-                                                  <width>130</width>
-                                                  <height>32</height>
+                                                  <width>100</width>
+                                                  <height>30</height>
                                                  </size>
                                                 </property>
                                                 <property name="layoutDirection">
@@ -5576,20 +5605,20 @@ background:none;</string>
                                          <widget class="QComboBox" name="Maj_Body__Drop_VPCO">
                                           <property name="minimumSize">
                                            <size>
-                                            <width>300</width>
-                                            <height>50</height>
+                                            <width>250</width>
+                                            <height>40</height>
                                            </size>
                                           </property>
                                           <property name="maximumSize">
                                            <size>
-                                            <width>350</width>
-                                            <height>50</height>
+                                            <width>250</width>
+                                            <height>40</height>
                                            </size>
                                           </property>
                                           <property name="styleSheet">
                                            <string notr="true">QComboBox{
 	border:2px solid white;
-	border-radius:12px;
+	border-radius:15px;
 	color:#fff;
 	background-color: #ef7464;
 	font-size:16px;
@@ -5599,9 +5628,178 @@ background:none;</string>
 
 
 QComboBox:hover{
-	border: 2px solid #ef7464;
+	border: 2px solid #ef7464 ;
+	border-radius:15px;
 }
 
+QFrame{
+	background-color:#ef7464;
+	border:2px solid white;
+	border-radius:15px;
+}
+
+QWidget{
+	border-radius:15px;
+}
+
+/*QSrollArea{
+background-color:#4e4f84;}*/
+
+/*Vertical Scrollbar*/
+QScrollBar:vertical{
+border:none;
+background-color:white;
+width:10px;
+margin: 15px 2px 15px 0;
+border-radius:0px;
+}
+
+/* Handle Bar Vertical */
+QScrollBar::handle:vertical{
+background-color: white;
+min-height: 30px;
+border-radius: 4px;
+}
+
+QScrollBar::handle:vetical:hover{
+background-color: white;
+	
+}
+
+QScrollBar::handle:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN TOP - Scrollbar*/
+QScrollBar::sub-line:vertical{
+border:none;
+background-color: none;
+height:15px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::sub-line:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - Scrollbar*/
+QScrollBar::add-line:vertical{
+border:none;
+background-color:none;
+height:15px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::add-line:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW*/
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+background:none;
+}
+
+QScrollBar:vertical{
+border:none;
+background: transparent;
+}
+
+
+
+/*Horizontal Scrollbar*/
+QScrollBar:horizontal{
+border:none;
+background-color:rgb(59, 59, 90);
+width:8px;
+margin: 15px 0 15px 0;
+border-radius:0px;
+}
+
+/* Handle Bar Horizontal */
+QScrollBar::handle:horizontal{
+background-color: rgb(80, 80, 122);
+min-height: 30px;
+border-radius: 4px;
+}
+
+QScrollBar::handle:horizontal:hover{
+background-color: rgb(108, 87, 134);
+	
+}
+
+QScrollBar::handle:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN TOP - Scrollbar*/
+QScrollBar::sub-line:horizontal{
+border:none;
+background-color: rgb(59, 59, 90);
+height:15px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::sub-line:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - Scrollbar*/
+QScrollBar::add-line:horizontal{
+border:none;
+background-color: rgb(59, 59, 90);
+height:15px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:horizontal:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::add-line:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW*/
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal{
+background: none;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
+background:none;
+}
+
+QScrollBar:horizontal{
+border:none;
+background: rgb(78, 79, 132);
+}
 
 </string>
                                           </property>
@@ -5694,13 +5892,13 @@ QComboBox:hover{
                                        <property name="minimumSize">
                                         <size>
                                          <width>125</width>
-                                         <height>50</height>
+                                         <height>40</height>
                                         </size>
                                        </property>
                                        <property name="maximumSize">
                                         <size>
                                          <width>150</width>
-                                         <height>80</height>
+                                         <height>40</height>
                                         </size>
                                        </property>
                                        <property name="styleSheet">
@@ -6829,7 +7027,7 @@ border:none;</string>
                           <property name="styleSheet">
                            <string notr="true">QFrame{
 	
-	background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132, 255), stop:1 rgba(161, 161, 161, 255));
+	background-color: #f4717f;
 	
 
 }</string>
@@ -6871,14 +7069,14 @@ background-color:#4e4f84;}*/
 /*Vertical Scrollbar*/
 QScrollBar:vertical{
 border:none;
-background-color:rgb(59, 59, 90);
+background-color:white;
 width:8px;
 margin: 12px 0 12px 0;
 }
 
 /* Handle Bar Vertical */
 QScrollBar::handle:vertical{
-background-color: rgb(80, 80, 122);
+background-color: white;
 max-height: 1px;
 border-radius: 4px;
 }
@@ -7096,8 +7294,11 @@ background: rgb(78, 79, 132);
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">QFrame{
+	background-color: white;
+	border-radius:8px;}
+
+</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -7138,10 +7339,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -7161,8 +7362,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_65">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -7175,16 +7377,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Radius_of_Peri_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -7303,7 +7517,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -7345,10 +7559,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -7368,8 +7582,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_67">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -7382,16 +7597,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Velocity_at_Periapis_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -7523,7 +7750,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -7565,10 +7792,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -7588,8 +7815,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_83">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -7602,16 +7830,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Semi_latus_Rectum_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -7730,7 +7970,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -7772,10 +8012,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -7795,8 +8035,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_87">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -7809,16 +8050,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Time_Period_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -7950,7 +8203,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -7992,10 +8245,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -8015,8 +8268,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_69">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -8029,16 +8283,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Vel_at_Semi_latus_re_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -8157,7 +8423,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -8199,10 +8465,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -8222,8 +8488,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_79">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -8236,16 +8503,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Esc_Velocity_at_Periapsis_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -8364,7 +8643,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -8406,10 +8685,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -8429,8 +8708,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_73">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -8443,16 +8723,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Esc_Velocity_at_Apoapsis_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -8576,7 +8868,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -8618,10 +8910,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -8641,8 +8933,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_71">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -8655,16 +8948,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Radius_of_Apo_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -8789,7 +9094,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -8831,10 +9136,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -8854,8 +9159,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_75">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -8868,16 +9174,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Sp_Mech_Energy_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -8996,7 +9314,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -9038,10 +9356,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -9067,8 +9385,9 @@ border-radius:8px;</string>
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -9084,26 +9403,26 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Sp_Angular_Mome_Label">
                                          <property name="minimumSize">
                                           <size>
-                                           <width>85</width>
-                                           <height>0</height>
+                                           <width>0</width>
+                                           <height>23</height>
                                           </size>
                                          </property>
                                          <property name="maximumSize">
                                           <size>
-                                           <width>85</width>
-                                           <height>16777215</height>
+                                           <width>80</width>
+                                           <height>23</height>
                                           </size>
                                          </property>
                                          <property name="styleSheet">
@@ -9224,7 +9543,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -9266,10 +9585,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -9289,8 +9608,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_81">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -9303,16 +9623,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Mean_Motion_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -9431,7 +9763,7 @@ QLabel:focus{
                                        </size>
                                       </property>
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
+                                       <string notr="true">background-color: white;
 border-radius:8px;</string>
                                       </property>
                                       <property name="frameShape">
@@ -9473,10 +9805,10 @@ border-radius:8px;</string>
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#fff;
+	color:#04ae92;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
-	font-size:11px;
+	font-size:13px;
 	padding-left:2px;
 	padding-right:2px;
 	
@@ -9496,8 +9828,9 @@ border-radius:8px;</string>
                                     <item>
                                      <widget class="QFrame" name="frame_85">
                                       <property name="styleSheet">
-                                       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(191, 93, 191, 255), stop:1 rgba(221, 161, 255, 255));
-border-radius:8px;</string>
+                                       <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                       </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -9510,16 +9843,28 @@ border-radius:8px;</string>
                                         <number>6</number>
                                        </property>
                                        <property name="topMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
                                         <number>6</number>
                                        </property>
                                        <property name="bottomMargin">
-                                        <number>6</number>
+                                        <number>0</number>
                                        </property>
                                        <item>
                                         <widget class="QLabel" name="VPCO_Velocity_of_Apoapsis_Label">
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777215</width>
+                                           <height>23</height>
+                                          </size>
+                                         </property>
                                          <property name="styleSheet">
                                           <string notr="true">QLabel{
 	
@@ -10543,10 +10888,175 @@ background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132,
                         <number>10</number>
                        </property>
                        <property name="topMargin">
-                        <number>40</number>
+                        <number>10</number>
                        </property>
                        <item>
                         <widget class="QScrollArea" name="scrollArea_5">
+                         <property name="styleSheet">
+                          <string notr="true">/*QSrollArea{
+background-color:#4e4f84;}*/
+
+/*Vertical Scrollbar*/
+QScrollBar:vertical{
+border:none;
+background-color:white;
+width:8px;
+margin: 15px 0 15px 0;
+border-radius:0px;
+}
+
+/* Handle Bar Vertical */
+QScrollBar::handle:vertical{
+background-color: white;
+min-height: 30px;
+border-radius: 4px;
+}
+
+QScrollBar::handle:vetical:hover{
+background-color: white;
+	
+}
+
+QScrollBar::handle:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN TOP - Scrollbar*/
+QScrollBar::sub-line:vertical{
+border:none;
+background-color: none;
+height:15px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::sub-line:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - Scrollbar*/
+QScrollBar::add-line:vertical{
+border:none;
+background-color:none;
+height:15px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::add-line:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW*/
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+background:none;
+}
+
+QScrollBar:vertical{
+border:none;
+background: transparent;
+}
+
+
+
+/*Horizontal Scrollbar*/
+QScrollBar:horizontal{
+border:none;
+background-color:rgb(59, 59, 90);
+width:8px;
+margin: 15px 0 15px 0;
+border-radius:0px;
+}
+
+/* Handle Bar Horizontal */
+QScrollBar::handle:horizontal{
+background-color: rgb(80, 80, 122);
+min-height: 30px;
+border-radius: 4px;
+}
+
+QScrollBar::handle:horizontal:hover{
+background-color: rgb(108, 87, 134);
+	
+}
+
+QScrollBar::handle:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN TOP - Scrollbar*/
+QScrollBar::sub-line:horizontal{
+border:none;
+background-color: rgb(59, 59, 90);
+height:15px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::sub-line:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - Scrollbar*/
+QScrollBar::add-line:horizontal{
+border:none;
+background-color: rgb(59, 59, 90);
+height:15px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:horizontal:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::add-line:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW*/
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal{
+background: none;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
+background:none;
+}
+
+QScrollBar:horizontal{
+border:none;
+background: rgb(78, 79, 132);
+}
+
+QFrame{
+	background-color:#4e4f84;
+}
+</string>
+                         </property>
                          <property name="widgetResizable">
                           <bool>true</bool>
                          </property>
@@ -10554,12 +11064,18 @@ background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132,
                           <property name="geometry">
                            <rect>
                             <x>0</x>
-                            <y>-70</y>
+                            <y>0</y>
                             <width>558</width>
-                            <height>341</height>
+                            <height>453</height>
                            </rect>
                           </property>
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
                           <layout class="QVBoxLayout" name="verticalLayout_23">
+                           <property name="spacing">
+                            <number>20</number>
+                           </property>
                            <item>
                             <widget class="QWidget" name="widget_45" native="true">
                              <property name="minimumSize">
@@ -11601,7 +12117,7 @@ QLineEdit:focus{
 QFrame{
 	background-color:#04ae92;
 	border:2px solid white;
-	border-radius:4px;
+	border-radius:10px;
 }
 
 /*QSrollArea{
@@ -12798,13 +13314,13 @@ border-radius:8px;</string>
                             <widget class="QWidget" name="widget_14" native="true">
                              <property name="minimumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
@@ -12910,8 +13426,22 @@ border-radius:8px;</string>
                               </item>
                               <item>
                                <widget class="QFrame" name="frame_183">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>160</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>160</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
                                 <property name="styleSheet">
-                                 <string notr="true">background:none;</string>
+                                 <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -12939,14 +13469,14 @@ border-radius:8px;</string>
                                   <widget class="QLineEdit" name="inclination_coe_n_aoe">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="maximumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="layoutDirection">
@@ -13036,13 +13566,13 @@ QLineEdit:focus{
                             <widget class="QWidget" name="widget_21" native="true">
                              <property name="minimumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
@@ -13151,8 +13681,16 @@ QLineEdit:focus{
                               </item>
                               <item>
                                <widget class="QFrame" name="frame_185">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>160</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
                                 <property name="styleSheet">
-                                 <string notr="true">background:none;</string>
+                                 <string notr="true">background:none;background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -13180,14 +13718,14 @@ QLineEdit:focus{
                                   <widget class="QLineEdit" name="RAAN_coe_n_aoe">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="maximumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="layoutDirection">
@@ -13277,13 +13815,13 @@ QLineEdit:focus{
                             <widget class="QWidget" name="widget_28" native="true">
                              <property name="minimumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
@@ -13392,8 +13930,16 @@ QLineEdit:focus{
                               </item>
                               <item>
                                <widget class="QFrame" name="frame_187">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>160</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
                                 <property name="styleSheet">
-                                 <string notr="true">background:none;</string>
+                                 <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -13421,14 +13967,14 @@ QLineEdit:focus{
                                   <widget class="QLineEdit" name="arg_of_per_coe_n_aoe">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="maximumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="layoutDirection">
@@ -13518,13 +14064,13 @@ QLineEdit:focus{
                             <widget class="QWidget" name="widget_49" native="true">
                              <property name="minimumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
@@ -13633,8 +14179,16 @@ QLineEdit:focus{
                               </item>
                               <item>
                                <widget class="QFrame" name="frame_189">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>160</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
                                 <property name="styleSheet">
-                                 <string notr="true">background:none;</string>
+                                 <string notr="true">background:none;background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -13662,14 +14216,14 @@ QLineEdit:focus{
                                   <widget class="QLineEdit" name="tru_ana_coe_n_aoe">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="maximumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>32</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="layoutDirection">
@@ -13759,13 +14313,13 @@ QLineEdit:focus{
                             <widget class="QWidget" name="widget_6" native="true">
                              <property name="minimumSize">
                               <size>
-                               <width>370</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>370</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
@@ -13871,8 +14425,16 @@ QLineEdit:focus{
                               </item>
                               <item>
                                <widget class="QFrame" name="frame_158">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>160</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
                                 <property name="styleSheet">
-                                 <string notr="true">background:none;</string>
+                                 <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -13900,14 +14462,14 @@ QLineEdit:focus{
                                   <widget class="QLineEdit" name="semimajor_axis_coe_n_aoe">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="maximumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="layoutDirection">
@@ -13997,13 +14559,13 @@ QLineEdit:focus{
                             <widget class="QWidget" name="widget_7" native="true">
                              <property name="minimumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>380</width>
+                               <width>350</width>
                                <height>40</height>
                               </size>
                              </property>
@@ -14109,8 +14671,16 @@ QLineEdit:focus{
                               </item>
                               <item>
                                <widget class="QFrame" name="frame_179">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>160</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
                                 <property name="styleSheet">
-                                 <string notr="true">background:none;</string>
+                                 <string notr="true">background-color: none;
+border-radius:8px;
+border:2px solid white;</string>
                                 </property>
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
@@ -14138,14 +14708,14 @@ QLineEdit:focus{
                                   <widget class="QLineEdit" name="eccentricity_coe_n_aoe">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="maximumSize">
                                     <size>
-                                     <width>100</width>
-                                     <height>28</height>
+                                     <width>80</width>
+                                     <height>23</height>
                                     </size>
                                    </property>
                                    <property name="layoutDirection">
@@ -18377,6 +18947,174 @@ background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(78, 79, 132,
 QComboBox:hover{
 	border: 2px solid rgba(168, 128, 243, 60%);
 }
+
+
+QFrame{
+	background-color:#c98cff;
+	border:2px solid white;
+	border-radius:15px;
+}
+
+
+/*QSrollArea{
+background-color:#4e4f84;}*/
+
+/*Vertical Scrollbar*/
+QScrollBar:vertical{
+border:none;
+background-color:white;
+width:10px;
+margin: 15px 2px 15px 0;
+border-radius:0px;
+}
+
+/* Handle Bar Vertical */
+QScrollBar::handle:vertical{
+background-color: white;
+min-height: 30px;
+border-radius: 4px;
+}
+
+QScrollBar::handle:vetical:hover{
+background-color: white;
+	
+}
+
+QScrollBar::handle:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN TOP - Scrollbar*/
+QScrollBar::sub-line:vertical{
+border:none;
+background-color: none;
+height:15px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::sub-line:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - Scrollbar*/
+QScrollBar::add-line:vertical{
+border:none;
+background-color:none;
+height:15px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::add-line:vertical:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW*/
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+background:none;
+}
+
+QScrollBar:vertical{
+border:none;
+background: transparent;
+}
+
+
+
+/*Horizontal Scrollbar*/
+QScrollBar:horizontal{
+border:none;
+background-color:rgb(59, 59, 90);
+width:8px;
+margin: 15px 0 15px 0;
+border-radius:0px;
+}
+
+/* Handle Bar Horizontal */
+QScrollBar::handle:horizontal{
+background-color: rgb(80, 80, 122);
+min-height: 30px;
+border-radius: 4px;
+}
+
+QScrollBar::handle:horizontal:hover{
+background-color: rgb(108, 87, 134);
+	
+}
+
+QScrollBar::handle:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN TOP - Scrollbar*/
+QScrollBar::sub-line:horizontal{
+border:none;
+background-color: rgb(59, 59, 90);
+height:15px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::sub-line:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - Scrollbar*/
+QScrollBar::add-line:horizontal{
+border:none;
+background-color: rgb(59, 59, 90);
+height:15px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:horizontal:hover{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::add-line:horizontal:pressed{
+background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW*/
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal{
+background: none;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
+background:none;
+}
+
+QScrollBar:horizontal{
+border:none;
+background: rgb(78, 79, 132);
+}
+
 </string>
                             </property>
                             <item>
@@ -19318,7 +20056,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_111">
                            <property name="styleSheet">
-                            <string notr="true">background-color:  white;
+                            <string notr="true">background-color: none;
 border-radius:8px;</string>
                            </property>
                            <property name="frameShape">
@@ -19401,7 +20139,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:14px;
@@ -19539,7 +20277,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_121">
                            <property name="styleSheet">
-                            <string notr="true">background-color: white;
+                            <string notr="true">background-color: none;
 border-radius:8px;
 </string>
                            </property>
@@ -19623,7 +20361,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:14px;
@@ -19762,7 +20500,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_107">
                            <property name="styleSheet">
-                            <string notr="true">background-color: white;
+                            <string notr="true">background-color: none;
 border-radius:8px;</string>
                            </property>
                            <property name="frameShape">
@@ -19845,7 +20583,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:14px;
@@ -19986,7 +20724,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_101">
                            <property name="styleSheet">
-                            <string notr="true">background-color:  white;
+                            <string notr="true">background-color: none;
 border-radius:8px;</string>
                            </property>
                            <property name="frameShape">
@@ -20202,7 +20940,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_123">
                            <property name="styleSheet">
-                            <string notr="true">background-color:  white;
+                            <string notr="true">background-color: none;
 border-radius:8px;</string>
                            </property>
                            <property name="frameShape">
@@ -20285,7 +21023,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:14px;
@@ -20418,7 +21156,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_105">
                            <property name="styleSheet">
-                            <string notr="true">background-color:  white;
+                            <string notr="true">background-color: none;
 border-radius:8px;</string>
                            </property>
                            <property name="frameShape">
@@ -20501,7 +21239,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:14px;
@@ -20639,7 +21377,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_115">
                            <property name="styleSheet">
-                            <string notr="true">background-color:  white;
+                            <string notr="true">background-color: none;
 border-radius:8px;</string>
                            </property>
                            <property name="frameShape">
@@ -20722,7 +21460,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:14px;
@@ -20855,7 +21593,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_103">
                            <property name="styleSheet">
-                            <string notr="true">background-color:  white;
+                            <string notr="true">background-color: none;
 border-radius:8px;</string>
                            </property>
                            <property name="frameShape">
@@ -20935,7 +21673,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:14px;
@@ -21068,7 +21806,7 @@ border-radius:8px;</string>
                          <item>
                           <widget class="QFrame" name="frame_109">
                            <property name="styleSheet">
-                            <string notr="true">background-color:  white;
+                            <string notr="true">background-color: none;
 border-radius:8px;</string>
                            </property>
                            <property name="frameShape">
@@ -21157,7 +21895,7 @@ QLabel:focus{
 	/*border:2px solid rgb(78, 79, 132);
 	/*border-radius:15px;*/
 	border:none;
-	color:#04ae92;
+	color:white;
 	/*background-color: rgb(94, 96, 159);*/
 	background-color: transparent;
 	font-size:14px;

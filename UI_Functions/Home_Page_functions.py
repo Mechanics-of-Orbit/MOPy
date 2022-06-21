@@ -6,6 +6,7 @@ from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabo
 from Functions.Sections.DB.call_database import *
 from math import *
 
+
 ## ==> GLOBALS
 
 GLOBAL_STATE = 0
