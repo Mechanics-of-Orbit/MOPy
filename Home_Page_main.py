@@ -24,7 +24,7 @@ from matplotlib.figure import Figure
 from jsontrial import fun_fact
 from UI_Functions.Circular_Progress.py_circular_progress import PyCircularProgress
 from UI_Functions.ui_splash_screen import Ui_SplashScreen
-from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
+from Functions.Sections.VPCO import CalculateCircularElliptical
 from Functions.SOI3D import SOI3D
 from Functions.Sections.soi import *
 from Functions.Sections.CoOE import Calculate
@@ -32,7 +32,7 @@ from Functions.Sections.DB.call_database import *
 from UI_Functions.Home_Page import Ui_MainWindow
 from UI_Functions.Home_Page_functions import *
 from Hover_Slide_animation_functn import *
-# from Functions.Sections.PE import PECalculation
+from Functions.Sections.PE import PECalculation
 
 
 
@@ -74,7 +74,7 @@ class MainWindow(QMainWindow):
 
         self.ui.Orbtl_tranf_Out_frame.hide()
         self.ui.Orbtl_tranf_Inp_n_Out_frames_container.hide()
-        self.ui.Plot_frame_for_Orbital_transfer.hide()
+       
         
         self.ui.Bottom_slider_VPCO_Output.hide()
         self.ui.Error_Frame.hide()
@@ -84,6 +84,7 @@ class MainWindow(QMainWindow):
         self.ui.Body_mass_coe_n_aoe_edit.hide()
         self.ui.Body_radius_coe_n_aoe_edit.hide()
         self.ui.CoOE_output_frame.hide()
+        self.ui.Bottom_slider_VPCO_Output_2.hide()
         
         
         
@@ -101,6 +102,9 @@ class MainWindow(QMainWindow):
         self.ui.Home_Eulers_Angle.installEventFilter(self)
         self.ui.Home_VPCO_Label.installEventFilter(self)
         self.ui.Hohmn_transf_label.installEventFilter(self)
+        self.ui.Hohmann_transfer_OV.installEventFilter(self)
+        self.ui.Bi_Elliptical_Hohm_transfer_OV.installEventFilter(self)
+        self.ui.Phasing_Maneuver_OV.installEventFilter(self)
 
         
 ###################################_______Plotting Graphs_______#########################################
@@ -137,12 +141,12 @@ class MainWindow(QMainWindow):
 #
 # 2------1
 # ########--------------------------Orbital_Transfer_Graph - Hohmann Transfer-------------------------------##########
-        Orbital_Transfer_Graph_Layout = QtWidgets.QVBoxLayout(self.ui.Plot_Widget_for_Orbital_Transfer)
-        Orbital_Transfer_Static_Canvas = FigureCanvas(Figure(facecolor = "#36375c"))
-        Orbital_Transfer_Graph_Layout.addWidget(NavigationToolbar(Orbital_Transfer_Static_Canvas, self))
-        Orbital_Transfer_Graph_Layout.addWidget(Orbital_Transfer_Static_Canvas)
-        self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Phasing Maneuver")
-        self._static_ax.axis('equal')
+        # Orbital_Transfer_Graph_Layout = QtWidgets.QVBoxLayout(self.ui.Plot_Widget_for_Orbital_Transfer)
+        # Orbital_Transfer_Static_Canvas = FigureCanvas(Figure(facecolor = "#36375c"))
+        # Orbital_Transfer_Graph_Layout.addWidget(NavigationToolbar(Orbital_Transfer_Static_Canvas, self))
+        # Orbital_Transfer_Graph_Layout.addWidget(Orbital_Transfer_Static_Canvas)
+        # self._static_ax = Orbital_Transfer_Static_Canvas.figure.add_subplot(111,facecolor='black',title="Phasing Maneuver")
+        # self._static_ax.axis('equal')
        
         jo = OrbitPlot.phasingManeuver(3.986e5, 6378, 13600, 6800, 0, np.pi/2)
         self._static_ax.plot(jo[0][0], jo[0][1], "r", label = 'Initial Orbit')
@@ -222,10 +226,29 @@ class MainWindow(QMainWindow):
 
     def trial(self):
         self.ui.Orbtl_tranf_Out_frame.show()
-        self.ui.Plot_frame_for_Orbital_transfer.show()
+        
         self.ui.Container_for_Type_of_Orbital_Transfer.hide()
     
     def eventFilter(self, source, event):
+        if (source == self.ui.Hohmann_transfer_OV and event.type() == QEvent.Enter):
+            Animation_Orbital_Transfer_Hohhmann_transfer(self,"long", self.ui.Hohmann_transfer_slider_OV, 124, 246)
+        elif source == self.ui.Hohmann_transfer_OV and event.type() == QEvent.Leave:
+            Animation_Orbital_Transfer_Hohhmann_transfer(self,"long", self.ui.Hohmann_transfer_slider_OV, 124, 124)
+        
+        if (source == self.ui.Hohmann_transfer_OV and event.type() == QtCore.QEvent.MouseButtonPress):
+            self.ui.Stacked_widg_Types_of_Orbital_Transfer.setCurrentIndex(1)
+            self.ui.label_title.setText(" MOPy - Orbital Transfer - Hohmann Transfer ")
+
+        if (source == self.ui.Bi_Elliptical_Hohm_transfer_OV and event.type() == QEvent.Enter):
+            Animation_Orbital_Transfer_Bi_Elliptical_Hohhmann_transfer(self,"long", self.ui.Bi_Elliptical_Hohm_transfer_slider_OV, 124, 246)
+        elif source == self.ui.Bi_Elliptical_Hohm_transfer_OV and event.type() == QEvent.Leave:
+            Animation_Orbital_Transfer_Bi_Elliptical_Hohhmann_transfer(self,"long", self.ui.Bi_Elliptical_Hohm_transfer_slider_OV, 124, 124)
+
+        if (source == self.ui.Phasing_Maneuver_OV and event.type() == QEvent.Enter):
+            Animation_Orbital_Transfer_Phasing_Maneuver(self,"long", self.ui.Phasing_Maneuver_slider_OV, 124, 246)
+        elif source == self.ui.Phasing_Maneuver_OV and event.type() == QEvent.Leave:
+            Animation_Orbital_Transfer_Phasing_Maneuver(self,"long", self.ui.Phasing_Maneuver_slider_OV, 124, 124)
+
         if (source == self.ui.Home_VPCO and event.type() == QEvent.Enter):
             Animation_Home_VPCO(self,"long", self.ui.Home_VPCO_Slider, 91, 182)
         elif source == self.ui.Home_VPCO and event.type() == QEvent.Leave:
@@ -330,9 +353,76 @@ class MainWindow(QMainWindow):
         elif (source == self.ui.Home_Orbital_transfer and event.type() == QtCore.QEvent.MouseButtonPress):
             self.ui.stackedWidget.setCurrentIndex(6)
             self.ui.label_title.setText(" MOPy - Orbital Transfer")
+            
+
+    def back_button_function(self):
+        page = self.ui.stackedWidget.currentIndex()
+        if page == 1:
+            self.ui.stackedWidget.setCurrentIndex(0)
+        elif page == 2:
+            self.ui.stackedWidget.setCurrentIndex(0)
+
+############################################################################################################################
+# VPCO ra and rp
+
+    def VPCO_ra_rp(self):
+        self.ui.Bottom_slider_VPCO_Output_2.show()
+        ra = self.ui.VPCO_Input_ra_lineedit_rarp.text()
+        rp = self.ui.VPCO_Input_rp_lineedit_rarp.text()
+        try:
+            ra =  float(ra)
+            try:
+                
+                rp = float(rp)
+                self.ui.ra_error_label_rarp.setText("")
+                self.ui.rp_error_label_rarp.setText('')
+                self.ui.VPCO_Input_Stack_2.setCurrentIndex(1)
+                self.ui.a_and_e_graph_VPCO_2.setCurrentIndex(1) 
+                self.dummy = 1
+                
+            except:
+                self.ui.rp_error_label_rarp.setText("Please Enter an integer value")
+                self.ui.ra_error_label_rarp.setText("")
+
+        except:
+            try:
+                Eccentricity = float(Eccentricity)
+                self.ui.ra_error_label_rarp.setText("Please Enter an integer value")
+                self.ui.rp_error_label_rarp.setText("")
+            except:
+                self.ui.ra_error_label_rarp.setText("Please Enter an integer value")
+                self.ui.rp_error_label_rarp.setText("Please Enter an integer value")
+        
+
+        if self.dummy == 1:
+                Maj_Body = self.ui.Maj_Body__Drop_VPCO_rarp.currentText()
+                Maj_Body_Mass = planet_data(Maj_Body, "Mass")[0]
+                vpco = CalculateCircularElliptical.perapo(rp, ra, Maj_Body_Mass)
+                
+                self.ui.VPCO_Eccentricity_Label_rarp.setText(str(round(vpco[0], 4)))
+                self.ui.VPCO_Semi_major_axis_Label_rarp.setText(str(round(vpco[1], 4)))
+                self.ui.VPCO_Sp_Mech_Energy_Label_rarp.setText(str(round(vpco[5], 4)))
+                self.ui.VPCO_Time_Period_Label_rarp.setText(str(round(vpco[3], 4)))
+                self.ui.VPCO_Sp_Angular_Mome_Label_rarp.setText(str(round(vpco[4], 4)))
+                self.ui.VPCO_Mean_Motion_Label_rarp.setText(str(round(vpco[2], 4)))
+                self.ui.VPCO_Semi_latus_Rectum_Label_rarp.setText(str(round(vpco[6], 4)))
+
+                Vel_peri = CalculateCircularElliptical.velocity_at_any_point(vpco[1], rp, Maj_Body_Mass)
+                self.ui.VPCO_Velocity_at_Periapis_Label_rarp.setText(str(round(Vel_peri, 4)))
+
+                Vel_apo = CalculateCircularElliptical.velocity_at_any_point(vpco[1], ra, Maj_Body_Mass)
+                self.ui.VPCO_Velocity_of_Apoapsis_Label_rarp.setText(str(round(Vel_apo, 4)))
+
+                Vel_at_Semi_latus_Rectum = CalculateCircularElliptical.velocity_at_any_point(vpco[1], vpco[6], Maj_Body_Mass)
+                self.ui.VPCO_Vel_at_Semi_latus_re_Label_rarp.setText(str(round(Vel_at_Semi_latus_Rectum, 4)))
+
+                self.ui.VPCO_Esc_Velocity_at_Periapsis_Label.setText(str(round(sqrt((2*G*Maj_Body_Mass)/rp), 4)))
+                self.ui.VPCO_Esc_Velocity_at_Apoapsis_Label.setText(str(round(sqrt((2*G*Maj_Body_Mass)/ra), 4)))
+         
+                self.ui.Bottom_slider_VPCO_Output_2.show()
 
 
-
+############################################################################################################################
     def Sliding_animation(self, maxHeight, enable):
         if enable and maxHeight == 400:
             self.ui.a_and_e_graph_VPCO.setCurrentIndex(0)
@@ -362,6 +452,7 @@ class MainWindow(QMainWindow):
                     Eccentricity = float(Eccentricity)
                     
                     self.ui.Semi_maj_ax_err_label.setText("")
+                    self.ui.Eccentricity_err_label.setText("")
                     self.ui.VPCO_Input_Stack.setCurrentIndex(1)
                     self.ui.a_and_e_graph_VPCO.setCurrentIndex(1) 
                     self.dummy = 1
@@ -407,44 +498,7 @@ class MainWindow(QMainWindow):
          
                 self.ui.Bottom_slider_VPCO_Output.show()
 
-            
-        elif enable and maxHeight == 522:
 
-            # ACOE = PECalculation()
-            
-    
-            # GET WIDTH
-            width = self.ui.Plot_frame_for_Orbital_transfer.width()
-            maxExtend = maxHeight
-            standard = 0
-        
-
-            # SET MAX WIDTH
-            if width == 0:
-                widthExtended = maxExtend
-                
-            else:
-                widthExtended = standard
-            
-                
-            # ANIMATION
-            self.animaton_r = QPropertyAnimation(self.ui.Plot_frame_for_Orbital_transfer, b"maximumWidth")
-            self.animaton_r.setDuration(600)
-            self.animaton_r.setStartValue(width)
-            self.animaton_r.setEndValue(widthExtended)
-            self.animaton_r.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
-            
-
-            self.animaton_l = QPropertyAnimation(self.ui.Type_of_Orbital_transfer_frame, b"maximumWidth")
-            self.animaton_l.setDuration(600)
-            self.animaton_l.setStartValue(width)
-            self.animaton_l.setEndValue(0)
-            self.animaton_l.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
-            
-            self.animation_group = QParallelAnimationGroup(self)
-            self.animation_group.addAnimation(self.animaton_r)
-            self.animation_group.addAnimation(self.animaton_l)
-            self.animation_group.start()
 
         elif enable and maxHeight == 200:
     
@@ -476,7 +530,50 @@ class MainWindow(QMainWindow):
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
     
-    
+#########################################################################################################################
+
+    # Planetary Ephemeris
+
+    def Planetary_Ephimeris(self):
+        selected_date = self.ui.calendarWidget_PE.selectedDate()
+        selected_time = self.ui.timeEdit_PE.time()
+        calendar = self.ui.type_of_calendar.currentText()
+       
+        [year, month, day, hours, minutes, seconds] = self.Date_time(selected_date, selected_time)
+
+        JDN = 367 * year - int((7 * (year + 5001 + (month - 9)/7))/4) + int((275 * month)/9) + day + 1729777
+        JD = JDN + round(((hours - 12)/24), 4)  + round((minutes/1440), 4) + round((seconds/86400), 4)
+        planet_name = self.ui.SOI_planet_name_2.currentText()
+        sma_0 = planetary_ephemeris(planet_name,"aAU")[0]  * (1.496e+8)
+        ecc_0 = planetary_ephemeris(planet_name,"e")[0]
+        inc_0 = planetary_ephemeris(planet_name,"iDeg")[0]
+        RAAN_0 = planetary_ephemeris(planet_name,"RAANDeg")[0]
+        omega_0 = planetary_ephemeris(planet_name,"OmegaDeg")[0]
+        nu_0 = planetary_ephemeris(planet_name,"nuDeg")[0]
+        smaDot = planetary_ephemeris(planet_name,"aAU_DotaDotAUCentury-1")[0] * (1.496e+8)
+        eccDot = planetary_ephemeris(planet_name,"eDotCentury-1")[0]
+        incDot = planetary_ephemeris(planet_name,"iDotDegCentury-1")[0]
+        RAANDot = planetary_ephemeris(planet_name,"RAANDotDegCentury-1")[0]
+        omegaDot = planetary_ephemeris(planet_name,"omegaDotDegCentury-1")[0]
+        nuDot = planetary_ephemeris(planet_name,"nuDotDegCentury-1")[0]
+        el_0 = [sma_0, ecc_0, inc_0, RAAN_0, omega_0, nu_0]
+        rates = [smaDot, eccDot, incDot, RAANDot, omegaDot, nuDot]
+        sunMass = planet_data('Sun', 'Mass')[0]
+        ACOE = PECalculation(JD, el_0, rates, sunMass)
+        radius_of_planet = planet_data(planet_name, "Radius")[0]
+        mass_of_planet = planet_data(planet_name, 'Mass')[0]
+        velocity = CalculateCircularElliptical.velocity_at_any_point(ACOE[0], radius_of_planet, mass_of_planet)
+        self.ui.Velocity_PE.setText(str(raund(velocity, 4)))
+        self.ui.Semi_major_axis_PE.setText(str(raund((ACOE)[0], 4)))
+        self.ui.Eccentricity_PE.setText(str(raund((ACOE)[1], 4)))
+        self.ui.Angular_Moment_PE.setText(str(raund((ACOE)[2], 4)))
+        self.ui.Inclination_PE.setText(str(raund((ACOE)[3], 4)))
+        self.ui.RAAN_PE.setText(str(raund((ACOE)[4], 4)))
+        self.ui.Arg_of_Periheion_PE.setText(str(raund((ACOE)[6], 4)))
+        self.ui.Mean_anomaly_PE.setText(str(raund((ACOE)[8], 4)))
+        self.ui.True_anomal_PE.setText(str(raund((ACOE)[10], 4)))
+        
+
 
 #########################################################################################################################
   
@@ -649,58 +746,52 @@ class MainWindow(QMainWindow):
     def meth_Home_btn(self):
         self.ui.stackedWidget.setCurrentIndex(0)
         self.ui.label_title.setText(" MOPy ")
+        self.ui.Stacked_widg_Types_of_Orbital_Transfer.setCurrentIndex(0)
 
 #########################################################################################################################
 
     # Julian Day Calculation
-
-    # def calendar_time(self, accuracy_given):
-    #     if accuracy_given == 2:
-    #         accuracy = accuracy_given
-    #         selected_date = self.ui.calendarWidget_PE.selectedDate()
-    #         selected_time = self.ui.timeEdit_PE.time()
-    #         calendar = '  Julian Calendar'
-    #     elif accuracy_given == 'none':
-    #         accuracy = self.ui.digits_accuracy.value()
-    #         selected_date = self.ui.calendarWidget.selectedDate()
-    #         selected_time = self.ui.timeEdit.time()
-    #         calendar = self.ui.type_of_calendar.currentText()
-    #     year = selected_date.year()
-    #     month = selected_date.month()
-    #     day = selected_date.day()
-
-    #     hour = selected_time.hour()
-    #     minutes = selected_time.minute()
-    #     seconds = selected_time.second()
+    def Date_time(self, selected_date, selected_time):
         
-    #     JDN = 1
-    #     if calendar == "  Gregorian Calendar":
-    #         self.ui.Error_state.setText("")
-    #         #julian day number from Gregorian calender date
-    #         JDN = int((1461 * (year + 4800 + (month - 14)/12))/4) + int((367 * month - 2 - 12 * ((month - 14)/12))/12) - int((3 * ((year + 4900 + (month - 14)/12)/100))/4) + day - 32075
-    #         self.ui.Julian_Day_Frame.show()
-    #         self.ui.Error_Frame.hide()
-    #     elif calendar == "  Julian Calendar":
-    #         if accuracy_given == 2:
-    #             JDN = 367 * year - int((7 * (year + 5001 + (month - 9)/7))/4) + int((275 * month)/9) + day + 1729777
-    #         elif accuracy_given == 'none':
-    #             self.ui.Error_state.setText("")
-    #             #julian day number from julian calender date
-    #             JDN = 367 * year - int((7 * (year + 5001 + (month - 9)/7))/4) + int((275 * month)/9) + day + 1729777
-    #             self.ui.Julian_Day_Frame.show()
-    #             self.ui.Error_Frame.hide()
-    #     elif calendar == "  Select the Type Of Calendar":
-    #         self.ui.Error_state.setText("Please select the type of calendar")
-    #         self.ui.Error_Frame.show()
-    #         self.ui.Julian_Day_Frame.hide()
+        year = selected_date.year()
+        month = selected_date.month()
+        day = selected_date.day()
+
+        hours = selected_time.hour()
+        minutes = selected_time.minute()
+        seconds = selected_time.second()
+        return [year, month, day, hours, minutes, seconds]
+
+    def calendar_time(self):
+        accuracy = self.ui.digits_accuracy.value()
+        selected_date = self.ui.calendarWidget.selectedDate()
+        selected_time = self.ui.timeEdit.time()
+        calendar = self.ui.type_of_calendar.currentText()
+       
+        [year, month, day, hours, minutes, seconds] = self.Date_time(selected_date, selected_time)
+        
+        JDN = 1
+        if calendar == "  Gregorian Calendar":
+            self.ui.Error_state.setText("")
+            #julian day number from Gregorian calender date
+            JDN = int((1461 * (year + 4800 + (month - 14)/12))/4) + int((367 * month - 2 - 12 * ((month - 14)/12))/12) - int((3 * ((year + 4900 + (month - 14)/12)/100))/4) + day - 32075
+            self.ui.Julian_Day_Frame.show()
+            self.ui.Error_Frame.hide()
+        elif calendar == "  Julian Calendar":
+            self.ui.Error_state.setText("")
+            #julian day number from julian calender date
+            JDN = 367 * year - int((7 * (year + 5001 + (month - 9)/7))/4) + int((275 * month)/9) + day + 1729777
+            self.ui.Julian_Day_Frame.show()
+            self.ui.Error_Frame.hide()
+        elif calendar == "  Select the Type Of Calendar":
+            self.ui.Error_state.setText("Please select the type of calendar")
+            self.ui.Error_Frame.show()
+            self.ui.Julian_Day_Frame.hide()
                 
-    #     #JDN to JD
-    #     JD = JDN + round(((hour - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
+        #JDN to JD
+        JD = JDN + round(((hours - 12)/24),accuracy) + round((minutes/1440), accuracy) + round((seconds/86400), accuracy)
         
-    #     if accuracy_given == 2:
-    #         return JD
-    #     elif accuracy_given == 'none':
-    #         self.ui.JulianDay_Result.setText(str(round(JD, accuracy)))
+        self.ui.JulianDay_Result.setText(str(round(JD, accuracy)))
 
 #########################################################################################################################
                                              ##---->>((( New VPCO )))<<----##

@@ -127,6 +127,29 @@ def Animation_Home_Orbital_Transfer(self, longwide, var_name, standard, maxExten
     self.animation_11.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
     self.animation_11.start()
 
-
-
+def Animation_Orbital_Transfer_Hohhmann_transfer(self, longwide, var_name, standard, maxExtent):
+    r12 = toggle_slider(self, longwide, var_name, standard, maxExtent)
+    self.animation_12 = QPropertyAnimation(var_name, b"minimumHeight")
+    self.animation_12.setDuration(200)
+    self.animation_12.setStartValue(r12[2])
+    self.animation_12.setEndValue(r12[3])
+    self.animation_12.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
+    self.animation_12.start()
     
+def Animation_Orbital_Transfer_Bi_Elliptical_Hohhmann_transfer(self, longwide, var_name, standard, maxExtent):
+    r13 = toggle_slider(self, longwide, var_name, standard, maxExtent)
+    self.animation_13 = QPropertyAnimation(var_name, b"minimumHeight")
+    self.animation_13.setDuration(200)
+    self.animation_13.setStartValue(r13[2])
+    self.animation_13.setEndValue(r13[3])
+    self.animation_13.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
+    self.animation_13.start()
+
+def Animation_Orbital_Transfer_Phasing_Maneuver(self, longwide, var_name, standard, maxExtent):
+    r14 = toggle_slider(self, longwide, var_name, standard, maxExtent)
+    self.animation_14 = QPropertyAnimation(var_name, b"minimumHeight")
+    self.animation_14.setDuration(200)
+    self.animation_14.setStartValue(r14[2])
+    self.animation_14.setEndValue(r14[3])
+    self.animation_14.setEasingCurve(QtCore.QEasingCurve.InOutCubic)
+    self.animation_14.start()

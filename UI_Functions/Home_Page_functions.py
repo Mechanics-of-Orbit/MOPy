@@ -7,15 +7,13 @@ from Functions.Sections.DB.call_database import *
 from math import *
 
 
+
 ## ==> GLOBALS
 
 GLOBAL_STATE = 0
 G = 6.67e-20
 
 class UIFunctions(MainWindow):
-
-    
-
 
     ## ==> MAXIMIZE RESTORE FUNCTION
     def maximize_restore(self):
@@ -79,7 +77,7 @@ class UIFunctions(MainWindow):
         ##########=>>>self.ui.Go_btn.clicked.connect(lambda: Home_Page_main.MainWindow.search(self))
 
         # When Calculate_but for Julian Day is clicked 
-        self.ui.calculate_btn.clicked.connect(lambda: Home_Page_main.MainWindow.calendar_time(self, 'none'))
+        self.ui.calculate_btn.clicked.connect(lambda: Home_Page_main.MainWindow.calendar_time(self))
 
         # When Home_btn is clicked
         self.ui.Home_btn.clicked.connect(lambda: Home_Page_main.MainWindow.meth_Home_btn(self))
@@ -89,6 +87,12 @@ class UIFunctions(MainWindow):
         self.ui.soi_cal.clicked.connect(lambda:Home_Page_main.MainWindow.SOI(self))
 
         self.ui.get_3D_soi.clicked.connect(lambda:Home_Page_main.MainWindow.soi_graph(self))
+
+        self.ui.btn_go_back.clicked.connect(lambda:Home_Page_main.MainWindow.back_button_function(self))
+
+        self.ui.PE_Cal_Btn.clicked.connect(lambda:Home_Page_main.MainWindow.Planetary_Ephimeris(self))
+
+        self.ui.VPCO_Submit_button_rarp.clicked.connect(lambda:Home_Page_main.MainWindow.VPCO_ra_rp(self))
 
         #self.ui.input_type_go_btn_vpco.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_go_btn(self))
 

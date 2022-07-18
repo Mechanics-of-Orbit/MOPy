@@ -32,10 +32,10 @@ class CalculateCircularElliptical:
         return [r_per, r_apo, mean_motion, T_period, mag_h, sme, slr]
     
     @classmethod
-    def perapo(cls, r_per, r_apo, major_body):
+    def perapo(cls, r_per, r_apo, major_body_mass):
         sma = (r_per + r_apo)/2
         mag_e = (r_apo - r_per)/(r_apo + r_per)
-        [mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.orb_const(r_per, sma, mag_e, major_body)
+        [mean_motion, T_period, mag_h, sme, slr] = CalculateCircularElliptical.orb_const(r_per, sma, mag_e, major_body_mass)
         return [mag_e, sma, mean_motion, T_period, mag_h, sme, slr]
     
     @classmethod
@@ -64,7 +64,7 @@ class CalculateCircularElliptical:
     def velocity_at_any_point(cls, sma, r, maj_body_mass):
     
         mu = cls.G * maj_body_mass
-        v_point = sqrt(((2 * mu)/r) - (mu/sma))
+        v_point = sqrt(((2 * float(mu))/float(r)) - (float(mu)/float(sma)))
         return v_point
 
 class CalculateParabola():
