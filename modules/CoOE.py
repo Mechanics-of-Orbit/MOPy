@@ -5,7 +5,7 @@ from math import acos
 if __name__ == '__main__':
     from DB.call_database import *
 else:
-    from Functions.Sections.DB.call_database import *
+    from modules.Sections.DB.call_database import *
 
 class Calculate:
     I = [1, 0, 0]

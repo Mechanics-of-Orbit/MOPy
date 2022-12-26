@@ -8,9 +8,9 @@ show-scene-graph-analyzer-meter true
 loadPrcFileData("", confVars)
 
 from direct.showbase.ShowBase import ShowBase
-from Functions.ModelLoader import loadMyModel
-from Functions.Sections.soi import SOICalc
-from Functions.Sections.DB.call_database import *
+from modules.ModelLoader import loadMyModel
+from modules.Sections.soi import SOICalc
+from modules.Sections.DB.call_database import *
 
 class SOI3D(ShowBase):
     def __init__(self, MinorBody):
