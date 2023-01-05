@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect("Functions\Sections\DB\DataTables\MajorBody_data.db")
+conn = sqlite3.connect("modules\DB\DataTables\MajorBody_data.db")
 cursor = conn.cursor()
 
 def planet_data(major_body,major_body_data):
