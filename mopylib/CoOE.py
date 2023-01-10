@@ -1,12 +1,13 @@
 import numpy as np
 import warnings
 import constants.GlobalConstants as GCs
+import constants.planetarydetails as pandet
 
 class OrbitalElements():
     def __init__(self, major_body, position_vector = None, velocity_vector = None, semi_major_axis=None, \
                  eccentricity=0, inclination=0, RAAN=0, argument_of_periapsis=0, true_anomaly=0):
         self.major_body = major_body
-        self.major_body_mass = 5.972e24 #kg #todo: link to database
+        self.major_body_mass = pandet.value(major_body.lower(), 'mass')
         
         self.position_vector = position_vector
         self.velocity_vector = velocity_vector

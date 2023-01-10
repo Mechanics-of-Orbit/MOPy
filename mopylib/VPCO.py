@@ -1,6 +1,6 @@
 import numpy as np
 import constants.GlobalConstants as GCs
-
+import constants.planetarydetails as pandet
 
 class OrbitalValues:
     """The initiate the variables and calculate all the rest of the values related to the orbit based on the input.
@@ -20,7 +20,7 @@ class OrbitalValues:
     """
     def __init__(self, major_body, radius_of_apogee = None, radius_of_perigee = None, semi_major_axis=None, eccentricity=None):
         self.major_body = major_body
-        self.major_body_mass = 1 #todo: link to database
+        self.major_body_mass = pandet.value(major_body.lower(), 'mass') #todo: link to database
         self.radius_of_apogee = radius_of_apogee
         self.radius_of_perigee = radius_of_perigee
         self.semi_major_axis = semi_major_axis
@@ -97,13 +97,13 @@ if __name__ == '__main__':
     import pandas as pd
     # test = OrbitalValues("Earth", radiusOfApogee = 20000, radiusOfPerigee = 10000)
     orbit_1 = OrbitalValues("Earth", semi_major_axis=20000, eccentricity=0.4)
-    # orbit_2 = OrbitalValues("Earth", semi_major_axis=20000, radius_of_apogee=28000)
-    # orbit_3 = OrbitalValues("Earth", semi_major_axis=20000, radius_of_perigee=12000)
-    # orbit_4 = OrbitalValues("Earth", eccentricity=0.4, radius_of_apogee=28000)
-    # orbit_5 = OrbitalValues("Earth", eccentricity=0.4, radius_of_perigee=12000)
-    # orbit_6 = OrbitalValues("Earth", radius_of_perigee=12000, radius_of_apogee=28000)
-    # orbital_values = [orbit_1.caculate_orbital_values(), orbit_2.caculate_orbital_values(), orbit_3.caculate_orbital_values(), orbit_4.caculate_orbital_values(), orbit_5.caculate_orbital_values(), orbit_6.caculate_orbital_values()]
-    orbital_values = [orbit_1.caculate_orbital_values()]
+    orbit_2 = OrbitalValues("Earth", semi_major_axis=20000, radius_of_apogee=28000)
+    orbit_3 = OrbitalValues("Earth", semi_major_axis=20000, radius_of_perigee=12000)
+    orbit_4 = OrbitalValues("Earth", eccentricity=0.4, radius_of_apogee=28000)
+    orbit_5 = OrbitalValues("Earth", eccentricity=0.4, radius_of_perigee=12000)
+    orbit_6 = OrbitalValues("Earth", radius_of_perigee=12000, radius_of_apogee=28000)
+    orbital_values = [orbit_1.caculate_orbital_values(), orbit_2.caculate_orbital_values(), orbit_3.caculate_orbital_values(), orbit_4.caculate_orbital_values(), orbit_5.caculate_orbital_values(), orbit_6.caculate_orbital_values()]
+    # orbital_values = [orbit_1.caculate_orbital_values()]
     orbital_values_df = pd.DataFrame.from_dict(orbital_values)
     pd.set_option('display.max_columns', None)
     # orbital_values_df.head()
