@@ -19,6 +19,7 @@ stars_values_text = """\
     #     "category": "",
     #     "name": "",
     #     "mass": {"value": 1, "units": ["kg"]},
+    #     "color": {"value":"", "units":[]},
     #     "diameter": {"value": 1, "units": ["km"]},
     #     "density": {"value": 1, "units": ["kg/m3", "kg m-3"]},
     #     "acceleration_due_to_gravity": {"value": 1, "units": ["m/s2", "m s-2"]},
@@ -46,6 +47,7 @@ values_dict = {
         "name": "The Sun",
         "mass": {"value": "1.9885e30", "units": ["kg"]},
         "diameter": {"value": "1391400", "units": ["km"]},
+        "color":{"value":'orange', "units":[None]},
         "density": {"value": "1409", "units": ["kg/m3", "kg m-3"]},
         "acceleration_due_to_gravity": {"value": "274", "units": ["m/s2", "m s-2"]},
         "escape_velocity_from_surface": {"value": "617.6", "units": ["km/s", "km s-1"]},
@@ -70,6 +72,7 @@ values_dict = {
         "name": "Earth",
         "mass": {"value": 5.972e24, "units": ["kg"]},
         "diameter": {"value": 12756, "units": ["km"]},
+        "color":{"value":'blue', "units":None},
         "density": {"value": 5514, "units": ["kg/m3", "kg m-3"]},
         "acceleration_due_to_gravity": {"value": 9.81, "units": ["m/s2", "m s-2"]},
         "escape_velocity_from_surface": {"value": 11.12, "units": ["km/s", "km s-1"]},
@@ -103,14 +106,14 @@ def parse_body_data(body, value,return_units=False):
 
 def value(body, value, units='default'):
     if units == 'default':
-        return parse_body_data(body, value, return_units=False)
+        return parse_body_data(body.lower(), value, return_units=False)
     else:
-        if units in parse_body_data(body, value, return_units=True):
-            return parse_body_data(body, value, return_units=False)
+        if units in parse_body_data(body.lower(), value, return_units=True):
+            return parse_body_data(body.lower(), value, return_units=False)
             
 
 def units(body, value):
-    return parse_body_data(body, value, return_units=True)[0]
+    return parse_body_data(body.lower(), value, return_units=True)[0]
     
 
 def convert_units(old_value: float, old_unit: str, new_unit: str) -> float:

@@ -7,7 +7,7 @@ P = peta = 1e15
 T = tera = 1e12
 G = giga = 1e9
 M = mega = 1e6
-K = kilo = 1e3
+K = kilo = k = 1e3
 H = hecto = 1e2
 D = deka = 1e1
 d = deci = 1e-1

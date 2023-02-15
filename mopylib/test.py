@@ -1,25 +1,37 @@
-# import sqlite3
+from pandac.PandaModules import *
 
-# db = sqlite3.connect("Functions/Sections/DB/MajorBody_data.db")
-# cursor = db.cursor()
+# Define the orbital parameters of the satellite
+altitude = 500 # altitude of the satellite in kilometers
+inclination = 30 # inclination of the satellite in degrees
+eccentricity = 0.1 # eccentricity of the satellite
 
-# class call():
-#     def data(Major_Body, data_type):
+# Compute the period of the satellite's orbit
+G = 6.67 * 10**-11 # gravitational constant
+Earth_radius = 6371 # radius of the Earth in kilometers
+Earth_mass = 5.972 * 10**24 # mass of the Earth in kilograms
+period = 2 * np.pi * np.sqrt( (altitude + Earth_radius)**3 / (G * Earth_mass) )
 
-#         title = {'mass':1, 'diameter':2,'density':3, 'acc_due_to_grty':4, 'esc_vel':5, 'rot_perd':6, 'len_of_day':7, 'dist_frm_sun':8, 'perihelion':9, 'apohelion':10, 'orital_period':11, 'orbital_velocity':12, 'orbital_inclination':13, 'orital_eccentricity':14, 'obliquity_to_orbit':15, 'mean_temperature':16, 'number_of_moons':17, 'ring_system':18, 'global_magnetic_field':19, 'radius':20}
+# Create a 3D scene
+scene = NodePath("Scene")
 
-#         key = title[data_type]
-#         print(key)
-#         major_body = str(Major_Body)
-#         major_body = major_body.strip()
-#         print(major_body)
-#         i = cursor.execute('''SELECT * from Planet_Table WHERE Major_Body==?''',[major_body])
-#         print(i)
-        
+# Create a sphere to represent the Earth
+earth = loader.loadModel("earth.bam")
+earth.reparentTo(scene)
+earth.setScale(1.0)
 
-#         return [major_body]
+# Create a model to represent the satellite
+satellite = loader.loadModel("satellite.bam")
+satellite.reparentTo(scene)
 
-# if __name__ == '__main__':
-#     call.data("Earth","radius")
+# Propagate the satellite's orbit around the Earth
+for i in range(0, int(period)):
+    # Compute the satellite's position using its orbital parameters
+    x = altitude * np.cos(i)
+    y = altitude * np.sin(i) * np.cos(inclination)
+    z = altitude * np.sin(i) * np.sin(inclination)
 
-    
+    # Update the satellite's position in the scene
+    satellite.setPos(x, y, z)
+
+    # Update the scene
+    base.graphicsEngine.renderFrame()
