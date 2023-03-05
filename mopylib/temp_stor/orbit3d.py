@@ -111,7 +111,7 @@ if __name__ == "__main__":
     # mMB = 5.9722e24
     # a = OrbitPlot.plotOrbitMPL(3.986e5, rMB, ra, rp, mMB, 0, 2*np.pi)
     # # img = plt.imread("Functions/Assets/Models/hi_res_tex/stars.jpg")
-    # # fig, ax = plt.subplots()
+    # # fig, orbit_ax = plt.subplots()
     # # plt.imshow(img)
     # # plt.plot(a[0],a[1])
     # theta = np.linspace(0, 2*np.pi, 500)
@@ -119,8 +119,8 @@ if __name__ == "__main__":
     # ry = 6378*np.cos(theta)
     
     # # plt.axes('equal')
-    # ax = plt.axes()
-    # ax.set_facecolor("black")
-    # ax.plot(rx, ry, color="white", linewidth=3)
-    # ax.axes('equal\')
+    # orbit_ax = plt.axes()
+    # orbit_ax.set_facecolor("black")
+    # orbit_ax.plot(rx, ry, color="white", linewidth=3)
+    # orbit_ax.axes('equal\')
     # plt.show()

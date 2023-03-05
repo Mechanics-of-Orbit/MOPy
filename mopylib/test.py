@@ -1,37 +1,38 @@
-from pandac.PandaModules import *
+from types import SimpleNamespace  
 
-# Define the orbital parameters of the satellite
-altitude = 500 # altitude of the satellite in kilometers
-inclination = 30 # inclination of the satellite in degrees
-eccentricity = 0.1 # eccentricity of the satellite
+def plot(**orbits):
+    all_orbits = {}
+    orbit_name = {}
+    for i,orbit in enumerate(orbits.items()):
+        print(orbit)
+        all_orbits[f'orbit_{i}'] = orbit[1]
+        orbit_name[f'orbit_{i}'] = orbit[0]      
+        
+    # for key, value in all_orbits.items():
+    #     print(f'{key:10}> {value}')
+    return all_orbits, orbit_name
 
-# Compute the period of the satellite's orbit
-G = 6.67 * 10**-11 # gravitational constant
-Earth_radius = 6371 # radius of the Earth in kilometers
-Earth_mass = 5.972 * 10**24 # mass of the Earth in kilograms
-period = 2 * np.pi * np.sqrt( (altitude + Earth_radius)**3 / (G * Earth_mass) )
 
-# Create a 3D scene
-scene = NodePath("Scene")
+orbitss = {'orbit_1': {
+                'radius_of_apogee': 125, 'radius_of_perigee': 00000, 
+                'semi_major_axis': 00000, 'eccentricity': 00000, 
+                'start_end_angle':[0, 2], 'orbit_resolution':1000
+                },
+           'orbit_2': {
+                'radius_of_apogee': 895, 'radius_of_perigee': 1111, 
+                'semi_major_axis': 13232, 'eccentricity': 1112, 
+                'start_end_angle':[0, 2], 'orbit_resolution':1000
+                }
+           }
 
-# Create a sphere to represent the Earth
-earth = loader.loadModel("earth.bam")
-earth.reparentTo(scene)
-earth.setScale(1.0)
+# orbit_01 = {
+#                 'radius_of_apogee': 125, 'radius_of_perigee': 00000, 
+#                 'semi_major_axis': 00000, 'eccentricity': 00000, 
+#                 'start_end_angle':[0, 2], 'orbit_resolution':1000
+#                 }
 
-# Create a model to represent the satellite
-satellite = loader.loadModel("satellite.bam")
-satellite.reparentTo(scene)
+test_1, test_2 = plot(**orbitss)
 
-# Propagate the satellite's orbit around the Earth
-for i in range(0, int(period)):
-    # Compute the satellite's position using its orbital parameters
-    x = altitude * np.cos(i)
-    y = altitude * np.sin(i) * np.cos(inclination)
-    z = altitude * np.sin(i) * np.sin(inclination)
-
-    # Update the satellite's position in the scene
-    satellite.setPos(x, y, z)
-
-    # Update the scene
-    base.graphicsEngine.renderFrame()
+for orbit_no, orbit in test_1.items():
+    print(orbit.get('radius_of_apogee'))
+    # print(test_1.get('orbit_0', None))

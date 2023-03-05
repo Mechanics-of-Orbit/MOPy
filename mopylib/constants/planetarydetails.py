@@ -163,9 +163,9 @@ def convert_units(old_value: float, old_unit: str, new_unit: str) -> float:
         angle - radians, degrees, rad, deg
         SI Prefix = ['Y', 'Z', 'E', 'P', 'T', 'G', 'M', 'K', 'H', 'D', 'd', 'c', 'm', 'u', 'n', 'p', 'f', 'a', 'z']
         """
-        if unit[0][0] in SIV.SI_PREFIX:
+        if unit[0][0] in SI_PREFIX:
             if unit[1] > 0:
-                units_calculation.append(SIV.SI_PREFIX_VALUES[unit[0][0]])
+                units_calculation.append(SI_PREFIX_VALUES[unit[0][0]])
             elif unit[1] < 0:
                 pass
                 # units_calculation.append(1/(SIV.SI_PREFIX_VALUES[unit[0][0]]))
