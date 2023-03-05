@@ -48,7 +48,7 @@ class OrbitalValues:
         self.radius_of_perigee = radius_of_perigee
         self.semi_major_axis = semi_major_axis
         self.eccentricity = eccentricity
-        self.calculate_rest()
+        self.calculate_values_not_entered()
 
     def calculate_orbital_constants(self):
         self.gravitational_constant = GCs.NEWTON_GRAVITATIONAL_CONSTANT * self.major_body_mass
@@ -61,7 +61,7 @@ class OrbitalValues:
         return self.mean_motion, self.orbital_time_period, self.specific_angular_momentum, \
             self.specific_mechanical_energy, self.semi_latus_rectum
 
-    def calculate_rest(self):
+    def calculate_values_not_entered(self):
         if self.radius_of_apogee and self.radius_of_perigee is not None:
             self.semi_major_axis = (self.radius_of_perigee + self.radius_of_apogee) / 2
             self.eccentricity = (self.radius_of_apogee - self.radius_of_perigee) / \
