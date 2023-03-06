@@ -1,38 +1,38 @@
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-import numpy as np
+from types import SimpleNamespace  
 
-from orbitplot import Plotter
-fig, ax = plt.subplots(1, figsize=(25, 25))
-
-
-# a = np.linspace(7000,150000, 10000)
-
-orbits = {'orbit_1': {
-    'semi_major_axis': 2000, 'eccentricity': 0.1,
-    'orbit_color': 'orange',
-    # 'start_angle':0, 'end_angle': 2, 'orbit_resolution':1000
-    },
-}
-orbit_values = Plotter(ax, 'Earth', **orbits)
-
-plt.style.use('seaborn-pastel')
-
-fig = plt.figure()
-ax = plt.axes(xlim=(0, 4), ylim=(-2, 2))
-line, = ax.plot([], [], lw=3)
-
-def init():
-    line.seet_ddata([], [])
-    return line
+def plot(**orbits):
+    all_orbits = {}
+    orbit_name = {}
+    for i,orbit in enumerate(orbits.items()):
+        print(orbit)
+        all_orbits[f'orbit_{i}'] = orbit[1]
+        orbit_name[f'orbit_{i}'] = orbit[0]      
+        
+    # for key, value in all_orbits.items():
+    #     print(f'{key:10}> {value}')
+    return all_orbits, orbit_name
 
 
-def animate(i):
-    x, y = Plotter.get_orbit_plot_points('orbit_0')
-    print(x,y)
+orbitss = {'orbit_1': {
+                'radius_of_apogee': 125, 'radius_of_perigee': 00000, 
+                'semi_major_axis': 00000, 'eccentricity': 00000, 
+                'start_end_angle':[0, 2], 'orbit_resolution':1000
+                },
+           'orbit_2': {
+                'radius_of_apogee': 895, 'radius_of_perigee': 1111, 
+                'semi_major_axis': 13232, 'eccentricity': 1112, 
+                'start_end_angle':[0, 2], 'orbit_resolution':1000
+                }
+           }
 
-animate(1)
+# orbit_01 = {
+#                 'radius_of_apogee': 125, 'radius_of_perigee': 00000, 
+#                 'semi_major_axis': 00000, 'eccentricity': 00000, 
+#                 'start_end_angle':[0, 2], 'orbit_resolution':1000
+#                 }
 
+test_1, test_2 = plot(**orbitss)
 
-# orbit_plt, orbit_ax = orbit_values.plot_orbit()
-# orbit_plt.show()
+for orbit_no, orbit in test_1.items():
+    print(orbit.get('radius_of_apogee'))
+    # print(test_1.get('orbit_0', None))

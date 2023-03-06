@@ -104,8 +104,8 @@ class HohmannTransfer():
                                             radius_of_perigee = self.final_radius_of_perigee, 
                                             radius_of_apogee = self.final_radius_of_apogee)
         
-        self.initial_orbit_dict = self.initial_orbit_values.caculate_orbital_values()
-        self.final_orbit_dict = self.final_orbit_values.caculate_orbital_values()
+        self.initial_orbit_dict = self.initial_orbit_values.calculate_orbital_values()
+        self.final_orbit_dict = self.final_orbit_values.calculate_orbital_values()
         
         
         self.initial_semi_major_axis = self.initial_orbit_dict['SemiMajorAxis']
@@ -125,7 +125,7 @@ class HohmannTransfer():
         self.transfer_1_orbit_values = OrbitalValues(self.major_body,
                                             radius_of_perigee = self.transfer_1_radius_of_perigee, 
                                             radius_of_apogee = self.transfer_1_radius_of_apogee)
-        self.transfer_1_orbit_dict = self.transfer_1_orbit_values.caculate_orbital_values()
+        self.transfer_1_orbit_dict = self.transfer_1_orbit_values.calculate_orbital_values()
         
         self.transfer_1_semi_major_axis = self.transfer_1_orbit_dict['SemiMajorAxis']
         self.transfer_1_eccentricity = self.transfer_1_orbit_dict['Eccentricity']
@@ -139,7 +139,7 @@ class HohmannTransfer():
         self.transfer_2_orbit_values = OrbitalValues(self.major_body,
                                             radius_of_perigee = self.transfer_2_radius_of_perigee, 
                                             radius_of_apogee = self.transfer_2_radius_of_apogee)
-        self.transfer_2_orbit_dict = self.transfer_2_orbit_values.caculate_orbital_values()
+        self.transfer_2_orbit_dict = self.transfer_2_orbit_values.calculate_orbital_values()
         
         self.transfer_2_semi_major_axis = self.transfer_2_orbit_dict['SemiMajorAxis']
         self.transfer_2_eccentricity = self.transfer_2_orbit_dict['Eccentricity']
