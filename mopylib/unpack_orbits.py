@@ -4,8 +4,15 @@ def unpack_orbits(**orbits: dict):
     for i, orbit in enumerate(orbits.items()):
         orbit_details[f'orbit_{i}'] = orbit[1]
         orbit_names[f'orbit_{i}'] = orbit[0]
+        extract_orbital_values(orbit[1])
 
     return orbit_details, orbit_names
+
+def extract_orbital_values(orbit: dict) -> dict:
+    
+    for key, value in orbit.items():
+        pass
+    return
 
 if __name__ == '__main__':
     test_orbits = {'initial': {

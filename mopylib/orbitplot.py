@@ -85,7 +85,7 @@ class Plotter:
                 self.ax.plot(_x, _y, **kwargs)
 
         if style == 'mopy':
-            img = plt.imread("mopylib\\assets\\stars.jpeg")
+            img = plt.imread(r'mopylib\assets\stars.jpeg')
             self.ax.imshow(img, extent=[np.min(np.array(__all_x)) * 1.1, np.max(np.array(__all_x)) * 1.1,
                                 np.min(np.array(__all_y)) * 1.1, np.max(np.array(__all_y)) * 1.1])
             self.ax.set_facecolor((0.0, 0.0, 0.0))
