@@ -1,30 +1,67 @@
 import sys
-from PySide2 import QtCore, QtWidgets, QtGui
+# import time
+from orbit3d import OrbitPlot
+import numpy as np
 
-from PySide2extn.SpiralProgressBar import spiralProgressBar #IMPORT THE EXTENSION LIBRARY
+from matplotlib.backends.qt_compat import QtWidgets
+from matplotlib.backends.backend_qt5agg import (FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
+from matplotlib.figure import Figure
+from matplotlib import style
 
-class MyWidget(QtWidgets.QWidget):
+
+class ApplicationWindow(QtWidgets.QMainWindow):
     def __init__(self):
-        QtWidgets.QWidget.__init__(self)
+        super().__init__()
+        self._main = QtWidgets.QWidget()
+        self.setCentralWidget(self._main)
+        layout = QtWidgets.QVBoxLayout(self._main)
 
-        self.hello = 'Spiral Progress Bar'
+        static_canvas = FigureCanvas(Figure())
+        # Ideally one would use self.addToolBar here, but it is slightly
+        # incompatible between PyQt6 and other bindings, so we just add the
+        # toolbar as a plain widget instead.
+        layout.addWidget(NavigationToolbar(static_canvas, self))
+        layout.addWidget(static_canvas)
+
+        # dynamic_canvas = FigureCanvas(Figure(figsize=(5, 3)))
+        # layout.addWidget(dynamic_canvas)
+        # layout.addWidget(NavigationToolbar(dynamic_canvas, self))
+
         
-        self.spbN = spiralProgressBar()    #SPIRAL PROGRESSBAR OBJECT
+        self._static_ax = static_canvas.figure.add_subplot(111,facecolor='black')
+        # t = np.linspace(0, 10, 501)
+        # self._static_ax.plot(t, np.tan(t), ".")
 
-        self.spbN.spb_lineWidth(15)
         
-        #VARIABLE WIDTH AND WIDTH INCREMENT
-        self.spbN.variableWidth(True)
-        self.spbN.spb_widthIncrement(5)
+        ji = OrbitPlot.plotOrbitMPL(3.986e5, 12000, 12000, 0, 2*np.pi)
+        self._static_ax.axis('equal')
+        self._static_ax.plot(ji[0], ji[1])
 
-        self.spbN.spb_setValue((55, 55, 55))
 
-        self.layout = QtWidgets.QHBoxLayout()
-        self.layout.addWidget(self.spbN)
-        self.setLayout(self.layout)
-        
+        # self._dynamic_ax = dynamic_canvas.figure.subplots()
+        # t = np.linspace(0, 10, 101)
+        # # Set up a Line2D.
+        # self._line, = self._dynamic_ax.plot(t, np.sin(t + time.time()))
+        # self._timer = dynamic_canvas.new_timer(50)
+        # self._timer.add_callback(self._update_canvas)
+        # self._timer.start()
+
+    # def _update_canvas(self):
+    #     t = np.linspace(0, 10, 101)
+    #     # Shift the sinusoid as a function of time.
+    #     self._line.set_data(t, np.sin(t + time.time()))
+    #     self._line.figure.canvas.draw()
+
+
 if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    widget = MyWidget()
-    widget.show()
-    sys.exit(app.exec_())
+    # Check whether there is already a running QApplication (e.g., if running
+    # from an IDE).
+    qapp = QtWidgets.QApplication.instance()
+    if not qapp:
+        qapp = QtWidgets.QApplication(sys.argv)
+
+    app = ApplicationWindow()
+    app.show()
+    app.activateWindow()
+    app.raise_()
+    qapp.exec()

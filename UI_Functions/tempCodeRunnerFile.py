@@ -1,1 +1,1 @@
-ValueDial
+80%

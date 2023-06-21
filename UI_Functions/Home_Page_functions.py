@@ -2,16 +2,18 @@
 ## ==> GUI FILE
 import Home_Page_main
 from Home_Page_main import *
+from Functions.Sections.VPCO import CalculateCircularElliptical, CalculateParabola
+from Functions.Sections.DB.call_database import *
+from math import *
+
 
 
 ## ==> GLOBALS
 
 GLOBAL_STATE = 0
+G = 6.67e-20
 
 class UIFunctions(MainWindow):
-
-    
-
 
     ## ==> MAXIMIZE RESTORE FUNCTION
     def maximize_restore(self):
@@ -72,7 +74,7 @@ class UIFunctions(MainWindow):
         self.sizegrip.setToolTip("Resize Window")
 
         #When Go_btn clicked
-        self.ui.Go_btn.clicked.connect(lambda: Home_Page_main.MainWindow.search(self))
+        ##########=>>>self.ui.Go_btn.clicked.connect(lambda: Home_Page_main.MainWindow.search(self))
 
         # When Calculate_but for Julian Day is clicked 
         self.ui.calculate_btn.clicked.connect(lambda: Home_Page_main.MainWindow.calendar_time(self))
@@ -86,88 +88,53 @@ class UIFunctions(MainWindow):
 
         self.ui.get_3D_soi.clicked.connect(lambda:Home_Page_main.MainWindow.soi_graph(self))
 
-        self.ui.input_type_go_btn_vpco.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_go_btn(self))
+        self.ui.btn_go_back.clicked.connect(lambda:Home_Page_main.MainWindow.back_button_function(self))
 
-        self.ui.Home_btn_2.clicked.connect(lambda:Home_Page_main.MainWindow.homebtn2(self))
+        self.ui.PE_Cal_Btn.clicked.connect(lambda:Home_Page_main.MainWindow.Planetary_Ephimeris(self))
 
-        self.ui.orbit_type_btn_inpt_ae.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_a_e(self))
+        self.ui.VPCO_Submit_button_rarp.clicked.connect(lambda:Home_Page_main.MainWindow.VPCO_ra_rp(self))
 
-        self.ui.go_btn_inpt_ae.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_ae_cal_btn(self))
+        #self.ui.input_type_go_btn_vpco.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_go_btn(self))
 
-        self.ui.vpco_feature_back_btn.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_feature_back_btn(self))
+        #self.ui.Home_btn_2.clicked.connect(lambda:Home_Page_main.MainWindow.homebtn2(self))
 
-        self.ui.maj_body_CoOE.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
+        #self.ui.orbit_type_btn_inpt_ae.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_a_e(self))
+
+        #self.ui.go_btn_inpt_ae.clicked.connect(lambda:Home_Page_main.MainWindow.vpco_ae_cal_btn(self))
+
+
+        self.ui.maj_body_CoOE.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.coeNaoe_combo_box(self))
 
         self.ui.cal_btn_coe_n_aoe.clicked.connect(lambda:Home_Page_main.MainWindow.coeNaoe(self))
 
-        
-
-        self.ui.ecce_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_dial_changed(self))
+        self.ui.VPCO_Submit_button.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 400, 'true'))
 
         
-        self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_dial_changed(self))
 
-        self.ui.semi_major_axis_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_slider_single_step(self))
+        self.ui.PE_Cal_Btn.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 200, "true"))
 
-        self.ui.eccentricity_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_slider_single_step(self))
+        self.ui.Orbital_Transfer_plot_button.clicked.connect(lambda:Home_Page_main.MainWindow.Sliding_animation(self, 522, 'true'))
 
-        self.ui.type_of_input_toggle.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.toggle_option_index(self))
+        self.ui.Orbital_Transfer_plot_button.clicked.connect(lambda:Home_Page_main.MainWindow.trial(self))
+
+        # self.ui.ecce_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_dial_changed(self))
+
+        #self.ui.btn_go_back.clicked.connect(lambda :Home_Page_main.MainWindow.Sliding_animation(self,0,'true'))
+
+        # self.ui.Semi_dial.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_dial_changed(self))
+
+        # self.ui.semi_major_axis_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.semi_slider_single_step(self))
+
+        # self.ui.eccentricity_toggle_menu_slider.valueChanged.connect(lambda :Home_Page_main.MainWindow.ecce_slider_single_step(self))
+
+        # self.ui.type_of_input_toggle.currentIndexChanged.connect(lambda:Home_Page_main.MainWindow.toggle_option_index(self))
 
         
 
     def returnStatus():
         return GLOBAL_STATE
+    
 
-    def expand(self, maxwidth, enable):
+    
         
-        if enable:
-
-            width = self.ui.VPCO_menu_toggle_frame.width()
-            maxExtent = maxwidth
-            standard = 40
-
-            if width == standard:
-                widthExtended = maxExtent
-
-                self.ui.stackedWidget_2.setCurrentIndex(1)
-
-                self.ui.Semi_dial.show()
-                self.ui.ecce_dial.show()
-
-                self.ui.type_of_input_toggle.show()
-
-                self.ui.semi_major_axis_toggle_menu_spinbox.show()
-                self.ui.eccentricity_toggle_menu_spinbox.show()
-                
-
-                self.ui.semi_major_axis_toggle_menu_slider.show()
-                self.ui.eccentricity_toggle_menu_slider.show()
-                
-                
-            elif width != standard:
-
-                self.ui.stackedWidget_2.setCurrentIndex(0)
-
-                self.ui.Semi_dial.hide()
-                self.ui.ecce_dial.hide()
-
-                self.ui.type_of_input_toggle.hide()
-
-                widthExtended = standard
-                
-
-                self.ui.semi_major_axis_toggle_menu_spinbox.hide()
-                self.ui.eccentricity_toggle_menu_spinbox.hide()
-                
-
-                self.ui.semi_major_axis_toggle_menu_slider.hide()
-                self.ui.eccentricity_toggle_menu_slider.hide()
-                
-
-        
-        self.animation = QPropertyAnimation(self.ui.VPCO_menu_toggle_frame,b"minimumWidth")
-        self.animation.setDuration(200)
-        self.animation.setStartValue(width)
-        self.animation.setEndValue(widthExtended)
-        # self.animation.setEasingCurve(QtCore.QEasingCurve.Linear)
-        self.animation.start() 
+            
