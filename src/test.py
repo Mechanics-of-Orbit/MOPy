@@ -2,68 +2,72 @@ import numpy as np
 import warnings
 import constants.GlobalConstants as GCs
 import constants.planetarydetails as pandet
+from orbit import Orbit
 
 class OrbitalElements():
-    def __init__(self, major_body, position_vector=None, 
-                 velocity_vector=None, semi_major_axis=None, 
-                 eccentricity=0, inclination=0, RAAN=0, 
-                 argument_of_periapsis=0, true_anomaly=0):
-        self.major_body = major_body
-        self.major_body_mass = pandet.value(major_body.lower(), 'mass')
+    def __init__(self, *orbits):
+        self.orbits = orbits
+        # self.major_body_mass = pandet.value(major_body.lower(), 'mass')
         
-        self.position_vector = position_vector
-        self.velocity_vector = velocity_vector
-        self.orbital_elements_values_dict = {}
+        # self.position_vector = position_vector
+        # self.velocity_vector = velocity_vector
+        # self.orbital_elements_values_dict = {}
         
-        self.semi_major_axis = semi_major_axis
-        self.eccentricity = eccentricity
-        self.inclination = inclination
-        self.RAAN = RAAN
-        self.argument_of_periapsis = argument_of_periapsis
-        self.true_anomaly = true_anomaly
+        # self.semi_major_axis = semi_major_axis
+        # self.eccentricity = eccentricity
+        # self.inclination = inclination
+        # self.RAAN = RAAN
+        # self.argument_of_periapsis = argument_of_periapsis
+        # self.true_anomaly = true_anomaly
         
         self.G = GCs.NEWTON_GRAVITATIONAL_CONSTANT
         self.I = GCs.IVECTOR
         self.J = GCs.JVECTOR
         self.K = GCs.KVECTOR
-        self.gravitational_constant = GCs.NEWTON_GRAVITATIONAL_CONSTANT * self.major_body_mass
+        for orbit in orbits:
+            orbit.MajorBodyMass = pandet.value(orbit.MajorBody, 'mass')
+            orbit.gravitational_constant = GCs.NEWTON_GRAVITATIONAL_CONSTANT * orbit.MajorBodyMass
     
-    def get_angle_between_two_vectors(vector_1, vector_2):
-        vector_1_magnitude, vector_2_magnitude = OrbitalElements.get_magnitudes(vector_1, vector_2)
+    
+    # these are independent of the rest of class #TODO Seperate these into their own file
+    def angle_between_two_vectors(self, vector_1, vector_2):
+        vector_1_magnitude, vector_2_magnitude = self.get_magnitudes(vector_1, vector_2)
         return np.arccos(np.dot(vector_1, vector_2)/(vector_1_magnitude*vector_2_magnitude))
     
     def get_magnitudes(self, *vectors):
-        magnitudes = []
-        for vector in vectors:
-            magnitudes.append(np.linalg.norm(vector))
-        return magnitudes
+        return [np.linalg.norm(vector) for vector in vectors]
         
     # calculations for position vectors and velocity vectors to orbital elements
     def calculate_angular_momentum(self):
-        self.angular_momentum_vector = np.cross(self.position_vector, self.velocity_vector)
-        self.angular_momentum = np.linalg.norm(self.angular_momentum_vector)
-        self.orbital_elements_values_dict["AngularMomentum"] = self.angular_momentum
+        for orbit in self.orbits:
+            orbit.AngularMomentumVector = [np.cross(_position_vector, _velocity_vector) for _position_vector, _velocity_vector in zip(orbit.PositionVector, orbit.VelocityVector)]
+            orbit.AngularMomentum = [np.linalg.norm(_angular_momentum_vector) for _angular_momentum_vector in orbit.AngularMomentumVector][0]
     
     def calculate_node_line_vector(self):
-        self.n_vector = np.cross(self.K, self.angular_momentum_vector)
-        self.n_vector_magnitude = np.linalg.norm(self.n_vector)
+        for orbit in self.orbits:
+            orbit.NodalVector = [np.cross(GCs.KVECTOR, _angular_momentum_vector) for _angular_momentum_vector in orbit.AngularMomentumVector]
+            orbit.NVectorMagnitude = [np.linalg.norm(_n) for _n in orbit.NodalVector][0]
         # self.orbital_elements_names["NodalVector"] = self.n_vector
     
     def calculate_eccentricity(self):
-        self.eccentricity_vector = (np.multiply((self.velocity_magnitude**2-self.gravitational_constant/self.position_magnitude),self.position_vector)-\
-                                    np.multiply(np.dot(self.position_vector, self.velocity_vector), self.velocity_vector))/self.gravitational_constant
-        self.eccentricity = np.linalg.norm(self.eccentricity_vector)
-        self.orbital_elements_values_dict["Eccentricity"] = self.eccentricity
+        for orbit in self.orbits:
+            orbit.EccentricityVector = [(np.multiply((vel**2-orbit.GravitationalConstant/pos),posvec)-np.multiply(np.dot(posvec, velvec), velvec))/orbit.GravitationalConstant \
+                                        for mu, pos, vel, posvec, velvec in zip(orbit.PositionMagnitude, 
+                                                                                orbit.VelocityMagnitude,
+                                                                                orbit.PositionVector, 
+                                                                                orbit.VelocityVector)]
+            
+            orbit.Eccentricity = [np.linalg.norm(eccvec) for eccvec in orbit.EccentricityVector][0]
     
     def calculate_semi_major_axis(self):
-        self.semi_major_axis = 1/((2/self.position_magnitude)-((self.velocity_magnitude*\
-                                self.velocity_magnitude)/self.gravitational_constant))
-        self.orbital_elements_values_dict["SemiMajorAxis"] = self.semi_major_axis
+        for orbit in self.orbits:
+            orbit.SemiMajorAxis = 1/((2/orbit.PositionMagnitude[0])-((orbit.VelocityMagnitude[0]*\
+                                    orbit.VelocityMagnitude[0])/orbit.GravitationalConstant))
     
     def calculate_inclination(self):
-        self.inclination = (np.arccos((np.dot(self.angular_momentum_vector, self.K))/\
-                           np.linalg.norm(self.angular_momentum_vector)))
-        self.orbital_elements_values_dict["Inclination"] = self.inclination
+        for orbit in self.orbits:
+            orbit.Inclination = [np.arccos((np.dot(angular_momentum_vector, GCs.KVECTOR))/\
+                                    np.linalg.norm(angular_momentum_vector)) for angular_momentum_vector in orbit.AngularMomentumVector][0]
         
     def adjust_angle(reference_value, angle):
         if reference_value >= 0:
@@ -72,22 +76,25 @@ class OrbitalElements():
             return 2*np.pi - angle
     
     def calculate_argument_of_periapsis(self):
-        self.argument_of_periapsis = np.arccos(np.dot(self.n_vector, self.eccentricity_vector)/\
-                                            (self.n_vector_magnitude*self.eccentricity))
-        self.argument_of_periapsis = OrbitalElements.adjust_angle(self.eccentricity_vector[2], self.argument_of_periapsis)    
-        self.orbital_elements_values_dict["ArgumentOfPerigee"] = self.argument_of_periapsis
+        for orbit in self.orbits:
+            _argument_of_periapsis = (np.arccos(np.dot(orbit.NodalVector[0], orbit.EccentricityVector[0])/\
+                                                (orbit.NVectorMagnitude*orbit.Eccentricity)))
+            orbit.ArgumentOfPeriapsis = OrbitalElements.adjust_angle(orbit.EccentricityVector[0][2], _argument_of_periapsis)
         
     def calculate_RAAN(self):
-        self.RAAN = np.arccos(self.n_vector[0]/ 
-                              self.n_vector_magnitude)
-        self.RAAN = OrbitalElements.adjust_angle(self.n_vector[1], self.RAAN)
-        self.orbital_elements_values_dict["RightAscensionofAscendingNode"] = self.RAAN
+        for orbit in self.orbits:
+            _RAAN = np.arccos(orbit.NodalVector[0][0]/ 
+                                orbit.NVectorMagnitude)
+            orbit.RightAscensionOfAscendingNode = OrbitalElements.adjust_angle(self.n_vector[1], _RAAN)
+            
             
     def calculate_true_anomaly(self):
-        self.true_anomaly = np.arccos((np.dot(self.eccentricity_vector,self.position_vector))/\
-                            (self.eccentricity*self.position_magnitude))
-        self.true_anomaly = OrbitalElements.adjust_angle(self.radial_velocity, self.true_anomaly)
-        self.orbital_elements_values_dict["TrueAnomaly"] = self.true_anomaly
+        for orbit in self.orbits:
+            _true_anomaly = [np.arccos((np.dot(eccentricity_vector, position_vector))/(orbit.Eccentricity*position_magnitude)) 
+                             for eccentricity_vector, position_vector, position_magnitude in zip(orbit.EccentricityVector, 
+                                                                                                 orbit.PositionVector, 
+                                                                                                 orbit.PositionMagnitude)]
+            orbit.TrueAnomaly = [OrbitalElements.adjust_angle(orbit.RadialVelocity, _true_anomaly)]
     
     # alternate orbital elements
     def calculate_argument_of_latitude(self):
@@ -122,11 +129,15 @@ class OrbitalElements():
             return "retrograde orbit"
     
     def direction_of_the_satellite(self):
-        self.radial_velocity = np.dot(self.position_vector, self.velocity_vector)/self.radius_of_orbit
-        if self.radial_velocity >= 0:
-            self.satellite_direction = 'away from periapsis'
-        else:
-            self.satellite_direction = 'towards periapsis'
+        for orbit in self.orbits:
+            orbit.RadialVelocity = np.dot(orbit.PositionVector[0], orbit.VelocityVector[0])/orbit.position_magnitude[0]
+            orbit.RadialVelocity = [np.dot(posvec, velvec)/pos for pos, posvec, velvec in zip(orbit.PositionVector,
+                                                                                            orbit.VelocityVector,
+                                                                                            orbit.PositionMagnitude)]
+            if orbit.RadialVelocity[0] >= 0:
+                self.satellite_direction = 'away from periapsis'
+            else:
+                self.satellite_direction = 'towards periapsis'
             
     def position_of_n_vector(self):
         self.RAAN_quadrant = OrbitalElements.locate_quadrant()
@@ -141,7 +152,7 @@ class OrbitalElements():
     def calculate(self, type):
         if type == 'get_orbital_elements':
             self.position_magnitude, self.velocity_magnitude = self.radius_of_orbit, self.velocity = \
-            OrbitalElements.get_magnitudes(self, self.position_vector, self.velocity_vector)
+            self.get_magnitudes(self.position_vector, self.velocity_vector)
             OrbitalElements.calculate_angular_momentum(self)
             OrbitalElements.calculate_eccentricity(self)
             OrbitalElements.calculate_semi_major_axis(self)
@@ -180,10 +191,11 @@ class OrbitalElements():
 
 
 if __name__ == '__main__':
-    import pandas as pd
     
+    orbit_1 = Orbit(MajorBody='Earth', PositionVector=[(8250, 390, 6900)], VelocityVector=[(-0.7, 6.6, -0.6)])
     position_vector = [8250, 390, 6900]
     velocity_vector = [-0.7, 6.6, -0.6]
+
     test1 = OrbitalElements('Earth',position_vector=position_vector, velocity_vector=velocity_vector)
     orbital_elements = test1.get_orbital_values()
     print(orbital_elements)

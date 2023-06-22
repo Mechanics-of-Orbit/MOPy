@@ -1,7 +1,7 @@
 from log import Log
 
 def main():
-    log = Log()
+    log = Log(loglevel=8)
     log.emergency('Test emergency Print by importing')
     log.alert('Test alert Print by importing')
     log.critical('Test crtical Print by importing')

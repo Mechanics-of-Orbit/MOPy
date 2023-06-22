@@ -1,23 +1,27 @@
 from math import *
 
-def julian_day(year=2000, month=3, day=23, hour=0, minutes=0, seconds=0, accuracy=3,type_of_calender='gregorian', method='default'):
+def julian_day(year, month, day, hour=0, minutes=0, seconds=0, accuracy=3,type_of_calender='gregorian', method='default'):
     """Juian Day
+    
+    >>> from CJSD import julian_day
+    >>> print(julian_day(2004, 5, 12))
+    >>> 2452925.5
 
     Args:
-        year (int, optional): Year. Defaults to 2000.
-        month (int, optional): Month. Defaults to 3.
-        day (int, optional): Day. Defaults to 23.
+        year (int): Year.
+        month (int): Month.
+        day (int): Day.
         hour (int, optional): Hour. Defaults to 0.
         minutes (int, optional): Minute. Defaults to 0.
         seconds (int, optional): Seconds. Defaults to 0.
         accuracy (int, optional): Digits of accuracy needed. Defaults to 3.
-        type_of_calender (str, optional): Type of calander. Defaults to 'gregorian'.
-        method (str, optional): calculation method. Defaults to 'default'.
+        type_of_calender (str, optional): Type of calander. Defaults to 'gregorian' also takes in 'julian'.
+        method (str, optional): calculation method. Defaults to 'default' can also take 'textbook-method'.
 
     Returns:
         float: julian day
     """
-    
+        
     if method=='default':
         if type_of_calender.lower() == "gregorian":
             #julian day number from Gregorian calender date
@@ -41,6 +45,3 @@ def julian_day(year=2000, month=3, day=23, hour=0, minutes=0, seconds=0, accurac
 if __name__ == '__main__':        
     a = julian_day(2004,5,12,14,45,30,3)
     print(a)
-    
-
-
