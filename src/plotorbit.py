@@ -8,7 +8,7 @@ from orbit import PlotOrbit
 
 class Plotter:
     """
-    orbitss = {'orbit_1': {
+    orbits = {'orbit_1': {
                 'radius_of_apogee': 125, 'radius_of_perigee': 00000, 
                 'semi_major_axis': 00000, 'eccentricity': 00000, 
                 'start_angle':0, 'end_angle': 2,
@@ -18,6 +18,7 @@ class Plotter:
                
         can input the graph values in this if each plot needs different like color and plot style
     """
+    # TODO fix the for loop thingy
     def __init__(self, orbit_ax, *orbits):
         self.ax = orbit_ax
         _orbit_value = OrbitalValues(*orbits)
